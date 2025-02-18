@@ -1,0 +1,50 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    align-items: center;
+}
+
+.menu-left ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu-left ul li {
+    margin-right: 20px;
+}
+
+.menu-left ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menu-left ul li a:hover {
+    text-decoration: underline;
+}
+
+.menu-right a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menu-right a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
