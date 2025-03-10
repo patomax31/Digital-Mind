@@ -9,7 +9,7 @@ body {
 
 .container {
     width: 90%;
-    max-width: 1100px;
+    max-width: 1000px;
     margin: 20px auto;
     background-color: rgba(140, 158, 141, 0.842);
     border-radius: 10px;
@@ -32,10 +32,13 @@ header .logo {
 }
 
 header nav a {
-    margin: 0 10px;
+    margin: 0 50px;
+    background-position: center;
+    background-size: center;
     text-decoration: none;
     color: #5e1b1b;
-    font-weight: 500;
+    text-shadow: #5e1b1b;
+    font-weight: 1000;
 }
 
 header .search {
@@ -62,7 +65,8 @@ main {
 .main-content {
     text-align: center;
     margin-bottom: 20px;
-    background-color: #fbfbfb;
+    background-color: #f1f0f0;
+    text-shadow: #000000;
     background-image:    url(/images/escuela4.jpg);
     height: auto;
     background-position: center;
