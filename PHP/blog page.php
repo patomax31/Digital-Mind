@@ -46,6 +46,8 @@
                     <br>
                     Los SMR tienen pocas necesidades de combustible. Las centrales nucleares basadas en SMR pueden necesitar recargar combustible con menor frecuencia, cada 3 a 7 años, frente al intervalo de 1 a 2 años de las centrales convencionales. Algunos SMR están diseñados para funcionar durante un lapso de hasta 30 años sin recargar combustible.
                 </h3>
+                <a href="index.php">Leer más</a>
+
         </section>
     </div>
 </body>
