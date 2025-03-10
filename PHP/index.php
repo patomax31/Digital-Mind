@@ -20,7 +20,7 @@
 
         <main>
             <div class="image-section">
-                <img src="main-image.jpg" alt="Imagen Principal">
+                <img src="/digital-mind/images/img1.jpg" alt="Imagen Principal">
             </div>
             <div class="main-content">
                 <div class="title">CALIDAD</div>
@@ -37,10 +37,12 @@
                     <a href="#" class="see-more">Leer más</a>
                 </div>
             </div>
+        
             <div class="most-recent">Más Reciente</div>
+            
             <div class="content-item">
                 <div class="content-image">
-                    <img src="students.jpg" alt="Students">
+                    <img src="/digital-mind/images/escuela1.jpg" alt="Students">
                 </div>
                 <div class="content-text">
                     <div class="title">EDUCACIÓN DE CALIDAD</div>
@@ -49,6 +51,7 @@
                     <a href="#" class="see-more">Ver más</a>
                 </div>
             </div>
+            
             <div class="content-item">
                 <div class="content-image">
                     <img src="classroom.jpg" alt="Classroom">
@@ -57,9 +60,10 @@
                     <div class="title">METODOLOGÍAS DE ESTUDIO</div>
                     <p>Las metodologías de enseñanza y las estrategias educativas STEAM incluyen estrategias y técnicas para facilitar el aprendizaje...</p>
                     <p class="published">Publicado hace 2 días</p>
-                    <a href="Pagina_blog.html">Leer más</a>
+                    <a href="blog page.php">Leer más</a>
                 </div>
             </div>
+
         </main>
         <footer>
             <nav>
