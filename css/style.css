@@ -150,9 +150,9 @@ main {
 .content-text p {
     margin-bottom: 10px;
     line-height: 1.6;
-    color: white;
+    color: rgb(244, 234, 234);
     font-size: 1.1em;
-    text-shadow: 0 0 5px white;
+    text-shadow: 0 0 5px rgb(226, 211, 211);
 }
 
 .content-text .published {
