@@ -22,9 +22,10 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color:  rgba(140, 158, 141, 0.842);
+    background-color: #d2c1aa;
 }
 
+  
 header .logo {
     font-weight: bold;
     font-size: 1.2em;
@@ -62,13 +63,14 @@ main {
     margin-bottom: 20px;
     background-color: #f1f0f0;
     text-shadow: #000000;
-    background-image: url(/images/escuela5.jpg);
+    background-image: url(/images/img3.png);
     height: auto;
     background-position: center;
     background-size: center;
     padding: 100px;
     border-radius: 50px;
     transition: transform 0.3s ease;
+    font-family: sans-serif;
 }
 
 .main-content:hover {
@@ -207,7 +209,7 @@ footer nav a {
 
 .mi-boton {
     padding: 10px 20px;
-    background-color: #dbc32b;
+    background-color: #69df5f30;
     color: white;
     text-shadow: #000000;
     border: none;
@@ -217,5 +219,5 @@ footer nav a {
 }
 
 .mi-boton:hover {
-    background-color: #0056b3;
+    background-color: #2e8b57;
 }
