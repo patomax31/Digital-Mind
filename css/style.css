@@ -1,27 +1,19 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f8ff;
-    background-color: rgba(191, 207, 88, 0.619);
+    background-color: rgba(229, 240, 157, 0.619);
     color: #333;
-    line-height: 1.6;
 }
 
-
 .container {
-    width: 80%;
-    margin: 30px auto;
-    background-color: #fff;
-    border-radius: 12px;
+    /* Estilos generales para todos los contenedores */
     width: 90%;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 20px auto;
     background-color: rgba(140, 158, 141, 0.842);
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.573);
 }
 
@@ -29,80 +21,61 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    background-color: #e0f2fe;
-    border-bottom: 1px solid #cce5ff;
     padding: 10px 20px;
-    background-color: #aae3aa8c;
+    background-color:  rgba(140, 158, 141, 0.842);
 }
 
 header .logo {
     font-weight: bold;
-    font-size: 1.3em;
-    color: #1e88e5;
     font-size: 1.2em;
-    color: #333;
+    color: #000000;
 }
 
 header nav a {
-    margin: 0 15px;
-    margin: 0 10px;
+    margin: 0 50px;
+    background-position: center;
+    background-size: center;
     text-decoration: none;
-    color: #1976d2;
     color: #5e1b1b;
     text-shadow: #5e1b1b;
     font-weight: 1000;
 }
 
 header .search {
-    border: 2px solid #1e88e5;
-    padding: 8px 15px;
-    border-radius: 8px;
     border: 1px solid #000000;
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
-    color: #1e88e5;
 }
 
 main {
-    padding: 30px;
     padding: 20px;
 }
 
 .image-section {
     text-align: center;
-    margin-bottom: 30px;
     margin-bottom: 60px;
-}
-
-.image-section img {
-    max-width: 100%;
-    max-width: 70%;
-    height: auto;
-    border-radius: 10px;
 }
 
 .main-content {
     text-align: center;
-    margin-bottom: 30px;
     margin-bottom: 20px;
     background-color: #f1f0f0;
     text-shadow: #000000;
-    background-image:    url(/images/escuela4.jpg);
+    background-image: url(/images/escuela5.jpg);
     height: auto;
     background-position: center;
     background-size: center;
     padding: 100px;
     border-radius: 50px;
+    transition: transform 0.3s ease;
 }
-    
 
+.main-content:hover {
+    transform: scale(1.05);
+}
 
 .main-content .title {
-    font-size: 2.2em;
-    margin-bottom: 15px;
-    color: #1565c0;
     font-size: 2em;
     margin-bottom: 10px;
     color: #ebebeb;
@@ -111,9 +84,6 @@ main {
 }
 
 .main-content p {
-    margin-bottom: 25px;
-    line-height: 1.7;
-    color: #555;
     margin-bottom: 15px;
     line-height: 1.6;
     color: #fafafa;
@@ -123,50 +93,37 @@ main {
 .steps {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
     margin-bottom: 20px;
 }
 
 .step {
-    width: 25px;
-    height: 12px;
-    background-color: #81d4fa;
-    margin: 0 8px;
-    border-radius: 5px;
-    width: 20px;
+    width: 300px;
     height: 10px;
     background-color: #ffffff;
     margin: 0 5px;
     border-radius: 3px;
 }
 
+.text-section {
+    text-align: left;
+}
 
 .text-section .see-more {
     text-decoration: none;
-    color: #29b6f6;
-    color: #007bff;
-    font-weight: 600;
+    color: #e90505;
+    font-weight: 1000;
 }
 
 .most-recent {
     font-weight: bold;
-    margin-bottom: 20px;
-    color: #1565c0;
-    font-size: 1.1em;
     margin-bottom: 15px;
     color: #333;
 }
 
 .content-item {
     display: flex;
-    margin-bottom: 25px;
-}
-
-.content-image {
-    width: 180px;
-    margin-right: 25px;
     margin-bottom: 20px;
-    background-color: #3cb371;
+    background-color: #69df5f30;
     padding: 15px;
     border-radius: 8px;
     color: rgb(254, 250, 250);
@@ -175,10 +132,6 @@ main {
     border: 2px solid #ddd;
 }
 
-.content-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
 .content-item:hover {
     transform: scale(1.05);
     border: 3px solid #000000;
@@ -186,8 +139,6 @@ main {
 
 .content-text .title {
     font-weight: bold;
-    margin-bottom: 10px;
-    color: #1565c0;
     margin-bottom: 5px;
     color: rgb(255, 255, 255);
     font-size: 1.8em;
@@ -197,20 +148,14 @@ main {
 }
 
 .content-text p {
-    margin-bottom: 15px;
-    line-height: 1.7;
-    color: #555;
     margin-bottom: 10px;
     line-height: 1.6;
-    color: white;
+    color: rgb(244, 234, 234);
     font-size: 1.1em;
-    text-shadow: 0 0 5px white;
+    text-shadow: 0 0 5px rgb(226, 211, 211);
 }
 
 .content-text .published {
-    font-size: 0.9em;
-    color: #777;
-    margin-bottom: 15px;
     font-size: 1em;
     color: white;
     margin-bottom: 10px;
@@ -223,7 +168,6 @@ main {
     background-color: #2e8b57;
     color: white;
     text-decoration: none;
-    color: #29b6f6;
     font-weight: 600;
     border-radius: 5px;
     margin-top: 10px;
@@ -249,20 +193,29 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    background-color: #e0f2fe;
-    border-top: 1px solid #cce5ff;
     padding: 10px 20px;
     background-color: #e8e8e8;
     border-top: 1px solid #ccc;
 }
 
 footer nav a {
-    margin: 0 15px;
     margin: 0 10px;
     text-decoration: none;
-    color: #1976d2;
     color: #333;
     font-weight: 500;
 }
+
+.mi-boton {
+    padding: 10px 20px;
+    background-color: #dbc32b;
+    color: white;
+    text-shadow: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.mi-boton:hover {
+    background-color: #0056b3;
 }
