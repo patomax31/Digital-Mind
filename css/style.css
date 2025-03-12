@@ -18,22 +18,14 @@ body {
 }
 
 header {
-<<<<<<< HEAD
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     background-color: #d2c1aa;
-=======
-    display: flex; /* Utiliza Flexbox para el diseño del header */
-    justify-content: space-between; /* Distribuye los elementos dentro del header con espacio entre ellos */
-    align-items: center; /* Centra verticalmente los elementos dentro del header */
-    padding: 10px 20px; /* Agrega relleno al header */
-    background-color: rgba(140, 158, 141, 0.842); /* Establece el color de fondo del header con transparencia */
->>>>>>> 348eb13d64110ac4c75602a8bb8b29bca384f854
 }
 
-  
+
 header .logo {
     font-weight: bold; /* Define el texto del logo en negrita */
     font-size: 1.2em; /* Define el tamaño de la fuente del logo */
@@ -67,7 +59,6 @@ main {
 }
 
 .main-content {
-<<<<<<< HEAD
     text-align: center;
     margin-bottom: 20px;
     background-color: #f1f0f0;
@@ -80,19 +71,6 @@ main {
     border-radius: 50px;
     transition: transform 0.3s ease;
     font-family: sans-serif;
-=======
-    text-align: center; /* Centra horizontalmente el contenido dentro del contenido principal */
-    margin-bottom: 20px; /* Agrega margen inferior al contenido principal */
-    background-color: #f1f0f0; /* Establece el color de fondo del contenido principal */
-    text-shadow: #000000; /* Agrega una sombra al texto del contenido principal */
-    background-image: url(/images/escuela5.jpg); /* Establece una imagen de fondo para el contenido principal */
-    height: auto; /* Ajusta automáticamente la altura del contenido principal */
-    background-position: center; /* Centra la imagen de fondo */
-    background-size: center; /* Centra el tamaño de la imagen de fondo */
-    padding: 100px; /* Agrega relleno al contenido principal */
-    border-radius: 50px; /* Redondea las esquinas del contenido principal */
-    transition: transform 0.5s ease; /* Agrega una transición suave a la propiedad transform */
->>>>>>> 348eb13d64110ac4c75602a8bb8b29bca384f854
 }
 
 .main-content:hover {
@@ -237,20 +215,6 @@ footer nav a {
 }
 
 .mi-boton {
-<<<<<<< HEAD
-    padding: 10px 20px;
-    background-color: #69df5f30;
-    color: white;
-    text-shadow: #000000;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-.mi-boton:hover {
-    background-color: #2e8b57;
-=======
     padding: 10px 20px; /* Agrega relleno al botón */
     background-color: #1b1818; /* Establece el color de fondo del botón */
     color: white; /* Define el color del texto del botón */
@@ -263,5 +227,4 @@ footer nav a {
 
 .mi-boton:hover {
     background-color: #0056b3; /* Cambia el color de fondo del botón al pasar el cursor sobre él */
->>>>>>> 348eb13d64110ac4c75602a8bb8b29bca384f854
 }
