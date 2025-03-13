@@ -1,268 +1,230 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f8ff;
-    background-color: rgba(191, 207, 88, 0.619);
-    color: #333;
-    line-height: 1.6;
+    font-family: 'Arial', sans-serif; /* Define la fuente de texto para todo el documento */
+    margin: 0; /* Elimina el margen predeterminado del body */
+    padding: 0; /* Elimina el relleno predeterminado del body */
+    background-color: rgba(229, 240, 157, 0.619); /* Establece el color de fondo del body con transparencia */
+    color: #333; /* Define el color principal del texto */
 }
 
-
 .container {
-    width: 80%;
-    margin: 30px auto;
-    background-color: #fff;
-    border-radius: 12px;
-    width: 90%;
-    max-width: 1000px;
-    margin: 20px auto;
-    background-color: rgba(140, 158, 141, 0.842);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.573);
+    /* Estilos generales para todos los contenedores */
+    width: 90%; /* Define el ancho del contenedor principal como el 90% del ancho de su elemento padre */
+    max-width: 1250px; /* Establece un ancho máximo para el contenedor */
+    margin: 20px auto; /* Centra el contenedor horizontalmente y agrega un margen vertical de 20px */
+    background-color: rgba(140, 158, 141, 0.842); /* Establece el color de fondo del contenedor con transparencia */
+    border-radius: 10px; /* Redondea las esquinas del contenedor */
+    overflow: hidden; /* Oculta cualquier contenido que se desborde del contenedor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.573); /* Agrega una sombra al contenedor */
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    background-color: #e0f2fe;
-    border-bottom: 1px solid #cce5ff;
     padding: 10px 20px;
-    background-color: #aae3aa8c;
+    background-color: #d2c1aa;
 }
 
+
 header .logo {
-    font-weight: bold;
-    font-size: 1.3em;
-    color: #1e88e5;
-    font-size: 1.2em;
-    color: #333;
+    font-weight: bold; /* Define el texto del logo en negrita */
+    font-size: 1.2em; /* Define el tamaño de la fuente del logo */
+    color: #000000; /* Define el color del texto del logo */
 }
 
 header nav a {
-    margin: 0 15px;
-    margin: 0 10px;
-    text-decoration: none;
-    color: #1976d2;
-    color: #5e1b1b;
-    text-shadow: #5e1b1b;
-    font-weight: 1000;
+    margin: 0 50px; /* Agrega margen a los enlaces de navegación */
+    background-position: center; /* Centra la posición de la imagen de fondo (si la hay) */
+    background-size: center; /* Centra el tamaño de la imagen de fondo (si la hay) */
+    text-decoration: none; /* Elimina la decoración predeterminada del texto (subrayado) */
+    color: #070707; /* Define el color del texto de los enlaces de navegación */
+    text-shadow: #ffffff; /* Agrega una sombra al texto de los enlaces de navegación */
+    font-weight: 1000; /* Define el peso de la fuente de los enlaces de navegación */
 }
 
 header .search {
-    border: 2px solid #1e88e5;
-    padding: 8px 15px;
-    border-radius: 8px;
-    border: 1px solid #000000;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    color: #1e88e5;
+    border: 1px solid #000000; /* Agrega un borde al elemento de búsqueda */
+    padding: 5px 10px; /* Agrega relleno al elemento de búsqueda */
+    border-radius: 5px; /* Redondea las esquinas del elemento de búsqueda */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el elemento de búsqueda */
 }
 
 main {
-    padding: 30px;
-    padding: 20px;
+    padding: 20px; /* Agrega relleno al elemento main */
 }
 
 .image-section {
-    text-align: center;
-    margin-bottom: 30px;
-    margin-bottom: 60px;
-}
-
-.image-section img {
-    max-width: 100%;
-    max-width: 70%;
-    height: auto;
-    border-radius: 10px;
+    text-align: center; /* Centra horizontalmente el contenido dentro de la sección de la imagen */
+    margin-bottom: 60px; /* Agrega margen inferior a la sección de la imagen */
 }
 
 .main-content {
     text-align: center;
-    margin-bottom: 30px;
     margin-bottom: 20px;
     background-color: #f1f0f0;
     text-shadow: #000000;
-    background-image:    url(/images/escuela4.jpg);
+    background-image: url(/images/img3.png);
     height: auto;
     background-position: center;
     background-size: center;
     padding: 100px;
     border-radius: 50px;
+    transition: transform 0.3s ease;
+    font-family: sans-serif;
 }
-    
 
+.main-content:hover {
+    transform: scale(1.05); /* Escala el contenido principal al pasar el cursor sobre él */
+}
 
 .main-content .title {
-    font-size: 2.2em;
-    margin-bottom: 15px;
-    color: #1565c0;
-    font-size: 2em;
-    margin-bottom: 10px;
-    color: #ebebeb;
-    text-shadow: #ebebeb;
-    font-weight: bold;
+    font-size: 2em; /* Define el tamaño de la fuente del título */
+    margin-bottom: 10px; /* Agrega margen inferior al título */
+    color: #ebebeb; /* Define el color del texto del título */
+    text-shadow: #ebebeb; /* Agrega una sombra al texto del título */
+    font-weight: bold; /* Define el texto del título en negrita */
 }
 
 .main-content p {
-    margin-bottom: 25px;
-    line-height: 1.7;
-    color: #555;
-    margin-bottom: 15px;
-    line-height: 1.6;
-    color: #fafafa;
-    text-shadow: #fafafa;
+    margin-bottom: 15px; /* Agrega margen inferior a los párrafos */
+    line-height: 1.6; /* Define la altura de la línea de los párrafos */
+    color: #fafafa; /* Define el color del texto de los párrafos */
+    text-shadow: #fafafa; /* Agrega una sombra al texto de los párrafos */
 }
 
 .steps {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-    margin-bottom: 20px;
+    display: flex; /* Utiliza Flexbox para el diseño de los pasos */
+    justify-content: center; /* Centra horizontalmente los pasos */
+    margin-bottom: 20px; /* Agrega margen inferior a los pasos */
 }
 
 .step {
-    width: 25px;
-    height: 12px;
-    background-color: #81d4fa;
-    margin: 0 8px;
-    border-radius: 5px;
-    width: 20px;
-    height: 10px;
-    background-color: #ffffff;
-    margin: 0 5px;
-    border-radius: 3px;
+    width: 300px; /* Define el ancho de cada paso */
+    height: 10px; /* Define la altura de cada paso */
+    background-color: #ffffff; /* Establece el color de fondo de cada paso */
+    margin: 0 5px; /* Agrega margen a los lados de cada paso */
+    border-radius: 3px; /* Redondea las esquinas de cada paso */
 }
 
+.text-section {
+    text-align: left; /* Alinea el texto a la izquierda dentro de la sección de texto */
+}
 
 .text-section .see-more {
-    text-decoration: none;
-    color: #29b6f6;
-    color: #007bff;
-    font-weight: 600;
+    text-decoration: none; /* Elimina la decoración predeterminada del enlace "Ver más" */
+    color: #000000; /* Define el color del texto del enlace "Ver más" */
+    font-weight: 1000; /* Define el peso de la fuente del enlace "Ver más" */
 }
 
 .most-recent {
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #1565c0;
-    font-size: 1.1em;
-    margin-bottom: 15px;
-    color: #333;
+    font-weight: bold; /* Define el texto "Más Reciente" en negrita */
+    margin-bottom: 15px; /* Agrega margen inferior al texto "Más Reciente" */
+    color: #333; /* Define el color del texto "Más Reciente" */
+}
+
+.content-item {
+    display: flex; /* Utiliza Flexbox para el diseño de los elementos de contenido */
+    margin-bottom: 20px; /* Agrega margen inferior a los elementos de contenido */
+    background-color: #69df5f30; /* Establece el color de fondo de los elementos de contenido con transparencia */
+    padding: 15px; /* Agrega relleno a los elementos de contenido */
+    border-radius: 8px; /* Redondea las esquinas de los elementos de contenido */
+    color: rgb(254, 250, 250); /* Define el color del texto de los elementos de contenido */
+    text-shadow: 0 0 8px rgb(0, 0, 0); /* Agrega una sombra al texto de los elementos de contenido */
+    transition: transform 0.3s ease; /* Agrega una transición suave a la propiedad transform */
+    border: 2px solid #ddd; /* Agrega un borde a los elementos de contenido */
+}
+
+.content-item:hover {
+    transform: scale(1.05); /* Escala los elementos de contenido al pasar el cursor sobre ellos */
+    border: 3px solid #000000; /* Aumenta el grosor del borde de los elementos de contenido al pasar el cursor sobre ellos */
+}
+
+.content-text .title {
+    font-weight: bold; /* Define el texto del título de los elementos de contenido en negrita */
+    margin-bottom: 5px; /* Agrega margen inferior al título de los elementos de contenido */
+    color: rgb(255, 255, 255); /* Define el color del texto del título de los elementos de contenido */
+    font-size: 1.8em; /* Define el tamaño de la fuente del título de los elementos de contenido */
+    text-transform: uppercase; /* Convierte el texto del título de los elementos de contenido a mayúsculas */
+    letter-spacing: 1px; /* Agrega espaciado entre las letras del título de los elementos de contenido */
+    text-shadow: 0 0 10px white; /* Agrega una sombra al texto del título de los elementos de contenido */
+}
+
+.content-text p {
+    margin-bottom: 10px; /* Agrega margen inferior a los párrafos de los elementos de contenido */
+    line-height: 1.6; /* Define la altura de la línea de los párrafos de los elementos de contenido */
+    color: rgb(244, 234, 234); /* Define el color del texto de los párrafos de los elementos de contenido */
+    font-size: 1.1em; /* Define el tamaño de la fuente de los párrafos de los elementos de contenido */
+    text-shadow: 0 0 5px rgb(226, 211, 211); /* Agrega una sombra al texto de los párrafos de los elementos de contenido */
+}
+
+.content-text .published {
+    font-size: 1em; /* Define el tamaño de la fuente del texto "Publicado" */
+    color: white; /* Define el color del texto "Publicado" */
+    margin-bottom: 10px; /* Agrega margen inferior al texto "Publicado" */
+    
+}
+
+.content-text .see-more {
+    display: inline-block; /* Define el enlace "Ver más" como un elemento en línea de bloque */
+    padding: 10px 20px; /* Agrega relleno al enlace "Ver más" */
+    background-color: #2e8b57; /* Establece el color de fondo del enlace "Ver más" */
+    color: white; /* Define el color del texto del enlace "Ver más" */
+    text-decoration: none; /* Elimina la decoración predeterminada del enlace "Ver más" */
+    font-weight: 600; /* Define el peso de la fuente del enlace "Ver más" */
+    border-radius: 5px; /* Redondea las esquinas del enlace "Ver más" */
+    margin-top: 10px; /* Agrega margen superior al enlace "Ver más" */
+    transition: transform 0.5s ease; /* Agrega una transición suave a la propiedad transform */
+}
+
+.content-text .see-more:hover {
+    transform: scale(1.2); /* Escala el enlace "Ver más" al pasar el cursor sobre él */
 }
 
 .content-item {
     display: flex;
-    margin-bottom: 25px;
+    align-items: center; /* Alinea verticalmente los elementos al centro */
+    /* ... otros estilos ... */
 }
 
 .content-image {
-    width: 180px;
-    margin-right: 25px;
-    margin-bottom: 20px;
-    background-color: #3cb371;
-    padding: 15px;
-    border-radius: 8px;
-    color: rgb(254, 250, 250);
-    text-shadow: 0 0 8px rgb(174, 28, 28);
-    transition: transform 0.3s ease;
-    border: 2px solid #ddd;
+    width: 150px; /* Define el ancho de la imagen de los elementos de contenido */
+    margin-right: 40px; /* Agrega margen derecho a la imagen de los elementos de contenido */
+    flex-shrink: 0;
 }
 
 .content-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-.content-item:hover {
-    transform: scale(1.05);
-    border: 3px solid #000000;
-}
-
-.content-text .title {
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #1565c0;
-    margin-bottom: 5px;
-    color: rgb(255, 255, 255);
-    font-size: 1.8em;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-shadow: 0 0 10px white;
-}
-
-.content-text p {
-    margin-bottom: 15px;
-    line-height: 1.7;
-    color: #555;
-    margin-bottom: 10px;
-    line-height: 1.6;
-    color: white;
-    font-size: 1.1em;
-    text-shadow: 0 0 5px white;
-}
-
-.content-text .published {
-    font-size: 0.9em;
-    color: #777;
-    margin-bottom: 15px;
-    font-size: 1em;
-    color: white;
-    margin-bottom: 10px;
-    text-shadow: 0 0 8px white;
-}
-
-.content-text .see-more {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #2e8b57;
-    color: white;
-    text-decoration: none;
-    color: #29b6f6;
-    font-weight: 600;
-    border-radius: 5px;
-    margin-top: 10px;
-    transition: transform 0.3s ease;
-}
-
-.content-text .see-more:hover {
-    transform: scale(1.5);
-}
-
-.content-image {
-    width: 150px;
-    margin-right: 20px;
-}
-
-.content-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+    width: 100%; /* Define el ancho de la imagen para que ocupe el 100% de su contenedor */
+    height: auto; /* Ajusta automáticamente la altura de la imagen */
+    border-radius: 10px; /* Redondea las esquinas de la imagen */
 }
 
 footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    background-color: #e0f2fe;
-    border-top: 1px solid #cce5ff;
-    padding: 10px 20px;
-    background-color: #e8e8e8;
-    border-top: 1px solid #ccc;
+    display: flex; /* Utiliza Flexbox para el diseño del footer */
+    justify-content: space-between; /* Distribuye los elementos dentro del footer con espacio entre ellos */
+    align-items: center; /* Centra verticalmente los elementos dentro del footer */
+    padding: 10px 20px; /* Agrega relleno al footer */
+    background-color: #e8e8e8; /* Establece el color de fondo del footer */
+    border-top: 1px solid #ccc; /* Agrega un borde superior al footer */
 }
 
 footer nav a {
-    margin: 0 15px;
-    margin: 0 10px;
-    text-decoration: none;
-    color: #1976d2;
-    color: #333;
-    font-weight: 500;
+    margin: 0 40px; /* Agrega margen a los enlaces de navegación del footer */
+    text-decoration: none; /* Elimina la decoración predeterminada de los enlaces de navegación del footer */
+    color: #000000; /* Define el color del texto de los enlaces de navegación del footer */
+    font-weight: 500; /* Define el peso de la fuente de los enlaces de navegación del footer */
 }
+
+.mi-boton {
+    padding: 10px 20px; /* Agrega relleno al botón */
+    background-color: #1b1818; /* Establece el color de fondo del botón */
+    color: white; /* Define el color del texto del botón */
+    text-shadow: #d72525; /* Agrega una sombra al texto del botón */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 5px; /* Redondea las esquinas del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    margin-top: 10px; /* Agrega margen superior al botón */
+}
+
+.mi-boton:hover {
+    background-color: #0056b3; /* Cambia el color de fondo del botón al pasar el cursor sobre él */
 }

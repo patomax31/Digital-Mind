@@ -1,97 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Usuarios</title>
+    <title>Registro de Usuario</title>
 </head>
 <body>
-    <form action="index.php" method="post">
-        <div>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-            <br><br>
+    <h2>Formulario de Registro</h2>
+    <form action="main_page.html" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" required><br>
 
-            <label for="apellido">Apellido:</label>
-            <input type="text" id="apellido" name="apellido" required>
-            <br><br>
+        <label for="apellido">Apellido:</label>
+        <input type="text" name="apellido" required><br>
 
-            <label for="contrasena">Contraseña:</label>
-            <input type="password" id="contrasena" name="contrasena" required>
-            <br><br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" required><br>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <br><br>
+        <label for="password">Contraseña:</label>
+        <input type="password" name="password" required><br>
 
-            <label for="bday">Fecha de Nacimiento:</label>
-            <input type="date" id="bday" name="bday" required>
-            <br><br>
+        <label for="bday">Fecha de Nacimiento:</label>
+        <input type="date" name="bday" required><br>
 
-            <label for="cantidad">Cantidad:</label>
-            <input type="number" id="cantidad" name="cantidad" required>
-            <br><br>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" name="cantidad" required><br>
 
-            <button type="submit">Registrarse</button>
-        </div>
+        <button type="submit">Registrarse</button>
     </form>
 </body>
 </html>
 
-
 <?php
-    
-   
-   $server = "localhost";
-    $user = "root";
-    $pass = "";
-    $db = "test";  // ⚠️ Asegúrate de usar el nombre correcto de tu base de datos
-    $conexion = new mysqli($server, $user, $pass, $db);
-    
-    // Verificar conexión
-    if ($conexion->connect_error) {
-        die("Error de conexión: " . $conexion->connect_error);
-    }
-    
-    // Solo procesar si se envió el formulario
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Obtener datos del formulario
-        $nombre = $_POST['nombre'] ?? '';
-        $apellido = $_POST['apellido'] ?? '';
-        $contrasena = $_POST['contraseña'] ?? '';
-        $email = $_POST['email'] ?? '';
-        $bday = $_POST['bday'] ?? '';  // Fecha de nacimiento
-        $cantidad = $_POST['cantidad'] ?? 0;
-    
-        // Encriptar la contraseña por seguridad
-      // Verificar que la contraseña no esté vacía
-      if (!empty($contrasena)) {
-        $hashed_password = password_hash($contrasena, PASSWORD_DEFAULT);
-    } else {
-        echo "❌ La contraseña no puede estar vacía.";
-        exit;
-    }
-    
-        // Preparar la consulta SQL para evitar inyección SQL
-        $sql = "INSERT INTO usuarios (nombre, apellido, contrasena, email, bday, cantidad) 
-                VALUES (?, ?, ?, ?, ?, ?)";
-        
-        // Usar sentencia preparada
-        $stmt = $conexion->prepare($sql);
-        $stmt->bind_param("sssssi", $nombre, $apellido, $hashed_password, $email, $bday, $cantidad);
-    
-        // Ejecutar la consulta y verificar
-        if ($stmt->execute()) {
-            echo "✅ Registro exitoso.";
-        } else {
-            echo "❌ Error al registrar: " . $stmt->error;
-        }
-    
-        // Cerrar la sentencia
-        $stmt->close();
-    }
-    
-    // Cerrar conexión
-    $conexion->close();
+$servername = "127.0.0.1";
+$username = "root";  // Ajusta según tu configuración
+$password = "";      // Ajusta según tu configuración
+$dbname = "test"; 
 
+// Crear conexión
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Verificar conexión
+if ($conn->connect_error) {
+    die("Error de conexión: " . $conn->connect_error);
+}
+
+// Recibir datos del formulario
+$nombre = $_POST['nombre'];
+$apellido = $_POST['apellido'];
+$email = $_POST['email'];
+$password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Encriptar la contraseña
+$bday = $_POST['bday'];
+$cantidad = intval($_POST['cantidad']); 
+
+// Insertar datos en la base de datos
+$sql = "INSERT INTO usuarios (nombre, apellido, email, contraseña, bday, cantidad) 
+        VALUES ('$nombre', '$apellido', '$email', '$password', '$bday', $cantidad)";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Registro exitoso";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
 ?>
