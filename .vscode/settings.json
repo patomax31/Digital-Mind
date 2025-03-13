@@ -9,6 +9,7 @@
     "[php]": {
         "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
     },
+    "liveServer.settings.port": 5501,
 }
 //    "liveServer.settings.port": 5501,
 //"php.validate.executablePath": "C:\\xamp\\php\\php.exe" 
