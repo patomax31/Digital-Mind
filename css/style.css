@@ -63,7 +63,7 @@ main {
     margin-bottom: 20px;
     background-color: #f1f0f0;
     text-shadow: #000000;
-    background-image: url(/images/img3.png);
+    background-image: url(../images/img3.png);
     height: auto;
     background-position: center;
     background-size: center;
@@ -216,7 +216,7 @@ footer nav a {
 
 .mi-boton {
     padding: 10px 20px; /* Agrega relleno al botón */
-    background-color: #1b1818; /* Establece el color de fondo del botón */
+    background-color: #2e8b57; /* Establece el color de fondo de los botones */
     color: white; /* Define el color del texto del botón */
     text-shadow: #d72525; /* Agrega una sombra al texto del botón */
     border: none; /* Elimina el borde del botón */

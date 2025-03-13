@@ -22,8 +22,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Insertar la publicación en la base de datos
     try {
-        $sql = "INSERT INTO publicaciones (fecha, titular, descripcion_corta, imagen_principal, contenido, referencia) 
-                VALUES (:fecha, :titular, :descripcion_corta, :imagen_principal, :contenido, :referencia)";
+        $sql = "INSERT INTO publicaciones (fecha, titular, descripcion_corta, contenido, referencia) 
+                VALUES (:fecha, :titular, :descripcion_corta, :contenido, :referencia)";
 
         $stmt = $pdo->prepare($sql);
         $stmt->execute([
