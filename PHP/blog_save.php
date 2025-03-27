@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->execute([
             ':fecha' => $fecha,
             ':titular' => $titular,
-            ':descripcion_corta' => $descripcion_corta,
+            ':descripcion' => $descripcion_corta,
             ':contenido' => $contenido,
             ':referencia' => $referencia,
         ]);

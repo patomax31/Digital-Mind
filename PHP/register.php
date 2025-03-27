@@ -24,6 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if ($resultado) {
                 $mensaje = "<h3 class='ok'>¡Te has registrado correctamente!</h3>";
+                header("Location: main_page.html");
             } else {
                 $mensaje = "<h3 class='bad'>¡Error al registrarse!</h3>";
             }
@@ -53,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 <?php echo $mensaje; ?>
 
-                <form action="login.php" method="post">
+                <form action="register.php" method="post">
                     <div class="form-group">
                         <label for="nombre">Nombre:</label>
                         <input type="text" id="nombre" name="nombre" placeholder="Nombre..." required>

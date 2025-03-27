@@ -29,8 +29,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `publicaciones` (
   `id_noticia` int(11) NOT NULL,
-  `fecha` date NOT NULL,
   `titular` varchar(255) NOT NULL,
+  `fecha` date NOT NULL,
   `descripcion_corta` text NOT NULL,
   `contenido` text NOT NULL,
   `referencia` varchar(255) DEFAULT NULL
