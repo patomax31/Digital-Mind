@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 <?php echo $mensaje; ?>
 
-                <form action="login.php" method="post">
+                <form action="register.php" method="post">
                     <div class="form-group">
                         <label for="nombre">Nombre:</label>
                         <input type="text" id="nombre" name="nombre" placeholder="Nombre..." required>
