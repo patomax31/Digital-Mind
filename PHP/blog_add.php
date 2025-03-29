@@ -22,7 +22,7 @@
         <label for="descripcion_corta">Descripción Corta:</label>
         <input type="text" name="descripcion_corta" id="descripcion_corta" required>
         <br>
-
+    
         <label for="contenido">Contenido:</label>
         <textarea name="contenido" id="contenido" rows="10" required></textarea>
         <br>

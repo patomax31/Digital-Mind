@@ -24,6 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if ($resultado) {
                 $mensaje = "<h3 class='ok'>¡Te has registrado correctamente!</h3>";
+                header("Location: main_page.html");
             } else {
                 $mensaje = "<h3 class='bad'>¡Error al registrarse!</h3>";
             }
