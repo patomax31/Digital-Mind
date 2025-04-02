@@ -17,7 +17,7 @@ if (isset($_GET['token'])) {
             $update = "UPDATE usuarios SET contraseña = '$password_hashed', reset_token = NULL WHERE reset_token = '$token'";
             mysqli_query($conex, $update);
             
-            // Enviar correo
+           
             $asunto = "Tu contraseña ha sido cambiada";
             $mensaje = "Hola, tu contraseña ha sido restablecida con éxito.\n\nNueva contraseña: $password\n\nTe recomendamos cambiarla después de iniciar sesión.";
             $headers = "From: no-reply@tuweb.com";
