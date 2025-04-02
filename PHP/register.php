@@ -84,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
 
                     <div class="forgot-password">
-                        <a href="#">¿Olvidaste tu contraseña?</a>
+                        <a href="Recuperar contraseña">¿Olvidaste tu contraseña?</a>
                     </div>
 
                     <p class="footer-text">&copy; Página desarrollada por DigitalMind</p>
