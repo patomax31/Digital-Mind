@@ -1,230 +1,408 @@
 body {
-    font-family: 'Arial', sans-serif; /* Define la fuente de texto para todo el documento */
-    margin: 0; /* Elimina el margen predeterminado del body */
-    padding: 0; /* Elimina el relleno predeterminado del body */
-    background-color: rgba(229, 240, 157, 0.619); /* Establece el color de fondo del body con transparencia */
-    color: #333; /* Define el color principal del texto */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(227, 242, 247);
+    color: #333;
+    box-sizing: border-box;
 }
 
 .container {
-    /* Estilos generales para todos los contenedores */
-    width: 90%; /* Define el ancho del contenedor principal como el 90% del ancho de su elemento padre */
-    max-width: 1250px; /* Establece un ancho máximo para el contenedor */
-    margin: 20px auto; /* Centra el contenedor horizontalmente y agrega un margen vertical de 20px */
-    background-color: rgba(140, 158, 141, 0.842); /* Establece el color de fondo del contenedor con transparencia */
-    border-radius: 10px; /* Redondea las esquinas del contenedor */
-    overflow: hidden; /* Oculta cualquier contenido que se desborde del contenedor */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.573); /* Agrega una sombra al contenedor */
+    width: 100%;
+    margin: 20px auto;
+    background-color: rgb(227, 242, 247);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.573);
 }
 
-header {
+.page-header-footer {
+    background-color: #e3f2f7;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrado horizontal del contenido */
+    height: 80px; /* Altura fija del encabezado */
+    border-bottom: 3px solid #000000;
+    position: relative; /* Para posicionamiento preciso */
+}
+
+/* Contenedor con posicionamiento centrado preciso */
+.page-container {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #d2c1aa;
+    height: 100%;
+    box-sizing: border-box; /* Para que padding y border no afecten dimensiones */
 }
 
 
-header .logo {
-    font-weight: bold; /* Define el texto del logo en negrita */
-    font-size: 1.2em; /* Define el tamaño de la fuente del logo */
-    color: #000000; /* Define el color del texto del logo */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+    position: relative; /* Para ajustes finos */
+    top: 0; /* Asegura que esté alineado con el borde superior */
+    bottom: 0; /* Asegura que esté alineado con el borde inferior */
+    height: 100%; /* Ocupa toda la altura disponible */
 }
 
-header nav a {
-    margin: 0 50px; /* Agrega margen a los enlaces de navegación */
-    background-position: center; /* Centra la posición de la imagen de fondo (si la hay) */
-    background-size: center; /* Centra el tamaño de la imagen de fondo (si la hay) */
-    text-decoration: none; /* Elimina la decoración predeterminada del texto (subrayado) */
-    color: #070707; /* Define el color del texto de los enlaces de navegación */
-    text-shadow: #ffffff; /* Agrega una sombra al texto de los enlaces de navegación */
-    font-weight: 1000; /* Define el peso de la fuente de los enlaces de navegación */
+.logo img {
+    max-width: 300px;
+    max-height: 350px; /* Limita la altura para mantener espacio igual arriba/abajo */
+    object-fit: contain; /* Mantiene proporciones */
+    vertical-align: middle; /* Alineación vertical */
 }
 
-header .search {
-    border: 1px solid #000000; /* Agrega un borde al elemento de búsqueda */
-    padding: 5px 10px; /* Agrega relleno al elemento de búsqueda */
-    border-radius: 5px; /* Redondea las esquinas del elemento de búsqueda */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el elemento de búsqueda */
+nav {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    gap: 70px; /* Espacio uniforme entre elementos */
+}
+
+nav li {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+.search {
+    border: 1px solid #000000;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #121010;
+    color: #fff;
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    height: fit-content; /* Altura adaptada al contenido */
 }
 
 main {
-    padding: 20px; /* Agrega relleno al elemento main */
+    padding: 20px;
 }
 
 .image-section {
-    text-align: center; /* Centra horizontalmente el contenido dentro de la sección de la imagen */
-    margin-bottom: 60px; /* Agrega margen inferior a la sección de la imagen */
+    text-align: center;
+    margin-bottom: 60px;
 }
 
 .main-content {
     text-align: center;
-    margin-bottom: 20px;
-    background-color: #f1f0f0;
-    text-shadow: #000000;
-    background-image: url(/images/img3.png);
     height: auto;
     background-position: center;
     background-size: center;
-    padding: 100px;
-    border-radius: 50px;
-    transition: transform 0.3s ease;
-    font-family: sans-serif;
-}
-
-.main-content:hover {
-    transform: scale(1.05); /* Escala el contenido principal al pasar el cursor sobre él */
-}
-
-.main-content .title {
-    font-size: 2em; /* Define el tamaño de la fuente del título */
-    margin-bottom: 10px; /* Agrega margen inferior al título */
-    color: #ebebeb; /* Define el color del texto del título */
-    text-shadow: #ebebeb; /* Agrega una sombra al texto del título */
-    font-weight: bold; /* Define el texto del título en negrita */
-}
-
-.main-content p {
-    margin-bottom: 15px; /* Agrega margen inferior a los párrafos */
-    line-height: 1.6; /* Define la altura de la línea de los párrafos */
-    color: #fafafa; /* Define el color del texto de los párrafos */
-    text-shadow: #fafafa; /* Agrega una sombra al texto de los párrafos */
-}
-
-.steps {
-    display: flex; /* Utiliza Flexbox para el diseño de los pasos */
-    justify-content: center; /* Centra horizontalmente los pasos */
-    margin-bottom: 20px; /* Agrega margen inferior a los pasos */
-}
-
-.step {
-    width: 300px; /* Define el ancho de cada paso */
-    height: 10px; /* Define la altura de cada paso */
-    background-color: #ffffff; /* Establece el color de fondo de cada paso */
-    margin: 0 5px; /* Agrega margen a los lados de cada paso */
-    border-radius: 3px; /* Redondea las esquinas de cada paso */
-}
-
-.text-section {
-    text-align: left; /* Alinea el texto a la izquierda dentro de la sección de texto */
-}
-
-.text-section .see-more {
-    text-decoration: none; /* Elimina la decoración predeterminada del enlace "Ver más" */
-    color: #000000; /* Define el color del texto del enlace "Ver más" */
-    font-weight: 1000; /* Define el peso de la fuente del enlace "Ver más" */
 }
 
 .most-recent {
-    font-weight: bold; /* Define el texto "Más Reciente" en negrita */
-    margin-bottom: 15px; /* Agrega margen inferior al texto "Más Reciente" */
-    color: #333; /* Define el color del texto "Más Reciente" */
-}
-
-.content-item {
-    display: flex; /* Utiliza Flexbox para el diseño de los elementos de contenido */
-    margin-bottom: 20px; /* Agrega margen inferior a los elementos de contenido */
-    background-color: #69df5f30; /* Establece el color de fondo de los elementos de contenido con transparencia */
-    padding: 15px; /* Agrega relleno a los elementos de contenido */
-    border-radius: 8px; /* Redondea las esquinas de los elementos de contenido */
-    color: rgb(254, 250, 250); /* Define el color del texto de los elementos de contenido */
-    text-shadow: 0 0 8px rgb(0, 0, 0); /* Agrega una sombra al texto de los elementos de contenido */
-    transition: transform 0.3s ease; /* Agrega una transición suave a la propiedad transform */
-    border: 2px solid #ddd; /* Agrega un borde a los elementos de contenido */
-}
-
-.content-item:hover {
-    transform: scale(1.05); /* Escala los elementos de contenido al pasar el cursor sobre ellos */
-    border: 3px solid #000000; /* Aumenta el grosor del borde de los elementos de contenido al pasar el cursor sobre ellos */
-}
-
-.content-text .title {
-    font-weight: bold; /* Define el texto del título de los elementos de contenido en negrita */
-    margin-bottom: 5px; /* Agrega margen inferior al título de los elementos de contenido */
-    color: rgb(255, 255, 255); /* Define el color del texto del título de los elementos de contenido */
-    font-size: 1.8em; /* Define el tamaño de la fuente del título de los elementos de contenido */
-    text-transform: uppercase; /* Convierte el texto del título de los elementos de contenido a mayúsculas */
-    letter-spacing: 1px; /* Agrega espaciado entre las letras del título de los elementos de contenido */
-    text-shadow: 0 0 10px white; /* Agrega una sombra al texto del título de los elementos de contenido */
-}
-
-.content-text p {
-    margin-bottom: 10px; /* Agrega margen inferior a los párrafos de los elementos de contenido */
-    line-height: 1.6; /* Define la altura de la línea de los párrafos de los elementos de contenido */
-    color: rgb(244, 234, 234); /* Define el color del texto de los párrafos de los elementos de contenido */
-    font-size: 1.1em; /* Define el tamaño de la fuente de los párrafos de los elementos de contenido */
-    text-shadow: 0 0 5px rgb(226, 211, 211); /* Agrega una sombra al texto de los párrafos de los elementos de contenido */
-}
-
-.content-text .published {
-    font-size: 1em; /* Define el tamaño de la fuente del texto "Publicado" */
-    color: white; /* Define el color del texto "Publicado" */
-    margin-bottom: 10px; /* Agrega margen inferior al texto "Publicado" */
-    
-}
-
-.content-text .see-more {
-    display: inline-block; /* Define el enlace "Ver más" como un elemento en línea de bloque */
-    padding: 10px 20px; /* Agrega relleno al enlace "Ver más" */
-    background-color: #2e8b57; /* Establece el color de fondo del enlace "Ver más" */
-    color: white; /* Define el color del texto del enlace "Ver más" */
-    text-decoration: none; /* Elimina la decoración predeterminada del enlace "Ver más" */
-    font-weight: 600; /* Define el peso de la fuente del enlace "Ver más" */
-    border-radius: 5px; /* Redondea las esquinas del enlace "Ver más" */
-    margin-top: 10px; /* Agrega margen superior al enlace "Ver más" */
-    transition: transform 0.5s ease; /* Agrega una transición suave a la propiedad transform */
-}
-
-.content-text .see-more:hover {
-    transform: scale(1.2); /* Escala el enlace "Ver más" al pasar el cursor sobre él */
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #000000;
 }
 
 .content-item {
     display: flex;
-    align-items: center; /* Alinea verticalmente los elementos al centro */
-    /* ... otros estilos ... */
+    margin-bottom: 20px;
+    background-color: #6d9eab;
+    padding: 15px;
+    border-radius: 8px;
+    color: rgb(254, 250, 250);
+    text-shadow: 0 0 8px rgb(0, 0, 0);
+    transition: transform 0.2s ease;
+    border: 2px solid #ddd;
+    align-items: center;
+}
+
+.content-item:hover {
+    transform: scale(1.02);
+    border: 3px solid #000000;
+}
+
+.content-item.selected {
+    background-color: #4b7383;
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.content-text .title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: rgb(255, 255, 255);
+    font-size: 1.8em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.content-text p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: rgb(255, 255, 255);
+    font-size: 1.1em;
+}
+
+.content-text .published {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.content-text .see-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e3f2f7;
+    color: #000000;
+    text-decoration: none;
+    text-shadow: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: transform 0.5s ease;
+}
+
+.content-text .see-more:hover {
+    transform: scale(1.2);
 }
 
 .content-image {
-    width: 150px; /* Define el ancho de la imagen de los elementos de contenido */
-    margin-right: 40px; /* Agrega margen derecho a la imagen de los elementos de contenido */
+    width: 325px;
+    margin-right: 40px;
     flex-shrink: 0;
 }
 
 .content-image img {
-    width: 100%; /* Define el ancho de la imagen para que ocupe el 100% de su contenedor */
-    height: auto; /* Ajusta automáticamente la altura de la imagen */
-    border-radius: 10px; /* Redondea las esquinas de la imagen */
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
-footer {
-    display: flex; /* Utiliza Flexbox para el diseño del footer */
-    justify-content: space-between; /* Distribuye los elementos dentro del footer con espacio entre ellos */
-    align-items: center; /* Centra verticalmente los elementos dentro del footer */
-    padding: 10px 20px; /* Agrega relleno al footer */
-    background-color: #e8e8e8; /* Establece el color de fondo del footer */
-    border-top: 1px solid #ccc; /* Agrega un borde superior al footer */
+.page-footer {
+    background-color: #4a6e82;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    border-top: 1px solid #ccc;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-bottom: 4px solid #000000;
 }
 
-footer nav a {
-    margin: 0 40px; /* Agrega margen a los enlaces de navegación del footer */
-    text-decoration: none; /* Elimina la decoración predeterminada de los enlaces de navegación del footer */
-    color: #000000; /* Define el color del texto de los enlaces de navegación del footer */
-    font-weight: 500; /* Define el peso de la fuente de los enlaces de navegación del footer */
+.page-footer .page-container {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid #000000;
 }
 
-.mi-boton {
-    padding: 10px 20px; /* Agrega relleno al botón */
-    background-color: #1b1818; /* Establece el color de fondo del botón */
-    color: white; /* Define el color del texto del botón */
-    text-shadow: #d72525; /* Agrega una sombra al texto del botón */
-    border: none; /* Elimina el borde del botón */
-    border-radius: 5px; /* Redondea las esquinas del botón */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    margin-top: 10px; /* Agrega margen superior al botón */
+.page-footer .logo img {
+    max-height: 400px;
+    height: auto;
+    max-width: 350px;
 }
 
-.mi-boton:hover {
-    background-color: #0056b3; /* Cambia el color de fondo del botón al pasar el cursor sobre él */
+.carousel {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: 70vh;
+    margin-bottom: 30px;
+}
+
+.carousel-images {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.carousel-item {
+    width: calc(100% / 3);
+    flex-shrink: 0;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.carousel-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-item:hover::before {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item:hover img {
+    transform: scale(1.08);
+}
+
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 2000;
+    pointer-events: none;
+}
+
+.carousel-prev,
+.carousel-next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: background-color 0.3s ease;
+    pointer-events: auto;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 2000;
+}
+
+.carousel-indicator {
+    width: 15px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-indicator.active {
+    background-color: white;
+}
+
+.carousel-text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    pointer-events: none;
+}
+
+.carousel-text-item {
+    display: none;
+    text-align: left;
+    color: white;
+    width: 55%;
+    padding: 40px;
+    margin-left: 50px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 0;
+    pointer-events: auto;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.carousel-text-item.active {
+    display: block;
+}
+
+.carousel:hover .carousel-text-item.active {
+    transform: scale(1.05);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-text-item h3 {
+    font-size: 4em;
+    margin-bottom: 10px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    font-family: 'Arial', sans-serif;
+}
+
+.carousel-text-item p {
+    font-size: 1.4em;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.carousel-text-item .carousel-description {
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+.carousel-button {
+    display: inline-block;
+    padding: 12px 35px;
+    background-color: #ffffff;
+    color: #324b40;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    pointer-events: auto;
+    font-size: 1.1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-button:hover, 
+.carousel-button:focus {
+    background-color: #e3e3e3;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
