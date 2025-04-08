@@ -1,24 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Función para inicializar el carrusel
+    // Función para inicializar el carrusel (sin cambios relevantes para el color)
     function initCarousel() {
         const carousel = document.querySelector('.carousel');
         const carouselImages = document.querySelector('.carousel-images');
         const images = document.querySelectorAll('.carousel-item');
         const indicators = document.querySelector('.carousel-indicators');
         const textItems = document.querySelectorAll('.carousel-text-item');
-        const contentItems = document.querySelectorAll('.content-item');
-        
-        // Si no existe el carrusel en la página actual, no continuar
+
         if (!carousel || !carouselImages) return;
-        
+
         let currentIndex = 0;
         const totalImages = images.length;
-        
-        // Limpiar indicadores existentes
+
         if (indicators) {
             indicators.innerHTML = '';
-            
-            // Crear indicadores
             images.forEach((_, index) => {
                 const indicator = document.createElement('div');
                 indicator.classList.add('carousel-indicator');
@@ -30,95 +25,96 @@ document.addEventListener('DOMContentLoaded', function() {
                 indicators.appendChild(indicator);
             });
         }
-        
+
         function updateCarousel() {
-            // Actualizar posición del carrusel
             carouselImages.style.transform = `translateX(-${currentIndex * (100 / totalImages)}%)`;
-            
-            // Actualizar indicadores
             const indicatorDots = document.querySelectorAll('.carousel-indicator');
             indicatorDots.forEach((dot, index) => {
                 dot.classList.toggle('active', index === currentIndex);
             });
-            
-            // Actualizar textos
             textItems.forEach((item, index) => {
                 item.classList.toggle('active', index === currentIndex);
             });
         }
-        
-        // Función para manejar navegación
+
         function handleNavigation(href) {
             window.location.href = href;
         }
-        
+
         const nextButton = document.querySelector('.carousel-next');
         if (nextButton) {
             nextButton.addEventListener('click', (e) => {
-                e.stopPropagation(); // Evitar propagación del evento
+                e.stopPropagation();
                 currentIndex = (currentIndex + 1) % totalImages;
                 updateCarousel();
             });
         }
-        
+
         const prevButton = document.querySelector('.carousel-prev');
         if (prevButton) {
             prevButton.addEventListener('click', (e) => {
-                e.stopPropagation(); // Evitar propagación del evento
+                e.stopPropagation();
                 currentIndex = (currentIndex - 1 + totalImages) % totalImages;
                 updateCarousel();
             });
         }
-        
-        // Auto-avance del carrusel
+
         let autoSlideInterval = setInterval(() => {
             currentIndex = (currentIndex + 1) % totalImages;
             updateCarousel();
         }, 5000);
-        
-        // Pausar auto-avance al pasar el mouse
+
         carousel.addEventListener('mouseenter', () => {
             clearInterval(autoSlideInterval);
         });
-        
+
         carousel.addEventListener('mouseleave', () => {
             autoSlideInterval = setInterval(() => {
                 currentIndex = (currentIndex + 1) % totalImages;
                 updateCarousel();
             }, 5000);
         });
-        
-        // Manejar clics en los botones del carrusel
+
         const carouselButtons = document.querySelectorAll('.carousel-button');
         carouselButtons.forEach(button => {
             button.addEventListener('click', function(e) {
                 e.preventDefault();
-                e.stopPropagation(); // Evitar que el evento se propague
-                
-                // Guardar la URL antes de aplicar efectos
+                e.stopPropagation();
                 const href = this.getAttribute('href');
-                
-                // Aplicar efecto visual
                 const textItem = this.closest('.carousel-text-item');
                 textItem.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
-                
-                // Navegar después del efecto
                 setTimeout(() => {
                     handleNavigation(href);
                 }, 300);
             });
         });
-        
-        // Asegurar que el estado inicial es correcto
+
         updateCarousel();
     }
+
+    // Función para inicializar los elementos de contenido y poner la primera letra de la primera palabra del título en mayúsculas
     function initContentItems() {
         const contentItems = document.querySelectorAll('.content-item');
         const seeMoreLinks = document.querySelectorAll('.see-more');
-        
+
         function handleNavigation(href) {
             window.location.href = href;
         }
+
+        contentItems.forEach(item => {
+            // Poner la primera letra de la primera palabra del título en mayúsculas
+            const titleElement = item.querySelector('.title');
+            if (titleElement) {
+                const words = titleElement.textContent.toLowerCase().split(' ');
+                if (words.length > 0 && words[0].length > 0) {
+                    words[0] = words[0].charAt(0).toUpperCase() + words[0].slice(1);
+                    titleElement.textContent = words.join(' ');
+                } else if (words.length > 0) {
+                    titleElement.textContent = words.join(' ');
+                }
+            }
+        });
+
         seeMoreLinks.forEach((link) => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -136,9 +132,9 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+
     const carruselContainer = document.getElementById('carrusel-container');
     if (carruselContainer) {
-        // Cargar el contenido del carrusel
         fetch('carrusel.html')
             .then(response => {
                 if (!response.ok) {
@@ -147,14 +143,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 return response.text();
             })
             .then(html => {
-                // Extraer solo el contenido relevante del carrusel
                 const parser = new DOMParser();
                 const doc = parser.parseFromString(html, 'text/html');
                 const carruselContent = doc.querySelector('.image-section');
-                
+
                 if (carruselContent) {
                     carruselContainer.innerHTML = carruselContent.outerHTML;
-                    // Inicializar el carrusel una vez cargado
                     initCarousel();
                 } else {
                     console.error('No se encontró el contenido del carrusel');
@@ -167,5 +161,31 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         initCarousel();
     }
+
+    // Llamar a la función para inicializar los títulos de los content-item
     initContentItems();
+});
+document.addEventListener('DOMContentLoaded', () => {
+    const header = document.getElementById('slidingHeader');
+    const body = document.body;
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY > lastScrollY) {
+            // Cuando el usuario baja
+            header.classList.add('slide-up');
+            header.classList.remove('slide-down');
+        } else {
+            // Cuando el usuario sube
+            header.classList.add('slide-down');
+            header.classList.remove('slide-up');
+        }
+
+        lastScrollY = currentScrollY;
+    });
+
+    // Establecemos un margen superior en el body para acomodar el header ampliado
+    body.style.marginTop = `${header.offsetHeight}px`;
 });
