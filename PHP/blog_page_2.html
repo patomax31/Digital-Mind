@@ -1,94 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Educación en México, situación actual</title>
-    <link rel="stylesheet" href="../css/blog_style.css"> 
+    <title>Mapas mentales</title>
+    <link rel="stylesheet" href="/css/blog_style_Mk2.css">
 
 </head>
-
 <body>
-<div class="container">
-    <header><!--Encabezado o parte superior de la pagina-->
-        <!--Logo-->    
-        <div class="logo">DIGITALMIND</div> <!--Coontiene el logo de la marca o nombre-->
 
-            <!--Navegacion central-->
-            <nav class="nav-center"> <!--Tiene una serie de enlaces de navegación donde hay varios elementos <a> que apuntan a diferentes rutas o páginas-->
-                <a href="main_page.html">Inicio</a>
-                <a href="#">Categoria</a>
-                <a href="#">Contacto</a>
+    <header>
+        <section class="header-content">
+            <div class="logo">
+               <a href="/PHP/main_page.html"> 
+                <img src="/images/Logo_Mk2.png" alt="Logo" >
+               </a>
+            </div>
+            <nav class="nav-center">
+
+                <div class="create-container">
+                    <svg class="create-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z" clip-rule="evenodd" />
+                      </svg>
+                    <a href="./PHP/publicaciones.php" class="create-buttom">Crear Blog</a>
+                </div> 
+                
+                <div class="category-container">
+                    <svg class="category-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                      <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 0 0-3 3v4.318a3 3 0 0 0 .879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 0 0 5.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 0 0-2.122-.879H5.25ZM6.375 7.5a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25Z" clip-rule="evenodd" />
+                    </svg>
+                    <a href="#" class="category-buttom">Categoría</a>
+                  </div>
+
+                <nav class="login-bottom">
+                    <svg class="Login-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                        <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd" />
+                      </svg>
+                      
+                <a href="/PHP/register.php" class="search-button">Iniciar sesión </a>
+                </nav>
 
             </nav>
-            
-        <div class="search-button">Busqueda</div>
-
+        </section>
     </header>
     
     <main>
+        <div class="progress-bar"> <!--Barra en si-->
+            <div id="progress" class="progress"></div> <!--Progeso de la barra-->
+        </div> 
+    <div class="title-container">    
+        <section class="title-content">
+            <div class="text">
+                <h1>Los mapas mentales en el aprendizaje</h1>
+  
 
-        <div class="main-content"> <!--Actúa como contenedor para agrupar los distintos bloques de contenido dentro de la sección principal. En ocasiones se usa para controlar el layout y aplicar márgenes o anchos máximos.-->
-
-            <div class="main-content detail-page"> <!--main-content y detail-page Esto permite aplicar estilos generales para el contenido principal y, además, estilos específicos para las páginas de “detalle”. Dentro de este bloque se encuentra:-->
-
-            <div class="text-box">    
-                <div class="title"> Los mapas mentales en el aprendizaje </div>
-                <p>Los mapas conceptuales son una herramienta de aprendizaje que ayuda a organizar ideas y conceptos para comprender y analizar temas. Son una estrategia de enseñanza-aprendizaje que facilita la comprensión de conceptos complejos, son una herramienta poderosa que todos deberiamos usar.</p>    
-                    
-    
-                
-                
-                        <p>Los mapas conceptuales son organizadores gráficos que permiten representar el conocimiento como una serie de conceptos que se conectan con palabras vinculadas para formar una proposición, dan una idea clara de conceptos complejos y facilitan el aprendizaje Fig 1</p>
-                    
-                        <figure> 
-                            <img src = "../images/img4.jpg">
-                            <figcaption>Fig.1 Un mapa conceptual siempre busca la simplicidad.</figcaption>
-                        </figure>
-                        
-                        <p><strong>¿Como podemos implementarlo en nuestro aprendizaje?</strong></p>
-
-                        <p>para elaborar un mapa conceptual efectivo, se recomienda: </p>
-                            
-                        <p>    Elegir un concepto central claro y concreto. </p>
-                            
-                        <p>    Organizar los subtemas de manera jerárquica, usando palabras de enlace precisas. </p>
-                            
-                        <p>    Utilizar colores, íconos e imágenes para mejorar la comprensión visual. </p>
-                            
-                        <p> Revisar y actualizar el mapa conforme se amplíe el conocimiento sobre el tema. </p>
-                            
-                        <p>    En conclusión, los mapas conceptuales son una herramienta didáctica poderosa que favorece el aprendizaje activo y significativo. Implementarlos de manera adecuada en nuestros estudios y actividades cotidianas puede contribuir significativamente al éxito académico y profesional. </p>
-                            
-    
-
-                     
-
-                       
-                     
-                    <div class="url">
-                        <nav>
-
-                                <a href="https://d1wqtxts1xzle7.cloudfront.net/38678866/Libro_de_Novak-libre.pdf?1441516619=&response-content-disposition=inline%3B+filename%3DLibro_de_Novak.pdf&Expires=1741687520&Signature=Z7xYRD-UglhHJ5RZHvdE9Njdklxgo7LgWS-JW77GYj-w9UoFX-HtPgPbT1iVbfbZHk-qzXZFoDXBLrD65xotAmKu9BKEQqXncx6Ch8u6ds56FXtBVy4p8qTZ5GLNyTAPpAOuy3dT0CA9Hi-WnV2XtI-54lmQ4Asj4hjC6UDtW3Abi6ztK4VUHTSJSud8B~LMDi8M3MvDzCYvBH2swT1oj8oJJyK1zFHRS63NA4xXc~uv-wDXvQrqICmPjNwvVJrFL4RY3cthhitiyW7L5pBefEXJ91iBCQZWKWsumZP-pLhx0SYwZSHCR2nB~GRIYP29VZsOJvD8JHoEd4N6QP3PaQ__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA">Fuente</a>
-                        </nav>
-                    </div>    
-                       
+                </div>
+                <div class="title-image">
+                    <img src="/images/MAPA-MENTAL-EJEMPLO-1.jpg">
+                </div>
             </div>    
+        </section>        
+    </div>    
+
+    <section class="container">   
+        <section class="content">
+            
+            <p><strong>Los mapas mentales en el aprendizaje</strong></p> <!--Las etiquetas <strong> se usan para resaltar en negrita títulos o conceptos dentro de los párrafos y listas.-->
+
+                <p>Los mapas conceptuales son una herramienta de aprendizaje que ayuda a organizar ideas y conceptos para comprender y analizar temas. Son una estrategia de enseñanza-aprendizaje que facilita la comprensión de conceptos complejos, son una herramienta poderosa que todos deberiamos usar.</p>
+
+                <p>Los mapas conceptuales son organizadores gráficos que permiten representar el conocimiento como una serie de conceptos que se conectan con palabras vinculadas para formar una proposición, dan una idea clara de conceptos complejos y facilitan el aprendizaje. Fig.1</p>
+
+                <figure> 
+                    <img src = "../images/img4.jpg" alt="Tasa de asistencia escolar">
+                    <figcaption>Fig.1 Un mapa conceptual siempre busca la simplicidad.</figcaption>
+                </figure>
+
+                <p><strong>¿Como podemos implementarlo en nuestro aprendizaje?</strong></p>
+
+                <p>Para elaborar un mapa conceptual efectivo, se recomienda: </p>
+                    
+                <li>Elegir un concepto central claro y concreto.</li>
+                    
+                <li>Organizar los subtemas de manera jerárquica, usando palabras de enlace precisas. </li>
+                    
+                <li>Utilizar colores, íconos e imágenes para mejorar la comprensión visual. </li>
+                    
+                <li> Revisar y actualizar el mapa conforme se amplíe el conocimiento sobre el tema. </li>
+                    
+                <p>En conclusión, los mapas conceptuales son una herramienta didáctica poderosa que favorece el aprendizaje activo y significativo. Implementarlos de manera adecuada en nuestros estudios y actividades cotidianas puede contribuir significativamente al éxito académico y profesional. </p>
+                    
+
+        </section>
+  
+
+        <button id="scrollBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3.5" stroke="currentColor" class="size-6">
+             <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+            </svg>   
+        </button>
+        <script src="/Js/blog_page_3.js"></script>
+    </section>    
+
+    
+    <div class="container-reference">      
+        <div class="reference-content">
+        <h2>Referencias</h2>
+        <p>Pendiente<a href="https://www.codicemx.org/documento/3"></a> </p>
+        
         </div>
-</div>
+    </div>  
+
     </main>
 
+
     <footer>
-        <!--Navegación del footer-->
-        <nav class="nav-footer">
-            <a href="main_page.html">Inicio</a>
-            <a href="#">Categoria</a>
-            <a href="#">Contacto</a>
-        </nav>
-
-    </footer>
-
+        <div class="footer-content">
+          <p>Derechos Reservados &reg; Digital-Mind &copy; </p>
+        </div>
+      </footer>
+      
+    <script src="/Js/progress-bar.js"></script>
 </body>
-
-
 </html>
