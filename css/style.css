@@ -23,11 +23,10 @@ body {
     align-items: center;
     justify-content: center; /* Centrado horizontal del contenido */
     height: 80px; /* Altura fija del encabezado */
-    border-bottom: 3px solid #000000;
     position: relative; /* Para posicionamiento preciso */
 }
 
-/* Contenedor con posicionamiento centrado preciso */
+
 .page-container {
     width: 100%;
     display: flex;
@@ -36,7 +35,6 @@ body {
     height: 100%;
     box-sizing: border-box; /* Para que padding y border no afecten dimensiones */
 }
-
 
 .logo {
     display: flex;
@@ -127,7 +125,6 @@ main {
 .content-item {
     display: flex;
     margin-bottom: 20px;
-    background-color: #6d9eab;
     padding: 15px;
     border-radius: 8px;
     color: rgb(254, 250, 250);
@@ -148,12 +145,26 @@ main {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
+.content-item.color-noticia-1 {
+    background-color: #a8dadc; /* Un bonito azul claro */
+}
+
+.content-item.color-noticia-2 {
+    background-color: #6d9eab; /* Un naranja suave */
+}
+
+.content-item.color-noticia-3 {
+    background-color: #4a6e82; /* Un verde azulado */
+}
+
+.content-item.color-noticia-4 {
+    background-color: #294c5b; /* Un rojo anaranjado */
+}
 .content-text .title {
     font-weight: bold;
     margin-bottom: 5px;
     color: rgb(255, 255, 255);
     font-size: 1.8em;
-    text-transform: uppercase;
     letter-spacing: 1px;
 }
 
@@ -199,29 +210,62 @@ main {
 
 .page-footer {
     background-color: #4a6e82;
-    display: flex;
-    align-items: center;
-    height: 100px;
+    padding: 20px 0; /* Añademos un poco de padding vertical */
     border-top: 1px solid #ccc;
     margin: 0;
-    padding: 0;
-    overflow: hidden;
+    color: white; /* Cambiamos el color del texto del footer a blanco para mejor contraste */
+    text-align: center; /* Centramos el contenido general del footer */
     border-bottom: 4px solid #000000;
 }
 
-.page-footer .page-container {
-    width: 100%;
-    margin: 0;
+.page-container-footer {
+    width: 90%;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    border-bottom: 4px solid #000000;
+    justify-content: space-between;
+    min-height: 80px;
+    padding-top: 15px; /* Añade padding en la parte superior */
+    padding-bottom: 15px; /* Añade padding en la parte inferior */
 }
 
-.page-footer .logo img {
-    max-height: 400px;
-    height: auto;
-    max-width: 350px;
+.page-footer .logo {
+    display: none; /* Ocultamos el logo */
+}
+
+.page-footer nav {
+    width: auto; /* Ajustamos el ancho de la navegación al contenido */
+    margin-top: 20px; /* Espacio entre el copyright y la navegación */
+}
+
+.page-footer nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centramos los elementos de la lista */
+    margin: 0;
+    padding: 0;
+    gap: 70px; /* Espacio entre los elementos de la lista */
+}
+
+.page-footer nav li {
+    margin: 0;
+}
+
+.page-footer nav a {
+    text-decoration: none;
+    color: white; /* Mantenemos el color de los enlaces en blanco */
+    font-weight: bold;
+}
+
+.page-footer .copyright {
+    font-size: 0.9em;
+    margin-bottom: 5px; /* Espacio entre el copyright y la navegación */
+}
+
+.page-footer .page-container-footer .logo img {
+    display: none; /* Aseguramos que el logo no se muestre por si acaso */
 }
 
 .carousel {
@@ -405,4 +449,38 @@ main {
     background-color: #e3e3e3;
     transform: scale(1.1);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+.sliding-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px; /* Agrandamos el header */
+    z-index: 1100; /* Incrementamos la prioridad sobre otros elementos */
+    background-color: #e3f2f7;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Mejora la estética con una sombra más destacada */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ajustamos contenido horizontal */
+    padding: 0 20px; /* Espaciado interno más generoso */
+}
+
+.sliding-header.slide-up {
+    transform: translateY(-100%);
+    box-shadow: none; /* Sin sombra cuando está oculto */
+}
+
+.sliding-header.slide-down {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Reaparece con sombra */
+}
+
+.container {
+    margin-top: 100px; /* Ajustamos el contenido para que no quede oculto bajo el header */
+}
+
+.carousel-text-item {
+    z-index: 900; /* Aseguramos que el texto del carrusel quede debajo del header */
+    position: relative; /* Establecemos una relación correcta de posicionamiento */
 }
