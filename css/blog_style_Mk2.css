@@ -207,7 +207,7 @@
   display: block;
   }
   
-  .container {
+  .container-blog {
     width: 100%;              /* Aumenta el ancho para que esté más cerca del lateral */
     max-width: 1200px;       /* Máximo ancho para pantallas grandes */
     margin: 0 auto;          /* Centra el contenedor y evita márgenes laterales fijos */
