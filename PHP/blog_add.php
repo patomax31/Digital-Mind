@@ -30,7 +30,7 @@
         <label for="referencia">Referencia (opcional):</label>
         <input type="url" name="referencia" id="referencia">
         <br>
-
+    
         <button type="submit">Publicar</button>
         <br>
     </form>
