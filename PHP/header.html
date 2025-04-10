@@ -1,11 +1,16 @@
 <header>
-    <div class="logo" href ="main_page.html">DIGITALMIND</div>
+    <div class="logo" href="main_page.html">DIGITALMIND</div>
     <nav>
         <a href="main_page.html">HOME</a>
         <a href="#">CONTACTO</a>
-        <a class ="mi-boton" href="blog_add.php">crear publicacion</a>
+        <a class="mi-boton" href="blog_add.php">crear publicación</a>
     </nav>
-    <a class ="mi-boton" href="register.php">login</a>
-
-
+    
+    <!-- Formulario de búsqueda -->
+    <form action="search.php" method="GET" class="search-form">
+        <input type="text" name="query" placeholder="Buscar..." required>
+        <button type="submit"></button>
+    </form>
+    
+    <a class="mi-boton" href="register.php">login</a>
 </header>
