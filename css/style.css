@@ -16,88 +16,186 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.573);
 }
 
-.page-header-footer {
-    background-color: #e3f2f7;
-    padding: 0;
-    display: flex;
+header{
+    position: fixed; /* Mantiene el header en la parte superior mientras se hace scroll */
+    top: 0; /* Posiciona el header justo en el tope */
+    left: 0; /* Asegura que comience desde el borde izquierdo */
+    width: 100%; /* Ocupa el ancho completo de la pantalla */
+    z-index: 1000; /* Hace que el header esté por encima de otros elementos */
+    background-color: #e3f2f7; /* Fondo para diferenciación */
+    font-size: 4rem;
+  }
+  /* --- Encabezado (Header) --- */
+  .header-content {
+    background-color: #e3f2f7; /* Color de fondo claro */
+    ; /* Color de fondo del header */
+    padding: 10px 20px;
     align-items: center;
-    justify-content: center; /* Centrado horizontal del contenido */
-    height: 80px; /* Altura fija del encabezado */
-    position: relative; /* Para posicionamiento preciso */
-}
-
-
-.page-container {
-    width: 100%;
-    display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    box-sizing: border-box; /* Para que padding y border no afecten dimensiones */
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 50px;
-    position: relative; /* Para ajustes finos */
-    top: 0; /* Asegura que esté alineado con el borde superior */
-    bottom: 0; /* Asegura que esté alineado con el borde inferior */
-    height: 100%; /* Ocupa toda la altura disponible */
-}
-
-.logo img {
-    max-width: 300px;
-    max-height: 350px; /* Limita la altura para mantener espacio igual arriba/abajo */
-    object-fit: contain; /* Mantiene proporciones */
-    vertical-align: middle; /* Alineación vertical */
-}
-
-nav {
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
+    display: flex; /* Flexbox para alinear elementos */
+    justify-content: space-around;
     width: 100%;
-    gap: 70px; /* Espacio uniforme entre elementos */
-}
-
-nav li {
-    margin: 0;
+    }
+    
+  
+  
+    /* Logo a la izquierda */
+    .logo {
+      position: relative;
+      left: 90px;
+      font-size: 0.5em;
+      font-weight: bold;
+    
+    }
+    
+    /* Navegación central: Inicio, Categoría y Búsqueda */
+    .nav-center { 
+      display: flex; 
+      gap: 12rem;    /* Espacio entre cada enlace */
+      justify-content: center; /*Para centrar el pedo */
+      flex: 1; /* Esto asegura que el nav ocupe todo el espacio posible entre el logo y el botón de búsqueda */
+      align-items: center;
+      font-size: large;
+    } /*La regla CSS de .nav-center usa display: flex; con gap: 30px; para distribuir equitativamente los enlaces y conseguir que queden centrados en el header.*/
+  
+    .nav-center a {
+      text-decoration: none;
+      font-weight: bold;
+      font-family: 'Roboto';
+      color: #020202;
+    }
+  
+     /* Efecto hover para los enlaces */
+  .nav-center a:hover {
+    color: #ffffff;
+  }
+    
+  .create-container{
     display: flex;
     align-items: center;
-    justify-content: center;
-}
-
-nav a {
-    text-decoration: none;
+    gap: 10px; /* Espacio entre el ícono y el botón */
+  }
+  
+  .create-buttom{
+    background-color: #e3f2f7;
+    padding: 10px 20px;
+    border-radius: 30px;
     color: #000000;
     font-weight: bold;
-}
-
-.search {
-    border: 1px solid #000000;
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #121010;
-    color: #fff;
-    margin-right: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .create-icon{
+    width: 24px;
+    height: 24px;
+  }
+  
+  .create-buttom:hover {
+    background-color: #294c5b;
+  }
+  
+  .category-container {
     display: flex;
     align-items: center;
-    height: fit-content; /* Altura adaptada al contenido */
+    gap: 10px; /* Espacio entre el ícono y el botón */
+  }
+  
+  /* Estilos para el botón de categoría */
+  .category-buttom {
+    background-color: #e3f2f7;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover para el botón */
+  .category-buttom:hover {
+    background-color: #294c5b;
+  }
+  
+  /* Tamaño del ícono */
+  .category-icon {
+    width: 24px;
+    height: 24px;
+    /* Opcional: si deseas ajustar el espaciado adicional */
+    /* margin-right: 10px;  No es necesario al usar gap en el contenedor */
+  }
+  
+  
+  
+   /* Botón de búsqueda a la derecha, con forma de píldora */
+  .search-button {
+      background-color: #e3f2f7;             /* Color de fondo (puedes elegir otro que combine) */
+      padding: 10px 20px;                    /* Espaciado interno */
+      border-radius: 30px;                   /* Valor alto para crear la forma de pildora */
+      color: #ffffff;                          /* Color del texto */
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+    }
+  
+  /* Efecto hover para el botón de búsqueda */
+  .search-button:hover {
+    background-color: #294c5b;
+  }  
+  
+  .login-bottom{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  } 
+    
+  .login-icon{
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+
+/* Up Button */
+
+svg{
+    width: 25px;
+    height: 25px;
 }
+
+#scrollBtn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: none;
+    outline: none;
+    background-color: #6D9EAB;
+    cursor: pointer;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+#scrollBtn:hover{
+  background-color: #294c5b;
+}  
+
+/* Linea progresiva */
+
+.progress-bar{
+    position: fixed;
+    width: 100%;
+    height: 10px;
+    top: 0; /* Asegúrate de posicionarla en la parte superior */
+    z-index: 8000; /* <-- Este valor asegura que quede encima */
+    margin-top: 4.8rem;
+  }
+  
+  .progress{
+    width: 0%;
+    height: 100%;
+    background-color:#294c5b;
+  }
 
 main {
     padding: 20px;
@@ -208,65 +306,21 @@ main {
     border-radius: 10px;
 }
 
-.page-footer {
-    background-color: #4a6e82;
-    padding: 20px 0; /* Añademos un poco de padding vertical */
-    border-top: 1px solid #ccc;
-    margin: 0;
-    color: white; /* Cambiamos el color del texto del footer a blanco para mejor contraste */
-    text-align: center; /* Centramos el contenido general del footer */
-    border-bottom: 4px solid #000000;
-}
-
-.page-container-footer {
-    width: 90%;
-    margin: 0 auto;
+/* --- Footer --- */
+footer {
+    width: 100%;
+  }
+  
+.footer-content {
+    background-color: #000000;  /* Fondo negro */
+    padding: 10px 20px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 80px;
-    padding-top: 15px; /* Añade padding en la parte superior */
-    padding-bottom: 15px; /* Añade padding en la parte inferior */
+    justify-content: center;    /* Centra horizontalmente */
+    align-items: center;        /* Centra verticalmente */
+    color: white;
 }
-
-.page-footer .logo {
-    display: none; /* Ocultamos el logo */
-}
-
-.page-footer nav {
-    width: auto; /* Ajustamos el ancho de la navegación al contenido */
-    margin-top: 20px; /* Espacio entre el copyright y la navegación */
-}
-
-.page-footer nav ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Centramos los elementos de la lista */
-    margin: 0;
-    padding: 0;
-    gap: 70px; /* Espacio entre los elementos de la lista */
-}
-
-.page-footer nav li {
-    margin: 0;
-}
-
-.page-footer nav a {
-    text-decoration: none;
-    color: white; /* Mantenemos el color de los enlaces en blanco */
-    font-weight: bold;
-}
-
-.page-footer .copyright {
-    font-size: 0.9em;
-    margin-bottom: 5px; /* Espacio entre el copyright y la navegación */
-}
-
-.page-footer .page-container-footer .logo img {
-    display: none; /* Aseguramos que el logo no se muestre por si acaso */
-}
+  
+  
 
 .carousel {
     width: 100%;
