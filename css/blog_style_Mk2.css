@@ -21,7 +21,9 @@
       padding: 0;
       background-color: #e3f2f7; /* Color de fondo claro */
       color: #2c2828;
+    
   }
+
   
   header{
     position: fixed; /* Mantiene el header en la parte superior mientras se hace scroll */
@@ -167,6 +169,7 @@
       padding: 20px;
       margin-top: 50px;
       text-align: justify;
+      margin: 0;
   }
   
   .title-container{
@@ -302,7 +305,10 @@
     position: fixed;
     width: 100%;
     height: 10px;
-    margin-top: 23px;
+    top: 0; /* Asegúrate de posicionarla en la parte superior */
+    left: 0;
+    z-index: 8000; /* <-- Este valor asegura que quede encima */
+    margin-top: 5.8rem;
   }
   
   .progress{
