@@ -8,7 +8,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $contenido = $_POST["contenido"];
     $referencia = isset($_POST["referencia"]) && !empty($_POST["referencia"]) ? $_POST["referencia"] : "";
 
-    $stmt = $conn->prepare("INSERT INTO publicaciones (titular, fecha, descripcion_corta, contenido, referencia) VALUES (?, ?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO publicaciones_2 (titular, fecha, descripcion_corta, contenido, referencia) VALUES (?, ?, ?, ?, ?)");
     $stmt->bind_param("sssss", $titular, $fecha, $descripcion_corta, $contenido, $referencia);
     if ($stmt->execute()){
         echo "Publicacion guardada correctamente.";
