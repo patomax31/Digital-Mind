@@ -1,0 +1,494 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(227, 242, 247);
+    color: #333;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    margin: 20px auto;
+    background-color: rgb(227, 242, 247);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.573);
+}
+
+.page-header-footer {
+    background-color: #e3f2f7;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrado horizontal del contenido */
+    height: 80px; /* Altura fija del encabezado */
+    position: relative; /* Para posicionamiento preciso */
+}
+
+header{
+    position: fixed; /* Mantiene el header en la parte superior mientras se hace scroll */
+    top: 0; /* Posiciona el header justo en el tope */
+    left: 0; /* Asegura que comience desde el borde izquierdo */
+    width: 100%; /* Ocupa el ancho completo de la pantalla */
+    z-index: 1000; /* Hace que el header esté por encima de otros elementos */
+    background-color: #e3f2f7; /* Fondo para diferenciación */
+    font-size: 4rem;
+}
+
+.header-content {
+    background-color: #e3f2f7; /* Color de fondo claro */
+    ; /* Color de fondo del header */
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex; /* Flexbox para alinear elementos */
+    justify-content: space-around;
+    width: 100%;
+    }
+    
+
+.logo {
+position: relative;
+left: 90px;
+font-size: 0.5em;
+font-weight: bold;
+    
+    }
+    
+    /* Navegación central: Inicio, Categoría y Búsqueda */
+    .nav-center { 
+      display: flex; 
+      gap: 12rem;    /* Espacio entre cada enlace */
+      justify-content: center; /*Para centrar el pedo */
+      flex: 1; /* Esto asegura que el nav ocupe todo el espacio posible entre el logo y el botón de búsqueda */
+      align-items: center;
+      font-size: large;
+    } /*La regla CSS de .nav-center usa display: flex; con gap: 30px; para distribuir equitativamente los enlaces y conseguir que queden centrados en el header.*/
+  
+    .nav-center a {
+      text-decoration: none;
+      font-weight: bold;
+      font-family: 'Roboto';
+      color: #020202;
+    }
+  
+     /* Efecto hover para los enlaces */
+  .nav-center a:hover {
+    color: #ffffff;
+  }
+
+.search {
+    border: 1px solid #000000;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #121010;
+    color: #fff;
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    height: fit-content; /* Altura adaptada al contenido */
+}
+
+main {
+    padding: 20px;
+}
+
+.image-section {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.main-content {
+    text-align: center;
+    height: auto;
+    background-position: center;
+    background-size: center;
+}
+
+.most-recent {
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #000000;
+}
+
+.content-item {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    color: rgb(254, 250, 250);
+    text-shadow: 0 0 8px rgb(0, 0, 0);
+    transition: transform 0.2s ease;
+    border: 2px solid #ddd;
+    align-items: center;
+}
+
+.content-item:hover {
+    transform: scale(1.02);
+    border: 3px solid #000000;
+}
+
+.content-item.selected {
+    background-color: #4b7383;
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.content-item.color-noticia-1 {
+    background-color: #a8dadc; /* Un bonito azul claro */
+}
+
+.content-item.color-noticia-2 {
+    background-color: #6d9eab; /* Un naranja suave */
+}
+
+.content-item.color-noticia-3 {
+    background-color: #4a6e82; /* Un verde azulado */
+}
+
+.content-item.color-noticia-4 {
+    background-color: #294c5b; /* Un rojo anaranjado */
+}
+.content-text .title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: rgb(255, 255, 255);
+    font-size: 1.8em;
+    letter-spacing: 1px;
+}
+
+.content-text p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: rgb(255, 255, 255);
+    font-size: 1.1em;
+}
+
+.content-text .published {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.content-text .see-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e3f2f7;
+    color: #000000;
+    text-decoration: none;
+    text-shadow: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: transform 0.5s ease;
+}
+
+.content-text .see-more:hover {
+    transform: scale(1.2);
+}
+
+.content-image {
+    width: 325px;
+    margin-right: 40px;
+    flex-shrink: 0;
+}
+
+.content-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.page-footer {
+    background-color: #4a6e82;
+    padding: 20px 0; /* Añademos un poco de padding vertical */
+    border-top: 1px solid #ccc;
+    margin: 0;
+    color: white; /* Cambiamos el color del texto del footer a blanco para mejor contraste */
+    text-align: center; /* Centramos el contenido general del footer */
+    border-bottom: 4px solid #000000;
+}
+
+.page-container-footer {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80px;
+    padding-top: 15px; /* Añade padding en la parte superior */
+    padding-bottom: 15px; /* Añade padding en la parte inferior */
+}
+
+.page-footer .logo {
+    display: none; /* Ocultamos el logo */
+}
+
+.page-footer nav {
+    width: auto; /* Ajustamos el ancho de la navegación al contenido */
+    margin-top: 20px; /* Espacio entre el copyright y la navegación */
+}
+
+.page-footer nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centramos los elementos de la lista */
+    margin: 0;
+    padding: 0;
+    gap: 70px; /* Espacio entre los elementos de la lista */
+}
+
+.page-footer nav li {
+    margin: 0;
+}
+
+.page-footer nav a {
+    text-decoration: none;
+    color: white; /* Mantenemos el color de los enlaces en blanco */
+    font-weight: bold;
+}
+
+.page-footer .copyright {
+    font-size: 0.9em;
+    margin-bottom: 5px; /* Espacio entre el copyright y la navegación */
+}
+
+.page-footer .page-container-footer .logo img {
+    display: none; /* Aseguramos que el logo no se muestre por si acaso */
+}
+
+.carousel {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: 70vh;
+    margin-bottom: 30px;
+}
+
+.carousel-images {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.carousel-item {
+    width: calc(100% / 3);
+    flex-shrink: 0;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.carousel-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-item:hover::before {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item:hover img {
+    transform: scale(1.08);
+}
+
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 2000;
+    pointer-events: none;
+}
+
+.carousel-prev,
+.carousel-next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: background-color 0.3s ease;
+    pointer-events: auto;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 2000;
+}
+
+.carousel-indicator {
+    width: 15px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-indicator.active {
+    background-color: white;
+}
+
+.carousel-text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    pointer-events: none;
+}
+
+.carousel-text-item {
+    display: none;
+    text-align: left;
+    color: white;
+    width: 55%;
+    padding: 40px;
+    margin-left: 50px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 0;
+    pointer-events: auto;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.carousel-text-item.active {
+    display: block;
+}
+
+.carousel:hover .carousel-text-item.active {
+    transform: scale(1.05);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-text-item h3 {
+    font-size: 4em;
+    margin-bottom: 10px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    font-family: 'Arial', sans-serif;
+}
+
+.carousel-text-item p {
+    font-size: 1.4em;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.carousel-text-item .carousel-description {
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+.carousel-button {
+    display: inline-block;
+    padding: 12px 35px;
+    background-color: #ffffff;
+    color: #324b40;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    pointer-events: auto;
+    font-size: 1.1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-button:hover, 
+.carousel-button:focus {
+    background-color: #e3e3e3;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+.sliding-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px; /* Agrandamos el header */
+    z-index: 1100; /* Incrementamos la prioridad sobre otros elementos */
+    background-color: #e3f2f7;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Mejora la estética con una sombra más destacada */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ajustamos contenido horizontal */
+    padding: 0 20px; /* Espaciado interno más generoso */
+}
+
+.sliding-header.slide-up {
+    transform: translateY(-100%);
+    box-shadow: none; /* Sin sombra cuando está oculto */
+}
+
+.sliding-header.slide-down {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Reaparece con sombra */
+}
+
+.container {
+    margin-top: 100px; /* Ajustamos el contenido para que no quede oculto bajo el header */
+}
+
+.carousel-text-item {
+    z-index: 900; /* Aseguramos que el texto del carrusel quede debajo del header */
+    position: relative; /* Establecemos una relación correcta de posicionamiento */
+}
+.progress-bar {
+    position: fixed;
+    top: 90px; /* Posicionado justo debajo del header fijo */
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #f0f0f0;
+    z-index: 999; /* Menor que el header pero por encima del resto */
+}
+
+.progress {
+    height: 100%;
+    width: 0;
+    background-color: #4a6e82; /* Color que coincide con el esquema de tu sitio */
+    transition: width 0.1s ease;
+}
