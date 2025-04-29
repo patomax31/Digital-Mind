@@ -49,6 +49,36 @@
         <main>
             <div id="carrusel-container"></div>
             <div class="most-recent">Más Reciente</div>
+            
+            <?php
+include 'blog_db.php';  // Incluye la conexión
+
+// Consulta para obtener los 5 posts más recientes
+$sql = "SELECT * FROM publicaciones_2 ORDER BY fecha_creacion DESC LIMIT 5";
+$resultado = $conn->query($sql);
+
+if ($resultado->num_rows > 0) {
+    while ($fila = $resultado->fetch_assoc()) {
+        echo '
+        <div class="content-item">
+            <div class="content-image">
+                <img src="../images/default-post.jpg" alt="' . htmlspecialchars($fila['titular']) . '">
+            </div>
+            <div class="content-text">
+                <div class="title">' . htmlspecialchars($fila['titular']) . '</div>
+                <p>' . htmlspecialchars($fila['descripcion_corta']) . '</p>
+                <p class="published">Publicado el ' . date("d/m/Y", strtotime($fila['fecha'])) . '</p>
+                <a href="../PHP/post_completo.php?id=' . $fila['id'] . '" class="see-more">Ver más</a>
+            </div>
+        </div>';
+    }
+} else {
+    echo '<p>No hay publicaciones aún.</p>';
+}
+
+$conn->close();
+?>
+            
             <div class="content-item">
                 <div class="content-image">
                     <img src="../images/Grafica Escolaridad y analfabetismo.png" alt="Students">

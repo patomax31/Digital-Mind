@@ -2,7 +2,7 @@
 // Database connection parameters
 $db_host = 'localhost';
 $db_user = 'root';
-$db_pass = 'asd1'; // XAMPP default is empty password
+$db_pass = ''; // XAMPP default is empty password
 $db_name = 'blog_db'; // Make sure this matches your actual database name
 
 // Create connection

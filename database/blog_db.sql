@@ -37,6 +37,14 @@ CREATE TABLE `publicaciones_2` (
   `fecha_creacion` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+CREATE TABLE `usuarios` (
+  `id` int(7) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `contraseña` varchar(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
 --
 -- Volcado de datos para la tabla `publicaciones_2`
 --
@@ -64,6 +72,37 @@ ALTER TABLE `publicaciones_2`
 --
 ALTER TABLE `publicaciones_2`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+INSERT INTO `usuarios` (`id`, `nombre`, `email`, `contraseña`) VALUES
+(1, 'Alan Amador Alcaraz Malta', 'aalcaraz30@ucol.mx', '$2y$10$jgk8T1g0'),
+(2, 'Alan Amador Alcaraz Malta', 'aalcaraz30@ucol.mx', '$2y$10$C3csnhl3'),
+(3, 'Alan Amador Alcaraz Malta', 'aalcaraz30@ucol.mx', '$2y$10$7MRGAdbU'),
+(4, 'Alan Amador Alcaraz Malta', 'aalcaraz30@ucol.mx', '$2y$10$ZD62e85y');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
