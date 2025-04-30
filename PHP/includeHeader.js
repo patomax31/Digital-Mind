@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.body.insertBefore(headerPlaceholder, document.body.firstChild);
 
-    fetch("header.html")
+    fetch("../PHP/header.html")
         .then(response => response.text())
         .then(data => {
             headerPlaceholder.innerHTML = data;
