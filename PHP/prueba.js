@@ -1,15 +1,120 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Inicializar el header deslizante
-    const slidingHeader = document.getElementById('slidingHeader');
-    
-    function initContentItems() {
-        const contentItems = document.querySelectorAll('.content-item');
-        const seeMoreLinks = document.querySelectorAll('.see-more');
-        
+    // Función para inicializar el carrusel (sin cambios relevantes para el color)
+    function initCarousel() {
+        const carousel = document.querySelector('.carousel');
+        const carouselImages = document.querySelector('.carousel-images');
+        const images = document.querySelectorAll('.carousel-item');
+        const indicators = document.querySelector('.carousel-indicators');
+        const textItems = document.querySelectorAll('.carousel-text-item');
+
+        if (!carousel || !carouselImages) return;
+
+        let currentIndex = 0;
+        const totalImages = images.length;
+
+        if (indicators) {
+            indicators.innerHTML = '';
+            images.forEach((_, index) => {
+                const indicator = document.createElement('div');
+                indicator.classList.add('carousel-indicator');
+                if (index === 0) indicator.classList.add('active');
+                indicator.addEventListener('click', () => {
+                    currentIndex = index;
+                    updateCarousel();
+                });
+                indicators.appendChild(indicator);
+            });
+        }
+
+        function updateCarousel() {
+            carouselImages.style.transform = `translateX(-${currentIndex * (100 / totalImages)}%)`;
+            const indicatorDots = document.querySelectorAll('.carousel-indicator');
+            indicatorDots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+            textItems.forEach((item, index) => {
+                item.classList.toggle('active', index === currentIndex);
+            });
+        }
+
         function handleNavigation(href) {
             window.location.href = href;
         }
-        
+
+        const nextButton = document.querySelector('.carousel-next');
+        if (nextButton) {
+            nextButton.addEventListener('click', (e) => {
+                e.stopPropagation();
+                currentIndex = (currentIndex + 1) % totalImages;
+                updateCarousel();
+            });
+        }
+
+        const prevButton = document.querySelector('.carousel-prev');
+        if (prevButton) {
+            prevButton.addEventListener('click', (e) => {
+                e.stopPropagation();
+                currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+                updateCarousel();
+            });
+        }
+
+        let autoSlideInterval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % totalImages;
+            updateCarousel();
+        }, 5000);
+
+        carousel.addEventListener('mouseenter', () => {
+            clearInterval(autoSlideInterval);
+        });
+
+        carousel.addEventListener('mouseleave', () => {
+            autoSlideInterval = setInterval(() => {
+                currentIndex = (currentIndex + 1) % totalImages;
+                updateCarousel();
+            }, 5000);
+        });
+
+        const carouselButtons = document.querySelectorAll('.carousel-button');
+        carouselButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const href = this.getAttribute('href');
+                const textItem = this.closest('.carousel-text-item');
+                textItem.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+                setTimeout(() => {
+                    handleNavigation(href);
+                }, 300);
+            });
+        });
+
+        updateCarousel();
+    }
+
+    // Función para inicializar los elementos de contenido y poner la primera letra de la primera palabra del título en mayúsculas
+    function initContentItems() {
+        const contentItems = document.querySelectorAll('.content-item');
+        const seeMoreLinks = document.querySelectorAll('.see-more');
+
+        function handleNavigation(href) {
+            window.location.href = href;
+        }
+
+        contentItems.forEach(item => {
+            // Poner la primera letra de la primera palabra del título en mayúsculas
+            const titleElement = item.querySelector('.title');
+            if (titleElement) {
+                const words = titleElement.textContent.toLowerCase().split(' ');
+                if (words.length > 0 && words[0].length > 0) {
+                    words[0] = words[0].charAt(0).toUpperCase() + words[0].slice(1);
+                    titleElement.textContent = words.join(' ');
+                } else if (words.length > 0) {
+                    titleElement.textContent = words.join(' ');
+                }
+            }
+        });
+
         seeMoreLinks.forEach((link) => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -27,80 +132,60 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
-    
+
+    const carruselContainer = document.getElementById('carrusel-container');
+    if (carruselContainer) {
+        fetch('carrusel.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.text();
+            })
+            .then(html => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                const carruselContent = doc.querySelector('.image-section');
+
+                if (carruselContent) {
+                    carruselContainer.innerHTML = carruselContent.outerHTML;
+                    initCarousel();
+                } else {
+                    console.error('No se encontró el contenido del carrusel');
+                }
+            })
+            .catch(error => {
+                console.error('Error al cargar el carrusel:', error);
+                carruselContainer.innerHTML = '<p>Error al cargar el carrusel</p>';
+            });
+    } else {
+        initCarousel();
+    }
+
+    // Llamar a la función para inicializar los títulos de los content-item
     initContentItems();
-    initProgressBar();
-    initScrollBtn();
-    initSearchBar();
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const header = document.getElementById('slidingHeader');
+    const body = document.body;
+    let lastScrollY = window.scrollY;
 
-function initProgressBar() {
-    const progressBar = document.getElementById('progress');
-    
-    if (!progressBar) return;
-    
-    window.addEventListener('scroll', function() {
-        // Calcula qué porcentaje de la página se ha desplazado
-        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrollPercent = (scrollTop / scrollHeight) * 100;
-        
-        // Actualiza el ancho de la barra de progreso
-        progressBar.style.width = scrollPercent + '%';
-    });
-}
+    window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
 
-function initScrollBtn() {
-    const scrollBtn = document.getElementById('scrollBtn');
-    
-    if (!scrollBtn) return;
-    
-    // Mostrar u ocultar el botón según la posición de desplazamiento
-    window.addEventListener('scroll', function() {
-        const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-        
-        if (scrollPosition > 300) {
-            scrollBtn.classList.add('visible');
+        if (currentScrollY > lastScrollY) {
+            // Cuando el usuario baja
+            header.classList.add('slide-up');
+            header.classList.remove('slide-down');
         } else {
-            scrollBtn.classList.remove('visible');
+            // Cuando el usuario sube
+            header.classList.add('slide-down');
+            header.classList.remove('slide-up');
         }
-    });
-    
-    // Acción al hacer clic en el botón
-    scrollBtn.addEventListener('click', function() {
-        // Desplazamiento suave hacia arriba
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-}
 
-function initSearchBar() {
-    const pillSearch = document.querySelector('.pill-search');
-    const searchInput = document.querySelector('.search-input');
-    
-    if (!pillSearch || !searchInput) return;
-    
-    // Expandir al hacer clic en la píldora
-    pillSearch.addEventListener('click', function() {
-        if (!this.classList.contains('expanded')) {
-            this.classList.add('expanded');
-            setTimeout(() => {
-                searchInput.focus();
-            }, 300);
-        }
+        lastScrollY = currentScrollY;
     });
-    
-    // Contraer cuando pierde el foco y está vacío
-    searchInput.addEventListener('blur', function() {
-        if (this.value.trim() === '') {
-            pillSearch.classList.remove('expanded');
-        }
-    });
-    
-    // Evitar que se contraiga cuando se hace clic en el input
-    searchInput.addEventListener('click', function(e) {
-        e.stopPropagation();
-    });
-}
+
+    // Establecemos un margen superior en el body para acomodar el header ampliado
+    body.style.marginTop = `${header.offsetHeight}px`;
+});

@@ -1,4 +1,4 @@
-<?php
+    <?php
 include("con_db.php"); // Conexión a la base de datos
 $mensaje = "";
 

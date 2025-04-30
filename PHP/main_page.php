@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DIGITALMIND - Educación y Calidad</title>
   <link rel="stylesheet" href="../css/style.css">
-  <script src="prueba.js" defer></script>
-  <script src="carrusel.js" defer></script>
+  <script src="../PHP/prueba.js" defer></script>
+  <script src="../PHP/carrusel.js" defer></script>
   <link rel="stylesheet" href="../css/carrusel.css">
   <link rel="stylesheet" href="../css/search.css">
 </head>
@@ -15,8 +15,8 @@
     <div class="page-container">
       <div class="header-left">
         <div class="logo">
-          <a href="/PHP/main_page.html">
-            <img src="/images/Logo_Mk2.png" alt="Logo de DIGITALMIND">
+          <a href="../PHP/main_page2.php">
+            <img src="../images/Logo_Mk2.png" alt="Logo de DIGITALMIND">
           </a>
         </div>
         <div class="header-actions-left">
@@ -24,7 +24,7 @@
             <svg class="create-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
               <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z" clip-rule="evenodd" />
             </svg>
-            <a href="./PHP/publicaciones.php" class="">Crear Blog</a>
+            <a href="../PHP/publicaciones.php" class="">Crear Blog</a>
           </div>
           <div class="action-container">
             <svg class="category-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
@@ -39,7 +39,7 @@
           <svg class="Login-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
             <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd" />
           </svg>
-          <a href="/PHP/register.php" class="">Iniciar sesión</a>
+          <a href="../PHP/register.php" class="">Iniciar sesión</a>
         </div>
         <div class="search-container">
           <div class="pill-search">
@@ -68,6 +68,7 @@
       </div>
       <div class="most-recent">Más Reciente</div>
       
+      <?php
       include 'blog_db.php';  // Incluye la conexión
 
       // Consulta para obtener los 5 posts más recientes
@@ -77,6 +78,9 @@
       if ($resultado->num_rows > 0) {
           while ($fila = $resultado->fetch_assoc()) {
               echo '
+
+      <div class="content-item color-noticia-1">
+              
               <div class="content-item">
                   <div class="content-image">
                       <img src="../images/default-post.jpg" alt="' . htmlspecialchars($fila['titular']) . '">
@@ -87,7 +91,9 @@
                       <p class="published">Publicado el ' . date("d/m/Y", strtotime($fila['fecha'])) . '</p>
                       <a href="../PHP/post_completo.php?id=' . $fila['id'] . '" class="see-more">Ver más</a>
                   </div>
+                </div>
               </div>';
+              
           }
       } else {
           echo '<p>No hay publicaciones aún.</p>';
@@ -100,19 +106,19 @@
 
       <div class="content-item color-noticia-1">
         <div class="content-image">
-          <img src="/images/Grafica Asistencia escolar.png" alt="Students">
+          <img src="../images/Grafica Asistencia escolar.png" alt="Students">
         </div>
         <div class="content-text">
           <div class="title">EDUCACIÓN DE CALIDAD</div>
           <p>Capacidad de un sistema educativo para proporcionar a los estudiantes los conocimientos, habilidades y competencias necesarias para su desarrollo integral y bienestar futuro. Esto incluye el acceso a recursos educativos de calidad, la formación de docentes capacitados y la creación de un entorno de aprendizaje seguro y estimulante.</p>
           <p class="published">Publicado hace 10 horas</p>
-          <a href="blog_page_3.html" class="see-more">Ver más</a>
+          <a href="../PHP/blog_page_3.html" class="see-more">Ver más</a>
         </div>
       </div>
 
       <div class="content-item color-noticia-2">
         <div class="content-image">
-          <img src="/images/escuela1.jpg" alt="Classroom">
+          <img src="../images/escuela1.jpg" alt="Classroom">
         </div>
         <div class="content-text">
           <div class="title">Los mapas mentales en el aprendizaje</div>
@@ -124,18 +130,18 @@
 
       <div class="content-item color-noticia-3">
         <div class="content-image">
-          <img src="/images/escuela3.jpeg" alt="Library">
+          <img src="../images/escuela3.jpeg" alt="Library">
         </div>
         <div class="content-text">
           <div class="title">Educacion en mexico</div>
           <p>Situacion actual de la educacion en mexico y sus avances a lo larg odel siglo XX y el siglo XXI y lo que aun queda por hacer.</p>
           <p class="published">Publicado hace 3 días</p>
-          <a href="blog_page_3-angel2312T.html" class="see-more">Ver más</a>
+          <a href="../PHP/blog_page_3-angel2312T.html" class="see-more">Ver más</a>
         </div>
       </div>
       <div class="content-item color-noticia-4">
         <div class="content-image">
-          <img src="/images/montessori_metodo.webp" alt="Método Montessori">
+          <img src="../images/montessori_metodo.webp" alt="Método Montessori">
         </div>
         <div class="content-text">
           <div class="title">Metodo Montessori</div>
