@@ -15,7 +15,7 @@
     <div class="page-container">
       <div class="header-left">
         <div class="logo">
-          <a href="../PHP/main_page2.php">
+          <a href="index.php">
             <img src="../images/Logo_Mk2.png" alt="Logo de DIGITALMIND">
           </a>
         </div>
@@ -24,7 +24,7 @@
             <svg class="create-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
               <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z" clip-rule="evenodd" />
             </svg>
-            <a href="../PHP/publicaciones.php" class="">Crear Blog</a>
+            <a href="blog_add.php" class="">Crear Blog</a>
           </div>
           <div class="action-container">
             <svg class="category-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
@@ -69,38 +69,43 @@
       <div class="most-recent">Más Reciente</div>
       
       <?php
-      include 'blog_db.php';  // Incluye la conexión
+include 'blog_db.php';  // Incluye la conexión
 
-      // Consulta para obtener los 5 posts más recientes
-      $sql = "SELECT * FROM publicaciones_2 ORDER BY fecha_creacion DESC LIMIT 5";
-      $resultado = $conn->query($sql);
-      
-      if ($resultado->num_rows > 0) {
-          while ($fila = $resultado->fetch_assoc()) {
-              echo '
+// Consulta para obtener los 5 posts más recientes
+$sql = "SELECT * FROM publicaciones_2 ORDER BY fecha_creacion DESC LIMIT 5";
+$resultado = $conn->query($sql);
 
-      <div class="content-item color-noticia-1">
-              
-              <div class="content-item">
-                  <div class="content-image">
-                      <img src="../images/default-post.jpg" alt="' . htmlspecialchars($fila['titular']) . '">
-                  </div>
-                  <div class="content-text">
-                      <div class="title">' . htmlspecialchars($fila['titular']) . '</div>
-                      <p>' . htmlspecialchars($fila['descripcion_corta']) . '</p>
-                      <p class="published">Publicado el ' . date("d/m/Y", strtotime($fila['fecha'])) . '</p>
-                      <a href="../PHP/post_completo.php?id=' . $fila['id'] . '" class="see-more">Ver más</a>
-                  </div>
+if ($resultado->num_rows > 0) {
+    while ($fila = $resultado->fetch_assoc()) {
+        echo '
+        <div class="content-item color-noticia-1">
+            <div class="content-item">
+                <div class="content-image">';
+        
+        // Mostrar la imagen de la publicación o una por defecto si no existe
+        if (!empty($fila['imagen'])) {
+            echo '<img src="../images/publicaciones/' . htmlspecialchars($fila['imagen']) . '" alt="' . htmlspecialchars($fila['titular']) . '">';
+        } else {
+            echo '<img src="../images/escuela1.jpg" alt="' . htmlspecialchars($fila['titular']) . '">';
+        }
+        
+        echo '
                 </div>
-              </div>';
-              
-          }
-      } else {
-          echo '<p>No hay publicaciones aún.</p>';
-      }
-      
-      $conn->close();
-      ?>
+                <div class="content-text">
+                    <div class="title">' . htmlspecialchars($fila['titular']) . '</div>
+                    <p>' . htmlspecialchars($fila['descripcion_corta']) . '</p>
+                    <p class="published">Publicado el ' . date("d/m/Y", strtotime($fila['fecha'])) . '</p>
+                    <a href="../PHP/post_completo.php?id=' . $fila['id'] . '" class="see-more">Ver más</a>
+                </div>
+            </div>
+        </div>';
+    }
+} else {
+    echo '<p>No hay publicaciones aún.</p>';
+}
+
+$conn->close();
+?>
                   
 
 
