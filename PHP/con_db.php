@@ -1,5 +1,5 @@
 <?php
 
-$conex = mysqli_connect("localhost","root","","login"); 
+$conex = mysqli_connect("localhost","root","","blog_db"); 
 
 ?>

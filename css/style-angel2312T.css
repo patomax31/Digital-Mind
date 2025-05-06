@@ -1,90 +1,83 @@
-@font-face {
-  font-family: 'Roboto';
-  src: url(/Fuentes/Roboto-Regular.ttf);
-}
-
-@font-face {
-  font-family: 'CreatoDisplay';
-  src: url(/Fuentes/CreatoDisplay-MediumItalic.otf);
-}
-
-html{
-  scroll-behavior: smooth;
-}
-* {
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #e3f2f7;
-  color: #333;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(227, 242, 247);
+    color: #333;
+    box-sizing: border-box;
 }
 
-/* Header Styles */
-.sliding-header {
-  background-color: #e3f2f7;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 80px;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 2500;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: top 0.3s ease-in-out;
+.container {
+    width: 100%;
+    margin: 20px auto;
+    background-color: rgb(227, 242, 247);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.573);
 }
 
-.page-container {
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
+.page-header-footer {
+    background-color: #e3f2f7;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrado horizontal del contenido */
+    height: 80px; /* Altura fija del encabezado */
+    position: relative; /* Para posicionamiento preciso */
 }
+
+header{
+    position: fixed; /* Mantiene el header en la parte superior mientras se hace scroll */
+    top: 0; /* Posiciona el header justo en el tope */
+    left: 0; /* Asegura que comience desde el borde izquierdo */
+    width: 100%; /* Ocupa el ancho completo de la pantalla */
+    z-index: 1000; /* Hace que el header esté por encima de otros elementos */
+    background-color: #e3f2f7; /* Fondo para diferenciación */
+    font-size: 4rem;
+}
+
+.header-content {
+    background-color: #e3f2f7; /* Color de fondo claro */
+    ; /* Color de fondo del header */
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex; /* Flexbox para alinear elementos */
+    justify-content: space-around;
+    width: 100%;
+    }
+    
 
 .logo {
-  display: flex;
-  align-items: center;
-  margin-left: 50px;
-}
+position: relative;
+left: 90px;
+font-size: 0.5em;
+font-weight: bold;
+    
+    }
+    
+    /* Navegación central: Inicio, Categoría y Búsqueda */
+    .nav-center { 
+      display: flex; 
+      gap: 12rem;    /* Espacio entre cada enlace */
+      justify-content: center; /*Para centrar el pedo */
+      flex: 1; /* Esto asegura que el nav ocupe todo el espacio posible entre el logo y el botón de búsqueda */
+      align-items: center;
+      font-size: large;
+    } /*La regla CSS de .nav-center usa display: flex; con gap: 30px; para distribuir equitativamente los enlaces y conseguir que queden centrados en el header.*/
+  
+    .nav-center a {
+      text-decoration: none;
+      font-weight: bold;
+      font-family: 'Roboto';
+      color: #020202;
+    }
+  
+     /* Efecto hover para los enlaces */
+  .nav-center a:hover {
+    color: #ffffff;
+  }
 
-.logo img {
-  max-width: 300px;
-  max-height: 70px;
-  object-fit: contain;
-}
-
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: 60px; /* Espacio entre los contenedores de acción */
-  margin-right: 20px;
-}
-
-.action-container {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* Espacio entre el icono y el texto */
-}
-
-.action-container svg {
-  fill: #000000; /* Color de los iconos */
-  width: 30px; /* Tamaño de los iconos */
-  height: 24px;
-}
-
-.action-container img {
-  width: 24px; /* Tamaño del icono de usuario */
-  height: 24px; /* Tamaño del icono de usuario */
-  fill: #333; /* Si fuera un SVG */
-}
-
-<<<<<<< HEAD
 .search {
     border: 1px solid #000000;
     padding: 8px 15px;
@@ -233,13 +226,6 @@ main {
     display: none; /* Ocultamos el logo */
 }
 
-<<<<<<< HEAD
-.mi-boton:hover {
-    background-color: #0056b3; /* Cambia el color de fondo del botón al pasar el cursor sobre él */
-}
-
-#header-placeholder header {
-=======
 .page-footer nav {
     width: auto; /* Ajustamos el ancho de la navegación al contenido */
     margin-top: 20px; /* Espacio entre el copyright y la navegación */
@@ -457,22 +443,10 @@ main {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 .sliding-header {
->>>>>>> 9f0b248271a53f49d5f3f7c595c38c65858dfe41
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-<<<<<<< HEAD
-    background-color: #fff; /* Fondo para que no sea transparente */
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Añadir padding para evitar que el contenido se solape con el header */
-body {
-    padding-top: 60px; /* Ajusta según la altura del header */
-}
-=======
     height: 90px; /* Agrandamos el header */
     z-index: 1100; /* Incrementamos la prioridad sobre otros elementos */
     background-color: #e3f2f7;
@@ -492,175 +466,29 @@ body {
 .sliding-header.slide-down {
     transform: translateY(0);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Reaparece con sombra */
-=======
-.action-container a,
-.action-container span {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  font-size: 1em; /* Tamaño del texto al lado de los iconos */
->>>>>>> fc9b2ff62cf04ec4456ca54ef5ca9afbfb4f9dfa
 }
 
 .container {
-  width: 100%;
-  margin: 0 auto;
-  background-color: #e3f2f7;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.573);
-  padding-top: 100px;
+    margin-top: 100px; /* Ajustamos el contenido para que no quede oculto bajo el header */
 }
 
-main {
-  padding: 20px;
+.carousel-text-item {
+    z-index: 900; /* Aseguramos que el texto del carrusel quede debajo del header */
+    position: relative; /* Establecemos una relación correcta de posicionamiento */
 }
-<<<<<<< HEAD
->>>>>>> 9f0b248271a53f49d5f3f7c595c38c65858dfe41
-=======
-
-.most-recent {
-  font-weight: bold;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 4px solid #000000;
-}
-
-.content-item {
-  display: flex;
-  margin-bottom: 20px;
-  padding: 15px;
-  border-radius: 8px;
-  color: rgb(254, 250, 250);
-  text-shadow: 0 0 8px rgb(0, 0, 0);
-  transition: transform 0.2s ease;
-  border: 2px solid #ddd;
-  align-items: center;
+.progress-bar {
+    position: fixed;
+    top: 90px; /* Posicionado justo debajo del header fijo */
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #f0f0f0;
+    z-index: 999; /* Menor que el header pero por encima del resto */
 }
 
-.content-item:hover {
-  transform: scale(1.02);
-  border: 3px solid #000000;
+.progress {
+    height: 100%;
+    width: 0;
+    background-color: #4a6e82; /* Color que coincide con el esquema de tu sitio */
+    transition: width 0.1s ease;
 }
-
-.content-item.selected {
-  background-color: #4b7383;
-  transform: scale(1.03);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.content-item.color-noticia-1 { background-color: #a8dadc; }
-.content-item.color-noticia-2 { background-color: #6d9eab; }
-.content-item.color-noticia-3 { background-color: #4a6e82; }
-.content-item.color-noticia-4 { background-color: #294c5b; }
-
-.content-text .title {
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #fff;
-  font-size: 1.8em;
-  letter-spacing: 1px;
-}
-
-.content-text p {
-  margin-bottom: 10px;
-  line-height: 1.6;
-  color: #fff;
-  font-size: 1.1em;
-}
-
-.content-text .published {
-  font-size: 1em;
-  margin-bottom: 10px;
-}
-
-.content-text .see-more {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #e3f2f7;
-  color: #000000;
-  text-decoration: none;
-  text-shadow: none;
-  font-weight: 600;
-  border-radius: 5px;
-  transition: transform 0.5s ease;
-}
-
-.content-text .see-more:hover {
-  transform: scale(1.2);
-}
-
-.content-image {
-  width: 325px;
-  margin-right: 40px;
-  flex-shrink: 0;
-}
-
-.content-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-footer {
-  width: 100%;
-}
-
-.footer-content {
-  background-color: #000000;  /* Fondo negro */
-  padding: 10px 20px;
-  display: flex;
-  justify-content: center;    /* Centra horizontalmente */
-  align-items: center;        /* Centra verticalmente */
-  color: white;
-}
-
-.action-container a,
-.action-container button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 10px 20px; /* Aumentar el padding para botones más grandes */
-    border: 2px solid #333; /* Añadir un borde sutil */
-    border-radius: 20px; /* Bordes más redondeados */
-    background-color: transparent;
-    color: #333;
-    font-weight: bold;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease, box-shadow 0.2s ease; /* Más propiedades para la transición */
-}
-
-.action-container svg {
-    fill: #333;
-    width: 22px; /* Ligeramente más grande */
-    height: 22px;
-    transition: fill 0.3s ease; /* Transición para el color del icono */
-}
-
-.action-container img {
-    width: 22px; /* Ligeramente más grande */
-    height: 22px;
-    vertical-align: middle;
-    transition: opacity 0.3s ease; /* Transición para la opacidad de la imagen */
-}
-
-.action-container a:hover,
-.action-container button:hover {
-    background-color: #a7d1eb; /* Color de fondo más notable al hacer hover */
-    border-color: #007bff; /* Cambiar el color del borde al hacer hover */
-    transform: scale(1.08); /* Un poco más grande al hacer hover */
-    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3); /* Añadir una sombra sutil */
-}
-
-.action-container a:hover svg,
-.action-container button:hover svg {
-    fill: #007bff;
-}
-
-.action-container a:hover img,
-.action-container button:hover img {
-    opacity: 0.8; /* Ligeramente transparente al hacer hover */
-}
->>>>>>> fc9b2ff62cf04ec4456ca54ef5ca9afbfb4f9dfa
