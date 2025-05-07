@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Verificar si el email ya existe en la base de datos
         $consulta_email = "SELECT * FROM usuarios WHERE email = '$email'";
-        $resultado_email = mysqli_query($conex, $consulta_email);
+        $resultado_email = mysqli_query($conn, $consulta_email);
         
         if (mysqli_num_rows($resultado_email) > 0) {
             $mensaje = "<h3 class='bad'>¡Este correo electrónico ya está registrado!</h3>";
@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     // Inserción de datos en la base de datos
                     $consulta = "INSERT INTO usuarios (nombre, email, contraseña) VALUES ('$nombre', '$email', '$password_hashed')";
-                    $resultado = mysqli_query($conex, $consulta);
+                    $resultado = mysqli_query($conn, $consulta);
 
                     if ($resultado) {
                         $mensaje = "<h3 class='ok'>¡Te has registrado correctamente!</h3>";
