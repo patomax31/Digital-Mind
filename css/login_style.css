@@ -27,18 +27,7 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-<<<<<<< HEAD
-
-    background-color: #e3f2f7;
-
     background-color: #95f0f2;
-
-
-    background-color: #a5f1f2;
-
-=======
-    background-color: #95f0f2;
->>>>>>> 539fc19 (Marcianos)
     padding: 40px;
 }
 
@@ -68,18 +57,7 @@ body, html {
 }
 
 .form-group input[type="submit"] {
-<<<<<<< HEAD
-
-    background-color: #294b5b;
-    color: #000000;
-
     background-color: #09ff00c8;
-
-    background-color: #0a6800c8;
-
-=======
-    background-color: #09ff00c8;
->>>>>>> 539fc19 (Marcianos)
     color: white;
 
     cursor: pointer;
@@ -121,17 +99,7 @@ body, html {
     display: block;
     width: 100%;
     padding: 12px 20px;
-<<<<<<< HEAD
-    background-color: #294b5b;
-    color: rgb(0, 0, 0);
-
     background-color: #ffffff;
-
-    background-color: #0a6800c8;
-
-=======
-    background-color: #ffffff;
->>>>>>> 539fc19 (Marcianos)
     color: white;
 
     text-decoration: none;
@@ -147,9 +115,6 @@ body, html {
     background-color: #e3f2f7;
 }
 
-body {
-    background-color: red !important;
-}
 
 body {
     background-color: red !important;
