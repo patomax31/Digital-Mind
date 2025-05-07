@@ -6,10 +6,10 @@ $db_pass = ''; // XAMPP default is empty password
 $db_name = 'blog_db'; // Make sure this matches your actual database name
 
 // Create connection
-$conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
+$conex = new mysqli($db_host, $db_user, $db_pass, $db_name);
 
 // Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+if ($conex->connect_error) {
+    die("Connection failed: " . $conex->connect_error);
 }
 ?>
