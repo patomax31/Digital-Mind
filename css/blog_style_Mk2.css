@@ -23,7 +23,6 @@
       color: #2c2828;
     
   }
-
   
   header{
     position: fixed; /* Mantiene el header en la parte superior mientras se hace scroll */
@@ -165,6 +164,7 @@
     margin-right: 10px;
   }
   
+
   main {
       padding: 20px;
       margin-top: 50px;
@@ -219,7 +219,7 @@
     border-radius: 10px;     /* Opcional: si se desea mantener esquinas redondeadas */
     overflow: hidden;
     /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
-    font-size: 2rem;
+    font-size: 3rem;
     
   }
   

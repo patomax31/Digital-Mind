@@ -1,25 +1,4 @@
-@keyframes fadeInCarousel {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideInText {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
+/* Modificaciones al carrusel */
 .carrusel {
   position: relative;
   width: 100%;
@@ -28,14 +7,16 @@
   margin: 0 auto;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semitransparente */
-  transition: transform 0.3s ease-in-out, background-color 0.3s ease; /* Añadimos transición para suavizar el cambio de tamaño y fondo */
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease; /* Transición suavizada */
+  margin-bottom: 40px; /* Añado espacio entre el carrusel y el "Más Reciente" */
 }
 
 .carrusel:hover {
-  transform: scale(1.05); /* Aumenta el tamaño en un 5% al pasar el cursor */
-  background-color: rgba(0, 0, 0, 0.9); /* Oscurece ligeramente el fondo al hacer hover (opcional) */
+  transform: scale(1.02); /* Reduzco el aumento de tamaño de 1.05 a 1.02 */
+  background-color: rgba(0, 0, 0, 0.8); /* Ajusto ligeramente el oscurecimiento */
 }
 
+/* El resto de los estilos del carrusel permanecen igual */
 .carousel-images {
   position: absolute;
   top: 0;
@@ -144,7 +125,7 @@
 }
 
 .carousel:hover .carousel-text-item.active {
-  transform: scale(1.05);
+  transform: scale(1.02); /* Reduzco el aumento de tamaño para el texto también */
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -217,7 +198,8 @@
 
 @media (max-width: 480px) {
   .carousel {
-    height: 50vh; /* También ajustamos la altura en pantallas pequeñas */
+    height: 50vh;
+    margin-bottom: 30px; /* Ajusto el margen para móviles */
   }
 
   .carousel-text-item {
@@ -229,4 +211,9 @@
   .carousel-text-item h3 {
     font-size: 1.8em;
   }
+}
+
+/* Ajuste adicional para el espacio después del carrusel */
+.most-recent {
+  margin-top: 20px; /* Añado margen superior al título "Más Reciente" */
 }
