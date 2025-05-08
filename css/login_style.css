@@ -27,7 +27,7 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #a5f1f2;
+    background-color: #e3f2f7;
     padding: 40px;
 }
 
@@ -58,7 +58,7 @@ body, html {
 
 .form-group input[type="submit"] {
     background-color: #294b5b;
-    color: #4a6e82;
+    color: #000000;
     cursor: pointer;
     font-size: 16px;
     border: none;
@@ -66,7 +66,7 @@ body, html {
 }
 
 .form-group input[type="submit"]:hover {
-    background-color: #a0c0c5;
+    background-color: #e3f2f7;
 }
 
 
@@ -96,7 +96,7 @@ body, html {
     display: block;
     width: 100%;
     padding: 12px 20px;
-    background-color: #12f3ff;
+    background-color: #294b5b;
     color: rgb(0, 0, 0);
     text-decoration: none;
     font-size: 18px;
@@ -108,7 +108,7 @@ body, html {
 }
 
 .btn-registrar:hover {
-    background-color: #4a4a4a;
+    background-color: #e3f2f7;
 }
 
 body {
@@ -119,8 +119,8 @@ body {
     width: 400px;
     margin: auto;
     padding: 20px;
-    background-color: #e1d6b8;
-    border: 2px solid #4a4a4a; 
+    background-color: #a0c0c5;
+    border: 2px solid #ffffff; 
     border-radius: 10px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
