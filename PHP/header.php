@@ -10,6 +10,10 @@
   <link rel="stylesheet" href="../css/search.css">
   <script src="../PHP/prueba.js" defer></script>
   <script src="../PHP/carrusel.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
   <header class="page-header-footer sliding-header" id="slidingHeader">

@@ -1,15 +1,8 @@
 <?php
 
-// Configuración de la base de datos
-$servername = "127.0.0.1"; // O la dirección de tu servidor MySQL
-$username = "tu_usuario"; // Tu nombre de usuario de MySQL
-$password = "tu_contraseña"; // Tu contraseña de MySQL
-$dbname = "poder_igualitario"; // El nombre de la base de datos
-
+include 'blog_db.php';
 // Crear conexión
-$conn = new mysqli($servername, $username, $password, $dbname);
 
-// Verificar conexión
 if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }

@@ -42,8 +42,8 @@ include 'header.php';
         <section class="container-blog">   
             <section class="content">
                 <?php 
-                $contenido = nl2br(htmlspecialchars($post['contenido']));
-                echo '<p>' . $contenido . '</p>';
+                // Mostrar el contenido HTML directamente (sin htmlspecialchars)
+                echo $post['contenido'];
                 ?>
             </section>
 
