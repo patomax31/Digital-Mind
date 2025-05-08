@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const carruselContainer = document.getElementById('carrusel-container');
     if (carruselContainer) {
         // Cargar el contenido del carrusel
-        fetch('carrusel.html')
+        fetch('carrusel.php')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok ' + response.statusText);
