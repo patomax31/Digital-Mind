@@ -1,5 +1,5 @@
 <?php
-include("con_db.php"); // Conexión a la base de datos
+include("blog_db.php"); // Conexión a la base de datos
 $mensaje = "";
 
 // Función para verificar email con Kickbox
