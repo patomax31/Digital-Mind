@@ -111,6 +111,10 @@ body, html {
     background-color: #4a4a4a;
 }
 
+body {
+    background-color: red !important;
+}
+
 .form-container {
     width: 400px;
     margin: auto;
