@@ -27,7 +27,7 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #95f0f2;
+    background-color: #a5f1f2;
     padding: 40px;
 }
 
@@ -57,7 +57,7 @@ body, html {
 }
 
 .form-group input[type="submit"] {
-    background-color: #09ff00c8;
+    background-color: #0a6800c8;
     color: white;
 
     cursor: pointer;
@@ -99,7 +99,7 @@ body, html {
     display: block;
     width: 100%;
     padding: 12px 20px;
-    background-color: #ffffff;
+    background-color: #0a6800c8;
     color: white;
 
     text-decoration: none;
