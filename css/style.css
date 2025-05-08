@@ -663,4 +663,38 @@ footer {
 .action-container button:hover img {
     opacity: 0.8; /* Ligeramente transparente al hacer hover */
 }
+<<<<<<< HEAD
 >>>>>>> fc9b2ff62cf04ec4456ca54ef5ca9afbfb4f9dfa
+=======
+.categoria-dropdown {
+  position: relative;
+}
+
+.categoria-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+  top: 100%;
+  left: 0;
+  border-radius: 4px;
+  min-width: 160px;
+  padding: 0.5em 0;
+}
+
+.categoria-dropdown-content a {
+  color: #333;
+  padding: 0.5em 1em;
+  display: block;
+  text-decoration: none;
+}
+
+.categoria-dropdown-content a:hover {
+  background-color: #f0f0f0;
+}
+
+.categoria-dropdown:hover .categoria-dropdown-content {
+  display: block;
+}
+>>>>>>> 0e3646189975f9864657aafccb74b97d5ef953db
