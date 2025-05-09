@@ -22,6 +22,9 @@ include 'header.php';
 ?>
 
 <div class="container">
+    <div calss="category">
+                    <h1><?php echo htmlspecialchars($post['categoria']); ?></h1>
+    </div>
     <main>
         <div class="title-container-blog">    
             <section class="title-content">
@@ -45,14 +48,9 @@ include 'header.php';
                 // Mostrar el contenido HTML directamente (sin htmlspecialchars)
                 echo $post['contenido'];
                 ?>
+                
             </section>
-
-            <button id="scrollBtn">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3.5" stroke="currentColor" class="size-6">
-                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
-                </svg>   
-            </button>
-            <script src="../Js/blog_page_3.js"></script>
+          
         </section>    
 
         <?php if (!empty($post['referencia'])): ?>
@@ -65,6 +63,7 @@ include 'header.php';
         <?php endif; ?>
     </main>
 </div>
+    <script src="/Js/progress-bar.js"></script>
 
 <?php
 // Incluir el footer

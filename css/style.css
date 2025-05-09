@@ -281,3 +281,20 @@ footer {
 .categoria-dropdown:hover .categoria-dropdown-content {
   display: block;
 }
+
+.form-select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    background-color: white;
+    margin-bottom: 1.5rem;
+}
+
+.form-select:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
