@@ -1,5 +1,5 @@
 <?php
-include("blog_db.php"); // Asegúrate de que este archivo cree $conn
+include("blog_db.php"); 
 
 $mensaje = "";
 
