@@ -39,7 +39,7 @@ body {
   transition: top 0.3s ease-in-out;
 }
 
-HEAD
+
 .page-container {
   width: 90%;
   display: flex;
@@ -92,7 +92,6 @@ HEAD
   font-weight: bold;
   font-size: 1em; /* Tamaño del texto al lado de los iconos */
 }
-
 header{
     position: fixed; /* Mantiene el header en la parte superior mientras se hace scroll */
     top: 0; /* Posiciona el header justo en el tope */
@@ -605,8 +604,6 @@ footer {
 .sliding-header.slide-down {
     transform: translateY(0);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Reaparece con sombra */
->>>>>>> 71a6740 (Se agregan cambios en el diseño del header y footer de la pagina principal, se arregla un error de la barra progresiva en los archivos hechos por Zhmc)
-}
 
 .container {
   width: 100%;
@@ -765,4 +762,4 @@ footer {
 .action-container a:hover img,
 .action-container button:hover img {
     opacity: 0.8; /* Ligeramente transparente al hacer hover */
-}
+}}
