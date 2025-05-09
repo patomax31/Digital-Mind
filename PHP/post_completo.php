@@ -1,16 +1,29 @@
 <?php
+session_start();
 include 'blog_db.php';
 
 // Verificar si se recibió un ID válido
-if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
-    die("ID de publicación no válido");
+if (isset($_GET['id']) || is_numeric($_GET['id'])) {
+    $id = intval($_GET['id']);
+    $sql = "SELECT * FROM publicaciones_2 WHERE id = $id";
+} else {
+    $sql = "SELECT * FROM publicaciones_2 ORDER BY id DESC LIMIT 1";
 }
 
-$id = intval($_GET['id']);
-$sql = "SELECT * FROM publicaciones_2 WHERE id = $id";
+$resultado = $conn->query($sql);
+if (!$resultado || $resultado->num_rows === 0) {
+    die("Publicación no encontrada");
+}
+$post = $resultado->fetch_assoc();
+
+// Asegura que $id esté definido
+$id = $post['id'];
+
+
 $resultado = $conn->query($sql);
 
-if ($resultado->num_rows === 0) {
+
+if (!$resultado || $resultado->num_rows === 0) {
     die("Publicación no encontrada");
 }
 
@@ -66,8 +79,49 @@ include 'header.php';
     </main>
 </div>
 
+
+<section class="comentario">
+<h2>Comentarios</h2>
+
+<?php if (isset($_SESSION['usuario'])): ?>
+    <form method="post" action="">
+        <textarea name="comentario" rows="4" cols="50" required></textarea><br>
+        <input type="submit" name="enviar_comentario" value="Publicar comentario">
+    </form>
+<?php else: ?>
+    <p>Debes iniciar sesión para comentar.</p>
+<?php endif; ?>
+
+<hr>
+
 <?php
-// Incluir el footer
+// Insertar comentario si se envió
+if (isset($_POST['enviar_comentario']) && isset($_SESSION['usuario'])) {
+    $comentario = $conn->real_escape_string($_POST['comentario']);
+    $usuario = $conn->real_escape_string($_SESSION['usuario']);
+    $conn->query("INSERT INTO comentarios (id_post, nombre, comentario) VALUES ($id, '$usuario', '$comentario')");
+}
+
+// Mostrar comentarios del post actual
+$comentarios = $conn->query("SELECT * FROM comentarios WHERE id_post = $id ORDER BY fecha DESC");
+
+if ($comentarios && $comentarios->num_rows > 0) {
+    while ($fila = $comentarios->fetch_assoc()) {
+        echo "<div class='comentario'>";
+        echo "<p><strong>" . htmlspecialchars($fila['nombre']) . "</strong></p>";
+        echo "<p>" . nl2br(htmlspecialchars($fila['comentario'])) . "</p>";
+        echo "<p><small><em>" . $fila['fecha'] . "</em></small></p>";
+        echo "<hr></div>";
+    }
+} else {
+    echo "<p>No hay comentarios aún.</p>";
+}
+
+
+
+
+
 include 'footer.php';
+
 $conn->close();
 ?>
