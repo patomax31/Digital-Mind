@@ -1,150 +1,270 @@
 <?php
-// Database connection settings
-$servername = "localhost";
-$username = "root"; // Change to your database username
-$password = ""; // Change to your database password
-$dbname = "blog_db";
+// Conexión a la base de datos
+include 'blog_db.php';
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+// Consulta para obtener los 5 posts más recientes para el carrusel
+$sql_carousel = "SELECT * FROM publicaciones_2 ORDER BY fecha_creacion DESC LIMIT 5";
+$resultado_carousel = $conn->query($sql_carousel);
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-// Set character set
-$conn->set_charset("utf8mb4");
-
-// Function to get the latest posts from the database
-function getLatestPosts($conn, $limit = 3) {
-    $sql = "SELECT id, titular, descripcion_corta, contenido, fecha, referencia 
-            FROM publicaciones_2 
-            ORDER BY fecha_creacion DESC 
-            LIMIT ?";
-    
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("i", $limit);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    
-    $posts = [];
-    while ($row = $result->fetch_assoc()) {
-        $posts[] = $row;
+// Verificar si hay resultados
+$slides = [];
+if ($resultado_carousel->num_rows > 0) {
+    while ($fila = $resultado_carousel->fetch_assoc()) {
+        $slides[] = $fila;
     }
-    
-    $stmt->close();
-    return $posts;
 }
-
-// Get the latest posts
-$latestPosts = getLatestPosts($conn);
-
-// Close the connection
-$conn->close();
-
-// Default images for carousel if no custom images are specified
-$defaultImages = [
-    "../images/MAPA-MENTAL-EJEMPLO-1.jpg",
-    "../images/educaciondecalidad.png", 
-    "../images/montessori_metodo.webp"
-];
-
-// Generate HTML for carousel
 ?>
 
-<div class="image-section">
-    <div class="carrusel">
-        <div class="carousel-images">
-            <?php foreach ($latestPosts as $index => $post): ?>
-                <div class="carousel-item">
-                    <img src="<?php echo isset($post['imagen']) ? $post['imagen'] : $defaultImages[$index % count($defaultImages)]; ?>" 
-                         alt="<?php echo htmlspecialchars($post['titular']); ?>">
-                </div>
-            <?php endforeach; ?>
-        </div>
-        
-        <div class="carousel-text-overlay">
-            <?php foreach ($latestPosts as $index => $post): ?>
-                <div class="carousel-text-item <?php echo $index === 0 ? 'active' : ''; ?>">
-                    <h3><?php echo htmlspecialchars($post['titular']); ?></h3>
-                    <p><?php echo htmlspecialchars($post['descripcion_corta']); ?></p>
-                    <div class="carousel-description">
-                        <?php 
-                        // Get a short excerpt from the content (first 150 characters)
-                        $excerpt = substr(strip_tags($post['contenido']), 0, 150);
-                        if (strlen($post['contenido']) > 150) $excerpt .= '...';
-                        echo htmlspecialchars($excerpt); 
-                        ?>
-                    </div>
-                    <a href="view_post.php?id=<?php echo $post['id']; ?>" class="carousel-button">Ver más</a>
-                </div>
-            <?php endforeach; ?>
-        </div>
-        
-        <div class="carousel-buttons">
-            <button class="carousel-prev">&lt;</button>
-            <button class="carousel-next">&gt;</button>
-        </div>
-        
-        <div class="carousel-indicators">
-            <?php for ($i = 0; $i < count($latestPosts); $i++): ?>
-                <span class="indicator <?php echo $i === 0 ? 'active' : ''; ?>" data-index="<?php echo $i; ?>"></span>
-            <?php endfor; ?>
-        </div>
-    </div>
-</div>
+<!-- CSS para el carrusel -->
+<style>
+.carousel-container {
+    width: 100%;
+    position: relative;
+    margin: 20px 0;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const carousel = document.querySelector('.carrusel');
-    const items = carousel.querySelectorAll('.carousel-item');
-    const textItems = carousel.querySelectorAll('.carousel-text-item');
-    const prevBtn = carousel.querySelector('.carousel-prev');
-    const nextBtn = carousel.querySelector('.carousel-next');
-    const indicators = carousel.querySelectorAll('.indicator');
-    let currentIndex = 0;
-    
-    // Function to update carousel display
-    function updateCarousel() {
-        // Hide all items and text
-        items.forEach(item => item.style.display = 'none');
-        textItems.forEach(item => item.classList.remove('active'));
-        indicators.forEach(indicator => indicator.classList.remove('active'));
-        
-        // Show current item and text
-        items[currentIndex].style.display = 'block';
-        textItems[currentIndex].classList.add('active');
-        indicators[currentIndex].classList.add('active');
+.carousel-slides {
+    display: flex;
+    width: 500%; /* 100% * número máximo de slides (5) */
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    width: 20%; /* 100% / número máximo de slides (5) */
+    position: relative;
+    height: 400px;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+    color: white;
+    padding: 20px;
+}
+
+.carousel-caption h2 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+}
+
+.carousel-caption p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.carousel-date {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.carousel-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.carousel-link:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.carousel-control {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0 15px;
+    transition: background-color 0.3s;
+}
+
+.carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.carousel-indicator {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-indicator.active {
+    background-color: white;
+}
+
+@media (max-width: 768px) {
+    .carousel-slide {
+        height: 300px;
     }
     
-    // Event listener for prev button
-    prevBtn.addEventListener('click', function() {
-        currentIndex = (currentIndex - 1 + items.length) % items.length;
-        updateCarousel();
+    .carousel-caption h2 {
+        font-size: 20px;
+    }
+    
+    .carousel-caption p {
+        font-size: 14px;
+    }
+}
+</style>
+
+<!-- HTML del carrusel -->
+<div class="carousel-container">
+    <?php if (!empty($slides)): ?>
+        <div class="carousel-slides" id="carouselSlides">
+            <?php foreach ($slides as $index => $slide): ?>
+                <div class="carousel-slide">
+                    <?php 
+                    $imagen = !empty($slide['imagen']) 
+                        ? '../images/publicaciones/' . htmlspecialchars($slide['imagen']) 
+                        : '../images/escuela1.jpg'; 
+                    ?>
+                    <img src="<?php echo $imagen; ?>" alt="<?php echo htmlspecialchars($slide['titular']); ?>" class="carousel-image">
+                    
+                    <div class="carousel-caption">
+                        <h2><?php echo htmlspecialchars($slide['titular']); ?></h2>
+                        <span class="carousel-date">Publicado el <?php echo date("d/m/Y", strtotime($slide['fecha'])); ?></span>
+                        <p><?php echo htmlspecialchars(substr($slide['descripcion_corta'], 0, 120) . (strlen($slide['descripcion_corta']) > 120 ? '...' : '')); ?></p>
+                        <a href="../PHP/post_completo.php?id=<?php echo $slide['id']; ?>" class="carousel-link">Ver más</a>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+        
+        <div class="carousel-controls">
+            <button class="carousel-control" id="prevBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                </svg>
+            </button>
+            <button class="carousel-control" id="nextBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="carousel-indicators" id="carouselIndicators">
+            <?php for ($i = 0; $i < count($slides); $i++): ?>
+                <div class="carousel-indicator <?php echo $i === 0 ? 'active' : ''; ?>" data-index="<?php echo $i; ?>"></div>
+            <?php endfor; ?>
+        </div>
+    <?php else: ?>
+        <div class="carousel-empty">
+            <p>No hay publicaciones disponibles para mostrar en el carrusel.</p>
+        </div>
+    <?php endif; ?>
+</div>
+
+<!-- JavaScript para el carrusel -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.getElementById('carouselSlides');
+    const indicators = document.querySelectorAll('.carousel-indicator');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let currentIndex = 0;
+    const slideCount = <?php echo count($slides); ?>;
+    
+    if (slideCount === 0) return;
+    
+    // Función para mostrar un slide específico
+    function showSlide(index) {
+        // Asegurarse de que el índice esté dentro del rango
+        if (index < 0) index = slideCount - 1;
+        if (index >= slideCount) index = 0;
+        
+        currentIndex = index;
+        
+        // Mover el carrusel
+        slides.style.transform = `translateX(-${currentIndex * (100 / slideCount)}%)`;
+        
+        // Actualizar indicadores
+        indicators.forEach((indicator, i) => {
+            indicator.classList.toggle('active', i === currentIndex);
+        });
+    }
+    
+    // Configurar botones prev/next
+    prevBtn.addEventListener('click', () => {
+        showSlide(currentIndex - 1);
     });
     
-    // Event listener for next button
-    nextBtn.addEventListener('click', function() {
-        currentIndex = (currentIndex + 1) % items.length;
-        updateCarousel();
+    nextBtn.addEventListener('click', () => {
+        showSlide(currentIndex + 1);
     });
     
-    // Event listeners for indicators
+    // Configurar indicadores
     indicators.forEach((indicator, index) => {
-        indicator.addEventListener('click', function() {
-            currentIndex = index;
-            updateCarousel();
+        indicator.addEventListener('click', () => {
+            showSlide(index);
         });
     });
     
-    // Auto-rotate the carousel every 5 seconds
-    setInterval(function() {
-        currentIndex = (currentIndex + 1) % items.length;
-        updateCarousel();
+    // Auto-rotación
+    let interval = setInterval(() => {
+        showSlide(currentIndex + 1);
     }, 5000);
     
-    // Initialize carousel
-    updateCarousel();
+    // Pausar auto-rotación al pasar el mouse
+    document.querySelector('.carousel-container').addEventListener('mouseenter', () => {
+        clearInterval(interval);
+    });
+    
+    // Reanudar auto-rotación al quitar el mouse
+    document.querySelector('.carousel-container').addEventListener('mouseleave', () => {
+        interval = setInterval(() => {
+            showSlide(currentIndex + 1);
+        }, 5000);
+    });
+    
+    // Inicializar el carrusel
+    showSlide(0);
 });
 </script>
+<?php $conn->close(); ?>

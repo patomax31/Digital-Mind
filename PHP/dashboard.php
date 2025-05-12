@@ -270,7 +270,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
             <path d="M3 4a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4zm0 3a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7zm0 7a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-6z" />
           </svg>
-          <a href="../php/dasbord.php" class="">Dashboard</a>
+          <a href="../PHP/dashboard.php" class="">Dashboard</a>
         </div>
         <div class="sener">
           <div class="pill-search">
@@ -522,4 +522,4 @@
     });
   </script>
 </body>
-</html>
+</html> 
