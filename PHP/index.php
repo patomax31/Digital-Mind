@@ -29,10 +29,10 @@
           <div class="action-container categoria-dropdown">
   <a href="#">Categoría</a>
   <div class="categoria-dropdown-content">
-    <a href="categoria.php?categoria=educacion primaria">Educacion Primaria</a>
-    <a href="categoria.php?categoria=educacion media">Educacion Media</a>
-    <a href="categoria.php?categoria=educacion media superior">Educacion Media Superior</a>
-    <a href="categoria.php?categoria=educacion superior">Educacion Superior</a>
+    <a href="#">Educacion Primaria</a>
+    <a href="#">Educacion Media</a>
+    <a href="#">Educacion Media Superior</a>
+    <a href="#">Educacion Superior</a>
   </div>
 </div>
 

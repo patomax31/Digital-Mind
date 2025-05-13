@@ -127,6 +127,21 @@ include 'header.php';
             <input type="date" name="fecha" id="fecha" required>
         </div>
         
+         <div class="form-group">
+            <label for="categoria">Categoría:</label>
+            <select class="form-select" name="categoria" id="categoria" required>
+                <option value="" disabled selected>Selecciona una categoría</option>
+                <option value="Educación Primaria">📖 Educación Primaria</option>
+                <option value="Educación Secundaria">📖 Educación Secundaria</option>
+                <option value="Educación Preparatoria">📖 Educación Preparatoria</option>
+                <option value="Métodos de Aprendizaje">🎯 Métodos de Aprendizaje</option>
+                <option value="Educación Vocacional">💼 Educación Vocacional</option>
+                <option value="Habilidades de Redacción">✍️ Habilidades de Redacción</option>
+                <option value="Ciencia y Matemáticas">🧪 Ciencia y Matemáticas</option>
+                <option value="Para Tutores">👨‍👩‍👧‍👦 Para Tutores</option>
+            </select>
+        </div>
+
         <div class="form-group">
             <label for="descripcion_corta">Descripción Corta:</label>
             <input type="text" name="descripcion_corta" id="descripcion_corta" required 
@@ -169,3 +184,4 @@ include 'header.php';
 </div>
 </body>
 </html>
+

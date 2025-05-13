@@ -87,6 +87,7 @@ CREATE TABLE `publicaciones_2` (
   `referencia` varchar(255) NOT NULL,
   `imagen` varchar(255) DEFAULT NULL COMMENT 'Ruta/nombre del archivo de imagen',
   `fecha_creacion` timestamp NOT NULL DEFAULT current_timestamp()
+  'categoria' varcha(50) not NULL after 'imagen';
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -380,3 +381,6 @@ CREATE TABLE comentarios (
     fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+
+ALTER TABLE `publicaciones_2` 
+ADD COLUMN `categoria` VARCHAR(50) NOT NULL AFTER `imagen`;
