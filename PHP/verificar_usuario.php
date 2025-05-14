@@ -11,7 +11,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($fila = mysqli_fetch_assoc($resultado)) {
         if (password_verify($clave, $fila['clave'])) {
             echo "¡Bienvenido, $usuario!";
-<<<<<<< HEAD
             
         } else {
             echo "Contraseña incorrecta.";
@@ -21,17 +20,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 } else {
     echo "Acceso no autorizado.";
-=======
-            // Aquí podrías redirigir al panel del admin:
-            // header("Location: panel_admin.php");
-        } else {
-            echo "❌ Contraseña incorrecta.";
-        }
-    } else {
-        echo "❌ Usuario no encontrado.";
-    }
-} else {
-    echo "❌ Acceso no autorizado.";
->>>>>>> 9f2072bb0fdba43851127bc59d45a794163276ce
 }
 ?>
