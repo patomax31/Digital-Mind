@@ -19,7 +19,8 @@
 
     header {
       text-align: center;
-      padding: 40px 20px 10px;
+      padding: 60px 30px 20px;
+      background-color:rgb(159, 182, 184);
     }
 
     header h1 {
@@ -67,7 +68,7 @@
       font-size: 20px;
     }
 
-    .contact-info img {
+    .contact-info .img {
       max-width: 200px; /* Cambié el tamaño de la imagen */
       border-radius: 12px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -172,9 +173,12 @@
   </style>
 </head>
 <body>
+  <?php
+  include 'header.php'
+  ?>
 
   <header>
-    <h1>Contact Us</h1>
+    <h1>Contactate Con Nosotros</h1>
     <div class="social-icons">
       <i class="fab fa-facebook-f"></i>
       <i class="fab fa-instagram"></i>
@@ -198,17 +202,21 @@
     </div>
 
     <form class="glass-form" action="procesar.php" method="POST">
-      <h2>Let's Send Message For Us</h2>
+      <h2>Vamos a Enviar Un Mensaje Para Nosotros</h2>
       <div class="form-group">
-        <input type="text" name="nombre" placeholder="Name" required>
-        <input type="text" name="apellido" placeholder="Last Name" required>
+        <input type="text" name="nombre" placeholder= "Nombre" required>
+        <input type="text" name="apellido" placeholder="Apellido" required>
       </div>
       <input type="email" name="email" placeholder="Email" required>
-      <textarea name="mensaje" rows="5" placeholder="Message" required></textarea>
-      <button type="submit">Send Message</button>
+      <textarea name="mensaje" rows="5" placeholder="Mensaje" required></textarea>
+      <button type="submit">Enviar</button>
     </form>
   </div>
 
+
+  <?php
+  include 'footer.php';
+  ?>
 </body>
 </html>
 
