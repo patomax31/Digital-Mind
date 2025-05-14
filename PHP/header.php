@@ -51,14 +51,7 @@
             <div class="search-icon">
               <img src="../images/icono de busqueda.png" alt="Buscar" width="20" height="20">
             </div>
-           <form action="buscar.php" method="GET" class="search-container">
-  <div class="pill-search">
-    <button type="submit" class="search-icon" style="background: none; border: none; padding: 0; cursor: pointer;">
-      <img src="../images/tu_icono_personalizado.png" alt="Buscar" width="20" height="20">
-    </button>
-    <input type="text" class="search-input" name="q" placeholder="Buscar...">
-  </div>2
-</form>
+            <input type="text" class="search-input" placeholder="Buscar...">
           </div>
         </div>
       </div>
