@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login Usuario</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #0f2a2d;
+      color: #fff;
+      display: flex;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      margin: auto;
+      background-color: #102f32;
+      border-radius: 12px;
+      overflow: hidden;
+      max-width: 1000px;
+      box-shadow: 0 0 10px #00000055;
+    }
+
+    .left {
+      width: 50%;
+      background: url('fondo.jpg') no-repeat center center;
+      background-size: cover;
+      padding: 40px;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .left h2 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+    }
+
+    .left p {
+      font-size: 1em;
+      margin-top: 20px;
+      font-style: italic;
+    }
+
+    .right {
+      width: 50%;
+      padding: 40px;
+      background-color: #112c2f;
+    }
+
+    .right h2 {
+      margin-bottom: 20px;
+      font-size: 1.5em;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      border-radius: 6px;
+      border: none;
+      background-color: #1e3c40;
+      color: #fff;
+    }
+
+    input[type="text"]::placeholder,
+    input[type="password"]::placeholder {
+      color: #ccc;
+    }
+
+    .form-options {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9em;
+      margin-bottom: 20px;
+    }
+
+    .form-options a {
+      color: #a0cfcf;
+      text-decoration: none;
+    }
+
+    .form-options a:hover {
+      text-decoration: underline;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #4cb8b8;
+      color: #0f2a2d;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #3a9a9a;
+    }
+
+    .register {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 0.9em;
+    }
+
+    .register a {
+      color: #a0cfcf;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .register a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <h2>Tu destino para educación, innovación y crecimiento profesional.</h2>
+      <p>"La educación es el arma más poderosa que puedes usar para cambiar el mundo." - Nelson Mandela</p>
+    </div>
+    <div class="right">
+      <h2>¡Bienvenido de nuevo!</h2>
+      <form action="verificar_usuario.php" method="POST">
+        <div class="form-group">
+          <input type="text" name="usuario" placeholder="usuario123 o correo@ejemplo.com" required>
+        </div>
+        <div class="form-group">
+          <input type="password" name="clave" placeholder="Ingresa tu contraseña" required>
+        </div>
+        <div class="form-options">
+          <label><input type="checkbox"> Recordar sesión</label>
+          <a href="#">¿Olvidaste tu contraseña?</a>
+        </div>
+        <button type="submit">Iniciar Sesión</button>
+      </form>
+      <div class="register">
+        ¿No tienes una cuenta? <a href="register.php">Regístrate ahora</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
