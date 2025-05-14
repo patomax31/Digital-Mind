@@ -76,14 +76,3 @@ VALUES ('Ernesto', 'Q1234567');
 
 -- Reiniciar auto_increment para evitar conflictos
 ALTER TABLE `publicaciones_2` AUTO_INCREMENT=8;
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0f95e8f (Login)
-=======
->>>>>>> 8f14870 (Cambios)
-=======
->>>>>>> d27fef5 (Nuevas cosas)
->>>>>>> 72b45f6 (otra cosa)
