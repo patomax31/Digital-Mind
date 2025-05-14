@@ -35,7 +35,7 @@ include 'header.php';
 ?>
 
 <div class="container">
-    <div calss="category">
+    <div class="category">
                     <h1><?php echo htmlspecialchars($post['categoria']); ?></h1>
     </div>
     <main>
