@@ -250,6 +250,7 @@ footer {
 .action-container button:hover img {
     opacity: 0.8; /* Ligeramente transparente al hacer hover */
 }
+
 .categoria-dropdown {
   position: relative;
 }

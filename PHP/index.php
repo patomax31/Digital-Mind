@@ -5,124 +5,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DIGITALMIND - Educación y Calidad</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <script src="../Js/responsive.js"></script>
   <script src="../PHP/prueba.js" defer></script>
-  <script src="../PHP/carrusel.js" defer></script>
-  <link rel="stylesheet" href="../css/carrusel.css">
   <link rel="stylesheet" href="../css/search.css">
 </head>
 <body>
 <?php
  include 'header.php';
 ?>
+
+  <div style="margin-top: 40px;">
+    <?php include 'dinamic_carrusel.php'; ?>
+  </div>
+
   <div class="progress-bar">
     <div id="progress" class="progress"></div>
   </div>
+
   <div class="container">
-    <button id="scrollBtn">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3.5" stroke="currentColor" class="size-6">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
-      </svg>
-    </button>
     <main>
-      
-      <div id="carrusel-container">
-      </div>
-
       <div class="most-recent">Más Reciente</div>
-      
+
       <?php
-include 'blog_db.php';  // Incluye la conexión
+      include 'blog_db.php';
 
-// Consulta para obtener los 5 posts más recientes
-$sql = "SELECT * FROM publicaciones_2 ORDER BY fecha_creacion DESC LIMIT 5";
-$resultado = $conn->query($sql);
+      // Obtener publicaciones de la base de datos
+      $sql = "SELECT * FROM publicaciones_2 ORDER BY fecha_creacion DESC";
+      $resultado = $conn->query($sql);
 
-if ($resultado->num_rows > 0) {
-    while ($fila = $resultado->fetch_assoc()) {
-        echo '
-        <div class="content-item color-noticia-1">
-            <div class="content-item">
-                <div class="content-image">';
-        
-        // Mostrar la imagen de la publicación o una por defecto si no existe
-        if (!empty($fila['imagen'])) {
-            echo '<img src="../images/publicaciones/' . htmlspecialchars($fila['imagen']) . '" alt="' . htmlspecialchars($fila['titular']) . '">';
-        } else {
-            echo '<img src="../images/escuela1.jpg" alt="' . htmlspecialchars($fila['titular']) . '">';
-        }
-        
-        echo '
-                </div>
-                <div class="content-text">
-                    <div class="title">' . htmlspecialchars($fila['titular']) . '</div>
-                    <p>' . htmlspecialchars($fila['descripcion_corta']) . '</p>
-                    <p class="published">Publicado el ' . date("d/m/Y", strtotime($fila['fecha'])) . '</p>
-                    <a href="../PHP/post_completo.php?id=' . $fila['id'] . '" class="see-more">Ver más</a>
-                </div>
+      // Mostrar publicaciones de la base de datos
+      if ($resultado->num_rows > 0) {
+        while ($fila = $resultado->fetch_assoc()) {
+          echo '
+          <div class="content-item color-noticia-1">
+            <div class="content-image">
+              <img src="' . (!empty($fila['imagen']) ? '../images/publicaciones/' . htmlspecialchars($fila['imagen']) : '../images/escuela1.jpg') . '" alt="' . htmlspecialchars($fila['titular']) . '">
             </div>
-        </div>';
-    }
-} else {
-    echo '<p>No hay publicaciones aún.</p>';
-}
+            <div class="content-text">
+              <div class="title">' . htmlspecialchars($fila['titular']) . '</div>
+              <p>' . htmlspecialchars($fila['descripcion_corta']) . '</p>
+              <p class="published">Publicado el ' . date("d/m/Y", strtotime($fila['fecha'])) . '</p>
+              <a href="../PHP/post_completo.php?id=' . $fila['id'] . '" class="see-more">Ver más</a>
+            </div>
+          </div>';
+        }
+      }
 
-$conn->close();
-?>
-                  
-
-
-      <div class="content-item color-noticia-1">
-        <div class="content-image">
-          <img src="../images/Grafica Asistencia escolar.png" alt="Students">
-        </div>
-        <div class="content-text">
-          <div class="title">EDUCACIÓN DE CALIDAD</div>
-          <p>Capacidad de un sistema educativo para proporcionar a los estudiantes los conocimientos, habilidades y competencias necesarias para su desarrollo integral y bienestar futuro. Esto incluye el acceso a recursos educativos de calidad, la formación de docentes capacitados y la creación de un entorno de aprendizaje seguro y estimulante.</p>
-          <p class="published">Publicado hace 10 horas</p>
-          <a href="../PHP/blog_page_3.html" class="see-more">Ver más</a>
-        </div>
-      </div>
-
-      <div class="content-item color-noticia-2">
-        <div class="content-image">
-          <img src="../images/escuela1.jpg" alt="Classroom">
-        </div>
-        <div class="content-text">
-          <div class="title">Los mapas mentales en el aprendizaje</div>
-          <p>Los mapas conceptuales son una herramienta de aprendizaje que ayuda a organizar ideas y conceptos para comprender y analizar temas. Son una estrategia de enseñanza-aprendizaje que facilita la comprensión de conceptos complejos y son una herramienta poderosa que todos deberiamos usar.</p>
-          <p class="published">Publicado hace 2 días</p>
-          <a href="blog_page_2-angel2312T.html" class="see-more">Ver más</a>
-        </div>
-      </div>
-
-      <div class="content-item color-noticia-3">
-        <div class="content-image">
-          <img src="../images/escuela3.jpeg" alt="Library">
-        </div>
-        <div class="content-text">
-          <div class="title">Educacion en mexico</div>
-          <p>Situacion actual de la educacion en mexico y sus avances a lo larg odel siglo XX y el siglo XXI y lo que aun queda por hacer.</p>
-          <p class="published">Publicado hace 3 días</p>
-          <a href="../PHP/blog_page_3-angel2312T.html" class="see-more">Ver más</a>
-        </div>
-      </div>
-      <div class="content-item color-noticia-4">
-        <div class="content-image">
-          <img src="../images/montessori_metodo.webp" alt="Método Montessori">
-        </div>
-        <div class="content-text">
-          <div class="title">Metodo Montessori</div>
-          <p>El método Montessori es un enfoque educativo centrado en el niño que se basa en la observación científica de su desarrollo natural. Este método fomenta la independencia, la libertad con límites y el respeto por el desarrollo físico, social y psicológico del niño.</p>
-          <p class="published">Publicado hace 5 horas</p>
-          <a href="Montessori_blog.html" class="see-more">Ver más</a>
-        </div>
-      </div>
+      $conn->close();
+      ?>
     </main>
   </div>
+
   <footer>
     <div class="footer-content">
-    <p>Derechos Reservados &reg; Digital-Mind &copy; </p>
+      <p>Derechos Reservados &reg; Digital-Mind &copy; </p>
     </div>
   </footer>
+
 </body>
 </html>

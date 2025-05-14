@@ -1,0 +1,181 @@
+/* Estilos base responsivos */
+@media screen and (max-width: 1024px) {
+  .page-container {
+    width: 95%;
+  }
+  
+  .logo {
+    margin-left: 10px;
+  }
+  
+  .logo img {
+    max-width: 220px;
+  }
+  
+  .content-item {
+    flex-direction: column;
+  }
+  
+  .content-image {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+
+/* Tabletas */
+@media screen and (max-width: 768px) {
+  .header-left, .header-right {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .header-actions-left {
+    margin-top: 10px;
+  }
+  
+  .sliding-header {
+    height: auto;
+    padding: 10px 0;
+  }
+  
+  .action-container {
+    margin-bottom: 5px;
+  }
+  
+  .content-text .title {
+    font-size: 1.5em;
+  }
+}
+
+/* Móviles */
+@media screen and (max-width: 480px) {
+  .page-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header-left, .header-right {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .logo {
+    margin-left: 0;
+    justify-content: center;
+  }
+  
+  .logo img {
+    max-width: 180px;
+  }
+  
+  .pill-search {
+    width: 100%;
+  }
+  
+  .search-input {
+    width: 100%;
+  }
+  
+  .container {
+    padding-top: 150px; /* Ajustar según altura del header */
+  }
+  
+  .content-text .title {
+    font-size: 1.3em;
+  }
+  
+  .content-text p {
+    font-size: 1em;
+  }
+  
+  .action-container a, 
+  .action-container button {
+    padding: 8px 12px;
+    font-size: 0.9em;
+  }
+  
+  /* Ajustes para el carrusel */
+  #carrusel-container {
+    height: auto !important; /* Sobreescribe cualquier altura fija */
+  }
+  
+  #carrusel-container img {
+    height: auto !important;
+    max-height: 200px;
+    object-fit: cover;
+  }
+}
+
+/* Ajustes específicos para el carrusel */
+@media screen and (max-width: 768px) {
+  #carrusel-container {
+    height: 300px !important;
+  }
+}
+
+/* Estilos para mejorar la navegación en móviles */
+@media screen and (max-width: 480px) {
+  .header-right {
+    order: 3;
+  }
+  
+  .header-actions-left {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  /* Mejorar el espaciado entre elementos */
+  main {
+    padding: 10px;
+  }
+  
+  .content-item {
+    padding: 10px;
+  }
+  
+  .content-text .see-more {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+/* Mejoras en el scroll y botón de volver arriba */
+#scrollBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  display: none; /* Oculto por defecto */
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#scrollBtn svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media screen and (max-width: 480px) {
+  #scrollBtn {
+    bottom: 10px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+  }
+}
