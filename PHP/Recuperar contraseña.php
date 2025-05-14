@@ -4,7 +4,7 @@ include("con_db.php");
 if (isset($_GET['token'])) {
     $token = $_GET['token'];
     $consulta = "SELECT * FROM usuarios WHERE reset_token = '$token'";
-    $resultado = mysqli_query($conex, $consulta);
+    $resultado = mysqli_query($conn, $consulta);
 
     if (mysqli_num_rows($resultado) > 0) {
         $usuario = mysqli_fetch_assoc($resultado);
@@ -15,7 +15,7 @@ if (isset($_GET['token'])) {
             $password_hashed = password_hash($password, PASSWORD_BCRYPT);
             
             $update = "UPDATE usuarios SET contraseña = '$password_hashed', reset_token = NULL WHERE reset_token = '$token'";
-            mysqli_query($conex, $update);
+            mysqli_query($conn, $update);
             
            
             $asunto = "Tu contraseña ha sido cambiada";
