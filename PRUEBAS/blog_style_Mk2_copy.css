@@ -21,8 +21,7 @@
       padding: 0;
       background-color: #e3f2f7; /* Color de fondo claro */
       color: #2c2828;
-      font-size: 1.5rem; /* Tamaño de fuente por defecto */
-      text-align: center;
+    
   }
 
   
@@ -33,7 +32,7 @@
     width: 100%; /* Ocupa el ancho completo de la pantalla */
     z-index: 1000; /* Hace que el header esté por encima de otros elementos */
     background-color: #e3f2f7; /* Fondo para diferenciación */
-    font-size: 3.1rem;
+    font-size: 4rem;
   }
   /* --- Encabezado (Header) --- */
   .header-content {
@@ -221,11 +220,8 @@
     border-radius: 10px;     /* Opcional: si se desea mantener esquinas redondeadas */
     overflow: hidden;
     /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
-    font-size: 3rem;    
-  }
-
-  .container-blog h2{
-    text-align: center;
+    font-size: 3rem;
+    
   }
   
   figure{
@@ -266,6 +262,24 @@
     max-width: 75%;    /* Ajusta el ancho del párrafo para que no se extienda demasiado */
   }
   
+  
+  
+  
+  /* --- Footer --- */
+  footer {
+    width: 100%;
+  }
+  
+  .footer-content {
+    background-color: #000000;  /* Fondo negro */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;    /* Centra horizontalmente */
+    align-items: center;        /* Centra verticalmente */
+    color: white;
+  }
+  
+  
     /*Button style*/
     svg{
       width: 25px;
@@ -295,7 +309,7 @@
     top: 0; /* Asegúrate de posicionarla en la parte superior */
     left: 0;
     z-index: 8000; /* <-- Este valor asegura que quede encima */
-    margin-top: 5.1rem;
+    margin-top: 5.8rem;
   }
   
   .progress{
@@ -304,4 +318,41 @@
     background-color:#294c5b;
   }
 
-  
+  /*CSS DEL CARRUSEL*/
+  .carrousel{
+    width: 90%;
+    max-width: 120em;
+    background-color: rgb(0, 0, 0);
+  }
+    
+  .carrousel .grande{
+    width: 300%;
+    background-color: orange;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .carrousel .img{
+    width: calc(100%/3);
+    background-color: lime;
+  }
+
+  .carrousel .puntos{
+    width: 100%;
+    background-color: red;
+    padding: 1em;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carrousel .punto{
+    width: 2em;
+    height: 2em;
+    background-color: blue;
+  }
+
