@@ -74,28 +74,12 @@ try {
 include 'header.php';
 ?>
 
-<<<<<<< HEAD
 <div class="container">
-    <div class="category">
                     <h1><?php echo htmlspecialchars($post['categoria']); ?></h1>
     </div>
     <main>
-        <div class="title-container-blog">    
-            <section class="title-content">
-                <div class="text">
-                    <h1><?php echo htmlspecialchars($post['titular']); ?></h1>
-                    <p><?php echo htmlspecialchars($post['descripcion_corta']); ?></p>
-                </div>
-                <div class="title-image">
-                    <?php if (!empty($post['imagen'])): ?>
-                        <img src="../images/publicaciones/<?php echo htmlspecialchars($post['imagen']); ?>" alt="<?php echo htmlspecialchars($post['titular']); ?>">
-                    <?php else: ?>
-                        <img src="../images/default-post.jpg" alt="Imagen por defecto">
-                    <?php endif; ?>
-                </div>
-            </section>        
+
         </div>    
-=======
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -107,7 +91,6 @@ include 'header.php';
     <link rel="stylesheet" href="../css/blog_page_3.js">
 </head>
 <body>
->>>>>>> 9f2072bb0fdba43851127bc59d45a794163276ce
 
 
 <button id="scrollBtn" aria-label="Volver al inicio">
