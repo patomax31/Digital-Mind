@@ -1,37 +1,58 @@
+<?php
+include("blog_db.php"); // Conexión a la base de datos
+
+$mensaje = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = trim($_POST["email"]);
+    $password = trim($_POST["password"]);
+
+    // Validación básica
+    if (!empty($email) && !empty($password)) {
+        $query = "SELECT * FROM usuarios WHERE email = ? AND rol = 'admin' LIMIT 1";
+        $stmt = $conn->prepare($query);
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $resultado = $stmt->get_result();
+
+        if ($resultado->num_rows == 1) {
+            $usuario = $resultado->fetch_assoc();
+
+            // Compara la contraseña (puede ser hash en un caso real)
+            if ($usuario['password'] === $password) {
+                session_start();
+                $_SESSION['admin'] = $usuario['email'];
+                header("Location: admin_dashboard.php");
+                exit;
+            } else {
+                $mensaje = "Contraseña incorrecta.";
+            }
+        } else {
+            $mensaje = "Usuario administrador no encontrado.";
+        }
+    } else {
+        $mensaje = "Por favor completa todos los campos.";
+    }
+}
+?>
+
+
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/search.css">
-  <title>Login Usuario</title>
- 
+    <meta charset="UTF-8">
+    <title>Login Admin</title>
 </head>
 <body>
-  <div class="container">
-    <div class="left">
-      <h2>Tu destino para educación, innovación y crecimiento profesional.</h2>
-      <p>"La educación es el arma más poderosa que puedes usar para cambiar el mundo." - Nelson Mandela</p>
-    </div>
-    <div class="right">
-      <h2>¡Bienvenido de nuevo!</h2>
-      <form action="verificar_usuario.php" method="POST">
-        <div class="form-group">
-          <input type="text" name="usuario" placeholder="usuario123 o correo@ejemplo.com" required>
-        </div>
-        <div class="form-group">
-          <input type="password" name="clave" placeholder="Ingresa tu contraseña" required>
-        </div>
-        <div class="form-options">
-          <label><input type="checkbox"> Recordar sesión</label>
-          <a href="#">¿Olvidaste tu contraseña?</a>
-        </div>
-        <button type="submit">Iniciar Sesión</button>
-      </form>
-      <div class="register">
-        ¿No tienes una cuenta? <a href="register.php">Regístrate ahora</a>
-      </div>
-    </div>
-  </div>
+    <h2>Login de Administrador</h2>
+    <form method="POST" action="">
+        <label>Email:</label><br>
+        <input type="email" name="email" required><br><br>
+        <label>Contraseña:</label><br>
+        <input type="password" name="password" required><br><br>
+        <input type="submit" value="Iniciar Sesión">
+    </form>
+
+    <p style="color:red;"><?php echo $mensaje; ?></p>
 </body>
 </html>
