@@ -176,60 +176,7 @@ include 'header.php';
             font-style: italic;
             margin-bottom: 1rem;
         }
-        
-        /* Historia */
-        .timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 3rem auto 0;
-        }
-        
-        .timeline::before {
-            content: '';
-            position: absolute;
-            width: 2px;
-            background-color: var(--secondary-color);
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -1px;
-        }
-        
-        .timeline-item {
-            padding: 10px 40px;
-            position: relative;
-            width: 50%;
-            box-sizing: border-box;
-        }
-        
-        .timeline-item:nth-child(odd) {
-            left: 0;
-        }
-        
-        .timeline-item:nth-child(even) {
-            left: 50%;
-        }
-        
-        .timeline-content {
-            padding: 20px;
-            background: var(--white);
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            position: relative;
-        }
-        
-        .timeline-content h3 {
-            font-family: 'CreatoDisplay', serif;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-        
-        .timeline-date {
-            color: var(--secondary-color);
-            font-style: italic;
-            margin-bottom: 0.5rem;
-            display: block;
-        }
+    
         
         /* Valores */
         .values-grid {
@@ -532,16 +479,9 @@ include 'header.php';
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">DigitalMind</div>
-                <p>Transformando ideas en realidades digitales desde 2015</p>
-                
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-                
-                <p>&copy; 2023 DigitalMind. Todos los derechos reservados.</p>
+                <p>Comprometidos con la educacion</p>
+                <p><a href="terminos-privacidad.php">Terminos de privacidad</a></p>
+                <p>&copy; 2025 DigitalMind. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
