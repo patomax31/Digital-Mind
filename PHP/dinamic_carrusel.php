@@ -15,15 +15,20 @@ if ($resultado_carousel->num_rows > 0) {
 }
 ?>
 
-<!-- CSS para el carrusel -->
 <style>
 .carousel-container {
-    width: 100%;
+    width: 95%; /* Reduciendo el ancho para dejar espacio en las esquinas */
     position: relative;
-    margin: 20px 0;
+    margin: 120px auto 20px auto; /* Centrando el carrusel y añadiendo márgenes */
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transición para el efecto hover */
+}
+
+.carousel-container:hover {
+    transform: scale(1.02); /* Efecto de agrandar al pasar el cursor */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
 .carousel-slides {
@@ -35,13 +40,13 @@ if ($resultado_carousel->num_rows > 0) {
 .carousel-slide {
     width: 20%; /* 100% / número máximo de slides (5) */
     position: relative;
-    height: 400px;
+    height: 600px; /* Aumentando la altura del slide */
 }
 
 .carousel-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Asegurando que la imagen cubra el contenedor */
 }
 
 .carousel-caption {
@@ -56,7 +61,11 @@ if ($resultado_carousel->num_rows > 0) {
 
 .carousel-caption h2 {
     margin: 0 0 10px 0;
-    font-size: 24px;
+    font-size: 28px; /* Aumentando el tamaño del título */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro para el título */
+    padding: 5px;
+    display: inline-block; /* Para que el fondo negro se ajuste al texto */
+    border-radius: 5px; /* Opcional: bordes redondeados para el fondo del título */
 }
 
 .carousel-caption p {
@@ -77,13 +86,14 @@ if ($resultado_carousel->num_rows > 0) {
     color: white;
     text-decoration: none;
     background-color: rgba(255, 255, 255, 0.2);
-    padding: 5px 15px;
-    border-radius: 20px;
-    transition: background-color 0.3s;
+    padding: 8px 20px; /* Aumentando el padding del botón */
+    border-radius: 25px; /* Haciendo los bordes más redondeados */
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones para el hover */
 }
 
 .carousel-link:hover {
     background-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1); /* Efecto de agrandar el botón al pasar el cursor */
 }
 
 .carousel-controls {
@@ -94,6 +104,7 @@ if ($resultado_carousel->num_rows > 0) {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    pointer-events: none; /* Evita que los controles interfieran con el hover del contenedor */
 }
 
 .carousel-control {
@@ -109,6 +120,7 @@ if ($resultado_carousel->num_rows > 0) {
     cursor: pointer;
     margin: 0 15px;
     transition: background-color 0.3s;
+    pointer-events: auto; /* Permite la interacción con los botones */
 }
 
 .carousel-control:hover {
@@ -140,32 +152,31 @@ if ($resultado_carousel->num_rows > 0) {
 
 @media (max-width: 768px) {
     .carousel-slide {
-        height: 300px;
+        height: 400px; /* Ajustando la altura en pantallas más pequeñas */
     }
-    
+
     .carousel-caption h2 {
-        font-size: 20px;
+        font-size: 24px;
     }
-    
+
     .carousel-caption p {
         font-size: 14px;
     }
 }
 </style>
 
-<!-- HTML del carrusel -->
 <div class="carousel-container">
     <?php if (!empty($slides)): ?>
         <div class="carousel-slides" id="carouselSlides">
             <?php foreach ($slides as $index => $slide): ?>
                 <div class="carousel-slide">
-                    <?php 
-                    $imagen = !empty($slide['imagen']) 
-                        ? '../images/publicaciones/' . htmlspecialchars($slide['imagen']) 
-                        : '../images/escuela1.jpg'; 
+                    <?php
+                    $imagen = !empty($slide['imagen'])
+                        ? '../images/publicaciones/' . htmlspecialchars($slide['imagen'])
+                        : '../images/escuela1.jpg';
                     ?>
                     <img src="<?php echo $imagen; ?>" alt="<?php echo htmlspecialchars($slide['titular']); ?>" class="carousel-image">
-                    
+
                     <div class="carousel-caption">
                         <h2><?php echo htmlspecialchars($slide['titular']); ?></h2>
                         <span class="carousel-date">Publicado el <?php echo date("d/m/Y", strtotime($slide['fecha'])); ?></span>
@@ -175,7 +186,7 @@ if ($resultado_carousel->num_rows > 0) {
                 </div>
             <?php endforeach; ?>
         </div>
-        
+
         <div class="carousel-controls">
             <button class="carousel-control" id="prevBtn">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
@@ -188,7 +199,7 @@ if ($resultado_carousel->num_rows > 0) {
                 </svg>
             </button>
         </div>
-        
+
         <div class="carousel-indicators" id="carouselIndicators">
             <?php for ($i = 0; $i < count($slides); $i++): ?>
                 <div class="carousel-indicator <?php echo $i === 0 ? 'active' : ''; ?>" data-index="<?php echo $i; ?>"></div>
@@ -201,69 +212,58 @@ if ($resultado_carousel->num_rows > 0) {
     <?php endif; ?>
 </div>
 
-<!-- JavaScript para el carrusel -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const slides = document.getElementById('carouselSlides');
     const indicators = document.querySelectorAll('.carousel-indicator');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
+    const carouselContainer = document.querySelector('.carousel-container');
     let currentIndex = 0;
     const slideCount = <?php echo count($slides); ?>;
-    
+
     if (slideCount === 0) return;
-    
-    // Función para mostrar un slide específico
+
     function showSlide(index) {
-        // Asegurarse de que el índice esté dentro del rango
         if (index < 0) index = slideCount - 1;
         if (index >= slideCount) index = 0;
-        
+
         currentIndex = index;
-        
-        // Mover el carrusel
         slides.style.transform = `translateX(-${currentIndex * (100 / slideCount)}%)`;
-        
-        // Actualizar indicadores
+
         indicators.forEach((indicator, i) => {
             indicator.classList.toggle('active', i === currentIndex);
         });
     }
-    
-    // Configurar botones prev/next
+
     prevBtn.addEventListener('click', () => {
         showSlide(currentIndex - 1);
     });
-    
+
     nextBtn.addEventListener('click', () => {
         showSlide(currentIndex + 1);
     });
-    
-    // Configurar indicadores
+
     indicators.forEach((indicator, index) => {
         indicator.addEventListener('click', () => {
             showSlide(index);
         });
     });
-    
-    // Auto-rotación
+
     let interval = setInterval(() => {
         showSlide(currentIndex + 1);
     }, 5000);
-    
-    // Pausar auto-rotación al pasar el mouse
-    document.querySelector('.carousel-container').addEventListener('mouseenter', () => {
+
+    carouselContainer.addEventListener('mouseenter', () => {
         clearInterval(interval);
     });
-    
-    // Reanudar auto-rotación al quitar el mouse
-    document.querySelector('.carousel-container').addEventListener('mouseleave', () => {
+
+    carouselContainer.addEventListener('mouseleave', () => {
         interval = setInterval(() => {
             showSlide(currentIndex + 1);
         }, 5000);
     });
-    
-    // Inicializar el carrusel
+
     showSlide(0);
 });
 </script>

@@ -2,197 +2,249 @@
 session_start();
 include 'blog_db.php';
 
-/* ====================== */
-/*  SECCIÓN DE CONFIGURACIÓN */
-/* ====================== */
+// Manejo de errores de la base de datos
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
-// Obtener ID del post
-$id = isset($_GET['id']) && is_numeric($_GET['id']) ? intval($_GET['id']) : null;
+try {
+    // Obtener ID del post
+    $id = isset($_GET['id']) && is_numeric($_GET['id']) ? intval($_GET['id']) : null;
 
-// Consulta SQL según si hay ID o no
-$sql = $id ? "SELECT * FROM publicaciones_2 WHERE id = $id" 
-           : "SELECT * FROM publicaciones_2 ORDER BY id DESC LIMIT 1";
+    // Consulta SQL
+    $sql = $id ? "SELECT * FROM publicaciones_2 WHERE id = $id" 
+               : "SELECT * FROM publicaciones_2 ORDER BY id DESC LIMIT 1";
 
-/* ====================== */
-/*  SECCIÓN DE DATOS DEL POST */
-/* ====================== */
+    // Obtener datos del post
+    $resultado = $conn->query($sql);
+    if (!$resultado || $resultado->num_rows === 0) {
+        throw new Exception("Publicación no encontrada");
+    }
 
-$resultado = $conn->query($sql);
-if (!$resultado || $resultado->num_rows === 0) {
-    die("Publicación no encontrada");
-}
+    $post = $resultado->fetch_assoc();
+    $id = $post['id'];
+    $pageTitle = htmlspecialchars($post['titular']) . ' - DIGITALMIND';
 
-$post = $resultado->fetch_assoc();
-$id = $post['id']; // Asegurar que $id esté definido
-$pageTitle = htmlspecialchars($post['titular']) . ' - DIGITALMIND';
+    // Verificar tablas
+    $tableCheck = $conn->query("SHOW TABLES LIKE 'comentarios'");
+    $commentsTableExists = $tableCheck->num_rows > 0;
+    $tableCheck = $conn->query("SHOW TABLES LIKE 'valoraciones'");
+    $ratingsTableExists = $tableCheck->num_rows > 0;
 
-/* ====================== */
-/*  SECCIÓN DE VALORACIONES */
-/* ====================== */
-
-$ratingFeedback = '';
-if (isset($_POST['submit_rating'])) {
-    if (isset($_POST['rating']) && isset($_SESSION['usuario'])) {
-        $rating = intval($_POST['rating']);
-        $usuario = $conn->real_escape_string($_SESSION['usuario']);
-        
-        // Verificar si el usuario ya votó
-        $check = $conn->query("SELECT * FROM valoraciones WHERE id_post = $id AND usuario = '$usuario'");
-        
-        if ($check->num_rows > 0) {
-            $ratingFeedback = 'already_rated';
+    // Procesar valoraciones
+    $ratingFeedback = '';
+    if (isset($_POST['submit_rating']) && $ratingsTableExists) {
+        if (isset($_POST['rating']) && isset($_SESSION['usuario'])) {
+            $rating = intval($_POST['rating']);
+            $usuario = $conn->real_escape_string($_SESSION['usuario']);
+            
+            $check = $conn->query("SELECT * FROM valoraciones WHERE id_post = $id AND usuario = '$usuario'");
+            
+            if ($check->num_rows > 0) {
+                $ratingFeedback = 'already_rated';
+            } else {
+                $conn->query("INSERT INTO valoraciones (id_post, usuario, valoracion) VALUES ($id, '$usuario', $rating)");
+                $ratingFeedback = 'success';
+            }
         } else {
-            $conn->query("INSERT INTO valoraciones (id_post, usuario, valoracion) VALUES ($id, '$usuario', $rating)");
-            $ratingFeedback = 'success';
+            $ratingFeedback = 'login_required';
         }
-    } else {
-        $ratingFeedback = 'login_required';
     }
-}
 
-/* ====================== */
-/*  SECCIÓN DE COMENTARIOS */
-/* ====================== */
-
-$commentFeedback = '';
-if (isset($_POST['enviar_comentario'])) {
-    if (isset($_SESSION['usuario'])) {
-        $comentario = $conn->real_escape_string($_POST['comentario']);
-        $usuario = $conn->real_escape_string($_SESSION['usuario']);
-        $conn->query("INSERT INTO comentarios (id_post, nombre, comentario) VALUES ($id, '$usuario', '$comentario')");
-        $commentFeedback = 'success';
-    } else {
-        $commentFeedback = 'login_required';
+    // Procesar comentarios
+    $commentFeedback = '';
+    if (isset($_POST['enviar_comentario']) && $commentsTableExists) {
+        if (isset($_SESSION['usuario'])) {
+            $comentario = $conn->real_escape_string($_POST['comentario']);
+            $usuario = $conn->real_escape_string($_SESSION['usuario']);
+            $conn->query("INSERT INTO comentarios (id_post, nombre, comentario) VALUES ($id, '$usuario', '$comentario')");
+            $commentFeedback = 'success';
+        } else {
+            $commentFeedback = 'login_required';
+        }
     }
+
+    // Obtener comentarios
+    $comentarios = $commentsTableExists ? $conn->query("SELECT * FROM comentarios WHERE id_post = $id ORDER BY fecha DESC") : false;
+
+} catch (mysqli_sql_exception $e) {
+    die("Error de base de datos: " . $e->getMessage());
+} catch (Exception $e) {
+    die($e->getMessage());
 }
-
-// Obtener comentarios existentes
-$comentarios = $conn->query("SELECT * FROM comentarios WHERE id_post = $id ORDER BY fecha DESC");
-
-/* ====================== */
-/*  SECCIÓN DE CABECERA */
-/* ====================== */
 
 include 'header.php';
 ?>
 
-<<<<<<< HEAD
 <div class="container">
-    <div class="category">
                     <h1><?php echo htmlspecialchars($post['categoria']); ?></h1>
     </div>
     <main>
-        <div class="title-container-blog">    
-            <section class="title-content">
-                <div class="text">
-                    <h1><?php echo htmlspecialchars($post['titular']); ?></h1>
-                    <p><?php echo htmlspecialchars($post['descripcion_corta']); ?></p>
-                </div>
-                <div class="title-image">
-                    <?php if (!empty($post['imagen'])): ?>
-                        <img src="../images/publicaciones/<?php echo htmlspecialchars($post['imagen']); ?>" alt="<?php echo htmlspecialchars($post['titular']); ?>">
-                    <?php else: ?>
-                        <img src="../images/default-post.jpg" alt="Imagen por defecto">
-                    <?php endif; ?>
-                </div>
-            </section>        
+
         </div>    
-=======
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $pageTitle; ?></title>
-    <link rel="stylesheet" href="/css/post-styles.css">
-    <link rel="stylesheet" href="/css/modals.css">
+    <link rel="stylesheet" href="../css/modals.css">
+    <link rel="stylesheet" href="../css/blog_style.css">
+    <link rel="stylesheet" href="../css/blog_page_3.js">
 </head>
 <body>
->>>>>>> 9f2072bb0fdba43851127bc59d45a794163276ce
+
+
+<button id="scrollBtn" aria-label="Volver al inicio">
+    <img src="../images/escuela1.jpg" alt="Subir">
+</button>
+
+<!-- Barra de progreso -->
+<div class="progress-bar">
+    <div class="progress"></div>
+</div>
 
 <!-- Contenedor principal -->
 <div class="main-container">
 
-    <!-- ====================== -->
-    <!--  SECCIÓN DE CABECERA DEL POST -->
-    <!-- ====================== -->
-    <div class="post-header-container">
-        <div class="post-header-content">
-            <div class="post-header-text">
-                <span class="category-tag"><?php echo htmlspecialchars($post['categoria']); ?></span>
-                <h1><?php echo htmlspecialchars($post['titular']); ?></h1>
-                <p class="post-excerpt"><?php echo htmlspecialchars($post['descripcion_corta']); ?></p>
-                
-                <div class="post-meta">
-                    <p>Publicado por <strong><?php echo htmlspecialchars($post['autor'] ?? 'Admin'); ?></strong> el <?php echo date('d/m/Y', strtotime($post['fecha'])); ?></p>
-                </div>
-            </div>
+    <!-- Cabecera del post -->
+    <header class="post-header">
+        <div class="post-header-text">
+            <span class="category-tag"><?php echo htmlspecialchars($post['categoria']); ?></span>
+            <h1><?php echo htmlspecialchars($post['titular']); ?></h1>
+            <p><?php echo htmlspecialchars($post['descripcion_corta']); ?></p>
             
-            <div class="post-header-image">
-                <?php if (!empty($post['imagen'])): ?>
-                    <img src="../images/publicaciones/<?php echo htmlspecialchars($post['imagen']); ?>" alt="<?php echo htmlspecialchars($post['titular']); ?>">
-                <?php else: ?>
-                    <img src="../images/default-post.jpg" alt="Imagen por defecto">
-                <?php endif; ?>
+            <div class="post-meta">
+                <p>Publicado por <strong><?php echo htmlspecialchars($post['autor'] ?? 'Admin'); ?></strong> el <?php echo date('d/m/Y', strtotime($post['fecha'])); ?></p>
             </div>
         </div>
-    </div>
+        
+        <div class="post-header-image">
+            <?php if (!empty($post['imagen'])): ?>
+                <img src="../images/publicaciones/<?php echo htmlspecialchars($post['imagen']); ?>" alt="<?php echo htmlspecialchars($post['titular']); ?>">
+            <?php else: ?>
+                <img src="../images/default-post.jpg" alt="Imagen por defecto">
+            <?php endif; ?>
+        </div>
+    </header>
 
-    <!-- ====================== -->
-    <!--  SECCIÓN DE CONTENIDO PRINCIPAL -->
-    <!-- ====================== -->
-    <div class="post-content-container">
-        <article class="post-content">
-            <?php echo $post['contenido']; ?>
-        </article>
-    </div>
+    <!-- Contenido principal -->
+    <article class="post-content">
+        <?php echo $post['contenido']; ?>
+    </article>
 
-    <!-- ====================== -->
-    <!--  SECCIÓN DE VALORACIÓN -->
-    <!-- ====================== -->
-    <div class="rating-section-container">
-        <section class="rating-section">
-            <h3>¿Qué te pareció este post?</h3>
-            <form method="post" action="" class="rating-form" id="ratingForm">
-                <div class="emoji-rating-options">
-                    <?php 
-                    $ratingOptions = [
-                        1 => ['emoji' => '😞', 'title' => 'Muy malo'],
-                        2 => ['emoji' => '🙁', 'title' => 'No me gustó'],
-                        3 => ['emoji' => '😐', 'title' => 'Neutral'],
-                        4 => ['emoji' => '😊', 'title' => 'Me gustó'],
-                        5 => ['emoji' => '😍', 'title' => 'Excelente']
-                    ];
-                    
-                    foreach ($ratingOptions as $value => $data): ?>
-                        <input type="radio" id="rating-<?php echo $value; ?>" name="rating" value="<?php echo $value; ?>" style="display: none;">
-                        <label for="rating-<?php echo $value; ?>" title="<?php echo $data['title']; ?>"><?php echo $data['emoji']; ?></label>
-                    <?php endforeach; ?>
-                </div>
-                <input type="submit" name="submit_rating" value="Enviar valoración" class="rating-submit-btn">
-            </form>
-        </section>
-    </div>
+ <!-- Sección de valoración corregida -->
+<section class="rating-section">
+    <h3>¿Qué te pareció este post?</h3>
+    <form method="post" action="" class="rating-form" id="ratingForm">
+        <div class="star-rating">
+            <input type="radio" id="star1" name="rating" value="1">
+            <label for="star1">★</label>
+            
+            <input type="radio" id="star2" name="rating" value="2">
+            <label for="star2">★</label>
+            
+            <input type="radio" id="star3" name="rating" value="3">
+            <label for="star3">★</label>
+            
+            <input type="radio" id="star4" name="rating" value="4">
+            <label for="star4">★</label>
+            
+            <input type="radio" id="star5" name="rating" value="5">
+            <label for="star5">★</label>
+        </div>
+        <input type="submit" name="submit_rating" value="Enviar valoración" class="rating-submit-btn">
+    </form>
+</section>
 
-    <!-- ====================== -->
-    <!--  SECCIÓN DE REFERENCIAS -->
-    <!-- ====================== -->
+<!-- Scripts unificados al final del documento -->
+<script>
+// Sistema de valoración por estrellas
+function setupStarRating() {
+    const stars = document.querySelectorAll('.star-rating label');
+    
+    stars.forEach((star, index) => {
+        star.addEventListener('click', () => {
+            for (let i = 0; i < stars.length; i++) {
+                stars[i].previousElementSibling.checked = i <= index;
+            }
+        });
+        
+        star.addEventListener('mouseover', () => {
+            for (let i = 0; i <= index; i++) {
+                stars[i].style.color = '#ffc107';
+            }
+        });
+        
+        star.addEventListener('mouseout', () => {
+            const checkedInput = document.querySelector('.star-rating input:checked');
+            const checkedIndex = checkedInput ? 
+                Array.from(document.querySelectorAll('.star-rating input')).indexOf(checkedInput) : -1;
+                
+            stars.forEach((s, i) => {
+                s.style.color = i <= checkedIndex ? '#ffc107' : '#ccc';
+            });
+        });
+    });
+
+    // Inicializar colores
+    const checkedInput = document.querySelector('.star-rating input:checked');
+    if (checkedInput) {
+        const checkedIndex = Array.from(document.querySelectorAll('.star-rating input')).indexOf(checkedInput);
+        stars.forEach((s, i) => {
+            s.style.color = i <= checkedIndex ? '#ffc107' : '#ccc';
+        });
+    }
+}
+
+// Inicializar todo cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', function() {
+    setupStarRating();
+    
+    // Mostrar feedback después de que todo esté cargado
+    <?php if ($ratingFeedback === 'success'): ?>
+        setTimeout(() => {
+            alert('¡Gracias por tu valoración!');
+        }, 300);
+    <?php elseif ($ratingFeedback === 'already_rated'): ?>
+        setTimeout(() => {
+            alert('Ya has valorado este post.');
+        }, 300);
+    <?php elseif ($ratingFeedback === 'login_required'): ?>
+        setTimeout(() => {
+            alert('Debes iniciar sesión para valorar.');
+        }, 300);
+    <?php endif; ?>
+
+    <?php if ($commentFeedback === 'success'): ?>
+        setTimeout(() => {
+            alert('¡Comentario publicado con éxito!');
+        }, 300);
+    <?php elseif ($commentFeedback === 'login_required'): ?>
+        setTimeout(() => {
+            alert('Debes iniciar sesión para comentar.');
+        }, 300);
+    <?php endif; ?>
+});
+</script>
+
+    <!-- Sección de referencias -->
     <?php if (!empty($post['referencia'])): ?>
-    <div class="references-container">
+    <section class="references-container">
         <div class="references-content">
             <h2>Referencias</h2>
             <p><?php echo htmlspecialchars($post['referencia']); ?></p>
         </div>
-    </div>
+    </section>
     <?php endif; ?>
 
-    <!-- ====================== -->
-    <!--  SECCIÓN DE COMENTARIOS -->
-    <!-- ====================== -->
-    <div class="comments-container">
-        <section class="comments-section">
-            <h2>Comentarios</h2>
+    <!-- Sección de comentarios -->
+    <section class="comments-section">
+        <h2>Comentarios</h2>
 
+        <?php if (!$commentsTableExists): ?>
+            <div class="no-comments">
+                <p>El sistema de comentarios no está disponible temporalmente.</p>
+            </div>
+        <?php else: ?>
             <!-- Formulario de comentarios -->
             <div class="comment-form-container">
                 <?php if (isset($_SESSION['usuario'])): ?>
@@ -227,147 +279,55 @@ include 'header.php';
                     </div>
                 <?php endif; ?>
             </div>
-        </section>
-    </div>
+        <?php endif; ?>
+    </section>
 </div>
 
-<!-- ====================== -->
-<!--  VENTANAS MODALES -->
-<!-- ====================== -->
-
-<!-- Modal de valoración -->
-<div class="modal-overlay" id="ratingModal">
-    <div class="modal-content rating-modal">
-        <h3 id="modalRatingTitle"></h3>
-        <div class="modal-emoji" id="modalRatingEmoji"></div>
-        <p id="modalRatingMessage"></p>
-        <button class="modal-close-btn">Cerrar</button>
-    </div>
-</div>
-
-<!-- Modal de comentarios -->
-<div class="modal-overlay" id="commentModal">
-    <div class="modal-content comment-modal">
-        <h3 id="modalCommentTitle"></h3>
-        <div class="modal-emoji" id="modalCommentEmoji"></div>
-        <p id="modalCommentMessage"></p>
-        <button class="modal-close-btn">Cerrar</button>
-    </div>
-</div>
-
-<!-- ====================== -->
-<!--  SCRIPTS JAVASCRIPT -->
-<!-- ====================== -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Configuración de modales
-    const modals = {
-        rating: {
-            element: document.getElementById('ratingModal'),
-            title: document.getElementById('modalRatingTitle'),
-            emoji: document.getElementById('modalRatingEmoji'),
-            message: document.getElementById('modalRatingMessage'),
-            types: {
-                success: {
-                    title: '¡Gracias por tu valoración!',
-                    emoji: '😊',
-                    message: 'Tu opinión es muy importante para nosotros.'
-                },
-                already_rated: {
-                    title: 'Ya has valorado',
-                    emoji: '⚠️',
-                    message: 'Solo puedes valorar este post una vez.'
-                },
-                login_required: {
-                    title: 'Acceso requerido',
-                    emoji: '🔒',
-                    message: 'Debes iniciar sesión para valorar.'
-                }
-            }
-        },
-        comment: {
-            element: document.getElementById('commentModal'),
-            title: document.getElementById('modalCommentTitle'),
-            emoji: document.getElementById('modalCommentEmoji'),
-            message: document.getElementById('modalCommentMessage'),
-            types: {
-                success: {
-                    title: '¡Comentario publicado!',
-                    emoji: '💬',
-                    message: 'Tu comentario ha sido enviado con éxito.'
-                },
-                login_required: {
-                    title: 'Acceso requerido',
-                    emoji: '🔒',
-                    message: 'Debes iniciar sesión para comentar.'
-                }
-            }
-        }
-    };
-
-    // Funciones para manejar modales
-    function showModal(modal, type) {
-        const config = modal.types[type];
-        if (config) {
-            modal.title.textContent = config.title;
-            modal.emoji.textContent = config.emoji;
-            modal.message.textContent = config.message;
-            modal.element.classList.add('active');
-        }
-    }
-
-    function closeModal(modal) {
-        modal.classList.remove('active');
-    }
-
-    // Cerrar modales al hacer clic en el botón o fuera
-    document.querySelectorAll('.modal-overlay, .modal-close-btn').forEach(element => {
-        element.addEventListener('click', function(e) {
-            if (e.target === element || e.target.classList.contains('modal-close-btn')) {
-                document.querySelectorAll('.modal-overlay').forEach(modal => {
-                    closeModal(modal);
-                });
-            }
-        });
-    });
-
-    // Manejar formulario de valoración
-    const ratingForm = document.getElementById('ratingForm');
-    if (ratingForm) {
-        ratingForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const selectedRating = document.querySelector('input[name="rating"]:checked');
-            
-            if (!selectedRating && !<?php echo isset($_SESSION['usuario']) ? 'true' : 'false'; ?>) {
-                showModal(modals.rating, 'login_required');
-                return;
-            } else if (!selectedRating) {
-                alert('Por favor selecciona una valoración');
-                return;
-            }
-            
-            // Mostrar feedback inmediato
-            showModal(modals.rating, 'success');
-            
-            // Enviar formulario después de 1.5 segundos
-            setTimeout(() => {
-                ratingForm.submit();
-            }, 1500);
-        });
-    }
-
-    // Manejar feedback de PHP
-    <?php if ($ratingFeedback): ?>
-        showModal(modals.rating, '<?php echo $ratingFeedback; ?>');
-    <?php endif; ?>
-
-    <?php if ($commentFeedback): ?>
-        showModal(modals.comment, '<?php echo $commentFeedback; ?>');
-    <?php endif; ?>
-});
-</script>
 
 <?php
 include 'footer.php';
 $conn->close();
 ?>
+
+<!-- Ventana modal para feedback -->
+<div id="feedbackModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:1000; justify-content:center; align-items:center;">
+    <div style="background:white; padding:2rem; border-radius:10px; text-align:center; max-width:400px;">
+        <h3 id="modalTitle"></h3>
+        <p id="modalMessage"></p>
+        <button onclick="document.getElementById('feedbackModal').style.display='none'" 
+                style="margin-top:1rem; padding:0.5rem 1rem; background:#294c5b; color:white; border:none; border-radius:5px; cursor:pointer;">
+            Cerrar
+        </button>
+    </div>
+</div>
+<script>
+// Inicializar todo cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', function() {
+    setupStarRating();
+    
+    // Mostrar feedback después de que todo esté cargado
+    <?php if ($ratingFeedback === 'success'): ?>
+        setTimeout(() => {
+            showModal('¡Gracias!', 'Tu valoración ha sido registrada.');
+        }, 300);
+    <?php elseif ($ratingFeedback === 'already_rated'): ?>
+        setTimeout(() => {
+            showModal('Atención', 'Ya has valorado este post.');
+        }, 300);
+    <?php elseif ($ratingFeedback === 'login_required'): ?>
+        setTimeout(() => {
+            showModal('Acceso requerido', 'Debes iniciar sesión para valorar.');
+        }, 300);
+    <?php endif; ?>
+
+    <?php if ($commentFeedback === 'success'): ?>
+        setTimeout(() => {
+            showModal('¡Éxito!', 'Tu comentario ha sido publicado.');
+        }, 300);
+    <?php elseif ($commentFeedback === 'login_required'): ?>
+        setTimeout(() => {
+            showModal('Acceso requerido', 'Debes iniciar sesión para comentar.');
+        }, 300);
+    <?php endif; ?>
+});
+</script>

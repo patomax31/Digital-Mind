@@ -266,24 +266,6 @@
     max-width: 75%;    /* Ajusta el ancho del párrafo para que no se extienda demasiado */
   }
   
-  
-  
-  
-  /* --- Footer --- */
-  footer {
-    width: 100%;
-  }
-  
-  .footer-content {
-    background-color: #000000;  /* Fondo negro */
-    padding: 10px 20px;
-    display: flex;
-    justify-content: center;    /* Centra horizontalmente */
-    align-items: center;        /* Centra verticalmente */
-    color: white;
-  }
-  
-  
     /*Button style*/
     svg{
       width: 25px;
@@ -321,3 +303,5 @@
     height: 100%;
     background-color:#294c5b;
   }
+
+  
