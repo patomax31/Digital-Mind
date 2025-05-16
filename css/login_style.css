@@ -113,8 +113,12 @@ body, html {
     display: block;
     width: 100%;
     padding: 12px 20px;
+<<<<<<< HEAD
 
     background-color: #294b5b;
+=======
+    background-color: #12f3ff;
+>>>>>>> 2b42f06 (Cambios)
     color: rgb(0, 0, 0);
 
     background-color: #ffffff;
