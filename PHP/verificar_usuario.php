@@ -13,15 +13,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "¡Bienvenido, $usuario!";
             
         } else {
-<<<<<<< HEAD
-            echo "Contraseña incorrecta.";
-        }
-    } else {
-        echo "Usuario no encontrado.";
-    }
-} else {
-    echo "Acceso no autorizado.";
-=======
             echo " Contraseña incorrecta.";
         }
     } else {
@@ -29,6 +20,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 } else {
     echo " Acceso no autorizado.";
->>>>>>> e54c15e (otra cosa)
 }
 ?>
