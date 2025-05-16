@@ -69,6 +69,7 @@ CREATE TABLE admins (
     password VARCHAR(255) NOT NULL
 );
 
+<<<<<<< HEAD
 INSERT INTO admin (usuario, clave)
 VALUES ('Ernesto', 'Q1234567');
 
@@ -131,6 +132,8 @@ CREATE TABLE admins (
 INSERT INTO admin (usuario, clave)
 VALUES ('Ernesto', 'Q1234567');
 
+=======
+>>>>>>> 0f95e8f (Login)
 -- Reiniciar auto_increment para evitar conflictos
 ALTER TABLE `publicaciones_2` AUTO_INCREMENT=8;
 
