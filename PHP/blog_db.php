@@ -1,31 +1,14 @@
 <?php
-// Parámetros de conexión
 $db_host = 'localhost';
 $db_user = 'root';
 $db_pass = ''; // XAMPP usa contraseña vacía por defecto
 $db_name = 'blog_db';
 
 // Crear conexión
-$conex = new mysqli($db_host, $db_user, $db_pass, $db_name);
+$conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
 
 // Verificar conexión
-if ($conex->connect_error) {
-    die("Error de conexión: " . $conex->connect_error);
+if ($conn->connect_error) {
+    die("Error de conexión: " . $conn->connect_error);
 }
 ?>
-
-//<?php
-// Database connection parameters
-//$db_host = 'localhost';
-//$db_user = 'root';
-//$db_pass = ''; // XAMPP default is empty password
-//$db_name = 'blog_db'; // Make sure this matches your actual database name
-
-// Create connection
-//$conex = new mysqli($db_host, $db_user, $db_pass, $db_name);
-
-// Check connection
-//if ($conex->connect_error) { 
- //   die("Connection failed: " . $conex->connect_error);
-//}
-//?>*/
