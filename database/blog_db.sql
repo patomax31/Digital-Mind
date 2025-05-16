@@ -105,6 +105,7 @@ COMMIT;
 CREATE TABLE `admin` (
   `id` int(7) NOT NULL,
   `nombre` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
   `contraseña` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -130,3 +131,6 @@ CREATE TABLE `comentarios` (
   PRIMARY KEY (`id`),
   KEY `id_post` (`id_post`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `admin` (`id`, `nombre`,`email` `contraseña`) VALUES 
+(100, 'carlos','carlosleonardorosas@gmail.com', '$2y$10$TuSaltOHashAquí...');
