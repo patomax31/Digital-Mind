@@ -1,6 +1,6 @@
 <?php
 // Conexión a la base de datos
-include 'conexion.php'; // este archivo debe tener tu conexión a la DB
+include 'blog_db.php'; // este archivo debe tener tu conexión a la DB
 
 // Obtener término de búsqueda
 if (isset($_GET['q']) && !empty($_GET['q'])) {
