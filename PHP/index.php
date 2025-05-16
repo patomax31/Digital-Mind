@@ -29,10 +29,10 @@
           <div class="action-container categoria-dropdown">
   <a href="#">Categoría</a>
   <div class="categoria-dropdown-content">
-    <a href="#">Educacion Primaria</a>
-    <a href="#">Educacion Media</a>
-    <a href="#">Educacion Media Superior</a>
-    <a href="#">Educacion Superior</a>
+    <a href="categoria.php?categoria=educacion_p">Educacion Primaria</a>
+    <a href="categoria.php?categoria=educacion_m">Educacion Media</a>
+    <a href="categoria.php?categoria=educacion_ms">Educacion Media Superior</a>
+    <a href="categoria.php?categoria=educacion_s">Educacion Superior</a>
   </div>
 </div>
 
@@ -75,11 +75,11 @@
       <div class="most-recent">Más Reciente</div>
       
       <?php
-include 'blog_db.php';  // Incluye la conexión
+include 'blog_db.php';  // Incluye la conn$connión
 
 // Consulta para obtener los 5 posts más recientes
 $sql = "SELECT * FROM publicaciones_2 ORDER BY fecha_creacion DESC LIMIT 5";
-$resultado = $conex->query($sql);
+$resultado = $conn->query($sql);
 
 if ($resultado->num_rows > 0) {
     while ($fila = $resultado->fetch_assoc()) {
@@ -110,7 +110,7 @@ if ($resultado->num_rows > 0) {
     echo '<p>No hay publicaciones aún.</p>';
 }
 
-$conex->close();
+$conn->close();
 ?>
                   
 

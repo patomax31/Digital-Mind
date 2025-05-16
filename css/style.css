@@ -297,4 +297,36 @@ footer {
     border-color: #3498db;
     outline: none;
     box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}/* Menú desplegable para Categoría */
+.action-container {
+  position: relative;
 }
+
+.categoria-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 200px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+  top: 100%;
+  left: 0;
+}
+
+.categoria-dropdown-content a {
+  color: #333;
+  padding: 10px 15px;
+  display: block;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.categoria-dropdown-content a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Mostrar al pasar el mouse */
+.action-container:hover .categoria-dropdown-content {
+  display: block;
+}
+

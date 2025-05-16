@@ -384,3 +384,7 @@ CREATE TABLE comentarios (
 
 ALTER TABLE `publicaciones_2` 
 ADD COLUMN `categoria` VARCHAR(50) NOT NULL AFTER `imagen`;
+
+ALTER TABLE usuarios ADD COLUMN rol ENUM('admin', 'usuario') DEFAULT 'usuario';
+
+ALTER TABLE usuarios ADD COLUMN rol VARCHAR(20) DEFAULT 'usuario';
