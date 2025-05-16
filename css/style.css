@@ -251,6 +251,7 @@ footer {
 .action-container a:hover img,
 .action-container button:hover img {
     opacity: 0.8; /* Ligeramente transparente al hacer hover */
+<<<<<<< HEAD
 }
 
 .mi-boton:hover {
@@ -271,3 +272,7 @@ footer {
 body {
     padding-top: 60px; /* Ajusta según la altura del header */
 }
+=======
+
+}
+>>>>>>> c050386 (Bajados)
