@@ -14,12 +14,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Aquí podrías redirigir al panel del admin:
             // header("Location: panel_admin.php");
         } else {
-            echo "❌ Contraseña incorrecta.";
+            echo " Contraseña incorrecta.";
         }
     } else {
-        echo "❌ Usuario no encontrado.";
+        echo " Usuario no encontrado.";
     }
 } else {
-    echo "❌ Acceso no autorizado.";
+    echo " Acceso no autorizado.";
 }
 ?>
