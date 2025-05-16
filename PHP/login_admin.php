@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 include("blog_db.php"); 
+=======
+include("blog_db.php"); // Asegúrate de que este archivo cree $conn
+>>>>>>> 95482b5 (Cambios)
 
 $mensaje = "";
 
@@ -26,13 +30,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <title>Login Administrador</title>
+<<<<<<< HEAD
       <link rel="stylesheet" href="../css/login_admin.css">
+=======
+>>>>>>> 95482b5 (Cambios)
 </head>
 <body>
     <h2>Login del Administrador</h2>
