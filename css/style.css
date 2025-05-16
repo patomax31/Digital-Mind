@@ -1,139 +1,177 @@
 @font-face {
-  font-family: 'Roboto';
-  src: url(/Fuentes/Roboto-Regular.ttf);
+    font-family: 'Roboto';
+    src: url(/Fuentes/Roboto-Regular.ttf);
 }
 
 @font-face {
-  font-family: 'CreatoDisplay';
-  src: url(/Fuentes/CreatoDisplay-MediumItalic.otf);
+    font-family: 'CreatoDisplay';
+    src: url(/Fuentes/CreatoDisplay-MediumItalic.otf);
 }
 
 html{
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #e3f2f7;
-  color: #333;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e3f2f7;
+    color: #333;
 }
 
 /* Header Styles */
 .sliding-header {
-  background-color: #e3f2f7;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 80px;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 2500;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: top 0.3s ease-in-out;
+    background-color: #e3f2f7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espacio entre logo y acciones */
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2500;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: top 0.3s ease-in-out;
+    padding: 0 20px; /* Añadir padding horizontal */
 }
 
 .page-container {
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    /* Eliminado para que el header controle el ancho */
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  margin-left: 50px;
+    display: flex;
+    align-items: center;
+    margin-left: 0; /* Resetear margen */
 }
 
 .logo img {
-  max-width: 300px;
-  max-height: 70px;
-  object-fit: contain;
+    max-width: 300px;
+    max-height: 70px;
+    object-fit: contain;
 }
 
 .header-actions {
-  display: flex;
-  align-items: center;
-  gap: 60px; /* Espacio entre los contenedores de acción */
-  margin-right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Reducir el espacio entre acciones */
+    margin-right: 0; /* Resetear margen */
 }
 
 .action-container {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* Espacio entre el icono y el texto */
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .action-container svg {
-  fill: #000000; /* Color de los iconos */
-  width: 30px; /* Tamaño de los iconos */
-  height: 24px;
+    fill: #000000;
+    width: 24px; /* Reducir tamaño de iconos */
+    height: 24px;
 }
 
 .action-container img {
-  width: 24px; /* Tamaño del icono de usuario */
-  height: 24px; /* Tamaño del icono de usuario */
-  fill: #333; /* Si fuera un SVG */
+    width: 24px;
+    height: 24px;
+    fill: #333;
 }
 
 .action-container a,
 .action-container span {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  font-size: 1em; /* Tamaño del texto al lado de los iconos */
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 0.9em; /* Reducir tamaño de texto */
+}
+
+/* Estilos específicos para el botón del Dashboard en el header */
+.dashboard-button-header {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 16px; /* Reducir padding */
+    border: 2px solid #333;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease, box-shadow 0.2s ease;
+    font-size: 0.9em; /* Reducir tamaño de fuente */
+}
+
+.dashboard-button-header:hover {
+    background-color: #a7d1eb;
+    border-color: #007bff;
+    transform: scale(1.05); /* Reducir el aumento de tamaño */
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3); /* Reducir la sombra */
+}
+
+.dashboard-button-header svg {
+    fill: #333;
+    width: 18px; /* Reducir tamaño del icono */
+    height: 18px;
+    transition: fill 0.3s ease;
+}
+
+.dashboard-button-header:hover svg {
+    fill: #007bff;
 }
 
 .container {
-  width: 100%;
-  margin: 0 auto;
-  background-color: #e3f2f7;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.573);
-  padding-top: 100px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #e3f2f7;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.573);
+    padding-top: 80px; /* Ajustar padding-top al tamaño del header */
 }
 
 main {
-  padding: 20px;
+    padding: 20px;
 }
 
 .most-recent {
-  font-weight: bold;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 4px solid #000000;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #000000;
 }
 
 .content-item {
-  display: flex;
-  margin-bottom: 20px;
-  padding: 15px;
-  border-radius: 8px;
-  color: rgb(254, 250, 250);
-  text-shadow: 0 0 8px rgb(0, 0, 0);
-  transition: transform 0.2s ease;
-  border: 2px solid #ddd;
-  align-items: center;
+    display: flex;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    color: rgb(254, 250, 250);
+    text-shadow: 0 0 8px rgb(0, 0, 0);
+    transition: transform 0.2s ease;
+    border: 2px solid #ddd;
+    align-items: center;
 }
 
 .content-item:hover {
-  transform: scale(1.02);
-  border: 3px solid #000000;
+    transform: scale(1.02);
+    border: 3px solid #000000;
 }
 
 .content-item.selected {
-  background-color: #4b7383;
-  transform: scale(1.03);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background-color: #4b7383;
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .content-item.color-noticia-1 { background-color: #a8dadc; }
@@ -142,64 +180,64 @@ main {
 .content-item.color-noticia-4 { background-color: #294c5b; }
 
 .content-text .title {
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #fff;
-  font-size: 1.8em;
-  letter-spacing: 1px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #fff;
+    font-size: 1.8em;
+    letter-spacing: 1px;
 }
 
 .content-text p {
-  margin-bottom: 10px;
-  line-height: 1.6;
-  color: #fff;
-  font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #fff;
+    font-size: 1.1em;
 }
 
 .content-text .published {
-  font-size: 1em;
-  margin-bottom: 10px;
+    font-size: 1em;
+    margin-bottom: 10px;
 }
 
 .content-text .see-more {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #e3f2f7;
-  color: #000000;
-  text-decoration: none;
-  text-shadow: none;
-  font-weight: 600;
-  border-radius: 5px;
-  transition: transform 0.5s ease;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e3f2f7;
+    color: #000000;
+    text-decoration: none;
+    text-shadow: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: transform 0.5s ease;
 }
 
 .content-text .see-more:hover {
-  transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 .content-image {
-  width: 325px;
-  margin-right: 40px;
-  flex-shrink: 0;
+    width: 325px;
+    margin-right: 40px;
+    flex-shrink: 0;
 }
 
 .content-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
 footer {
-  width: 100%;
+    width: 100%;
 }
 
 .footer-content {
-  background-color: #000000;  /* Fondo negro */
-  padding: 10px 20px;
-  display: flex;
-  justify-content: center;    /* Centra horizontalmente */
-  align-items: center;        /* Centra verticalmente */
-  color: white;
+    background-color: #000000; /* Fondo negro */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;     /* Centra horizontalmente */
+    align-items: center;         /* Centra verticalmente */
+    color: white;
 }
 
 .action-container a,
@@ -208,37 +246,37 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 10px 20px; /* Aumentar el padding para botones más grandes */
-    border: 2px solid #333; /* Añadir un borde sutil */
-    border-radius: 20px; /* Bordes más redondeados */
+    padding: 10px 20px; /* Mantener padding para otros botones */
+    border: 2px solid #333;
+    border-radius: 20px;
     background-color: transparent;
     color: #333;
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease, box-shadow 0.2s ease; /* Más propiedades para la transición */
+    transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease, box-shadow 0.2s ease;
 }
 
 .action-container svg {
     fill: #333;
-    width: 22px; /* Ligeramente más grande */
+    width: 22px;
     height: 22px;
-    transition: fill 0.3s ease; /* Transición para el color del icono */
+    transition: fill 0.3s ease;
 }
 
 .action-container img {
-    width: 22px; /* Ligeramente más grande */
+    width: 22px;
     height: 22px;
     vertical-align: middle;
-    transition: opacity 0.3s ease; /* Transición para la opacidad de la imagen */
+    transition: opacity 0.3s ease;
 }
 
 .action-container a:hover,
 .action-container button:hover {
-    background-color: #a7d1eb; /* Color de fondo más notable al hacer hover */
-    border-color: #007bff; /* Cambiar el color del borde al hacer hover */
-    transform: scale(1.08); /* Un poco más grande al hacer hover */
-    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3); /* Añadir una sombra sutil */
+    background-color: #a7d1eb;
+    border-color: #007bff;
+    transform: scale(1.08);
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
 }
 
 .action-container a:hover svg,
@@ -248,5 +286,16 @@ footer {
 
 .action-container a:hover img,
 .action-container button:hover img {
-    opacity: 0.8; /* Ligeramente transparente al hacer hover */
+    opacity: 0.8;
+}
+
+.sliding-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #e3f2f7;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }

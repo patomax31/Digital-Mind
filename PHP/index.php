@@ -9,12 +9,14 @@
   <script src="../Js/responsive.js"></script>
   <script src="../PHP/prueba.js" defer></script>
   <link rel="stylesheet" href="../css/search.css">
+  <script src="../Js/responsive.js"></script>
+ 
 </head>
 <body>
-
   <header class="page-header-footer sliding-header" id="slidingHeader">
     <div class="page-container">
       <div class="header-left">
+
         <div class="logo">
           <a href="index.php">
             <img src="../images/Logo_Mk2.png" alt="Logo de DIGITALMIND">

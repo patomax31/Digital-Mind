@@ -1,82 +1,56 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
-  background-color: #f4f4f4;
+/* Estilos del dashboard lateral */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Fuera de la pantalla por defecto */
+  width: 250px;
+  height: 100vh;
+  background-color: #324b40;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+  transition: left 0.3s ease-in-out;
+  padding-top: 80px; /* Espacio para no tapar el header */
 }
 
-.dashboard-container {
-  max-width: 960px;
-  margin: 0 auto;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-  color: #333;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* Estilos del menú desplegable */
-.menu-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 1.5em; /* Ajusta el tamaño del icono */
-  padding: 10px;
-  margin-bottom: 15px;
-  outline: none;
-}
-
-.menu-icon {
-  /* Estilos para el icono (si es necesario) */
-  color: #333; /* Color del icono */
-}
-
-.menu {
+.sidebar ul {
   list-style: none;
   padding: 0;
-  margin: 0;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  margin-bottom: 15px;
-  display: none; /* Ocultar inicialmente */
-  background-color: #f9f9f9;
 }
 
-.menu.open {
-  display: block; /* Mostrar cuando la clase 'open' está presente */
-}
-
-.menu li a {
-  display: block;
-  padding: 10px 15px;
-  text-decoration: none;
-  color: #333;
-  transition: background-color 0.3s ease;
-}
-
-.menu li a:hover {
-  background-color: #e0e0e0;
-}
-
-.content-section {
-  margin-bottom: 20px;
+.sidebar ul li {
   padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  background-color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.content-section h2 {
-  color: #333;
-  margin-top: 0;
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  display: block;
+  transition: background-color 0.2s ease;
 }
 
-.no-data {
-  text-align: center;
-  color: #777;
-  padding: 20px;
+.sidebar ul li a:hover {
+  background-color: #4a6e82;
+}
+
+/* Icono de menú (tres rayas) */
+.menu-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  background-color: #4a6e82;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.menu-toggle svg {
+  width: 30px;
+  height: 30px;
+  fill: white;
+}
+
+/* Clases para abrir/cerrar menú */
+.sidebar.open {
+  left: 0;
 }
