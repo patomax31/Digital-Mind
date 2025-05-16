@@ -252,8 +252,8 @@ footer {
 .action-container a:hover img,
 .action-container button:hover img {
     opacity: 0.8; /* Ligeramente transparente al hacer hover */
-
 }
+
 .mi-boton:hover {
     background-color: #0056b3; /* Cambia el color de fondo del botón al pasar el cursor sobre él */
 }
@@ -272,4 +272,3 @@ footer {
 body {
     padding-top: 60px; /* Ajusta según la altura del header */
 }
-
