@@ -62,10 +62,6 @@ CREATE TABLE `usuarios` (
   `contraseña` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 4ba691b268f4ddda4db76639c1b483eb7f31d4ea
 -- Tabla del administrador
 CREATE TABLE admins (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -73,13 +69,6 @@ CREATE TABLE admins (
     password VARCHAR(255) NOT NULL
 );
 
-<<<<<<< HEAD
-INSERT INTO admin (usuario, clave)
-VALUES ('Ernesto', 'Q1234567');
-
--- Reiniciar auto_increment para evitar conflictos
-ALTER TABLE `publicaciones_2` AUTO_INCREMENT=8;
-=======
 
 INSERT INTO admin (usuario, clave)
 VALUES ('Ernesto', 'Q1234567');
@@ -152,4 +141,3 @@ VALUES ('Ernesto', 'Q1234567');
 -- Reiniciar auto_increment para evitar conflictos
 ALTER TABLE `publicaciones_2` AUTO_INCREMENT=8;
 
->>>>>>> 4ba691b268f4ddda4db76639c1b483eb7f31d4ea
