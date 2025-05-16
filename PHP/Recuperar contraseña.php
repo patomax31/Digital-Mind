@@ -7,6 +7,9 @@ if (isset($_GET['token'])) {
     $resultado = mysqli_query($conex, $consulta);
 
     if (mysqli_num_rows($resultado) > 0) {
+        $usuario = mysqli_fetch_assoc($resultado);
+        $email = $usuario['email']; 
+
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $password = trim($_POST['password']);
             $password_hashed = password_hash($password, PASSWORD_BCRYPT);
@@ -14,7 +17,14 @@ if (isset($_GET['token'])) {
             $update = "UPDATE usuarios SET contraseña = '$password_hashed', reset_token = NULL WHERE reset_token = '$token'";
             mysqli_query($conex, $update);
             
-            echo "¡Contraseña restablecida con éxito!";
+            // Enviar correo
+            $asunto = "Tu contraseña ha sido cambiada";
+            $mensaje = "Hola, tu contraseña ha sido restablecida con éxito.\n\nNueva contraseña: $password\n\nTe recomendamos cambiarla después de iniciar sesión.";
+            $headers = "From: no-reply@tuweb.com";
+
+            mail($email, $asunto, $mensaje, $headers);
+
+            echo "¡Contraseña restablecida con éxito! Se ha enviado un correo con los detalles.";
         }
     } else {
         echo "Token inválido.";
@@ -30,6 +40,10 @@ if (isset($_GET['token'])) {
     <input type="submit" value="Restablecer">
 </form>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9da68ed (Recuperar contraseña)
+=======
+
+>>>>>>> e2ed3ff (Actualizar)
