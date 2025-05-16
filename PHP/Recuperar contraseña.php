@@ -39,4 +39,3 @@ if (isset($_GET['token'])) {
     <input type="password" name="password" required>
     <input type="submit" value="Restablecer">
 </form>
-
