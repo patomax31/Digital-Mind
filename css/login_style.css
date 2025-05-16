@@ -66,15 +66,9 @@ body, html {
 }
 
 .form-group input[type="submit"]:hover {
-<<<<<<< HEAD
-<<<<<<< HEAD
     background-color: #e3f2f7;
-=======
     background-color: #a0c0c5;
->>>>>>> 0261498 (Cambios)
-=======
     background-color: #e3f2f7;
->>>>>>> 15ea62a (Cambios)
 }
 
 
@@ -117,13 +111,6 @@ body, html {
 
 .btn-registrar:hover {
     background-color: #e3f2f7;
-<<<<<<< HEAD
-}
-
-body {
-    background-color: red !important;
-=======
->>>>>>> 15ea62a (Cambios)
 }
 
 body {
