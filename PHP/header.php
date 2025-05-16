@@ -9,6 +9,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
+  <!-- Incluir translate.js aquí para que esté disponible en todas las páginas que usan este header -->
+  <script src="./translate.js" defer></script>
+
 </head>
 <body>
   <header class="page-header-footer sliding-header" id="slidingHeader">
@@ -46,6 +49,34 @@
             <a href="contact_page.php">Pagina de contacto</a>
         </div>
       </div>
+
+      </div>
+          <div class="traducir">
+            <div class="action-container">
+              <button id = "toggle-translate">
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#000000"
+                stroke-width="1"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                >
+                <path d="M4 5h7" />
+                <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+                <path d="M5 9c0 2.144 2.952 3.908 6.7 4" />
+                <path d="M12 20l4 -9l4 9" />
+                <path d="M19.1 18h-6.2" />
+                </svg>
+
+                  <span>Traducir</span>
+              </button>
+            </div>
+      </div>
+
       <div class="header-right">
         <div class="action-container">
           <svg class="Login-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
