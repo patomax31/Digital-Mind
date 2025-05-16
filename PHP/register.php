@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Verificar si el email ya existe en la base de datos
         $consulta_email = "SELECT * FROM usuarios WHERE email = '$email'";
-        $resultado_email = mysqli_query($conex, $consulta_email);
+        $resultado_email = mysqli_query($conn, $consulta_email);
         
         if (mysqli_num_rows($resultado_email) > 0) {
             $mensaje = "<h3 class='bad'>¡Este correo electrónico ya está registrado!</h3>";
@@ -68,6 +68,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mensaje = "<h3 class='bad'>¡Por favor, complete todos los campos!</h3>";
     }
 }
+$query = "SELECT * FROM usuarios WHERE email = ? AND contraseña = ?";
+$stmt = $conn->prepare($query);
+$stmt->bind_param("ss", $email, $password);
+$stmt->execute();
+$result = $stmt->get_result();
+
+if ($result && $result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+
+    $_SESSION['usuario_id'] = $row['id'];
+    $_SESSION['nombre'] = $row['nombre'];
+    $_SESSION['rol'] = $row['rol'];
+
+    header("Location: index.php");
+    exit;
+} else {
+    echo "Usuario o contraseña incorrectos.";
+}
+
 ?>
 
 <!DOCTYPE html>
