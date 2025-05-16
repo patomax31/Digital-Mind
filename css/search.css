@@ -66,23 +66,23 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
   
-  .progress-bar {
-    position: fixed;
-    top: 80px; /* Debe coincidir exactamente con la altura de tu header */
-    left: 0;
-    width: 100%;
-    height: 12px; /* Puedes ajustar este valor según prefieras */
-    z-index: 999;
-    margin: 0; /* Eliminamos cualquier margen */
-    padding: 0; /* Eliminamos cualquier padding */
-  }
   
-  .progress {
-    height: 100%;
-    width: 0%;
-    background-color: #4a6e82; /* O cualquier color que prefieras */
-    transition: width 0.1s ease;
-  }
+  .progress-bar {
+  position: fixed;
+  top: 80px; /* Ajusta según la altura de tu header */
+  left: 0;
+  width: 100%;
+  height: 4px; /* Más delgada */
+  background: transparent;
+  z-index: 1000; /* Asegúrate que esté sobre otros elementos */
+}
+
+.progress {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #4a6e82, #2c3e50); /* Más atractiva */
+  transition: width 0.05s ease-out;
+}
   .sliding-header {
     background-color: #e3f2f7;
     display: flex;

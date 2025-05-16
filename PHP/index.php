@@ -6,18 +6,25 @@
   <title>DIGITALMIND - Educación y Calidad</title>
   <link rel="stylesheet" href="../css/style.css">
   <script src="../PHP/prueba.js" defer></script>
-  <link rel="stylesheet" href="../css/search.css">
+   <script src="../Js/scroll.js" defer></script>
+  
   <?php include 'dashboard.php'; ?>
   <?php include 'header.php'; ?>
+  
  
-
+ <button id="scrollToTopBtn" class="scroll-top-btn" aria-label="Volver arriba">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+      <path fill-rule="evenodd" d="M11.47 2.47a.75.75 0 011.06 0l7.5 7.5a.75.75 0 11-1.06 1.06l-6.22-6.22V21a.75.75 0 01-1.5 0V4.81l-6.22 6.22a.75.75 0 11-1.06-1.06l7.5-7.5z" clip-rule="evenodd" />
+    </svg>
+  </button>
   <div style="margin-top: 40px;">
     <?php include 'dinamic_carrusel.php'; ?>
   </div>
 
-  <div class="progress-bar">
-    <div id="progress" class="progress"></div>
+  <div class="progress-container">
+    <div class="progress-bar" id="bidirectionalProgress"></div>
   </div>
+
 
   <div class="container">
     <main>
@@ -63,6 +70,31 @@
       <p>Derechos Reservados &reg; Digital-Mind &copy; </p>
     </div>
   </footer>
+<script>
+  // Botón de scroll hacia arriba
+  const scrollBtn = document.getElementById('scrollBtn');
+  
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+      scrollBtn.classList.add('visible');
+    } else {
+      scrollBtn.classList.remove('visible');
+    }
+  });
+  
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
 
+<!-- Y asegúrate de que el botón esté en tu HTML -->
+<button id="scrollBtn" aria-label="Volver arriba">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+    <path fill-rule="evenodd" d="M11.47 2.47a.75.75 0 011.06 0l7.5 7.5a.75.75 0 11-1.06 1.06l-6.22-6.22V21a.75.75 0 01-1.5 0V4.81l-6.22 6.22a.75.75 0 11-1.06-1.06l7.5-7.5z" clip-rule="evenodd" />
+  </svg>
+</button>
 </body>
 </html>
