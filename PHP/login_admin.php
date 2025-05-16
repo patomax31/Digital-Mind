@@ -1,37 +1,27 @@
 <?php
-include("blog_db.php"); // Conexión a la base de datos
+include("blog_db.php"); // Asegúrate de que este archivo cree $conn
 
 $mensaje = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = trim($_POST["email"]);
+    $usuario = trim($_POST["usuario"]);
     $password = trim($_POST["password"]);
 
-    // Validación básica
-    if (!empty($email) && !empty($password)) {
-        $query = "SELECT * FROM usuarios WHERE email = ? AND rol = 'admin' LIMIT 1";
-        $stmt = $conn->prepare($query);
-        $stmt->bind_param("s", $email);
+    if (!empty($usuario) && !empty($password)) {
+        $stmt = $conn->prepare("SELECT * FROM admins WHERE usuario = ? AND password = ?");
+        $stmt->bind_param("ss", $usuario, $password);
         $stmt->execute();
         $resultado = $stmt->get_result();
 
         if ($resultado->num_rows == 1) {
-            $usuario = $resultado->fetch_assoc();
-
-            // Compara la contraseña (puede ser hash en un caso real)
-            if ($usuario['password'] === $password) {
-                session_start();
-                $_SESSION['admin'] = $usuario['email'];
-                header("Location: admin_dashboard.php");
-                exit;
-            } else {
-                $mensaje = "Contraseña incorrecta.";
-            }
+            // Inicio de sesión exitoso
+            header("Location: admin_dashboard.php");
+            exit();
         } else {
-            $mensaje = "Usuario administrador no encontrado.";
+            $mensaje = "Credenciales incorrectas.";
         }
     } else {
-        $mensaje = "Por favor completa todos los campos.";
+        $mensaje = "Completa todos los campos.";
     }
 }
 ?>
@@ -41,7 +31,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Login Administrador</title>
-      <link rel="stylesheet" href="../css/login_admin.css">
 </head>
 <body>
     <h2>Login del Administrador</h2>
@@ -54,20 +43,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <input type="submit" value="Ingresar">
     </form>
-
-    <title>Login Admin</title>
-</head>
-<body>
-    <h2>Login de Administrador</h2>
-    <form method="POST" action="">
-        <label>Email:</label><br>
-        <input type="email" name="email" required><br><br>
-        <label>Contraseña:</label><br>
-        <input type="password" name="password" required><br><br>
-        <input type="submit" value="Iniciar Sesión">
-    </form>
-
-
     <p style="color:red;"><?php echo $mensaje; ?></p>
 </body>
 </html>
