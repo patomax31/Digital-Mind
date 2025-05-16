@@ -21,10 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
             return response.text();
         })
 
-<<<<<<< HEAD
-=======
-
->>>>>>> b96bec3519df3943985c14a12020efe15b8ecff7
     
     fetch("../PHP/header.html")
         .then(response => {
@@ -37,10 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch("../PHP/header.html")
         .then(response => response.text())
 
-<<<<<<< HEAD
-=======
-
->>>>>>> b96bec3519df3943985c14a12020efe15b8ecff7
         .then(data => {
             headerPlaceholder.innerHTML = data;
         })
