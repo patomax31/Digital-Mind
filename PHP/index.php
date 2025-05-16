@@ -21,10 +21,6 @@
     <?php include 'dinamic_carrusel.php'; ?>
   </div>
 
-  <div class="progress-container">
-    <div class="progress-bar" id="bidirectionalProgress"></div>
-  </div>
-
 
   <div class="container">
     <main>
