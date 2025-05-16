@@ -21,10 +21,10 @@ $result = $conn->query($sql);
             <h3><?= htmlspecialchars($row["titular"]) ?></h3>
             <p><strong>Fecha:</strong> <?= $row["fecha"] ?></p>
             <p><?= htmlspecialchars($row["descripcion_corta"]) ?></p>
-            <a href="detalles.php?id=<?= $row['id'] ?>">Leer más</a>
+            <a href = "../PHP/post_completo.php?id=' . $row['id'] . ' class = " see-more ">Ver más</a>
         </div>
         <hr>
-        <a href="main_page.html" class="see-more">Volver a la Pagina Principal</a>
+        <a href="index.php" class="see-more">Volver a la Pagina Principal</a>
         <div>
 
         </div>

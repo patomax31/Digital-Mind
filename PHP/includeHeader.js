@@ -9,12 +9,16 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch("../PHP/header.html")
         .then(response => response.text())
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4cadc2d (Ernesto)
 =======
 
 >>>>>>> 41afdea (cambis realizados)
+=======
+
+>>>>>>> 4ba691b268f4ddda4db76639c1b483eb7f31d4ea
     
     fetch("../PHP/header.html")
         .then(response => {
@@ -25,10 +29,13 @@ document.addEventListener("DOMContentLoaded", function () {
         })
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4cadc2d (Ernesto)
 =======
 >>>>>>> 4cadc2d (Ernesto)
 =======
+=======
+>>>>>>> 4ba691b268f4ddda4db76639c1b483eb7f31d4ea
 
     
     fetch("../PHP/header.html")
@@ -42,7 +49,10 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch("../PHP/header.html")
         .then(response => response.text())
 
+<<<<<<< HEAD
 >>>>>>> 41afdea (cambis realizados)
+=======
+>>>>>>> 4ba691b268f4ddda4db76639c1b483eb7f31d4ea
         .then(data => {
             headerPlaceholder.innerHTML = data;
         })

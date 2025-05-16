@@ -1,0 +1,82 @@
+        @font-face {
+            font-family: 'Roboto';
+            src: url(/Fuentes/Roboto-Regular.ttf);
+        }
+        
+        @font-face {
+            font-family: 'CreatoDisplay';
+            src: url(/Fuentes/CreatoDisplay-MediumItalic.otf);
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e3f2f7;
+            color: #2c2828;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'CreatoDisplay', serif;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            color: #294c5b;
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            color: #3a6b7e;
+        }
+        
+        h3 {
+            font-size: 1.8rem;
+            color: #333333;
+        }
+        
+        .category-tag {
+            font-family: 'CreatoDisplay', serif;
+            display: inline-block;
+            background-color: #294c5b;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .post-meta {
+            font-family: 'CreatoDisplay', serif;
+            font-style: italic;
+            color: #5d5d5d;
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .container-blog {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+        
+        .container-blog p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .container-blog img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        
+        figcaption {
+            font-family: 'CreatoDisplay', serif;
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            color: #5d5d5d;
+        }
