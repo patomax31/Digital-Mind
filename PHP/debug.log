@@ -1814,3 +1814,135 @@ Secondary education is an exciting journey of discovery and growth. By strengthe
 )
 
 [2025-05-16 16:50:45] Successfully returned translated texts.
+[2025-05-16 19:47:52] Received POST request.
+[2025-05-16 19:47:52] POST data: Array
+(
+    [texts] => ["Crear Blog","Categoría","Educacion Primaria","Educacion Media","Educacion Media Superior","Educacion Superior","Acerca de","Pagina de contacto","Traducir","Iniciar sesión","Buscar..."]
+    [target_lang] => EN
+)
+
+[2025-05-16 19:47:52] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-05-16 19:47:52] 'texts' parameter received: ["Crear Blog","Categoría","Educacion Primaria","Educacion Media","Educacion Media Superior","Educacion Superior","Acerca de","Pagina de contacto","Traducir","Iniciar sesión","Buscar..."]
+[2025-05-16 19:47:52] Result of json_decode: Array
+(
+    [0] => Crear Blog
+    [1] => Categoría
+    [2] => Educacion Primaria
+    [3] => Educacion Media
+    [4] => Educacion Media Superior
+    [5] => Educacion Superior
+    [6] => Acerca de
+    [7] => Pagina de contacto
+    [8] => Traducir
+    [9] => Iniciar sesión
+    [10] => Buscar...
+)
+
+[2025-05-16 19:47:52] Target language: EN
+[2025-05-16 19:47:52] Data sent to DeepL API (JSON): {"text":["Crear Blog","Categor\u00eda","Educacion Primaria","Educacion Media","Educacion Media Superior","Educacion Superior","Acerca de","Pagina de contacto","Traducir","Iniciar sesi\u00f3n","Buscar..."],"target_lang":"EN"}
+[2025-05-16 19:47:53] DeepL API HTTP Code: 200
+[2025-05-16 19:47:53] DeepL API Response: {"translations":[{"detected_source_language":"EN","text":"Crear Blog"},{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"Primary Education"},{"detected_source_language":"ES","text":"Secondary Education"},{"detected_source_language":"ES","text":"Higher Secondary Education"},{"detected_source_language":"ES","text":"Higher Education"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Translate"},{"detected_source_language":"ES","text":"Login"},{"detected_source_language":"ES","text":"Search..."}]}
+[2025-05-16 19:47:53] Extracted translated texts: Array
+(
+    [0] => Crear Blog
+    [1] => Category
+    [2] => Primary Education
+    [3] => Secondary Education
+    [4] => Higher Secondary Education
+    [5] => Higher Education
+    [6] => About
+    [7] => Contact page
+    [8] => Translate
+    [9] => Login
+    [10] => Search...
+)
+
+[2025-05-16 19:47:53] Successfully returned translated texts.
+[2025-05-16 19:47:54] Received POST request.
+[2025-05-16 19:47:54] POST data: Array
+(
+    [texts] => ["Crear Blog","Categoría","Educacion Primaria","Educacion Media","Educacion Media Superior","Educacion Superior","Acerca de","Pagina de contacto","Traducir","Iniciar sesión","Buscar..."]
+    [target_lang] => EN
+)
+
+[2025-05-16 19:47:54] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-05-16 19:47:54] 'texts' parameter received: ["Crear Blog","Categoría","Educacion Primaria","Educacion Media","Educacion Media Superior","Educacion Superior","Acerca de","Pagina de contacto","Traducir","Iniciar sesión","Buscar..."]
+[2025-05-16 19:47:54] Result of json_decode: Array
+(
+    [0] => Crear Blog
+    [1] => Categoría
+    [2] => Educacion Primaria
+    [3] => Educacion Media
+    [4] => Educacion Media Superior
+    [5] => Educacion Superior
+    [6] => Acerca de
+    [7] => Pagina de contacto
+    [8] => Traducir
+    [9] => Iniciar sesión
+    [10] => Buscar...
+)
+
+[2025-05-16 19:47:54] Target language: EN
+[2025-05-16 19:47:54] Data sent to DeepL API (JSON): {"text":["Crear Blog","Categor\u00eda","Educacion Primaria","Educacion Media","Educacion Media Superior","Educacion Superior","Acerca de","Pagina de contacto","Traducir","Iniciar sesi\u00f3n","Buscar..."],"target_lang":"EN"}
+[2025-05-16 19:47:54] DeepL API HTTP Code: 200
+[2025-05-16 19:47:54] DeepL API Response: {"translations":[{"detected_source_language":"EN","text":"Crear Blog"},{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"Primary Education"},{"detected_source_language":"ES","text":"Secondary Education"},{"detected_source_language":"ES","text":"Higher Secondary Education"},{"detected_source_language":"ES","text":"Higher Education"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Translate"},{"detected_source_language":"ES","text":"Login"},{"detected_source_language":"ES","text":"Search..."}]}
+[2025-05-16 19:47:54] Extracted translated texts: Array
+(
+    [0] => Crear Blog
+    [1] => Category
+    [2] => Primary Education
+    [3] => Secondary Education
+    [4] => Higher Secondary Education
+    [5] => Higher Education
+    [6] => About
+    [7] => Contact page
+    [8] => Translate
+    [9] => Login
+    [10] => Search...
+)
+
+[2025-05-16 19:47:54] Successfully returned translated texts.
+[2025-05-16 19:47:55] Received POST request.
+[2025-05-16 19:47:55] POST data: Array
+(
+    [texts] => ["Crear Blog","Categoría","Educacion Primaria","Educacion Media","Educacion Media Superior","Educacion Superior","Acerca de","Pagina de contacto","Traducir","Iniciar sesión","Buscar..."]
+    [target_lang] => EN
+)
+
+[2025-05-16 19:47:55] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-05-16 19:47:55] 'texts' parameter received: ["Crear Blog","Categoría","Educacion Primaria","Educacion Media","Educacion Media Superior","Educacion Superior","Acerca de","Pagina de contacto","Traducir","Iniciar sesión","Buscar..."]
+[2025-05-16 19:47:55] Result of json_decode: Array
+(
+    [0] => Crear Blog
+    [1] => Categoría
+    [2] => Educacion Primaria
+    [3] => Educacion Media
+    [4] => Educacion Media Superior
+    [5] => Educacion Superior
+    [6] => Acerca de
+    [7] => Pagina de contacto
+    [8] => Traducir
+    [9] => Iniciar sesión
+    [10] => Buscar...
+)
+
+[2025-05-16 19:47:55] Target language: EN
+[2025-05-16 19:47:55] Data sent to DeepL API (JSON): {"text":["Crear Blog","Categor\u00eda","Educacion Primaria","Educacion Media","Educacion Media Superior","Educacion Superior","Acerca de","Pagina de contacto","Traducir","Iniciar sesi\u00f3n","Buscar..."],"target_lang":"EN"}
+[2025-05-16 19:47:56] DeepL API HTTP Code: 200
+[2025-05-16 19:47:56] DeepL API Response: {"translations":[{"detected_source_language":"EN","text":"Crear Blog"},{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"Primary Education"},{"detected_source_language":"ES","text":"Secondary Education"},{"detected_source_language":"ES","text":"Higher Secondary Education"},{"detected_source_language":"ES","text":"Higher Education"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Translate"},{"detected_source_language":"ES","text":"Login"},{"detected_source_language":"ES","text":"Search..."}]}
+[2025-05-16 19:47:56] Extracted translated texts: Array
+(
+    [0] => Crear Blog
+    [1] => Category
+    [2] => Primary Education
+    [3] => Secondary Education
+    [4] => Higher Secondary Education
+    [5] => Higher Education
+    [6] => About
+    [7] => Contact page
+    [8] => Translate
+    [9] => Login
+    [10] => Search...
+)
+
+[2025-05-16 19:47:56] Successfully returned translated texts.
