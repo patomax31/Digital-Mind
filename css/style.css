@@ -23,6 +23,7 @@ body {
   color: #333;
 }
 
+<<<<<<< HEAD
 /* **ESTILOS DEL HEADER COPIADOS DE style.css** */
         .sliding-header {
             background-color: #e3f2f7;
@@ -93,6 +94,486 @@ body {
         }
         /* **FIN DE ESTILOS DEL HEADER** */
 
+=======
+.action-container a,
+.action-container span {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 0.9em; /* Reducir tamaño de texto */
+}
+
+/* Estilos específicos para el botón del Dashboard en el header */
+.dashboard-button-header {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 16px; /* Reducir padding */
+    border: 2px solid #333;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease, box-shadow 0.2s ease;
+    font-size: 0.9em; /* Reducir tamaño de fuente */
+}
+
+.dashboard-button-header:hover {
+    background-color: #a7d1eb;
+    border-color: #007bff;
+    transform: scale(1.05); /* Reducir el aumento de tamaño */
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3); /* Reducir la sombra */
+}
+
+.dashboard-button-header svg {
+    fill: #333;
+    width: 18px; /* Reducir tamaño del icono */
+    height: 18px;
+    transition: fill 0.3s ease;
+}
+
+.dashboard-button-header:hover svg {
+    fill: #007bff;
+
+  .create-container{
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el ícono y el botón */
+  }
+  
+  .create-buttom{
+    background-color: #e3f2f7;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .create-icon{
+    width: 24px;
+    height: 24px;
+  }
+  
+  .create-buttom:hover {
+    background-color: #294c5b;
+  }
+  
+  .category-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el ícono y el botón */
+  }
+  
+  /* Estilos para el botón de categoría */
+  .category-buttom {
+    background-color: #e3f2f7;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover para el botón */
+  .category-buttom:hover {
+    background-color: #294c5b;
+  }
+  
+  /* Tamaño del ícono */
+  .category-icon {
+    width: 24px;
+    height: 24px;
+    /* Opcional: si deseas ajustar el espaciado adicional */
+    /* margin-right: 10px;  No es necesario al usar gap en el contenedor */
+  }
+  
+  
+  
+   /* Botón de búsqueda a la derecha, con forma de píldora */
+  .search-button {
+      background-color: #e3f2f7;             /* Color de fondo (puedes elegir otro que combine) */
+      padding: 10px 20px;                    /* Espaciado interno */
+      border-radius: 30px;                   /* Valor alto para crear la forma de pildora */
+      color: #ffffff;                          /* Color del texto */
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+    }
+  
+  /* Efecto hover para el botón de búsqueda */
+  .search-button:hover {
+    background-color: #294c5b;
+  }  
+  
+  .login-bottom{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  } 
+    
+  .login-icon{
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+
+/* Up Button */
+
+svg{
+    width: 25px;
+    height: 25px;
+}
+
+#scrollBtn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: none;
+    outline: none;
+    background-color: #6D9EAB;
+    cursor: pointer;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+#scrollBtn:hover{
+  background-color: #294c5b;
+}  
+
+/* Linea progresiva */
+
+.progress-bar{
+    position: fixed;
+    width: 100%;
+    height: 10px;
+    top: 0; /* Asegúrate de posicionarla en la parte superior */
+    z-index: 8000; /* <-- Este valor asegura que quede encima */
+    margin-top: 4.8rem;
+  }
+  
+  .progress{
+    width: 0%;
+    height: 100%;
+    background-color:#294c5b;
+  }
+
+main {
+    padding: 20px;
+}
+
+.image-section {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.main-content {
+    text-align: center;
+    height: auto;
+    background-position: center;
+    background-size: center;
+}
+
+.most-recent {
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #000000;
+}
+
+.content-item {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    color: rgb(254, 250, 250);
+    text-shadow: 0 0 8px rgb(0, 0, 0);
+    transition: transform 0.2s ease;
+    border: 2px solid #ddd;
+    align-items: center;
+}
+
+.content-item:hover {
+    transform: scale(1.02);
+    border: 3px solid #000000;
+}
+
+.content-item.selected {
+    background-color: #4b7383;
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+
+}
+
+.content-item.color-noticia-1 {
+    background-color: #a8dadc; /* Un bonito azul claro */
+}
+
+.content-item.color-noticia-2 {
+    background-color: #6d9eab; /* Un naranja suave */
+}
+
+.content-item.color-noticia-3 {
+    background-color: #4a6e82; /* Un verde azulado */
+}
+
+.content-item.color-noticia-4 {
+    background-color: #294c5b; /* Un rojo anaranjado */
+}
+.content-text .title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: rgb(255, 255, 255);
+    font-size: 1.8em;
+    letter-spacing: 1px;
+}
+
+.content-text p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: rgb(255, 255, 255);
+    font-size: 1.1em;
+}
+
+.content-text .published {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.content-text .see-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e3f2f7;
+    color: #000000;
+    text-decoration: none;
+    text-shadow: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: transform 0.5s ease;
+}
+
+.content-text .see-more:hover {
+    transform: scale(1.2);
+}
+
+.content-image {
+    width: 325px;
+    margin-right: 40px;
+    flex-shrink: 0;
+}
+
+.content-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* --- Footer --- */
+footer {
+    width: 100%;
+  }
+  
+.footer-content {
+    background-color: #000000;  /* Fondo negro */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;    /* Centra horizontalmente */
+    align-items: center;        /* Centra verticalmente */
+    color: white;
+}
+  
+  
+
+.carousel {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: 70vh;
+    margin-bottom: 30px;
+}
+
+.carousel-images {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.carousel-item {
+    width: calc(100% / 3);
+    flex-shrink: 0;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.carousel-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-item:hover::before {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item:hover img {
+    transform: scale(1.08);
+}
+
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 2000;
+    pointer-events: none;
+}
+
+.carousel-prev,
+.carousel-next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: background-color 0.3s ease;
+    pointer-events: auto;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 2000;
+}
+
+.carousel-indicator {
+    width: 15px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-indicator.active {
+    background-color: white;
+}
+
+.carousel-text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    pointer-events: none;
+}
+
+.carousel-text-item {
+    display: none;
+    text-align: left;
+    color: white;
+    width: 55%;
+    padding: 40px;
+    margin-left: 50px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 0;
+    pointer-events: auto;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.carousel-text-item.active {
+    display: block;
+}
+
+.carousel:hover .carousel-text-item.active {
+    transform: scale(1.05);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-text-item h3 {
+    font-size: 4em;
+    margin-bottom: 10px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    font-family: 'Arial', sans-serif;
+}
+
+.carousel-text-item p {
+    font-size: 1.4em;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.carousel-text-item .carousel-description {
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+.carousel-button {
+    display: inline-block;
+    padding: 12px 35px;
+    background-color: #ffffff;
+    color: #324b40;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    pointer-events: auto;
+    font-size: 1.1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-button:hover, 
+.carousel-button:focus {
+    background-color: #e3e3e3;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+>>>>>>> b96bec3519df3943985c14a12020efe15b8ecff7
 .container {
   width: 100%;
   margin: 0 auto;
@@ -220,6 +701,7 @@ footer {
     transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease, box-shadow 0.2s ease; /* Más propiedades para la transición */
 }
 
+
 .action-container svg {
     fill: #333;
     width: 22px; /* Ligeramente más grande */
@@ -249,255 +731,104 @@ footer {
 
 .action-container a:hover img,
 .action-container button:hover img {
+<<<<<<< HEAD
     opacity: 0.8; /* Ligeramente transparente al hacer hover */
 }
 
+
+
+.mi-boton:hover {
+    background-color: #0056b3; /* Cambia el color de fondo del botón al pasar el cursor sobre él */
+}
+
+#header-placeholder header {
+=======
+
+    opacity: 0.8; /* Ligeramente transparente al hacer hover */
+}
+
+
+
+
+
 .sliding-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #e3f2f7;
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-}
-/* Estilo adicional para el menú flotante */
-/* Añadir al archivo style.css o crear un archivo nuevo para estos estilos */
-
-/* Botón del menú hamburguesa */
-.menu-toggle {
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: #333;
-  display: flex;
-  align-items: center;
-  margin-right: 15px; /* Espacio entre el botón y el logo */
-}
-
-.menu-toggle:hover {
-  transform: scale(1.1);
-}
-
-.menu-toggle .fa-bars {
-  transition: transform 0.3s ease;
-}
-
-.menu-toggle:hover .fa-bars {
-  transform: rotate(90deg);
-}
-
-/* Ajustes de la cabecera para el menú */
-.header-left {
-  display: flex;
-  align-items: center;
-}
-
-/* Menú flotante ajustado para trabajar con el nuevo layout */
-.sidebar {
-  position: fixed;
-  top: 80px;
-  left: -300px; /* Ligeramente más ancho */
-  width: 300px;
-  height: calc(100vh - 80px);
-  background-color: white;
-  box-shadow: 2px 0 15px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
-  z-index: 1000;
-  overflow-y: auto;
-  border-radius: 0 10px 10px 0;
-}
-
-.sidebar.active {
-  left: 0;
-}
-
-.sidebar-section {
-  padding: 20px;
-  border-bottom: 1px solid #eee;
-}
-
-.sidebar-section h3 {
-  font-size: 18px;
-  color: #4a6fa5;
-  margin-bottom: 15px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #e3f2f7;
-}
-
-/* Elementos del menú */
-.menu-item {
-  display: flex;
-  align-items: center;
-  padding: 14px 16px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  text-decoration: none;
-  color: #333;
-  font-size: 16px;
-  font-weight: 500;
-  transition: all 0.2s;
-  background-color: #f8f9fa;
-}
-
-.menu-item:hover {
-  background-color: #e3f2f7;
-  color: #4a6fa5;
-  transform: translateX(5px);
-}
-
-.menu-item i {
-  margin-right: 12px;
-  font-size: 20px;
-  width: 24px;
-  text-align: center;
-  color: #4a6fa5;
-}
-
-/* Overlay para cerrar el menú */
-.overlay {
-  position: fixed;
-  top: 80px;
-  left: 0;
-  width: 100%;
-  height: calc(100vh - 80px);
-  background-color: rgba(0,0,0,0.5);
-  z-index: 999;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s;
-}
-
-.overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* Lista de noticias recientes en el menú */
-.recent-posts {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.post-item {
-  display: flex;
-  align-items: center;
-  padding: 12px 0;
-  border-bottom: 1px solid #eee;
-  transition: background-color 0.2s;
-}
-
-.post-item:hover {
-  background-color: #f8f9fa;
-}
-
-.post-item:last-child {
-  border-bottom: none;
-}
-
-.post-thumbnail {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 6px;
-  margin-right: 12px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.post-details {
-  flex-grow: 1;
-}
-
-.post-title {
-  font-weight: 600;
-  color: #333;
-  text-decoration: none;
-  display: block;
-  margin-bottom: 5px;
-  font-size: 15px;
-  transition: color 0.2s;
-}
-
-.post-title:hover {
-  color: #4a6fa5;
-}
-
-.post-date {
-  font-size: 13px;
-  color: #666;
-}
-
-/* Ajustes responsive para el menú */
-@media (max-width: 768px) {
-  .sidebar {
-    width: 260px;
-  }
-  
-  .menu-item {
-    padding: 12px 14px;
-  }
-  
-  .post-thumbnail {
-    width: 50px;
-    height: 50px;
-  }
-}
-/* Estilos para el botón de scroll */
-.scroll-top-btn {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #4a6e82;
-  color: white;
-  border: none;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-  z-index: 1000;
-  transform: translateY(20px);
-}
-
-.scroll-top-btn.visible {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.scroll-top-btn:hover {
-  background-color: #324b40;
-  transform: scale(1.1);
-}
-
-.scroll-top-btn svg {
-  width: 24px;
-  height: 24px;
-}
-
-/* Barra de progreso */
-.progress-bar {
-    height: 4px;
-    width: 0;
-    background: linear-gradient(90deg, #4a6e82, #2c3e50);
-    transition: width 0.1s ease-out; /* Solo transición en el ancho */
+>>>>>>> b96bec3519df3943985c14a12020efe15b8ecff7
     position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
+    background-color: #fff; /* Fondo para que no sea transparente */
     z-index: 1000;
-    opacity: 0; /* Inicialmente oculta */
+<<<<<<< HEAD
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+=======
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
 
-/* Clase para mostrar la barra */
-.progress-bar.visible {
-    opacity: 1;
+.categoria-dropdown {
+  position: relative;
+>>>>>>> b96bec3519df3943985c14a12020efe15b8ecff7
 }
+
+/* Añadir padding para evitar que el contenido se solape con el header */
+body {
+    padding-top: 60px; /* Ajusta según la altura del header */
+}
+<<<<<<< HEAD
+=======
+
+.categoria-dropdown-content a {
+  color: #333;
+  padding: 0.5em 1em;
+  display: block;
+  text-decoration: none;
+}
+
+.categoria-dropdown-content a:hover {
+  background-color: #f0f0f0;
+}
+
+.categoria-dropdown:hover .categoria-dropdown-content {
+  display: block;
+}
+
+
+.form-select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    background-color: white;
+    margin-bottom: 1.5rem;
+}
+
+.form-select:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.mi-boton:hover {
+    background-color: #0056b3; /* Cambia el color de fondo del botón al pasar el cursor sobre él */
+}
+
+#header-placeholder header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Fondo para que no sea transparente */
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Añadir padding para evitar que el contenido se solape con el header */
+body {
+    padding-top: 60px; /* Ajusta según la altura del header */
+}
+
+}
+>>>>>>> b96bec3519df3943985c14a12020efe15b8ecff7

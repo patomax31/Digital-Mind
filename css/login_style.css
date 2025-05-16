@@ -59,7 +59,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+<<<<<<< HEAD
+    align-items: center;
+    background-color: #e3f2f7;
+    padding: 40px;
+=======
     animation: fadeSlideIn 1s ease forwards;
+>>>>>>> 5b24d4a2e028dabf24c58c19e97ddb6dd12b916d
 }
 
 /* Formulario */
@@ -77,6 +83,10 @@ form h1 {
 .subtext {
     color: #6c757d;
     margin-bottom: 20px;
+<<<<<<< HEAD
+    color: #ffffff;
+=======
+>>>>>>> 5b24d4a2e028dabf24c58c19e97ddb6dd12b916d
 }
 
 input[type="email"],
@@ -91,10 +101,23 @@ input[type="password"] {
 
 button[type="submit"] {
     width: 100%;
+<<<<<<< HEAD
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group input[type="submit"] {
+    background-color: #294b5b;
+    color: #000000;
+    cursor: pointer;
+    font-size: 16px;
+=======
     padding: 12px;
     background-color: #7f5af0;
     color: white;
     font-weight: bold;
+>>>>>>> 5b24d4a2e028dabf24c58c19e97ddb6dd12b916d
     border: none;
     border-radius: 8px;
     margin-top: 20px;
@@ -102,8 +125,13 @@ button[type="submit"] {
     transition: background 0.3s ease;
 }
 
+<<<<<<< HEAD
+.form-group input[type="submit"]:hover {
+    background-color: #e3f2f7;
+=======
 button:hover {
     background-color: #624bd1;
+>>>>>>> 5b24d4a2e028dabf24c58c19e97ddb6dd12b916d
 }
 
 .guest-link,
@@ -126,3 +154,48 @@ button:hover {
     color: red;
     margin-bottom: 10px;
 }
+<<<<<<< HEAD
+
+.btn-registrar {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #294b5b;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-registrar:hover {
+    background-color: #e3f2f7;
+}
+
+body {
+    background-color: red !important;
+}
+
+.form-container {
+    width: 400px;
+    margin: auto;
+    padding: 20px;
+    background-color: #a0c0c5;
+    border: 2px solid #ffffff; 
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.form-container h2 {
+    margin-bottom: 15px;
+    color: #4a4a4a;
+}
+
+
+
+=======
+>>>>>>> 5b24d4a2e028dabf24c58c19e97ddb6dd12b916d

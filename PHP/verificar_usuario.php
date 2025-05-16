@@ -13,6 +13,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $resultado = mysqli_stmt_get_result($stmt);
 
     if ($fila = mysqli_fetch_assoc($resultado)) {
+<<<<<<< HEAD
+        if (password_verify($clave, $fila['clave'])) {
+            echo "¡Bienvenido, $usuario!";
+            
+=======
         // Verificar contraseña (asegúrate de que esté hasheada en la BD)
         if ($clave == $fila['contraseña']) { // Comparación directa (no recomendado para producción)
             // Iniciar sesión
@@ -24,16 +29,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "¡Bienvenido, ".htmlspecialchars($usuario)."!";
             // Redirigir al panel de admin después de 2 segundos
             header("Refresh: 2; url=admin_panel.php");
+>>>>>>> 5b24d4a2e028dabf24c58c19e97ddb6dd12b916d
         } else {
-            echo "❌ Contraseña incorrecta.";
+            echo " Contraseña incorrecta.";
         }
     } else {
-        echo "❌ Usuario no encontrado.";
+        echo " Usuario no encontrado.";
     }
     
     mysqli_stmt_close($stmt);
 } else {
-    echo "❌ Acceso no autorizado.";
+    echo " Acceso no autorizado.";
 }
 
 mysqli_close($conn);

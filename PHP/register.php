@@ -24,7 +24,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $consulta_email = "SELECT * FROM usuarios WHERE email = '$email'";
         $resultado_email = mysqli_query($conn, $consulta_email);
-
         if (mysqli_num_rows($resultado_email) > 0) {
             $mensaje = "<p class='message error'>¡Este correo ya está registrado!</p>";
         } elseif ($password !== $confirm_password) {
@@ -54,6 +53,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mensaje = "<p class='message error'>Completa todos los campos.</p>";
     }
 }
+$query = "SELECT * FROM usuarios WHERE email = ? AND contraseña = ?";
+$stmt = $conn->prepare($query);
+$stmt->bind_param("ss", $email, $password);
+$stmt->execute();
+$result = $stmt->get_result();
+
+if ($result && $result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+
+    $_SESSION['usuario_id'] = $row['id'];
+    $_SESSION['nombre'] = $row['nombre'];
+    $_SESSION['rol'] = $row['rol'];
+
+    header("Location: index.php");
+    exit;
+} else {
+    echo "Usuario o contraseña incorrectos.";
+}
+
 ?>
 
 <!DOCTYPE html>
