@@ -123,7 +123,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
 
                     <div class="forgot-password">
-                        <a href="recuperarContrasena.php">¿Olvidaste tu contraseña?</a>
+                        <a href="../PHP/recovery.php">¿Olvidaste tu contraseña?</a>
                     </div>
 
                     <p class="footer-text">&copy; Página desarrollada por DigitalMind</p>
