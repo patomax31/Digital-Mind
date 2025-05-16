@@ -92,13 +92,23 @@
           <a href="../PHP/login_usuario.html">Iniciar sesión</a>
         </div>
         <div class="search-container">
-          <div class="pill-search">
-            <div class="search-icon">
-              <img src="../images/icono de busqueda.png" alt="Buscar" width="20" height="20">
-            </div>
-            <input type="text" class="search-input" placeholder="Buscar...">
-          </div>
-        </div>
+  <div class="pill-search">
+    <div class="search-icon" onclick="toggleSearch()">
+      <img src="../images/icono de busqueda.png" alt="Buscar" width="20" height="20">
+    </div>
+    <form action="../PHP/Busquedas.php" method="GET" id="search-form" style="display: none;">
+      <input type="text" name="q" class="search-input" placeholder="Buscar...">
+      <button type="submit" style="display:none;">Buscar</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  function toggleSearch() {
+    const form = document.getElementById('search-form');
+    form.style.display = (form.style.display === 'none') ? 'block' : 'none';
+  }
+</script>
       </div>
     </div>
   </header>
