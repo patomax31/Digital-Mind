@@ -39,11 +39,4 @@ if (isset($_GET['token'])) {
     <input type="password" name="password" required>
     <input type="submit" value="Restablecer">
 </form>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 9da68ed (Recuperar contraseña)
-=======
-
->>>>>>> e2ed3ff (Actualizar)
