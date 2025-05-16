@@ -23,74 +23,75 @@ body {
   color: #333;
 }
 
-/* Header Styles */
-.sliding-header {
-  background-color: #e3f2f7;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 80px;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 2500;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: top 0.3s ease-in-out;
-}
+/* **ESTILOS DEL HEADER COPIADOS DE style.css** */
+        .sliding-header {
+            background-color: #e3f2f7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 2500;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: top 0.3s ease-in-out;
+        }
 
-.page-container {
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-}
+        .page-container {
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
 
-.logo {
-  display: flex;
-  align-items: center;
-  margin-left: 50px;
-}
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-left: 50px;
+        }
 
-.logo img {
-  max-width: 300px;
-  max-height: 70px;
-  object-fit: contain;
-}
+        .logo img {
+            max-width: 300px;
+            max-height: 70px;
+            object-fit: contain;
+        }
 
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: 60px; /* Espacio entre los contenedores de acción */
-  margin-right: 20px;
-}
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 60px; /* Espacio entre los contenedores de acción */
+            margin-right: 20px;
+        }
 
-.action-container {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* Espacio entre el icono y el texto */
-}
+        .action-container {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Espacio entre el icono y el texto */
+        }
 
-.action-container svg {
-  fill: #000000; /* Color de los iconos */
-  width: 30px; /* Tamaño de los iconos */
-  height: 24px;
-}
+        .action-container svg {
+            fill: #000000; /* Color de los iconos */
+            width: 30px; /* Tamaño de los iconos */
+            height: 24px;
+        }
 
-.action-container img {
-  width: 24px; /* Tamaño del icono de usuario */
-  height: 24px; /* Tamaño del icono de usuario */
-  fill: #333; /* Si fuera un SVG */
-}
+        .action-container img {
+            width: 24px; /* Tamaño del icono de usuario */
+            height: 24px; /* Tamaño del icono de usuario */
+            fill: #333; /* Si fuera un SVG */
+        }
 
-.action-container a,
-.action-container span {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  font-size: 1em; /* Tamaño del texto al lado de los iconos */
-}
+        .action-container a,
+        .action-container span {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 1em; /* Tamaño del texto al lado de los iconos */
+        }
+        /* **FIN DE ESTILOS DEL HEADER** */
 
 .container {
   width: 100%;
