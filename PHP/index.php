@@ -10,6 +10,7 @@
   <script src="../PHP/prueba.js" defer></script>
   <link rel="stylesheet" href="../css/search.css">
   <script src="../Js/responsive.js"></script>
+  <?php include 'dashboard.php'; ?>
  
 </head>
 <body>

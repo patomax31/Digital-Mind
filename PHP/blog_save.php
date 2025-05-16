@@ -1,13 +1,4 @@
 <?php
-// blog_save.php
-session_start();
-
-// Verificar si el usuario está logueado (opcional)
-// if (!isset($_SESSION['usuario_id'])) {
-//     header("Location: login.php");
-//     exit;
-// }
-
 // Configuración de la base de datos
 require 'blog_db.php';
 
@@ -55,7 +46,16 @@ if (isset($_FILES['imagen']) && $_FILES['imagen']['error'] === UPLOAD_ERR_OK) {
 $titular = htmlspecialchars(trim($_POST['titular']));
 $fecha = $_POST['fecha'];
 $descripcion_corta = htmlspecialchars(trim($_POST['descripcion_corta']));
-$contenido = htmlspecialchars(trim($_POST['contenido']));
+$categoria = $_POST['categoria'] ?? '';
+
+// Sanitizar el contenido manteniendo etiquetas HTML básicas
+$contenido = trim($_POST['contenido']);
+$contenido = strip_tags($contenido, '<p><strong><em><u><a><ul><ol><li><h1><h2><h3><h4><h5><h6><br><hr><img><div><span>');
+
+// Limpiar atributos potencialmente peligrosos
+$contenido = preg_replace('/<(.*?)on[a-z]+="(.*?)"(.*?)>/i', '<$1$3>', $contenido);
+$contenido = preg_replace('/<(.*?)javascript:(.*?)>(.*?)>/i', '<$1$3>', $contenido);
+
 $referencia = filter_var(trim($_POST['referencia']), FILTER_SANITIZE_URL);
 
 // Validaciones adicionales
@@ -66,16 +66,17 @@ if (empty($titular) || empty($fecha) || empty($descripcion_corta) || empty($cont
 // Insertar en la base de datos
 try {
     $stmt = $conn->prepare("INSERT INTO publicaciones_2 
-        (titular, fecha, descripcion_corta, contenido, referencia, imagen) 
-        VALUES (?, ?, ?, ?, ?, ?)");
+        (titular, fecha, descripcion_corta, contenido, referencia, imagen, categoria) 
+        VALUES (?, ?, ?, ?, ?, ?, ?)");
     
-    $stmt->bind_param("ssssss", 
+    $stmt->bind_param("sssssss", 
         $titular,
         $fecha,
         $descripcion_corta,
-        $contenido,
+        $contenido, // Aquí guardamos el HTML formateado
         $referencia,
-        $nombreImagen);
+        $nombreImagen,
+        $categoria);
     
     if ($stmt->execute()) {
         // Redirigir a la página de éxito o mostrar mensaje

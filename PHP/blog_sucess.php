@@ -20,17 +20,20 @@ $idPublicacion = intval($_GET['id']);
         <!-- Incluye tu header aquí -->
     </header>
     
-    <main class="success-container">
-        <div class="success-message">
-            <h2>¡Publicación creada con éxito!</h2>
-            <p>Tu entrada ha sido guardada correctamente.</p>
-            <div class="success-actions">
-                <a href="post_completo.php?id=<?= $idPublicacion ?>" class="btn">Ver publicación</a>
-                <a href="blog_add.php" class="btn">Crear otra publicación</a>
-                <a href="index.php" class="btn">Volver al inicio</a>
-            </div>
+  <main class="success-container">
+    <div class="success-message">
+        <h2>¡Publicación creada con éxito!</h2>
+        <p>Tu entrada ha sido guardada correctamente.</p>
+        <img src="check mark.png" alt="Imagen de éxito" class="success-image">
+        <div class="success-actions">
+            <a href="post_completo.php?id=<?= $idPublicacion ?>" class="btn">Ver publicación</a>
+            <a href="blog_add.php" class="btn">Crear otra publicación</a>
+            <a href="index.php" class="btn">Volver al inicio</a>
         </div>
-    </main>
+    </div>
+</main>
+
+
     
     <style>
         .success-container {
