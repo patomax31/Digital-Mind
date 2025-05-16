@@ -31,10 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Login Administrador</title>
-<<<<<<< HEAD
       <link rel="stylesheet" href="../css/login_admin.css">
-=======
->>>>>>> 95482b5 (Cambios)
 </head>
 <body>
     <h2>Login del Administrador</h2>
