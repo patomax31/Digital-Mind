@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     // Inserción de datos en la base de datos
                     $consulta = "INSERT INTO usuarios (nombre, email, contraseña) VALUES ('$nombre', '$email', '$password_hashed')";
-                    $resultado = mysqli_query($conex, $consulta);
+                    $resultado = mysqli_query($conn, $consulta);
 
                     if ($resultado) {
                         $mensaje = "<h3 class='ok'>¡Te has registrado correctamente!</h3>";
