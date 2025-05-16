@@ -106,7 +106,7 @@
         </ul>
     </nav>
 
-    <!-- Modal del perfil -->
+    
     <div id="perfilModal" class="profile-modal" style="display: none;">
         <button class="close-btn" onclick="cerrarPerfil()"><i class="fas fa-times"></i></button>
         <form id="perfilForm" action="ActualizarPerfil.php" method="post" enctype="multipart/form-data" autocomplete="off">
