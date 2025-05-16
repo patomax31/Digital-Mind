@@ -140,3 +140,7 @@ VALUES ('Ernesto', 'Q1234567');
 
 -- Reiniciar auto_increment para evitar conflictos
 ALTER TABLE `publicaciones_2` AUTO_INCREMENT=8;
+<<<<<<< HEAD
+=======
+
+>>>>>>> b96bec3519df3943985c14a12020efe15b8ecff7

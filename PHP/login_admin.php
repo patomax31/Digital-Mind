@@ -32,8 +32,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <title>Login Administrador</title>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <link rel="stylesheet" href="../css/login_admin.css">
 =======
+=======
+>>>>>>> b96bec3519df3943985c14a12020efe15b8ecff7
 
       <link rel="stylesheet" href="../css/login_admin.css">
 
@@ -41,7 +44,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
       <link rel="stylesheet" href="../css/login_admin.css">
 
+<<<<<<< HEAD
 >>>>>>> 34c53d2 (Arreglos)
+=======
+>>>>>>> b96bec3519df3943985c14a12020efe15b8ecff7
 </head>
 <body>
     <h2>Login del Administrador</h2>
