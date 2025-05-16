@@ -10,6 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(response => response.text())
 
     
+
+
+    
     fetch("../PHP/header.html")
         .then(response => {
             if (!response.ok) {
