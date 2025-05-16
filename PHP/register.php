@@ -142,7 +142,9 @@ if ($result && $result->num_rows > 0) {
                     </div>
 
                     <div class="forgot-password">
+
                         <a href="../PHP/Recuperar contraseña.php">¿Olvidaste tu contraseña?</a>
+
                     </div>
 
                     <p class="footer-text">&copy; Página desarrollada por DigitalMind</p>
