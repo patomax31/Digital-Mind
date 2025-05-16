@@ -62,26 +62,10 @@ CREATE TABLE `usuarios` (
   `contraseña` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-<<<<<<< HEAD
--- Tabla del administrador
-CREATE TABLE admins (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    usuario VARCHAR(100) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL
-);
-
-
-INSERT INTO admin (usuario, clave)
-VALUES ('Ernesto', 'Q1234567');
-
-=======
->>>>>>> 724c319 (Bajados)
 
 -- Reiniciar auto_increment para evitar conflictos
 ALTER TABLE `publicaciones_2` AUTO_INCREMENT=8;
 
-<<<<<<< HEAD
-=======
 --
 
 INSERT INTO `usuarios` (`id`, `nombre`, `email`, `contraseña`) VALUES
@@ -90,7 +74,6 @@ INSERT INTO `usuarios` (`id`, `nombre`, `email`, `contraseña`) VALUES
 (3, 'carlos', 'carlos@gmail.com', '$2y$10$Sj.UhE.TUEBBwZvaz5K/i.Mf.fRe6SHB.eSfHczTbHdYezgRNJLEW'),
 (4, 'a', 'a@gmail.com', '$2y$10$kPSpRUZiQ47V7pwVGC1OhuvHbZ8VvvxNOmNDjS/PzxZl87a/NOQw.');
 
->>>>>>> 724c319 (Bajados)
 ALTER TABLE `publicaciones_2`
   ADD PRIMARY KEY (`id`);
 
@@ -149,14 +132,6 @@ CREATE TABLE admins (
     password VARCHAR(255) NOT NULL
 );
 
-<<<<<<< HEAD
-INSERT INTO admin (usuario, clave)
-VALUES ('Ernesto', 'Q1234567');
-
--- Reiniciar auto_increment para evitar conflictos
-ALTER TABLE `publicaciones_2` AUTO_INCREMENT=8;
-=======
 -- Reiniciar auto_increment para evitar conflictos
 ALTER TABLE `publicaciones_2` AUTO_INCREMENT=8;
 
->>>>>>> 724c319 (Bajados)
