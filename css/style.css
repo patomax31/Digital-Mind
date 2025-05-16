@@ -221,7 +221,6 @@ footer {
 }
 
 
-
 .action-container svg {
     fill: #333;
     width: 22px; /* Ligeramente más grande */
@@ -256,6 +255,31 @@ footer {
 
 
 
+.mi-boton:hover {
+    background-color: #0056b3; /* Cambia el color de fondo del botón al pasar el cursor sobre él */
+}
+
+#header-placeholder header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Fondo para que no sea transparente */
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Añadir padding para evitar que el contenido se solape con el header */
+body {
+    padding-top: 60px; /* Ajusta según la altura del header */
+}
+
+.form-select:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
 .mi-boton:hover {
     background-color: #0056b3; /* Cambia el color de fondo del botón al pasar el cursor sobre él */
 }
