@@ -220,7 +220,7 @@ footer {
     transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease, box-shadow 0.2s ease; /* Más propiedades para la transición */
 }
 
-<<<<<<< HEAD
+
 
 .action-container svg {
     fill: #333;
@@ -252,13 +252,10 @@ footer {
 .action-container a:hover img,
 .action-container button:hover img {
     opacity: 0.8; /* Ligeramente transparente al hacer hover */
-<<<<<<< HEAD
 }
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 5fba966 (Bajados)
+
+
 .mi-boton:hover {
     background-color: #0056b3; /* Cambia el color de fondo del botón al pasar el cursor sobre él */
 }
@@ -276,13 +273,4 @@ footer {
 /* Añadir padding para evitar que el contenido se solape con el header */
 body {
     padding-top: 60px; /* Ajusta según la altura del header */
-<<<<<<< HEAD
 }
-=======
-
-}
->>>>>>> c050386 (Bajados)
-=======
->>>>>>> 4cadc2d (Ernesto)
-}
->>>>>>> 5fba966 (Bajados)
