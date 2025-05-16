@@ -2994,3 +2994,195 @@ Secondary education is an exciting journey of discovery and growth. By strengthe
 )
 
 [2025-05-16 19:46:09] Successfully returned translated texts.
+[2025-05-16 20:37:39] Received POST request.
+[2025-05-16 20:37:39] POST data: Array
+(
+    [texts] => ["Crear Blog","Categoría","Acerca de","Pagina de contacto","Traducir","Iniciar sesión","Buscar...","Más Reciente","Montesori","El Método Montessori es un modelo educativo revolucionario desarrollado por la Dra. María Montessori (1870-1952), primera mujer médico en Italia y pionera en pedagogía científica. Su enfoque se basa en la \"autonomía, la libertad con límites\" y el respeto ","Publicado el 09/09/0091","Ver más","A","a","Publicado el 01/01/0001","Ver más","A","2","Publicado el 01/01/0001","Ver más","Derechos Reservados ® Digital-Mind © "]
+    [target_lang] => EN
+)
+
+[2025-05-16 20:37:39] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-05-16 20:37:39] 'texts' parameter received: ["Crear Blog","Categoría","Acerca de","Pagina de contacto","Traducir","Iniciar sesión","Buscar...","Más Reciente","Montesori","El Método Montessori es un modelo educativo revolucionario desarrollado por la Dra. María Montessori (1870-1952), primera mujer médico en Italia y pionera en pedagogía científica. Su enfoque se basa en la \"autonomía, la libertad con límites\" y el respeto ","Publicado el 09/09/0091","Ver más","A","a","Publicado el 01/01/0001","Ver más","A","2","Publicado el 01/01/0001","Ver más","Derechos Reservados ® Digital-Mind © "]
+[2025-05-16 20:37:39] Result of json_decode: Array
+(
+    [0] => Crear Blog
+    [1] => Categoría
+    [2] => Acerca de
+    [3] => Pagina de contacto
+    [4] => Traducir
+    [5] => Iniciar sesión
+    [6] => Buscar...
+    [7] => Más Reciente
+    [8] => Montesori
+    [9] => El Método Montessori es un modelo educativo revolucionario desarrollado por la Dra. María Montessori (1870-1952), primera mujer médico en Italia y pionera en pedagogía científica. Su enfoque se basa en la "autonomía, la libertad con límites" y el respeto 
+    [10] => Publicado el 09/09/0091
+    [11] => Ver más
+    [12] => A
+    [13] => a
+    [14] => Publicado el 01/01/0001
+    [15] => Ver más
+    [16] => A
+    [17] => 2
+    [18] => Publicado el 01/01/0001
+    [19] => Ver más
+    [20] => Derechos Reservados ® Digital-Mind © 
+)
+
+[2025-05-16 20:37:39] Target language: EN
+[2025-05-16 20:37:39] Data sent to DeepL API (JSON): {"text":["Crear Blog","Categor\u00eda","Acerca de","Pagina de contacto","Traducir","Iniciar sesi\u00f3n","Buscar...","M\u00e1s Reciente","Montesori","El M\u00e9todo Montessori es un modelo educativo revolucionario desarrollado por la Dra. Mar\u00eda Montessori (1870-1952), primera mujer m\u00e9dico en Italia y pionera en pedagog\u00eda cient\u00edfica. Su enfoque se basa en la \"autonom\u00eda, la libertad con l\u00edmites\" y el respeto ","Publicado el 09\/09\/0091","Ver m\u00e1s","A","a","Publicado el 01\/01\/0001","Ver m\u00e1s","A","2","Publicado el 01\/01\/0001","Ver m\u00e1s","Derechos Reservados \u00ae Digital-Mind \u00a9 "],"target_lang":"EN"}
+[2025-05-16 20:37:41] DeepL API HTTP Code: 200
+[2025-05-16 20:37:41] DeepL API Response: {"translations":[{"detected_source_language":"EN","text":"Crear Blog"},{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Translate"},{"detected_source_language":"ES","text":"Login"},{"detected_source_language":"ES","text":"Search..."},{"detected_source_language":"ES","text":"Most Recent"},{"detected_source_language":"IT","text":"Montesori"},{"detected_source_language":"ES","text":"The Montessori Method is a revolutionary educational model developed by Dr. Maria Montessori (1870-1952), the first woman doctor in Italy and a pioneer in scientific pedagogy. Its approach is based on \"autonomy, freedom with limits\" and respect for the child."},{"detected_source_language":"ES","text":"Published on 09/09/0091"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"EN","text":"A"},{"detected_source_language":"EN","text":"a"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"EN","text":"A"},{"detected_source_language":"EN","text":"2"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Copyright ® Digital-Mind © All Rights Reserved"}]}
+[2025-05-16 20:37:41] Extracted translated texts: Array
+(
+    [0] => Crear Blog
+    [1] => Category
+    [2] => About
+    [3] => Contact page
+    [4] => Translate
+    [5] => Login
+    [6] => Search...
+    [7] => Most Recent
+    [8] => Montesori
+    [9] => The Montessori Method is a revolutionary educational model developed by Dr. Maria Montessori (1870-1952), the first woman doctor in Italy and a pioneer in scientific pedagogy. Its approach is based on "autonomy, freedom with limits" and respect for the child.
+    [10] => Published on 09/09/0091
+    [11] => See more
+    [12] => A
+    [13] => a
+    [14] => Published on 01/01/0001
+    [15] => See more
+    [16] => A
+    [17] => 2
+    [18] => Published on 01/01/0001
+    [19] => See more
+    [20] => Copyright ® Digital-Mind © All Rights Reserved
+)
+
+[2025-05-16 20:37:41] Successfully returned translated texts.
+[2025-05-16 20:37:41] Received POST request.
+[2025-05-16 20:37:41] POST data: Array
+(
+    [texts] => ["Crear Blog","Categoría","Acerca de","Pagina de contacto","Traducir","Iniciar sesión","Buscar...","Más Reciente","Montesori","El Método Montessori es un modelo educativo revolucionario desarrollado por la Dra. María Montessori (1870-1952), primera mujer médico en Italia y pionera en pedagogía científica. Su enfoque se basa en la \"autonomía, la libertad con límites\" y el respeto ","Publicado el 09/09/0091","Ver más","A","a","Publicado el 01/01/0001","Ver más","A","2","Publicado el 01/01/0001","Ver más","Derechos Reservados ® Digital-Mind © "]
+    [target_lang] => EN
+)
+
+[2025-05-16 20:37:41] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-05-16 20:37:41] 'texts' parameter received: ["Crear Blog","Categoría","Acerca de","Pagina de contacto","Traducir","Iniciar sesión","Buscar...","Más Reciente","Montesori","El Método Montessori es un modelo educativo revolucionario desarrollado por la Dra. María Montessori (1870-1952), primera mujer médico en Italia y pionera en pedagogía científica. Su enfoque se basa en la \"autonomía, la libertad con límites\" y el respeto ","Publicado el 09/09/0091","Ver más","A","a","Publicado el 01/01/0001","Ver más","A","2","Publicado el 01/01/0001","Ver más","Derechos Reservados ® Digital-Mind © "]
+[2025-05-16 20:37:41] Result of json_decode: Array
+(
+    [0] => Crear Blog
+    [1] => Categoría
+    [2] => Acerca de
+    [3] => Pagina de contacto
+    [4] => Traducir
+    [5] => Iniciar sesión
+    [6] => Buscar...
+    [7] => Más Reciente
+    [8] => Montesori
+    [9] => El Método Montessori es un modelo educativo revolucionario desarrollado por la Dra. María Montessori (1870-1952), primera mujer médico en Italia y pionera en pedagogía científica. Su enfoque se basa en la "autonomía, la libertad con límites" y el respeto 
+    [10] => Publicado el 09/09/0091
+    [11] => Ver más
+    [12] => A
+    [13] => a
+    [14] => Publicado el 01/01/0001
+    [15] => Ver más
+    [16] => A
+    [17] => 2
+    [18] => Publicado el 01/01/0001
+    [19] => Ver más
+    [20] => Derechos Reservados ® Digital-Mind © 
+)
+
+[2025-05-16 20:37:41] Target language: EN
+[2025-05-16 20:37:41] Data sent to DeepL API (JSON): {"text":["Crear Blog","Categor\u00eda","Acerca de","Pagina de contacto","Traducir","Iniciar sesi\u00f3n","Buscar...","M\u00e1s Reciente","Montesori","El M\u00e9todo Montessori es un modelo educativo revolucionario desarrollado por la Dra. Mar\u00eda Montessori (1870-1952), primera mujer m\u00e9dico en Italia y pionera en pedagog\u00eda cient\u00edfica. Su enfoque se basa en la \"autonom\u00eda, la libertad con l\u00edmites\" y el respeto ","Publicado el 09\/09\/0091","Ver m\u00e1s","A","a","Publicado el 01\/01\/0001","Ver m\u00e1s","A","2","Publicado el 01\/01\/0001","Ver m\u00e1s","Derechos Reservados \u00ae Digital-Mind \u00a9 "],"target_lang":"EN"}
+[2025-05-16 20:37:42] DeepL API HTTP Code: 200
+[2025-05-16 20:37:42] DeepL API Response: {"translations":[{"detected_source_language":"EN","text":"Crear Blog"},{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Translate"},{"detected_source_language":"ES","text":"Login"},{"detected_source_language":"ES","text":"Search..."},{"detected_source_language":"ES","text":"Most Recent"},{"detected_source_language":"IT","text":"Montesori"},{"detected_source_language":"ES","text":"The Montessori Method is a revolutionary educational model developed by Dr. Maria Montessori (1870-1952), the first woman doctor in Italy and a pioneer in scientific pedagogy. Its approach is based on \"autonomy, freedom with limits\" and respect for the child."},{"detected_source_language":"ES","text":"Published on 09/09/0091"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"EN","text":"A"},{"detected_source_language":"EN","text":"a"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"EN","text":"A"},{"detected_source_language":"EN","text":"2"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Copyright ® Digital-Mind © All Rights Reserved"}]}
+[2025-05-16 20:37:42] Extracted translated texts: Array
+(
+    [0] => Crear Blog
+    [1] => Category
+    [2] => About
+    [3] => Contact page
+    [4] => Translate
+    [5] => Login
+    [6] => Search...
+    [7] => Most Recent
+    [8] => Montesori
+    [9] => The Montessori Method is a revolutionary educational model developed by Dr. Maria Montessori (1870-1952), the first woman doctor in Italy and a pioneer in scientific pedagogy. Its approach is based on "autonomy, freedom with limits" and respect for the child.
+    [10] => Published on 09/09/0091
+    [11] => See more
+    [12] => A
+    [13] => a
+    [14] => Published on 01/01/0001
+    [15] => See more
+    [16] => A
+    [17] => 2
+    [18] => Published on 01/01/0001
+    [19] => See more
+    [20] => Copyright ® Digital-Mind © All Rights Reserved
+)
+
+[2025-05-16 20:37:42] Successfully returned translated texts.
+[2025-05-16 20:37:47] Received POST request.
+[2025-05-16 20:37:47] POST data: Array
+(
+    [texts] => ["Crear Blog","Categoría","Acerca de","Pagina de contacto","Traducir","Iniciar sesión","Buscar...","Más Reciente","Montesori","El Método Montessori es un modelo educativo revolucionario desarrollado por la Dra. María Montessori (1870-1952), primera mujer médico en Italia y pionera en pedagogía científica. Su enfoque se basa en la \"autonomía, la libertad con límites\" y el respeto ","Publicado el 09/09/0091","Ver más","A","a","Publicado el 01/01/0001","Ver más","A","2","Publicado el 01/01/0001","Ver más","Derechos Reservados ® Digital-Mind © "]
+    [target_lang] => EN
+)
+
+[2025-05-16 20:37:47] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-05-16 20:37:47] 'texts' parameter received: ["Crear Blog","Categoría","Acerca de","Pagina de contacto","Traducir","Iniciar sesión","Buscar...","Más Reciente","Montesori","El Método Montessori es un modelo educativo revolucionario desarrollado por la Dra. María Montessori (1870-1952), primera mujer médico en Italia y pionera en pedagogía científica. Su enfoque se basa en la \"autonomía, la libertad con límites\" y el respeto ","Publicado el 09/09/0091","Ver más","A","a","Publicado el 01/01/0001","Ver más","A","2","Publicado el 01/01/0001","Ver más","Derechos Reservados ® Digital-Mind © "]
+[2025-05-16 20:37:47] Result of json_decode: Array
+(
+    [0] => Crear Blog
+    [1] => Categoría
+    [2] => Acerca de
+    [3] => Pagina de contacto
+    [4] => Traducir
+    [5] => Iniciar sesión
+    [6] => Buscar...
+    [7] => Más Reciente
+    [8] => Montesori
+    [9] => El Método Montessori es un modelo educativo revolucionario desarrollado por la Dra. María Montessori (1870-1952), primera mujer médico en Italia y pionera en pedagogía científica. Su enfoque se basa en la "autonomía, la libertad con límites" y el respeto 
+    [10] => Publicado el 09/09/0091
+    [11] => Ver más
+    [12] => A
+    [13] => a
+    [14] => Publicado el 01/01/0001
+    [15] => Ver más
+    [16] => A
+    [17] => 2
+    [18] => Publicado el 01/01/0001
+    [19] => Ver más
+    [20] => Derechos Reservados ® Digital-Mind © 
+)
+
+[2025-05-16 20:37:47] Target language: EN
+[2025-05-16 20:37:47] Data sent to DeepL API (JSON): {"text":["Crear Blog","Categor\u00eda","Acerca de","Pagina de contacto","Traducir","Iniciar sesi\u00f3n","Buscar...","M\u00e1s Reciente","Montesori","El M\u00e9todo Montessori es un modelo educativo revolucionario desarrollado por la Dra. Mar\u00eda Montessori (1870-1952), primera mujer m\u00e9dico en Italia y pionera en pedagog\u00eda cient\u00edfica. Su enfoque se basa en la \"autonom\u00eda, la libertad con l\u00edmites\" y el respeto ","Publicado el 09\/09\/0091","Ver m\u00e1s","A","a","Publicado el 01\/01\/0001","Ver m\u00e1s","A","2","Publicado el 01\/01\/0001","Ver m\u00e1s","Derechos Reservados \u00ae Digital-Mind \u00a9 "],"target_lang":"EN"}
+[2025-05-16 20:37:48] DeepL API HTTP Code: 200
+[2025-05-16 20:37:48] DeepL API Response: {"translations":[{"detected_source_language":"EN","text":"Crear Blog"},{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Translate"},{"detected_source_language":"ES","text":"Login"},{"detected_source_language":"ES","text":"Search..."},{"detected_source_language":"ES","text":"Most Recent"},{"detected_source_language":"IT","text":"Montesori"},{"detected_source_language":"ES","text":"The Montessori Method is a revolutionary educational model developed by Dr. Maria Montessori (1870-1952), the first woman doctor in Italy and a pioneer in scientific pedagogy. Its approach is based on \"autonomy, freedom with limits\" and respect for the child."},{"detected_source_language":"ES","text":"Published on 09/09/0091"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"EN","text":"A"},{"detected_source_language":"EN","text":"a"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"EN","text":"A"},{"detected_source_language":"EN","text":"2"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Copyright ® Digital-Mind © All Rights Reserved"}]}
+[2025-05-16 20:37:48] Extracted translated texts: Array
+(
+    [0] => Crear Blog
+    [1] => Category
+    [2] => About
+    [3] => Contact page
+    [4] => Translate
+    [5] => Login
+    [6] => Search...
+    [7] => Most Recent
+    [8] => Montesori
+    [9] => The Montessori Method is a revolutionary educational model developed by Dr. Maria Montessori (1870-1952), the first woman doctor in Italy and a pioneer in scientific pedagogy. Its approach is based on "autonomy, freedom with limits" and respect for the child.
+    [10] => Published on 09/09/0091
+    [11] => See more
+    [12] => A
+    [13] => a
+    [14] => Published on 01/01/0001
+    [15] => See more
+    [16] => A
+    [17] => 2
+    [18] => Published on 01/01/0001
+    [19] => See more
+    [20] => Copyright ® Digital-Mind © All Rights Reserved
+)
+
+[2025-05-16 20:37:48] Successfully returned translated texts.
