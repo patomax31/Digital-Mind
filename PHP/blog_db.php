@@ -5,9 +5,10 @@ $pass = "";
 $db = "blog_db";
 
 // Create connection
-$conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
+$conex = new mysqli($db_host, $db_user, $db_pass, $db_name);
 
-if ($conn->connect_error) {
-    die("Error de conexión: " . $conn->connect_error);
+// Check connection
+if ($conex->connect_error) {
+    die("Connection failed: " . $conex->connect_error);
 }
 ?>
