@@ -13,12 +13,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "¡Bienvenido, $usuario!";
             
         } else {
-            echo " Contraseña incorrecta.";
+            echo "Contraseña incorrecta.";
         }
     } else {
-        echo " Usuario no encontrado.";
+        echo "Usuario no encontrado.";
     }
 } else {
-    echo " Acceso no autorizado.";
+    echo "Acceso no autorizado.";
 }
 ?>
