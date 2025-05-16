@@ -198,7 +198,7 @@
   <div class="contact-section">
     <div class="map-placeholder">
       <!-- Puedes insertar un mapa real de Google Maps aquí -->
-      <iframe src="https://www.google.com/maps/FjMtXdTWjTd3jK3G9" allowfullscreen></iframe>
+      <iframe src="https://www.google.com/maps/embed?..." allowfullscreen></iframe>
     </div>
 
     <form class="glass-form" action="procesar.php" method="POST">
