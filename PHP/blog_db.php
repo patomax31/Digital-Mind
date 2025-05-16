@@ -1,8 +1,4 @@
 <?php
-<<<<<<< HEAD
-=======
-
->>>>>>> 42d7dbd (Arreglos)
 $host = "localhost";
 $user = "root";
 $pass = "";
