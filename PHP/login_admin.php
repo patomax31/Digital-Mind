@@ -29,11 +29,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Login Administrador</title>
-      <link 
-      rel="stylesheet" href="../css/login_admin.css">
-      <link rel="stylesheet" href="../css/login_admin.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/search.css">
+  <title>Login Usuario</title>
+
 </head>
 <body>
     <h2>Login del Administrador</h2>

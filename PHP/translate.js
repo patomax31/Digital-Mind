@@ -1,4 +1,3 @@
-
 document.getElementById("toggle-translate").addEventListener("click", function () {
     let boton = document.getElementById("toggle-translate");
     let isTranslating = boton.classList.contains("active");
@@ -7,7 +6,8 @@ document.getElementById("toggle-translate").addEventListener("click", function (
     // Add or remove selectors based on what you want to translate
     // Excluded the logo link (header .logo a) from translation
     const elementsToTranslate = document.querySelectorAll(
-        'header a:not(.logo a), #toggle-translate span, .search-input, .most-recent, .content-item .title, .content-item p:not(.published), .content-item p.published, .content-item .see-more, footer p, .post-header h1, .post-header-text p, .comments-section h2, .comments-list .comment-item .comment-body, .references-container h2, .references-content p, .rating-section h3, .star-rating label, .rating-submit-btn, .comments-section .login-prompt p, .comments-section .login-prompt a, .post-content p, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6, .post-content li' // Added selector for paragraphs within post-header-text
+        'header a:not(.logo a), #toggle-translate span, .search-input, .most-recent, .content-item .title, .content-item p:not(.published), .content-item p.published, .content-item .see-more, footer p, .post-header h1, .post-header-text p, .comments-section h2, .comments-list .comment-item .comment-body, .references-container h2, .references-content p, .rating-section h3, .star-rating label, .rating-submit-btn, .comments-section .login-prompt p, .comments-section .login-prompt a, .post-content p, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6, .post-content li, ' + // Existing selectors
+        '.hero h1, .hero p, .inspiration-quote, .section-header h2, .section-header p, .team-card h3, .team-info p, .value-card h3, .value-card p, .footer-logo' // Added selectors for about_us.php
     );
 
     // Use a Map to store original texts associated with elements
