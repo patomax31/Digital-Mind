@@ -219,6 +219,7 @@ footer {
     transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease, box-shadow 0.2s ease; /* Más propiedades para la transición */
 }
 
+
 .action-container svg {
     fill: #333;
     width: 22px; /* Ligeramente más grande */
@@ -249,4 +250,5 @@ footer {
 .action-container a:hover img,
 .action-container button:hover img {
     opacity: 0.8; /* Ligeramente transparente al hacer hover */
+
 }
