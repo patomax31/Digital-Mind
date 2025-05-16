@@ -62,6 +62,12 @@ CREATE TABLE `usuarios` (
   `contraseña` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+-- Tabla del administrador
+CREATE TABLE admins (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
 
 -- Reiniciar auto_increment para evitar conflictos
 ALTER TABLE `publicaciones_2` AUTO_INCREMENT=8;
