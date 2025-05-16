@@ -30,31 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html>
 <head>
     <meta charset="UTF-8">
-<<<<<<< HEAD
-
-      <link rel="stylesheet" href="../css/login_admin.css">
-
-      <link rel="stylesheet" href="../css/login_admin.css">
-
-      <link rel="stylesheet" href="../css/login_admin.css">
-
-</head>
-<body>
-    <h2>Login del Administrador</h2>
-    <form method="POST" action="">
-        <label>Usuario:</label><br>
-        <input type="text" name="usuario" required><br><br>
-
-        <label>Contraseña:</label><br>
-        <input type="password" name="password" required><br><br>
-
-        <input type="submit" value="Ingresar">
-    </form>
-
-    <title>Login Admin</title>
-=======
     <title>Login Administrador</title>
->>>>>>> 58f5051 (Cambios)
 </head>
 <body>
     <h2>Login del Administrador</h2>
