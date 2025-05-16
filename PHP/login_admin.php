@@ -1,9 +1,5 @@
 <?php
-<<<<<<< HEAD
 include("blog_db.php"); 
-=======
-include("blog_db.php"); // Asegúrate de que este archivo cree $conn
->>>>>>> 95482b5 (Cambios)
 
 $mensaje = "";
 
