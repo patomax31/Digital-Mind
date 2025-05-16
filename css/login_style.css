@@ -34,7 +34,7 @@ body, html {
 .form-section h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #474747;
+    color: #ffffff;
 }
 
 .form-group {
@@ -97,9 +97,8 @@ body, html {
     display: block;
     width: 100%;
     padding: 12px 20px;
-    background-color: #0a6800c8;
-    color: white;
-
+    background-color: #00f2ff;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
