@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="../css/responsive.css">
   <script src="../Js/responsive.js"></script>
   <script src="../PHP/prueba.js" defer></script>
-  <link rel="stylesheet" href="../css/search.css">
 </head>
 <body>
 <?php

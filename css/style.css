@@ -23,129 +23,6 @@ body {
   color: #333;
 }
 
-/* Header Styles */
-.sliding-header {
-  background-color: #e3f2f7;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 80px;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 2500;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: top 0.3s ease-in-out;
-}
-
-
-.page-container {
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  margin-left: 50px;
-}
-
-.logo img {
-  max-width: 300px;
-  max-height: 70px;
-  object-fit: contain;
-}
-
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: 60px; /* Espacio entre los contenedores de acción */
-  margin-right: 20px;
-}
-
-.action-container {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* Espacio entre el icono y el texto */
-}
-
-.action-container svg {
-  fill: #000000; /* Color de los iconos */
-  width: 30px; /* Tamaño de los iconos */
-  height: 24px;
-}
-
-.action-container img {
-  width: 24px; /* Tamaño del icono de usuario */
-  height: 24px; /* Tamaño del icono de usuario */
-  fill: #333; /* Si fuera un SVG */
-}
-
-.action-container a,
-.action-container span {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  font-size: 1em; /* Tamaño del texto al lado de los iconos */
-}
-header{
-    position: fixed; /* Mantiene el header en la parte superior mientras se hace scroll */
-    top: 0; /* Posiciona el header justo en el tope */
-    left: 0; /* Asegura que comience desde el borde izquierdo */
-    width: 100%; /* Ocupa el ancho completo de la pantalla */
-    z-index: 1000; /* Hace que el header esté por encima de otros elementos */
-    background-color: #e3f2f7; /* Fondo para diferenciación */
-    font-size: 4rem;
-  }
-  /* --- Encabezado (Header) --- */
-  .header-content {
-    background-color: #e3f2f7; /* Color de fondo claro */
-    ; /* Color de fondo del header */
-    padding: 10px 20px;
-    align-items: center;
-    justify-content: space-between;
-    display: flex; /* Flexbox para alinear elementos */
-    justify-content: space-around;
-    width: 100%;
-    }
-    
-  
-  
-    /* Logo a la izquierda */
-    .logo {
-      position: relative;
-      left: 90px;
-      font-size: 0.5em;
-      font-weight: bold;
-    
-    }
-    
-    /* Navegación central: Inicio, Categoría y Búsqueda */
-    .nav-center { 
-      display: flex; 
-      gap: 12rem;    /* Espacio entre cada enlace */
-      justify-content: center; /*Para centrar el pedo */
-      flex: 1; /* Esto asegura que el nav ocupe todo el espacio posible entre el logo y el botón de búsqueda */
-      align-items: center;
-      font-size: large;
-    } /*La regla CSS de .nav-center usa display: flex; con gap: 30px; para distribuir equitativamente los enlaces y conseguir que queden centrados en el header.*/
-  
-    .nav-center a {
-      text-decoration: none;
-      font-weight: bold;
-      font-family: 'Roboto';
-      color: #020202;
-    }
-  
-     /* Efecto hover para los enlaces */
-  .nav-center a:hover {
-    color: #ffffff;
-  }
-    
   .create-container{
     display: flex;
     align-items: center;
@@ -580,31 +457,6 @@ footer {
     transform: scale(1.1);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
-.sliding-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 90px; /* Agrandamos el header */
-    z-index: 1100; /* Incrementamos la prioridad sobre otros elementos */
-    background-color: #e3f2f7;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Mejora la estética con una sombra más destacada */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Ajustamos contenido horizontal */
-    padding: 0 20px; /* Espaciado interno más generoso */
-}
-
-.sliding-header.slide-up {
-    transform: translateY(-100%);
-    box-shadow: none; /* Sin sombra cuando está oculto */
-}
-
-.sliding-header.slide-down {
-    transform: translateY(0);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Reaparece con sombra */
-
 .container {
   width: 100%;
   margin: 0 auto;
@@ -762,7 +614,6 @@ footer {
 .action-container a:hover img,
 .action-container button:hover img {
     opacity: 0.8; /* Ligeramente transparente al hacer hover */
-<<<<<<< HEAD
 }
 
 .categoria-dropdown {
@@ -813,6 +664,3 @@ footer {
     outline: none;
     box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
 }
-=======
-}}
->>>>>>> d0dac2d7ced9a20e8d8b4a5c447552cba1476dfc
