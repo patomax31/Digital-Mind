@@ -27,7 +27,7 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #a5f1f2;
+    background-color: #e3f2f7;
     padding: 40px;
 }
 
@@ -58,7 +58,7 @@ body, html {
 
 .form-group input[type="submit"] {
     background-color: #294b5b;
-    color: #4a6e82;
+    color: #000000;
     cursor: pointer;
     font-size: 16px;
     border: none;
@@ -66,7 +66,7 @@ body, html {
 }
 
 .form-group input[type="submit"]:hover {
-    background-color: #a0c0c5;
+    background-color: #e3f2f7;
 }
 
 
@@ -96,7 +96,7 @@ body, html {
     display: block;
     width: 100%;
     padding: 12px 20px;
-    background-color: #12f3ff;
+    background-color: #294b5b;
     color: rgb(0, 0, 0);
     text-decoration: none;
     font-size: 18px;
@@ -109,14 +109,6 @@ body, html {
 
 .btn-registrar:hover {
     background-color: #e3f2f7;
-}
-
-body {
-    background-color: red !important;
-}
-
-body {
-    background-color: red !important;
 }
 
 body {
