@@ -27,7 +27,11 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD
     background-color: #e3f2f7;
+=======
+    background-color: #95f0f2;
+>>>>>>> 6eb1663 (Marcianos)
     padding: 40px;
 }
 
@@ -57,8 +61,13 @@ body, html {
 }
 
 .form-group input[type="submit"] {
+<<<<<<< HEAD
     background-color: #294b5b;
     color: #000000;
+=======
+    background-color: #09ff00c8;
+    color: white;
+>>>>>>> 6eb1663 (Marcianos)
     cursor: pointer;
     font-size: 16px;
     border: none;
@@ -96,8 +105,13 @@ body, html {
     display: block;
     width: 100%;
     padding: 12px 20px;
+<<<<<<< HEAD
     background-color: #294b5b;
     color: rgb(0, 0, 0);
+=======
+    background-color: #ffffff;
+    color: white;
+>>>>>>> 6eb1663 (Marcianos)
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
