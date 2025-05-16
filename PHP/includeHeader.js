@@ -5,23 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
     
     document.body.insertBefore(headerPlaceholder, document.body.firstChild);
 
-
-
-    fetch("../PHP/header.html")
-        .then(response => response.text())
-
-    fetch("../PHP/header.html")
-        .then(response => response.text())
-
-    fetch("../PHP/header.html")
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("Error al cargar el header");
-            }
-            return response.text();
-        })
-
-
     
     fetch("../PHP/header.html")
         .then(response => {
@@ -30,12 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             return response.text();
         })
-
-    fetch("../PHP/header.html")
-        .then(response => response.text())
-
-
-
         .then(data => {
             headerPlaceholder.innerHTML = data;
         })
