@@ -6,9 +6,12 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.insertBefore(headerPlaceholder, document.body.firstChild);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     fetch("../PHP/header.html")
         .then(response => response.text())
 =======
+=======
+>>>>>>> 4cadc2d (Ernesto)
     
     fetch("../PHP/header.html")
         .then(response => {
@@ -17,6 +20,9 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             return response.text();
         })
+<<<<<<< HEAD
+>>>>>>> 4cadc2d (Ernesto)
+=======
 >>>>>>> 4cadc2d (Ernesto)
         .then(data => {
             headerPlaceholder.innerHTML = data;

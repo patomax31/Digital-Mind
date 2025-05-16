@@ -219,6 +219,7 @@ footer {
     transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease, box-shadow 0.2s ease; /* Más propiedades para la transición */
 }
 
+<<<<<<< HEAD
 
 .action-container svg {
     fill: #333;
@@ -251,4 +252,23 @@ footer {
 .action-container button:hover img {
     opacity: 0.8; /* Ligeramente transparente al hacer hover */
 
+=======
+.mi-boton:hover {
+    background-color: #0056b3; /* Cambia el color de fondo del botón al pasar el cursor sobre él */
+}
+
+#header-placeholder header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Fondo para que no sea transparente */
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Añadir padding para evitar que el contenido se solape con el header */
+body {
+    padding-top: 60px; /* Ajusta según la altura del header */
+>>>>>>> 4cadc2d (Ernesto)
 }
