@@ -27,6 +27,7 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD
 
     background-color: #e3f2f7;
 
@@ -35,6 +36,9 @@ body, html {
 
     background-color: #a5f1f2;
 
+=======
+    background-color: #e3f2f7;
+>>>>>>> a4c9912 (Cambios)
     padding: 40px;
 }
 
@@ -67,6 +71,7 @@ body, html {
 
     background-color: #294b5b;
     color: #000000;
+<<<<<<< HEAD
 
     background-color: #09ff00c8;
 
@@ -74,6 +79,8 @@ body, html {
 
     color: white;
 
+=======
+>>>>>>> a4c9912 (Cambios)
     cursor: pointer;
     font-size: 16px;
     border: none;
@@ -113,7 +120,10 @@ body, html {
     display: block;
     width: 100%;
     padding: 12px 20px;
+<<<<<<< HEAD
 
+=======
+>>>>>>> a4c9912 (Cambios)
     background-color: #294b5b;
     color: rgb(0, 0, 0);
 
@@ -134,10 +144,13 @@ body, html {
 
 .btn-registrar:hover {
     background-color: #e3f2f7;
+<<<<<<< HEAD
 }
 
 body {
     background-color: red !important;
+=======
+>>>>>>> a4c9912 (Cambios)
 }
 
 body {
