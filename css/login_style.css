@@ -57,9 +57,8 @@ body, html {
 }
 
 .form-group input[type="submit"] {
-    background-color: #0a6800c8;
-    color: white;
-
+    background-color: #294b5b;
+    color: #4a6e82;
     cursor: pointer;
     font-size: 16px;
     border: none;
@@ -67,9 +66,7 @@ body, html {
 }
 
 .form-group input[type="submit"]:hover {
-    background-color: #e3f2f7;
     background-color: #a0c0c5;
-    background-color: #e3f2f7;
 }
 
 
@@ -114,10 +111,6 @@ body, html {
     background-color: #e3f2f7;
 }
 
-
-body {
-    background-color: red !important;
-}
 
 body {
     background-color: red !important;
