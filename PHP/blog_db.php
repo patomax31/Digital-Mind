@@ -10,4 +10,7 @@ if ($conn->connect_error) {
     die("Error de conexión: " . $conn->connect_error);
 }
 ?>
+<<<<<<< HEAD
 
+=======
+>>>>>>> a3e5eda (Cambios)
