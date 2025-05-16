@@ -21,11 +21,8 @@ if ($resultRecientes->num_rows > 0) {
 if (isset($conn)) {
     $conn->close();
 }
-
-
 ?>
 
-<!-- Estilos para el menú flotante -->
 <style>
     /* Botón de menú */
     .menu-toggle {
@@ -37,7 +34,7 @@ if (isset($conn)) {
         display: flex;
         align-items: center;
     }
-    
+
     /* Menú flotante */
     .sidebar {
         position: fixed;
@@ -51,16 +48,16 @@ if (isset($conn)) {
         z-index: 999;
         overflow-y: auto;
     }
-    
+
     .sidebar.active {
         left: 0;
     }
-    
+
     .sidebar-section {
         padding: 20px;
         border-bottom: 1px solid #eee;
     }
-    
+
     .sidebar-section h3 {
         font-size: 18px;
         color: #4a6fa5;
@@ -68,7 +65,7 @@ if (isset($conn)) {
         padding-bottom: 5px;
         border-bottom: 1px solid #eee;
     }
-    
+
     /* Elementos del menú */
     .menu-item {
         display: flex;
@@ -83,19 +80,19 @@ if (isset($conn)) {
         transition: all 0.2s;
         background-color: #f8f9fa;
     }
-    
+
     .menu-item:hover {
         background-color: rgba(74, 111, 165, 0.1);
         color: #4a6fa5;
     }
-    
+
     .menu-item i {
         margin-right: 12px;
         font-size: 20px;
         width: 24px;
         text-align: center;
     }
-    
+
     /* Overlay */
     .overlay {
         position: fixed;
@@ -109,29 +106,29 @@ if (isset($conn)) {
         visibility: hidden;
         transition: all 0.3s;
     }
-    
+
     .overlay.active {
         opacity: 1;
         visibility: visible;
     }
-    
+
     /* Lista de noticias */
     .recent-posts {
         list-style: none;
         padding: 0;
     }
-    
+
     .post-item {
         display: flex;
         align-items: center;
         padding: 12px 0;
         border-bottom: 1px solid #eee;
     }
-    
+
     .post-item:last-child {
         border-bottom: none;
     }
-    
+
     .post-thumbnail {
         width: 60px;
         height: 60px;
@@ -139,11 +136,11 @@ if (isset($conn)) {
         border-radius: 6px;
         margin-right: 12px;
     }
-    
+
     .post-details {
         flex-grow: 1;
     }
-    
+
     .post-title {
         font-weight: 600;
         color: #333;
@@ -152,25 +149,21 @@ if (isset($conn)) {
         margin-bottom: 5px;
         font-size: 15px;
     }
-    
+
     .post-title:hover {
         color: #4a6fa5;
     }
-    
+
     .post-date {
         font-size: 13px;
         color: #666;
     }
 </style>
 
-<!-- Cargar Font Awesome para iconos -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<!-- NO SE INCLUYE EL HEADER AQUÍ - Solo los componentes del menú flotante -->
-<!-- Overlay para cerrar el menú -->
 <div class="overlay" id="overlay"></div>
 
-<!-- Menú flotante -->
 <div class="sidebar" id="sidebar">
     <div class="sidebar-section">
         <h3>Menú Principal</h3>
@@ -183,8 +176,14 @@ if (isset($conn)) {
         <a href="#" class="menu-item">
             <i class="fas fa-folder"></i> Categorías
         </a>
+        <a href="about_us.php" class="menu-item">
+            <i class="fas fa-info-circle"></i> Acerca de Nosotros
+        </a>
+        <a href="contact_page.php" class="menu-item">
+            <i class="fas fa-envelope"></i> Página de Contacto
+        </a>
     </div>
-    
+
     <div class="sidebar-section">
         <h3>Cuenta</h3>
         <?php if ($loggedIn): ?>
@@ -200,7 +199,7 @@ if (isset($conn)) {
         </a>
         <?php endif; ?>
     </div>
-    
+
     <div class="sidebar-section">
         <h3>Noticias Recientes</h3>
         <ul class="recent-posts">
@@ -233,16 +232,16 @@ document.addEventListener('DOMContentLoaded', function() {
             button.id = 'menuToggle';
             button.className = 'menu-toggle';
             button.innerHTML = '<i class="fas fa-bars" style="font-size: 24px;"></i>';
-            
+
             // Insertamos el botón al inicio del div header-left
             headerLeft.insertBefore(button, headerLeft.firstChild);
         }
     }
-    
+
     // Ahora configuramos el evento para el botón (sea existente o recién creado)
     const sidebar = document.getElementById('sidebar');
     const overlay = document.getElementById('overlay');
-    
+
     // Función para configurar el botón de menú
     function setupMenuButton() {
         const toggleBtn = document.getElementById('menuToggle');
@@ -254,16 +253,16 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
-    
+
     // Configurar el botón
     setupMenuButton();
-    
+
     // Ocultar menú al hacer clic en el overlay
     overlay.addEventListener('click', function() {
         sidebar.classList.remove('active');
         overlay.classList.remove('active');
     });
-    
+
     // Ocultar menú al hacer clic fuera de él
     document.addEventListener('click', function(e) {
         const menuToggle = document.getElementById('menuToggle');
