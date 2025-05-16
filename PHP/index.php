@@ -5,19 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DIGITALMIND - Educación y Calidad</title>
   <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/responsive.css">
-  <script src="../Js/responsive.js"></script>
   <script src="../PHP/prueba.js" defer></script>
   <link rel="stylesheet" href="../css/search.css">
-  <script src="../Js/responsive.js"></script>
   <?php include 'dashboard.php'; ?>
  
 </head>
 <body>
   <header class="page-header-footer sliding-header" id="slidingHeader">
+    
     <div class="page-container">
       <div class="header-left">
-
+        <!-- El botón del menú será insertado aquí por el script en dashboard.php -->
+        
         <div class="logo">
           <a href="index.php">
             <img src="../images/Logo_Mk2.png" alt="Logo de DIGITALMIND">
@@ -71,14 +70,16 @@
       <div class="most-recent">Más Reciente</div>
 
       <?php
+      // Creamos una nueva conexión a la base de datos para evitar problemas
+      // con conexiones cerradas anteriormente
       include 'blog_db.php';
-
-      // Obtener publicaciones de la base de datos
+      
+      // Obtener publicaciones de la base de datos con la nueva conexión
       $sql = "SELECT * FROM publicaciones_2 ORDER BY fecha_creacion DESC";
       $resultado = $conn->query($sql);
 
       // Mostrar publicaciones de la base de datos
-      if ($resultado->num_rows > 0) {
+      if ($resultado && $resultado->num_rows > 0) {
         while ($fila = $resultado->fetch_assoc()) {
           echo '
           <div class="content-item color-noticia-1">
@@ -93,8 +94,11 @@
             </div>
           </div>';
         }
+      } else {
+        echo '<p>No hay publicaciones disponibles.</p>';
       }
 
+      // Ahora cerramos la conexión después de usarla por última vez
       $conn->close();
       ?>
     </main>

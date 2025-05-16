@@ -189,3 +189,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // Establecemos un margen superior en el body para acomodar el header ampliado
     body.style.marginTop = `${header.offsetHeight}px`;
 });
+
