@@ -154,3 +154,18 @@ CREATE TABLE `comentarios` (
 
 INSERT INTO `admin` (`id`, `nombre`,`email` `contraseña`) VALUES 
 (100, 'carlos','carlosleonardorosas@gmail.com', '$2y$10$TuSaltOHashAquí...');
+
+CREATE TABLE `contacto` (
+  `id` int(7) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  `apellido` varchar(30) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `mensaje` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+ALTER TABLE `contacto`
+  ADD PRIMARY KEY (`id`);
+
+  ALTER TABLE `contacto`
+  MODIFY `id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+COMMIT;

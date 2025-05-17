@@ -6,6 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $contrasena = "";
   $base_datos = "blog_db"; // ← CAMBIA este valor al nombre real de tu base de datos
 
+  
   $conn = new mysqli($host, $usuario, $contrasena, $base_datos);
 
   if ($conn->connect_error) {
