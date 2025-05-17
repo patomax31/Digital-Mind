@@ -23,8 +23,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $confirm_password = trim($_POST['confirm_password']);
 
         $consulta_email = "SELECT * FROM usuarios WHERE email = '$email'";
-        $resultado_email = mysqli_query($conex, $consulta_email);
-        
+        $resultado_email = mysqli_query($conn, $consulta_email);
+
         if (mysqli_num_rows($resultado_email) > 0) {
             $mensaje = "<p class='message error'>¡Este correo ya está registrado!</p>";
         } elseif ($password !== $confirm_password) {

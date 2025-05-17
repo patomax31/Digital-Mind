@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 include 'blog_db.php';
 
 // Verificar si hay un usuario logueado
@@ -169,10 +171,7 @@ if (isset($conn)) {
         <h3>Menú Principal</h3>
         <a href="index.php" class="menu-item">
             <i class="fas fa-home"></i> Inicio
-        </a>
-        <a href="blog_add.php" class="menu-item">
-            <i class="fas fa-edit"></i> Crear Blog
-        </a>
+
         <a href="#" class="menu-item">
             <i class="fas fa-folder"></i> Categorías
         </a>
