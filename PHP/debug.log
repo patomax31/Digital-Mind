@@ -2994,16 +2994,244 @@ Secondary education is an exciting journey of discovery and growth. By strengthe
 )
 
 [2025-05-16 19:46:09] Successfully returned translated texts.
-[2025-05-16 20:37:39] Received POST request.
-[2025-05-16 20:37:39] POST data: Array
+[2025-05-16 19:56:32] Received POST request.
+[2025-05-16 19:56:32] POST data: Array
 (
-    [texts] => ["Crear Blog","Categoría","Acerca de","Pagina de contacto","Traducir","Iniciar sesión","Buscar...","Más Reciente","Montesori","El Método Montessori es un modelo educativo revolucionario desarrollado por la Dra. María Montessori (1870-1952), primera mujer médico en Italia y pionera en pedagogía científica. Su enfoque se basa en la \"autonomía, la libertad con límites\" y el respeto ","Publicado el 09/09/0091","Ver más","A","a","Publicado el 01/01/0001","Ver más","A","2","Publicado el 01/01/0001","Ver más","Derechos Reservados ® Digital-Mind © "]
+    [texts] => ["Crear Blog","Categoría","Acerca de","Pagina de contacto","Traducir","Iniciar sesión","Buscar...","Sobre Nosotros","En DigitalMind, combinamos innovación y creatividad para ofrecer soluciones digitales que transforman negocios y mejoran vidas.","\n            \"Estudiar no es solo aprender hechos, es entrenar tu mente para ver el mundo con una nueva perspectiva. Cada esfuerzo que pongas hoy será una semilla que crecerá en éxito mañana.\"\n        ","Conoce Nuestro Equipo","Las mentes detras de la plataforma","Alan Alcaraz","Desarrollador Back-End","Visionario tecnológico con más de 15 años de experiencia en desarrollo de software.","Ximena Cuevas","Directora de diseño","Especialista en experiencia de usuario y diseño de interfaces intuitivas.","Friedman Cortez","Desarrollador Front-End","Experto en arquitectura de software y soluciones escalables.","Zinedine Hiram","Desarrollador Front-End","Experto en arquitectura de software y soluciones escalables.","Ernesto Cebrera","Desarrollador Back-End","Experto en arquitectura de software y soluciones escalables.","Carlos Rosas","Lider de desarrollo","Encargado de revisar, implementar y testear el codigo desarrollado","Nuestros Valores","Los principios que guían cada decisión que tomamos","Orientacion","Nuestra prioridad es dejar un impacto en la gente que nos visita","Integridad","Actuamos con honestidad y transparencia en todas nuestras relaciones.","Compromiso","Nos comprometemos a crear tecnología que mejore el aprendizaje de las personas.","Impacto Social","Cada publicacion es un nuevo aprendizaje, nos aseguramos que este impacto perdure en las personas.","DigitalMind","Comprometidos con la educacion","Terminos de privacidad","© 2025 DigitalMind. Todos los derechos reservados."]
     [target_lang] => EN
 )
 
-[2025-05-16 20:37:39] DEEPL_API_KEY environment variable not set. Using hardcoded key.
-[2025-05-16 20:37:39] 'texts' parameter received: ["Crear Blog","Categoría","Acerca de","Pagina de contacto","Traducir","Iniciar sesión","Buscar...","Más Reciente","Montesori","El Método Montessori es un modelo educativo revolucionario desarrollado por la Dra. María Montessori (1870-1952), primera mujer médico en Italia y pionera en pedagogía científica. Su enfoque se basa en la \"autonomía, la libertad con límites\" y el respeto ","Publicado el 09/09/0091","Ver más","A","a","Publicado el 01/01/0001","Ver más","A","2","Publicado el 01/01/0001","Ver más","Derechos Reservados ® Digital-Mind © "]
-[2025-05-16 20:37:39] Result of json_decode: Array
+[2025-05-16 19:56:32] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-05-16 19:56:32] 'texts' parameter received: ["Crear Blog","Categoría","Acerca de","Pagina de contacto","Traducir","Iniciar sesión","Buscar...","Sobre Nosotros","En DigitalMind, combinamos innovación y creatividad para ofrecer soluciones digitales que transforman negocios y mejoran vidas.","\n            \"Estudiar no es solo aprender hechos, es entrenar tu mente para ver el mundo con una nueva perspectiva. Cada esfuerzo que pongas hoy será una semilla que crecerá en éxito mañana.\"\n        ","Conoce Nuestro Equipo","Las mentes detras de la plataforma","Alan Alcaraz","Desarrollador Back-End","Visionario tecnológico con más de 15 años de experiencia en desarrollo de software.","Ximena Cuevas","Directora de diseño","Especialista en experiencia de usuario y diseño de interfaces intuitivas.","Friedman Cortez","Desarrollador Front-End","Experto en arquitectura de software y soluciones escalables.","Zinedine Hiram","Desarrollador Front-End","Experto en arquitectura de software y soluciones escalables.","Ernesto Cebrera","Desarrollador Back-End","Experto en arquitectura de software y soluciones escalables.","Carlos Rosas","Lider de desarrollo","Encargado de revisar, implementar y testear el codigo desarrollado","Nuestros Valores","Los principios que guían cada decisión que tomamos","Orientacion","Nuestra prioridad es dejar un impacto en la gente que nos visita","Integridad","Actuamos con honestidad y transparencia en todas nuestras relaciones.","Compromiso","Nos comprometemos a crear tecnología que mejore el aprendizaje de las personas.","Impacto Social","Cada publicacion es un nuevo aprendizaje, nos aseguramos que este impacto perdure en las personas.","DigitalMind","Comprometidos con la educacion","Terminos de privacidad","© 2025 DigitalMind. Todos los derechos reservados."]
+[2025-05-16 19:56:32] Result of json_decode: Array
+(
+    [0] => Crear Blog
+    [1] => Categoría
+    [2] => Acerca de
+    [3] => Pagina de contacto
+    [4] => Traducir
+    [5] => Iniciar sesión
+    [6] => Buscar...
+    [7] => Sobre Nosotros
+    [8] => En DigitalMind, combinamos innovación y creatividad para ofrecer soluciones digitales que transforman negocios y mejoran vidas.
+    [9] => 
+            "Estudiar no es solo aprender hechos, es entrenar tu mente para ver el mundo con una nueva perspectiva. Cada esfuerzo que pongas hoy será una semilla que crecerá en éxito mañana."
+        
+    [10] => Conoce Nuestro Equipo
+    [11] => Las mentes detras de la plataforma
+    [12] => Alan Alcaraz
+    [13] => Desarrollador Back-End
+    [14] => Visionario tecnológico con más de 15 años de experiencia en desarrollo de software.
+    [15] => Ximena Cuevas
+    [16] => Directora de diseño
+    [17] => Especialista en experiencia de usuario y diseño de interfaces intuitivas.
+    [18] => Friedman Cortez
+    [19] => Desarrollador Front-End
+    [20] => Experto en arquitectura de software y soluciones escalables.
+    [21] => Zinedine Hiram
+    [22] => Desarrollador Front-End
+    [23] => Experto en arquitectura de software y soluciones escalables.
+    [24] => Ernesto Cebrera
+    [25] => Desarrollador Back-End
+    [26] => Experto en arquitectura de software y soluciones escalables.
+    [27] => Carlos Rosas
+    [28] => Lider de desarrollo
+    [29] => Encargado de revisar, implementar y testear el codigo desarrollado
+    [30] => Nuestros Valores
+    [31] => Los principios que guían cada decisión que tomamos
+    [32] => Orientacion
+    [33] => Nuestra prioridad es dejar un impacto en la gente que nos visita
+    [34] => Integridad
+    [35] => Actuamos con honestidad y transparencia en todas nuestras relaciones.
+    [36] => Compromiso
+    [37] => Nos comprometemos a crear tecnología que mejore el aprendizaje de las personas.
+    [38] => Impacto Social
+    [39] => Cada publicacion es un nuevo aprendizaje, nos aseguramos que este impacto perdure en las personas.
+    [40] => DigitalMind
+    [41] => Comprometidos con la educacion
+    [42] => Terminos de privacidad
+    [43] => © 2025 DigitalMind. Todos los derechos reservados.
+)
+
+[2025-05-16 19:56:32] Target language: EN
+[2025-05-16 19:56:32] Data sent to DeepL API (JSON): {"text":["Crear Blog","Categor\u00eda","Acerca de","Pagina de contacto","Traducir","Iniciar sesi\u00f3n","Buscar...","Sobre Nosotros","En DigitalMind, combinamos innovaci\u00f3n y creatividad para ofrecer soluciones digitales que transforman negocios y mejoran vidas.","\n            \"Estudiar no es solo aprender hechos, es entrenar tu mente para ver el mundo con una nueva perspectiva. Cada esfuerzo que pongas hoy ser\u00e1 una semilla que crecer\u00e1 en \u00e9xito ma\u00f1ana.\"\n        ","Conoce Nuestro Equipo","Las mentes detras de la plataforma","Alan Alcaraz","Desarrollador Back-End","Visionario tecnol\u00f3gico con m\u00e1s de 15 a\u00f1os de experiencia en desarrollo de software.","Ximena Cuevas","Directora de dise\u00f1o","Especialista en experiencia de usuario y dise\u00f1o de interfaces intuitivas.","Friedman Cortez","Desarrollador Front-End","Experto en arquitectura de software y soluciones escalables.","Zinedine Hiram","Desarrollador Front-End","Experto en arquitectura de software y soluciones escalables.","Ernesto Cebrera","Desarrollador Back-End","Experto en arquitectura de software y soluciones escalables.","Carlos Rosas","Lider de desarrollo","Encargado de revisar, implementar y testear el codigo desarrollado","Nuestros Valores","Los principios que gu\u00edan cada decisi\u00f3n que tomamos","Orientacion","Nuestra prioridad es dejar un impacto en la gente que nos visita","Integridad","Actuamos con honestidad y transparencia en todas nuestras relaciones.","Compromiso","Nos comprometemos a crear tecnolog\u00eda que mejore el aprendizaje de las personas.","Impacto Social","Cada publicacion es un nuevo aprendizaje, nos aseguramos que este impacto perdure en las personas.","DigitalMind","Comprometidos con la educacion","Terminos de privacidad","\u00a9 2025 DigitalMind. Todos los derechos reservados."],"target_lang":"EN"}
+[2025-05-16 19:56:34] DeepL API HTTP Code: 200
+[2025-05-16 19:56:34] DeepL API Response: {"translations":[{"detected_source_language":"EN","text":"Crear Blog"},{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Translate"},{"detected_source_language":"ES","text":"Login"},{"detected_source_language":"ES","text":"Search..."},{"detected_source_language":"ES","text":"About Us"},{"detected_source_language":"ES","text":"At DigitalMind, we combine innovation and creativity to deliver digital solutions that transform businesses and improve lives."},{"detected_source_language":"ES","text":"\n            \"Studying is not just learning facts, it is training your mind to see the world with a new perspective. Every effort you put in today will be a seed that will grow into success tomorrow.\"\n        "},{"detected_source_language":"ES","text":"Meet Our Team"},{"detected_source_language":"ES","text":"The minds behind the platform"},{"detected_source_language":"IT","text":"Alan Alcaraz"},{"detected_source_language":"ES","text":"Back-End Developer"},{"detected_source_language":"ES","text":"Technological visionary with more than 15 years of experience in software development."},{"detected_source_language":"ES","text":"Ximena Cuevas"},{"detected_source_language":"ES","text":"Design Director"},{"detected_source_language":"ES","text":"Specialist in user experience and intuitive interface design."},{"detected_source_language":"EN","text":"Friedman Cortez"},{"detected_source_language":"ES","text":"Front-End Developer"},{"detected_source_language":"ES","text":"Expert in software architecture and scalable solutions."},{"detected_source_language":"ET","text":"Zinedine Hiram"},{"detected_source_language":"ES","text":"Front-End Developer"},{"detected_source_language":"ES","text":"Expert in software architecture and scalable solutions."},{"detected_source_language":"ES","text":"Ernesto Cebrera"},{"detected_source_language":"ES","text":"Back-End Developer"},{"detected_source_language":"ES","text":"Expert in software architecture and scalable solutions."},{"detected_source_language":"ES","text":"Carlos Rosas"},{"detected_source_language":"ES","text":"Development leader"},{"detected_source_language":"ES","text":"Responsible for reviewing, implementing and testing the developed code."},{"detected_source_language":"ES","text":"Our Values"},{"detected_source_language":"ES","text":"Principles that guide every decision we make"},{"detected_source_language":"ES","text":"Orientation"},{"detected_source_language":"ES","text":"Our priority is to leave an impact on the people who visit us."},{"detected_source_language":"PT","text":"Integrity"},{"detected_source_language":"ES","text":"We act with honesty and transparency in all our relationships."},{"detected_source_language":"EN","text":"Compromiso"},{"detected_source_language":"ES","text":"We are committed to creating technology that enhances people's learning."},{"detected_source_language":"PT","text":"Social Impact"},{"detected_source_language":"ES","text":"Each publication is a new learning experience, we make sure that this impact lasts."},{"detected_source_language":"DE","text":"DigitalMind"},{"detected_source_language":"ES","text":"Committed to education"},{"detected_source_language":"ES","text":"Privacy Policy"},{"detected_source_language":"ES","text":"© 2025 DigitalMind. All rights reserved."}]}
+[2025-05-16 19:56:34] Extracted translated texts: Array
+(
+    [0] => Crear Blog
+    [1] => Category
+    [2] => About
+    [3] => Contact page
+    [4] => Translate
+    [5] => Login
+    [6] => Search...
+    [7] => About Us
+    [8] => At DigitalMind, we combine innovation and creativity to deliver digital solutions that transform businesses and improve lives.
+    [9] => 
+            "Studying is not just learning facts, it is training your mind to see the world with a new perspective. Every effort you put in today will be a seed that will grow into success tomorrow."
+        
+    [10] => Meet Our Team
+    [11] => The minds behind the platform
+    [12] => Alan Alcaraz
+    [13] => Back-End Developer
+    [14] => Technological visionary with more than 15 years of experience in software development.
+    [15] => Ximena Cuevas
+    [16] => Design Director
+    [17] => Specialist in user experience and intuitive interface design.
+    [18] => Friedman Cortez
+    [19] => Front-End Developer
+    [20] => Expert in software architecture and scalable solutions.
+    [21] => Zinedine Hiram
+    [22] => Front-End Developer
+    [23] => Expert in software architecture and scalable solutions.
+    [24] => Ernesto Cebrera
+    [25] => Back-End Developer
+    [26] => Expert in software architecture and scalable solutions.
+    [27] => Carlos Rosas
+    [28] => Development leader
+    [29] => Responsible for reviewing, implementing and testing the developed code.
+    [30] => Our Values
+    [31] => Principles that guide every decision we make
+    [32] => Orientation
+    [33] => Our priority is to leave an impact on the people who visit us.
+    [34] => Integrity
+    [35] => We act with honesty and transparency in all our relationships.
+    [36] => Compromiso
+    [37] => We are committed to creating technology that enhances people's learning.
+    [38] => Social Impact
+    [39] => Each publication is a new learning experience, we make sure that this impact lasts.
+    [40] => DigitalMind
+    [41] => Committed to education
+    [42] => Privacy Policy
+    [43] => © 2025 DigitalMind. All rights reserved.
+)
+
+[2025-05-16 19:56:34] Successfully returned translated texts.
+[2025-05-16 19:56:58] Received POST request.
+[2025-05-16 19:56:58] POST data: Array
+(
+    [texts] => ["Crear Blog","Categoría","Acerca de","Pagina de contacto","Traducir","Iniciar sesión","Buscar...","Sobre Nosotros","En DigitalMind, combinamos innovación y creatividad para ofrecer soluciones digitales que transforman negocios y mejoran vidas.","\n            \"Estudiar no es solo aprender hechos, es entrenar tu mente para ver el mundo con una nueva perspectiva. Cada esfuerzo que pongas hoy será una semilla que crecerá en éxito mañana.\"\n        ","Conoce Nuestro Equipo","Las mentes detras de la plataforma","Alan Alcaraz","Desarrollador Back-End","Visionario tecnológico con más de 15 años de experiencia en desarrollo de software.","Ximena Cuevas","Directora de diseño","Especialista en experiencia de usuario y diseño de interfaces intuitivas.","Friedman Cortez","Desarrollador Front-End","Experto en arquitectura de software y soluciones escalables.","Zinedine Hiram","Desarrollador Front-End","Experto en arquitectura de software y soluciones escalables.","Ernesto Cebrera","Desarrollador Back-End","Experto en arquitectura de software y soluciones escalables.","Carlos Rosas","Lider de desarrollo","Encargado de revisar, implementar y testear el codigo desarrollado","Nuestros Valores","Los principios que guían cada decisión que tomamos","Orientacion","Nuestra prioridad es dejar un impacto en la gente que nos visita","Integridad","Actuamos con honestidad y transparencia en todas nuestras relaciones.","Compromiso","Nos comprometemos a crear tecnología que mejore el aprendizaje de las personas.","Impacto Social","Cada publicacion es un nuevo aprendizaje, nos aseguramos que este impacto perdure en las personas.","DigitalMind","Comprometidos con la educacion","Terminos de privacidad","© 2025 DigitalMind. Todos los derechos reservados."]
+    [target_lang] => EN
+)
+
+[2025-05-16 19:56:58] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-05-16 19:56:58] 'texts' parameter received: ["Crear Blog","Categoría","Acerca de","Pagina de contacto","Traducir","Iniciar sesión","Buscar...","Sobre Nosotros","En DigitalMind, combinamos innovación y creatividad para ofrecer soluciones digitales que transforman negocios y mejoran vidas.","\n            \"Estudiar no es solo aprender hechos, es entrenar tu mente para ver el mundo con una nueva perspectiva. Cada esfuerzo que pongas hoy será una semilla que crecerá en éxito mañana.\"\n        ","Conoce Nuestro Equipo","Las mentes detras de la plataforma","Alan Alcaraz","Desarrollador Back-End","Visionario tecnológico con más de 15 años de experiencia en desarrollo de software.","Ximena Cuevas","Directora de diseño","Especialista en experiencia de usuario y diseño de interfaces intuitivas.","Friedman Cortez","Desarrollador Front-End","Experto en arquitectura de software y soluciones escalables.","Zinedine Hiram","Desarrollador Front-End","Experto en arquitectura de software y soluciones escalables.","Ernesto Cebrera","Desarrollador Back-End","Experto en arquitectura de software y soluciones escalables.","Carlos Rosas","Lider de desarrollo","Encargado de revisar, implementar y testear el codigo desarrollado","Nuestros Valores","Los principios que guían cada decisión que tomamos","Orientacion","Nuestra prioridad es dejar un impacto en la gente que nos visita","Integridad","Actuamos con honestidad y transparencia en todas nuestras relaciones.","Compromiso","Nos comprometemos a crear tecnología que mejore el aprendizaje de las personas.","Impacto Social","Cada publicacion es un nuevo aprendizaje, nos aseguramos que este impacto perdure en las personas.","DigitalMind","Comprometidos con la educacion","Terminos de privacidad","© 2025 DigitalMind. Todos los derechos reservados."]
+[2025-05-16 19:56:58] Result of json_decode: Array
+(
+    [0] => Crear Blog
+    [1] => Categoría
+    [2] => Acerca de
+    [3] => Pagina de contacto
+    [4] => Traducir
+    [5] => Iniciar sesión
+    [6] => Buscar...
+    [7] => Sobre Nosotros
+    [8] => En DigitalMind, combinamos innovación y creatividad para ofrecer soluciones digitales que transforman negocios y mejoran vidas.
+    [9] => 
+            "Estudiar no es solo aprender hechos, es entrenar tu mente para ver el mundo con una nueva perspectiva. Cada esfuerzo que pongas hoy será una semilla que crecerá en éxito mañana."
+        
+    [10] => Conoce Nuestro Equipo
+    [11] => Las mentes detras de la plataforma
+    [12] => Alan Alcaraz
+    [13] => Desarrollador Back-End
+    [14] => Visionario tecnológico con más de 15 años de experiencia en desarrollo de software.
+    [15] => Ximena Cuevas
+    [16] => Directora de diseño
+    [17] => Especialista en experiencia de usuario y diseño de interfaces intuitivas.
+    [18] => Friedman Cortez
+    [19] => Desarrollador Front-End
+    [20] => Experto en arquitectura de software y soluciones escalables.
+    [21] => Zinedine Hiram
+    [22] => Desarrollador Front-End
+    [23] => Experto en arquitectura de software y soluciones escalables.
+    [24] => Ernesto Cebrera
+    [25] => Desarrollador Back-End
+    [26] => Experto en arquitectura de software y soluciones escalables.
+    [27] => Carlos Rosas
+    [28] => Lider de desarrollo
+    [29] => Encargado de revisar, implementar y testear el codigo desarrollado
+    [30] => Nuestros Valores
+    [31] => Los principios que guían cada decisión que tomamos
+    [32] => Orientacion
+    [33] => Nuestra prioridad es dejar un impacto en la gente que nos visita
+    [34] => Integridad
+    [35] => Actuamos con honestidad y transparencia en todas nuestras relaciones.
+    [36] => Compromiso
+    [37] => Nos comprometemos a crear tecnología que mejore el aprendizaje de las personas.
+    [38] => Impacto Social
+    [39] => Cada publicacion es un nuevo aprendizaje, nos aseguramos que este impacto perdure en las personas.
+    [40] => DigitalMind
+    [41] => Comprometidos con la educacion
+    [42] => Terminos de privacidad
+    [43] => © 2025 DigitalMind. Todos los derechos reservados.
+)
+
+[2025-05-16 19:56:58] Target language: EN
+[2025-05-16 19:56:58] Data sent to DeepL API (JSON): {"text":["Crear Blog","Categor\u00eda","Acerca de","Pagina de contacto","Traducir","Iniciar sesi\u00f3n","Buscar...","Sobre Nosotros","En DigitalMind, combinamos innovaci\u00f3n y creatividad para ofrecer soluciones digitales que transforman negocios y mejoran vidas.","\n            \"Estudiar no es solo aprender hechos, es entrenar tu mente para ver el mundo con una nueva perspectiva. Cada esfuerzo que pongas hoy ser\u00e1 una semilla que crecer\u00e1 en \u00e9xito ma\u00f1ana.\"\n        ","Conoce Nuestro Equipo","Las mentes detras de la plataforma","Alan Alcaraz","Desarrollador Back-End","Visionario tecnol\u00f3gico con m\u00e1s de 15 a\u00f1os de experiencia en desarrollo de software.","Ximena Cuevas","Directora de dise\u00f1o","Especialista en experiencia de usuario y dise\u00f1o de interfaces intuitivas.","Friedman Cortez","Desarrollador Front-End","Experto en arquitectura de software y soluciones escalables.","Zinedine Hiram","Desarrollador Front-End","Experto en arquitectura de software y soluciones escalables.","Ernesto Cebrera","Desarrollador Back-End","Experto en arquitectura de software y soluciones escalables.","Carlos Rosas","Lider de desarrollo","Encargado de revisar, implementar y testear el codigo desarrollado","Nuestros Valores","Los principios que gu\u00edan cada decisi\u00f3n que tomamos","Orientacion","Nuestra prioridad es dejar un impacto en la gente que nos visita","Integridad","Actuamos con honestidad y transparencia en todas nuestras relaciones.","Compromiso","Nos comprometemos a crear tecnolog\u00eda que mejore el aprendizaje de las personas.","Impacto Social","Cada publicacion es un nuevo aprendizaje, nos aseguramos que este impacto perdure en las personas.","DigitalMind","Comprometidos con la educacion","Terminos de privacidad","\u00a9 2025 DigitalMind. Todos los derechos reservados."],"target_lang":"EN"}
+[2025-05-16 19:56:59] DeepL API HTTP Code: 200
+[2025-05-16 19:56:59] DeepL API Response: {"translations":[{"detected_source_language":"EN","text":"Crear Blog"},{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Translate"},{"detected_source_language":"ES","text":"Login"},{"detected_source_language":"ES","text":"Search..."},{"detected_source_language":"ES","text":"About Us"},{"detected_source_language":"ES","text":"At DigitalMind, we combine innovation and creativity to deliver digital solutions that transform businesses and improve lives."},{"detected_source_language":"ES","text":"\n            \"Studying is not just learning facts, it is training your mind to see the world with a new perspective. Every effort you put in today will be a seed that will grow into success tomorrow.\"\n        "},{"detected_source_language":"ES","text":"Meet Our Team"},{"detected_source_language":"ES","text":"The minds behind the platform"},{"detected_source_language":"IT","text":"Alan Alcaraz"},{"detected_source_language":"ES","text":"Back-End Developer"},{"detected_source_language":"ES","text":"Technological visionary with more than 15 years of experience in software development."},{"detected_source_language":"ES","text":"Ximena Cuevas"},{"detected_source_language":"ES","text":"Design Director"},{"detected_source_language":"ES","text":"Specialist in user experience and intuitive interface design."},{"detected_source_language":"EN","text":"Friedman Cortez"},{"detected_source_language":"ES","text":"Front-End Developer"},{"detected_source_language":"ES","text":"Expert in software architecture and scalable solutions."},{"detected_source_language":"ET","text":"Zinedine Hiram"},{"detected_source_language":"ES","text":"Front-End Developer"},{"detected_source_language":"ES","text":"Expert in software architecture and scalable solutions."},{"detected_source_language":"ES","text":"Ernesto Cebrera"},{"detected_source_language":"ES","text":"Back-End Developer"},{"detected_source_language":"ES","text":"Expert in software architecture and scalable solutions."},{"detected_source_language":"ES","text":"Carlos Rosas"},{"detected_source_language":"ES","text":"Development leader"},{"detected_source_language":"ES","text":"Responsible for reviewing, implementing and testing the developed code."},{"detected_source_language":"ES","text":"Our Values"},{"detected_source_language":"ES","text":"Principles that guide every decision we make"},{"detected_source_language":"ES","text":"Orientation"},{"detected_source_language":"ES","text":"Our priority is to leave an impact on the people who visit us."},{"detected_source_language":"PT","text":"Integrity"},{"detected_source_language":"ES","text":"We act with honesty and transparency in all our relationships."},{"detected_source_language":"EN","text":"Compromiso"},{"detected_source_language":"ES","text":"We are committed to creating technology that enhances people's learning."},{"detected_source_language":"PT","text":"Social Impact"},{"detected_source_language":"ES","text":"Each publication is a new learning experience, we make sure that this impact lasts."},{"detected_source_language":"DE","text":"DigitalMind"},{"detected_source_language":"ES","text":"Committed to education"},{"detected_source_language":"ES","text":"Privacy Policy"},{"detected_source_language":"ES","text":"© 2025 DigitalMind. All rights reserved."}]}
+[2025-05-16 19:56:59] Extracted translated texts: Array
+(
+    [0] => Crear Blog
+    [1] => Category
+    [2] => About
+    [3] => Contact page
+    [4] => Translate
+    [5] => Login
+    [6] => Search...
+    [7] => About Us
+    [8] => At DigitalMind, we combine innovation and creativity to deliver digital solutions that transform businesses and improve lives.
+    [9] => 
+            "Studying is not just learning facts, it is training your mind to see the world with a new perspective. Every effort you put in today will be a seed that will grow into success tomorrow."
+        
+    [10] => Meet Our Team
+    [11] => The minds behind the platform
+    [12] => Alan Alcaraz
+    [13] => Back-End Developer
+    [14] => Technological visionary with more than 15 years of experience in software development.
+    [15] => Ximena Cuevas
+    [16] => Design Director
+    [17] => Specialist in user experience and intuitive interface design.
+    [18] => Friedman Cortez
+    [19] => Front-End Developer
+    [20] => Expert in software architecture and scalable solutions.
+    [21] => Zinedine Hiram
+    [22] => Front-End Developer
+    [23] => Expert in software architecture and scalable solutions.
+    [24] => Ernesto Cebrera
+    [25] => Back-End Developer
+    [26] => Expert in software architecture and scalable solutions.
+    [27] => Carlos Rosas
+    [28] => Development leader
+    [29] => Responsible for reviewing, implementing and testing the developed code.
+    [30] => Our Values
+    [31] => Principles that guide every decision we make
+    [32] => Orientation
+    [33] => Our priority is to leave an impact on the people who visit us.
+    [34] => Integrity
+    [35] => We act with honesty and transparency in all our relationships.
+    [36] => Compromiso
+    [37] => We are committed to creating technology that enhances people's learning.
+    [38] => Social Impact
+    [39] => Each publication is a new learning experience, we make sure that this impact lasts.
+    [40] => DigitalMind
+    [41] => Committed to education
+    [42] => Privacy Policy
+    [43] => © 2025 DigitalMind. All rights reserved.
+)
+
+[2025-05-16 19:56:59] Successfully returned translated texts.
+[2025-05-17 03:40:41] Received POST request.
+[2025-05-17 03:40:41] POST data: Array
+(
+    [texts] => ["Crear Blog","Categoría","Acerca de","Pagina de contacto","Traducir","Iniciar sesión","Buscar...","Más Reciente","Testeooooo","testeoooootesteooooo","Publicado el 01/01/0001","Ver más","Claves para una educación secundaria significativa y transformadora","La educación secundaria es un período crucial de transición y crecimiento. Exploraremos estrategias para el éxito académico, el desarrollo de habilidades de pensamiento crítico, la exploración de intereses, el fomento de la autonomía y la preparación para","Publicado el 22/05/2025","Ver más","Claves para una educación primaria sólida y estimulante","La educación primaria es la base fundamental para el desarrollo académico, social y emocional de los niños. Exploraremos estrategias pedagógicas efectivas, la importancia de un ambiente de aprendizaje positivo, el fomento de habilidades clave y la colabor","Publicado el 21/05/2025","Ver más","Claves para una educación exitosa y un futuro brillante","La preparatoria es una etapa crucial en la vida académica y personal. Exploraremos estrategias efectivas para el éxito académico, la exploración vocacional, el desarrollo de habilidades socioemocionales y la preparación para el siguiente paso, ya sea la u","Publicado el 20/05/2025","Ver más","Desbloquea tu potencial: explorando diversos métodos de aprendizaje efectivos","<br />\n<b>Warning</b>:  Undefined array key \"descripcion_corta\" in <b>C:\\xampp\\htdocs\\Digital-Mind\\PHP\\blog_edit.php</b> on line <b>89</b><br />","Publicado el 19/05/2025","Ver más","Desbloquea tu voz: claves para desarrollar habilidades de redacción impactantes","Sumérgete en el arte de la escritura efectiva. Exploraremos técnicas esenciales, consejos prácticos y estrategias para mejorar tu claridad, concisión y capacidad de persuasión a través de la palabra escrita.","Publicado el 18/05/2025","Ver más","La educación como brújula vocacional","Explora cómo la educación en sus diversas formas puede ser una herramienta poderosa para descubrir tus intereses, habilidades y, en última instancia, tu vocación. Analizaremos cómo diferentes áreas del aprendizaje pueden guiarte hacia un camino profesiona","Publicado el 17/06/2025","Ver más","Explorando el mundo con ciencia y matemáticas","Descubre cómo la ciencia y las matemáticas se entrelazan para ayudarnos a comprender el mundo que nos rodea. Exploraremos experimentos divertidos, problemas desafiantes y la importancia de cultivar la curiosidad en estas áreas desde una edad temprana.","Publicado el 16/05/2025","Ver más","El poder de la curiosidad en el aprendizaje infantil","Descubre cómo fomentar la curiosidad natural de los niños puede ser la clave para un aprendizaje más profundo y significativo. Exploramos estrategias prácticas y beneficios a largo plazo de cultivar esta valiosa habilidad desde temprana edad.","Publicado el 15/05/2025","Ver más","Tsetestsetset","tsetestsetset","Publicado el 01/01/0001","Ver más","Test de categoria final","escuela primaria","Publicado el 01/01/0002","Ver más","Test de categoria","descripcion corta obligatoria?","Publicado el 01/01/0001","Ver más","Testeoteseto","descripcion de testeo","Publicado el 01/01/0001","Ver más","Testtestestse","descripcion de testeo","Publicado el 01/01/0001","Ver más","Derechos Reservados ® Digital-Mind © "]
+    [target_lang] => EN
+)
+
+[2025-05-17 03:40:41] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-05-17 03:40:41] 'texts' parameter received: ["Crear Blog","Categoría","Acerca de","Pagina de contacto","Traducir","Iniciar sesión","Buscar...","Más Reciente","Testeooooo","testeoooootesteooooo","Publicado el 01/01/0001","Ver más","Claves para una educación secundaria significativa y transformadora","La educación secundaria es un período crucial de transición y crecimiento. Exploraremos estrategias para el éxito académico, el desarrollo de habilidades de pensamiento crítico, la exploración de intereses, el fomento de la autonomía y la preparación para","Publicado el 22/05/2025","Ver más","Claves para una educación primaria sólida y estimulante","La educación primaria es la base fundamental para el desarrollo académico, social y emocional de los niños. Exploraremos estrategias pedagógicas efectivas, la importancia de un ambiente de aprendizaje positivo, el fomento de habilidades clave y la colabor","Publicado el 21/05/2025","Ver más","Claves para una educación exitosa y un futuro brillante","La preparatoria es una etapa crucial en la vida académica y personal. Exploraremos estrategias efectivas para el éxito académico, la exploración vocacional, el desarrollo de habilidades socioemocionales y la preparación para el siguiente paso, ya sea la u","Publicado el 20/05/2025","Ver más","Desbloquea tu potencial: explorando diversos métodos de aprendizaje efectivos","<br />\n<b>Warning</b>:  Undefined array key \"descripcion_corta\" in <b>C:\\xampp\\htdocs\\Digital-Mind\\PHP\\blog_edit.php</b> on line <b>89</b><br />","Publicado el 19/05/2025","Ver más","Desbloquea tu voz: claves para desarrollar habilidades de redacción impactantes","Sumérgete en el arte de la escritura efectiva. Exploraremos técnicas esenciales, consejos prácticos y estrategias para mejorar tu claridad, concisión y capacidad de persuasión a través de la palabra escrita.","Publicado el 18/05/2025","Ver más","La educación como brújula vocacional","Explora cómo la educación en sus diversas formas puede ser una herramienta poderosa para descubrir tus intereses, habilidades y, en última instancia, tu vocación. Analizaremos cómo diferentes áreas del aprendizaje pueden guiarte hacia un camino profesiona","Publicado el 17/06/2025","Ver más","Explorando el mundo con ciencia y matemáticas","Descubre cómo la ciencia y las matemáticas se entrelazan para ayudarnos a comprender el mundo que nos rodea. Exploraremos experimentos divertidos, problemas desafiantes y la importancia de cultivar la curiosidad en estas áreas desde una edad temprana.","Publicado el 16/05/2025","Ver más","El poder de la curiosidad en el aprendizaje infantil","Descubre cómo fomentar la curiosidad natural de los niños puede ser la clave para un aprendizaje más profundo y significativo. Exploramos estrategias prácticas y beneficios a largo plazo de cultivar esta valiosa habilidad desde temprana edad.","Publicado el 15/05/2025","Ver más","Tsetestsetset","tsetestsetset","Publicado el 01/01/0001","Ver más","Test de categoria final","escuela primaria","Publicado el 01/01/0002","Ver más","Test de categoria","descripcion corta obligatoria?","Publicado el 01/01/0001","Ver más","Testeoteseto","descripcion de testeo","Publicado el 01/01/0001","Ver más","Testtestestse","descripcion de testeo","Publicado el 01/01/0001","Ver más","Derechos Reservados ® Digital-Mind © "]
+[2025-05-17 03:40:41] Result of json_decode: Array
 (
     [0] => Crear Blog
     [1] => Categoría
@@ -3013,26 +3241,71 @@ Secondary education is an exciting journey of discovery and growth. By strengthe
     [5] => Iniciar sesión
     [6] => Buscar...
     [7] => Más Reciente
-    [8] => Montesori
-    [9] => El Método Montessori es un modelo educativo revolucionario desarrollado por la Dra. María Montessori (1870-1952), primera mujer médico en Italia y pionera en pedagogía científica. Su enfoque se basa en la "autonomía, la libertad con límites" y el respeto 
-    [10] => Publicado el 09/09/0091
+    [8] => Testeooooo
+    [9] => testeoooootesteooooo
+    [10] => Publicado el 01/01/0001
     [11] => Ver más
-    [12] => A
-    [13] => a
-    [14] => Publicado el 01/01/0001
+    [12] => Claves para una educación secundaria significativa y transformadora
+    [13] => La educación secundaria es un período crucial de transición y crecimiento. Exploraremos estrategias para el éxito académico, el desarrollo de habilidades de pensamiento crítico, la exploración de intereses, el fomento de la autonomía y la preparación para
+    [14] => Publicado el 22/05/2025
     [15] => Ver más
-    [16] => A
-    [17] => 2
-    [18] => Publicado el 01/01/0001
+    [16] => Claves para una educación primaria sólida y estimulante
+    [17] => La educación primaria es la base fundamental para el desarrollo académico, social y emocional de los niños. Exploraremos estrategias pedagógicas efectivas, la importancia de un ambiente de aprendizaje positivo, el fomento de habilidades clave y la colabor
+    [18] => Publicado el 21/05/2025
     [19] => Ver más
-    [20] => Derechos Reservados ® Digital-Mind © 
+    [20] => Claves para una educación exitosa y un futuro brillante
+    [21] => La preparatoria es una etapa crucial en la vida académica y personal. Exploraremos estrategias efectivas para el éxito académico, la exploración vocacional, el desarrollo de habilidades socioemocionales y la preparación para el siguiente paso, ya sea la u
+    [22] => Publicado el 20/05/2025
+    [23] => Ver más
+    [24] => Desbloquea tu potencial: explorando diversos métodos de aprendizaje efectivos
+    [25] => <br />
+<b>Warning</b>:  Undefined array key "descripcion_corta" in <b>C:\xampp\htdocs\Digital-Mind\PHP\blog_edit.php</b> on line <b>89</b><br />
+    [26] => Publicado el 19/05/2025
+    [27] => Ver más
+    [28] => Desbloquea tu voz: claves para desarrollar habilidades de redacción impactantes
+    [29] => Sumérgete en el arte de la escritura efectiva. Exploraremos técnicas esenciales, consejos prácticos y estrategias para mejorar tu claridad, concisión y capacidad de persuasión a través de la palabra escrita.
+    [30] => Publicado el 18/05/2025
+    [31] => Ver más
+    [32] => La educación como brújula vocacional
+    [33] => Explora cómo la educación en sus diversas formas puede ser una herramienta poderosa para descubrir tus intereses, habilidades y, en última instancia, tu vocación. Analizaremos cómo diferentes áreas del aprendizaje pueden guiarte hacia un camino profesiona
+    [34] => Publicado el 17/06/2025
+    [35] => Ver más
+    [36] => Explorando el mundo con ciencia y matemáticas
+    [37] => Descubre cómo la ciencia y las matemáticas se entrelazan para ayudarnos a comprender el mundo que nos rodea. Exploraremos experimentos divertidos, problemas desafiantes y la importancia de cultivar la curiosidad en estas áreas desde una edad temprana.
+    [38] => Publicado el 16/05/2025
+    [39] => Ver más
+    [40] => El poder de la curiosidad en el aprendizaje infantil
+    [41] => Descubre cómo fomentar la curiosidad natural de los niños puede ser la clave para un aprendizaje más profundo y significativo. Exploramos estrategias prácticas y beneficios a largo plazo de cultivar esta valiosa habilidad desde temprana edad.
+    [42] => Publicado el 15/05/2025
+    [43] => Ver más
+    [44] => Tsetestsetset
+    [45] => tsetestsetset
+    [46] => Publicado el 01/01/0001
+    [47] => Ver más
+    [48] => Test de categoria final
+    [49] => escuela primaria
+    [50] => Publicado el 01/01/0002
+    [51] => Ver más
+    [52] => Test de categoria
+    [53] => descripcion corta obligatoria?
+    [54] => Publicado el 01/01/0001
+    [55] => Ver más
+    [56] => Testeoteseto
+    [57] => descripcion de testeo
+    [58] => Publicado el 01/01/0001
+    [59] => Ver más
+    [60] => Testtestestse
+    [61] => descripcion de testeo
+    [62] => Publicado el 01/01/0001
+    [63] => Ver más
+    [64] => Derechos Reservados ® Digital-Mind © 
 )
 
-[2025-05-16 20:37:39] Target language: EN
-[2025-05-16 20:37:39] Data sent to DeepL API (JSON): {"text":["Crear Blog","Categor\u00eda","Acerca de","Pagina de contacto","Traducir","Iniciar sesi\u00f3n","Buscar...","M\u00e1s Reciente","Montesori","El M\u00e9todo Montessori es un modelo educativo revolucionario desarrollado por la Dra. Mar\u00eda Montessori (1870-1952), primera mujer m\u00e9dico en Italia y pionera en pedagog\u00eda cient\u00edfica. Su enfoque se basa en la \"autonom\u00eda, la libertad con l\u00edmites\" y el respeto ","Publicado el 09\/09\/0091","Ver m\u00e1s","A","a","Publicado el 01\/01\/0001","Ver m\u00e1s","A","2","Publicado el 01\/01\/0001","Ver m\u00e1s","Derechos Reservados \u00ae Digital-Mind \u00a9 "],"target_lang":"EN"}
-[2025-05-16 20:37:41] DeepL API HTTP Code: 200
-[2025-05-16 20:37:41] DeepL API Response: {"translations":[{"detected_source_language":"EN","text":"Crear Blog"},{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Translate"},{"detected_source_language":"ES","text":"Login"},{"detected_source_language":"ES","text":"Search..."},{"detected_source_language":"ES","text":"Most Recent"},{"detected_source_language":"IT","text":"Montesori"},{"detected_source_language":"ES","text":"The Montessori Method is a revolutionary educational model developed by Dr. Maria Montessori (1870-1952), the first woman doctor in Italy and a pioneer in scientific pedagogy. Its approach is based on \"autonomy, freedom with limits\" and respect for the child."},{"detected_source_language":"ES","text":"Published on 09/09/0091"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"EN","text":"A"},{"detected_source_language":"EN","text":"a"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"EN","text":"A"},{"detected_source_language":"EN","text":"2"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Copyright ® Digital-Mind © All Rights Reserved"}]}
-[2025-05-16 20:37:41] Extracted translated texts: Array
+[2025-05-17 03:40:41] Target language: EN
+[2025-05-17 03:40:41] Data sent to DeepL API (JSON): {"text":["Crear Blog","Categor\u00eda","Acerca de","Pagina de contacto","Traducir","Iniciar sesi\u00f3n","Buscar...","M\u00e1s Reciente","Testeooooo","testeoooootesteooooo","Publicado el 01\/01\/0001","Ver m\u00e1s","Claves para una educaci\u00f3n secundaria significativa y transformadora","La educaci\u00f3n secundaria es un per\u00edodo crucial de transici\u00f3n y crecimiento. Exploraremos estrategias para el \u00e9xito acad\u00e9mico, el desarrollo de habilidades de pensamiento cr\u00edtico, la exploraci\u00f3n de intereses, el fomento de la autonom\u00eda y la preparaci\u00f3n para","Publicado el 22\/05\/2025","Ver m\u00e1s","Claves para una educaci\u00f3n primaria s\u00f3lida y estimulante","La educaci\u00f3n primaria es la base fundamental para el desarrollo acad\u00e9mico, social y emocional de los ni\u00f1os. Exploraremos estrategias pedag\u00f3gicas efectivas, la importancia de un ambiente de aprendizaje positivo, el fomento de habilidades clave y la colabor","Publicado el 21\/05\/2025","Ver m\u00e1s","Claves para una educaci\u00f3n exitosa y un futuro brillante","La preparatoria es una etapa crucial en la vida acad\u00e9mica y personal. Exploraremos estrategias efectivas para el \u00e9xito acad\u00e9mico, la exploraci\u00f3n vocacional, el desarrollo de habilidades socioemocionales y la preparaci\u00f3n para el siguiente paso, ya sea la u","Publicado el 20\/05\/2025","Ver m\u00e1s","Desbloquea tu potencial: explorando diversos m\u00e9todos de aprendizaje efectivos","<br \/>\n<b>Warning<\/b>:  Undefined array key \"descripcion_corta\" in <b>C:\\xampp\\htdocs\\Digital-Mind\\PHP\\blog_edit.php<\/b> on line <b>89<\/b><br \/>","Publicado el 19\/05\/2025","Ver m\u00e1s","Desbloquea tu voz: claves para desarrollar habilidades de redacci\u00f3n impactantes","Sum\u00e9rgete en el arte de la escritura efectiva. Exploraremos t\u00e9cnicas esenciales, consejos pr\u00e1cticos y estrategias para mejorar tu claridad, concisi\u00f3n y capacidad de persuasi\u00f3n a trav\u00e9s de la palabra escrita.","Publicado el 18\/05\/2025","Ver m\u00e1s","La educaci\u00f3n como br\u00fajula vocacional","Explora c\u00f3mo la educaci\u00f3n en sus diversas formas puede ser una herramienta poderosa para descubrir tus intereses, habilidades y, en \u00faltima instancia, tu vocaci\u00f3n. Analizaremos c\u00f3mo diferentes \u00e1reas del aprendizaje pueden guiarte hacia un camino profesiona","Publicado el 17\/06\/2025","Ver m\u00e1s","Explorando el mundo con ciencia y matem\u00e1ticas","Descubre c\u00f3mo la ciencia y las matem\u00e1ticas se entrelazan para ayudarnos a comprender el mundo que nos rodea. Exploraremos experimentos divertidos, problemas desafiantes y la importancia de cultivar la curiosidad en estas \u00e1reas desde una edad temprana.","Publicado el 16\/05\/2025","Ver m\u00e1s","El poder de la curiosidad en el aprendizaje infantil","Descubre c\u00f3mo fomentar la curiosidad natural de los ni\u00f1os puede ser la clave para un aprendizaje m\u00e1s profundo y significativo. Exploramos estrategias pr\u00e1cticas y beneficios a largo plazo de cultivar esta valiosa habilidad desde temprana edad.","Publicado el 15\/05\/2025","Ver m\u00e1s","Tsetestsetset","tsetestsetset","Publicado el 01\/01\/0001","Ver m\u00e1s","Test de categoria final","escuela primaria","Publicado el 01\/01\/0002","Ver m\u00e1s","Test de categoria","descripcion corta obligatoria?","Publicado el 01\/01\/0001","Ver m\u00e1s","Testeoteseto","descripcion de testeo","Publicado el 01\/01\/0001","Ver m\u00e1s","Testtestestse","descripcion de testeo","Publicado el 01\/01\/0001","Ver m\u00e1s","Derechos Reservados \u00ae Digital-Mind \u00a9 "],"target_lang":"EN"}
+[2025-05-17 03:40:43] DeepL API HTTP Code: 200
+[2025-05-17 03:40:43] DeepL API Response: {"translations":[{"detected_source_language":"EN","text":"Crear Blog"},{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Translate"},{"detected_source_language":"ES","text":"Login"},{"detected_source_language":"ES","text":"Search..."},{"detected_source_language":"ES","text":"Most Recent"},{"detected_source_language":"ET","text":"Testeooooo"},{"detected_source_language":"ET","text":"testeoooootesteooooo"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Keys to a meaningful and transformative secondary education."},{"detected_source_language":"ES","text":"Secondary education is a crucial period of transition and growth. We will explore strategies for academic success, developing critical thinking skills, exploring interests, fostering autonomy, and preparing for"},{"detected_source_language":"ES","text":"Published on 05/22/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Keys to a solid and stimulating primary education"},{"detected_source_language":"ES","text":"Primary education is the fundamental foundation for children's academic, social and emotional development. We will explore effective pedagogical strategies, the importance of a positive learning environment, the promotion of key skills and collaboration."},{"detected_source_language":"ES","text":"Published on 05/21/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Keys to a successful education and a bright future"},{"detected_source_language":"ES","text":"High school is a crucial stage in academic and personal life. We will explore effective strategies for academic success, vocational exploration, social-emotional skill development, and preparation for the next step, whether it is college or college."},{"detected_source_language":"ES","text":"Published on 20/05/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Unlocking your potential: exploring various effective learning methods"},{"detected_source_language":"EN","text":"<br />\n<b>Warning</b>:  Undefined array key \"descripcion_corta\" in <b>C:\\xampp\\htdocs\\Digital-Mind\\PHP\\blog_edit.php</b> on line <b>89</b><br />"},{"detected_source_language":"ES","text":"Published on 19/05/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Unlocking your voice: keys to developing powerful writing skills"},{"detected_source_language":"ES","text":"Immerse yourself in the art of effective writing. We will explore essential techniques, practical tips and strategies to improve your clarity, conciseness and persuasiveness through the written word."},{"detected_source_language":"ES","text":"Published on 05/18/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Education as a vocational compass"},{"detected_source_language":"ES","text":"Explore how education in its various forms can be a powerful tool for discovering your interests, skills and, ultimately, your vocation. We will look at how different areas of learning can guide you toward a career path."},{"detected_source_language":"ES","text":"Published on 06/17/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Exploring the world with science and mathematics"},{"detected_source_language":"ES","text":"Discover how science and mathematics intertwine to help us understand the world around us. We will explore fun experiments, challenging problems and the importance of cultivating curiosity in these areas from an early age."},{"detected_source_language":"ES","text":"Published on 16/05/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"The power of curiosity in children's learning"},{"detected_source_language":"ES","text":"Discover how fostering children's natural curiosity can be the key to deeper, more meaningful learning. We explore practical strategies and long-term benefits of cultivating this valuable skill from an early age."},{"detected_source_language":"ES","text":"Published on 05/15/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ET","text":"Tsetestsets"},{"detected_source_language":"ET","text":"tsetestsets"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"RO","text":"Final category test"},{"detected_source_language":"ES","text":"elementary school"},{"detected_source_language":"ES","text":"Published on 01/01/0002"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"RO","text":"Category test"},{"detected_source_language":"ES","text":"short description required?"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ET","text":"Testeoteseto"},{"detected_source_language":"ES","text":"description of testeo"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"DE","text":"Test tests"},{"detected_source_language":"ES","text":"description of testeo"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Copyright ® Digital-Mind © All Rights Reserved"}]}
+[2025-05-17 03:40:43] Extracted translated texts: Array
 (
     [0] => Crear Blog
     [1] => Category
@@ -3042,21 +3315,67 @@ Secondary education is an exciting journey of discovery and growth. By strengthe
     [5] => Login
     [6] => Search...
     [7] => Most Recent
-    [8] => Montesori
-    [9] => The Montessori Method is a revolutionary educational model developed by Dr. Maria Montessori (1870-1952), the first woman doctor in Italy and a pioneer in scientific pedagogy. Its approach is based on "autonomy, freedom with limits" and respect for the child.
-    [10] => Published on 09/09/0091
+    [8] => Testeooooo
+    [9] => testeoooootesteooooo
+    [10] => Published on 01/01/0001
     [11] => See more
-    [12] => A
-    [13] => a
-    [14] => Published on 01/01/0001
+    [12] => Keys to a meaningful and transformative secondary education.
+    [13] => Secondary education is a crucial period of transition and growth. We will explore strategies for academic success, developing critical thinking skills, exploring interests, fostering autonomy, and preparing for
+    [14] => Published on 05/22/2025
     [15] => See more
-    [16] => A
-    [17] => 2
-    [18] => Published on 01/01/0001
+    [16] => Keys to a solid and stimulating primary education
+    [17] => Primary education is the fundamental foundation for children's academic, social and emotional development. We will explore effective pedagogical strategies, the importance of a positive learning environment, the promotion of key skills and collaboration.
+    [18] => Published on 05/21/2025
     [19] => See more
-    [20] => Copyright ® Digital-Mind © All Rights Reserved
+    [20] => Keys to a successful education and a bright future
+    [21] => High school is a crucial stage in academic and personal life. We will explore effective strategies for academic success, vocational exploration, social-emotional skill development, and preparation for the next step, whether it is college or college.
+    [22] => Published on 20/05/2025
+    [23] => See more
+    [24] => Unlocking your potential: exploring various effective learning methods
+    [25] => <br />
+<b>Warning</b>:  Undefined array key "descripcion_corta" in <b>C:\xampp\htdocs\Digital-Mind\PHP\blog_edit.php</b> on line <b>89</b><br />
+    [26] => Published on 19/05/2025
+    [27] => See more
+    [28] => Unlocking your voice: keys to developing powerful writing skills
+    [29] => Immerse yourself in the art of effective writing. We will explore essential techniques, practical tips and strategies to improve your clarity, conciseness and persuasiveness through the written word.
+    [30] => Published on 05/18/2025
+    [31] => See more
+    [32] => Education as a vocational compass
+    [33] => Explore how education in its various forms can be a powerful tool for discovering your interests, skills and, ultimately, your vocation. We will look at how different areas of learning can guide you toward a career path.
+    [34] => Published on 06/17/2025
+    [35] => See more
+    [36] => Exploring the world with science and mathematics
+    [37] => Discover how science and mathematics intertwine to help us understand the world around us. We will explore fun experiments, challenging problems and the importance of cultivating curiosity in these areas from an early age.
+    [38] => Published on 16/05/2025
+    [39] => See more
+    [40] => The power of curiosity in children's learning
+    [41] => Discover how fostering children's natural curiosity can be the key to deeper, more meaningful learning. We explore practical strategies and long-term benefits of cultivating this valuable skill from an early age.
+    [42] => Published on 05/15/2025
+    [43] => See more
+    [44] => Tsetestsets
+    [45] => tsetestsets
+    [46] => Published on 01/01/0001
+    [47] => See more
+    [48] => Final category test
+    [49] => elementary school
+    [50] => Published on 01/01/0002
+    [51] => See more
+    [52] => Category test
+    [53] => short description required?
+    [54] => Published on 01/01/0001
+    [55] => See more
+    [56] => Testeoteseto
+    [57] => description of testeo
+    [58] => Published on 01/01/0001
+    [59] => See more
+    [60] => Test tests
+    [61] => description of testeo
+    [62] => Published on 01/01/0001
+    [63] => See more
+    [64] => Copyright ® Digital-Mind © All Rights Reserved
 )
 
+<<<<<<< HEAD
 [2025-05-16 20:37:41] Successfully returned translated texts.
 [2025-05-16 20:37:41] Received POST request.
 [2025-05-16 20:37:41] POST data: Array
@@ -3444,3 +3763,6 @@ Secondary education is an exciting journey of discovery and growth. By strengthe
 )
 
 [2025-05-16 23:27:56] Successfully returned translated texts.
+=======
+[2025-05-17 03:40:43] Successfully returned translated texts.
+>>>>>>> 3aaa26d1ef8d1350a5d5a1d69e47d4545aeeed0a
