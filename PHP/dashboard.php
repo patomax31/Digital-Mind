@@ -1,4 +1,10 @@
 <?php
+if(!defined('DASHBOARD_INCLUDED')) {
+    define('DASHBOARD_INCLUDED', true);
+    // Resto del código del dashboard
+}
+?>
+<?php
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
@@ -21,7 +27,7 @@ if ($resultRecientes->num_rows > 0) {
 // IMPORTANTE: Vamos a cerrar la conexión aquí ya que no necesitamos mantenerla abierta
 // index.php creará su propia conexión cuando la necesite
 if (isset($conn)) {
-    $conn->close();
+
 }
 ?>
 

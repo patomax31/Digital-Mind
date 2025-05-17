@@ -128,7 +128,7 @@ include 'header.php';
 
     <style>
 /* Estilos para el carrusel (aún más pequeño y adaptable) */
-.related-posts-carousel {
+.main .related-posts-carousel { 
     margin: 20px 0; /* Reducir aún más el margen vertical */
     padding: 15px 0; /* Reducir aún más el padding vertical */
     border-top: 1px solid #eee; /* Borde aún más ligero */
@@ -300,6 +300,7 @@ include 'header.php';
 }
 </style>
 </head>
+
 <body>
 
 <div class="container">
@@ -410,9 +411,9 @@ include 'header.php';
                         <?php foreach ($slides as $index => $slide): ?>
                             <div class="carousel-slide">
                                 <?php
-                                $imagen = !empty($slide['imagen'])
-                                    ? '../images/publicaciones/' . htmlspecialchars($slide['imagen'])
-                                    : '../images/escuela1.jpg';
+                               $imagen = !empty($slide['imagen'])
+    ? '../images/publicaciones/' . htmlspecialchars($slide['imagen'], ENT_QUOTES, 'UTF-8') // Asegúrate de especificar el encoding
+    : '../images/escuela1.jpg';
                                 ?>
                                 <img src="<?php echo $imagen; ?>" alt="<?php echo htmlspecialchars($slide['titular']); ?>" class="carousel-image">
 
@@ -501,6 +502,7 @@ include 'header.php';
 </main>
 
 <?php
+include 'dashboard.php'; 
 include 'footer.php';
 $conn->close();
 ?>
