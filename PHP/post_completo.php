@@ -378,28 +378,25 @@ include 'header.php';
         </article>
 
         <!-- Sección de valoración -->
-        <section class="rating-section">
-            <h3>¿Qué te pareció este post?</h3>
-            <form method="post" action="" class="rating-form" id="ratingForm">
-                <div class="star-rating">
-                    <input type="radio" id="star1" name="rating" value="1">
-                    <label for="star1">★</label>
-                    
-                    <input type="radio" id="star2" name="rating" value="2">
-                    <label for="star2">★</label>
-                    
-                    <input type="radio" id="star3" name="rating" value="3">
-                    <label for="star3">★</label>
-                    
-                    <input type="radio" id="star4" name="rating" value="4">
-                    <label for="star4">★</label>
-                    
-                    <input type="radio" id="star5" name="rating" value="5">
-                    <label for="star5">★</label>
-                </div>
-                <input type="submit" name="submit_rating" value="Enviar valoración" class="rating-submit-btn">
-            </form>
-        </section>
+           <!-- Sección de valoración -->
+    <section class="rating-section">
+        <h3>¿Qué te pareció este post?</h3>
+        <!-- Asegúrate de que la acción del formulario apunte al script que procesará la valoración -->
+        <!-- También necesitas una forma de pasar el ID del post, aquí usamos un input oculto -->
+        <form method="post" action="" class="rating-form" id="ratingForm">
+            <!-- Reemplaza '<?php echo $post_id; ?>' con la variable PHP que contiene el ID del post -->
+            <input type="hidden" name="post_id" value="<?php echo $post_id; ?>">
+            <div class="star-rating">
+                <!-- Estrellas en orden inverso para CSS RTL -->
+                <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+                <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+            </div>
+            <input type="submit" name="submit_rating" value="Enviar valoración" class="rating-submit-btn">
+        </form>
+    </section>
 
         <!-- Sección de referencias -->
         <?php if (!empty($post['referencia'])): ?>

@@ -134,3 +134,7 @@ CREATE TABLE `comentarios` (
 
 INSERT INTO `admin` (`id`, `nombre`,`email` `contraseña`) VALUES 
 (100, 'carlos','carlosleonardorosas@gmail.com', '$2y$10$TuSaltOHashAquí...');
+
+ALTER TABLE `publicaciones_2`
+ADD COLUMN `total_ratings` INT DEFAULT 0,
+ADD COLUMN `rating_count` INT DEFAULT 0;

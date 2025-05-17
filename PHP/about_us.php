@@ -1,6 +1,7 @@
 <?php 
 $pageTitle = "Sobre Nosotros | DigitalMind";
 include 'header.php'; 
+include 'dashboard.php';
 ?>
 
 <!DOCTYPE html>
