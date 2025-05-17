@@ -68,6 +68,28 @@ try {
     // Obtener comentarios
     $comentarios = $commentsTableExists ? $conn->query("SELECT * FROM comentarios WHERE id_post = $id ORDER BY fecha DESC") : false;
 
+    // Obtener posts para el carrusel (excluyendo el actual, orden aleatorio, mínimo 3)
+    $sql_carrusel = "SELECT * FROM publicaciones_2 WHERE id != $id ORDER BY RAND() LIMIT 5";
+    $resultado_carrusel = $conn->query($sql_carrusel);
+    $slides = [];
+    if ($resultado_carrusel->num_rows > 0) {
+        while ($fila = $resultado_carrusel->fetch_assoc()) {
+            $slides[] = $fila;
+        }
+    }
+
+    // Si hay menos de 3 posts, obtener más sin excluir el actual (para asegurar mínimo 3)
+    if (count($slides) < 3) {
+        $sql_fallback = "SELECT * FROM publicaciones_2 ORDER BY RAND() LIMIT " . (3 - count($slides));
+        $resultado_fallback = $conn->query($sql_fallback);
+        while ($fila = $resultado_fallback->fetch_assoc()) {
+            // Evitar duplicados
+            if ($fila['id'] != $id && !in_array($fila['id'], array_column($slides, 'id'))) {
+                $slides[] = $fila;
+            }
+        }
+    }
+
 } catch (mysqli_sql_exception $e) {
     die("Error de base de datos: " . $e->getMessage());
 } catch (Exception $e) {
@@ -87,7 +109,7 @@ include 'header.php';
     <link rel="stylesheet" href="../css/blog_style.css">
     <link rel="stylesheet" href="../css/blog_page_3.js">
     
-    <!-- Meta tags para redes sociales (Open Graph y Twitter) -->
+    <!-- Meta tags para redes sociales -->
     <meta property="og:title" content="<?php echo htmlspecialchars($post['titular']); ?>">
     <meta property="og:description" content="<?php echo htmlspecialchars($post['descripcion_corta']); ?>">
     <meta property="og:url" content="<?php echo $canonicalUrl; ?>">
@@ -103,6 +125,190 @@ include 'header.php';
     
     <!-- Favicon -->
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+
+    <!-- Estilos para el carrusel -->
+    <style>
+    .related-posts-carousel {
+        margin: 60px 0;
+        padding: 30px 0;
+        border-top: 1px solid #eaeaea;
+        border-bottom: 1px solid #eaeaea;
+    }
+
+    .related-posts-carousel h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #2c3e50;
+        position: relative;
+    }
+
+    .related-posts-carousel h2:after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 3px;
+        background: #4a6e82;
+        margin: 10px auto 0;
+    }
+
+    .carousel-container {
+        width: 95%;
+        position: relative;
+        margin: 30px auto;
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .carousel-container:hover {
+        transform: scale(1.02);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .carousel-slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-slide {
+        position: relative;
+        height: 500px;
+        flex-shrink: 0;
+    }
+
+    .carousel-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .carousel-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+        color: white;
+        padding: 20px;
+    }
+
+    .carousel-caption h3 {
+        margin: 0 0 10px 0;
+        font-size: 24px;
+        color: white !important; /* Texto blanco */
+        padding: 5px;
+        display: inline-block;
+        border-radius: 5px;
+    }
+
+    .carousel-caption p {
+        margin: 0;
+        font-size: 16px;
+        color: white !important; /* Texto blanco */
+    }
+
+    .carousel-date {
+        font-size: 14px;
+        opacity: 0.8;
+        margin-bottom: 10px;
+        display: block;
+        color: white !important; /* Texto blanco */
+    }
+
+    .carousel-link {
+        display: inline-block;
+        margin-top: 10px;
+        color: white;
+        text-decoration: none;
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 8px 20px;
+        border-radius: 25px;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .carousel-link:hover {
+        background-color: rgba(255, 255, 255, 0.4);
+        transform: scale(1.1);
+    }
+
+    .carousel-controls {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        pointer-events: none;
+    }
+
+    .carousel-control {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        margin: 0 15px;
+        transition: background-color 0.3s;
+        pointer-events: auto;
+    }
+
+    .carousel-control:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .carousel-indicators {
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .carousel-indicator {
+        width: 12px;
+        height: 12px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .carousel-indicator.active {
+        background-color: white;
+    }
+
+    @media (max-width: 768px) {
+        .carousel-slide {
+            height: 400px;
+        }
+        
+        /* Mostrar solo 1 slide a la vez en móviles */
+        .carousel-slide {
+            width: 100% !important;
+        }
+        
+        .carousel-slides {
+            width: 100% !important;
+        }
+        
+        .carousel-caption h3 {
+            font-size: 20px;
+        }
+
+        .carousel-caption p {
+            font-size: 14px;
+        }
+    }
+    </style>
 </head>
 <body>
 
@@ -129,8 +335,6 @@ include 'header.php';
                 <span class="category-tag"><?php echo htmlspecialchars($post['categoria']); ?></span>
                 <h1><?php echo htmlspecialchars($post['titular']); ?></h1>
                 <p><?php echo htmlspecialchars($post['descripcion_corta']); ?></p>
-                
-                
                 
                 <div class="post-meta">
                     <p>Publicado por <strong><?php echo htmlspecialchars($post['autor'] ?? 'Admin'); ?></strong> el <?php echo date('d/m/Y', strtotime($post['fecha'])); ?></p>
@@ -207,8 +411,59 @@ include 'header.php';
         </section>
         <?php endif; ?>
 
+        <!-- Carrusel "Podría interesarte" -->
+        <section class="related-posts-carousel">
+            <h2>Podría interesarte</h2>
+            <?php if (!empty($slides)): ?>
+                <div class="carousel-container">
+                    <div class="carousel-slides" id="postCarouselSlides">
+                        <?php foreach ($slides as $index => $slide): ?>
+                            <div class="carousel-slide">
+                                <?php
+                                $imagen = !empty($slide['imagen'])
+                                    ? '../images/publicaciones/' . htmlspecialchars($slide['imagen'])
+                                    : '../images/escuela1.jpg';
+                                ?>
+                                <img src="<?php echo $imagen; ?>" alt="<?php echo htmlspecialchars($slide['titular']); ?>" class="carousel-image">
+
+                                <div class="carousel-caption">
+                                    <h3><?php echo htmlspecialchars($slide['titular']); ?></h3>
+                                    <span class="carousel-date">Publicado el <?php echo date("d/m/Y", strtotime($slide['fecha'])); ?></span>
+                                    <p><?php echo htmlspecialchars(substr($slide['descripcion_corta'], 0, 120) . (strlen($slide['descripcion_corta']) > 120 ? '...' : '')); ?></p>
+                                    <a href="post_completo.php?id=<?php echo $slide['id']; ?>" class="carousel-link">Ver más</a>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+
+                    <?php if (count($slides) > 1): ?>
+                        <div class="carousel-controls">
+                            <button class="carousel-control post-carousel-prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                                </svg>
+                            </button>
+                            <button class="carousel-control post-carousel-next">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="carousel-indicators" id="postCarouselIndicators">
+                            <?php for ($i = 0; $i < count($slides); $i++): ?>
+                                <div class="carousel-indicator <?php echo $i === 0 ? 'active' : ''; ?>" data-index="<?php echo $i; ?>"></div>
+                            <?php endfor; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            <?php else: ?>
+                <p>No hay publicaciones relacionadas disponibles.</p>
+            <?php endif; ?>
+        </section>
+
         <!-- Sección de comentarios -->
-        <section class="comments-section">
+        <section class="comments-section" id="comments">
             <h2>Comentarios</h2>
 
             <?php if (!$commentsTableExists): ?>
@@ -274,85 +529,6 @@ $conn->close();
 
 <!-- Font Awesome para los iconos -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-<style>
-    /* Estilos para los botones de compartir */
-    .social-share-buttons {
-        margin: 20px 0;
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-    
-    .social-share-buttons span {
-        margin-right: 10px;
-        font-weight: bold;
-    }
-    
-    .social-button, .share-button {
-        padding: 8px 15px;
-        border-radius: 4px;
-        color: white;
-        text-decoration: none;
-        font-size: 14px;
-        display: inline-flex;
-        align-items: center;
-        gap: 5px;
-        transition: all 0.3s ease;
-    }
-    
-    .share-button {
-        padding: 10px;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        justify-content: center;
-    }
-    
-    .social-button:hover, .share-button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    
-    .facebook, .share-button.facebook {
-        background-color: #3b5998;
-    }
-    
-    .twitter, .share-button.twitter {
-        background-color: #1da1f2;
-    }
-    
-    .linkedin, .share-button.linkedin {
-        background-color: #0077b5;
-    }
-    
-    .whatsapp, .share-button.whatsapp {
-        background-color: #25d366;
-    }
-    
-    .email, .share-button.email {
-        background-color: #dd4b39;
-    }
-    
-    .social-share-bottom {
-        margin: 40px 0;
-        padding: 20px;
-        background: #f8f9fa;
-        border-radius: 8px;
-        text-align: center;
-    }
-    
-    .social-share-bottom h3 {
-        margin-bottom: 15px;
-    }
-    
-    .share-buttons {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-    }
-</style>
 
 <script>
 // Función para compartir en redes sociales
@@ -420,6 +596,80 @@ function setupStarRating() {
     }
 }
 
+// Funcionalidad del carrusel
+function setupCarousel() {
+    const slides = document.getElementById('postCarouselSlides');
+    const indicators = document.querySelectorAll('#postCarouselIndicators .carousel-indicator');
+    const prevBtn = document.querySelector('.post-carousel-prev');
+    const nextBtn = document.querySelector('.post-carousel-next');
+    const carouselContainer = document.querySelector('.carousel-container');
+    
+    let currentIndex = 0;
+    const slideCount = <?php echo count($slides); ?>;
+
+    if (slideCount === 0) {
+        document.querySelector('.related-posts-carousel').style.display = 'none';
+        return;
+    }
+
+    // Ajustar el ancho del contenedor de slides según la cantidad
+    slides.style.width = `${slideCount * 100}%`;
+    
+    // Ajustar el ancho de cada slide
+    document.querySelectorAll('.carousel-slide').forEach(slide => {
+        slide.style.width = `${100 / slideCount}%`;
+    });
+
+    function showSlide(index) {
+        if (index < 0) index = slideCount - 1;
+        if (index >= slideCount) index = 0;
+
+        currentIndex = index;
+        slides.style.transform = `translateX(-${currentIndex * (100 / slideCount)}%)`;
+
+        indicators.forEach((indicator, i) => {
+            indicator.classList.toggle('active', i === currentIndex);
+        });
+    }
+
+    prevBtn.addEventListener('click', () => {
+        showSlide(currentIndex - 1);
+    });
+
+    nextBtn.addEventListener('click', () => {
+        showSlide(currentIndex + 1);
+    });
+
+    // Configurar indicadores solo si hay más de 1 slide
+    if (slideCount > 1) {
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                showSlide(index);
+            });
+        });
+
+        let interval = setInterval(() => {
+            showSlide(currentIndex + 1);
+        }, 5000);
+
+        carouselContainer.addEventListener('mouseenter', () => {
+            clearInterval(interval);
+        });
+
+        carouselContainer.addEventListener('mouseleave', () => {
+            interval = setInterval(() => {
+                showSlide(currentIndex + 1);
+            }, 5000);
+        });
+    } else {
+        // Ocultar controles si solo hay 1 slide
+        document.querySelector('.carousel-controls').style.display = 'none';
+        document.querySelector('.carousel-indicators').style.display = 'none';
+    }
+
+    showSlide(0);
+}
+
 // Mostrar modal
 function showModal(title, message) {
     document.getElementById('modalTitle').textContent = title;
@@ -430,6 +680,7 @@ function showModal(title, message) {
 // Inicializar todo cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', function() {
     setupStarRating();
+    setupCarousel();
     
     // Mostrar feedback después de que todo esté cargado
     <?php if ($ratingFeedback === 'success'): ?>

@@ -11,6 +11,7 @@
 
   <?php include 'dashboard.php'; ?>
   <?php include 'header.php'; ?>
+  
 
 
  <button id="scrollToTopBtn" class="scroll-top-btn" aria-label="Volver arriba">
