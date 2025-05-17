@@ -121,3 +121,18 @@ ADD COLUMN `categoria` VARCHAR(50) NOT NULL AFTER `imagen`;
 ALTER TABLE usuarios ADD COLUMN rol ENUM('admin', 'usuario') DEFAULT 'usuario';
 
 ALTER TABLE usuarios ADD COLUMN rol VARCHAR(20) DEFAULT 'usuario';
+
+CREATE TABLE `contacto` (
+  `id` int(7) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  `apellido` varchar(30) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `mensaje` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+ALTER TABLE `contacto`
+  ADD PRIMARY KEY (`id`);
+
+  ALTER TABLE `contacto`
+  MODIFY `id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+COMMIT;
