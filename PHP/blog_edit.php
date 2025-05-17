@@ -1,8 +1,32 @@
 <?php
-
 require 'blog_db.php';
 
+// Obtener ID del post
+$id = isset($_GET['id']) && is_numeric($_GET['id']) ? intval($_GET['id']) : null;
+
+// Generar token CSRF si no existe
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+
+// Consulta SQL - Asegúrate de incluir todas las columnas necesarias
+$sql = $id ? "SELECT * FROM publicaciones_2 WHERE id = $id" 
+           : "SELECT * FROM publicaciones_2 ORDER BY id DESC LIMIT 1";
+
+// Obtener datos del post
+$resultado = $conn->query($sql);
+if (!$resultado || $resultado->num_rows === 0) {
+    throw new Exception("Publicación no encontrada");
+}
+
+$post = $resultado->fetch_assoc();
+$id = $post['id'];
+$pageTitle = htmlspecialchars($post['titular']) . ' - DIGITALMIND';
+
+// Verificar si la columna 'contenido' existe, si no, usar valor vacío
+$contenido = isset($post['contenido']) ? $post['contenido'] : '';
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -12,7 +36,7 @@ require 'blog_db.php';
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <!-- TinyMCE -->
-    <script src="https://cdn.tiny.cloud/1/your-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdn.tiny.cloud/1/284zlkwr5hzs5rcf7ehl7m7vwg486wms44e13vnumr38i76e/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <script>
         tinymce.init({
             selector: '#contenido',
@@ -24,7 +48,7 @@ require 'blog_db.php';
     </script>
 </head>
 <body>
-    <?php include 'navbar.php'; ?>
+    <?php include 'dashboard.php'; ?>
     
     <div class="container mt-4">
         <div class="card">
@@ -48,7 +72,7 @@ require 'blog_db.php';
                         <div class="col-md-6">
                             <label for="imagen" class="form-label">Imagen Destacada</label>
                             <input type="file" class="form-control" id="imagen" name="imagen" accept="image/*">
-                            <?php if ($post['imagen']): ?>
+                            <?php if (!empty($post['imagen'])): ?>
                             <div class="mt-2">
                                 <img src="../images/publicaciones/<?php echo htmlspecialchars($post['imagen']); ?>" width="100" class="img-thumbnail">
                                 <div class="form-check mt-2">
@@ -62,26 +86,28 @@ require 'blog_db.php';
                     
                     <div class="mb-3">
                         <label for="descripcion_corta" class="form-label">Descripción Corta</label>
-                        <textarea class="form-control" id="descripcion_corta" name="descripcion_corta" rows="2" required><?php echo htmlspecialchars($post['descripcion_corta']); ?></textarea>
+                        <textarea class="form-control" id="descripcion_corta" name="descripcion_corta" rows="2" required><?php echo htmlspecialchars($descripcion_corta); ?></textarea>
                     </div>
                     
                     <div class="mb-3">
                         <label for="contenido" class="form-label">Contenido</label>
-                        <textarea id="contenido" name="contenido" class="form-control"><?php echo htmlspecialchars_decode($post['contenido']); ?></textarea>
+                        <textarea id="contenido" name="contenido" class="form-control"><?php echo htmlspecialchars_decode($contenido); ?></textarea>
                     </div>
                     
+                    <?php if (isset($post['referencia'])): ?>
                     <div class="mb-3">
                         <label for="referencia" class="form-label">Referencia (URL)</label>
-                        <input type="url" class="form-control" id="referencia" name="referencia" value="<?php echo htmlspecialchars($post['referencia']); ?>">
+                        <input type="url" class="form-control" id="referencia" name="referencia" value="<?php echo htmlspecialchars($referencia); ?>">
                     </div>
+                    <?php endif; ?>
                     
-                    <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+                    <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token'] ?? ''; ?>">
                     
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                         <button type="submit" class="btn btn-primary">
                             <i class="bi bi-save"></i> Actualizar Publicación
                         </button>
-                        <a href="blog_list.php" class="btn btn-secondary">
+                        <a href="admin_panel.php" class="btn btn-secondary">
                             <i class="bi bi-x-circle"></i> Cancelar
                         </a>
                     </div>

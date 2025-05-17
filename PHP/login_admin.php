@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/search.css">
   <title>Login Usuario</title>
- 
+
 </head>
 <body>
   <div class="container">
