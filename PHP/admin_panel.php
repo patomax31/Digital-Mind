@@ -1,9 +1,13 @@
 <?php
 session_start();
 
+if (!isset($_SESSION['admin']) || $_SESSION['admin'] !== true) {
+    header("Location: login.php");
+    exit();
+}
 
 include 'blog_db.php';
-include 'header.php';
+
 
 // Verificar si el usuario es admin
 
@@ -55,7 +59,11 @@ $result = $conn->query($sql);
                 <div class="post">
                     <div class="post-actions">
                         <a href="blog_edit.php?id=<?= $row['id'] ?>" class="btn btn-edit"><i class="fas fa-edit"></i> Editar</a>
+<<<<<<< HEAD
+                        <a href="panel_admin.php?eliminar=<?= $row['id'] ?>" class="btn btn-delete"><i class="fas fa-trash"></i> Eliminar</a>
+=======
                         <a href="admin_panel.php?eliminar=<?= $row['id'] ?>" class="btn btn-delete"><i class="fas fa-trash"></i> Eliminar</a>
+>>>>>>> 3aaa26d1ef8d1350a5d5a1d69e47d4545aeeed0a
                     </div>
 
                     <h3><?= htmlspecialchars($row["titular"]) ?></h3>

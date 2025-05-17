@@ -29,9 +29,7 @@
       <div class="most-recent">Más Reciente</div>
 
       <?php
-      // Creamos una nueva conexión a la base de datos para evitar problemas
-      // con conexiones cerradas anteriormente
-      include 'blog_db.php';
+include 'blog_db.php';  // Incluye la conexión
 
       // Obtener publicaciones de la base de datos con la nueva conexión
       $sql = "SELECT * FROM publicaciones_2 ORDER BY fecha_creacion DESC";
