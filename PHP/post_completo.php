@@ -126,189 +126,179 @@ include 'header.php';
     <!-- Favicon -->
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
 
-    <!-- Estilos para el carrusel -->
     <style>
-    .related-posts-carousel {
-        margin: 60px 0;
-        padding: 30px 0;
-        border-top: 1px solid #eaeaea;
-        border-bottom: 1px solid #eaeaea;
-    }
+/* Estilos para el carrusel (aún más pequeño y adaptable) */
+.related-posts-carousel {
+    margin: 20px 0; /* Reducir aún más el margen vertical */
+    padding: 15px 0; /* Reducir aún más el padding vertical */
+    border-top: 1px solid #eee; /* Borde aún más ligero */
+    border-bottom: 1px solid #eee; /* Borde aún más ligero */
+}
 
-    .related-posts-carousel h2 {
-        text-align: center;
-        margin-bottom: 30px;
-        color: #2c3e50;
-        position: relative;
-    }
+.related-posts-carousel h2 {
+    text-align: center;
+    margin-bottom: 15px; /* Reducir aún más el margen inferior */
+    color: #444;
+    position: relative;
+    font-size: 1.3em; /* Reducir ligeramente el tamaño del título de la sección */
+}
 
-    .related-posts-carousel h2:after {
-        content: '';
-        display: block;
-        width: 80px;
-        height: 3px;
-        background: #4a6e82;
-        margin: 10px auto 0;
-    }
+.related-posts-carousel h2:after {
+    content: '';
+    display: block;
+    width: 40px; /* Reducir aún más el ancho de la línea */
+    height: 1.5px; /* Reducir aún más la altura de la línea */
+    background: #777;
+    margin: 4px auto 0; /* Reducir aún más el margen superior */
+}
 
-    .carousel-container {
-        width: 95%;
-        position: relative;
-        margin: 30px auto;
-        overflow: hidden;
-        border-radius: 15px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    }
+.carousel-container {
+    width: 90%; /* Aumentar un poco para mejor adaptación en anchos menores */
+    max-width: 600px; /* Limitar el ancho máximo en pantallas grandes */
+    position: relative;
+    margin: 15px auto; /* Reducir aún más el margen vertical */
+    overflow: hidden;
+    border-radius: 6px; /* Reducir aún más el radio del borde */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* Reducir aún más la sombra */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
 
-    .carousel-container:hover {
-        transform: scale(1.02);
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-    }
+.carousel-container:hover {
+    transform: scale(1.005); /* Reducir el efecto hover */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+}
 
-    .carousel-slides {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-    }
+.carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
 
+.carousel-slide {
+    position: relative;
+    height: 280px; /* Reducir significativamente la altura del slide */
+    flex-shrink: 0;
+    width: calc(100% / <?php echo count($slides) > 0 ? count($slides) : 1; ?>);
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)); /* Ligeramente menos oscuro */
+    color: white;
+    padding: 8px; /* Reducir aún más el padding del caption */
+}
+
+.carousel-caption h3 {
+    margin: 0 0 3px 0; /* Reducir aún más el margen inferior */
+    font-size: 1em; /* Reducir aún más el tamaño del título */
+    color: white !important;
+    padding: 2px 4px; /* Ajustar el padding del marco */
+    display: inline-block;
+    border-radius: 2px; /* Reducir aún más el radio del borde */
+    background-color: rgba(0, 0, 0, 0.7); /* Marco ligeramente menos oscuro */
+}
+
+.carousel-caption p {
+    margin: 0;
+    font-size: 0.8em; /* Reducir aún más el tamaño de la descripción */
+    color: #ddd !important;
+    display: none; /* Mantener oculta por defecto */
+}
+
+.carousel-date {
+    font-size: 0.7em; /* Reducir aún más el tamaño de la fecha */
+    opacity: 0.6;
+    margin-bottom: 2px; /* Reducir aún más el margen inferior */
+    display: block;
+    color: #ccc !important;
+}
+
+.carousel-link {
+    display: inline-block;
+    margin-top: 3px; /* Reducir aún más el margen superior */
+    color: white;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.05); /* Fondo aún más sutil */
+    padding: 4px 8px; /* Reducir aún más el padding del enlace */
+    border-radius: 12px; /* Reducir aún más el radio del borde */
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 0.7em; /* Reducir aún más el tamaño del enlace */
+}
+
+.carousel-link:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: scale(1.02);
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+}
+
+.carousel-control {
+    background-color: rgba(0, 0, 0, 0.2); /* Fondo aún más sutil */
+    color: white;
+    border: none;
+    width: 25px; /* Reducir aún más el tamaño del control */
+    height: 25px; /* Reducir aún más el tamaño del control */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0 8px; /* Reducir aún más el margen */
+    transition: background-color 0.3s;
+    pointer-events: auto;
+    font-size: 0.9em; /* Reducir aún más el tamaño del icono */
+}
+
+.carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 8px; /* Reducir aún más la distancia desde abajo */
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 4px; /* Reducir aún más el espacio entre indicadores */
+}
+
+.carousel-indicator {
+    width: 6px; /* Reducir aún más el tamaño del indicador */
+    height: 6px; /* Reducir aún más el tamaño del indicador */
+    background-color: rgba(255, 255, 255, 0.2); /* Color aún más claro */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-indicator.active {
+    background-color: white;
+}
+
+@media (max-width: 768px) {
     .carousel-slide {
-        position: relative;
-        height: 500px;
-        flex-shrink: 0;
+        height: 220px; /* Reducir aún más la altura en móviles */
     }
-
-    .carousel-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .carousel-caption {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
-        color: white;
-        padding: 20px;
-    }
-
-    .carousel-caption h3 {
-        margin: 0 0 10px 0;
-        font-size: 24px;
-        color: white !important; /* Texto blanco */
-        padding: 5px;
-        display: inline-block;
-        border-radius: 5px;
-    }
-
-    .carousel-caption p {
-        margin: 0;
-        font-size: 16px;
-        color: white !important; /* Texto blanco */
-    }
-
-    .carousel-date {
-        font-size: 14px;
-        opacity: 0.8;
-        margin-bottom: 10px;
-        display: block;
-        color: white !important; /* Texto blanco */
-    }
-
-    .carousel-link {
-        display: inline-block;
-        margin-top: 10px;
-        color: white;
-        text-decoration: none;
-        background-color: rgba(255, 255, 255, 0.2);
-        padding: 8px 20px;
-        border-radius: 25px;
-        transition: background-color 0.3s, transform 0.3s;
-    }
-
-    .carousel-link:hover {
-        background-color: rgba(255, 255, 255, 0.4);
-        transform: scale(1.1);
-    }
-
-    .carousel-controls {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        pointer-events: none;
-    }
-
-    .carousel-control {
-        background-color: rgba(0, 0, 0, 0.5);
-        color: white;
-        border: none;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        margin: 0 15px;
-        transition: background-color 0.3s;
-        pointer-events: auto;
-    }
-
-    .carousel-control:hover {
-        background-color: rgba(0, 0, 0, 0.7);
-    }
-
-    .carousel-indicators {
-        position: absolute;
-        bottom: 15px;
-        left: 0;
-        right: 0;
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .carousel-indicator {
-        width: 12px;
-        height: 12px;
-        background-color: rgba(255, 255, 255, 0.5);
-        border-radius: 50%;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-
-    .carousel-indicator.active {
-        background-color: white;
-    }
-
-    @media (max-width: 768px) {
-        .carousel-slide {
-            height: 400px;
-        }
-        
-        /* Mostrar solo 1 slide a la vez en móviles */
-        .carousel-slide {
-            width: 100% !important;
-        }
-        
-        .carousel-slides {
-            width: 100% !important;
-        }
-        
-        .carousel-caption h3 {
-            font-size: 20px;
-        }
-
-        .carousel-caption p {
-            font-size: 14px;
-        }
-    }
-    </style>
+}
+</style>
 </head>
 <body>
 
