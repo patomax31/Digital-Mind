@@ -1,5 +1,6 @@
 <?php
 require 'blog_db.php';
+
 session_start();
 
 // Validar ID desde la URL
@@ -12,6 +13,7 @@ if (!$id) {
 if (empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 }
+
 
 // Consultar la publicación por ID
 $sql = "SELECT * FROM publicaciones_2 WHERE id = ?";
@@ -43,6 +45,8 @@ $referencia = $post['referencia'] ?? '';
     <title>Editar Post - Administración</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+<
+
     <script src="https://cdn.tiny.cloud/1/284zlkwr5hzs5rcf7ehl7m7vwg486wms44e13vnumr38i76e/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <script>
         tinymce.init({
@@ -55,6 +59,7 @@ $referencia = $post['referencia'] ?? '';
     </script>
 </head>
 <body>
+<
 <?php include 'dashboard.php'; ?>
 
 <div class="container mt-4">
@@ -124,3 +129,4 @@ $referencia = $post['referencia'] ?? '';
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+>>>>>>> 3aaa26d1ef8d1350a5d5a1d69e47d4545aeeed0a

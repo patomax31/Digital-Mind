@@ -102,7 +102,27 @@ CREATE DATABASE IF NOT EXISTS `test` DEFAULT CHARACTER SET latin1 COLLATE latin1
 USE `test`;
 COMMIT;
 
-CREATE TABLE `admin` (
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+-- Tabla de comentarios
+CREATE TABLE comentarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    comentario TEXT NOT NULL,
+    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+ALTER TABLE `publicaciones_2` 
+ADD COLUMN `categoria` VARCHAR(50) NOT NULL AFTER `imagen`;
+
+ALTER TABLE usuarios ADD COLUMN rol ENUM('admin', 'usuario') DEFAULT 'usuario';
+
+ALTER TABLE usuarios ADD COLUMN rol VARCHAR(20) DEFAULT 'usuario';
+
+CREATE TABLE `contacto` (
   `id` int(7) NOT NULL,
   `nombre` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
@@ -135,6 +155,17 @@ CREATE TABLE `comentarios` (
 INSERT INTO `admin` (`id`, `nombre`,`email` `contraseña`) VALUES 
 (100, 'carlos','carlosleonardorosas@gmail.com', '$2y$10$TuSaltOHashAquí...');
 
-ALTER TABLE `publicaciones_2`
-ADD COLUMN `total_ratings` INT DEFAULT 0,
-ADD COLUMN `rating_count` INT DEFAULT 0;
+CREATE TABLE `contacto` (
+  `id` int(7) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  `apellido` varchar(30) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `mensaje` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+ALTER TABLE `contacto`
+  ADD PRIMARY KEY (`id`);
+
+  ALTER TABLE `contacto`
+  MODIFY `id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+COMMIT;
