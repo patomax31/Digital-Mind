@@ -196,3 +196,4 @@ window.addEventListener('scroll', () => {
   const scrolled = (winScroll / height) * 100;
   document.getElementById('progress').style.width = scrolled + '%';
 });
+
