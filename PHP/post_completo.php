@@ -51,11 +51,10 @@ try {
             $ratingFeedback = 'login_required';
         }
     }
-
     // Procesar comentarios
     $commentFeedback = '';
     if (isset($_POST['enviar_comentario']) && $commentsTableExists) {
-        if (isset($_SESSION['usuario'])) {
+        if (isset($_SESSION['usuario_id']) || isset($_SESSION['admin'])) {
             $comentario = $conn->real_escape_string($_POST['comentario']);
             $usuario = $conn->real_escape_string($_SESSION['usuario']);
             $conn->query("INSERT INTO comentarios (id_post, nombre, comentario) VALUES ($id, '$usuario', '$comentario')");
@@ -122,6 +121,7 @@ include 'header.php';
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="<?php echo htmlspecialchars($post['titular']); ?>">
     <meta name="twitter:description" content="<?php echo htmlspecialchars($post['descripcion_corta']); ?>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
     
     <!-- Favicon -->
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
@@ -298,13 +298,56 @@ include 'header.php';
         height: 220px; /* Reducir aún más la altura en móviles */
     }
 }
+/* Estilos para la sección de compartir al final del artículo */
+.social-share-bottom {
+    margin-top: 30px; /* Espacio arriba de la sección */
+    padding-top: 20px; /* Espacio interno arriba */
+    border-top: 1px solid #ddd; /* Línea separadora */
+    text-align: center; /* Centra el texto y los elementos inline/inline-block */
+}
+
+.social-share-bottom h3 {
+    margin-bottom: 15px;
+    font-size: 1.3em;
+    color: #333;
+}
+
+.share-buttons {
+    display: flex; /* Usa flexbox para alinear los botones en una fila */
+    justify-content: center; /* Centra los elementos flexbox horizontalmente */
+    gap: 10px; /* Espacio entre los botones */
+    flex-wrap: wrap; /* Permite que los botones se envuelvan en líneas nuevas si no caben */
+    padding: 10px 0; /* Espacio vertical alrededor de los botones */
+}
+
+.share-button {
+    display: inline-flex; /* Permite centrar el icono dentro del botón */
+    align-items: center; /* Centra verticalmente el contenido (el icono) */
+    justify-content: center; /* Centra horizontalmente el contenido (el icono) */
+    width: 45px; /* Ancho fijo para los botones */
+    height: 45px; /* Alto fijo para los botones */
+    border-radius: 50%; /* Hace los botones redondos */
+    color: white; /* Color del icono */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    font-size: 1.4em; /* Tamaño del icono */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transición suave al pasar el mouse */
+}
+
+.share-button:hover {
+    opacity: 0.9; 
+    transform: scale(1.05); /* Un pequeño zoom al pasar el mouse */
+}
+
+.share-button.facebook { background-color: #3b5998; }
+.share-button.twitter { background-color: #1da1f2; }
+.share-button.linkedin { background-color: #0077b5; }
+.share-button.whatsapp { background-color: #25d366; }
+.share-button.email { background-color: #dd4b39;  }
+
+
 </style>
 </head>
 <body>
-
-<div class="container">
-    <h1><?php echo htmlspecialchars($post['categoria']); ?></h1>
-</div>
 
 <main>
     <button id="scrollBtn" aria-label="Volver al inicio">
@@ -367,27 +410,6 @@ include 'header.php';
             </div>
         </article>
 
-        <!-- Sección de valoración -->
-           <!-- Sección de valoración -->
-    <section class="rating-section">
-        <h3>¿Qué te pareció este post?</h3>
-        <!-- Asegúrate de que la acción del formulario apunte al script que procesará la valoración -->
-        <!-- También necesitas una forma de pasar el ID del post, aquí usamos un input oculto -->
-        <form method="post" action="" class="rating-form" id="ratingForm">
-            <!-- Reemplaza '<?php echo $post_id; ?>' con la variable PHP que contiene el ID del post -->
-            <input type="hidden" name="post_id" value="<?php echo $post_id; ?>">
-            <div class="star-rating">
-                <!-- Estrellas en orden inverso para CSS RTL -->
-                <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
-                <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
-                <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
-                <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
-                <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
-            </div>
-            <input type="submit" name="submit_rating" value="Enviar valoración" class="rating-submit-btn">
-        </form>
-    </section>
-
         <!-- Sección de referencias -->
         <?php if (!empty($post['referencia'])): ?>
         <section class="references-container">
@@ -449,7 +471,7 @@ include 'header.php';
             <?php endif; ?>
         </section>
 
-        <!-- Sección de comentarios -->
+             <!-- Sección de comentarios -->
         <section class="comments-section" id="comments">
             <h2>Comentarios</h2>
 
@@ -460,7 +482,8 @@ include 'header.php';
             <?php else: ?>
                 <!-- Formulario de comentarios -->
                 <div class="comment-form-container">
-                    <?php if (isset($_SESSION['usuario'])): ?>
+                    
+                    <?php if (isset($_SESSION['usuario_id']) || isset($_SESSION['admin'])): ?>
                         <form method="post" action="" id="commentForm">
                             <textarea name="comentario" placeholder="Escribe tu comentario..." required></textarea>
                             <input type="submit" name="enviar_comentario" value="Publicar comentario">
@@ -494,7 +517,9 @@ include 'header.php';
                 </div>
             <?php endif; ?>
         </section>
+
     </div>
+    
 </main>
 
 <?php
@@ -668,31 +693,7 @@ function showModal(title, message) {
 document.addEventListener('DOMContentLoaded', function() {
     setupStarRating();
     setupCarousel();
-    
-    // Mostrar feedback después de que todo esté cargado
-    <?php if ($ratingFeedback === 'success'): ?>
-        setTimeout(() => {
-            showModal('¡Gracias!', 'Tu valoración ha sido registrada.');
-        }, 300);
-    <?php elseif ($ratingFeedback === 'already_rated'): ?>
-        setTimeout(() => {
-            showModal('Atención', 'Ya has valorado este post.');
-        }, 300);
-    <?php elseif ($ratingFeedback === 'login_required'): ?>
-        setTimeout(() => {
-            showModal('Acceso requerido', 'Debes iniciar sesión para valorar.');
-        }, 300);
-    <?php endif; ?>
 
-    <?php if ($commentFeedback === 'success'): ?>
-        setTimeout(() => {
-            showModal('¡Éxito!', 'Tu comentario ha sido publicado.');
-        }, 300);
-    <?php elseif ($commentFeedback === 'login_required'): ?>
-        setTimeout(() => {
-            showModal('Acceso requerido', 'Debes iniciar sesión para comentar.');
-        }, 300);
-    <?php endif; ?>
 });
 </script>
 </body>

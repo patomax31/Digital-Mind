@@ -1,4 +1,8 @@
 <?php
+
+session_start();
+include 'blog_db.php';
+
 // Procesamiento del formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $host = "localhost";
