@@ -3767,5 +3767,907 @@ Secondary education is an exciting journey of discovery and growth. By strengthe
 [2025-05-16 23:27:56] Successfully returned translated texts.
 =======
 [2025-05-17 03:40:43] Successfully returned translated texts.
->>>>>>> 3aaa26d1ef8d1350a5d5a1d69e47d4545aeeed0a
->>>>>>> 1af1cb0c64b806693d6d87aa0158f8b849843b1a
+[2025-05-17 08:22:47] Received POST request.
+[2025-05-17 08:22:47] POST data: Array
+(
+    [texts] => ["Categoría","Acerca de","Pagina de contacto","Traducir","Iniciar sesión","Buscar...","Más Reciente","Testeooooo editeditedit","testeoooootesteooooo edit","Publicado el 01/01/0001","Ver más","Claves para una educación secundaria significativa y transformadora","La educación secundaria es un período crucial de transición y crecimiento. Exploraremos estrategias para el éxito académico, el desarrollo de habilidades de pensamiento crítico, la exploración de intereses, el fomento de la autonomía y la preparación para","Publicado el 22/05/2025","Ver más","Claves para una educación primaria sólida y estimulante","La educación primaria es la base fundamental para el desarrollo académico, social y emocional de los niños. Exploraremos estrategias pedagógicas efectivas, la importancia de un ambiente de aprendizaje positivo, el fomento de habilidades clave y la colabor","Publicado el 21/05/2025","Ver más","Claves para una educación exitosa y un futuro brillante","La preparatoria es una etapa crucial en la vida académica y personal. Exploraremos estrategias efectivas para el éxito académico, la exploración vocacional, el desarrollo de habilidades socioemocionales y la preparación para el siguiente paso, ya sea la u","Publicado el 20/05/2025","Ver más","Desbloquea tu potencial: explorando diversos métodos de aprendizaje efectivos","<br />\n<b>Warning</b>:  Undefined array key \"descripcion_corta\" in <b>C:\\xampp\\htdocs\\Digital-Mind\\PHP\\blog_edit.php</b> on line <b>89</b><br />","Publicado el 19/05/2025","Ver más","Desbloquea tu voz: claves para desarrollar habilidades de redacción impactantes","Sumérgete en el arte de la escritura efectiva. Exploraremos técnicas esenciales, consejos prácticos y estrategias para mejorar tu claridad, concisión y capacidad de persuasión a través de la palabra escrita.","Publicado el 18/05/2025","Ver más","La educación como brújula vocacional","Explora cómo la educación en sus diversas formas puede ser una herramienta poderosa para descubrir tus intereses, habilidades y, en última instancia, tu vocación. Analizaremos cómo diferentes áreas del aprendizaje pueden guiarte hacia un camino profesiona","Publicado el 17/06/2025","Ver más","Explorando el mundo con ciencia y matemáticas","Descubre cómo la ciencia y las matemáticas se entrelazan para ayudarnos a comprender el mundo que nos rodea. Exploraremos experimentos divertidos, problemas desafiantes y la importancia de cultivar la curiosidad en estas áreas desde una edad temprana.","Publicado el 16/05/2025","Ver más","El poder de la curiosidad en el aprendizaje infantil","Descubre cómo fomentar la curiosidad natural de los niños puede ser la clave para un aprendizaje más profundo y significativo. Exploramos estrategias prácticas y beneficios a largo plazo de cultivar esta valiosa habilidad desde temprana edad.","Publicado el 15/05/2025","Ver más","Tsetestsetset","tsetestsetset","Publicado el 01/01/0001","Ver más","Test de categoria final","escuela primaria","Publicado el 01/01/0002","Ver más","Test de categoria","descripcion corta obligatoria?","Publicado el 01/01/0001","Ver más","Testeoteseto","descripcion de testeo","Publicado el 01/01/0001","Ver más","Testtestestse","descripcion de testeo","Publicado el 01/01/0001","Ver más","Derechos Reservados ® Digital-Mind © "]
+    [target_lang] => EN
+)
+
+[2025-05-17 08:22:47] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-05-17 08:22:47] 'texts' parameter received: ["Categoría","Acerca de","Pagina de contacto","Traducir","Iniciar sesión","Buscar...","Más Reciente","Testeooooo editeditedit","testeoooootesteooooo edit","Publicado el 01/01/0001","Ver más","Claves para una educación secundaria significativa y transformadora","La educación secundaria es un período crucial de transición y crecimiento. Exploraremos estrategias para el éxito académico, el desarrollo de habilidades de pensamiento crítico, la exploración de intereses, el fomento de la autonomía y la preparación para","Publicado el 22/05/2025","Ver más","Claves para una educación primaria sólida y estimulante","La educación primaria es la base fundamental para el desarrollo académico, social y emocional de los niños. Exploraremos estrategias pedagógicas efectivas, la importancia de un ambiente de aprendizaje positivo, el fomento de habilidades clave y la colabor","Publicado el 21/05/2025","Ver más","Claves para una educación exitosa y un futuro brillante","La preparatoria es una etapa crucial en la vida académica y personal. Exploraremos estrategias efectivas para el éxito académico, la exploración vocacional, el desarrollo de habilidades socioemocionales y la preparación para el siguiente paso, ya sea la u","Publicado el 20/05/2025","Ver más","Desbloquea tu potencial: explorando diversos métodos de aprendizaje efectivos","<br />\n<b>Warning</b>:  Undefined array key \"descripcion_corta\" in <b>C:\\xampp\\htdocs\\Digital-Mind\\PHP\\blog_edit.php</b> on line <b>89</b><br />","Publicado el 19/05/2025","Ver más","Desbloquea tu voz: claves para desarrollar habilidades de redacción impactantes","Sumérgete en el arte de la escritura efectiva. Exploraremos técnicas esenciales, consejos prácticos y estrategias para mejorar tu claridad, concisión y capacidad de persuasión a través de la palabra escrita.","Publicado el 18/05/2025","Ver más","La educación como brújula vocacional","Explora cómo la educación en sus diversas formas puede ser una herramienta poderosa para descubrir tus intereses, habilidades y, en última instancia, tu vocación. Analizaremos cómo diferentes áreas del aprendizaje pueden guiarte hacia un camino profesiona","Publicado el 17/06/2025","Ver más","Explorando el mundo con ciencia y matemáticas","Descubre cómo la ciencia y las matemáticas se entrelazan para ayudarnos a comprender el mundo que nos rodea. Exploraremos experimentos divertidos, problemas desafiantes y la importancia de cultivar la curiosidad en estas áreas desde una edad temprana.","Publicado el 16/05/2025","Ver más","El poder de la curiosidad en el aprendizaje infantil","Descubre cómo fomentar la curiosidad natural de los niños puede ser la clave para un aprendizaje más profundo y significativo. Exploramos estrategias prácticas y beneficios a largo plazo de cultivar esta valiosa habilidad desde temprana edad.","Publicado el 15/05/2025","Ver más","Tsetestsetset","tsetestsetset","Publicado el 01/01/0001","Ver más","Test de categoria final","escuela primaria","Publicado el 01/01/0002","Ver más","Test de categoria","descripcion corta obligatoria?","Publicado el 01/01/0001","Ver más","Testeoteseto","descripcion de testeo","Publicado el 01/01/0001","Ver más","Testtestestse","descripcion de testeo","Publicado el 01/01/0001","Ver más","Derechos Reservados ® Digital-Mind © "]
+[2025-05-17 08:22:47] Result of json_decode: Array
+(
+    [0] => Categoría
+    [1] => Acerca de
+    [2] => Pagina de contacto
+    [3] => Traducir
+    [4] => Iniciar sesión
+    [5] => Buscar...
+    [6] => Más Reciente
+    [7] => Testeooooo editeditedit
+    [8] => testeoooootesteooooo edit
+    [9] => Publicado el 01/01/0001
+    [10] => Ver más
+    [11] => Claves para una educación secundaria significativa y transformadora
+    [12] => La educación secundaria es un período crucial de transición y crecimiento. Exploraremos estrategias para el éxito académico, el desarrollo de habilidades de pensamiento crítico, la exploración de intereses, el fomento de la autonomía y la preparación para
+    [13] => Publicado el 22/05/2025
+    [14] => Ver más
+    [15] => Claves para una educación primaria sólida y estimulante
+    [16] => La educación primaria es la base fundamental para el desarrollo académico, social y emocional de los niños. Exploraremos estrategias pedagógicas efectivas, la importancia de un ambiente de aprendizaje positivo, el fomento de habilidades clave y la colabor
+    [17] => Publicado el 21/05/2025
+    [18] => Ver más
+    [19] => Claves para una educación exitosa y un futuro brillante
+    [20] => La preparatoria es una etapa crucial en la vida académica y personal. Exploraremos estrategias efectivas para el éxito académico, la exploración vocacional, el desarrollo de habilidades socioemocionales y la preparación para el siguiente paso, ya sea la u
+    [21] => Publicado el 20/05/2025
+    [22] => Ver más
+    [23] => Desbloquea tu potencial: explorando diversos métodos de aprendizaje efectivos
+    [24] => <br />
+<b>Warning</b>:  Undefined array key "descripcion_corta" in <b>C:\xampp\htdocs\Digital-Mind\PHP\blog_edit.php</b> on line <b>89</b><br />
+    [25] => Publicado el 19/05/2025
+    [26] => Ver más
+    [27] => Desbloquea tu voz: claves para desarrollar habilidades de redacción impactantes
+    [28] => Sumérgete en el arte de la escritura efectiva. Exploraremos técnicas esenciales, consejos prácticos y estrategias para mejorar tu claridad, concisión y capacidad de persuasión a través de la palabra escrita.
+    [29] => Publicado el 18/05/2025
+    [30] => Ver más
+    [31] => La educación como brújula vocacional
+    [32] => Explora cómo la educación en sus diversas formas puede ser una herramienta poderosa para descubrir tus intereses, habilidades y, en última instancia, tu vocación. Analizaremos cómo diferentes áreas del aprendizaje pueden guiarte hacia un camino profesiona
+    [33] => Publicado el 17/06/2025
+    [34] => Ver más
+    [35] => Explorando el mundo con ciencia y matemáticas
+    [36] => Descubre cómo la ciencia y las matemáticas se entrelazan para ayudarnos a comprender el mundo que nos rodea. Exploraremos experimentos divertidos, problemas desafiantes y la importancia de cultivar la curiosidad en estas áreas desde una edad temprana.
+    [37] => Publicado el 16/05/2025
+    [38] => Ver más
+    [39] => El poder de la curiosidad en el aprendizaje infantil
+    [40] => Descubre cómo fomentar la curiosidad natural de los niños puede ser la clave para un aprendizaje más profundo y significativo. Exploramos estrategias prácticas y beneficios a largo plazo de cultivar esta valiosa habilidad desde temprana edad.
+    [41] => Publicado el 15/05/2025
+    [42] => Ver más
+    [43] => Tsetestsetset
+    [44] => tsetestsetset
+    [45] => Publicado el 01/01/0001
+    [46] => Ver más
+    [47] => Test de categoria final
+    [48] => escuela primaria
+    [49] => Publicado el 01/01/0002
+    [50] => Ver más
+    [51] => Test de categoria
+    [52] => descripcion corta obligatoria?
+    [53] => Publicado el 01/01/0001
+    [54] => Ver más
+    [55] => Testeoteseto
+    [56] => descripcion de testeo
+    [57] => Publicado el 01/01/0001
+    [58] => Ver más
+    [59] => Testtestestse
+    [60] => descripcion de testeo
+    [61] => Publicado el 01/01/0001
+    [62] => Ver más
+    [63] => Derechos Reservados ® Digital-Mind © 
+)
+
+[2025-05-17 08:22:47] Target language: EN
+[2025-05-17 08:22:47] Data sent to DeepL API (JSON): {"text":["Categor\u00eda","Acerca de","Pagina de contacto","Traducir","Iniciar sesi\u00f3n","Buscar...","M\u00e1s Reciente","Testeooooo editeditedit","testeoooootesteooooo edit","Publicado el 01\/01\/0001","Ver m\u00e1s","Claves para una educaci\u00f3n secundaria significativa y transformadora","La educaci\u00f3n secundaria es un per\u00edodo crucial de transici\u00f3n y crecimiento. Exploraremos estrategias para el \u00e9xito acad\u00e9mico, el desarrollo de habilidades de pensamiento cr\u00edtico, la exploraci\u00f3n de intereses, el fomento de la autonom\u00eda y la preparaci\u00f3n para","Publicado el 22\/05\/2025","Ver m\u00e1s","Claves para una educaci\u00f3n primaria s\u00f3lida y estimulante","La educaci\u00f3n primaria es la base fundamental para el desarrollo acad\u00e9mico, social y emocional de los ni\u00f1os. Exploraremos estrategias pedag\u00f3gicas efectivas, la importancia de un ambiente de aprendizaje positivo, el fomento de habilidades clave y la colabor","Publicado el 21\/05\/2025","Ver m\u00e1s","Claves para una educaci\u00f3n exitosa y un futuro brillante","La preparatoria es una etapa crucial en la vida acad\u00e9mica y personal. Exploraremos estrategias efectivas para el \u00e9xito acad\u00e9mico, la exploraci\u00f3n vocacional, el desarrollo de habilidades socioemocionales y la preparaci\u00f3n para el siguiente paso, ya sea la u","Publicado el 20\/05\/2025","Ver m\u00e1s","Desbloquea tu potencial: explorando diversos m\u00e9todos de aprendizaje efectivos","<br \/>\n<b>Warning<\/b>:  Undefined array key \"descripcion_corta\" in <b>C:\\xampp\\htdocs\\Digital-Mind\\PHP\\blog_edit.php<\/b> on line <b>89<\/b><br \/>","Publicado el 19\/05\/2025","Ver m\u00e1s","Desbloquea tu voz: claves para desarrollar habilidades de redacci\u00f3n impactantes","Sum\u00e9rgete en el arte de la escritura efectiva. Exploraremos t\u00e9cnicas esenciales, consejos pr\u00e1cticos y estrategias para mejorar tu claridad, concisi\u00f3n y capacidad de persuasi\u00f3n a trav\u00e9s de la palabra escrita.","Publicado el 18\/05\/2025","Ver m\u00e1s","La educaci\u00f3n como br\u00fajula vocacional","Explora c\u00f3mo la educaci\u00f3n en sus diversas formas puede ser una herramienta poderosa para descubrir tus intereses, habilidades y, en \u00faltima instancia, tu vocaci\u00f3n. Analizaremos c\u00f3mo diferentes \u00e1reas del aprendizaje pueden guiarte hacia un camino profesiona","Publicado el 17\/06\/2025","Ver m\u00e1s","Explorando el mundo con ciencia y matem\u00e1ticas","Descubre c\u00f3mo la ciencia y las matem\u00e1ticas se entrelazan para ayudarnos a comprender el mundo que nos rodea. Exploraremos experimentos divertidos, problemas desafiantes y la importancia de cultivar la curiosidad en estas \u00e1reas desde una edad temprana.","Publicado el 16\/05\/2025","Ver m\u00e1s","El poder de la curiosidad en el aprendizaje infantil","Descubre c\u00f3mo fomentar la curiosidad natural de los ni\u00f1os puede ser la clave para un aprendizaje m\u00e1s profundo y significativo. Exploramos estrategias pr\u00e1cticas y beneficios a largo plazo de cultivar esta valiosa habilidad desde temprana edad.","Publicado el 15\/05\/2025","Ver m\u00e1s","Tsetestsetset","tsetestsetset","Publicado el 01\/01\/0001","Ver m\u00e1s","Test de categoria final","escuela primaria","Publicado el 01\/01\/0002","Ver m\u00e1s","Test de categoria","descripcion corta obligatoria?","Publicado el 01\/01\/0001","Ver m\u00e1s","Testeoteseto","descripcion de testeo","Publicado el 01\/01\/0001","Ver m\u00e1s","Testtestestse","descripcion de testeo","Publicado el 01\/01\/0001","Ver m\u00e1s","Derechos Reservados \u00ae Digital-Mind \u00a9 "],"target_lang":"EN"}
+[2025-05-17 08:22:48] DeepL API HTTP Code: 200
+[2025-05-17 08:22:48] DeepL API Response: {"translations":[{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Translate"},{"detected_source_language":"ES","text":"Login"},{"detected_source_language":"ES","text":"Search..."},{"detected_source_language":"ES","text":"Most Recent"},{"detected_source_language":"EN","text":"Testeooooo editeditedit"},{"detected_source_language":"ET","text":"testeoooootesteooooo edit"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Keys to a meaningful and transformative secondary education."},{"detected_source_language":"ES","text":"Secondary education is a crucial period of transition and growth. We will explore strategies for academic success, developing critical thinking skills, exploring interests, fostering autonomy, and preparing for"},{"detected_source_language":"ES","text":"Published on 05/22/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Keys to a solid and stimulating primary education"},{"detected_source_language":"ES","text":"Primary education is the fundamental foundation for children's academic, social and emotional development. We will explore effective pedagogical strategies, the importance of a positive learning environment, the promotion of key skills and collaboration."},{"detected_source_language":"ES","text":"Published on 05/21/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Keys to a successful education and a bright future"},{"detected_source_language":"ES","text":"High school is a crucial stage in academic and personal life. We will explore effective strategies for academic success, vocational exploration, social-emotional skill development, and preparation for the next step, whether it is college or college."},{"detected_source_language":"ES","text":"Published on 20/05/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Unlocking your potential: exploring various effective learning methods"},{"detected_source_language":"EN","text":"<br />\n<b>Warning</b>:  Undefined array key \"descripcion_corta\" in <b>C:\\xampp\\htdocs\\Digital-Mind\\PHP\\blog_edit.php</b> on line <b>89</b><br />"},{"detected_source_language":"ES","text":"Published on 19/05/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Unlocking your voice: keys to developing powerful writing skills"},{"detected_source_language":"ES","text":"Immerse yourself in the art of effective writing. We will explore essential techniques, practical tips and strategies to improve your clarity, conciseness and persuasiveness through the written word."},{"detected_source_language":"ES","text":"Published on 05/18/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Education as a vocational compass"},{"detected_source_language":"ES","text":"Explore how education in its various forms can be a powerful tool for discovering your interests, skills and, ultimately, your vocation. We will look at how different areas of learning can guide you toward a career path."},{"detected_source_language":"ES","text":"Published on 06/17/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Exploring the world with science and mathematics"},{"detected_source_language":"ES","text":"Discover how science and mathematics intertwine to help us understand the world around us. We will explore fun experiments, challenging problems and the importance of cultivating curiosity in these areas from an early age."},{"detected_source_language":"ES","text":"Published on 16/05/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"The power of curiosity in children's learning"},{"detected_source_language":"ES","text":"Discover how fostering children's natural curiosity can be the key to deeper, more meaningful learning. We explore practical strategies and long-term benefits of cultivating this valuable skill from an early age."},{"detected_source_language":"ES","text":"Published on 05/15/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ET","text":"Tsetestsets"},{"detected_source_language":"ET","text":"tsetestsets"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"RO","text":"Final category test"},{"detected_source_language":"ES","text":"elementary school"},{"detected_source_language":"ES","text":"Published on 01/01/0002"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"RO","text":"Category test"},{"detected_source_language":"ES","text":"short description required?"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ET","text":"Testeoteseto"},{"detected_source_language":"ES","text":"description of testeo"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"DE","text":"Test tests"},{"detected_source_language":"ES","text":"description of testeo"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Copyright ® Digital-Mind © All Rights Reserved"}]}
+[2025-05-17 08:22:48] Extracted translated texts: Array
+(
+    [0] => Category
+    [1] => About
+    [2] => Contact page
+    [3] => Translate
+    [4] => Login
+    [5] => Search...
+    [6] => Most Recent
+    [7] => Testeooooo editeditedit
+    [8] => testeoooootesteooooo edit
+    [9] => Published on 01/01/0001
+    [10] => See more
+    [11] => Keys to a meaningful and transformative secondary education.
+    [12] => Secondary education is a crucial period of transition and growth. We will explore strategies for academic success, developing critical thinking skills, exploring interests, fostering autonomy, and preparing for
+    [13] => Published on 05/22/2025
+    [14] => See more
+    [15] => Keys to a solid and stimulating primary education
+    [16] => Primary education is the fundamental foundation for children's academic, social and emotional development. We will explore effective pedagogical strategies, the importance of a positive learning environment, the promotion of key skills and collaboration.
+    [17] => Published on 05/21/2025
+    [18] => See more
+    [19] => Keys to a successful education and a bright future
+    [20] => High school is a crucial stage in academic and personal life. We will explore effective strategies for academic success, vocational exploration, social-emotional skill development, and preparation for the next step, whether it is college or college.
+    [21] => Published on 20/05/2025
+    [22] => See more
+    [23] => Unlocking your potential: exploring various effective learning methods
+    [24] => <br />
+<b>Warning</b>:  Undefined array key "descripcion_corta" in <b>C:\xampp\htdocs\Digital-Mind\PHP\blog_edit.php</b> on line <b>89</b><br />
+    [25] => Published on 19/05/2025
+    [26] => See more
+    [27] => Unlocking your voice: keys to developing powerful writing skills
+    [28] => Immerse yourself in the art of effective writing. We will explore essential techniques, practical tips and strategies to improve your clarity, conciseness and persuasiveness through the written word.
+    [29] => Published on 05/18/2025
+    [30] => See more
+    [31] => Education as a vocational compass
+    [32] => Explore how education in its various forms can be a powerful tool for discovering your interests, skills and, ultimately, your vocation. We will look at how different areas of learning can guide you toward a career path.
+    [33] => Published on 06/17/2025
+    [34] => See more
+    [35] => Exploring the world with science and mathematics
+    [36] => Discover how science and mathematics intertwine to help us understand the world around us. We will explore fun experiments, challenging problems and the importance of cultivating curiosity in these areas from an early age.
+    [37] => Published on 16/05/2025
+    [38] => See more
+    [39] => The power of curiosity in children's learning
+    [40] => Discover how fostering children's natural curiosity can be the key to deeper, more meaningful learning. We explore practical strategies and long-term benefits of cultivating this valuable skill from an early age.
+    [41] => Published on 05/15/2025
+    [42] => See more
+    [43] => Tsetestsets
+    [44] => tsetestsets
+    [45] => Published on 01/01/0001
+    [46] => See more
+    [47] => Final category test
+    [48] => elementary school
+    [49] => Published on 01/01/0002
+    [50] => See more
+    [51] => Category test
+    [52] => short description required?
+    [53] => Published on 01/01/0001
+    [54] => See more
+    [55] => Testeoteseto
+    [56] => description of testeo
+    [57] => Published on 01/01/0001
+    [58] => See more
+    [59] => Test tests
+    [60] => description of testeo
+    [61] => Published on 01/01/0001
+    [62] => See more
+    [63] => Copyright ® Digital-Mind © All Rights Reserved
+)
+
+[2025-05-17 08:22:48] Successfully returned translated texts.
+[2025-05-17 08:22:52] Received POST request.
+[2025-05-17 08:22:52] POST data: Array
+(
+    [texts] => ["Categoría","Acerca de","Pagina de contacto","Traducir","Iniciar sesión","Buscar...","Más Reciente","Testeooooo editeditedit","testeoooootesteooooo edit","Publicado el 01/01/0001","Ver más","Claves para una educación secundaria significativa y transformadora","La educación secundaria es un período crucial de transición y crecimiento. Exploraremos estrategias para el éxito académico, el desarrollo de habilidades de pensamiento crítico, la exploración de intereses, el fomento de la autonomía y la preparación para","Publicado el 22/05/2025","Ver más","Claves para una educación primaria sólida y estimulante","La educación primaria es la base fundamental para el desarrollo académico, social y emocional de los niños. Exploraremos estrategias pedagógicas efectivas, la importancia de un ambiente de aprendizaje positivo, el fomento de habilidades clave y la colabor","Publicado el 21/05/2025","Ver más","Claves para una educación exitosa y un futuro brillante","La preparatoria es una etapa crucial en la vida académica y personal. Exploraremos estrategias efectivas para el éxito académico, la exploración vocacional, el desarrollo de habilidades socioemocionales y la preparación para el siguiente paso, ya sea la u","Publicado el 20/05/2025","Ver más","Desbloquea tu potencial: explorando diversos métodos de aprendizaje efectivos","<br />\n<b>Warning</b>:  Undefined array key \"descripcion_corta\" in <b>C:\\xampp\\htdocs\\Digital-Mind\\PHP\\blog_edit.php</b> on line <b>89</b><br />","Publicado el 19/05/2025","Ver más","Desbloquea tu voz: claves para desarrollar habilidades de redacción impactantes","Sumérgete en el arte de la escritura efectiva. Exploraremos técnicas esenciales, consejos prácticos y estrategias para mejorar tu claridad, concisión y capacidad de persuasión a través de la palabra escrita.","Publicado el 18/05/2025","Ver más","La educación como brújula vocacional","Explora cómo la educación en sus diversas formas puede ser una herramienta poderosa para descubrir tus intereses, habilidades y, en última instancia, tu vocación. Analizaremos cómo diferentes áreas del aprendizaje pueden guiarte hacia un camino profesiona","Publicado el 17/06/2025","Ver más","Explorando el mundo con ciencia y matemáticas","Descubre cómo la ciencia y las matemáticas se entrelazan para ayudarnos a comprender el mundo que nos rodea. Exploraremos experimentos divertidos, problemas desafiantes y la importancia de cultivar la curiosidad en estas áreas desde una edad temprana.","Publicado el 16/05/2025","Ver más","El poder de la curiosidad en el aprendizaje infantil","Descubre cómo fomentar la curiosidad natural de los niños puede ser la clave para un aprendizaje más profundo y significativo. Exploramos estrategias prácticas y beneficios a largo plazo de cultivar esta valiosa habilidad desde temprana edad.","Publicado el 15/05/2025","Ver más","Tsetestsetset","tsetestsetset","Publicado el 01/01/0001","Ver más","Test de categoria final","escuela primaria","Publicado el 01/01/0002","Ver más","Test de categoria","descripcion corta obligatoria?","Publicado el 01/01/0001","Ver más","Testeoteseto","descripcion de testeo","Publicado el 01/01/0001","Ver más","Testtestestse","descripcion de testeo","Publicado el 01/01/0001","Ver más","Derechos Reservados ® Digital-Mind © "]
+    [target_lang] => EN
+)
+
+[2025-05-17 08:22:52] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-05-17 08:22:52] 'texts' parameter received: ["Categoría","Acerca de","Pagina de contacto","Traducir","Iniciar sesión","Buscar...","Más Reciente","Testeooooo editeditedit","testeoooootesteooooo edit","Publicado el 01/01/0001","Ver más","Claves para una educación secundaria significativa y transformadora","La educación secundaria es un período crucial de transición y crecimiento. Exploraremos estrategias para el éxito académico, el desarrollo de habilidades de pensamiento crítico, la exploración de intereses, el fomento de la autonomía y la preparación para","Publicado el 22/05/2025","Ver más","Claves para una educación primaria sólida y estimulante","La educación primaria es la base fundamental para el desarrollo académico, social y emocional de los niños. Exploraremos estrategias pedagógicas efectivas, la importancia de un ambiente de aprendizaje positivo, el fomento de habilidades clave y la colabor","Publicado el 21/05/2025","Ver más","Claves para una educación exitosa y un futuro brillante","La preparatoria es una etapa crucial en la vida académica y personal. Exploraremos estrategias efectivas para el éxito académico, la exploración vocacional, el desarrollo de habilidades socioemocionales y la preparación para el siguiente paso, ya sea la u","Publicado el 20/05/2025","Ver más","Desbloquea tu potencial: explorando diversos métodos de aprendizaje efectivos","<br />\n<b>Warning</b>:  Undefined array key \"descripcion_corta\" in <b>C:\\xampp\\htdocs\\Digital-Mind\\PHP\\blog_edit.php</b> on line <b>89</b><br />","Publicado el 19/05/2025","Ver más","Desbloquea tu voz: claves para desarrollar habilidades de redacción impactantes","Sumérgete en el arte de la escritura efectiva. Exploraremos técnicas esenciales, consejos prácticos y estrategias para mejorar tu claridad, concisión y capacidad de persuasión a través de la palabra escrita.","Publicado el 18/05/2025","Ver más","La educación como brújula vocacional","Explora cómo la educación en sus diversas formas puede ser una herramienta poderosa para descubrir tus intereses, habilidades y, en última instancia, tu vocación. Analizaremos cómo diferentes áreas del aprendizaje pueden guiarte hacia un camino profesiona","Publicado el 17/06/2025","Ver más","Explorando el mundo con ciencia y matemáticas","Descubre cómo la ciencia y las matemáticas se entrelazan para ayudarnos a comprender el mundo que nos rodea. Exploraremos experimentos divertidos, problemas desafiantes y la importancia de cultivar la curiosidad en estas áreas desde una edad temprana.","Publicado el 16/05/2025","Ver más","El poder de la curiosidad en el aprendizaje infantil","Descubre cómo fomentar la curiosidad natural de los niños puede ser la clave para un aprendizaje más profundo y significativo. Exploramos estrategias prácticas y beneficios a largo plazo de cultivar esta valiosa habilidad desde temprana edad.","Publicado el 15/05/2025","Ver más","Tsetestsetset","tsetestsetset","Publicado el 01/01/0001","Ver más","Test de categoria final","escuela primaria","Publicado el 01/01/0002","Ver más","Test de categoria","descripcion corta obligatoria?","Publicado el 01/01/0001","Ver más","Testeoteseto","descripcion de testeo","Publicado el 01/01/0001","Ver más","Testtestestse","descripcion de testeo","Publicado el 01/01/0001","Ver más","Derechos Reservados ® Digital-Mind © "]
+[2025-05-17 08:22:52] Result of json_decode: Array
+(
+    [0] => Categoría
+    [1] => Acerca de
+    [2] => Pagina de contacto
+    [3] => Traducir
+    [4] => Iniciar sesión
+    [5] => Buscar...
+    [6] => Más Reciente
+    [7] => Testeooooo editeditedit
+    [8] => testeoooootesteooooo edit
+    [9] => Publicado el 01/01/0001
+    [10] => Ver más
+    [11] => Claves para una educación secundaria significativa y transformadora
+    [12] => La educación secundaria es un período crucial de transición y crecimiento. Exploraremos estrategias para el éxito académico, el desarrollo de habilidades de pensamiento crítico, la exploración de intereses, el fomento de la autonomía y la preparación para
+    [13] => Publicado el 22/05/2025
+    [14] => Ver más
+    [15] => Claves para una educación primaria sólida y estimulante
+    [16] => La educación primaria es la base fundamental para el desarrollo académico, social y emocional de los niños. Exploraremos estrategias pedagógicas efectivas, la importancia de un ambiente de aprendizaje positivo, el fomento de habilidades clave y la colabor
+    [17] => Publicado el 21/05/2025
+    [18] => Ver más
+    [19] => Claves para una educación exitosa y un futuro brillante
+    [20] => La preparatoria es una etapa crucial en la vida académica y personal. Exploraremos estrategias efectivas para el éxito académico, la exploración vocacional, el desarrollo de habilidades socioemocionales y la preparación para el siguiente paso, ya sea la u
+    [21] => Publicado el 20/05/2025
+    [22] => Ver más
+    [23] => Desbloquea tu potencial: explorando diversos métodos de aprendizaje efectivos
+    [24] => <br />
+<b>Warning</b>:  Undefined array key "descripcion_corta" in <b>C:\xampp\htdocs\Digital-Mind\PHP\blog_edit.php</b> on line <b>89</b><br />
+    [25] => Publicado el 19/05/2025
+    [26] => Ver más
+    [27] => Desbloquea tu voz: claves para desarrollar habilidades de redacción impactantes
+    [28] => Sumérgete en el arte de la escritura efectiva. Exploraremos técnicas esenciales, consejos prácticos y estrategias para mejorar tu claridad, concisión y capacidad de persuasión a través de la palabra escrita.
+    [29] => Publicado el 18/05/2025
+    [30] => Ver más
+    [31] => La educación como brújula vocacional
+    [32] => Explora cómo la educación en sus diversas formas puede ser una herramienta poderosa para descubrir tus intereses, habilidades y, en última instancia, tu vocación. Analizaremos cómo diferentes áreas del aprendizaje pueden guiarte hacia un camino profesiona
+    [33] => Publicado el 17/06/2025
+    [34] => Ver más
+    [35] => Explorando el mundo con ciencia y matemáticas
+    [36] => Descubre cómo la ciencia y las matemáticas se entrelazan para ayudarnos a comprender el mundo que nos rodea. Exploraremos experimentos divertidos, problemas desafiantes y la importancia de cultivar la curiosidad en estas áreas desde una edad temprana.
+    [37] => Publicado el 16/05/2025
+    [38] => Ver más
+    [39] => El poder de la curiosidad en el aprendizaje infantil
+    [40] => Descubre cómo fomentar la curiosidad natural de los niños puede ser la clave para un aprendizaje más profundo y significativo. Exploramos estrategias prácticas y beneficios a largo plazo de cultivar esta valiosa habilidad desde temprana edad.
+    [41] => Publicado el 15/05/2025
+    [42] => Ver más
+    [43] => Tsetestsetset
+    [44] => tsetestsetset
+    [45] => Publicado el 01/01/0001
+    [46] => Ver más
+    [47] => Test de categoria final
+    [48] => escuela primaria
+    [49] => Publicado el 01/01/0002
+    [50] => Ver más
+    [51] => Test de categoria
+    [52] => descripcion corta obligatoria?
+    [53] => Publicado el 01/01/0001
+    [54] => Ver más
+    [55] => Testeoteseto
+    [56] => descripcion de testeo
+    [57] => Publicado el 01/01/0001
+    [58] => Ver más
+    [59] => Testtestestse
+    [60] => descripcion de testeo
+    [61] => Publicado el 01/01/0001
+    [62] => Ver más
+    [63] => Derechos Reservados ® Digital-Mind © 
+)
+
+[2025-05-17 08:22:52] Target language: EN
+[2025-05-17 08:22:52] Data sent to DeepL API (JSON): {"text":["Categor\u00eda","Acerca de","Pagina de contacto","Traducir","Iniciar sesi\u00f3n","Buscar...","M\u00e1s Reciente","Testeooooo editeditedit","testeoooootesteooooo edit","Publicado el 01\/01\/0001","Ver m\u00e1s","Claves para una educaci\u00f3n secundaria significativa y transformadora","La educaci\u00f3n secundaria es un per\u00edodo crucial de transici\u00f3n y crecimiento. Exploraremos estrategias para el \u00e9xito acad\u00e9mico, el desarrollo de habilidades de pensamiento cr\u00edtico, la exploraci\u00f3n de intereses, el fomento de la autonom\u00eda y la preparaci\u00f3n para","Publicado el 22\/05\/2025","Ver m\u00e1s","Claves para una educaci\u00f3n primaria s\u00f3lida y estimulante","La educaci\u00f3n primaria es la base fundamental para el desarrollo acad\u00e9mico, social y emocional de los ni\u00f1os. Exploraremos estrategias pedag\u00f3gicas efectivas, la importancia de un ambiente de aprendizaje positivo, el fomento de habilidades clave y la colabor","Publicado el 21\/05\/2025","Ver m\u00e1s","Claves para una educaci\u00f3n exitosa y un futuro brillante","La preparatoria es una etapa crucial en la vida acad\u00e9mica y personal. Exploraremos estrategias efectivas para el \u00e9xito acad\u00e9mico, la exploraci\u00f3n vocacional, el desarrollo de habilidades socioemocionales y la preparaci\u00f3n para el siguiente paso, ya sea la u","Publicado el 20\/05\/2025","Ver m\u00e1s","Desbloquea tu potencial: explorando diversos m\u00e9todos de aprendizaje efectivos","<br \/>\n<b>Warning<\/b>:  Undefined array key \"descripcion_corta\" in <b>C:\\xampp\\htdocs\\Digital-Mind\\PHP\\blog_edit.php<\/b> on line <b>89<\/b><br \/>","Publicado el 19\/05\/2025","Ver m\u00e1s","Desbloquea tu voz: claves para desarrollar habilidades de redacci\u00f3n impactantes","Sum\u00e9rgete en el arte de la escritura efectiva. Exploraremos t\u00e9cnicas esenciales, consejos pr\u00e1cticos y estrategias para mejorar tu claridad, concisi\u00f3n y capacidad de persuasi\u00f3n a trav\u00e9s de la palabra escrita.","Publicado el 18\/05\/2025","Ver m\u00e1s","La educaci\u00f3n como br\u00fajula vocacional","Explora c\u00f3mo la educaci\u00f3n en sus diversas formas puede ser una herramienta poderosa para descubrir tus intereses, habilidades y, en \u00faltima instancia, tu vocaci\u00f3n. Analizaremos c\u00f3mo diferentes \u00e1reas del aprendizaje pueden guiarte hacia un camino profesiona","Publicado el 17\/06\/2025","Ver m\u00e1s","Explorando el mundo con ciencia y matem\u00e1ticas","Descubre c\u00f3mo la ciencia y las matem\u00e1ticas se entrelazan para ayudarnos a comprender el mundo que nos rodea. Exploraremos experimentos divertidos, problemas desafiantes y la importancia de cultivar la curiosidad en estas \u00e1reas desde una edad temprana.","Publicado el 16\/05\/2025","Ver m\u00e1s","El poder de la curiosidad en el aprendizaje infantil","Descubre c\u00f3mo fomentar la curiosidad natural de los ni\u00f1os puede ser la clave para un aprendizaje m\u00e1s profundo y significativo. Exploramos estrategias pr\u00e1cticas y beneficios a largo plazo de cultivar esta valiosa habilidad desde temprana edad.","Publicado el 15\/05\/2025","Ver m\u00e1s","Tsetestsetset","tsetestsetset","Publicado el 01\/01\/0001","Ver m\u00e1s","Test de categoria final","escuela primaria","Publicado el 01\/01\/0002","Ver m\u00e1s","Test de categoria","descripcion corta obligatoria?","Publicado el 01\/01\/0001","Ver m\u00e1s","Testeoteseto","descripcion de testeo","Publicado el 01\/01\/0001","Ver m\u00e1s","Testtestestse","descripcion de testeo","Publicado el 01\/01\/0001","Ver m\u00e1s","Derechos Reservados \u00ae Digital-Mind \u00a9 "],"target_lang":"EN"}
+[2025-05-17 08:22:53] DeepL API HTTP Code: 200
+[2025-05-17 08:22:53] DeepL API Response: {"translations":[{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Translate"},{"detected_source_language":"ES","text":"Login"},{"detected_source_language":"ES","text":"Search..."},{"detected_source_language":"ES","text":"Most Recent"},{"detected_source_language":"EN","text":"Testeooooo editeditedit"},{"detected_source_language":"ET","text":"testeoooootesteooooo edit"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Keys to a meaningful and transformative secondary education."},{"detected_source_language":"ES","text":"Secondary education is a crucial period of transition and growth. We will explore strategies for academic success, developing critical thinking skills, exploring interests, fostering autonomy, and preparing for"},{"detected_source_language":"ES","text":"Published on 05/22/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Keys to a solid and stimulating primary education"},{"detected_source_language":"ES","text":"Primary education is the fundamental foundation for children's academic, social and emotional development. We will explore effective pedagogical strategies, the importance of a positive learning environment, the promotion of key skills and collaboration."},{"detected_source_language":"ES","text":"Published on 05/21/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Keys to a successful education and a bright future"},{"detected_source_language":"ES","text":"High school is a crucial stage in academic and personal life. We will explore effective strategies for academic success, vocational exploration, social-emotional skill development, and preparation for the next step, whether it is college or college."},{"detected_source_language":"ES","text":"Published on 20/05/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Unlocking your potential: exploring various effective learning methods"},{"detected_source_language":"EN","text":"<br />\n<b>Warning</b>:  Undefined array key \"descripcion_corta\" in <b>C:\\xampp\\htdocs\\Digital-Mind\\PHP\\blog_edit.php</b> on line <b>89</b><br />"},{"detected_source_language":"ES","text":"Published on 19/05/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Unlocking your voice: keys to developing powerful writing skills"},{"detected_source_language":"ES","text":"Immerse yourself in the art of effective writing. We will explore essential techniques, practical tips and strategies to improve your clarity, conciseness and persuasiveness through the written word."},{"detected_source_language":"ES","text":"Published on 05/18/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Education as a vocational compass"},{"detected_source_language":"ES","text":"Explore how education in its various forms can be a powerful tool for discovering your interests, skills and, ultimately, your vocation. We will look at how different areas of learning can guide you toward a career path."},{"detected_source_language":"ES","text":"Published on 06/17/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Exploring the world with science and mathematics"},{"detected_source_language":"ES","text":"Discover how science and mathematics intertwine to help us understand the world around us. We will explore fun experiments, challenging problems and the importance of cultivating curiosity in these areas from an early age."},{"detected_source_language":"ES","text":"Published on 16/05/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"The power of curiosity in children's learning"},{"detected_source_language":"ES","text":"Discover how fostering children's natural curiosity can be the key to deeper, more meaningful learning. We explore practical strategies and long-term benefits of cultivating this valuable skill from an early age."},{"detected_source_language":"ES","text":"Published on 05/15/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ET","text":"Tsetestsets"},{"detected_source_language":"ET","text":"tsetestsets"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"RO","text":"Final category test"},{"detected_source_language":"ES","text":"elementary school"},{"detected_source_language":"ES","text":"Published on 01/01/0002"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"RO","text":"Category test"},{"detected_source_language":"ES","text":"short description required?"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ET","text":"Testeoteseto"},{"detected_source_language":"ES","text":"description of testeo"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"DE","text":"Test tests"},{"detected_source_language":"ES","text":"description of testeo"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Copyright ® Digital-Mind © All Rights Reserved"}]}
+[2025-05-17 08:22:53] Extracted translated texts: Array
+(
+    [0] => Category
+    [1] => About
+    [2] => Contact page
+    [3] => Translate
+    [4] => Login
+    [5] => Search...
+    [6] => Most Recent
+    [7] => Testeooooo editeditedit
+    [8] => testeoooootesteooooo edit
+    [9] => Published on 01/01/0001
+    [10] => See more
+    [11] => Keys to a meaningful and transformative secondary education.
+    [12] => Secondary education is a crucial period of transition and growth. We will explore strategies for academic success, developing critical thinking skills, exploring interests, fostering autonomy, and preparing for
+    [13] => Published on 05/22/2025
+    [14] => See more
+    [15] => Keys to a solid and stimulating primary education
+    [16] => Primary education is the fundamental foundation for children's academic, social and emotional development. We will explore effective pedagogical strategies, the importance of a positive learning environment, the promotion of key skills and collaboration.
+    [17] => Published on 05/21/2025
+    [18] => See more
+    [19] => Keys to a successful education and a bright future
+    [20] => High school is a crucial stage in academic and personal life. We will explore effective strategies for academic success, vocational exploration, social-emotional skill development, and preparation for the next step, whether it is college or college.
+    [21] => Published on 20/05/2025
+    [22] => See more
+    [23] => Unlocking your potential: exploring various effective learning methods
+    [24] => <br />
+<b>Warning</b>:  Undefined array key "descripcion_corta" in <b>C:\xampp\htdocs\Digital-Mind\PHP\blog_edit.php</b> on line <b>89</b><br />
+    [25] => Published on 19/05/2025
+    [26] => See more
+    [27] => Unlocking your voice: keys to developing powerful writing skills
+    [28] => Immerse yourself in the art of effective writing. We will explore essential techniques, practical tips and strategies to improve your clarity, conciseness and persuasiveness through the written word.
+    [29] => Published on 05/18/2025
+    [30] => See more
+    [31] => Education as a vocational compass
+    [32] => Explore how education in its various forms can be a powerful tool for discovering your interests, skills and, ultimately, your vocation. We will look at how different areas of learning can guide you toward a career path.
+    [33] => Published on 06/17/2025
+    [34] => See more
+    [35] => Exploring the world with science and mathematics
+    [36] => Discover how science and mathematics intertwine to help us understand the world around us. We will explore fun experiments, challenging problems and the importance of cultivating curiosity in these areas from an early age.
+    [37] => Published on 16/05/2025
+    [38] => See more
+    [39] => The power of curiosity in children's learning
+    [40] => Discover how fostering children's natural curiosity can be the key to deeper, more meaningful learning. We explore practical strategies and long-term benefits of cultivating this valuable skill from an early age.
+    [41] => Published on 05/15/2025
+    [42] => See more
+    [43] => Tsetestsets
+    [44] => tsetestsets
+    [45] => Published on 01/01/0001
+    [46] => See more
+    [47] => Final category test
+    [48] => elementary school
+    [49] => Published on 01/01/0002
+    [50] => See more
+    [51] => Category test
+    [52] => short description required?
+    [53] => Published on 01/01/0001
+    [54] => See more
+    [55] => Testeoteseto
+    [56] => description of testeo
+    [57] => Published on 01/01/0001
+    [58] => See more
+    [59] => Test tests
+    [60] => description of testeo
+    [61] => Published on 01/01/0001
+    [62] => See more
+    [63] => Copyright ® Digital-Mind © All Rights Reserved
+)
+
+[2025-05-17 08:22:53] Successfully returned translated texts.
+[2025-05-18 00:26:57] Received POST request.
+[2025-05-18 00:26:57] POST data: Array
+(
+    [texts] => ["Categoría","Educacion Primaria","Educacion Media","Educacion Media Superior","Educacion Superior","Acerca de","Pagina de contacto","Traducir","Cerrar sesión","Más Reciente","Testeooooo editeditedit","testeoooootesteooooo edit","Publicado el 01/01/0001","Ver más","Claves para una educación secundaria significativa y transformadora","La educación secundaria es un período crucial de transición y crecimiento. Exploraremos estrategias para el éxito académico, el desarrollo de habilidades de pensamiento crítico, la exploración de intereses, el fomento de la autonomía y la preparación para","Publicado el 22/05/2025","Ver más","Claves para una educación primaria sólida y estimulante","La educación primaria es la base fundamental para el desarrollo académico, social y emocional de los niños. Exploraremos estrategias pedagógicas efectivas, la importancia de un ambiente de aprendizaje positivo, el fomento de habilidades clave y la colabor","Publicado el 21/05/2025","Ver más","Claves para una educación exitosa y un futuro brillante","La preparatoria es una etapa crucial en la vida académica y personal. Exploraremos estrategias efectivas para el éxito académico, la exploración vocacional, el desarrollo de habilidades socioemocionales y la preparación para el siguiente paso, ya sea la u","Publicado el 20/05/2025","Ver más","Desbloquea tu potencial: explorando diversos métodos de aprendizaje efectivos","<br />\n<b>Warning</b>:  Undefined array key \"descripcion_corta\" in <b>C:\\xampp\\htdocs\\Digital-Mind\\PHP\\blog_edit.php</b> on line <b>89</b><br />","Publicado el 19/05/2025","Ver más","Desbloquea tu voz: claves para desarrollar habilidades de redacción impactantes","Sumérgete en el arte de la escritura efectiva. Exploraremos técnicas esenciales, consejos prácticos y estrategias para mejorar tu claridad, concisión y capacidad de persuasión a través de la palabra escrita.","Publicado el 18/05/2025","Ver más","La educación como brújula vocacional","Explora cómo la educación en sus diversas formas puede ser una herramienta poderosa para descubrir tus intereses, habilidades y, en última instancia, tu vocación. Analizaremos cómo diferentes áreas del aprendizaje pueden guiarte hacia un camino profesiona","Publicado el 17/06/2025","Ver más","Explorando el mundo con ciencia y matemáticas","Descubre cómo la ciencia y las matemáticas se entrelazan para ayudarnos a comprender el mundo que nos rodea. Exploraremos experimentos divertidos, problemas desafiantes y la importancia de cultivar la curiosidad en estas áreas desde una edad temprana.","Publicado el 16/05/2025","Ver más","El poder de la curiosidad en el aprendizaje infantil","Descubre cómo fomentar la curiosidad natural de los niños puede ser la clave para un aprendizaje más profundo y significativo. Exploramos estrategias prácticas y beneficios a largo plazo de cultivar esta valiosa habilidad desde temprana edad.","Publicado el 15/05/2025","Ver más","Tsetestsetset","tsetestsetset","Publicado el 01/01/0001","Ver más","Test de categoria final","escuela primaria","Publicado el 01/01/0002","Ver más","Test de categoria","descripcion corta obligatoria?","Publicado el 01/01/0001","Ver más","Testeoteseto","descripcion de testeo","Publicado el 01/01/0001","Ver más","Testtestestse","descripcion de testeo","Publicado el 01/01/0001","Ver más","Derechos Reservados ® Digital-Mind © "]
+    [target_lang] => EN
+)
+
+[2025-05-18 00:26:57] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-05-18 00:26:57] 'texts' parameter received: ["Categoría","Educacion Primaria","Educacion Media","Educacion Media Superior","Educacion Superior","Acerca de","Pagina de contacto","Traducir","Cerrar sesión","Más Reciente","Testeooooo editeditedit","testeoooootesteooooo edit","Publicado el 01/01/0001","Ver más","Claves para una educación secundaria significativa y transformadora","La educación secundaria es un período crucial de transición y crecimiento. Exploraremos estrategias para el éxito académico, el desarrollo de habilidades de pensamiento crítico, la exploración de intereses, el fomento de la autonomía y la preparación para","Publicado el 22/05/2025","Ver más","Claves para una educación primaria sólida y estimulante","La educación primaria es la base fundamental para el desarrollo académico, social y emocional de los niños. Exploraremos estrategias pedagógicas efectivas, la importancia de un ambiente de aprendizaje positivo, el fomento de habilidades clave y la colabor","Publicado el 21/05/2025","Ver más","Claves para una educación exitosa y un futuro brillante","La preparatoria es una etapa crucial en la vida académica y personal. Exploraremos estrategias efectivas para el éxito académico, la exploración vocacional, el desarrollo de habilidades socioemocionales y la preparación para el siguiente paso, ya sea la u","Publicado el 20/05/2025","Ver más","Desbloquea tu potencial: explorando diversos métodos de aprendizaje efectivos","<br />\n<b>Warning</b>:  Undefined array key \"descripcion_corta\" in <b>C:\\xampp\\htdocs\\Digital-Mind\\PHP\\blog_edit.php</b> on line <b>89</b><br />","Publicado el 19/05/2025","Ver más","Desbloquea tu voz: claves para desarrollar habilidades de redacción impactantes","Sumérgete en el arte de la escritura efectiva. Exploraremos técnicas esenciales, consejos prácticos y estrategias para mejorar tu claridad, concisión y capacidad de persuasión a través de la palabra escrita.","Publicado el 18/05/2025","Ver más","La educación como brújula vocacional","Explora cómo la educación en sus diversas formas puede ser una herramienta poderosa para descubrir tus intereses, habilidades y, en última instancia, tu vocación. Analizaremos cómo diferentes áreas del aprendizaje pueden guiarte hacia un camino profesiona","Publicado el 17/06/2025","Ver más","Explorando el mundo con ciencia y matemáticas","Descubre cómo la ciencia y las matemáticas se entrelazan para ayudarnos a comprender el mundo que nos rodea. Exploraremos experimentos divertidos, problemas desafiantes y la importancia de cultivar la curiosidad en estas áreas desde una edad temprana.","Publicado el 16/05/2025","Ver más","El poder de la curiosidad en el aprendizaje infantil","Descubre cómo fomentar la curiosidad natural de los niños puede ser la clave para un aprendizaje más profundo y significativo. Exploramos estrategias prácticas y beneficios a largo plazo de cultivar esta valiosa habilidad desde temprana edad.","Publicado el 15/05/2025","Ver más","Tsetestsetset","tsetestsetset","Publicado el 01/01/0001","Ver más","Test de categoria final","escuela primaria","Publicado el 01/01/0002","Ver más","Test de categoria","descripcion corta obligatoria?","Publicado el 01/01/0001","Ver más","Testeoteseto","descripcion de testeo","Publicado el 01/01/0001","Ver más","Testtestestse","descripcion de testeo","Publicado el 01/01/0001","Ver más","Derechos Reservados ® Digital-Mind © "]
+[2025-05-18 00:26:57] Result of json_decode: Array
+(
+    [0] => Categoría
+    [1] => Educacion Primaria
+    [2] => Educacion Media
+    [3] => Educacion Media Superior
+    [4] => Educacion Superior
+    [5] => Acerca de
+    [6] => Pagina de contacto
+    [7] => Traducir
+    [8] => Cerrar sesión
+    [9] => Más Reciente
+    [10] => Testeooooo editeditedit
+    [11] => testeoooootesteooooo edit
+    [12] => Publicado el 01/01/0001
+    [13] => Ver más
+    [14] => Claves para una educación secundaria significativa y transformadora
+    [15] => La educación secundaria es un período crucial de transición y crecimiento. Exploraremos estrategias para el éxito académico, el desarrollo de habilidades de pensamiento crítico, la exploración de intereses, el fomento de la autonomía y la preparación para
+    [16] => Publicado el 22/05/2025
+    [17] => Ver más
+    [18] => Claves para una educación primaria sólida y estimulante
+    [19] => La educación primaria es la base fundamental para el desarrollo académico, social y emocional de los niños. Exploraremos estrategias pedagógicas efectivas, la importancia de un ambiente de aprendizaje positivo, el fomento de habilidades clave y la colabor
+    [20] => Publicado el 21/05/2025
+    [21] => Ver más
+    [22] => Claves para una educación exitosa y un futuro brillante
+    [23] => La preparatoria es una etapa crucial en la vida académica y personal. Exploraremos estrategias efectivas para el éxito académico, la exploración vocacional, el desarrollo de habilidades socioemocionales y la preparación para el siguiente paso, ya sea la u
+    [24] => Publicado el 20/05/2025
+    [25] => Ver más
+    [26] => Desbloquea tu potencial: explorando diversos métodos de aprendizaje efectivos
+    [27] => <br />
+<b>Warning</b>:  Undefined array key "descripcion_corta" in <b>C:\xampp\htdocs\Digital-Mind\PHP\blog_edit.php</b> on line <b>89</b><br />
+    [28] => Publicado el 19/05/2025
+    [29] => Ver más
+    [30] => Desbloquea tu voz: claves para desarrollar habilidades de redacción impactantes
+    [31] => Sumérgete en el arte de la escritura efectiva. Exploraremos técnicas esenciales, consejos prácticos y estrategias para mejorar tu claridad, concisión y capacidad de persuasión a través de la palabra escrita.
+    [32] => Publicado el 18/05/2025
+    [33] => Ver más
+    [34] => La educación como brújula vocacional
+    [35] => Explora cómo la educación en sus diversas formas puede ser una herramienta poderosa para descubrir tus intereses, habilidades y, en última instancia, tu vocación. Analizaremos cómo diferentes áreas del aprendizaje pueden guiarte hacia un camino profesiona
+    [36] => Publicado el 17/06/2025
+    [37] => Ver más
+    [38] => Explorando el mundo con ciencia y matemáticas
+    [39] => Descubre cómo la ciencia y las matemáticas se entrelazan para ayudarnos a comprender el mundo que nos rodea. Exploraremos experimentos divertidos, problemas desafiantes y la importancia de cultivar la curiosidad en estas áreas desde una edad temprana.
+    [40] => Publicado el 16/05/2025
+    [41] => Ver más
+    [42] => El poder de la curiosidad en el aprendizaje infantil
+    [43] => Descubre cómo fomentar la curiosidad natural de los niños puede ser la clave para un aprendizaje más profundo y significativo. Exploramos estrategias prácticas y beneficios a largo plazo de cultivar esta valiosa habilidad desde temprana edad.
+    [44] => Publicado el 15/05/2025
+    [45] => Ver más
+    [46] => Tsetestsetset
+    [47] => tsetestsetset
+    [48] => Publicado el 01/01/0001
+    [49] => Ver más
+    [50] => Test de categoria final
+    [51] => escuela primaria
+    [52] => Publicado el 01/01/0002
+    [53] => Ver más
+    [54] => Test de categoria
+    [55] => descripcion corta obligatoria?
+    [56] => Publicado el 01/01/0001
+    [57] => Ver más
+    [58] => Testeoteseto
+    [59] => descripcion de testeo
+    [60] => Publicado el 01/01/0001
+    [61] => Ver más
+    [62] => Testtestestse
+    [63] => descripcion de testeo
+    [64] => Publicado el 01/01/0001
+    [65] => Ver más
+    [66] => Derechos Reservados ® Digital-Mind © 
+)
+
+[2025-05-18 00:26:57] Target language: EN
+[2025-05-18 00:26:57] Data sent to DeepL API (JSON): {"text":["Categor\u00eda","Educacion Primaria","Educacion Media","Educacion Media Superior","Educacion Superior","Acerca de","Pagina de contacto","Traducir","Cerrar sesi\u00f3n","M\u00e1s Reciente","Testeooooo editeditedit","testeoooootesteooooo edit","Publicado el 01\/01\/0001","Ver m\u00e1s","Claves para una educaci\u00f3n secundaria significativa y transformadora","La educaci\u00f3n secundaria es un per\u00edodo crucial de transici\u00f3n y crecimiento. Exploraremos estrategias para el \u00e9xito acad\u00e9mico, el desarrollo de habilidades de pensamiento cr\u00edtico, la exploraci\u00f3n de intereses, el fomento de la autonom\u00eda y la preparaci\u00f3n para","Publicado el 22\/05\/2025","Ver m\u00e1s","Claves para una educaci\u00f3n primaria s\u00f3lida y estimulante","La educaci\u00f3n primaria es la base fundamental para el desarrollo acad\u00e9mico, social y emocional de los ni\u00f1os. Exploraremos estrategias pedag\u00f3gicas efectivas, la importancia de un ambiente de aprendizaje positivo, el fomento de habilidades clave y la colabor","Publicado el 21\/05\/2025","Ver m\u00e1s","Claves para una educaci\u00f3n exitosa y un futuro brillante","La preparatoria es una etapa crucial en la vida acad\u00e9mica y personal. Exploraremos estrategias efectivas para el \u00e9xito acad\u00e9mico, la exploraci\u00f3n vocacional, el desarrollo de habilidades socioemocionales y la preparaci\u00f3n para el siguiente paso, ya sea la u","Publicado el 20\/05\/2025","Ver m\u00e1s","Desbloquea tu potencial: explorando diversos m\u00e9todos de aprendizaje efectivos","<br \/>\n<b>Warning<\/b>:  Undefined array key \"descripcion_corta\" in <b>C:\\xampp\\htdocs\\Digital-Mind\\PHP\\blog_edit.php<\/b> on line <b>89<\/b><br \/>","Publicado el 19\/05\/2025","Ver m\u00e1s","Desbloquea tu voz: claves para desarrollar habilidades de redacci\u00f3n impactantes","Sum\u00e9rgete en el arte de la escritura efectiva. Exploraremos t\u00e9cnicas esenciales, consejos pr\u00e1cticos y estrategias para mejorar tu claridad, concisi\u00f3n y capacidad de persuasi\u00f3n a trav\u00e9s de la palabra escrita.","Publicado el 18\/05\/2025","Ver m\u00e1s","La educaci\u00f3n como br\u00fajula vocacional","Explora c\u00f3mo la educaci\u00f3n en sus diversas formas puede ser una herramienta poderosa para descubrir tus intereses, habilidades y, en \u00faltima instancia, tu vocaci\u00f3n. Analizaremos c\u00f3mo diferentes \u00e1reas del aprendizaje pueden guiarte hacia un camino profesiona","Publicado el 17\/06\/2025","Ver m\u00e1s","Explorando el mundo con ciencia y matem\u00e1ticas","Descubre c\u00f3mo la ciencia y las matem\u00e1ticas se entrelazan para ayudarnos a comprender el mundo que nos rodea. Exploraremos experimentos divertidos, problemas desafiantes y la importancia de cultivar la curiosidad en estas \u00e1reas desde una edad temprana.","Publicado el 16\/05\/2025","Ver m\u00e1s","El poder de la curiosidad en el aprendizaje infantil","Descubre c\u00f3mo fomentar la curiosidad natural de los ni\u00f1os puede ser la clave para un aprendizaje m\u00e1s profundo y significativo. Exploramos estrategias pr\u00e1cticas y beneficios a largo plazo de cultivar esta valiosa habilidad desde temprana edad.","Publicado el 15\/05\/2025","Ver m\u00e1s","Tsetestsetset","tsetestsetset","Publicado el 01\/01\/0001","Ver m\u00e1s","Test de categoria final","escuela primaria","Publicado el 01\/01\/0002","Ver m\u00e1s","Test de categoria","descripcion corta obligatoria?","Publicado el 01\/01\/0001","Ver m\u00e1s","Testeoteseto","descripcion de testeo","Publicado el 01\/01\/0001","Ver m\u00e1s","Testtestestse","descripcion de testeo","Publicado el 01\/01\/0001","Ver m\u00e1s","Derechos Reservados \u00ae Digital-Mind \u00a9 "],"target_lang":"EN"}
+[2025-05-18 00:26:58] DeepL API HTTP Code: 200
+[2025-05-18 00:26:58] DeepL API Response: {"translations":[{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"Primary Education"},{"detected_source_language":"ES","text":"Secondary Education"},{"detected_source_language":"ES","text":"Higher Secondary Education"},{"detected_source_language":"ES","text":"Higher Education"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Translate"},{"detected_source_language":"ES","text":"Log off"},{"detected_source_language":"ES","text":"Most Recent"},{"detected_source_language":"EN","text":"Testeooooo editeditedit"},{"detected_source_language":"ET","text":"testeoooootesteooooo edit"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Keys to a meaningful and transformative secondary education."},{"detected_source_language":"ES","text":"Secondary education is a crucial period of transition and growth. We will explore strategies for academic success, developing critical thinking skills, exploring interests, fostering autonomy, and preparing for"},{"detected_source_language":"ES","text":"Published on 05/22/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Keys to a solid and stimulating primary education"},{"detected_source_language":"ES","text":"Primary education is the fundamental foundation for children's academic, social and emotional development. We will explore effective pedagogical strategies, the importance of a positive learning environment, the promotion of key skills and collaboration."},{"detected_source_language":"ES","text":"Published on 05/21/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Keys to a successful education and a bright future"},{"detected_source_language":"ES","text":"High school is a crucial stage in academic and personal life. We will explore effective strategies for academic success, vocational exploration, social-emotional skill development, and preparation for the next step, whether it is college or college."},{"detected_source_language":"ES","text":"Published on 20/05/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Unlocking your potential: exploring various effective learning methods"},{"detected_source_language":"EN","text":"<br />\n<b>Warning</b>:  Undefined array key \"descripcion_corta\" in <b>C:\\xampp\\htdocs\\Digital-Mind\\PHP\\blog_edit.php</b> on line <b>89</b><br />"},{"detected_source_language":"ES","text":"Published on 19/05/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Unlocking your voice: keys to developing powerful writing skills"},{"detected_source_language":"ES","text":"Immerse yourself in the art of effective writing. We will explore essential techniques, practical tips and strategies to improve your clarity, conciseness and persuasiveness through the written word."},{"detected_source_language":"ES","text":"Published on 05/18/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Education as a vocational compass"},{"detected_source_language":"ES","text":"Explore how education in its various forms can be a powerful tool for discovering your interests, skills and, ultimately, your vocation. We will look at how different areas of learning can guide you toward a career path."},{"detected_source_language":"ES","text":"Published on 06/17/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Exploring the world with science and mathematics"},{"detected_source_language":"ES","text":"Discover how science and mathematics intertwine to help us understand the world around us. We will explore fun experiments, challenging problems and the importance of cultivating curiosity in these areas from an early age."},{"detected_source_language":"ES","text":"Published on 16/05/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"The power of curiosity in children's learning"},{"detected_source_language":"ES","text":"Discover how fostering children's natural curiosity can be the key to deeper, more meaningful learning. We explore practical strategies and long-term benefits of cultivating this valuable skill from an early age."},{"detected_source_language":"ES","text":"Published on 05/15/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ET","text":"Tsetestsets"},{"detected_source_language":"ET","text":"tsetestsets"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"RO","text":"Final category test"},{"detected_source_language":"ES","text":"elementary school"},{"detected_source_language":"ES","text":"Published on 01/01/0002"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"RO","text":"Category test"},{"detected_source_language":"ES","text":"short description required?"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ET","text":"Testeoteseto"},{"detected_source_language":"ES","text":"description of testeo"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"DE","text":"Test tests"},{"detected_source_language":"ES","text":"description of testeo"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Copyright ® Digital-Mind © All Rights Reserved"}]}
+[2025-05-18 00:26:58] Extracted translated texts: Array
+(
+    [0] => Category
+    [1] => Primary Education
+    [2] => Secondary Education
+    [3] => Higher Secondary Education
+    [4] => Higher Education
+    [5] => About
+    [6] => Contact page
+    [7] => Translate
+    [8] => Log off
+    [9] => Most Recent
+    [10] => Testeooooo editeditedit
+    [11] => testeoooootesteooooo edit
+    [12] => Published on 01/01/0001
+    [13] => See more
+    [14] => Keys to a meaningful and transformative secondary education.
+    [15] => Secondary education is a crucial period of transition and growth. We will explore strategies for academic success, developing critical thinking skills, exploring interests, fostering autonomy, and preparing for
+    [16] => Published on 05/22/2025
+    [17] => See more
+    [18] => Keys to a solid and stimulating primary education
+    [19] => Primary education is the fundamental foundation for children's academic, social and emotional development. We will explore effective pedagogical strategies, the importance of a positive learning environment, the promotion of key skills and collaboration.
+    [20] => Published on 05/21/2025
+    [21] => See more
+    [22] => Keys to a successful education and a bright future
+    [23] => High school is a crucial stage in academic and personal life. We will explore effective strategies for academic success, vocational exploration, social-emotional skill development, and preparation for the next step, whether it is college or college.
+    [24] => Published on 20/05/2025
+    [25] => See more
+    [26] => Unlocking your potential: exploring various effective learning methods
+    [27] => <br />
+<b>Warning</b>:  Undefined array key "descripcion_corta" in <b>C:\xampp\htdocs\Digital-Mind\PHP\blog_edit.php</b> on line <b>89</b><br />
+    [28] => Published on 19/05/2025
+    [29] => See more
+    [30] => Unlocking your voice: keys to developing powerful writing skills
+    [31] => Immerse yourself in the art of effective writing. We will explore essential techniques, practical tips and strategies to improve your clarity, conciseness and persuasiveness through the written word.
+    [32] => Published on 05/18/2025
+    [33] => See more
+    [34] => Education as a vocational compass
+    [35] => Explore how education in its various forms can be a powerful tool for discovering your interests, skills and, ultimately, your vocation. We will look at how different areas of learning can guide you toward a career path.
+    [36] => Published on 06/17/2025
+    [37] => See more
+    [38] => Exploring the world with science and mathematics
+    [39] => Discover how science and mathematics intertwine to help us understand the world around us. We will explore fun experiments, challenging problems and the importance of cultivating curiosity in these areas from an early age.
+    [40] => Published on 16/05/2025
+    [41] => See more
+    [42] => The power of curiosity in children's learning
+    [43] => Discover how fostering children's natural curiosity can be the key to deeper, more meaningful learning. We explore practical strategies and long-term benefits of cultivating this valuable skill from an early age.
+    [44] => Published on 05/15/2025
+    [45] => See more
+    [46] => Tsetestsets
+    [47] => tsetestsets
+    [48] => Published on 01/01/0001
+    [49] => See more
+    [50] => Final category test
+    [51] => elementary school
+    [52] => Published on 01/01/0002
+    [53] => See more
+    [54] => Category test
+    [55] => short description required?
+    [56] => Published on 01/01/0001
+    [57] => See more
+    [58] => Testeoteseto
+    [59] => description of testeo
+    [60] => Published on 01/01/0001
+    [61] => See more
+    [62] => Test tests
+    [63] => description of testeo
+    [64] => Published on 01/01/0001
+    [65] => See more
+    [66] => Copyright ® Digital-Mind © All Rights Reserved
+)
+
+[2025-05-18 00:26:58] Successfully returned translated texts.
+[2025-05-18 00:27:05] Received POST request.
+[2025-05-18 00:27:05] POST data: Array
+(
+    [texts] => ["Categoría","Educacion Primaria","Educacion Media","Educacion Media Superior","Educacion Superior","Acerca de","Pagina de contacto","Traducir","Cerrar sesión","Más Reciente","Testeooooo editeditedit","testeoooootesteooooo edit","Publicado el 01/01/0001","Ver más","Claves para una educación secundaria significativa y transformadora","La educación secundaria es un período crucial de transición y crecimiento. Exploraremos estrategias para el éxito académico, el desarrollo de habilidades de pensamiento crítico, la exploración de intereses, el fomento de la autonomía y la preparación para","Publicado el 22/05/2025","Ver más","Claves para una educación primaria sólida y estimulante","La educación primaria es la base fundamental para el desarrollo académico, social y emocional de los niños. Exploraremos estrategias pedagógicas efectivas, la importancia de un ambiente de aprendizaje positivo, el fomento de habilidades clave y la colabor","Publicado el 21/05/2025","Ver más","Claves para una educación exitosa y un futuro brillante","La preparatoria es una etapa crucial en la vida académica y personal. Exploraremos estrategias efectivas para el éxito académico, la exploración vocacional, el desarrollo de habilidades socioemocionales y la preparación para el siguiente paso, ya sea la u","Publicado el 20/05/2025","Ver más","Desbloquea tu potencial: explorando diversos métodos de aprendizaje efectivos","<br />\n<b>Warning</b>:  Undefined array key \"descripcion_corta\" in <b>C:\\xampp\\htdocs\\Digital-Mind\\PHP\\blog_edit.php</b> on line <b>89</b><br />","Publicado el 19/05/2025","Ver más","Desbloquea tu voz: claves para desarrollar habilidades de redacción impactantes","Sumérgete en el arte de la escritura efectiva. Exploraremos técnicas esenciales, consejos prácticos y estrategias para mejorar tu claridad, concisión y capacidad de persuasión a través de la palabra escrita.","Publicado el 18/05/2025","Ver más","La educación como brújula vocacional","Explora cómo la educación en sus diversas formas puede ser una herramienta poderosa para descubrir tus intereses, habilidades y, en última instancia, tu vocación. Analizaremos cómo diferentes áreas del aprendizaje pueden guiarte hacia un camino profesiona","Publicado el 17/06/2025","Ver más","Explorando el mundo con ciencia y matemáticas","Descubre cómo la ciencia y las matemáticas se entrelazan para ayudarnos a comprender el mundo que nos rodea. Exploraremos experimentos divertidos, problemas desafiantes y la importancia de cultivar la curiosidad en estas áreas desde una edad temprana.","Publicado el 16/05/2025","Ver más","El poder de la curiosidad en el aprendizaje infantil","Descubre cómo fomentar la curiosidad natural de los niños puede ser la clave para un aprendizaje más profundo y significativo. Exploramos estrategias prácticas y beneficios a largo plazo de cultivar esta valiosa habilidad desde temprana edad.","Publicado el 15/05/2025","Ver más","Tsetestsetset","tsetestsetset","Publicado el 01/01/0001","Ver más","Test de categoria final","escuela primaria","Publicado el 01/01/0002","Ver más","Test de categoria","descripcion corta obligatoria?","Publicado el 01/01/0001","Ver más","Testeoteseto","descripcion de testeo","Publicado el 01/01/0001","Ver más","Testtestestse","descripcion de testeo","Publicado el 01/01/0001","Ver más","Derechos Reservados ® Digital-Mind © "]
+    [target_lang] => EN
+)
+
+[2025-05-18 00:27:05] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-05-18 00:27:05] 'texts' parameter received: ["Categoría","Educacion Primaria","Educacion Media","Educacion Media Superior","Educacion Superior","Acerca de","Pagina de contacto","Traducir","Cerrar sesión","Más Reciente","Testeooooo editeditedit","testeoooootesteooooo edit","Publicado el 01/01/0001","Ver más","Claves para una educación secundaria significativa y transformadora","La educación secundaria es un período crucial de transición y crecimiento. Exploraremos estrategias para el éxito académico, el desarrollo de habilidades de pensamiento crítico, la exploración de intereses, el fomento de la autonomía y la preparación para","Publicado el 22/05/2025","Ver más","Claves para una educación primaria sólida y estimulante","La educación primaria es la base fundamental para el desarrollo académico, social y emocional de los niños. Exploraremos estrategias pedagógicas efectivas, la importancia de un ambiente de aprendizaje positivo, el fomento de habilidades clave y la colabor","Publicado el 21/05/2025","Ver más","Claves para una educación exitosa y un futuro brillante","La preparatoria es una etapa crucial en la vida académica y personal. Exploraremos estrategias efectivas para el éxito académico, la exploración vocacional, el desarrollo de habilidades socioemocionales y la preparación para el siguiente paso, ya sea la u","Publicado el 20/05/2025","Ver más","Desbloquea tu potencial: explorando diversos métodos de aprendizaje efectivos","<br />\n<b>Warning</b>:  Undefined array key \"descripcion_corta\" in <b>C:\\xampp\\htdocs\\Digital-Mind\\PHP\\blog_edit.php</b> on line <b>89</b><br />","Publicado el 19/05/2025","Ver más","Desbloquea tu voz: claves para desarrollar habilidades de redacción impactantes","Sumérgete en el arte de la escritura efectiva. Exploraremos técnicas esenciales, consejos prácticos y estrategias para mejorar tu claridad, concisión y capacidad de persuasión a través de la palabra escrita.","Publicado el 18/05/2025","Ver más","La educación como brújula vocacional","Explora cómo la educación en sus diversas formas puede ser una herramienta poderosa para descubrir tus intereses, habilidades y, en última instancia, tu vocación. Analizaremos cómo diferentes áreas del aprendizaje pueden guiarte hacia un camino profesiona","Publicado el 17/06/2025","Ver más","Explorando el mundo con ciencia y matemáticas","Descubre cómo la ciencia y las matemáticas se entrelazan para ayudarnos a comprender el mundo que nos rodea. Exploraremos experimentos divertidos, problemas desafiantes y la importancia de cultivar la curiosidad en estas áreas desde una edad temprana.","Publicado el 16/05/2025","Ver más","El poder de la curiosidad en el aprendizaje infantil","Descubre cómo fomentar la curiosidad natural de los niños puede ser la clave para un aprendizaje más profundo y significativo. Exploramos estrategias prácticas y beneficios a largo plazo de cultivar esta valiosa habilidad desde temprana edad.","Publicado el 15/05/2025","Ver más","Tsetestsetset","tsetestsetset","Publicado el 01/01/0001","Ver más","Test de categoria final","escuela primaria","Publicado el 01/01/0002","Ver más","Test de categoria","descripcion corta obligatoria?","Publicado el 01/01/0001","Ver más","Testeoteseto","descripcion de testeo","Publicado el 01/01/0001","Ver más","Testtestestse","descripcion de testeo","Publicado el 01/01/0001","Ver más","Derechos Reservados ® Digital-Mind © "]
+[2025-05-18 00:27:05] Result of json_decode: Array
+(
+    [0] => Categoría
+    [1] => Educacion Primaria
+    [2] => Educacion Media
+    [3] => Educacion Media Superior
+    [4] => Educacion Superior
+    [5] => Acerca de
+    [6] => Pagina de contacto
+    [7] => Traducir
+    [8] => Cerrar sesión
+    [9] => Más Reciente
+    [10] => Testeooooo editeditedit
+    [11] => testeoooootesteooooo edit
+    [12] => Publicado el 01/01/0001
+    [13] => Ver más
+    [14] => Claves para una educación secundaria significativa y transformadora
+    [15] => La educación secundaria es un período crucial de transición y crecimiento. Exploraremos estrategias para el éxito académico, el desarrollo de habilidades de pensamiento crítico, la exploración de intereses, el fomento de la autonomía y la preparación para
+    [16] => Publicado el 22/05/2025
+    [17] => Ver más
+    [18] => Claves para una educación primaria sólida y estimulante
+    [19] => La educación primaria es la base fundamental para el desarrollo académico, social y emocional de los niños. Exploraremos estrategias pedagógicas efectivas, la importancia de un ambiente de aprendizaje positivo, el fomento de habilidades clave y la colabor
+    [20] => Publicado el 21/05/2025
+    [21] => Ver más
+    [22] => Claves para una educación exitosa y un futuro brillante
+    [23] => La preparatoria es una etapa crucial en la vida académica y personal. Exploraremos estrategias efectivas para el éxito académico, la exploración vocacional, el desarrollo de habilidades socioemocionales y la preparación para el siguiente paso, ya sea la u
+    [24] => Publicado el 20/05/2025
+    [25] => Ver más
+    [26] => Desbloquea tu potencial: explorando diversos métodos de aprendizaje efectivos
+    [27] => <br />
+<b>Warning</b>:  Undefined array key "descripcion_corta" in <b>C:\xampp\htdocs\Digital-Mind\PHP\blog_edit.php</b> on line <b>89</b><br />
+    [28] => Publicado el 19/05/2025
+    [29] => Ver más
+    [30] => Desbloquea tu voz: claves para desarrollar habilidades de redacción impactantes
+    [31] => Sumérgete en el arte de la escritura efectiva. Exploraremos técnicas esenciales, consejos prácticos y estrategias para mejorar tu claridad, concisión y capacidad de persuasión a través de la palabra escrita.
+    [32] => Publicado el 18/05/2025
+    [33] => Ver más
+    [34] => La educación como brújula vocacional
+    [35] => Explora cómo la educación en sus diversas formas puede ser una herramienta poderosa para descubrir tus intereses, habilidades y, en última instancia, tu vocación. Analizaremos cómo diferentes áreas del aprendizaje pueden guiarte hacia un camino profesiona
+    [36] => Publicado el 17/06/2025
+    [37] => Ver más
+    [38] => Explorando el mundo con ciencia y matemáticas
+    [39] => Descubre cómo la ciencia y las matemáticas se entrelazan para ayudarnos a comprender el mundo que nos rodea. Exploraremos experimentos divertidos, problemas desafiantes y la importancia de cultivar la curiosidad en estas áreas desde una edad temprana.
+    [40] => Publicado el 16/05/2025
+    [41] => Ver más
+    [42] => El poder de la curiosidad en el aprendizaje infantil
+    [43] => Descubre cómo fomentar la curiosidad natural de los niños puede ser la clave para un aprendizaje más profundo y significativo. Exploramos estrategias prácticas y beneficios a largo plazo de cultivar esta valiosa habilidad desde temprana edad.
+    [44] => Publicado el 15/05/2025
+    [45] => Ver más
+    [46] => Tsetestsetset
+    [47] => tsetestsetset
+    [48] => Publicado el 01/01/0001
+    [49] => Ver más
+    [50] => Test de categoria final
+    [51] => escuela primaria
+    [52] => Publicado el 01/01/0002
+    [53] => Ver más
+    [54] => Test de categoria
+    [55] => descripcion corta obligatoria?
+    [56] => Publicado el 01/01/0001
+    [57] => Ver más
+    [58] => Testeoteseto
+    [59] => descripcion de testeo
+    [60] => Publicado el 01/01/0001
+    [61] => Ver más
+    [62] => Testtestestse
+    [63] => descripcion de testeo
+    [64] => Publicado el 01/01/0001
+    [65] => Ver más
+    [66] => Derechos Reservados ® Digital-Mind © 
+)
+
+[2025-05-18 00:27:05] Target language: EN
+[2025-05-18 00:27:05] Data sent to DeepL API (JSON): {"text":["Categor\u00eda","Educacion Primaria","Educacion Media","Educacion Media Superior","Educacion Superior","Acerca de","Pagina de contacto","Traducir","Cerrar sesi\u00f3n","M\u00e1s Reciente","Testeooooo editeditedit","testeoooootesteooooo edit","Publicado el 01\/01\/0001","Ver m\u00e1s","Claves para una educaci\u00f3n secundaria significativa y transformadora","La educaci\u00f3n secundaria es un per\u00edodo crucial de transici\u00f3n y crecimiento. Exploraremos estrategias para el \u00e9xito acad\u00e9mico, el desarrollo de habilidades de pensamiento cr\u00edtico, la exploraci\u00f3n de intereses, el fomento de la autonom\u00eda y la preparaci\u00f3n para","Publicado el 22\/05\/2025","Ver m\u00e1s","Claves para una educaci\u00f3n primaria s\u00f3lida y estimulante","La educaci\u00f3n primaria es la base fundamental para el desarrollo acad\u00e9mico, social y emocional de los ni\u00f1os. Exploraremos estrategias pedag\u00f3gicas efectivas, la importancia de un ambiente de aprendizaje positivo, el fomento de habilidades clave y la colabor","Publicado el 21\/05\/2025","Ver m\u00e1s","Claves para una educaci\u00f3n exitosa y un futuro brillante","La preparatoria es una etapa crucial en la vida acad\u00e9mica y personal. Exploraremos estrategias efectivas para el \u00e9xito acad\u00e9mico, la exploraci\u00f3n vocacional, el desarrollo de habilidades socioemocionales y la preparaci\u00f3n para el siguiente paso, ya sea la u","Publicado el 20\/05\/2025","Ver m\u00e1s","Desbloquea tu potencial: explorando diversos m\u00e9todos de aprendizaje efectivos","<br \/>\n<b>Warning<\/b>:  Undefined array key \"descripcion_corta\" in <b>C:\\xampp\\htdocs\\Digital-Mind\\PHP\\blog_edit.php<\/b> on line <b>89<\/b><br \/>","Publicado el 19\/05\/2025","Ver m\u00e1s","Desbloquea tu voz: claves para desarrollar habilidades de redacci\u00f3n impactantes","Sum\u00e9rgete en el arte de la escritura efectiva. Exploraremos t\u00e9cnicas esenciales, consejos pr\u00e1cticos y estrategias para mejorar tu claridad, concisi\u00f3n y capacidad de persuasi\u00f3n a trav\u00e9s de la palabra escrita.","Publicado el 18\/05\/2025","Ver m\u00e1s","La educaci\u00f3n como br\u00fajula vocacional","Explora c\u00f3mo la educaci\u00f3n en sus diversas formas puede ser una herramienta poderosa para descubrir tus intereses, habilidades y, en \u00faltima instancia, tu vocaci\u00f3n. Analizaremos c\u00f3mo diferentes \u00e1reas del aprendizaje pueden guiarte hacia un camino profesiona","Publicado el 17\/06\/2025","Ver m\u00e1s","Explorando el mundo con ciencia y matem\u00e1ticas","Descubre c\u00f3mo la ciencia y las matem\u00e1ticas se entrelazan para ayudarnos a comprender el mundo que nos rodea. Exploraremos experimentos divertidos, problemas desafiantes y la importancia de cultivar la curiosidad en estas \u00e1reas desde una edad temprana.","Publicado el 16\/05\/2025","Ver m\u00e1s","El poder de la curiosidad en el aprendizaje infantil","Descubre c\u00f3mo fomentar la curiosidad natural de los ni\u00f1os puede ser la clave para un aprendizaje m\u00e1s profundo y significativo. Exploramos estrategias pr\u00e1cticas y beneficios a largo plazo de cultivar esta valiosa habilidad desde temprana edad.","Publicado el 15\/05\/2025","Ver m\u00e1s","Tsetestsetset","tsetestsetset","Publicado el 01\/01\/0001","Ver m\u00e1s","Test de categoria final","escuela primaria","Publicado el 01\/01\/0002","Ver m\u00e1s","Test de categoria","descripcion corta obligatoria?","Publicado el 01\/01\/0001","Ver m\u00e1s","Testeoteseto","descripcion de testeo","Publicado el 01\/01\/0001","Ver m\u00e1s","Testtestestse","descripcion de testeo","Publicado el 01\/01\/0001","Ver m\u00e1s","Derechos Reservados \u00ae Digital-Mind \u00a9 "],"target_lang":"EN"}
+[2025-05-18 00:27:06] DeepL API HTTP Code: 200
+[2025-05-18 00:27:06] DeepL API Response: {"translations":[{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"Primary Education"},{"detected_source_language":"ES","text":"Secondary Education"},{"detected_source_language":"ES","text":"Higher Secondary Education"},{"detected_source_language":"ES","text":"Higher Education"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Translate"},{"detected_source_language":"ES","text":"Log off"},{"detected_source_language":"ES","text":"Most Recent"},{"detected_source_language":"EN","text":"Testeooooo editeditedit"},{"detected_source_language":"ET","text":"testeoooootesteooooo edit"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Keys to a meaningful and transformative secondary education."},{"detected_source_language":"ES","text":"Secondary education is a crucial period of transition and growth. We will explore strategies for academic success, developing critical thinking skills, exploring interests, fostering autonomy, and preparing for"},{"detected_source_language":"ES","text":"Published on 05/22/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Keys to a solid and stimulating primary education"},{"detected_source_language":"ES","text":"Primary education is the fundamental foundation for children's academic, social and emotional development. We will explore effective pedagogical strategies, the importance of a positive learning environment, the promotion of key skills and collaboration."},{"detected_source_language":"ES","text":"Published on 05/21/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Keys to a successful education and a bright future"},{"detected_source_language":"ES","text":"High school is a crucial stage in academic and personal life. We will explore effective strategies for academic success, vocational exploration, social-emotional skill development, and preparation for the next step, whether it is college or college."},{"detected_source_language":"ES","text":"Published on 20/05/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Unlocking your potential: exploring various effective learning methods"},{"detected_source_language":"EN","text":"<br />\n<b>Warning</b>:  Undefined array key \"descripcion_corta\" in <b>C:\\xampp\\htdocs\\Digital-Mind\\PHP\\blog_edit.php</b> on line <b>89</b><br />"},{"detected_source_language":"ES","text":"Published on 19/05/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Unlocking your voice: keys to developing powerful writing skills"},{"detected_source_language":"ES","text":"Immerse yourself in the art of effective writing. We will explore essential techniques, practical tips and strategies to improve your clarity, conciseness and persuasiveness through the written word."},{"detected_source_language":"ES","text":"Published on 05/18/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Education as a vocational compass"},{"detected_source_language":"ES","text":"Explore how education in its various forms can be a powerful tool for discovering your interests, skills and, ultimately, your vocation. We will look at how different areas of learning can guide you toward a career path."},{"detected_source_language":"ES","text":"Published on 06/17/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Exploring the world with science and mathematics"},{"detected_source_language":"ES","text":"Discover how science and mathematics intertwine to help us understand the world around us. We will explore fun experiments, challenging problems and the importance of cultivating curiosity in these areas from an early age."},{"detected_source_language":"ES","text":"Published on 16/05/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"The power of curiosity in children's learning"},{"detected_source_language":"ES","text":"Discover how fostering children's natural curiosity can be the key to deeper, more meaningful learning. We explore practical strategies and long-term benefits of cultivating this valuable skill from an early age."},{"detected_source_language":"ES","text":"Published on 05/15/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ET","text":"Tsetestsets"},{"detected_source_language":"ET","text":"tsetestsets"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"RO","text":"Final category test"},{"detected_source_language":"ES","text":"elementary school"},{"detected_source_language":"ES","text":"Published on 01/01/0002"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"RO","text":"Category test"},{"detected_source_language":"ES","text":"short description required?"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ET","text":"Testeoteseto"},{"detected_source_language":"ES","text":"description of testeo"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"DE","text":"Test tests"},{"detected_source_language":"ES","text":"description of testeo"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Copyright ® Digital-Mind © All Rights Reserved"}]}
+[2025-05-18 00:27:06] Extracted translated texts: Array
+(
+    [0] => Category
+    [1] => Primary Education
+    [2] => Secondary Education
+    [3] => Higher Secondary Education
+    [4] => Higher Education
+    [5] => About
+    [6] => Contact page
+    [7] => Translate
+    [8] => Log off
+    [9] => Most Recent
+    [10] => Testeooooo editeditedit
+    [11] => testeoooootesteooooo edit
+    [12] => Published on 01/01/0001
+    [13] => See more
+    [14] => Keys to a meaningful and transformative secondary education.
+    [15] => Secondary education is a crucial period of transition and growth. We will explore strategies for academic success, developing critical thinking skills, exploring interests, fostering autonomy, and preparing for
+    [16] => Published on 05/22/2025
+    [17] => See more
+    [18] => Keys to a solid and stimulating primary education
+    [19] => Primary education is the fundamental foundation for children's academic, social and emotional development. We will explore effective pedagogical strategies, the importance of a positive learning environment, the promotion of key skills and collaboration.
+    [20] => Published on 05/21/2025
+    [21] => See more
+    [22] => Keys to a successful education and a bright future
+    [23] => High school is a crucial stage in academic and personal life. We will explore effective strategies for academic success, vocational exploration, social-emotional skill development, and preparation for the next step, whether it is college or college.
+    [24] => Published on 20/05/2025
+    [25] => See more
+    [26] => Unlocking your potential: exploring various effective learning methods
+    [27] => <br />
+<b>Warning</b>:  Undefined array key "descripcion_corta" in <b>C:\xampp\htdocs\Digital-Mind\PHP\blog_edit.php</b> on line <b>89</b><br />
+    [28] => Published on 19/05/2025
+    [29] => See more
+    [30] => Unlocking your voice: keys to developing powerful writing skills
+    [31] => Immerse yourself in the art of effective writing. We will explore essential techniques, practical tips and strategies to improve your clarity, conciseness and persuasiveness through the written word.
+    [32] => Published on 05/18/2025
+    [33] => See more
+    [34] => Education as a vocational compass
+    [35] => Explore how education in its various forms can be a powerful tool for discovering your interests, skills and, ultimately, your vocation. We will look at how different areas of learning can guide you toward a career path.
+    [36] => Published on 06/17/2025
+    [37] => See more
+    [38] => Exploring the world with science and mathematics
+    [39] => Discover how science and mathematics intertwine to help us understand the world around us. We will explore fun experiments, challenging problems and the importance of cultivating curiosity in these areas from an early age.
+    [40] => Published on 16/05/2025
+    [41] => See more
+    [42] => The power of curiosity in children's learning
+    [43] => Discover how fostering children's natural curiosity can be the key to deeper, more meaningful learning. We explore practical strategies and long-term benefits of cultivating this valuable skill from an early age.
+    [44] => Published on 05/15/2025
+    [45] => See more
+    [46] => Tsetestsets
+    [47] => tsetestsets
+    [48] => Published on 01/01/0001
+    [49] => See more
+    [50] => Final category test
+    [51] => elementary school
+    [52] => Published on 01/01/0002
+    [53] => See more
+    [54] => Category test
+    [55] => short description required?
+    [56] => Published on 01/01/0001
+    [57] => See more
+    [58] => Testeoteseto
+    [59] => description of testeo
+    [60] => Published on 01/01/0001
+    [61] => See more
+    [62] => Test tests
+    [63] => description of testeo
+    [64] => Published on 01/01/0001
+    [65] => See more
+    [66] => Copyright ® Digital-Mind © All Rights Reserved
+)
+
+[2025-05-18 00:27:06] Successfully returned translated texts.
+[2025-05-18 21:40:29] Received POST request.
+[2025-05-18 21:40:29] POST data: Array
+(
+    [texts] => ["Categoría","Educacion Primaria","Educacion Media","Educacion Media Superior","Educacion Superior","Acerca de","Pagina de contacto","Traducir","Iniciar sesión","Más Reciente","Claves para una educación secundaria significativa y transformadora","La educación secundaria es un período crucial de transición y crecimiento. Exploraremos estrategias para el éxito académico, el desarrollo de habilidades de pensamiento crítico, la exploración de intereses, el fomento de la autonomía y la preparación para","Publicado el 22/05/2025","Ver más","Claves para una educación primaria sólida y estimulante","La educación primaria es la base fundamental para el desarrollo académico, social y emocional de los niños. Exploraremos estrategias pedagógicas efectivas, la importancia de un ambiente de aprendizaje positivo, el fomento de habilidades clave y la colabor","Publicado el 21/05/2025","Ver más","Claves para una educación exitosa y un futuro brillante","La preparatoria es una etapa crucial en la vida académica y personal. Exploraremos estrategias efectivas para el éxito académico, la exploración vocacional, el desarrollo de habilidades socioemocionales y la preparación para el siguiente paso, ya sea la u","Publicado el 20/05/2025","Ver más","Desbloquea tu potencial: explorando diversos métodos de aprendizaje efectivos","<br />\n<b>Warning</b>:  Undefined array key \"descripcion_corta\" in <b>C:\\xampp\\htdocs\\Digital-Mind\\PHP\\blog_edit.php</b> on line <b>89</b><br />","Publicado el 19/05/2025","Ver más","Desbloquea tu voz: claves para desarrollar habilidades de redacción impactantes","Sumérgete en el arte de la escritura efectiva. Exploraremos técnicas esenciales, consejos prácticos y estrategias para mejorar tu claridad, concisión y capacidad de persuasión a través de la palabra escrita.","Publicado el 18/05/2025","Ver más","La educación como brújula vocacional","Explora cómo la educación en sus diversas formas puede ser una herramienta poderosa para descubrir tus intereses, habilidades y, en última instancia, tu vocación. Analizaremos cómo diferentes áreas del aprendizaje pueden guiarte hacia un camino profesiona","Publicado el 17/06/2025","Ver más","Explorando el mundo con ciencia y matemáticas","Descubre cómo la ciencia y las matemáticas se entrelazan para ayudarnos a comprender el mundo que nos rodea. Exploraremos experimentos divertidos, problemas desafiantes y la importancia de cultivar la curiosidad en estas áreas desde una edad temprana.","Publicado el 16/05/2025","Ver más","El poder de la curiosidad en el aprendizaje infantil","Descubre cómo fomentar la curiosidad natural de los niños puede ser la clave para un aprendizaje más profundo y significativo. Exploramos estrategias prácticas y beneficios a largo plazo de cultivar esta valiosa habilidad desde temprana edad.","Publicado el 15/05/2025","Ver más","Tsetestsetset","tsetestsetset","Publicado el 01/01/0001","Ver más","Test de categoria","descripcion corta obligatoria?","Publicado el 01/01/0001","Ver más","Testeoteseto","descripcion de testeo","Publicado el 01/01/0001","Ver más","Testtestestse","descripcion de testeo","Publicado el 01/01/0001","Ver más","Derechos Reservados ® Digital-Mind © "]
+    [target_lang] => EN
+)
+
+[2025-05-18 21:40:29] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-05-18 21:40:29] 'texts' parameter received: ["Categoría","Educacion Primaria","Educacion Media","Educacion Media Superior","Educacion Superior","Acerca de","Pagina de contacto","Traducir","Iniciar sesión","Más Reciente","Claves para una educación secundaria significativa y transformadora","La educación secundaria es un período crucial de transición y crecimiento. Exploraremos estrategias para el éxito académico, el desarrollo de habilidades de pensamiento crítico, la exploración de intereses, el fomento de la autonomía y la preparación para","Publicado el 22/05/2025","Ver más","Claves para una educación primaria sólida y estimulante","La educación primaria es la base fundamental para el desarrollo académico, social y emocional de los niños. Exploraremos estrategias pedagógicas efectivas, la importancia de un ambiente de aprendizaje positivo, el fomento de habilidades clave y la colabor","Publicado el 21/05/2025","Ver más","Claves para una educación exitosa y un futuro brillante","La preparatoria es una etapa crucial en la vida académica y personal. Exploraremos estrategias efectivas para el éxito académico, la exploración vocacional, el desarrollo de habilidades socioemocionales y la preparación para el siguiente paso, ya sea la u","Publicado el 20/05/2025","Ver más","Desbloquea tu potencial: explorando diversos métodos de aprendizaje efectivos","<br />\n<b>Warning</b>:  Undefined array key \"descripcion_corta\" in <b>C:\\xampp\\htdocs\\Digital-Mind\\PHP\\blog_edit.php</b> on line <b>89</b><br />","Publicado el 19/05/2025","Ver más","Desbloquea tu voz: claves para desarrollar habilidades de redacción impactantes","Sumérgete en el arte de la escritura efectiva. Exploraremos técnicas esenciales, consejos prácticos y estrategias para mejorar tu claridad, concisión y capacidad de persuasión a través de la palabra escrita.","Publicado el 18/05/2025","Ver más","La educación como brújula vocacional","Explora cómo la educación en sus diversas formas puede ser una herramienta poderosa para descubrir tus intereses, habilidades y, en última instancia, tu vocación. Analizaremos cómo diferentes áreas del aprendizaje pueden guiarte hacia un camino profesiona","Publicado el 17/06/2025","Ver más","Explorando el mundo con ciencia y matemáticas","Descubre cómo la ciencia y las matemáticas se entrelazan para ayudarnos a comprender el mundo que nos rodea. Exploraremos experimentos divertidos, problemas desafiantes y la importancia de cultivar la curiosidad en estas áreas desde una edad temprana.","Publicado el 16/05/2025","Ver más","El poder de la curiosidad en el aprendizaje infantil","Descubre cómo fomentar la curiosidad natural de los niños puede ser la clave para un aprendizaje más profundo y significativo. Exploramos estrategias prácticas y beneficios a largo plazo de cultivar esta valiosa habilidad desde temprana edad.","Publicado el 15/05/2025","Ver más","Tsetestsetset","tsetestsetset","Publicado el 01/01/0001","Ver más","Test de categoria","descripcion corta obligatoria?","Publicado el 01/01/0001","Ver más","Testeoteseto","descripcion de testeo","Publicado el 01/01/0001","Ver más","Testtestestse","descripcion de testeo","Publicado el 01/01/0001","Ver más","Derechos Reservados ® Digital-Mind © "]
+[2025-05-18 21:40:29] Result of json_decode: Array
+(
+    [0] => Categoría
+    [1] => Educacion Primaria
+    [2] => Educacion Media
+    [3] => Educacion Media Superior
+    [4] => Educacion Superior
+    [5] => Acerca de
+    [6] => Pagina de contacto
+    [7] => Traducir
+    [8] => Iniciar sesión
+    [9] => Más Reciente
+    [10] => Claves para una educación secundaria significativa y transformadora
+    [11] => La educación secundaria es un período crucial de transición y crecimiento. Exploraremos estrategias para el éxito académico, el desarrollo de habilidades de pensamiento crítico, la exploración de intereses, el fomento de la autonomía y la preparación para
+    [12] => Publicado el 22/05/2025
+    [13] => Ver más
+    [14] => Claves para una educación primaria sólida y estimulante
+    [15] => La educación primaria es la base fundamental para el desarrollo académico, social y emocional de los niños. Exploraremos estrategias pedagógicas efectivas, la importancia de un ambiente de aprendizaje positivo, el fomento de habilidades clave y la colabor
+    [16] => Publicado el 21/05/2025
+    [17] => Ver más
+    [18] => Claves para una educación exitosa y un futuro brillante
+    [19] => La preparatoria es una etapa crucial en la vida académica y personal. Exploraremos estrategias efectivas para el éxito académico, la exploración vocacional, el desarrollo de habilidades socioemocionales y la preparación para el siguiente paso, ya sea la u
+    [20] => Publicado el 20/05/2025
+    [21] => Ver más
+    [22] => Desbloquea tu potencial: explorando diversos métodos de aprendizaje efectivos
+    [23] => <br />
+<b>Warning</b>:  Undefined array key "descripcion_corta" in <b>C:\xampp\htdocs\Digital-Mind\PHP\blog_edit.php</b> on line <b>89</b><br />
+    [24] => Publicado el 19/05/2025
+    [25] => Ver más
+    [26] => Desbloquea tu voz: claves para desarrollar habilidades de redacción impactantes
+    [27] => Sumérgete en el arte de la escritura efectiva. Exploraremos técnicas esenciales, consejos prácticos y estrategias para mejorar tu claridad, concisión y capacidad de persuasión a través de la palabra escrita.
+    [28] => Publicado el 18/05/2025
+    [29] => Ver más
+    [30] => La educación como brújula vocacional
+    [31] => Explora cómo la educación en sus diversas formas puede ser una herramienta poderosa para descubrir tus intereses, habilidades y, en última instancia, tu vocación. Analizaremos cómo diferentes áreas del aprendizaje pueden guiarte hacia un camino profesiona
+    [32] => Publicado el 17/06/2025
+    [33] => Ver más
+    [34] => Explorando el mundo con ciencia y matemáticas
+    [35] => Descubre cómo la ciencia y las matemáticas se entrelazan para ayudarnos a comprender el mundo que nos rodea. Exploraremos experimentos divertidos, problemas desafiantes y la importancia de cultivar la curiosidad en estas áreas desde una edad temprana.
+    [36] => Publicado el 16/05/2025
+    [37] => Ver más
+    [38] => El poder de la curiosidad en el aprendizaje infantil
+    [39] => Descubre cómo fomentar la curiosidad natural de los niños puede ser la clave para un aprendizaje más profundo y significativo. Exploramos estrategias prácticas y beneficios a largo plazo de cultivar esta valiosa habilidad desde temprana edad.
+    [40] => Publicado el 15/05/2025
+    [41] => Ver más
+    [42] => Tsetestsetset
+    [43] => tsetestsetset
+    [44] => Publicado el 01/01/0001
+    [45] => Ver más
+    [46] => Test de categoria
+    [47] => descripcion corta obligatoria?
+    [48] => Publicado el 01/01/0001
+    [49] => Ver más
+    [50] => Testeoteseto
+    [51] => descripcion de testeo
+    [52] => Publicado el 01/01/0001
+    [53] => Ver más
+    [54] => Testtestestse
+    [55] => descripcion de testeo
+    [56] => Publicado el 01/01/0001
+    [57] => Ver más
+    [58] => Derechos Reservados ® Digital-Mind © 
+)
+
+[2025-05-18 21:40:29] Target language: EN
+[2025-05-18 21:40:29] Data sent to DeepL API (JSON): {"text":["Categor\u00eda","Educacion Primaria","Educacion Media","Educacion Media Superior","Educacion Superior","Acerca de","Pagina de contacto","Traducir","Iniciar sesi\u00f3n","M\u00e1s Reciente","Claves para una educaci\u00f3n secundaria significativa y transformadora","La educaci\u00f3n secundaria es un per\u00edodo crucial de transici\u00f3n y crecimiento. Exploraremos estrategias para el \u00e9xito acad\u00e9mico, el desarrollo de habilidades de pensamiento cr\u00edtico, la exploraci\u00f3n de intereses, el fomento de la autonom\u00eda y la preparaci\u00f3n para","Publicado el 22\/05\/2025","Ver m\u00e1s","Claves para una educaci\u00f3n primaria s\u00f3lida y estimulante","La educaci\u00f3n primaria es la base fundamental para el desarrollo acad\u00e9mico, social y emocional de los ni\u00f1os. Exploraremos estrategias pedag\u00f3gicas efectivas, la importancia de un ambiente de aprendizaje positivo, el fomento de habilidades clave y la colabor","Publicado el 21\/05\/2025","Ver m\u00e1s","Claves para una educaci\u00f3n exitosa y un futuro brillante","La preparatoria es una etapa crucial en la vida acad\u00e9mica y personal. Exploraremos estrategias efectivas para el \u00e9xito acad\u00e9mico, la exploraci\u00f3n vocacional, el desarrollo de habilidades socioemocionales y la preparaci\u00f3n para el siguiente paso, ya sea la u","Publicado el 20\/05\/2025","Ver m\u00e1s","Desbloquea tu potencial: explorando diversos m\u00e9todos de aprendizaje efectivos","<br \/>\n<b>Warning<\/b>:  Undefined array key \"descripcion_corta\" in <b>C:\\xampp\\htdocs\\Digital-Mind\\PHP\\blog_edit.php<\/b> on line <b>89<\/b><br \/>","Publicado el 19\/05\/2025","Ver m\u00e1s","Desbloquea tu voz: claves para desarrollar habilidades de redacci\u00f3n impactantes","Sum\u00e9rgete en el arte de la escritura efectiva. Exploraremos t\u00e9cnicas esenciales, consejos pr\u00e1cticos y estrategias para mejorar tu claridad, concisi\u00f3n y capacidad de persuasi\u00f3n a trav\u00e9s de la palabra escrita.","Publicado el 18\/05\/2025","Ver m\u00e1s","La educaci\u00f3n como br\u00fajula vocacional","Explora c\u00f3mo la educaci\u00f3n en sus diversas formas puede ser una herramienta poderosa para descubrir tus intereses, habilidades y, en \u00faltima instancia, tu vocaci\u00f3n. Analizaremos c\u00f3mo diferentes \u00e1reas del aprendizaje pueden guiarte hacia un camino profesiona","Publicado el 17\/06\/2025","Ver m\u00e1s","Explorando el mundo con ciencia y matem\u00e1ticas","Descubre c\u00f3mo la ciencia y las matem\u00e1ticas se entrelazan para ayudarnos a comprender el mundo que nos rodea. Exploraremos experimentos divertidos, problemas desafiantes y la importancia de cultivar la curiosidad en estas \u00e1reas desde una edad temprana.","Publicado el 16\/05\/2025","Ver m\u00e1s","El poder de la curiosidad en el aprendizaje infantil","Descubre c\u00f3mo fomentar la curiosidad natural de los ni\u00f1os puede ser la clave para un aprendizaje m\u00e1s profundo y significativo. Exploramos estrategias pr\u00e1cticas y beneficios a largo plazo de cultivar esta valiosa habilidad desde temprana edad.","Publicado el 15\/05\/2025","Ver m\u00e1s","Tsetestsetset","tsetestsetset","Publicado el 01\/01\/0001","Ver m\u00e1s","Test de categoria","descripcion corta obligatoria?","Publicado el 01\/01\/0001","Ver m\u00e1s","Testeoteseto","descripcion de testeo","Publicado el 01\/01\/0001","Ver m\u00e1s","Testtestestse","descripcion de testeo","Publicado el 01\/01\/0001","Ver m\u00e1s","Derechos Reservados \u00ae Digital-Mind \u00a9 "],"target_lang":"EN"}
+[2025-05-18 21:40:30] DeepL API HTTP Code: 200
+[2025-05-18 21:40:30] DeepL API Response: {"translations":[{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"Primary Education"},{"detected_source_language":"ES","text":"Secondary Education"},{"detected_source_language":"ES","text":"High School Education"},{"detected_source_language":"ES","text":"Higher Education"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Translate"},{"detected_source_language":"ES","text":"Login"},{"detected_source_language":"ES","text":"Most Recent"},{"detected_source_language":"ES","text":"Keys to a meaningful and transformative secondary education."},{"detected_source_language":"ES","text":"Secondary education is a crucial period of transition and growth. We will explore strategies for academic success, developing critical thinking skills, exploring interests, fostering autonomy, and preparing for"},{"detected_source_language":"ES","text":"Published on 05/22/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Keys to a solid and stimulating primary education"},{"detected_source_language":"ES","text":"Primary education is the fundamental foundation for children's academic, social and emotional development. We will explore effective pedagogical strategies, the importance of a positive learning environment, the promotion of key skills and collaboration."},{"detected_source_language":"ES","text":"Published on 05/21/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Keys to a successful education and a bright future"},{"detected_source_language":"ES","text":"High school is a crucial stage in academic and personal life. We will explore effective strategies for academic success, vocational exploration, social-emotional skill development, and preparation for the next step, whether it is college or college."},{"detected_source_language":"ES","text":"Published on 20/05/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Unlocking your potential: exploring various effective learning methods"},{"detected_source_language":"EN","text":"<br />\n<b>Warning</b>:  Undefined array key \"descripcion_corta\" in <b>C:\\xampp\\htdocs\\Digital-Mind\\PHP\\blog_edit.php</b> on line <b>89</b><br />"},{"detected_source_language":"ES","text":"Published on 19/05/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Unlocking your voice: keys to developing powerful writing skills"},{"detected_source_language":"ES","text":"Immerse yourself in the art of effective writing. We will explore essential techniques, practical tips and strategies to improve your clarity, conciseness and persuasiveness through the written word."},{"detected_source_language":"ES","text":"Published on 05/18/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Education as a vocational compass"},{"detected_source_language":"ES","text":"Explore how education in its various forms can be a powerful tool for discovering your interests, skills and, ultimately, your vocation. We will look at how different areas of learning can guide you toward a career path."},{"detected_source_language":"ES","text":"Published on 06/17/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Exploring the world with science and mathematics"},{"detected_source_language":"ES","text":"Discover how science and mathematics intertwine to help us understand the world around us. We will explore fun experiments, challenging problems and the importance of cultivating curiosity in these areas from an early age."},{"detected_source_language":"ES","text":"Published on 16/05/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"The power of curiosity in children's learning"},{"detected_source_language":"ES","text":"Discover how fostering children's natural curiosity can be the key to deeper, more meaningful learning. We explore practical strategies and long-term benefits of cultivating this valuable skill from an early age."},{"detected_source_language":"ES","text":"Published on 05/15/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ET","text":"Tsetestsets"},{"detected_source_language":"ET","text":"tsetestsets"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"RO","text":"Category test"},{"detected_source_language":"ES","text":"short description required?"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ET","text":"Testeoteseto"},{"detected_source_language":"ES","text":"description of testeo"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"DE","text":"Test tests"},{"detected_source_language":"ES","text":"description of testeo"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Copyright ® Digital-Mind © All Rights Reserved"}]}
+[2025-05-18 21:40:30] Extracted translated texts: Array
+(
+    [0] => Category
+    [1] => Primary Education
+    [2] => Secondary Education
+    [3] => High School Education
+    [4] => Higher Education
+    [5] => About
+    [6] => Contact page
+    [7] => Translate
+    [8] => Login
+    [9] => Most Recent
+    [10] => Keys to a meaningful and transformative secondary education.
+    [11] => Secondary education is a crucial period of transition and growth. We will explore strategies for academic success, developing critical thinking skills, exploring interests, fostering autonomy, and preparing for
+    [12] => Published on 05/22/2025
+    [13] => See more
+    [14] => Keys to a solid and stimulating primary education
+    [15] => Primary education is the fundamental foundation for children's academic, social and emotional development. We will explore effective pedagogical strategies, the importance of a positive learning environment, the promotion of key skills and collaboration.
+    [16] => Published on 05/21/2025
+    [17] => See more
+    [18] => Keys to a successful education and a bright future
+    [19] => High school is a crucial stage in academic and personal life. We will explore effective strategies for academic success, vocational exploration, social-emotional skill development, and preparation for the next step, whether it is college or college.
+    [20] => Published on 20/05/2025
+    [21] => See more
+    [22] => Unlocking your potential: exploring various effective learning methods
+    [23] => <br />
+<b>Warning</b>:  Undefined array key "descripcion_corta" in <b>C:\xampp\htdocs\Digital-Mind\PHP\blog_edit.php</b> on line <b>89</b><br />
+    [24] => Published on 19/05/2025
+    [25] => See more
+    [26] => Unlocking your voice: keys to developing powerful writing skills
+    [27] => Immerse yourself in the art of effective writing. We will explore essential techniques, practical tips and strategies to improve your clarity, conciseness and persuasiveness through the written word.
+    [28] => Published on 05/18/2025
+    [29] => See more
+    [30] => Education as a vocational compass
+    [31] => Explore how education in its various forms can be a powerful tool for discovering your interests, skills and, ultimately, your vocation. We will look at how different areas of learning can guide you toward a career path.
+    [32] => Published on 06/17/2025
+    [33] => See more
+    [34] => Exploring the world with science and mathematics
+    [35] => Discover how science and mathematics intertwine to help us understand the world around us. We will explore fun experiments, challenging problems and the importance of cultivating curiosity in these areas from an early age.
+    [36] => Published on 16/05/2025
+    [37] => See more
+    [38] => The power of curiosity in children's learning
+    [39] => Discover how fostering children's natural curiosity can be the key to deeper, more meaningful learning. We explore practical strategies and long-term benefits of cultivating this valuable skill from an early age.
+    [40] => Published on 05/15/2025
+    [41] => See more
+    [42] => Tsetestsets
+    [43] => tsetestsets
+    [44] => Published on 01/01/0001
+    [45] => See more
+    [46] => Category test
+    [47] => short description required?
+    [48] => Published on 01/01/0001
+    [49] => See more
+    [50] => Testeoteseto
+    [51] => description of testeo
+    [52] => Published on 01/01/0001
+    [53] => See more
+    [54] => Test tests
+    [55] => description of testeo
+    [56] => Published on 01/01/0001
+    [57] => See more
+    [58] => Copyright ® Digital-Mind © All Rights Reserved
+)
+
+[2025-05-18 21:40:30] Successfully returned translated texts.
+[2025-05-18 21:40:34] Received POST request.
+[2025-05-18 21:40:34] POST data: Array
+(
+    [texts] => ["Categoría","Educacion Primaria","Educacion Media","Educacion Media Superior","Educacion Superior","Acerca de","Pagina de contacto","Traducir","Iniciar sesión","Más Reciente","Claves para una educación secundaria significativa y transformadora","La educación secundaria es un período crucial de transición y crecimiento. Exploraremos estrategias para el éxito académico, el desarrollo de habilidades de pensamiento crítico, la exploración de intereses, el fomento de la autonomía y la preparación para","Publicado el 22/05/2025","Ver más","Claves para una educación primaria sólida y estimulante","La educación primaria es la base fundamental para el desarrollo académico, social y emocional de los niños. Exploraremos estrategias pedagógicas efectivas, la importancia de un ambiente de aprendizaje positivo, el fomento de habilidades clave y la colabor","Publicado el 21/05/2025","Ver más","Claves para una educación exitosa y un futuro brillante","La preparatoria es una etapa crucial en la vida académica y personal. Exploraremos estrategias efectivas para el éxito académico, la exploración vocacional, el desarrollo de habilidades socioemocionales y la preparación para el siguiente paso, ya sea la u","Publicado el 20/05/2025","Ver más","Desbloquea tu potencial: explorando diversos métodos de aprendizaje efectivos","<br />\n<b>Warning</b>:  Undefined array key \"descripcion_corta\" in <b>C:\\xampp\\htdocs\\Digital-Mind\\PHP\\blog_edit.php</b> on line <b>89</b><br />","Publicado el 19/05/2025","Ver más","Desbloquea tu voz: claves para desarrollar habilidades de redacción impactantes","Sumérgete en el arte de la escritura efectiva. Exploraremos técnicas esenciales, consejos prácticos y estrategias para mejorar tu claridad, concisión y capacidad de persuasión a través de la palabra escrita.","Publicado el 18/05/2025","Ver más","La educación como brújula vocacional","Explora cómo la educación en sus diversas formas puede ser una herramienta poderosa para descubrir tus intereses, habilidades y, en última instancia, tu vocación. Analizaremos cómo diferentes áreas del aprendizaje pueden guiarte hacia un camino profesiona","Publicado el 17/06/2025","Ver más","Explorando el mundo con ciencia y matemáticas","Descubre cómo la ciencia y las matemáticas se entrelazan para ayudarnos a comprender el mundo que nos rodea. Exploraremos experimentos divertidos, problemas desafiantes y la importancia de cultivar la curiosidad en estas áreas desde una edad temprana.","Publicado el 16/05/2025","Ver más","El poder de la curiosidad en el aprendizaje infantil","Descubre cómo fomentar la curiosidad natural de los niños puede ser la clave para un aprendizaje más profundo y significativo. Exploramos estrategias prácticas y beneficios a largo plazo de cultivar esta valiosa habilidad desde temprana edad.","Publicado el 15/05/2025","Ver más","Tsetestsetset","tsetestsetset","Publicado el 01/01/0001","Ver más","Test de categoria","descripcion corta obligatoria?","Publicado el 01/01/0001","Ver más","Testeoteseto","descripcion de testeo","Publicado el 01/01/0001","Ver más","Testtestestse","descripcion de testeo","Publicado el 01/01/0001","Ver más","Derechos Reservados ® Digital-Mind © "]
+    [target_lang] => EN
+)
+
+[2025-05-18 21:40:34] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-05-18 21:40:34] 'texts' parameter received: ["Categoría","Educacion Primaria","Educacion Media","Educacion Media Superior","Educacion Superior","Acerca de","Pagina de contacto","Traducir","Iniciar sesión","Más Reciente","Claves para una educación secundaria significativa y transformadora","La educación secundaria es un período crucial de transición y crecimiento. Exploraremos estrategias para el éxito académico, el desarrollo de habilidades de pensamiento crítico, la exploración de intereses, el fomento de la autonomía y la preparación para","Publicado el 22/05/2025","Ver más","Claves para una educación primaria sólida y estimulante","La educación primaria es la base fundamental para el desarrollo académico, social y emocional de los niños. Exploraremos estrategias pedagógicas efectivas, la importancia de un ambiente de aprendizaje positivo, el fomento de habilidades clave y la colabor","Publicado el 21/05/2025","Ver más","Claves para una educación exitosa y un futuro brillante","La preparatoria es una etapa crucial en la vida académica y personal. Exploraremos estrategias efectivas para el éxito académico, la exploración vocacional, el desarrollo de habilidades socioemocionales y la preparación para el siguiente paso, ya sea la u","Publicado el 20/05/2025","Ver más","Desbloquea tu potencial: explorando diversos métodos de aprendizaje efectivos","<br />\n<b>Warning</b>:  Undefined array key \"descripcion_corta\" in <b>C:\\xampp\\htdocs\\Digital-Mind\\PHP\\blog_edit.php</b> on line <b>89</b><br />","Publicado el 19/05/2025","Ver más","Desbloquea tu voz: claves para desarrollar habilidades de redacción impactantes","Sumérgete en el arte de la escritura efectiva. Exploraremos técnicas esenciales, consejos prácticos y estrategias para mejorar tu claridad, concisión y capacidad de persuasión a través de la palabra escrita.","Publicado el 18/05/2025","Ver más","La educación como brújula vocacional","Explora cómo la educación en sus diversas formas puede ser una herramienta poderosa para descubrir tus intereses, habilidades y, en última instancia, tu vocación. Analizaremos cómo diferentes áreas del aprendizaje pueden guiarte hacia un camino profesiona","Publicado el 17/06/2025","Ver más","Explorando el mundo con ciencia y matemáticas","Descubre cómo la ciencia y las matemáticas se entrelazan para ayudarnos a comprender el mundo que nos rodea. Exploraremos experimentos divertidos, problemas desafiantes y la importancia de cultivar la curiosidad en estas áreas desde una edad temprana.","Publicado el 16/05/2025","Ver más","El poder de la curiosidad en el aprendizaje infantil","Descubre cómo fomentar la curiosidad natural de los niños puede ser la clave para un aprendizaje más profundo y significativo. Exploramos estrategias prácticas y beneficios a largo plazo de cultivar esta valiosa habilidad desde temprana edad.","Publicado el 15/05/2025","Ver más","Tsetestsetset","tsetestsetset","Publicado el 01/01/0001","Ver más","Test de categoria","descripcion corta obligatoria?","Publicado el 01/01/0001","Ver más","Testeoteseto","descripcion de testeo","Publicado el 01/01/0001","Ver más","Testtestestse","descripcion de testeo","Publicado el 01/01/0001","Ver más","Derechos Reservados ® Digital-Mind © "]
+[2025-05-18 21:40:34] Result of json_decode: Array
+(
+    [0] => Categoría
+    [1] => Educacion Primaria
+    [2] => Educacion Media
+    [3] => Educacion Media Superior
+    [4] => Educacion Superior
+    [5] => Acerca de
+    [6] => Pagina de contacto
+    [7] => Traducir
+    [8] => Iniciar sesión
+    [9] => Más Reciente
+    [10] => Claves para una educación secundaria significativa y transformadora
+    [11] => La educación secundaria es un período crucial de transición y crecimiento. Exploraremos estrategias para el éxito académico, el desarrollo de habilidades de pensamiento crítico, la exploración de intereses, el fomento de la autonomía y la preparación para
+    [12] => Publicado el 22/05/2025
+    [13] => Ver más
+    [14] => Claves para una educación primaria sólida y estimulante
+    [15] => La educación primaria es la base fundamental para el desarrollo académico, social y emocional de los niños. Exploraremos estrategias pedagógicas efectivas, la importancia de un ambiente de aprendizaje positivo, el fomento de habilidades clave y la colabor
+    [16] => Publicado el 21/05/2025
+    [17] => Ver más
+    [18] => Claves para una educación exitosa y un futuro brillante
+    [19] => La preparatoria es una etapa crucial en la vida académica y personal. Exploraremos estrategias efectivas para el éxito académico, la exploración vocacional, el desarrollo de habilidades socioemocionales y la preparación para el siguiente paso, ya sea la u
+    [20] => Publicado el 20/05/2025
+    [21] => Ver más
+    [22] => Desbloquea tu potencial: explorando diversos métodos de aprendizaje efectivos
+    [23] => <br />
+<b>Warning</b>:  Undefined array key "descripcion_corta" in <b>C:\xampp\htdocs\Digital-Mind\PHP\blog_edit.php</b> on line <b>89</b><br />
+    [24] => Publicado el 19/05/2025
+    [25] => Ver más
+    [26] => Desbloquea tu voz: claves para desarrollar habilidades de redacción impactantes
+    [27] => Sumérgete en el arte de la escritura efectiva. Exploraremos técnicas esenciales, consejos prácticos y estrategias para mejorar tu claridad, concisión y capacidad de persuasión a través de la palabra escrita.
+    [28] => Publicado el 18/05/2025
+    [29] => Ver más
+    [30] => La educación como brújula vocacional
+    [31] => Explora cómo la educación en sus diversas formas puede ser una herramienta poderosa para descubrir tus intereses, habilidades y, en última instancia, tu vocación. Analizaremos cómo diferentes áreas del aprendizaje pueden guiarte hacia un camino profesiona
+    [32] => Publicado el 17/06/2025
+    [33] => Ver más
+    [34] => Explorando el mundo con ciencia y matemáticas
+    [35] => Descubre cómo la ciencia y las matemáticas se entrelazan para ayudarnos a comprender el mundo que nos rodea. Exploraremos experimentos divertidos, problemas desafiantes y la importancia de cultivar la curiosidad en estas áreas desde una edad temprana.
+    [36] => Publicado el 16/05/2025
+    [37] => Ver más
+    [38] => El poder de la curiosidad en el aprendizaje infantil
+    [39] => Descubre cómo fomentar la curiosidad natural de los niños puede ser la clave para un aprendizaje más profundo y significativo. Exploramos estrategias prácticas y beneficios a largo plazo de cultivar esta valiosa habilidad desde temprana edad.
+    [40] => Publicado el 15/05/2025
+    [41] => Ver más
+    [42] => Tsetestsetset
+    [43] => tsetestsetset
+    [44] => Publicado el 01/01/0001
+    [45] => Ver más
+    [46] => Test de categoria
+    [47] => descripcion corta obligatoria?
+    [48] => Publicado el 01/01/0001
+    [49] => Ver más
+    [50] => Testeoteseto
+    [51] => descripcion de testeo
+    [52] => Publicado el 01/01/0001
+    [53] => Ver más
+    [54] => Testtestestse
+    [55] => descripcion de testeo
+    [56] => Publicado el 01/01/0001
+    [57] => Ver más
+    [58] => Derechos Reservados ® Digital-Mind © 
+)
+
+[2025-05-18 21:40:34] Target language: EN
+[2025-05-18 21:40:34] Data sent to DeepL API (JSON): {"text":["Categor\u00eda","Educacion Primaria","Educacion Media","Educacion Media Superior","Educacion Superior","Acerca de","Pagina de contacto","Traducir","Iniciar sesi\u00f3n","M\u00e1s Reciente","Claves para una educaci\u00f3n secundaria significativa y transformadora","La educaci\u00f3n secundaria es un per\u00edodo crucial de transici\u00f3n y crecimiento. Exploraremos estrategias para el \u00e9xito acad\u00e9mico, el desarrollo de habilidades de pensamiento cr\u00edtico, la exploraci\u00f3n de intereses, el fomento de la autonom\u00eda y la preparaci\u00f3n para","Publicado el 22\/05\/2025","Ver m\u00e1s","Claves para una educaci\u00f3n primaria s\u00f3lida y estimulante","La educaci\u00f3n primaria es la base fundamental para el desarrollo acad\u00e9mico, social y emocional de los ni\u00f1os. Exploraremos estrategias pedag\u00f3gicas efectivas, la importancia de un ambiente de aprendizaje positivo, el fomento de habilidades clave y la colabor","Publicado el 21\/05\/2025","Ver m\u00e1s","Claves para una educaci\u00f3n exitosa y un futuro brillante","La preparatoria es una etapa crucial en la vida acad\u00e9mica y personal. Exploraremos estrategias efectivas para el \u00e9xito acad\u00e9mico, la exploraci\u00f3n vocacional, el desarrollo de habilidades socioemocionales y la preparaci\u00f3n para el siguiente paso, ya sea la u","Publicado el 20\/05\/2025","Ver m\u00e1s","Desbloquea tu potencial: explorando diversos m\u00e9todos de aprendizaje efectivos","<br \/>\n<b>Warning<\/b>:  Undefined array key \"descripcion_corta\" in <b>C:\\xampp\\htdocs\\Digital-Mind\\PHP\\blog_edit.php<\/b> on line <b>89<\/b><br \/>","Publicado el 19\/05\/2025","Ver m\u00e1s","Desbloquea tu voz: claves para desarrollar habilidades de redacci\u00f3n impactantes","Sum\u00e9rgete en el arte de la escritura efectiva. Exploraremos t\u00e9cnicas esenciales, consejos pr\u00e1cticos y estrategias para mejorar tu claridad, concisi\u00f3n y capacidad de persuasi\u00f3n a trav\u00e9s de la palabra escrita.","Publicado el 18\/05\/2025","Ver m\u00e1s","La educaci\u00f3n como br\u00fajula vocacional","Explora c\u00f3mo la educaci\u00f3n en sus diversas formas puede ser una herramienta poderosa para descubrir tus intereses, habilidades y, en \u00faltima instancia, tu vocaci\u00f3n. Analizaremos c\u00f3mo diferentes \u00e1reas del aprendizaje pueden guiarte hacia un camino profesiona","Publicado el 17\/06\/2025","Ver m\u00e1s","Explorando el mundo con ciencia y matem\u00e1ticas","Descubre c\u00f3mo la ciencia y las matem\u00e1ticas se entrelazan para ayudarnos a comprender el mundo que nos rodea. Exploraremos experimentos divertidos, problemas desafiantes y la importancia de cultivar la curiosidad en estas \u00e1reas desde una edad temprana.","Publicado el 16\/05\/2025","Ver m\u00e1s","El poder de la curiosidad en el aprendizaje infantil","Descubre c\u00f3mo fomentar la curiosidad natural de los ni\u00f1os puede ser la clave para un aprendizaje m\u00e1s profundo y significativo. Exploramos estrategias pr\u00e1cticas y beneficios a largo plazo de cultivar esta valiosa habilidad desde temprana edad.","Publicado el 15\/05\/2025","Ver m\u00e1s","Tsetestsetset","tsetestsetset","Publicado el 01\/01\/0001","Ver m\u00e1s","Test de categoria","descripcion corta obligatoria?","Publicado el 01\/01\/0001","Ver m\u00e1s","Testeoteseto","descripcion de testeo","Publicado el 01\/01\/0001","Ver m\u00e1s","Testtestestse","descripcion de testeo","Publicado el 01\/01\/0001","Ver m\u00e1s","Derechos Reservados \u00ae Digital-Mind \u00a9 "],"target_lang":"EN"}
+[2025-05-18 21:40:35] DeepL API HTTP Code: 200
+[2025-05-18 21:40:35] DeepL API Response: {"translations":[{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"Primary Education"},{"detected_source_language":"ES","text":"Secondary Education"},{"detected_source_language":"ES","text":"High School Education"},{"detected_source_language":"ES","text":"Higher Education"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Translate"},{"detected_source_language":"ES","text":"Login"},{"detected_source_language":"ES","text":"Most Recent"},{"detected_source_language":"ES","text":"Keys to a meaningful and transformative secondary education."},{"detected_source_language":"ES","text":"Secondary education is a crucial period of transition and growth. We will explore strategies for academic success, developing critical thinking skills, exploring interests, fostering autonomy, and preparing for"},{"detected_source_language":"ES","text":"Published on 05/22/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Keys to a solid and stimulating primary education"},{"detected_source_language":"ES","text":"Primary education is the fundamental foundation for children's academic, social and emotional development. We will explore effective pedagogical strategies, the importance of a positive learning environment, the promotion of key skills and collaboration."},{"detected_source_language":"ES","text":"Published on 05/21/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Keys to a successful education and a bright future"},{"detected_source_language":"ES","text":"High school is a crucial stage in academic and personal life. We will explore effective strategies for academic success, vocational exploration, social-emotional skill development, and preparation for the next step, whether it is college or college."},{"detected_source_language":"ES","text":"Published on 20/05/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Unlocking your potential: exploring various effective learning methods"},{"detected_source_language":"EN","text":"<br />\n<b>Warning</b>:  Undefined array key \"descripcion_corta\" in <b>C:\\xampp\\htdocs\\Digital-Mind\\PHP\\blog_edit.php</b> on line <b>89</b><br />"},{"detected_source_language":"ES","text":"Published on 19/05/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Unlocking your voice: keys to developing powerful writing skills"},{"detected_source_language":"ES","text":"Immerse yourself in the art of effective writing. We will explore essential techniques, practical tips and strategies to improve your clarity, conciseness and persuasiveness through the written word."},{"detected_source_language":"ES","text":"Published on 05/18/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Education as a vocational compass"},{"detected_source_language":"ES","text":"Explore how education in its various forms can be a powerful tool for discovering your interests, skills and, ultimately, your vocation. We will look at how different areas of learning can guide you toward a career path."},{"detected_source_language":"ES","text":"Published on 06/17/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Exploring the world with science and mathematics"},{"detected_source_language":"ES","text":"Discover how science and mathematics intertwine to help us understand the world around us. We will explore fun experiments, challenging problems and the importance of cultivating curiosity in these areas from an early age."},{"detected_source_language":"ES","text":"Published on 16/05/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"The power of curiosity in children's learning"},{"detected_source_language":"ES","text":"Discover how fostering children's natural curiosity can be the key to deeper, more meaningful learning. We explore practical strategies and long-term benefits of cultivating this valuable skill from an early age."},{"detected_source_language":"ES","text":"Published on 05/15/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ET","text":"Tsetestsets"},{"detected_source_language":"ET","text":"tsetestsets"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"RO","text":"Category test"},{"detected_source_language":"ES","text":"short description required?"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ET","text":"Testeoteseto"},{"detected_source_language":"ES","text":"description of testeo"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"DE","text":"Test tests"},{"detected_source_language":"ES","text":"description of testeo"},{"detected_source_language":"ES","text":"Published on 01/01/0001"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Copyright ® Digital-Mind © All Rights Reserved"}]}
+[2025-05-18 21:40:35] Extracted translated texts: Array
+(
+    [0] => Category
+    [1] => Primary Education
+    [2] => Secondary Education
+    [3] => High School Education
+    [4] => Higher Education
+    [5] => About
+    [6] => Contact page
+    [7] => Translate
+    [8] => Login
+    [9] => Most Recent
+    [10] => Keys to a meaningful and transformative secondary education.
+    [11] => Secondary education is a crucial period of transition and growth. We will explore strategies for academic success, developing critical thinking skills, exploring interests, fostering autonomy, and preparing for
+    [12] => Published on 05/22/2025
+    [13] => See more
+    [14] => Keys to a solid and stimulating primary education
+    [15] => Primary education is the fundamental foundation for children's academic, social and emotional development. We will explore effective pedagogical strategies, the importance of a positive learning environment, the promotion of key skills and collaboration.
+    [16] => Published on 05/21/2025
+    [17] => See more
+    [18] => Keys to a successful education and a bright future
+    [19] => High school is a crucial stage in academic and personal life. We will explore effective strategies for academic success, vocational exploration, social-emotional skill development, and preparation for the next step, whether it is college or college.
+    [20] => Published on 20/05/2025
+    [21] => See more
+    [22] => Unlocking your potential: exploring various effective learning methods
+    [23] => <br />
+<b>Warning</b>:  Undefined array key "descripcion_corta" in <b>C:\xampp\htdocs\Digital-Mind\PHP\blog_edit.php</b> on line <b>89</b><br />
+    [24] => Published on 19/05/2025
+    [25] => See more
+    [26] => Unlocking your voice: keys to developing powerful writing skills
+    [27] => Immerse yourself in the art of effective writing. We will explore essential techniques, practical tips and strategies to improve your clarity, conciseness and persuasiveness through the written word.
+    [28] => Published on 05/18/2025
+    [29] => See more
+    [30] => Education as a vocational compass
+    [31] => Explore how education in its various forms can be a powerful tool for discovering your interests, skills and, ultimately, your vocation. We will look at how different areas of learning can guide you toward a career path.
+    [32] => Published on 06/17/2025
+    [33] => See more
+    [34] => Exploring the world with science and mathematics
+    [35] => Discover how science and mathematics intertwine to help us understand the world around us. We will explore fun experiments, challenging problems and the importance of cultivating curiosity in these areas from an early age.
+    [36] => Published on 16/05/2025
+    [37] => See more
+    [38] => The power of curiosity in children's learning
+    [39] => Discover how fostering children's natural curiosity can be the key to deeper, more meaningful learning. We explore practical strategies and long-term benefits of cultivating this valuable skill from an early age.
+    [40] => Published on 05/15/2025
+    [41] => See more
+    [42] => Tsetestsets
+    [43] => tsetestsets
+    [44] => Published on 01/01/0001
+    [45] => See more
+    [46] => Category test
+    [47] => short description required?
+    [48] => Published on 01/01/0001
+    [49] => See more
+    [50] => Testeoteseto
+    [51] => description of testeo
+    [52] => Published on 01/01/0001
+    [53] => See more
+    [54] => Test tests
+    [55] => description of testeo
+    [56] => Published on 01/01/0001
+    [57] => See more
+    [58] => Copyright ® Digital-Mind © All Rights Reserved
+)
+
+[2025-05-18 21:40:35] Successfully returned translated texts.

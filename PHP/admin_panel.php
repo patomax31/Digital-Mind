@@ -2,12 +2,12 @@
 session_start();
 
 if (!isset($_SESSION['admin']) || $_SESSION['admin'] !== true) {
-    header("Location: login.php");
+    header("Location: ../PHP/login.php");
     exit();
 }
 
 include 'blog_db.php';
-
+include 'header.php';
 
 // Verificar si el usuario es admin
 
@@ -73,10 +73,7 @@ if (isset($_GET['eliminar_contacto'])) {
                 <div class="post">
                     <div class="post-actions">
                         <a href="blog_edit.php?id=<?= $row['id'] ?>" class="btn btn-edit"><i class="fas fa-edit"></i> Editar</a>
-
-                        <a href="panel_admin.php?eliminar=<?= $row['id'] ?>" class="btn btn-delete"><i class="fas fa-trash"></i> Eliminar</a>
-
-
+                        <a href="admin_panel.php?eliminar=<?= $row['id'] ?>" class="btn btn-delete"><i class="fas fa-trash"></i> Eliminar</a>
                     </div>
 
                     <h3><?= htmlspecialchars($row["titular"]) ?></h3>

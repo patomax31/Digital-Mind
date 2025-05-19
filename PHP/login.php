@@ -2,13 +2,17 @@
 session_start();
 require("blog_db.php");
 
+// Mostrar errores en desarrollo (puedes comentar o eliminar esto en producción)
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
 $mensaje = "";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $email = trim($_POST['email']);
     $clave = trim($_POST['password']);
 
-    // Buscar en la tabla de administradores
+    // 1. Buscar en administradores
     $stmtAdmin = $conn->prepare("SELECT * FROM admin WHERE email = ?");
     $stmtAdmin->bind_param("s", $email);
     $stmtAdmin->execute();
@@ -21,12 +25,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $_SESSION['admin_id'] = $admin['id'];
             $_SESSION['admin_nombre'] = $admin['nombre'];
             header("Location: admin_panel.php");
-
             exit();
         }
     }
 
-    // Buscar en la tabla de usuarios normales
+    // 2. Buscar en usuarios
     $stmtUser = $conn->prepare("SELECT * FROM usuarios WHERE email = ?");
     $stmtUser->bind_param("s", $email);
     $stmtUser->execute();
@@ -37,8 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if (password_verify($clave, $user['contraseña'])) {
             $_SESSION['usuario_id'] = $user['id'];
             $_SESSION['usuario_nombre'] = $user['nombre'];
-
-            header("Location: ../PHP/index.php");
+            header("Location: ../PHP/index.php"); // Redirige a la página principal
             exit();
         } else {
             $mensaje = "<p class='message error'>Contraseña incorrecta.</p>";
@@ -46,8 +48,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     } else {
         $mensaje = "<p class='message error'>No existe una cuenta con ese correo.</p>";
     }
-
-
 
     $stmtAdmin->close();
     $stmtUser->close();
@@ -58,29 +58,65 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Iniciar Sesión - Digital Mind</title>
+    <!-- Asegúrate de que esta ruta sea correcta -->
     <link rel="stylesheet" href="../css/login_style.css">
     <style>
+        /* Estilos específicos para el contenedor del campo de contraseña y el icono */
         .show-password {
             position: relative;
+            width: 100%; /* Asegura que ocupe el ancho del form-group */
         }
 
+        /* Estilos para el icono (el "botón") */
         .show-password i {
             position: absolute;
-            right: 10px;
-            top: 20px; /* Ajustado para mejor alineación */
+            right: 10px; /* Posición desde la derecha */
+            top: 50%; /* Centra verticalmente */
+            transform: translateY(-50%); /* Ajuste fino para centrar */
             cursor: pointer;
-            /* Opcional: ajustar tamaño o color si es necesario */
-            /* font-size: 1.2em; */
-            /* color: #555; */
+            color: #555; /* Color del icono */
+            font-size: 1.2em; /* Tamaño del icono */
+            z-index: 2; /* Asegura que esté por encima del input */
         }
+
+        /* Ajuste para el input dentro de show-password para dejar espacio al icono */
+        .show-password input[type="password"],
+        .show-password input[type="text"] {
+             padding-right: 35px; /* Deja espacio para el icono */
+             /* No necesitamos width: calc(100% - 35px); aquí si el input ya tiene width: 100% y box-sizing: border-box */
+             /* width: 100%; /* Asegura que ocupe el ancho del contenedor show-password */
+             box-sizing: border-box; /* Incluye padding y borde en el ancho */
+        }
+
+        /* Ajuste para la etiqueta Recordarme dentro de form-group */
+        /* Usar Flexbox para alinear el checkbox y el texto */
+        .form-group label[for="remember"] {
+             display: flex; /* Usa Flexbox */
+             align-items: center; /* Centra verticalmente los elementos hijos (checkbox y texto) */
+             margin-bottom: 0;
+             margin-top: 0;
+             font-size: 1em; /* Ajusta el tamaño si es necesario */
+             color: #4a4a4a;
+             /* vertical-align: middle; /* No necesario con Flexbox */
+        }
+
+        /* Estilo específico para el checkbox dentro de la etiqueta Recordarme */
+        .form-group label[for="remember"] input[type="checkbox"] {
+            /* vertical-align: middle; /* No necesario con Flexbox */
+            margin-right: 290px; /* Añade un pequeño espacio entre el checkbox y el texto */
+            /* Asegura que no haya márgenes o padding inesperados */
+            margin-top: 0;
+            margin-bottom: 0;
+            padding: 0;
+        }
+
     </style>
 </head>
 <body>
 <div class="container">
     <div class="left-panel">
         <blockquote>
-            “Simply all the tools that my team and I need.”
-            <footer>– Karen Yue, Directora de Marketing</footer>
+            “Invertir en la educacion es invertir en el futuro.”
         </blockquote>
     </div>
     <div class="right-panel">
@@ -90,19 +126,31 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             <?= $mensaje ?>
 
-            <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
-
-            <div class="show-password">
-                <input type="password" id="password" name="password" placeholder="Contraseña" required>
-                <!-- Icono inicial de candado cerrado -->
-                <i class="toggle-password" onclick="togglePassword()">🔒</i>
+            <!-- Campo de Email envuelto en form-group -->
+            <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
             </div>
 
-            <label style="display:block; margin-top:10px;">
-                <input type="checkbox" id="remember"> Recordarme
-            </label>
+            <!-- Campo de Contraseña con icono, envuelto en form-group -->
+            <div class="form-group">
+                 <label for="password">Contraseña</label>
+                <div class="show-password">
+                    <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                    <!-- Icono inicial de candado cerrado (o el que prefieras) -->
+                    <i class="toggle-password" onclick="togglePassword()">🔒</i>
+                </div>
+            </div>
+
+            <!-- Checkbox Recordarme envuelto en form-group -->
+            <div class="form-group">
+                <label for="remember">
+                    <input type="checkbox" id="remember"> Recordarme
+                </label>
+            </div>
 
             <button type="submit">Iniciar sesión</button>
+            <!-- Asegúrate de que esta ruta sea correcta -->
             <a class="guest-link" href="../PHP/index.php">Ingresar como invitado</a>
             <a class="forgot-link" href="recovery.php">¿Olvidaste tu contraseña?</a>
 
@@ -120,9 +168,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if (passwordInput.type === "password") {
             passwordInput.type = "text";
             toggleIcon.textContent = "🔓"; // Cambia a candado abierto
+            // O si usas Font Awesome: toggleIcon.classList.replace('fa-lock', 'fa-unlock');
         } else {
             passwordInput.type = "password";
             toggleIcon.textContent = "🔒"; // Cambia a candado cerrado
+             // O si usas Font Awesome: toggleIcon.classList.replace('fa-unlock', 'fa-lock');
         }
     }
 
@@ -150,4 +200,3 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </script>
 </body>
 </html>
-
