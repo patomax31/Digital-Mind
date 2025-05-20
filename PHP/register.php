@@ -182,7 +182,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </blockquote>
     </div>
     <div class="right-panel">
-        <form action="register.php" method="post">
+        <form action="../PHP/register.php" method="post">
             <h1>¡Bienvenido a Digital Mind!</h1>
             <p class="subtext">Crea tu cuenta</p>
 

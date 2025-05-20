@@ -7,15 +7,15 @@ define('CORREO_PASS', 'pmhu poud bpkt attz');
 define('MY_WEB', 'Digital Mind');
 
 // Conexión a la base de datos
-require_once __DIR__ . "/blog_db.php";
+require_once __DIR__ . "../PHP/blog_db.php";
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
 
-require '/XAMPP/htdocs/Digital-Mind/PHPMailer/src/Exception.php';
-require '/XAMPP/htdocs/Digital-Mind/PHPMailer/src/PHPMailer.php';
-require '/XAMPP/htdocs/Digital-Mind/PHPMailer/src/SMTP.php';
+require '../PHPMailer/src/Exception.php';
+require '../PHPMailer/src/PHPMailer.php';
+require '../PHPMailer/src/SMTP.php';
 
 // Verificar si se envió el campo "email"
 if (!isset($_POST['email'])) {

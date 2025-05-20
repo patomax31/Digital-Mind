@@ -3,40 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/login_style.css">
     <title>Recuperar Contraseña - Digital Mind</title>
+    <link rel="stylesheet" href="../css/login_style.css">
     <style>
-        .ok { color: green; }
-        .bad { color: red; }
-        .info { color: blue; }
+        .ok { color: green; margin-top: 10px; }
+        .bad { color: red; margin-top: 10px; }
+        .info { color: #555; font-size: 0.9em; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="image-section"></div>
-        <div class="form-section">
-            <div class="form-container">
-                <h2>Recuperar Contraseña</h2>
-                <p>Ingrese su correo electrónico para recibir instrucciones de recuperación.</p>
+        <!-- Lado izquierdo con mensaje o imagen -->
+        <div class="left-panel">
+            <blockquote>
+                “La educación es el arma más poderosa para cambiar el mundo.”
+            </blockquote>
+        </div>
 
-                <form action="/digital-mind/PHP/recuperarContrasena.php" method="post">
-                    <div class="form-group">
-                        <label  for="email">Correo Electrónico:</label>
-                        <input type="email" id="email" name="email" placeholder="Email..." required>
-                        <small class="info">Ingrese su correo para recibir instrucciones de recuperación</small>
-                    </div>
+        <!-- Lado derecho con el formulario -->
+        <div class="right-panel">
+            <form action="../PHP/recuperarContrasena.php" method="post">
+                <h1>Recuperar Contraseña</h1>
+                <p class="subtext">Ingrese su correo electrónico</p>
 
-                    <div class="form-group">
-                        <input type="submit" value="Enviar">
-                    </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="Email..." required>
+                    <small class="info">Te enviaremos instrucciones para recuperar tu cuenta</small>
+                </div>
 
-                    <div class="forgot-password">
-                        <a href="index.php">Volver al inicio</a>
-                    </div>
+                <button type="submit">Enviar</button>
 
-                    <p class="footer-text">&copy; Página desarrollada por Digital Mind</p>
-                </form>
-            </div>
+                <a class="guest-link" href="index.php">Volver al inicio</a>
+
+                <p class="footer-text">&copy; Página desarrollada por Digital Mind</p>
+            </form>
         </div>
     </div>
 </body>
