@@ -41,10 +41,14 @@
             </svg>
             <a href="#">Categoría</a>
             <div class="categoria-dropdown-content">
-              <a href="categoria.php?categoria=educacion_p">Educacion Primaria</a>
-              <a href="categoria.php?categoria=educacion_m">Educacion Media</a>
-              <a href="categoria.php?categoria=educacion_ms">Educacion Media Superior</a>
-              <a href="categoria.php?categoria=educacion_s">Educacion Superior</a>
+              <a href="categoria.php?categoria=Educacion Primaria">Educacion Primaria</a>
+              <a href="categoria.php?categoria=Educacion Secundaria">Educacion Secundaria</a>
+              <a href="categoria.php?categoria=Educacion Preparatoria">Educacion Preparatoria</a>
+              <a href="categoria.php?categoria=Metodos de Aprendizaje">Metodos de Aprendizaje</a>
+              <a href="categoria.php?categoria=Educacion Vocacional">Educacion Vocacional</a>
+              <a href="categoria.php?categoria=Habilidades de Redaccion">Habilidades de Redaccion</a>
+              <a href="categoria.php?categoria=Ciencia y Matematicas">Ciencia y Matematicas</a>
+              <a href="categoria.php?categoria=Para Tutores">Para Tutores</a>
             </div>
             
           </div>
