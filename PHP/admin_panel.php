@@ -1,11 +1,13 @@
 <?php
 session_start();
+
 if (!isset($_SESSION['admin']) || $_SESSION['admin'] !== true) {
-    header("Location: login.php");
+    header("Location: ../PHP/login.php");
     exit();
 }
 
 include 'blog_db.php';
+include 'header.php';
 
 // Verificar si el usuario es admin
 
@@ -16,14 +18,28 @@ if (isset($_GET['eliminar'])) {
     $stmt = $conn->prepare("DELETE FROM publicaciones_2 WHERE id = ?");
     $stmt->bind_param("i", $id);
     $stmt->execute();
-    header('Location: panel_admin.php?success=1');
+    header('Location: admin_panel.php?success=1');
     exit();
 }
 
 // Obtener publicaciones
 $sql = "SELECT * FROM publicaciones_2 ORDER BY fecha_creacion DESC";
 $result = $conn->query($sql);
+
+// Eliminar comentario del formulario de contacto
+if (isset($_GET['eliminar_contacto'])) {
+    $id_contacto = intval($_GET['eliminar_contacto']);
+    $stmt = $conn->prepare("DELETE FROM contacto WHERE id = ?");
+    $stmt->bind_param("i", $id_contacto);
+    $stmt->execute();
+    header('Location: admin_panel.php?success=1');
+    exit();
+}
+
+
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="es">
@@ -57,7 +73,7 @@ $result = $conn->query($sql);
                 <div class="post">
                     <div class="post-actions">
                         <a href="blog_edit.php?id=<?= $row['id'] ?>" class="btn btn-edit"><i class="fas fa-edit"></i> Editar</a>
-                        <a href="panel_admin.php?eliminar=<?= $row['id'] ?>" class="btn btn-delete"><i class="fas fa-trash"></i> Eliminar</a>
+                        <a href="admin_panel.php?eliminar=<?= $row['id'] ?>" class="btn btn-delete"><i class="fas fa-trash"></i> Eliminar</a>
                     </div>
 
                     <h3><?= htmlspecialchars($row["titular"]) ?></h3>
@@ -90,6 +106,31 @@ $result = $conn->query($sql);
         <?php else: ?>
             <p>No hay publicaciones aún.</p>
         <?php endif; ?>
+                <!-- Nueva sección: Mensajes del formulario de contacto -->
+        <h2>Mensajes de Contacto</h2>
+       
+<?php
+$contacto_result = $conn->query("SELECT * FROM contacto ORDER BY id DESC");
+?>
+
+<?php if ($contacto_result->num_rows > 0): ?>
+    <?php while ($coment = $contacto_result->fetch_assoc()): ?>
+        <div class="post">
+            <div class="post-actions">
+                <a href="admin_panel.php?eliminar_contacto=<?= $coment['id'] ?>" class="btn btn-delete">
+                    <i class="fas fa-trash"></i> Eliminar
+                </a>
+            </div>
+            <p><strong>Nombre:</strong> <?= htmlspecialchars($coment["nombre"]) ?> <?= htmlspecialchars($coment["apellido"]) ?></p>
+            <p><strong>Email:</strong> <?= htmlspecialchars($coment["email"]) ?></p>
+            <p><strong>Mensaje:</strong><br><?= nl2br(htmlspecialchars($coment["mensaje"])) ?></p>
+        </div>
+    <?php endwhile; ?>
+<?php else: ?>
+    <p>No hay mensajes desde el formulario de contacto.</p>
+<?php endif; ?>
+  
+
     </div>
 
     <script>

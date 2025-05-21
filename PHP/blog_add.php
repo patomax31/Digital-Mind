@@ -1,3 +1,16 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['admin']) || $_SESSION['admin'] !== true) {
+    header("Location: ../PHP/login.php");
+    exit();
+}
+
+include 'blog_db.php';
+include 'header.php';
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -110,9 +123,7 @@
     </style>
 </head>
 <body>
-<?php
-include 'header.php';
-?>
+
 <div class="blog-form">
     <form action="../PHP/blog_save.php" method="POST" enctype="multipart/form-data">
         <h2>Crear Nueva Publicación</h2>
@@ -167,7 +178,6 @@ include 'header.php';
         
         <button type="submit" class="submit-btn">Publicar Entrada</button>
         
-        <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token']) ?>">
 
         <script>
         document.querySelector('form').addEventListener('submit', function(e) {

@@ -1,5 +1,4 @@
 html{
-<<<<<<< HEAD
     scroll-behavior: smooth;
   }
   
@@ -209,214 +208,220 @@ html{
   #scrollBtn:hover{
     background-color: #0b6730;
   }  
-=======
-  scroll-behavior: smooth;
+/* Estilos para el carrusel (aún más pequeño y adaptable) */
+.related-posts-carousel {
+    margin: 20px 0; /* Reducir aún más el margen vertical */
+    padding: 15px 0; /* Reducir aún más el padding vertical */
+    border-top: 1px solid #eee; /* Borde aún más ligero */
+    border-bottom: 1px solid #eee; /* Borde aún más ligero */
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0e6d2; /* Color de fondo claro */
-    color: #333;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 20px auto;
-    background-color: #e6dac6; /* Color de fondo del contenedor */
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Contenedor del texto principal */
-.text-box {
-    background-color: #fff;       /* Fondo blanco para resaltar el contenido */
-    border: 1px solid #ccc;       /* Borde sutil, opcional */
-    border-radius: 15px;          /* Bordes redondeados */
-    padding: 20px;                /* Espaciado interno */
-    margin: 20px;                 /* Margen para separarlo de otros elementos */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Sombra opcional para efecto de profundidad */
-}
-
-/* Título dentro del contenedor */
-.text-box .title {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #2e8b57;
+.related-posts-carousel h2 {
     text-align: center;
-}
-
-/* Otros estilos que ya tengas para el contenido del main */
-.main-content p {
-    font-size: 1.1em;
-    line-height: 1.7;
-    margin-bottom: 20px;
-    text-align: justify; /* Puedes ajustar la alineación según tu diseño */
-}
-
-/* --- Encabezado (Header) --- */
-header {
+    margin-bottom: 15px; /* Reducir aún más el margen inferior */
+    color: #444;
     position: relative;
-    background-color: #d2c1aa; /* Color de fondo del header */
-    padding: 10px 20px;
-    align-items: center;
-    justify-content: space-between;
-    display: flex; /* Flexbox para alinear elementos */
-    
-  }
-  
-  /* Logo a la izquierda */
-  .logo {
-    position: absolute;
-    left: 20px;
-    font-size: 1.8em;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  /* Navegación central: Inicio, Categoría y Búsqueda */
-  .nav-center { 
-    display: flex; 
-    gap: 30px;    /* Espacio entre cada enlace */
-    justify-content: center; /*Para centrar el pedo */
-    flex: 1; /* Esto asegura que el nav ocupe todo el espacio posible entre el logo y el botón de búsqueda */
-  } /*La regla CSS de .nav-center usa display: flex; con gap: 30px; para distribuir equitativamente los enlaces y conseguir que queden centrados en el header.*/
-
-  .nav-center a {
-    text-decoration: none;
-    font-weight: bold;
-    font-family: Arial, sans-serif;
-    color: #333;
-  }
-  
- /* Botón de búsqueda a la derecha, con forma de píldora */
-.search-button {
-    background-color: #2e8b57;             /* Color de fondo (puedes elegir otro que combine) */
-    padding: 10px 20px;                    /* Espaciado interno */
-    border-radius: 50px;                   /* Valor alto para crear la forma de pildora */
-    color: #fff;                          /* Color del texto */
-    font-weight: bold;
-    text-align: right;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  /* Efecto hover para el botón de búsqueda */
-  .search-button:hover {
-    background-color: #276a45;
-  }
-  
-  .nav-center a {
-    text-decoration: none;
-    font-weight: bold;
-    font-family: Arial, sans-serif;
-    /* Elige un color que armonice con el fondo del header.
-       En este ejemplo se usa #333, pero puedes ajustar a otro color */
-    color: #333;
-  }
-  
-  /* Opcional: efecto hover para los enlaces */
-  .nav-center a:hover {
-    color: #2e8b57;
-  }
-
-main {
-    padding: 20px;
+    font-size: 1.3em; /* Reducir ligeramente el tamaño del título de la sección */
 }
 
-.main-content.detail-page {
-    background-color: #fff; /* Fondo blanco para el contenido detallado */
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.related-posts-carousel h2:after {
+    content: '';
+    display: block;
+    width: 40px; /* Reducir aún más el ancho de la línea */
+    height: 1.5px; /* Reducir aún más la altura de la línea */
+    background: #777;
+    margin: 4px auto 0; /* Reducir aún más el margen superior */
 }
 
-.main-content.detail-page .title {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #2e8b57; /* Verde para el título */
-    text-align: center;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-    
+.carousel-container {
+    width: 90%; /* Aumentar un poco para mejor adaptación en anchos menores */
+    max-width: 600px; /* Limitar el ancho máximo en pantallas grandes */
+    position: relative;
+    margin: 15px auto; /* Reducir aún más el margen vertical */
+    overflow: hidden;
+    border-radius: 6px; /* Reducir aún más el radio del borde */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* Reducir aún más la sombra */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.main-content.detail-page p, .main-content.detail-page ul {
-    font-size: 1.1em;
-    line-height: 1.7;
-    margin-bottom: 20px;
-    text-align: center;
-    
+.carousel-container:hover {
+    transform: scale(1.005); /* Reducir el efecto hover */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
 }
 
-.main-content.detail-page ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    
-}
-
-.main-content.detail-page strong {
-    color: #2e8b57; /* Verde para el texto destacado */
-}
-
-figure {
-    text-align:  center;
-}
-
-div .url {
-    text-align: center;
-    font-family: 'Arial', sans-serif
-}
-
-/* --- Footer --- */
-footer {
-    display: flex; /* Flexbox para organizar los elementos */
-    justify-content: center; /* Centra los enlaces horizontalmente */
-    align-items: center; /* Centra los enlaces verticalmente */
-    padding: 10px 20px;
-    background-color: #d2c1aa; /* Fondo similar al header */
-    border-top: 1px solid #ccc; /*La línea border-top: 1px solid #ccc separa visualmente el footer del contenido principal de la página.*/
-  }
-  
-  /* Navegación del footer */
-  .nav-footer {
+.carousel-slides {
     display: flex;
-    gap: 30px; /* Espaciado entre los enlaces */
-  }
-  
-  .nav-footer a {
-    text-decoration: none;
-    font-weight: bold;
-    font-family: Arial, sans-serif;
-    color: #333; /* Color del texto */
-  }
-  
-  /* Efecto hover */
-  .nav-footer a:hover {
-    color: #2e8b57; /* Color del hover, consistente con el header */
-  }
-
-  /*Button style*/
-  svg{
-    width: 25px;
-    height: 25px;
-  }
-
-#scrollBtn{
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    border: none;
-    outline: none;
-    background-color: #008f39;
-    cursor: pointer;
-    color: #ffffff;
-    padding: 15px;
-    border-radius: 50%;
+    transition: transform 0.5s ease-in-out;
 }
-#scrollBtn:hover{
-  background-color: #0b6730;
-}  
->>>>>>> ed48935b125fbb737b26fffad93af119287ec212
+
+.carousel-slide {
+    position: relative;
+    height: 280px; /* Reducir significativamente la altura del slide */
+    flex-shrink: 0;
+    width: calc(100% / <?php echo count($slides) > 0 ? count($slides) : 1; ?>);
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)); /* Ligeramente menos oscuro */
+    color: white;
+    padding: 8px; /* Reducir aún más el padding del caption */
+}
+
+.carousel-caption h3 {
+    margin: 0 0 3px 0; /* Reducir aún más el margen inferior */
+    font-size: 1em; /* Reducir aún más el tamaño del título */
+    color: white !important;
+    padding: 2px 4px; /* Ajustar el padding del marco */
+    display: inline-block;
+    border-radius: 2px; /* Reducir aún más el radio del borde */
+    background-color: rgba(0, 0, 0, 0.7); /* Marco ligeramente menos oscuro */
+}
+
+.carousel-caption p {
+    margin: 0;
+    font-size: 0.8em; /* Reducir aún más el tamaño de la descripción */
+    color: #ddd !important;
+    display: none; /* Mantener oculta por defecto */
+}
+
+.carousel-date {
+    font-size: 0.7em; /* Reducir aún más el tamaño de la fecha */
+    opacity: 0.6;
+    margin-bottom: 2px; /* Reducir aún más el margen inferior */
+    display: block;
+    color: #ccc !important;
+}
+
+.carousel-link {
+    display: inline-block;
+    margin-top: 3px; /* Reducir aún más el margen superior */
+    color: white;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.05); /* Fondo aún más sutil */
+    padding: 4px 8px; /* Reducir aún más el padding del enlace */
+    border-radius: 12px; /* Reducir aún más el radio del borde */
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 0.7em; /* Reducir aún más el tamaño del enlace */
+}
+
+.carousel-link:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: scale(1.02);
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+}
+
+.carousel-control {
+    background-color: rgba(0, 0, 0, 0.2); /* Fondo aún más sutil */
+    color: white;
+    border: none;
+    width: 25px; /* Reducir aún más el tamaño del control */
+    height: 25px; /* Reducir aún más el tamaño del control */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0 8px; /* Reducir aún más el margen */
+    transition: background-color 0.3s;
+    pointer-events: auto;
+    font-size: 0.9em; /* Reducir aún más el tamaño del icono */
+}
+
+.carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 8px; /* Reducir aún más la distancia desde abajo */
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 4px; /* Reducir aún más el espacio entre indicadores */
+}
+
+.carousel-indicator {
+    width: 6px; /* Reducir aún más el tamaño del indicador */
+    height: 6px; /* Reducir aún más el tamaño del indicador */
+    background-color: rgba(255, 255, 255, 0.2); /* Color aún más claro */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-indicator.active {
+    background-color: white;
+}
+
+@media (max-width: 768px) {
+    .carousel-slide {
+        height: 220px; /* Reducir aún más la altura en móviles */
+    }
+}
+/* Estilos para la sección de compartir al final del artículo */
+.social-share-bottom {
+    margin-top: 30px; /* Espacio arriba de la sección */
+    padding-top: 20px; /* Espacio interno arriba */
+    border-top: 1px solid #ddd; /* Línea separadora */
+    text-align: center; /* Centra el texto y los elementos inline/inline-block */
+}
+
+.social-share-bottom h3 {
+    margin-bottom: 15px;
+    font-size: 1.3em;
+    color: #333;
+}
+
+.share-buttons {
+    display: flex; /* Usa flexbox para alinear los botones en una fila */
+    justify-content: center; /* Centra los elementos flexbox horizontalmente */
+    gap: 10px; /* Espacio entre los botones */
+    flex-wrap: wrap; /* Permite que los botones se envuelvan en líneas nuevas si no caben */
+    padding: 10px 0; /* Espacio vertical alrededor de los botones */
+}
+
+.share-button {
+    display: inline-flex; /* Permite centrar el icono dentro del botón */
+    align-items: center; /* Centra verticalmente el contenido (el icono) */
+    justify-content: center; /* Centra horizontalmente el contenido (el icono) */
+    width: 45px; /* Ancho fijo para los botones */
+    height: 45px; /* Alto fijo para los botones */
+    border-radius: 50%; /* Hace los botones redondos */
+    color: white; /* Color del icono */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    font-size: 1.4em; /* Tamaño del icono */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transición suave al pasar el mouse */
+}
+
+.share-button:hover {
+    opacity: 0.9; 
+    transform: scale(1.05); /* Un pequeño zoom al pasar el mouse */
+}
+
+.share-button.facebook { background-color: #3b5998; }
+.share-button.twitter { background-color: #1da1f2; }
+.share-button.linkedin { background-color: #0077b5; }
+.share-button.whatsapp { background-color: #25d366; }
+.share-button.email { background-color: #dd4b39;  }
+

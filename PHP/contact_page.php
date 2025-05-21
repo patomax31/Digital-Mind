@@ -1,3 +1,45 @@
+<?php
+
+session_start();
+include 'blog_db.php';
+
+// Procesamiento del formulario
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $host = "localhost";
+  $usuario = "root";
+  $contrasena = "";
+  $base_datos = "blog_db"; // ← CAMBIA este valor al nombre real de tu base de datos
+
+  
+  $conn = new mysqli($host, $usuario, $contrasena, $base_datos);
+
+  if ($conn->connect_error) {
+    die("Error de conexión: " . $conn->connect_error);
+  }
+
+  $nombre   = $_POST['nombre'] ?? '';
+  $apellido = $_POST['apellido'] ?? '';
+  $email    = $_POST['email'] ?? '';
+  $mensaje  = $_POST['mensaje'] ?? '';
+
+  if (!empty($nombre) && !empty($apellido) && !empty($email) && !empty($mensaje) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $stmt = $conn->prepare("INSERT INTO contacto (nombre, apellido, email, mensaje) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("ssss", $nombre, $apellido, $email, $mensaje);
+
+    if ($stmt->execute()) {
+      echo "<script>alert('Mensaje enviado correctamente.');</script>";
+    } else {
+      echo "<script>alert('Error al enviar el mensaje: " . $stmt->error . "');</script>";
+    }
+
+    $stmt->close();
+  } else {
+    echo "<script>alert('Por favor, completa todos los campos correctamente.');</script>";
+  }
+
+  $conn->close();
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -49,7 +91,7 @@
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      gap: 100px; /* Cambié el gap para que haya un poco más de espacio entre los elementos */
+      gap: 100px;
       margin: 30px 0;
     }
 
@@ -69,7 +111,7 @@
     }
 
     .contact-info .img {
-      max-width: 200px; /* Cambié el tamaño de la imagen */
+      max-width: 200px;
       border-radius: 12px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
@@ -174,7 +216,9 @@
 </head>
 <body>
   <?php
-  include 'header.php'
+  include 'header.php';
+  include 'dashboard.php'; 
+
   ?>
 
   <header>
@@ -197,14 +241,13 @@
 
   <div class="contact-section">
     <div class="map-placeholder">
-      <!-- Puedes insertar un mapa real de Google Maps aquí -->
       <iframe src="https://www.google.com/maps/embed?..." allowfullscreen></iframe>
     </div>
 
-    <form class="glass-form" action="procesar.php" method="POST">
+    <form class="glass-form" method="POST">
       <h2>Vamos a Enviar Un Mensaje Para Nosotros</h2>
       <div class="form-group">
-        <input type="text" name="nombre" placeholder= "Nombre" required>
+        <input type="text" name="nombre" placeholder="Nombre" required>
         <input type="text" name="apellido" placeholder="Apellido" required>
       </div>
       <input type="email" name="email" placeholder="Email" required>
@@ -213,12 +256,6 @@
     </form>
   </div>
 
-
-  <?php
-  include 'footer.php';
-  ?>
+  <?php include 'footer.php'; ?>
 </body>
 </html>
-
-
-

@@ -1,5 +1,13 @@
 <?php
-session_start();
+if(!defined('DASHBOARD_INCLUDED')) {
+    define('DASHBOARD_INCLUDED', true);
+    // Resto del código del dashboard
+}
+?>
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 include 'blog_db.php';
 
 // Verificar si hay un usuario logueado
@@ -19,7 +27,7 @@ if ($resultRecientes->num_rows > 0) {
 // IMPORTANTE: Vamos a cerrar la conexión aquí ya que no necesitamos mantenerla abierta
 // index.php creará su propia conexión cuando la necesite
 if (isset($conn)) {
-    $conn->close();
+
 }
 ?>
 
@@ -169,10 +177,7 @@ if (isset($conn)) {
         <h3>Menú Principal</h3>
         <a href="index.php" class="menu-item">
             <i class="fas fa-home"></i> Inicio
-        </a>
-        <a href="blog_add.php" class="menu-item">
-            <i class="fas fa-edit"></i> Crear Blog
-        </a>
+
         <a href="#" class="menu-item">
             <i class="fas fa-folder"></i> Categorías
         </a>

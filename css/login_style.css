@@ -51,78 +51,92 @@ body {
     color: #ccc;
 }
 
-/* Panel derecho (formulario) */
 .right-panel {
-    flex: 0.9; /* 45% aprox. */
+    flex: 0.9;
     background-color: white;
-    padding: 60px 40px;
+    padding: 60px 80px 60px 100px; /* más padding a la izquierda */
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start; /* Alínea a la izquierda dentro del panel */
     animation: fadeSlideIn 1s ease forwards;
 }
 
-/* Formulario */
-form {
-    width: 100%;
-    max-width: 400px;
-    margin: auto;
+right-panel {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    padding: 2rem;
 }
 
-form h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+form {
+    max-width: 400px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #222;
 }
 
 .subtext {
-    color: #6c757d;
-    margin-bottom: 20px;
+    color: #666;
+    margin-bottom: 1.5rem;
 }
 
-input[type="email"],
-input[type="password"] {
+input {
     width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 1rem;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
 }
 
-button[type="submit"] {
+button {
     width: 100%;
-    padding: 12px;
-    background-color: #7f5af0;
-    color: white;
-    font-weight: bold;
+    background-color: #7f56d9;
+    color: #fff;
+    padding: 0.8rem;
     border: none;
-    border-radius: 8px;
-    margin-top: 20px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    font-size: 1rem;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #624bd1;
+    background-color: #6b46c1;
 }
 
-.guest-link,
-.forgot-link,
-.switch-auth a {
+.message {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.success { color: green; }
+.error { color: red; }
+
+a {
+    text-decoration: none;
+    color: #7f56d9;
     display: block;
     text-align: center;
-    margin-top: 15px;
-    color: #7f5af0;
-    text-decoration: none;
+    margin-top: 0.8rem;
 }
 
-.guest-link:hover,
-.forgot-link:hover,
-.switch-auth a:hover {
+a:hover {
     text-decoration: underline;
 }
 
-.message.error {
-    color: red;
-    margin-bottom: 10px;
+.guest-link {
+    margin-top: 1rem;
+}
+
+.switch-auth {
+    margin-top: 1rem;
+    color: #444;
 }

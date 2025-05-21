@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>DIGITALMIND - Educación y Calidad</title>
   <link rel="stylesheet" href="../css/style.css">
   <!-- Mover los scripts al final del body para asegurar que los elementos HTML existan -->
@@ -11,6 +11,7 @@
 
   <?php include 'dashboard.php'; ?>
   <?php include 'header.php'; ?>
+  
 
 
  <button id="scrollToTopBtn" class="scroll-top-btn" aria-label="Volver arriba">
@@ -28,9 +29,7 @@
       <div class="most-recent">Más Reciente</div>
 
       <?php
-      // Creamos una nueva conexión a la base de datos para evitar problemas
-      // con conexiones cerradas anteriormente
-      include 'blog_db.php';
+include 'blog_db.php';  // Incluye la conexión
 
       // Obtener publicaciones de la base de datos con la nueva conexión
       $sql = "SELECT * FROM publicaciones_2 ORDER BY fecha_creacion DESC";

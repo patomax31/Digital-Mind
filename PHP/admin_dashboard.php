@@ -1,5 +1,13 @@
 <?php
-include("blog_db.php");
+session_start();
+
+if (!isset($_SESSION['admin']) || $_SESSION['admin'] !== true) {
+    header("Location: ../PHP/login.php");
+    exit();
+}
+
+include 'blog_db.php';
+include 'header.php';
 
 // Contadores
 $usuarios_total = mysqli_fetch_assoc(mysqli_query($conn, "SELECT COUNT(*) as total FROM usuarios"))['total'];
