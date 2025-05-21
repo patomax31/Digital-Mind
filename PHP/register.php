@@ -44,7 +44,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $password = trim($_POST['password']);
         $confirm_password = trim($_POST['confirm_password']);
 
-<<<<<<< HEAD
      $stmt = mysqli_prepare($conn, "SELECT * FROM usuarios WHERE email = ?");
 mysqli_stmt_bind_param($stmt, "s", $email);
 mysqli_stmt_execute($stmt);
@@ -53,13 +52,6 @@ $resultado_email = mysqli_stmt_get_result($stmt);
 if ($resultado_email && mysqli_num_rows($resultado_email) > 0) {
     $mensaje = "<p class='message error'>¡Este correo ya está registrado!</p>";
 }
-=======
-        // Usar prepared statements para prevenir inyección SQL
-        $consulta_email = $conn->prepare("SELECT id FROM usuarios WHERE email = ?");
-        $consulta_email->bind_param("s", $email);
-        $consulta_email->execute();
-        $resultado_email = $consulta_email->get_result();
->>>>>>> f280bc783d8eaa393d1f98dbb3327857a6172a29
 
 
         if ($resultado_email->num_rows > 0) {
