@@ -66,6 +66,35 @@
             <a href="contact_page.php">Pagina de contacto</a>
         </div>
       </div>
+      <div class="action-container search-container">
+
+  <!-- Icono de búsqueda personalizado -->
+  <svg id="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24" style="cursor:pointer;">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m0 0a7 7 0 1 0-9.9-9.9 7 7 0 0 0 9.9 9.9z" />
+  </svg>
+
+  <!-- Input de búsqueda oculto inicialmente -->
+  <form id="search-form" action="buscar.php" method="GET" style="display:none;">
+    <input type="text" name="q" placeholder="Buscar noticias o categorías..." autocomplete="off" />
+    <button type="submit">Buscar</button>
+  </form>
+
+  <script>
+  const searchIcon = document.getElementById('search-icon');
+  const searchForm = document.getElementById('search-form');
+
+  searchIcon.addEventListener('click', () => {
+    if (searchForm.style.display === 'none' || searchForm.style.display === '') {
+      searchForm.style.display = 'inline-block';
+      searchForm.querySelector('input').focus();
+    } else {
+      searchForm.style.display = 'none';
+    }
+  });
+</script>
+</div>
+
+
           <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
       <div class="action-container">
         <svg class="Login-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
