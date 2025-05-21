@@ -22,8 +22,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $password = trim($_POST['password']);
         $confirm_password = trim($_POST['confirm_password']);
 
-        $consulta_email = "SELECT * FROM usuarios WHERE email = '$email'";
-        $resultado_email = mysqli_query($conn, $consulta_email);
+     $stmt = mysqli_prepare($conn, "SELECT * FROM usuarios WHERE email = ?");
+mysqli_stmt_bind_param($stmt, "s", $email);
+mysqli_stmt_execute($stmt);
+$resultado_email = mysqli_stmt_get_result($stmt);
+
+if ($resultado_email && mysqli_num_rows($resultado_email) > 0) {
+    $mensaje = "<p class='message error'>¡Este correo ya está registrado!</p>";
+}
 
         if (mysqli_num_rows($resultado_email) > 0) {
             $mensaje = "<p class='message error'>¡Este correo ya está registrado!</p>";
