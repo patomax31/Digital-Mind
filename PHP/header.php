@@ -127,7 +127,7 @@
                 <path d="M19.1 18h-6.2" />
                 </svg>
 
-                  <span>Traducir</span>
+                  <span>Idioma</span>
               </button>
             </div>
       </div>
