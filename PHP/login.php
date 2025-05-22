@@ -1,29 +1,4 @@
 <?php
-<<<<<<< HEAD
-include("blog_db.php");
-session_start();
-
-$mensaje = "";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = trim($_POST['email']);
-    $password = trim($_POST['password']);
-
-    // 1. Buscar en administradores
-    $consulta_admin = "SELECT * FROM admin WHERE email = ?";
-    $stmt = $conn->prepare($consulta_admin);
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
-    $resultado_admin = $stmt->get_result();
-
-    if ($resultado_admin && $resultado_admin->num_rows == 1) {
-        $admin = $resultado_admin->fetch_assoc();
-        if (password_verify($password, $admin['contraseña'])) {
-            $_SESSION['admin'] = true;
-            $_SESSION['admin_id'] = $admin['id'];
-            $_SESSION['admin_nombre'] = $admin['nombre'];
-            header("Location: panel_admin.php");
-=======
 session_start();
 require("blog_db.php");
 
@@ -46,25 +21,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $_SESSION['admin_id'] = $admin['id'];
             $_SESSION['admin_nombre'] = $admin['nombre'];
             header("Location: admin_panel.php");
->>>>>>> 3aaa26d1ef8d1350a5d5a1d69e47d4545aeeed0a
             exit();
         }
     }
 
-<<<<<<< HEAD
-    // 2. Buscar en usuarios normales
-    $consulta_user = "SELECT * FROM usuarios WHERE email = ?";
-    $stmt = $conn->prepare($consulta_user);
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
-    $resultado_user = $stmt->get_result();
-
-    if ($resultado_user && $resultado_user->num_rows == 1) {
-        $usuario = $resultado_user->fetch_assoc();
-        if (password_verify($password, $usuario['contraseña'])) {
-            $_SESSION['usuario_id'] = $usuario['id'];
-            $_SESSION['usuario_nombre'] = $usuario['nombre'];
-=======
     // Buscar en la tabla de usuarios normales
     $stmtUser = $conn->prepare("SELECT * FROM usuarios WHERE email = ?");
     $stmtUser->bind_param("s", $email);
@@ -76,7 +36,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if (password_verify($clave, $user['contraseña'])) {
             $_SESSION['usuario_id'] = $user['id'];
             $_SESSION['usuario_nombre'] = $user['nombre'];
->>>>>>> 3aaa26d1ef8d1350a5d5a1d69e47d4545aeeed0a
             header("Location: ../PHP/index.php");
             exit();
         } else {
@@ -86,11 +45,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $mensaje = "<p class='message error'>No existe una cuenta con ese correo.</p>";
     }
 
-<<<<<<< HEAD
-    $stmt->close();
-}
-?>
-=======
     $stmtAdmin->close();
     $stmtUser->close();
 }
@@ -192,4 +146,3 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </script>
 </body>
 </html>
->>>>>>> 3aaa26d1ef8d1350a5d5a1d69e47d4545aeeed0a
