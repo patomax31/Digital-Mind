@@ -1,4 +1,8 @@
 <?php
+
+session_start();
+include 'blog_db.php';
+
 // Procesamiento del formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $host = "localhost";
@@ -211,7 +215,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </style>
 </head>
 <body>
-  <?php include 'header.php'; ?>
+  <?php
+  include 'header.php';
+  include 'dashboard.php'; 
+
+  ?>
 
   <header>
     <h1>Contactate Con Nosotros</h1>

@@ -12,6 +12,7 @@ $result = $conn->query($sql);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publicaciones</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../images/logo_web.png">
 </head>
 <body>
     <h2>Lista de Publicaciones</h2>
