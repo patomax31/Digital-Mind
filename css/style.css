@@ -528,7 +528,7 @@ footer {
   }
 }
 
-<<<<<<< HEAD
+
 @media (max-width: 480px) {
   .sliding-header {
     height: 60px;
@@ -601,7 +601,7 @@ footer {
     margin-right: 10px;
   }
 }
-=======
+
 /* Clase para mostrar la barra */
 .progress-bar.visible {
     opacity: 1;
