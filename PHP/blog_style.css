@@ -1,8 +1,7 @@
-html{
-<<<<<<< HEAD
-    scroll-behavior: smooth;
-  }
-  
+html
+HEAD
+    scroll-behavior:smooth
+
   body {
       font-family: 'Arial', sans-serif;
       margin: 0;
@@ -209,9 +208,7 @@ html{
   #scrollBtn:hover{
     background-color: #0b6730;
   }  
-=======
-  scroll-behavior: smooth;
-}
+  scroll-behavior:smooth
 
 body {
     font-family: 'Arial', sans-serif;
@@ -418,5 +415,4 @@ footer {
 }
 #scrollBtn:hover{
   background-color: #0b6730;
-}  
->>>>>>> ed48935b125fbb737b26fffad93af119287ec212
+} 
