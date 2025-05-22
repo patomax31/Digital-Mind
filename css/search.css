@@ -66,23 +66,23 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
   
-  .progress-bar {
-    position: fixed;
-    top: 80px; /* Debe coincidir exactamente con la altura de tu header */
-    left: 0;
-    width: 100%;
-    height: 12px; /* Puedes ajustar este valor según prefieras */
-    z-index: 999;
-    margin: 0; /* Eliminamos cualquier margen */
-    padding: 0; /* Eliminamos cualquier padding */
-  }
   
-  .progress {
-    height: 100%;
-    width: 0%;
-    background-color: #4a6e82; /* O cualquier color que prefieras */
-    transition: width 0.1s ease;
-  }
+  .progress-bar {
+  position: fixed;
+  top: 80px; /* Ajusta según la altura de tu header */
+  left: 0;
+  width: 100%;
+  height: 4px; /* Más delgada */
+  background: transparent;
+  z-index: 1000; /* Asegúrate que esté sobre otros elementos */
+}
+
+.progress {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #4a6e82, #2c3e50); /* Más atractiva */
+  transition: width 0.05s ease-out;
+}
   .sliding-header {
     background-color: #e3f2f7;
     display: flex;
@@ -224,4 +224,63 @@
     width: 24px;
     height: 24px;
   }
-  
+
+  #toggle-translate {
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    background-color: #e3f2f7;
+    color: white;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#toggle-translate.active {
+    background-color: #28a745;
+}
+
+#toggle-translate:hover {
+    background-color: #0056b3;
+}
+
+  .traducir {
+    margin-right: 30px; /* Espacio entre Traducir e Iniciar sesión */
+}
+
+/* Estilos del dropdown de Categoría */
+.dropdown {
+  position: relative;
+}
+
+.categoria-dropdown-content {
+  display: none;
+  position: absolute;
+  top: 40px; /* ajusta según altura del botón */
+  left: 0;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  z-index: 1001;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+.dropdown:hover .categoria-dropdown-content {
+  display: flex;
+}
+
+.categoria-dropdown-content a {
+  padding: 10px 16px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.categoria-dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+

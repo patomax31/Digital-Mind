@@ -95,4 +95,13 @@ try {
     $stmt->close();
     $conn->close();
 }
+
+session_start();
+
+// Verificar si el usuario inició sesión y es admin
+if (!isset($_SESSION['usuario_id']) || $_SESSION['rol'] !== 'admin') {
+    header('Location: index.php'); // o muestra mensaje de acceso denegado
+    exit;
+}
+
 ?>

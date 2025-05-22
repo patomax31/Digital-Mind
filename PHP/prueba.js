@@ -189,3 +189,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Establecemos un margen superior en el body para acomodar el header ampliado
     body.style.marginTop = `${header.offsetHeight}px`;
 });
+// Barra de progreso
+window.addEventListener('scroll', () => {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById('progress').style.width = scrolled + '%';
+});
+

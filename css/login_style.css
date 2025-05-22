@@ -1,131 +1,142 @@
-* {
+/* Estructura general */
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    overflow-x: hidden;
 }
 
-body, html {
-    height: 100%;
-}
-
+/* Contenedor principal con transición */
 .container {
     display: flex;
-    width: 100%;
     height: 100vh;
+    width: 100vw;
+    animation: fadeSlideIn 1s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
 }
 
-.image-section {
-    width: 50%;
-    background: url('../images/img2.jpeg') no-repeat center;
-    background-size: cover;
+/* Animación de entrada */
+@keyframes fadeSlideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.form-section {
-    width: 50%;
+/* Panel izquierdo (imagen testimonial) */
+.left-panel {
+    flex: 1.1; /* 55% aprox. */
+    background: url('../images/escuela1.jpg') center center/cover no-repeat;
+    position: relative;
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* Cita de testimonio */
+.left-panel blockquote {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.left-panel footer {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.right-panel {
+    flex: 0.9;
+    background-color: white;
+    padding: 60px 80px 60px 100px; /* más padding a la izquierda */
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start; /* Alínea a la izquierda dentro del panel */
+    animation: fadeSlideIn 1s ease forwards;
+}
+
+right-panel {
+    flex: 1;
+    display: flex;
     align-items: center;
-    background-color: #e1d6b8;
-    padding: 40px;
+    justify-content: center;
+    background: #fff;
+    padding: 2rem;
 }
 
-.form-section h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #4a4a4a;
-}
-
-.form-group {
+form {
+    max-width: 400px;
     width: 100%;
-    margin-bottom: 15px;
 }
 
-.form-group label {
-    display: block;
-    font-size: 14px;
-    margin-bottom: 5px;
-    color: #4a4a4a;
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #222;
 }
 
-.form-group input {
+.subtext {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+input {
     width: 100%;
-    padding: 10px;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
-.form-group input[type="submit"] {
-    background-color: #0a6800c8;
-    color: white;
-    cursor: pointer;
-    font-size: 16px;
-    border: none;
+button {
     width: 100%;
+    background-color: #7f56d9;
+    color: #fff;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
 }
 
-.form-group input[type="submit"]:hover {
-    background-color: #4a4a4a;
+button:hover {
+    background-color: #6b46c1;
 }
 
-
-.forgot-password {
+.message {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
     text-align: center;
-    margin-top: 10px;
-    font-size: 12px;
 }
 
-.forgot-password a {
-    color: #4a4a4a;
+.success { color: green; }
+.error { color: red; }
+
+a {
     text-decoration: none;
+    color: #7f56d9;
+    display: block;
+    text-align: center;
+    margin-top: 0.8rem;
 }
 
-.forgot-password a:hover {
+a:hover {
     text-decoration: underline;
 }
 
-.footer-text {
-    text-align: center;
-    font-size: 12px;
-    color: #00039a;
-    margin-top: 10px;
+.guest-link {
+    margin-top: 1rem;
 }
 
-.btn-registrar {
-    display: block;
-    width: 100%;
-    padding: 12px 20px;
-    background-color: #0a6800c8;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 10px;
-    border: none;
-    transition: background-color 0.3s ease;
+.switch-auth {
+    margin-top: 1rem;
+    color: #444;
 }
-
-.btn-registrar:hover {
-    background-color: #4a4a4a;
-}
-
-.form-container {
-    width: 400px;
-    margin: auto;
-    padding: 20px;
-    background-color: #e1d6b8;
-    border: 2px solid #4a4a4a; 
-    border-radius: 10px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
-
-.form-container h2 {
-    margin-bottom: 15px;
-    color: #4a4a4a;
-}
-
-
-

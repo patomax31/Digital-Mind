@@ -1,83 +1,56 @@
-<?php
-
-include 'blog_db.php';
-// Crear conexión
-
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
-}
-
-// Función para obtener todas las publicaciones
-function obtenerPublicaciones($conn) {
-    $sql = "SELECT id_noticia, titular, fecha, descripcion_corta FROM publicaciones";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-        $publicaciones = array();
-        while ($row = $result->fetch_assoc()) {
-            $publicaciones[] = $row;
-        }
-        return $publicaciones;
-    } else {
-        return array();
-    }
-}
-
-// Obtener todas las publicaciones
-$publicaciones = obtenerPublicaciones($conn);
-
-?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard de Publicaciones</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botón Subir con PHP</title>
     <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
+        body {
+            font-family: Arial, sans-serif;
+            height: 2000px; /* Simula una página larga */
+            padding: 20px;
         }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
+
+        #btnSubir {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
         }
-        th {
-            background-color: #f2f2f2;
+
+        #btnSubir:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <h1>Dashboard de Publicaciones</h1>
 
-    <h2>Lista de Publicaciones</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Titular</th>
-                <th>Fecha</th>
-                <th>Descripción Corta</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($publicaciones as $publicacion): ?>
-                <tr>
-                    <td><?php echo $publicacion['id_noticia']; ?></td>
-                    <td><?php echo $publicacion['titular']; ?></td>
-                    <td><?php echo $publicacion['fecha']; ?></td>
-                    <td><?php echo $publicacion['descripcion_corta']; ?></td>
-                    <td><a href="ver_publicacion.php?id=<?php echo $publicacion['id_noticia']; ?>">Ver</a></td>
-                </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
+    <?php
+    echo '<h1>Desplázate hacia abajo para ver el botón</h1>';
+    echo '<button id="btnSubir" onclick="subir()">⬆ Subir</button>';
+    ?>
 
-    <?php // Opcional: Formulario para agregar publicaciones ?>
+    <script>
+        window.onscroll = function () {
+            let btn = document.getElementById("btnSubir");
+            if (document.documentElement.scrollTop > 300) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+
+        function subir() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 
 </body>
 </html>
-
-<?php $conn->close(); ?>
