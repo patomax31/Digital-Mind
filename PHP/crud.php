@@ -53,7 +53,7 @@ $result_comentarios = mysqli_query($conn, $query_comentarios);
         <div id="posts" class="section-content active">
             <h1>Publicaciones</h1>
             <a class="crear-publicacion" href="blog_add.php" role="button">Crear nueva publicación</a>
-            <button class="eliminar-publicacion" role="Buscar"> Buscar</button>
+              <input type="text" class="search-bar"/>
             <table class=" table">
                 <thead>
                     <tr>
