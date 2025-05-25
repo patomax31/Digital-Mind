@@ -178,7 +178,7 @@ if (isset($conn)) {
         <a href="index.php" class="menu-item">
             <i class="fas fa-home"></i> Inicio
 
-        <a href="#" class="menu-item">
+        <a href="." class="menu-item">
             <i class="fas fa-folder"></i> Categorías
         </a>
         <a href="about_us.php" class="menu-item">

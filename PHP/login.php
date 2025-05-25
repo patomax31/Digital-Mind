@@ -24,20 +24,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $_SESSION['admin'] = true;
             $_SESSION['admin_id'] = $admin['id'];
             $_SESSION['admin_nombre'] = $admin['nombre'];
-<<<<<<< HEAD
-            header("Location: admin_panel.php");
-=======
             header("Location: ../PHP/admin_panel.php");
->>>>>>> d660f715bf9ecc9589e41c778d0dbb865c9f97eb
             exit();
         }
     }
 
-<<<<<<< HEAD
-    // Buscar en la tabla de usuarios normales
-=======
     // 2. Buscar en usuarios
->>>>>>> d660f715bf9ecc9589e41c778d0dbb865c9f97eb
     $stmtUser = $conn->prepare("SELECT * FROM usuarios WHERE email = ?");
     $stmtUser->bind_param("s", $email);
     $stmtUser->execute();
@@ -48,11 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if (password_verify($clave, $user['contraseña'])) {
             $_SESSION['usuario_id'] = $user['id'];
             $_SESSION['usuario_nombre'] = $user['nombre'];
-<<<<<<< HEAD
-            header("Location: ../PHP/index.php");
-=======
             header("Location: ../PHP/index.php"); // Redirige a la página principal
->>>>>>> d660f715bf9ecc9589e41c778d0dbb865c9f97eb
             exit();
         } else {
             $mensaje = "<p class='message error'>Contraseña incorrecta.</p>";
