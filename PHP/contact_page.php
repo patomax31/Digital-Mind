@@ -221,19 +221,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   ?>
 
-  <header>
-    <h1>Contactate Con Nosotros</h1>
-    <div class="social-icons">
-      <i class="fab fa-facebook-f"></i>
-      <i class="fab fa-instagram"></i>
-      <i class="fab fa-tiktok"></i>
-      <i class="fab fa-x-twitter"></i>
-    </div>
-  </header>
+  
 
   <div class="contact-info">
     <div>
-      <div class="info-box"><i class="fas fa-envelope"></i> XimenitaAlcaraz@gmail.com</div>
+      <div class="info-box"><i class="fas fa-envelope"></i> digitalmindsocial@gmail.com</div>
       <div class="info-box"><i class="fas fa-phone"></i> +31 412 784 85392</div>
     </div>
     <img src="imagencontact.png" alt="Contact Image">
