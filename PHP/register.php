@@ -45,6 +45,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $confirm_password = trim($_POST['confirm_password']);
 
      $stmt = mysqli_prepare($conn, "SELECT * FROM usuarios WHERE email = ?");
+     if (!$stmt) {
+    die("Error al preparar la consulta: " . mysqli_error($conn));
+}
 mysqli_stmt_bind_param($stmt, "s", $email);
 mysqli_stmt_execute($stmt);
 $resultado_email = mysqli_stmt_get_result($stmt);
