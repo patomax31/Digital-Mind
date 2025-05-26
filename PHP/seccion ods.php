@@ -65,11 +65,11 @@
                 <div class="mission-visual">
                     <div class="visual-grid">
                         <div class="visual-item">
-                            <img src="../images/students-learning.jpg" alt="Estudiantes aprendiendo" 
+                            <img src="../images/educacion_ex.jpeg" alt="Estudiantes aprendiendo" 
                                  onerror="this.src='../images/escuela1.jpg'">
                         </div>
                         <div class="visual-item">
-                            <img src="../images/digital-education.jpg" alt="Educación digital" 
+                            <img src="../images/educacion_ex_2.jpeg" alt="Educación digital" 
                                  onerror="this.src='../images/escuela1.jpg'">
                         </div>
                     </div>
@@ -94,7 +94,7 @@
                     <h3>Acceso Universal</h3>
                     <p>Recursos educativos gratuitos y de alta calidad para estudiantes de todos los niveles</p>
                     <div class="card-image">
-                        <img src="../images/universal-access.jpg" alt="Acceso universal" 
+                        <img src="../images/" alt="Acceso universal" 
                              onerror="this.src='../images/escuela1.jpg'">
                     </div>
                     <div class="card-hover-effect"></div>
@@ -109,7 +109,7 @@
                     <h3>Inclusión Total</h3>
                     <p>Adaptamos nuestro contenido para diferentes estilos de aprendizaje y necesidades especiales</p>
                     <div class="card-image">
-                        <img src="../images/inclusive-education.jpg" alt="Educación inclusiva" 
+                        <img src="../images/educacion_inclusiva.jpeg" alt="Educación inclusiva" 
                              onerror="this.src='../images/escuela1.jpg'">
                     </div>
                     <div class="card-hover-effect"></div>
@@ -124,7 +124,7 @@
                     <h3>Empoderando Educadores</h3>
                     <p>Herramientas innovadoras para profesores que buscan transformar su práctica educativa</p>
                     <div class="card-image">
-                        <img src="../images/teacher-empowerment.jpg" alt="Empoderamiento de educadores" 
+                        <img src="../images/empoderar_maestros.jpeg" alt="Empoderamiento de educadores" 
                              onerror="this.src='../images/escuela1.jpg'">
                     </div>
                     <div class="card-hover-effect"></div>
@@ -139,7 +139,7 @@
                     <h3>Revolución Digital</h3>
                     <p>Tecnología de vanguardia que amplía horizontes y crea nuevas oportunidades de aprendizaje</p>
                     <div class="card-image">
-                        <img src="../images/digital-revolution.jpg" alt="Revolución digital" 
+                        <img src="../images/revolucion_digital.jpeg" alt="Revolución digital" 
                              onerror="this.src='../images/escuela1.jpg'">
                     </div>
                     <div class="card-hover-effect"></div>
@@ -380,7 +380,7 @@
 
     .image-container img {
         width: 100%;
-        height: 400px;
+        /*height: 400px;*/
         object-fit: cover;
     }
 
