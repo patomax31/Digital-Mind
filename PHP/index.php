@@ -31,8 +31,15 @@
       <?php
 include 'blog_db.php';  // Incluye la conexión
 
+      // Verificar si hay filtro por categoría
+      $whereClause = "";
+      if (isset($_GET['categoria']) && !empty($_GET['categoria'])) {
+          $categoria = $conn->real_escape_string($_GET['categoria']);
+          $whereClause = "WHERE categoria = '$categoria'";
+      }
+
       // Obtener publicaciones de la base de datos con la nueva conexión
-      $sql = "SELECT * FROM publicaciones_2 ORDER BY fecha_creacion DESC";
+     $sql = "SELECT * FROM publicaciones_2 $whereClause ORDER BY fecha_creacion DESC LIMIT 5";
       $resultado = $conn->query($sql);
 
       // Mostrar publicaciones de la base de datos
@@ -52,7 +59,11 @@ include 'blog_db.php';  // Incluye la conexión
           </div>';
         }
       } else {
-        echo '<p>No hay publicaciones disponibles.</p>';
+        if (isset($_GET['categoria'])) {
+          echo '<p>No hay publicaciones disponibles en la categoría "' . htmlspecialchars($_GET['categoria']) . '".</p>';
+        } else {
+          echo '<p>No hay publicaciones disponibles.</p>';
+        }
       }
 
       // Ahora cerramos la conexión después de usarla por última vez
@@ -60,6 +71,9 @@ include 'blog_db.php';  // Incluye la conexión
       ?>
     </main>
   </div>
+
+  <!-- Incluir la sección ODS 4 antes del footer -->
+  <?php include 'seccion ods.php'; ?>
 
   <footer>
     <div class="footer-content">
@@ -101,6 +115,7 @@ include 'blog_db.php';  // Incluye la conexión
       console.error("Element with ID 'scrollBtn' not found.");
   }
 </script>
+
 
 <!-- Corregir la ruta del script de traducción -->
 <script src="./translate.js"></script>

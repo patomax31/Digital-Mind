@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIGITALMIND - Educación y Calidad</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="prueba.js" defer></script>
+  <script src="carrusel.js" defer></script>
+  <link rel="stylesheet" href="../css/carrusel.css">
+  <link rel="stylesheet" href="../css/search.css">
+</head>
+<body>
+  <header class="page-header-footer sliding-header" id="slidingHeader">
+    <div class="page-container">
+      <div class="header-left">
+        <div class="logo">
+          <a href="/PHP/main_page.html">
+            <img src="/images/Logo_Mk2.png" alt="Logo de DIGITALMIND">
+          </a>
+        </div>
+        <div class="header-actions-left">
+          <div class="action-container">
+            <svg class="create-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+              <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z" clip-rule="evenodd" />
+            </svg>
+            <a href="./PHP/publicaciones.php" class="">Crear Blog</a>
+          </div>
+          <div class="action-container categoria-dropdown">
+            <svg class="category-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 0 0-3 3v4.318a3 3 0 0 0 .879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 0 0 5.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 0 0-2.122-.879H5.25ZM6.375 7.5a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25Z" clip-rule="evenodd" />
+            </svg>
+            <a href="#">Categoría</a>
+            <div class="categoria-dropdown-content">
+              <a href="#">Educacion Primaria</a>
+              <a href="#">Educacion Media</a>
+              <a href="#">Educacion Media Superior</a>
+              <a href="#">Educacion Superior</a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="action-container">
+          <svg class="Login-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+            <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd" />
+          </svg>
+          <a href="/PHP/register.php" class="">Iniciar sesión</a>
+        </div>
+        <div class="search-container">
+          <div class="pill-search">
+            <div class="search-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                <path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zM2.25 10.5a8.25 8.25 0 1114.59 5.28l4.69 4.69a.75.75 0 11-1.06 1.06l-4.69-4.69A8.25 8.25 0 012.25 10.5z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <input type="text" class="search-input" placeholder="Buscar...">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="progress-bar">
+    <div id="progress" class="progress"></div>
+  </div>
+  <div class="container">
+    <button id="scrollBtn">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3.5" stroke="currentColor" class="size-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+      </svg>
+    </button>
+    <main>
+      <div id="carrusel-container">
+      </div>
+      <div class="most-recent">Más Reciente</div>
+      
+      include 'blog_db.php';  // Incluye la conexión
+
+      // Consulta para obtener los 5 posts más recientes
+      $sql = "SELECT * FROM publicaciones_2 ORDER BY fecha_creacion DESC LIMIT 5";
+      $resultado = $conn->query($sql);
+      
+      if ($resultado->num_rows > 0) {
+          while ($fila = $resultado->fetch_assoc()) {
+              echo '
+              <div class="content-item">
+                  <div class="content-image">
+                      <img src="../images/default-post.jpg" alt="' . htmlspecialchars($fila['titular']) . '">
+                  </div>
+                  <div class="content-text">
+                      <div class="title">' . htmlspecialchars($fila['titular']) . '</div>
+                      <p>' . htmlspecialchars($fila['descripcion_corta']) . '</p>
+                      <p class="published">Publicado el ' . date("d/m/Y", strtotime($fila['fecha'])) . '</p>
+                      <a href="../PHP/post_completo.php?id=' . $fila['id'] . '" class="see-more">Ver más</a>
+                  </div>
+              </div>';
+          }
+      } else {
+          echo '<p>No hay publicaciones aún.</p>';
+      }
+      
+      $conn->close();
+      ?>
+                  
+
+
+      <div class="content-item color-noticia-1">
+        <div class="content-image">
+          <img src="/images/Grafica Asistencia escolar.png" alt="Students">
+        </div>
+        <div class="content-text">
+          <div class="title">EDUCACIÓN DE CALIDAD</div>
+          <p>Capacidad de un sistema educativo para proporcionar a los estudiantes los conocimientos, habilidades y competencias necesarias para su desarrollo integral y bienestar futuro. Esto incluye el acceso a recursos educativos de calidad, la formación de docentes capacitados y la creación de un entorno de aprendizaje seguro y estimulante.</p>
+          <p class="published">Publicado hace 10 horas</p>
+          <a href="blog_page_3.html" class="see-more">Ver más</a>
+        </div>
+      </div>
+
+      <div class="content-item color-noticia-2">
+        <div class="content-image">
+          <img src="/images/escuela1.jpg" alt="Classroom">
+        </div>
+        <div class="content-text">
+          <div class="title">Los mapas mentales en el aprendizaje</div>
+          <p>Los mapas conceptuales son una herramienta de aprendizaje que ayuda a organizar ideas y conceptos para comprender y analizar temas. Son una estrategia de enseñanza-aprendizaje que facilita la comprensión de conceptos complejos y son una herramienta poderosa que todos deberiamos usar.</p>
+          <p class="published">Publicado hace 2 días</p>
+          <a href="blog_page_2-angel2312T.html" class="see-more">Ver más</a>
+        </div>
+      </div>
+
+      <div class="content-item color-noticia-3">
+        <div class="content-image">
+          <img src="/images/escuela3.jpeg" alt="Library">
+        </div>
+        <div class="content-text">
+          <div class="title">Educacion en mexico</div>
+          <p>Situacion actual de la educacion en mexico y sus avances a lo larg odel siglo XX y el siglo XXI y lo que aun queda por hacer.</p>
+          <p class="published">Publicado hace 3 días</p>
+          <a href="blog_page_3-angel2312T.html" class="see-more">Ver más</a>
+        </div>
+      </div>
+      <div class="content-item color-noticia-4">
+        <div class="content-image">
+          <img src="/images/montessori_metodo.webp" alt="Método Montessori">
+        </div>
+        <div class="content-text">
+          <div class="title">Metodo Montessori</div>
+          <p>El método Montessori es un enfoque educativo centrado en el niño que se basa en la observación científica de su desarrollo natural. Este método fomenta la independencia, la libertad con límites y el respeto por el desarrollo físico, social y psicológico del niño.</p>
+          <p class="published">Publicado hace 5 horas</p>
+          <a href="Montessori_blog.html" class="see-more">Ver más</a>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer>
+    <div class="footer-content">
+    <p>Derechos Reservados &reg; Digital-Mind &copy; </p>
+    </div>
+  </footer>
+</body>
+</html>

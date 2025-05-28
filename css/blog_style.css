@@ -24,7 +24,7 @@
         }
         
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'CreatoDisplay', serif;
             background-color: var(--background-color);
             color: var(--text-color);
             line-height: 1.6;
@@ -257,7 +257,7 @@
             min-height: 120px;
             margin-bottom: 1rem;
             resize: vertical;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'CreatoDisplay', serif;
         }
         
         .comment-form-container input[type="submit"] {

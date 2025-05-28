@@ -31,7 +31,7 @@ $resUser = $stmtUser->get_result();
             $_SESSION['admin'] = true;
             $_SESSION['admin_id'] = $admin['id'];
             $_SESSION['admin_nombre'] = $admin['nombre'];
-            header("Location: admin_panel.php");
+            header("Location: ../PHP/admin_panel.php");
             exit();
         }
     }

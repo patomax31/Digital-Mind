@@ -1,0 +1,82 @@
+body {
+  font-family: 'CreatoDisplay', serif;
+  margin: 20px;
+  background-color: #f4f4f4;
+}
+
+.dashboard-container {
+  max-width: 960px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Estilos del menú desplegable */
+.menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5em; /* Ajusta el tamaño del icono */
+  padding: 10px;
+  margin-bottom: 15px;
+  outline: none;
+}
+
+.menu-icon {
+  /* Estilos para el icono (si es necesario) */
+  color: #333; /* Color del icono */
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  display: none; /* Ocultar inicialmente */
+  background-color: #f9f9f9;
+}
+
+.menu.open {
+  display: block; /* Mostrar cuando la clase 'open' está presente */
+}
+
+.menu li a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.menu li a:hover {
+  background-color: #e0e0e0;
+}
+
+.content-section {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.content-section h2 {
+  color: #333;
+  margin-top: 0;
+}
+
+.no-data {
+  text-align: center;
+  color: #777;
+  padding: 20px;
+}
