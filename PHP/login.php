@@ -14,6 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         mysqli_stmt_execute($stmt);
         $resultado = mysqli_stmt_get_result($stmt);
 
+<<<<<<< HEAD
         if ($resultado && mysqli_num_rows($resultado) > 0) {
             $usuario = mysqli_fetch_assoc($resultado);
             
@@ -39,6 +40,41 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->close();
     } else {
         $mensaje = "<p class='message error'>Por favor completa todos los campos.</p>";
+=======
+    // 2. Buscar en usuarios
+$stmtUser = $conn->prepare("SELECT * FROM usuarios WHERE email = ?");
+$stmtUser->bind_param("s", $email);
+$stmtUser->execute();
+$resUser = $stmtUser->get_result();
+
+
+    if ($resAdmin && $resAdmin->num_rows === 1) {
+        $admin = $resAdmin->fetch_assoc();
+        if (password_verify($clave, $admin['contraseña'])) {
+            $_SESSION['admin'] = true;
+            $_SESSION['admin_id'] = $admin['id'];
+            $_SESSION['admin_nombre'] = $admin['nombre'];
+            header("Location: ../PHP/admin_panel.php");
+            exit();
+        }
+    }
+
+  
+if ($resUser && $resUser->num_rows === 1) {
+    $user = $resUser->fetch_assoc();
+    if (password_verify($clave, $user['contraseña'])) {
+        $_SESSION['usuario'] = [
+            'id' => $user['id'],
+            'nombre' => $user['nombre']
+        ];
+        header("Location: ../PHP/index.php"); // Redirige a la página principal
+        exit();
+    } else {
+        $mensaje = "<p class='message error'>Contraseña incorrecta.</p>";
+    }
+} else {
+        $mensaje = "<p class='message error'>No existe una cuenta con ese correo.</p>";
+>>>>>>> 26885818342815644d58f7ce66196c97fb727e40
     }
 }
 ?>

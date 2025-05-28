@@ -17,7 +17,11 @@ html {
 }
 
 body {
+<<<<<<< HEAD
     font-family: 'Arial', sans-serif; /* Considera usar 'Roboto' ya que lo importas */
+=======
+    font-family: 'CreatoDisplay', serif;
+>>>>>>> 26885818342815644d58f7ce66196c97fb727e40
     margin: 0;
     padding: 0;
     background-color: #e3f2f7;
