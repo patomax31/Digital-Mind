@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php echo isset($pageTitle) ? $pageTitle : 'DIGITALMIND - Educación y Calidad'; ?></title>
-    <link rel="stylesheet" href="../css/search.css">
+  <link rel="stylesheet" href="/css/Pagina_resultado.css">
+  <link rel="stylesheet" href="../css/search.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -73,11 +75,13 @@
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m0 0a7 7 0 1 0-9.9-9.9 7 7 0 0 0 9.9 9.9z" />
   </svg>
 
-  <!-- Input de búsqueda oculto inicialmente -->
-  <form id="search-form" action="buscar.php" method="GET" style="display:none;">
-    <input type="text" name="q" placeholder="Buscar noticias o categorías..." autocomplete="off" />
-    <button type="submit">Buscar</button>
-  </form>
+    <!--buscar-->
+    <link rel="stylesheet" href="../css/barra_busqueda.css">
+    <form id="search-form" action="buscar.php" method="GET" style="display: none;" class="barra-busqueda">
+  <input type="text" name="q" placeholder="Buscar..." autocomplete="off" required />
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+ 
 
   <script>
   const searchIcon = document.getElementById('search-icon');

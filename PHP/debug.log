@@ -8788,3 +8788,195 @@ Secondary education is an exciting journey of discovery and growth. By strengthe
 )
 
 [2025-05-21 05:54:17] Successfully returned translated texts.
+[2025-05-26 04:33:43] Received POST request.
+[2025-05-26 04:33:43] POST data: Array
+(
+    [texts] => ["Categoría","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma","Iniciar sesión","Más Reciente","Claves para una educación secundaria significativa y transformadora","La educación secundaria es un período crucial de transición y crecimiento. Exploraremos estrategias para el éxito académico, el desarrollo de habilidades de pensamiento crítico, la exploración de intereses, el fomento de la autonomía y la preparación para","Publicado el 22/05/2025","Ver más","Claves para una educación primaria sólida y estimulante","La educación primaria es la base fundamental para el desarrollo académico, social y emocional de los niños. Exploraremos estrategias pedagógicas efectivas, la importancia de un ambiente de aprendizaje positivo, el fomento de habilidades clave y la colabor","Publicado el 21/05/2025","Ver más","Claves para una educación exitosa y un futuro brillante","La preparatoria es una etapa crucial en la vida académica y personal. Exploraremos estrategias efectivas para el éxito académico, la exploración vocacional, el desarrollo de habilidades socioemocionales y la preparación para el siguiente paso, ya sea la u","Publicado el 20/05/2025","Ver más","Desbloquea tu potencial: explorando diversos métodos de aprendizaje efectivos","Descubre un abanico de métodos de aprendizaje que se adaptan a diferentes estilos y necesidades. Exploraremos técnicas activas, colaborativas, visuales y más, para ayudarte a optimizar tu proceso de adquisición de conocimientos y alcanzar tu máximo potenc","Publicado el 19/05/2025","Ver más","Desbloquea tu voz: claves para desarrollar habilidades de redacción impactantes","Sumérgete en el arte de la escritura efectiva. Exploraremos técnicas esenciales, consejos prácticos y estrategias para mejorar tu claridad, concisión y capacidad de persuasión a través de la palabra escrita.","Publicado el 18/05/2025","Ver más","Nuestra Misión","¿Cómo Contribuimos?","Derechos Reservados ® Digital-Mind © "]
+    [target_lang] => EN
+)
+
+[2025-05-26 04:33:43] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-05-26 04:33:43] 'texts' parameter received: ["Categoría","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma","Iniciar sesión","Más Reciente","Claves para una educación secundaria significativa y transformadora","La educación secundaria es un período crucial de transición y crecimiento. Exploraremos estrategias para el éxito académico, el desarrollo de habilidades de pensamiento crítico, la exploración de intereses, el fomento de la autonomía y la preparación para","Publicado el 22/05/2025","Ver más","Claves para una educación primaria sólida y estimulante","La educación primaria es la base fundamental para el desarrollo académico, social y emocional de los niños. Exploraremos estrategias pedagógicas efectivas, la importancia de un ambiente de aprendizaje positivo, el fomento de habilidades clave y la colabor","Publicado el 21/05/2025","Ver más","Claves para una educación exitosa y un futuro brillante","La preparatoria es una etapa crucial en la vida académica y personal. Exploraremos estrategias efectivas para el éxito académico, la exploración vocacional, el desarrollo de habilidades socioemocionales y la preparación para el siguiente paso, ya sea la u","Publicado el 20/05/2025","Ver más","Desbloquea tu potencial: explorando diversos métodos de aprendizaje efectivos","Descubre un abanico de métodos de aprendizaje que se adaptan a diferentes estilos y necesidades. Exploraremos técnicas activas, colaborativas, visuales y más, para ayudarte a optimizar tu proceso de adquisición de conocimientos y alcanzar tu máximo potenc","Publicado el 19/05/2025","Ver más","Desbloquea tu voz: claves para desarrollar habilidades de redacción impactantes","Sumérgete en el arte de la escritura efectiva. Exploraremos técnicas esenciales, consejos prácticos y estrategias para mejorar tu claridad, concisión y capacidad de persuasión a través de la palabra escrita.","Publicado el 18/05/2025","Ver más","Nuestra Misión","¿Cómo Contribuimos?","Derechos Reservados ® Digital-Mind © "]
+[2025-05-26 04:33:43] Result of json_decode: Array
+(
+    [0] => Categoría
+    [1] => Educacion Primaria
+    [2] => Educacion Secundaria
+    [3] => Educacion Preparatoria
+    [4] => Metodos de Aprendizaje
+    [5] => Educacion Vocacional
+    [6] => Habilidades de Redaccion
+    [7] => Ciencia y Matematicas
+    [8] => Para Tutores
+    [9] => Acerca de
+    [10] => Pagina de contacto
+    [11] => Idioma
+    [12] => Iniciar sesión
+    [13] => Más Reciente
+    [14] => Claves para una educación secundaria significativa y transformadora
+    [15] => La educación secundaria es un período crucial de transición y crecimiento. Exploraremos estrategias para el éxito académico, el desarrollo de habilidades de pensamiento crítico, la exploración de intereses, el fomento de la autonomía y la preparación para
+    [16] => Publicado el 22/05/2025
+    [17] => Ver más
+    [18] => Claves para una educación primaria sólida y estimulante
+    [19] => La educación primaria es la base fundamental para el desarrollo académico, social y emocional de los niños. Exploraremos estrategias pedagógicas efectivas, la importancia de un ambiente de aprendizaje positivo, el fomento de habilidades clave y la colabor
+    [20] => Publicado el 21/05/2025
+    [21] => Ver más
+    [22] => Claves para una educación exitosa y un futuro brillante
+    [23] => La preparatoria es una etapa crucial en la vida académica y personal. Exploraremos estrategias efectivas para el éxito académico, la exploración vocacional, el desarrollo de habilidades socioemocionales y la preparación para el siguiente paso, ya sea la u
+    [24] => Publicado el 20/05/2025
+    [25] => Ver más
+    [26] => Desbloquea tu potencial: explorando diversos métodos de aprendizaje efectivos
+    [27] => Descubre un abanico de métodos de aprendizaje que se adaptan a diferentes estilos y necesidades. Exploraremos técnicas activas, colaborativas, visuales y más, para ayudarte a optimizar tu proceso de adquisición de conocimientos y alcanzar tu máximo potenc
+    [28] => Publicado el 19/05/2025
+    [29] => Ver más
+    [30] => Desbloquea tu voz: claves para desarrollar habilidades de redacción impactantes
+    [31] => Sumérgete en el arte de la escritura efectiva. Exploraremos técnicas esenciales, consejos prácticos y estrategias para mejorar tu claridad, concisión y capacidad de persuasión a través de la palabra escrita.
+    [32] => Publicado el 18/05/2025
+    [33] => Ver más
+    [34] => Nuestra Misión
+    [35] => ¿Cómo Contribuimos?
+    [36] => Derechos Reservados ® Digital-Mind © 
+)
+
+[2025-05-26 04:33:43] Target language: EN
+[2025-05-26 04:33:43] Data sent to DeepL API (JSON): {"text":["Categor\u00eda","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma","Iniciar sesi\u00f3n","M\u00e1s Reciente","Claves para una educaci\u00f3n secundaria significativa y transformadora","La educaci\u00f3n secundaria es un per\u00edodo crucial de transici\u00f3n y crecimiento. Exploraremos estrategias para el \u00e9xito acad\u00e9mico, el desarrollo de habilidades de pensamiento cr\u00edtico, la exploraci\u00f3n de intereses, el fomento de la autonom\u00eda y la preparaci\u00f3n para","Publicado el 22\/05\/2025","Ver m\u00e1s","Claves para una educaci\u00f3n primaria s\u00f3lida y estimulante","La educaci\u00f3n primaria es la base fundamental para el desarrollo acad\u00e9mico, social y emocional de los ni\u00f1os. Exploraremos estrategias pedag\u00f3gicas efectivas, la importancia de un ambiente de aprendizaje positivo, el fomento de habilidades clave y la colabor","Publicado el 21\/05\/2025","Ver m\u00e1s","Claves para una educaci\u00f3n exitosa y un futuro brillante","La preparatoria es una etapa crucial en la vida acad\u00e9mica y personal. Exploraremos estrategias efectivas para el \u00e9xito acad\u00e9mico, la exploraci\u00f3n vocacional, el desarrollo de habilidades socioemocionales y la preparaci\u00f3n para el siguiente paso, ya sea la u","Publicado el 20\/05\/2025","Ver m\u00e1s","Desbloquea tu potencial: explorando diversos m\u00e9todos de aprendizaje efectivos","Descubre un abanico de m\u00e9todos de aprendizaje que se adaptan a diferentes estilos y necesidades. Exploraremos t\u00e9cnicas activas, colaborativas, visuales y m\u00e1s, para ayudarte a optimizar tu proceso de adquisici\u00f3n de conocimientos y alcanzar tu m\u00e1ximo potenc","Publicado el 19\/05\/2025","Ver m\u00e1s","Desbloquea tu voz: claves para desarrollar habilidades de redacci\u00f3n impactantes","Sum\u00e9rgete en el arte de la escritura efectiva. Exploraremos t\u00e9cnicas esenciales, consejos pr\u00e1cticos y estrategias para mejorar tu claridad, concisi\u00f3n y capacidad de persuasi\u00f3n a trav\u00e9s de la palabra escrita.","Publicado el 18\/05\/2025","Ver m\u00e1s","Nuestra Misi\u00f3n","\u00bfC\u00f3mo Contribuimos?","Derechos Reservados \u00ae Digital-Mind \u00a9 "],"target_lang":"EN"}
+[2025-05-26 04:33:46] DeepL API HTTP Code: 200
+[2025-05-26 04:33:46] DeepL API Response: {"translations":[{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"Primary Education"},{"detected_source_language":"ES","text":"Secondary Education"},{"detected_source_language":"ES","text":"High School Education"},{"detected_source_language":"ES","text":"Learning Methods"},{"detected_source_language":"ES","text":"Vocational Education"},{"detected_source_language":"ES","text":"Writing Skills"},{"detected_source_language":"ES","text":"Science and Mathematics"},{"detected_source_language":"PT","text":"For Tutors"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Language"},{"detected_source_language":"ES","text":"Login"},{"detected_source_language":"ES","text":"Most Recent"},{"detected_source_language":"ES","text":"Keys to a meaningful and transformative secondary education."},{"detected_source_language":"ES","text":"Secondary education is a crucial period of transition and growth. We will explore strategies for academic success, developing critical thinking skills, exploring interests, fostering autonomy, and preparing for"},{"detected_source_language":"ES","text":"Published on 05/22/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Keys to a solid and stimulating primary education"},{"detected_source_language":"ES","text":"Primary education is the fundamental foundation for children's academic, social and emotional development. We will explore effective pedagogical strategies, the importance of a positive learning environment, the promotion of key skills and collaboration."},{"detected_source_language":"ES","text":"Published on 05/21/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Keys to a successful education and a bright future"},{"detected_source_language":"ES","text":"High school is a crucial stage in academic and personal life. We will explore effective strategies for academic success, vocational exploration, social-emotional skill development, and preparation for the next step, whether it is college or college."},{"detected_source_language":"ES","text":"Published on 20/05/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Unlocking your potential: exploring various effective learning methods"},{"detected_source_language":"ES","text":"Discover a range of learning methods to suit different learning styles and needs. We will explore active, collaborative, visual techniques and more to help you optimize your knowledge acquisition process and reach your full potential."},{"detected_source_language":"ES","text":"Published on 19/05/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Unlocking your voice: keys to developing powerful writing skills"},{"detected_source_language":"ES","text":"Immerse yourself in the art of effective writing. We will explore essential techniques, practical tips and strategies to improve your clarity, conciseness and persuasiveness through the written word."},{"detected_source_language":"ES","text":"Published on 05/18/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Our Mission"},{"detected_source_language":"ES","text":"How do we contribute?"},{"detected_source_language":"ES","text":"Copyright ® Digital-Mind © All Rights Reserved"}]}
+[2025-05-26 04:33:46] Extracted translated texts: Array
+(
+    [0] => Category
+    [1] => Primary Education
+    [2] => Secondary Education
+    [3] => High School Education
+    [4] => Learning Methods
+    [5] => Vocational Education
+    [6] => Writing Skills
+    [7] => Science and Mathematics
+    [8] => For Tutors
+    [9] => About
+    [10] => Contact page
+    [11] => Language
+    [12] => Login
+    [13] => Most Recent
+    [14] => Keys to a meaningful and transformative secondary education.
+    [15] => Secondary education is a crucial period of transition and growth. We will explore strategies for academic success, developing critical thinking skills, exploring interests, fostering autonomy, and preparing for
+    [16] => Published on 05/22/2025
+    [17] => See more
+    [18] => Keys to a solid and stimulating primary education
+    [19] => Primary education is the fundamental foundation for children's academic, social and emotional development. We will explore effective pedagogical strategies, the importance of a positive learning environment, the promotion of key skills and collaboration.
+    [20] => Published on 05/21/2025
+    [21] => See more
+    [22] => Keys to a successful education and a bright future
+    [23] => High school is a crucial stage in academic and personal life. We will explore effective strategies for academic success, vocational exploration, social-emotional skill development, and preparation for the next step, whether it is college or college.
+    [24] => Published on 20/05/2025
+    [25] => See more
+    [26] => Unlocking your potential: exploring various effective learning methods
+    [27] => Discover a range of learning methods to suit different learning styles and needs. We will explore active, collaborative, visual techniques and more to help you optimize your knowledge acquisition process and reach your full potential.
+    [28] => Published on 19/05/2025
+    [29] => See more
+    [30] => Unlocking your voice: keys to developing powerful writing skills
+    [31] => Immerse yourself in the art of effective writing. We will explore essential techniques, practical tips and strategies to improve your clarity, conciseness and persuasiveness through the written word.
+    [32] => Published on 05/18/2025
+    [33] => See more
+    [34] => Our Mission
+    [35] => How do we contribute?
+    [36] => Copyright ® Digital-Mind © All Rights Reserved
+)
+
+[2025-05-26 04:33:46] Successfully returned translated texts.
+[2025-05-26 04:33:47] Received POST request.
+[2025-05-26 04:33:47] POST data: Array
+(
+    [texts] => ["Categoría","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma","Iniciar sesión","Más Reciente","Claves para una educación secundaria significativa y transformadora","La educación secundaria es un período crucial de transición y crecimiento. Exploraremos estrategias para el éxito académico, el desarrollo de habilidades de pensamiento crítico, la exploración de intereses, el fomento de la autonomía y la preparación para","Publicado el 22/05/2025","Ver más","Claves para una educación primaria sólida y estimulante","La educación primaria es la base fundamental para el desarrollo académico, social y emocional de los niños. Exploraremos estrategias pedagógicas efectivas, la importancia de un ambiente de aprendizaje positivo, el fomento de habilidades clave y la colabor","Publicado el 21/05/2025","Ver más","Claves para una educación exitosa y un futuro brillante","La preparatoria es una etapa crucial en la vida académica y personal. Exploraremos estrategias efectivas para el éxito académico, la exploración vocacional, el desarrollo de habilidades socioemocionales y la preparación para el siguiente paso, ya sea la u","Publicado el 20/05/2025","Ver más","Desbloquea tu potencial: explorando diversos métodos de aprendizaje efectivos","Descubre un abanico de métodos de aprendizaje que se adaptan a diferentes estilos y necesidades. Exploraremos técnicas activas, colaborativas, visuales y más, para ayudarte a optimizar tu proceso de adquisición de conocimientos y alcanzar tu máximo potenc","Publicado el 19/05/2025","Ver más","Desbloquea tu voz: claves para desarrollar habilidades de redacción impactantes","Sumérgete en el arte de la escritura efectiva. Exploraremos técnicas esenciales, consejos prácticos y estrategias para mejorar tu claridad, concisión y capacidad de persuasión a través de la palabra escrita.","Publicado el 18/05/2025","Ver más","Nuestra Misión","¿Cómo Contribuimos?","Derechos Reservados ® Digital-Mind © "]
+    [target_lang] => EN
+)
+
+[2025-05-26 04:33:47] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-05-26 04:33:47] 'texts' parameter received: ["Categoría","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma","Iniciar sesión","Más Reciente","Claves para una educación secundaria significativa y transformadora","La educación secundaria es un período crucial de transición y crecimiento. Exploraremos estrategias para el éxito académico, el desarrollo de habilidades de pensamiento crítico, la exploración de intereses, el fomento de la autonomía y la preparación para","Publicado el 22/05/2025","Ver más","Claves para una educación primaria sólida y estimulante","La educación primaria es la base fundamental para el desarrollo académico, social y emocional de los niños. Exploraremos estrategias pedagógicas efectivas, la importancia de un ambiente de aprendizaje positivo, el fomento de habilidades clave y la colabor","Publicado el 21/05/2025","Ver más","Claves para una educación exitosa y un futuro brillante","La preparatoria es una etapa crucial en la vida académica y personal. Exploraremos estrategias efectivas para el éxito académico, la exploración vocacional, el desarrollo de habilidades socioemocionales y la preparación para el siguiente paso, ya sea la u","Publicado el 20/05/2025","Ver más","Desbloquea tu potencial: explorando diversos métodos de aprendizaje efectivos","Descubre un abanico de métodos de aprendizaje que se adaptan a diferentes estilos y necesidades. Exploraremos técnicas activas, colaborativas, visuales y más, para ayudarte a optimizar tu proceso de adquisición de conocimientos y alcanzar tu máximo potenc","Publicado el 19/05/2025","Ver más","Desbloquea tu voz: claves para desarrollar habilidades de redacción impactantes","Sumérgete en el arte de la escritura efectiva. Exploraremos técnicas esenciales, consejos prácticos y estrategias para mejorar tu claridad, concisión y capacidad de persuasión a través de la palabra escrita.","Publicado el 18/05/2025","Ver más","Nuestra Misión","¿Cómo Contribuimos?","Derechos Reservados ® Digital-Mind © "]
+[2025-05-26 04:33:47] Result of json_decode: Array
+(
+    [0] => Categoría
+    [1] => Educacion Primaria
+    [2] => Educacion Secundaria
+    [3] => Educacion Preparatoria
+    [4] => Metodos de Aprendizaje
+    [5] => Educacion Vocacional
+    [6] => Habilidades de Redaccion
+    [7] => Ciencia y Matematicas
+    [8] => Para Tutores
+    [9] => Acerca de
+    [10] => Pagina de contacto
+    [11] => Idioma
+    [12] => Iniciar sesión
+    [13] => Más Reciente
+    [14] => Claves para una educación secundaria significativa y transformadora
+    [15] => La educación secundaria es un período crucial de transición y crecimiento. Exploraremos estrategias para el éxito académico, el desarrollo de habilidades de pensamiento crítico, la exploración de intereses, el fomento de la autonomía y la preparación para
+    [16] => Publicado el 22/05/2025
+    [17] => Ver más
+    [18] => Claves para una educación primaria sólida y estimulante
+    [19] => La educación primaria es la base fundamental para el desarrollo académico, social y emocional de los niños. Exploraremos estrategias pedagógicas efectivas, la importancia de un ambiente de aprendizaje positivo, el fomento de habilidades clave y la colabor
+    [20] => Publicado el 21/05/2025
+    [21] => Ver más
+    [22] => Claves para una educación exitosa y un futuro brillante
+    [23] => La preparatoria es una etapa crucial en la vida académica y personal. Exploraremos estrategias efectivas para el éxito académico, la exploración vocacional, el desarrollo de habilidades socioemocionales y la preparación para el siguiente paso, ya sea la u
+    [24] => Publicado el 20/05/2025
+    [25] => Ver más
+    [26] => Desbloquea tu potencial: explorando diversos métodos de aprendizaje efectivos
+    [27] => Descubre un abanico de métodos de aprendizaje que se adaptan a diferentes estilos y necesidades. Exploraremos técnicas activas, colaborativas, visuales y más, para ayudarte a optimizar tu proceso de adquisición de conocimientos y alcanzar tu máximo potenc
+    [28] => Publicado el 19/05/2025
+    [29] => Ver más
+    [30] => Desbloquea tu voz: claves para desarrollar habilidades de redacción impactantes
+    [31] => Sumérgete en el arte de la escritura efectiva. Exploraremos técnicas esenciales, consejos prácticos y estrategias para mejorar tu claridad, concisión y capacidad de persuasión a través de la palabra escrita.
+    [32] => Publicado el 18/05/2025
+    [33] => Ver más
+    [34] => Nuestra Misión
+    [35] => ¿Cómo Contribuimos?
+    [36] => Derechos Reservados ® Digital-Mind © 
+)
+
+[2025-05-26 04:33:47] Target language: EN
+[2025-05-26 04:33:47] Data sent to DeepL API (JSON): {"text":["Categor\u00eda","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma","Iniciar sesi\u00f3n","M\u00e1s Reciente","Claves para una educaci\u00f3n secundaria significativa y transformadora","La educaci\u00f3n secundaria es un per\u00edodo crucial de transici\u00f3n y crecimiento. Exploraremos estrategias para el \u00e9xito acad\u00e9mico, el desarrollo de habilidades de pensamiento cr\u00edtico, la exploraci\u00f3n de intereses, el fomento de la autonom\u00eda y la preparaci\u00f3n para","Publicado el 22\/05\/2025","Ver m\u00e1s","Claves para una educaci\u00f3n primaria s\u00f3lida y estimulante","La educaci\u00f3n primaria es la base fundamental para el desarrollo acad\u00e9mico, social y emocional de los ni\u00f1os. Exploraremos estrategias pedag\u00f3gicas efectivas, la importancia de un ambiente de aprendizaje positivo, el fomento de habilidades clave y la colabor","Publicado el 21\/05\/2025","Ver m\u00e1s","Claves para una educaci\u00f3n exitosa y un futuro brillante","La preparatoria es una etapa crucial en la vida acad\u00e9mica y personal. Exploraremos estrategias efectivas para el \u00e9xito acad\u00e9mico, la exploraci\u00f3n vocacional, el desarrollo de habilidades socioemocionales y la preparaci\u00f3n para el siguiente paso, ya sea la u","Publicado el 20\/05\/2025","Ver m\u00e1s","Desbloquea tu potencial: explorando diversos m\u00e9todos de aprendizaje efectivos","Descubre un abanico de m\u00e9todos de aprendizaje que se adaptan a diferentes estilos y necesidades. Exploraremos t\u00e9cnicas activas, colaborativas, visuales y m\u00e1s, para ayudarte a optimizar tu proceso de adquisici\u00f3n de conocimientos y alcanzar tu m\u00e1ximo potenc","Publicado el 19\/05\/2025","Ver m\u00e1s","Desbloquea tu voz: claves para desarrollar habilidades de redacci\u00f3n impactantes","Sum\u00e9rgete en el arte de la escritura efectiva. Exploraremos t\u00e9cnicas esenciales, consejos pr\u00e1cticos y estrategias para mejorar tu claridad, concisi\u00f3n y capacidad de persuasi\u00f3n a trav\u00e9s de la palabra escrita.","Publicado el 18\/05\/2025","Ver m\u00e1s","Nuestra Misi\u00f3n","\u00bfC\u00f3mo Contribuimos?","Derechos Reservados \u00ae Digital-Mind \u00a9 "],"target_lang":"EN"}
+[2025-05-26 04:33:58] DeepL API HTTP Code: 200
+[2025-05-26 04:33:58] DeepL API Response: {"translations":[{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"Primary Education"},{"detected_source_language":"ES","text":"Secondary Education"},{"detected_source_language":"ES","text":"High School Education"},{"detected_source_language":"ES","text":"Learning Methods"},{"detected_source_language":"ES","text":"Vocational Education"},{"detected_source_language":"ES","text":"Writing Skills"},{"detected_source_language":"ES","text":"Science and Mathematics"},{"detected_source_language":"PT","text":"For Tutors"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Language"},{"detected_source_language":"ES","text":"Login"},{"detected_source_language":"ES","text":"Most Recent"},{"detected_source_language":"ES","text":"Keys to a meaningful and transformative secondary education."},{"detected_source_language":"ES","text":"Secondary education is a crucial period of transition and growth. We will explore strategies for academic success, developing critical thinking skills, exploring interests, fostering autonomy, and preparing for"},{"detected_source_language":"ES","text":"Published on 05/22/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Keys to a solid and stimulating primary education"},{"detected_source_language":"ES","text":"Primary education is the fundamental foundation for children's academic, social and emotional development. We will explore effective pedagogical strategies, the importance of a positive learning environment, the promotion of key skills and collaboration."},{"detected_source_language":"ES","text":"Published on 05/21/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Keys to a successful education and a bright future"},{"detected_source_language":"ES","text":"High school is a crucial stage in academic and personal life. We will explore effective strategies for academic success, vocational exploration, social-emotional skill development, and preparation for the next step, whether it is college or college."},{"detected_source_language":"ES","text":"Published on 20/05/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Unlocking your potential: exploring various effective learning methods"},{"detected_source_language":"ES","text":"Discover a range of learning methods to suit different learning styles and needs. We will explore active, collaborative, visual techniques and more to help you optimize your knowledge acquisition process and reach your full potential."},{"detected_source_language":"ES","text":"Published on 19/05/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Unlocking your voice: keys to developing powerful writing skills"},{"detected_source_language":"ES","text":"Immerse yourself in the art of effective writing. We will explore essential techniques, practical tips and strategies to improve your clarity, conciseness and persuasiveness through the written word."},{"detected_source_language":"ES","text":"Published on 05/18/2025"},{"detected_source_language":"ES","text":"See more"},{"detected_source_language":"ES","text":"Our Mission"},{"detected_source_language":"ES","text":"How do we contribute?"},{"detected_source_language":"ES","text":"Copyright ® Digital-Mind © All Rights Reserved"}]}
+[2025-05-26 04:33:58] Extracted translated texts: Array
+(
+    [0] => Category
+    [1] => Primary Education
+    [2] => Secondary Education
+    [3] => High School Education
+    [4] => Learning Methods
+    [5] => Vocational Education
+    [6] => Writing Skills
+    [7] => Science and Mathematics
+    [8] => For Tutors
+    [9] => About
+    [10] => Contact page
+    [11] => Language
+    [12] => Login
+    [13] => Most Recent
+    [14] => Keys to a meaningful and transformative secondary education.
+    [15] => Secondary education is a crucial period of transition and growth. We will explore strategies for academic success, developing critical thinking skills, exploring interests, fostering autonomy, and preparing for
+    [16] => Published on 05/22/2025
+    [17] => See more
+    [18] => Keys to a solid and stimulating primary education
+    [19] => Primary education is the fundamental foundation for children's academic, social and emotional development. We will explore effective pedagogical strategies, the importance of a positive learning environment, the promotion of key skills and collaboration.
+    [20] => Published on 05/21/2025
+    [21] => See more
+    [22] => Keys to a successful education and a bright future
+    [23] => High school is a crucial stage in academic and personal life. We will explore effective strategies for academic success, vocational exploration, social-emotional skill development, and preparation for the next step, whether it is college or college.
+    [24] => Published on 20/05/2025
+    [25] => See more
+    [26] => Unlocking your potential: exploring various effective learning methods
+    [27] => Discover a range of learning methods to suit different learning styles and needs. We will explore active, collaborative, visual techniques and more to help you optimize your knowledge acquisition process and reach your full potential.
+    [28] => Published on 19/05/2025
+    [29] => See more
+    [30] => Unlocking your voice: keys to developing powerful writing skills
+    [31] => Immerse yourself in the art of effective writing. We will explore essential techniques, practical tips and strategies to improve your clarity, conciseness and persuasiveness through the written word.
+    [32] => Published on 05/18/2025
+    [33] => See more
+    [34] => Our Mission
+    [35] => How do we contribute?
+    [36] => Copyright ® Digital-Mind © All Rights Reserved
+)
+
+[2025-05-26 04:33:58] Successfully returned translated texts.
