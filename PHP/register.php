@@ -33,7 +33,6 @@ function verificarEmail($email) {
         return ['success' => false, 'message' => 'Error de la API de verificación de email.'];
     }
 
-
     return $verificacion;
 }
 
@@ -44,6 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $password = trim($_POST['password']);
         $confirm_password = trim($_POST['confirm_password']);
 
+<<<<<<< HEAD
      $stmt = mysqli_prepare($conn, "SELECT * FROM usuarios WHERE email = ?");
      if (!$stmt) {
     die("Error al preparar la consulta: " . mysqli_error($conn));
@@ -51,20 +51,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 mysqli_stmt_bind_param($stmt, "s", $email);
 mysqli_stmt_execute($stmt);
 $resultado_email = mysqli_stmt_get_result($stmt);
+=======
+        $stmt = mysqli_prepare($conn, "SELECT * FROM usuarios WHERE email = ?");
+        mysqli_stmt_bind_param($stmt, "s", $email);
+        mysqli_stmt_execute($stmt);
+        $resultado_email = mysqli_stmt_get_result($stmt);
+>>>>>>> 0854672b0ac57341a2766846bbd5104fe3b56127
 
-if ($resultado_email && mysqli_num_rows($resultado_email) > 0) {
-    $mensaje = "<p class='message error'>¡Este correo ya está registrado!</p>";
-}
-
-
-        if ($resultado_email->num_rows > 0) {
+        if ($resultado_email && mysqli_num_rows($resultado_email) > 0) {
             $mensaje = "<p class='message error'>¡Este correo ya está registrado!</p>";
         } elseif ($password !== $confirm_password) {
             $mensaje = "<p class='message error'>¡Las contraseñas no coinciden!</p>";
         } elseif (!preg_match('/^(?=.*[A-Z])(?=.*\d).{8,}$/', $password)) {
             $mensaje = "<p class='message error'>La contraseña debe tener al menos 8 caracteres, una mayúscula y un número.</p>";
-        }
-        else {
+        } else {
             // Realizar verificación de email
             $verificacion = verificarEmail($email);
 
@@ -77,26 +77,28 @@ if ($resultado_email && mysqli_num_rows($resultado_email) > 0) {
                     // Insertar usuario usando prepared statements
                     $consulta = $conn->prepare("INSERT INTO usuarios (nombre, email, contraseña) VALUES (?, ?, ?)");
                     $consulta->bind_param("sss", $nombre, $email, $password_hashed);
-                    $resultado = $consulta->execute(); // $resultado será true/false
+                    $resultado = $consulta->execute();
 
                     if ($resultado) {
-                        // *** CORRECCIÓN AQUÍ ***
                         // Obtener el ID del usuario recién insertado
                         $new_user_id = mysqli_insert_id($conn);
 
-                        $mensaje = "<p class='message success'>¡Registro exitoso! Redirigiendo...</p>";
                         // Establecer las variables de sesión con el ID y nombre del nuevo usuario
                         $_SESSION['usuario_id'] = $new_user_id;
-                        $_SESSION['usuario_nombre'] = $nombre; // Usar la variable $nombre del formulario
+                        $_SESSION['usuario_nombre'] = $nombre;
+                        
+                        // *** NUEVA FUNCIONALIDAD: Establecer mensaje de bienvenida ***
+                        $_SESSION['mensaje_bienvenida'] = "¡Bienvenido a Digital Mind, " . htmlspecialchars($nombre) . "! Tu cuenta ha sido creada exitosamente.";
+                        $_SESSION['mostrar_bienvenida'] = true;
 
                         // Redirigir al usuario
-                        header("Location: ../PHP/index.php"); // Asegúrate de que esta ruta sea correcta
+                        header("Location: ../PHP/index.php");
                         exit();
                     } else {
                         // Error al ejecutar la inserción
                         $mensaje = "<p class='message error'>Error al registrar usuario: " . $conn->error . "</p>";
                     }
-                     $consulta->close(); // Cerrar el statement de inserción
+                    $consulta->close();
 
                 } else {
                     // Email no válido según Kickbox
@@ -104,20 +106,18 @@ if ($resultado_email && mysqli_num_rows($resultado_email) > 0) {
                     $mensaje = "<p class='message error'>Correo no válido: " . htmlspecialchars($reason) . "</p>";
                 }
             } elseif ($verificacion && isset($verificacion['message'])) {
-                 // Error reportado por la función verificarEmail (ej. error de API)
-                 $mensaje = "<p class='message error'>Error de verificación: " . htmlspecialchars($verificacion['message']) . "</p>";
-            }
-            else {
-                // Error general al verificar el correo electrónico (ej. $verificacion es null o no tiene 'success')
+                // Error reportado por la función verificarEmail
+                $mensaje = "<p class='message error'>Error de verificación: " . htmlspecialchars($verificacion['message']) . "</p>";
+            } else {
+                // Error general al verificar el correo electrónico
                 $mensaje = "<p class='message error'>Error al verificar el correo electrónico.</p>";
             }
         }
-         $consulta_email->close(); // Cerrar el statement de verificación de email
+        $stmt->close();
     } else {
         $mensaje = "<p class='message error'>Completa todos los campos.</p>";
     }
 }
-// La conexión $conn se cierra al final del script o cuando la página termina de cargar
 ?>
 
 <!DOCTYPE html>
@@ -131,29 +131,26 @@ if ($resultado_email && mysqli_num_rows($resultado_email) > 0) {
         /* Estilos específicos para el contenedor del campo de contraseña y el icono */
         .show-password {
             position: relative;
-            width: 100%; /* Asegura que ocupe el ancho del form-group */
+            width: 100%;
         }
 
-        /* Estilos para el icono (el "botón") */
         .show-password i {
             position: absolute;
-            right: 10px; /* Posición desde la derecha */
-            top: 50%; /* Centra verticalmente */
-            transform: translateY(-50%); /* Ajuste fino para centrar */
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
             cursor: pointer;
-            color: #555; /* Color del icono */
-            font-size: 1.2em; /* Tamaño del icono */
-            z-index: 2; /* Asegura que esté por encima del input */
+            color: #555;
+            font-size: 1.2em;
+            z-index: 2;
         }
 
-        /* Ajuste para el input dentro de show-password para dejar espacio al icono */
         .show-password input[type="password"],
         .show-password input[type="text"] {
-             padding-right: 35px; /* Deja espacio para el icono */
-             box-sizing: border-box; /* Incluye padding y borde en el ancho */
+             padding-right: 35px;
+             box-sizing: border-box;
         }
 
-        /* Estilos para los form-group (copiados de tu CSS) */
         .form-group {
             width: 100%;
             margin-bottom: 15px;
@@ -166,15 +163,14 @@ if ($resultado_email && mysqli_num_rows($resultado_email) > 0) {
             color: #4a4a4a;
         }
 
-         /* Estilo para los inputs generales (puedes tener esto en login_style.css) */
         input[type="text"],
         input[type="email"],
         input[type="password"] {
-            width: 100%; /* Ocupa todo el ancho del contenedor */
+            width: 100%;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
-            box-sizing: border-box; /* Incluye padding y borde en el ancho */
+            box-sizing: border-box;
             font-size: 1em;
         }
 
@@ -184,7 +180,7 @@ if ($resultado_email && mysqli_num_rows($resultado_email) > 0) {
 <div class="container">
     <div class="left-panel">
         <blockquote>
-            “Invertir en la educacion es invertir en el futuro.”
+            "Invertir en la educacion es invertir en el futuro."
         </blockquote>
     </div>
     <div class="right-panel">
@@ -194,38 +190,31 @@ if ($resultado_email && mysqli_num_rows($resultado_email) > 0) {
 
             <?= $mensaje ?>
 
-            <!-- Envuelto en form-group -->
             <div class="form-group">
                  <label for="nombre">Nombre de usuario</label>
                  <input type="text" id="nombre" name="nombre" placeholder="Nombre de usuario" required>
             </div>
 
-            <!-- Envuelto en form-group -->
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="Email" required>
             </div>
 
-            <!-- Campo de Contraseña con icono, envuelto en form-group -->
             <div class="form-group">
                  <label for="password">Contraseña</label>
                 <div class="show-password">
                     <input type="password" id="password" name="password" placeholder="Contraseña" required>
-                     <!-- Icono inicial de candado cerrado -->
                     <i class="toggle-password" onclick="togglePassword()">🔒</i>
                 </div>
             </div>
 
-             <!-- Campo de Confirmar Contraseña con icono, envuelto en form-group -->
             <div class="form-group">
                  <label for="confirm_password">Confirmar Contraseña</label>
                 <div class="show-password">
                     <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirmar contraseña" required>
-                     <!-- Icono inicial de candado cerrado -->
                     <i class="toggle-password" onclick="togglePasswordConfirm()">🔒</i>
                 </div>
             </div>
-
 
             <button type="submit">Registrate</button>
             <a class="guest-link" href="../PHP/index.php">Ingresar como invitado</a>
@@ -237,31 +226,29 @@ if ($resultado_email && mysqli_num_rows($resultado_email) > 0) {
 </div>
 
 <script>
-    // Función para mostrar/ocultar contraseña (campo Contraseña)
     function togglePassword() {
         const passwordInput = document.getElementById("password");
-        const toggleIcon = passwordInput.nextElementSibling; // Selecciona el icono siguiente al input
+        const toggleIcon = passwordInput.nextElementSibling;
 
         if (passwordInput.type === "password") {
             passwordInput.type = "text";
-            toggleIcon.textContent = "🔓"; // Cambia a candado abierto
+            toggleIcon.textContent = "🔓";
         } else {
             passwordInput.type = "password";
-            toggleIcon.textContent = "🔒"; // Cambia a candado cerrado
+            toggleIcon.textContent = "🔒";
         }
     }
 
-     // Función para mostrar/ocultar contraseña (campo Confirmar Contraseña)
     function togglePasswordConfirm() {
         const passwordInput = document.getElementById("confirm_password");
-        const toggleIcon = passwordInput.nextElementSibling; // Selecciona el icono siguiente al input
+        const toggleIcon = passwordInput.nextElementSibling;
 
         if (passwordInput.type === "password") {
             passwordInput.type = "text";
-            toggleIcon.textContent = "🔓"; // Cambia a candado abierto
+            toggleIcon.textContent = "🔓";
         } else {
             passwordInput.type = "password";
-            toggleIcon.textContent = "🔒"; // Cambia a candado cerrado
+            toggleIcon.textContent = "🔒";
         }
     }
 </script>
