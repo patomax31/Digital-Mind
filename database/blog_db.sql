@@ -169,3 +169,5 @@ ALTER TABLE `contacto`
   ALTER TABLE `contacto`
   MODIFY `id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
+
+ALTER TABLE comentarios ADD COLUMN usuario_id INT;

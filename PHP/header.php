@@ -104,12 +104,18 @@
       </div>
 
 <div class="header-right">
-  <?php if (isset($_SESSION['usuario_id']) || isset($_SESSION['admin'])): ?>
+  <?php if (isset($_SESSION['usuario']) || isset($_SESSION['admin'])): ?>
     <!-- Usuario logueado -->
     <div class="action-container user-logged">
       <img src="../images/profile_picture.png" alt="Foto de perfil" class="profile-pic">
       <span class="username">
-        <?= isset($_SESSION['admin_nombre']) ? $_SESSION['admin_nombre'] : $_SESSION['usuario_nombre']; ?>
+       <?php
+    if (isset($_SESSION['admin_nombre'])) {
+      echo htmlspecialchars($_SESSION['admin_nombre']);
+    } elseif (isset($_SESSION['usuario']['nombre'])) {
+      echo htmlspecialchars($_SESSION['usuario']['nombre']);
+    }
+  ?>
       </span>
     </div>
 

@@ -18,6 +18,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $stmtAdmin->execute();
     $resAdmin = $stmtAdmin->get_result();
 
+    // 2. Buscar en usuarios
+$stmtUser = $conn->prepare("SELECT * FROM usuarios WHERE email = ?");
+$stmtUser->bind_param("s", $email);
+$stmtUser->execute();
+$resUser = $stmtUser->get_result();
+
+
     if ($resAdmin && $resAdmin->num_rows === 1) {
         $admin = $resAdmin->fetch_assoc();
         if (password_verify($clave, $admin['contraseña'])) {
@@ -29,23 +36,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
     }
 
-    // 2. Buscar en usuarios
-    $stmtUser = $conn->prepare("SELECT * FROM usuarios WHERE email = ?");
-    $stmtUser->bind_param("s", $email);
-    $stmtUser->execute();
-    $resUser = $stmtUser->get_result();
-
-    if ($resUser && $resUser->num_rows === 1) {
-        $user = $resUser->fetch_assoc();
-        if (password_verify($clave, $user['contraseña'])) {
-            $_SESSION['usuario_id'] = $user['id'];
-            $_SESSION['usuario_nombre'] = $user['nombre'];
-            header("Location: ../PHP/index.php"); // Redirige a la página principal
-            exit();
-        } else {
-            $mensaje = "<p class='message error'>Contraseña incorrecta.</p>";
-        }
+  
+if ($resUser && $resUser->num_rows === 1) {
+    $user = $resUser->fetch_assoc();
+    if (password_verify($clave, $user['contraseña'])) {
+        $_SESSION['usuario'] = [
+            'id' => $user['id'],
+            'nombre' => $user['nombre']
+        ];
+        header("Location: ../PHP/index.php"); // Redirige a la página principal
+        exit();
     } else {
+        $mensaje = "<p class='message error'>Contraseña incorrecta.</p>";
+    }
+} else {
         $mensaje = "<p class='message error'>No existe una cuenta con ese correo.</p>";
     }
 
