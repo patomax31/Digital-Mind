@@ -3,7 +3,6 @@
 ?>
 
 <section class="ods4-section">
-    <!-- Partículas de fondo animadas -->
     <div class="particles-background">
         <div class="particle"></div>
         <div class="particle"></div>
@@ -13,7 +12,6 @@
     </div>
 
     <div class="ods4-container">
-        <!-- Header principal con animación -->
         <div class="ods4-hero">
             <div class="hero-content">
                 <div class="ods4-badge">
@@ -30,13 +28,12 @@
             <div class="hero-image">
                 <div class="image-container">
                     <img src="../images/education-hero.jpg" alt="Educación de Calidad" 
-                         onerror="this.src='../images/educaciondecalidad.png'">
+                            onerror="this.src='../images/educaciondecalidad.png'">
                     <div class="image-overlay"></div>
                 </div>
             </div>
         </div>
 
-        <!-- Sección de misión con diseño atractivo -->
         <div class="mission-section">
             <div class="section-header">
                 <h2 class="section-title">Nuestra Misión</h2>
@@ -56,7 +53,7 @@
                     <div class="text-card">
                         <div class="card-icon">🚀</div>
                         <h3>Nuestro Compromiso</h3>
-                        <p>En <strong>DIGITALMIND</strong>, revolucionamos el acceso a la educación de calidad. 
+                        <p>En DIGITALMIND, revolucionamos el acceso a la educación de calidad. 
                         Nuestra plataforma democratiza el conocimiento, conectando mentes brillantes con 
                         recursos excepcionales.</p>
                     </div>
@@ -65,19 +62,27 @@
                 <div class="mission-visual">
                     <div class="visual-grid">
                         <div class="visual-item">
+<<<<<<< HEAD
+                            <img src="../images/students-learning.jpg" alt="Estudiantes aprendiendo" 
+                                    onerror="this.src='../images/img1.jpg'">
+                        </div>
+                        <div class="visual-item">
+                            <img src="../images/digital-education.jpg" alt="Educación digital" 
+                                    onerror="this.src='../images/escuela1.jpg'">
+=======
                             <img src="../images/educacion_ex.jpeg" alt="Estudiantes aprendiendo" 
                                  onerror="this.src='../images/escuela1.jpg'">
                         </div>
                         <div class="visual-item">
                             <img src="../images/educacion_ex_2.jpeg" alt="Educación digital" 
                                  onerror="this.src='../images/escuela1.jpg'">
+>>>>>>> 26885818342815644d58f7ce66196c97fb727e40
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Objetivos con diseño de tarjetas modernas -->
         <div class="goals-section">
             <div class="section-header">
                 <h2 class="section-title">¿Cómo Contribuimos?</h2>
@@ -124,8 +129,13 @@
                     <h3>Empoderando Educadores</h3>
                     <p>Herramientas innovadoras para profesores que buscan transformar su práctica educativa</p>
                     <div class="card-image">
+<<<<<<< HEAD
+                        <img src="../images/teacher-empowerment.jpg" alt="Empoderamiento de educadores" 
+                                onerror="this.src='../images/escuela4.jpg'">
+=======
                         <img src="../images/empoderar_maestros.jpeg" alt="Empoderamiento de educadores" 
                              onerror="this.src='../images/escuela1.jpg'">
+>>>>>>> 26885818342815644d58f7ce66196c97fb727e40
                     </div>
                     <div class="card-hover-effect"></div>
                 </div>
@@ -139,37 +149,20 @@
                     <h3>Revolución Digital</h3>
                     <p>Tecnología de vanguardia que amplía horizontes y crea nuevas oportunidades de aprendizaje</p>
                     <div class="card-image">
+<<<<<<< HEAD
+                        <img src="../images/digital-revolution.jpg" alt="Revolución digital" 
+                                onerror="this.src='../images/escuela5.jpg'">
+=======
                         <img src="../images/revolucion_digital.jpeg" alt="Revolución digital" 
                              onerror="this.src='../images/escuela1.jpg'">
+>>>>>>> 26885818342815644d58f7ce66196c97fb727e40
                     </div>
                     <div class="card-hover-effect"></div>
                 </div>
             </div>
         </div>
 
-        <!-- Estadísticas impactantes -->
-        <div class="stats-section">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-number" data-target="1000">0</div>
-                    <div class="stat-label">Estudiantes Activos</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-target="500">0</div>
-                    <div class="stat-label">Recursos Disponibles</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-target="95">0</div>
-                    <div class="stat-label">Satisfacción %</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-target="24">0</div>
-                    <div class="stat-label">Países Alcanzados</div>
-                </div>
-            </div>
-        </div>
 
-        <!-- Call to action mejorado -->
         <div class="cta-section">
             <div class="cta-content">
                 <div class="cta-text">
@@ -199,6 +192,8 @@
     </div>
 </section>
 
+<<<<<<< HEAD
+=======
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
@@ -851,9 +846,10 @@
 </style>
 
 <!-- Script para animaciones de contadores -->
+>>>>>>> 26885818342815644d58f7ce66196c97fb727e40
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Animación de contadores
+    // Animación de contadores (if you reintroduce stats section)
     const counters = document.querySelectorAll('.stat-number');
     const observerOptions = {
         threshold: 0.5
