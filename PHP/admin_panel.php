@@ -63,16 +63,6 @@ if (isset($_GET['eliminar_contacto'])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
-        <header>
-            <a href="index.php">
-                <img src="../images/logo.png" class="logo" alt="logo">
-            </a>
-            <div class="header-options">
-                <a href="admin_logout.php" class="logout-link">
-                    <img src="../images/logout.svg" alt="logout" class="logout-icon">
-                </a>
-            </div>
-        </header>
 
 <body>
     <div class="container">
