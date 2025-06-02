@@ -109,8 +109,8 @@ if ($resultado_email && mysqli_num_rows($resultado_email) > 0) {
                 $mensaje = "<p class='message error'>Error al verificar el correo electrónico.</p>";
             }
         }
-         $consulta_email->close(); // Cerrar el statement de verificación de email
-    } else {
+         
+$stmt->close(); // Cerrar el statement de verificación de email
         $mensaje = "<p class='message error'>Completa todos los campos.</p>";
     }
 }

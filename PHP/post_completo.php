@@ -508,7 +508,7 @@ include 'header.php';
                 </form>
             <?php else: ?>
                 <div class="login-prompt">
-                    <p>Debes <a href="/login">iniciar sesión</a> para comentar.</p>
+                    <p>Debes <a href="login.php">iniciar sesión</a> para comentar.</p>
                 </div>
             <?php endif; ?>
         </div>
