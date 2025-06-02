@@ -205,3 +205,39 @@ h1{
     margin-bottom: 10px;
     color: #333;
 }
+
+/* Añade esto a tu crud.css */
+#archivados .table {
+    opacity: 0.9;
+}
+
+#archivados .table tr:hover {
+    background-color: #fff9e6;
+}
+
+.unarchive-button {
+    color: #28a745;
+}
+
+.unarchive-button:hover {
+    color: #218838;
+    transform: scale(1.1);
+}
+
+/* Estilo para el badge de estado */
+.status-badge {
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status-archivado {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.status-publicado {
+    background-color: #28a745;
+    color: white;
+}

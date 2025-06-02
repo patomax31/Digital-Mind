@@ -125,7 +125,7 @@ include 'header.php';
     <title><?php echo $pageTitle; ?></title>
     <link rel="stylesheet" href="../css/modals.css">
     <link rel="stylesheet" href="../css/blog_style.css">
-    <link rel="stylesheet" href="../css/blog_page_3.js">
+    <script src="stylesheet" defer="../css/blog_page_3.js"></script>
     
     <!-- Meta tags para redes sociales -->
     <meta property="og:title" content="<?php echo htmlspecialchars($post['titular']); ?>">
@@ -491,6 +491,7 @@ include 'header.php';
                     <?php endif; ?>
                 </section>
 
+                
                 <section class="comments-section" id="comments">
     <h2>Comentarios</h2>
 
