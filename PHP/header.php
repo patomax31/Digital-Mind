@@ -133,7 +133,7 @@
       </div>
 
 <div class="header-right">
-  <?php if (isset($_SESSION['usuario_id']) || isset($_SESSION['admin'])): ?>
+  <?php if (isset($_SESSION['usuario']) || isset($_SESSION['admin'])): ?>
     <!-- Usuario logueado -->
     <div class="action-container user-logged">
       <a href="../PHP/perfil.php"> <!-- Added anchor tag here -->

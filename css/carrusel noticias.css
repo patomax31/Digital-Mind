@@ -1,0 +1,269 @@
+/* CSS específico para el carrusel de noticias - carousel-news.css */
+
+.news-carousel-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.carousel-section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.carousel-section-header h2 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.carousel-underline {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #4a6e82, #4a6e82);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.carousel-main-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px 60px;
+}
+
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    touch-action: pan-y pinch-zoom;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    gap: 20px;
+    will-change: transform;
+}
+
+.carousel-track.no-transition {
+    transition: none;
+}
+
+.carousel-article-card {
+    min-width: calc(33.333% - 14px);
+    max-width: calc(33.333% - 14px);
+    flex-shrink: 0;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
+    display: flex;
+    flex-direction: column;
+    cursor: grab;
+}
+
+.carousel-article-card:active {
+    cursor: grabbing;
+}
+
+.carousel-article-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-card-image {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.carousel-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    user-select: none;
+    pointer-events: none;
+}
+
+.carousel-article-card:hover .carousel-card-image img {
+    transform: scale(1.05);
+}
+
+.carousel-card-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel-card-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 12px;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 2.8em;
+}
+
+.carousel-card-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.carousel-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.carousel-meta-icon {
+    font-size: 0.8rem;
+}
+
+.carousel-card-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #6c757d;
+    margin-bottom: 15px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+.carousel-read-more-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #294c5b, #294c5b);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    text-align: center;
+    align-self: flex-start;
+}
+
+.carousel-read-more-btn:hover {
+    background: linear-gradient(135deg, #6d9eab, #6d9eab);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+    color: white;
+    text-decoration: none;
+}
+
+/* Flechas de navegación removidas */
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 25px;
+}
+
+.carousel-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #dee2e6;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicator.active {
+    background: #6d9eab;
+    transform: scale(1.3);
+}
+
+.carousel-swipe-hint {
+    text-align: center;
+    margin-top: 15px;
+    color: #6c757d;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+.carousel-no-news {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carousel-no-news p {
+    font-size: 1.2rem;
+    color: #6c757d;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .carousel-article-card {
+        min-width: calc(50% - 10px);
+        max-width: calc(50% - 10px);
+    }
+    
+    .carousel-main-container {
+        padding: 20px 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-article-card {
+        min-width: 100%;
+        max-width: 100%;
+    }
+    
+    .carousel-main-container {
+        padding: 20px;
+    }
+    
+    .carousel-card-image {
+        height: 150px;
+    }
+    
+    .carousel-section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .carousel-swipe-hint {
+        display: block;
+        animation: pulse 2s infinite;
+    }
+}
+
+@media (max-width: 480px) {
+    .news-carousel-container {
+        padding: 10px;
+    }
+    
+    .carousel-card-content {
+        padding: 15px;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+}
