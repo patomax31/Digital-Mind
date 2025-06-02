@@ -8,7 +8,9 @@ if(!defined('DASHBOARD_INCLUDED')) {
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-include 'blog_db.php';
+// NOTA: Eliminado 'include blog_db.php;' de aquí.
+// La conexión ($conn) debe ser establecida una vez en index.php
+// y estar disponible globalmente o ser pasada.
 
 // Verificar si hay un usuario logueado
 $loggedIn = isset($_SESSION['user_id']);
@@ -16,19 +18,26 @@ $userName = $loggedIn ? $_SESSION['user_name'] : '';
 
 // Consulta para obtener las publicaciones más recientes (limitado a 5)
 $recientes = [];
-$sqlRecientes = "SELECT id, titular, fecha, imagen FROM publicaciones_2 ORDER BY fecha_creacion DESC LIMIT 5";
-$resultRecientes = $conn->query($sqlRecientes);
-if ($resultRecientes->num_rows > 0) {
-    while($row = $resultRecientes->fetch_assoc()) {
-        $recientes[] = $row;
+// Asegúrate de que $conn esté disponible aquí. Si no lo está, el problema está en index.php
+// o en cómo se incluye dashboard.php
+if (isset($conn) && $conn instanceof mysqli) {
+    $sqlRecientes = "SELECT id, titular, fecha, imagen FROM publicaciones_2 ORDER BY fecha_creacion DESC LIMIT 5";
+    $resultRecientes = $conn->query($sqlRecientes);
+    if ($resultRecientes && $resultRecientes->num_rows > 0) {
+        while($row = $resultRecientes->fetch_assoc()) {
+            $recientes[] = $row;
+        }
+    } else {
+        // Manejar el caso donde la consulta falla o no hay resultados
+        error_log("Error en la consulta de publicaciones recientes en dashboard.php: " . $conn->error);
     }
+} else {
+    error_log("Error: La conexión a la base de datos (\$conn) no está disponible en dashboard.php.");
 }
 
-// IMPORTANTE: Vamos a cerrar la conexión aquí ya que no necesitamos mantenerla abierta
-// index.php creará su propia conexión cuando la necesite
-if (isset($conn)) {
 
-}
+// NOTA: Eliminado el bloque if (isset($conn)) {} vacío.
+// La conexión se cerrará al final de index.php
 ?>
 
 <style>
@@ -177,7 +186,7 @@ if (isset($conn)) {
         <h3>Menú Principal</h3>
         <a href="index.php" class="menu-item">
             <i class="fas fa-home"></i> Inicio
-
+        </a>
         <a href="." class="menu-item">
             <i class="fas fa-folder"></i> Categorías
         </a>

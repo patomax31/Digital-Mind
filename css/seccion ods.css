@@ -1,0 +1,665 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+body {
+    /* Assuming a default body background to blend with the section */
+    background-color: #e3f2f7; /* Lightest color for overall page background if needed */
+}
+
+.ods4-section {
+    font-family: 'Poppins', sans-serif;
+    /* Main section background: A gradient using the new darker blues */
+    background: linear-gradient(135deg, #4a6e82 0%, #294c5b 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    margin-top: 40px;
+    color: #e3f2f7; /* Default text color for this section */
+}
+
+/* Partículas animadas de fondo */
+.particles-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.particle {
+    position: absolute;
+    background: rgba(227, 242, 247, 0.15); /* Using #e3f2f7 with transparency */
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.particle:nth-child(1) {
+    width: 10px;
+    height: 10px;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.particle:nth-child(2) {
+    width: 15px;
+    height: 15px;
+    top: 60%;
+    left: 80%;
+    animation-delay: 2s;
+}
+
+.particle:nth-child(3) {
+    width: 8px;
+    height: 8px;
+    top: 40%;
+    left: 60%;
+    animation-delay: 4s;
+}
+
+.particle:nth-child(4) {
+    width: 12px;
+    height: 12px;
+    top: 80%;
+    left: 20%;
+    animation-delay: 1s;
+}
+
+.particle:nth-child(5) {
+    width: 20px;
+    height: 20px;
+    top: 10%;
+    left: 70%;
+    animation-delay: 3s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-30px) rotate(120deg); }
+    66% { transform: translateY(30px) rotate(240deg); }
+}
+
+.ods4-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* Hero Section */
+.ods4-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    min-height: 600px;
+    padding: 80px 40px;
+    gap: 60px;
+}
+
+.hero-content {
+    color: #e3f2f7; /* Light text for hero content */
+    position: relative;
+}
+
+.ods4-badge {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(160, 192, 197, 0.3); /* Using #a0c0c5 with transparency */
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(227, 242, 247, 0.4); /* Border with lightest color */
+}
+
+.badge-text {
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.badge-number {
+    background: #6d9eab; /* A middle tone for the badge number */
+    color: #294c5b; /* Darkest color for badge number text */
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0 0 20px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.title-line-1 {
+    display: block;
+    /* Gradient using mid-range colors for a distinct look */
+    background: linear-gradient(45deg, #a0c0c5, #6d9eab);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.title-line-2 {
+    display: block;
+    color: #e3f2f7; /* Lightest color for visibility */
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    font-weight: 300;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+.hero-decorator {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(45deg, #a0c0c5, #6d9eab); /* Consistent with title gradient */
+    border-radius: 2px;
+}
+
+.hero-image {
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+    transform: rotate(2deg);
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover {
+    transform: rotate(0deg) scale(1.05);
+}
+
+.image-container img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Overlay using mid-range colors for subtle tint */
+    background: linear-gradient(45deg, rgba(109, 158, 171, 0.3), rgba(74, 110, 130, 0.3));
+}
+
+/* Mission Section */
+.mission-section {
+    background: #e3f2f7; /* Lightest color for this background */
+    padding: 100px 40px;
+    position: relative;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #294c5b; /* Darkest color for main titles */
+    margin-bottom: 20px;
+}
+
+.title-underline {
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(45deg, #6d9eab, #4a6e82); /* Gradient with mid-dark colors */
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.mission-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.text-card {
+    background: #f8f9fa; /* Slightly off-white for cards, contrasting with #e3f2f7 */
+    padding: 40px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.text-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    display: block;
+    color: #6d9eab; /* A prominent mid-tone for icons */
+}
+
+.text-card h3 {
+    color: #294c5b; /* Darkest color for card titles */
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.text-card p {
+    color: #4a6e82; /* Darker blue for card text for readability */
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+.visual-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.visual-item {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.visual-item:hover {
+    transform: scale(1.05);
+}
+
+.visual-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Goals Section */
+.goals-section {
+    /* Background using a gradient of mid-to-dark colors */
+    background: linear-gradient(135deg, #6d9eab 0%, #4a6e82 100%);
+    padding: 100px 40px;
+    color: #e3f2f7; /* Light text for this section */
+}
+
+.goals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.goal-card {
+    position: relative;
+    background: rgba(227, 242, 247, 0.1); /* Lightest color with transparency */
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    padding: 40px;
+    text-align: center;
+    border: 1px solid rgba(227, 242, 247, 0.2); /* Border with lightest color */
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.goal-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+.card-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(227, 242, 247, 0.1), rgba(227, 242, 247, 0.05));
+    border-radius: 25px;
+    z-index: 1;
+}
+
+.card-icon-wrapper {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 25px;
+}
+
+.card-icon-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: rgba(227, 242, 247, 0.2); /* Lightest color for background */
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.card-icon {
+    position: relative;
+    z-index: 2;
+    font-size: 2.5rem;
+    color: #e3f2f7; /* Lightest color for icons */
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.goal-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2;
+    color: #e3f2f7; /* Lightest color for titles */
+}
+
+.goal-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 2;
+    color: #a0c0c5; /* Slightly darker light color for text */
+}
+
+.card-image {
+    position: relative;
+    z-index: 2;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 150px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.goal-card:hover .card-image {
+    opacity: 1;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-hover-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(227, 242, 247, 0.1) 0%, transparent 70%); /* Lightest color for hover effect */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 3;
+}
+
+.goal-card:hover .card-hover-effect {
+    opacity: 1;
+}
+
+/* Stats Section (kept for future use if re-added) */
+.stats-section {
+    background: #294c5b; /* Darkest color for a solid, strong section */
+    padding: 80px 40px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+}
+
+.stat-item {
+    text-align: center;
+    color: #e3f2f7; /* Lightest color for text */
+}
+
+.stat-number {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #a0c0c5; /* A contrasting mid-light color for numbers */
+    margin-bottom: 10px;
+    display: block;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+/* CTA Section */
+.cta-section {
+    /* CTA background using a gradient of mid-to-dark colors */
+    background: linear-gradient(135deg, #4a6e82 0%, #294c5b 100%);
+    padding: 100px 40px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.cta-content {
+    color: #e3f2f7; /* Lightest color for text */
+}
+
+.cta-text h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #e3f2f7; /* Lightest color for CTA title */
+}
+
+.cta-text p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    /* Primary button uses a mid-to-light gradient for prominence */
+    background: linear-gradient(45deg, #a0c0c5, #6d9eab);
+    color: #294c5b; /* Darkest color for button text */
+    box-shadow: 0 10px 30px rgba(109, 158, 171, 0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(109, 158, 171, 0.6);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #e3f2f7; /* Lightest color for secondary button text */
+    border-color: #e3f2f7; /* Lightest color for border */
+}
+
+.btn-secondary:hover {
+    background: #e3f2f7; /* Lightest color for hover background */
+    color: #4a6e82; /* A darker mid-tone for hover text */
+    transform: translateY(-3px);
+}
+
+.cta-visual {
+    position: relative;
+    height: 300px;
+}
+
+.floating-elements {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.floating-book,
+.floating-light,
+.floating-star {
+    position: absolute;
+    font-size: 3rem;
+    animation: floatUpDown 3s ease-in-out infinite;
+    color: #a0c0c5; /* Using a mid-light color for the floating icons */
+}
+
+.floating-book {
+    top: 20%;
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.floating-light {
+    top: 60%;
+    right: 30%;
+    animation-delay: 1s;
+}
+
+.floating-star {
+    bottom: 20%;
+    left: 60%;
+    animation-delay: 2s;
+}
+
+@keyframes floatUpDown {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .ods4-hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 60px 30px;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .mission-content {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .cta-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .ods4-container {
+        padding: 0 20px;
+    }
+
+    .ods4-hero {
+        padding: 40px 20px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .mission-section,
+    .goals-section,
+    .stats-section,
+    .cta-section {
+        padding: 60px 20px;
+    }
+
+    .goals-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .visual-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 250px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .stat-number {
+        font-size: 3rem;
+    }
+
+    .text-card,
+    .goal-card {
+        padding: 25px;
+    }
+}
+
+/* Animaciones AOS */
+[data-aos] {
+    opacity: 0;
+    transition-property: opacity, transform;
+    transition-duration: 0.6s;
+    transition-timing-function: ease-out;
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+    transform: none;
+}
+
+[data-aos="fade-up"] {
+    transform: translateY(50px);
+}

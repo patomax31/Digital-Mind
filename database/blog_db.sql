@@ -115,6 +115,7 @@ CREATE TABLE `publicaciones_2` (
   `fecha_creacion` timestamp NOT NULL DEFAULT current_timestamp(),
   `total_ratings` int(11) DEFAULT 0,
   `rating_count` int(11) DEFAULT 0,
+  `estado` enum('borrador','publicado','archivado') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'borrador',
   `mensaje` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 

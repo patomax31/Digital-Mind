@@ -1,206 +1,164 @@
 <?php
 session_start();
-require("blog_db.php");
-
-// Mostrar errores en desarrollo (puedes comentar o eliminar esto en producción)
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-
+include("blog_db.php");
 $mensaje = "";
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $email = trim($_POST['email']);
-    $clave = trim($_POST['password']);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (!empty($_POST['email']) && !empty($_POST['password'])) {
+        $email = trim($_POST['email']);
+        $password = trim($_POST['password']);
 
-    // 1. Buscar en administradores
-    $stmtAdmin = $conn->prepare("SELECT * FROM admin WHERE email = ?");
-    $stmtAdmin->bind_param("s", $email);
-    $stmtAdmin->execute();
-    $resAdmin = $stmtAdmin->get_result();
+        // 1. First check if it's an admin
+        $stmtAdmin = mysqli_prepare($conn, "SELECT id, nombre, contraseña FROM admin WHERE email = ?");
+        mysqli_stmt_bind_param($stmtAdmin, "s", $email);
+        mysqli_stmt_execute($stmtAdmin);
+        $resAdmin = mysqli_stmt_get_result($stmtAdmin);
 
-    // 2. Buscar en usuarios
-$stmtUser = $conn->prepare("SELECT * FROM usuarios WHERE email = ?");
-$stmtUser->bind_param("s", $email);
-$stmtUser->execute();
-$resUser = $stmtUser->get_result();
-
-
-    if ($resAdmin && $resAdmin->num_rows === 1) {
-        $admin = $resAdmin->fetch_assoc();
-        if (password_verify($clave, $admin['contraseña'])) {
-            $_SESSION['admin'] = true;
-            $_SESSION['admin_id'] = $admin['id'];
-            $_SESSION['admin_nombre'] = $admin['nombre'];
-            header("Location: ../PHP/admin_panel.php");
-            exit();
+        if ($resAdmin && mysqli_num_rows($resAdmin) === 1) {
+            $admin = mysqli_fetch_assoc($resAdmin);
+            if (password_verify($password, $admin['contraseña'])) {
+                $_SESSION['admin'] = true;
+                $_SESSION['admin_id'] = $admin['id'];
+                $_SESSION['admin_nombre'] = $admin['nombre'];
+                header("Location: ../PHP/admin_panel.php");
+                exit();
+            }
         }
-    }
 
-  
-if ($resUser && $resUser->num_rows === 1) {
-    $user = $resUser->fetch_assoc();
-    if (password_verify($clave, $user['contraseña'])) {
-        $_SESSION['usuario'] = [
-            'id' => $user['id'],
-            'nombre' => $user['nombre']
-        ];
-        header("Location: ../PHP/index.php"); // Redirige a la página principal
-        exit();
+        // 2. If not admin, check regular users
+        $stmt = mysqli_prepare($conn, "SELECT id, nombre, contraseña FROM usuarios WHERE email = ?");
+        mysqli_stmt_bind_param($stmt, "s", $email);
+        mysqli_stmt_execute($stmt);
+        $resultado = mysqli_stmt_get_result($stmt);
+
+        if ($resultado && mysqli_num_rows($resultado) > 0) {
+            $usuario = mysqli_fetch_assoc($resultado);
+            
+            if (password_verify($password, $usuario['contraseña'])) {
+                $_SESSION['usuario_id'] = $usuario['id'];
+                $_SESSION['usuario_nombre'] = $usuario['nombre'];
+                $_SESSION['mostrar_bienvenida'] = true;
+                header("Location: ../PHP/index.php");
+                exit();
+            } else {
+                $mensaje = "<p class='message error'>Contraseña incorrecta.</p>";
+            }
+        } else {
+            $mensaje = "<p class='message error'>No existe una cuenta con este correo electrónico.</p>";
+        }
+        
+        if (isset($stmt)) $stmt->close();
+        if (isset($stmtAdmin)) $stmtAdmin->close();
     } else {
-        $mensaje = "<p class='message error'>Contraseña incorrecta.</p>";
+        $mensaje = "<p class='message error'>Por favor completa todos los campos.</p>";
     }
-} else {
-        $mensaje = "<p class='message error'>No existe una cuenta con ese correo.</p>";
-    }
-
-    $stmtAdmin->close();
-    $stmtUser->close();
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión - Digital Mind</title>
-    <!-- Asegúrate de que esta ruta sea correcta -->
     <link rel="stylesheet" href="../css/login_style.css">
     <style>
-        /* Estilos específicos para el contenedor del campo de contraseña y el icono */
         .show-password {
             position: relative;
-            width: 100%; /* Asegura que ocupe el ancho del form-group */
+            width: 100%;
         }
 
-        /* Estilos para el icono (el "botón") */
         .show-password i {
             position: absolute;
-            right: 10px; /* Posición desde la derecha */
-            top: 50%; /* Centra verticalmente */
-            transform: translateY(-50%); /* Ajuste fino para centrar */
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
             cursor: pointer;
-            color: #555; /* Color del icono */
-            font-size: 1.2em; /* Tamaño del icono */
-            z-index: 2; /* Asegura que esté por encima del input */
+            color: #555;
+            font-size: 1.2em;
+            z-index: 2;
         }
 
-        /* Ajuste para el input dentro de show-password para dejar espacio al icono */
         .show-password input[type="password"],
         .show-password input[type="text"] {
-             padding-right: 35px; /* Deja espacio para el icono */
-             /* No necesitamos width: calc(100% - 35px); aquí si el input ya tiene width: 100% y box-sizing: border-box */
-             /* width: 100%; /* Asegura que ocupe el ancho del contenedor show-password */
-             box-sizing: border-box; /* Incluye padding y borde en el ancho */
+             padding-right: 35px;
+             box-sizing: border-box;
         }
 
-        /* Ajuste para la etiqueta Recordarme dentro de form-group */
-        /* Usar Flexbox para alinear el checkbox y el texto */
-        .form-group label[for="remember"] {
-             display: flex; /* Usa Flexbox */
-             align-items: center; /* Centra verticalmente los elementos hijos (checkbox y texto) */
-             margin-bottom: 0;
-             margin-top: 0;
-             font-size: 1em; /* Ajusta el tamaño si es necesario */
-             color: #4a4a4a;
-             /* vertical-align: middle; /* No necesario con Flexbox */
+        .form-group {
+            width: 100%;
+            margin-bottom: 15px;
         }
 
-        /* Estilo específico para el checkbox dentro de la etiqueta Recordarme */
-        .form-group label[for="remember"] input[type="checkbox"] {
-            /* vertical-align: middle; /* No necesario con Flexbox */
-            margin-right: 290px; /* Añade un pequeño espacio entre el checkbox y el texto */
-            /* Asegura que no haya márgenes o padding inesperados */
-            margin-top: 0;
-            margin-bottom: 0;
-            padding: 0;
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #4a4a4a;
         }
 
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 1em;
+        }
     </style>
 </head>
 <body>
 <div class="container">
     <div class="left-panel">
         <blockquote>
-            “Invertir en la educacion es invertir en el futuro.”
+            "El conocimiento es poder, y el poder es la capacidad de transformar el mundo."
         </blockquote>
     </div>
     <div class="right-panel">
-        <form action="login.php" method="post" id="loginForm">
-            <h1>¡Bienvenido de nuevo!</h1>
-            <p class="subtext">Ingrese sus datos</p>
+        <form action="../PHP/login.php" method="post">
+            <h1>¡Bienvenido de vuelta!</h1>
+            <p class="subtext">Inicia sesión en tu cuenta</p>
 
             <?= $mensaje ?>
 
-            <!-- Campo de Email envuelto en form-group -->
             <div class="form-group">
-                <label for="email">Correo electrónico</label>
-                <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
             </div>
 
-            <!-- Campo de Contraseña con icono, envuelto en form-group -->
             <div class="form-group">
-                 <label for="password">Contraseña</label>
+                <label for="password">Contraseña</label>
                 <div class="show-password">
                     <input type="password" id="password" name="password" placeholder="Contraseña" required>
-                    <!-- Icono inicial de candado cerrado (o el que prefieras) -->
                     <i class="toggle-password" onclick="togglePassword()">🔒</i>
                 </div>
             </div>
 
-            <!-- Checkbox Recordarme envuelto en form-group -->
-            <div class="form-group">
-                <label for="remember">
-                    <input type="checkbox" id="remember"> Recordarme
-                </label>
-            </div>
-
-            <button type="submit">Iniciar sesión</button>
-            <!-- Asegúrate de que esta ruta sea correcta -->
+            <button type="submit">Iniciar Sesión</button>
             <a class="guest-link" href="../PHP/index.php">Ingresar como invitado</a>
-            <a class="forgot-link" href="recovery.php">¿Olvidaste tu contraseña?</a>
+            <a class="forgot-link" href="../PHP/recovery.php">¿Olvidaste tu contraseña?</a>
 
-            <p class="switch-auth">¿No tienes una cuenta? <a href="register.php">Regístrate</a></p>
+            <p class="switch-auth">¿No tienes una cuenta? <a href="register.php">Registrarse</a></p>
         </form>
     </div>
 </div>
 
 <script>
-    // Mostrar/Ocultar contraseña y cambiar icono
     function togglePassword() {
         const passwordInput = document.getElementById("password");
-        const toggleIcon = document.querySelector(".toggle-password"); // Selecciona el icono
+        const toggleIcon = passwordInput.nextElementSibling;
 
         if (passwordInput.type === "password") {
             passwordInput.type = "text";
-            toggleIcon.textContent = "🔓"; // Cambia a candado abierto
-            // O si usas Font Awesome: toggleIcon.classList.replace('fa-lock', 'fa-unlock');
+            toggleIcon.textContent = "🔓";
         } else {
             passwordInput.type = "password";
-            toggleIcon.textContent = "🔒"; // Cambia a candado cerrado
-             // O si usas Font Awesome: toggleIcon.classList.replace('fa-unlock', 'fa-lock');
+            toggleIcon.textContent = "🔒";
         }
     }
 
-    // Recordarme: usar localStorage
-    const emailInput = document.getElementById("email");
-    const rememberCheckbox = document.getElementById("remember");
-
-    // Al cargar la página
-    window.onload = () => {
-        const savedEmail = localStorage.getItem("emailGuardado");
-        if (savedEmail) {
-            emailInput.value = savedEmail;
-            rememberCheckbox.checked = true;
-        }
-    };
-
-    // Al enviar el formulario
-    document.getElementById("loginForm").addEventListener("submit", function () {
-        if (rememberCheckbox.checked) {
-            localStorage.setItem("emailGuardado", emailInput.value);
-        } else {
-            localStorage.removeItem("emailGuardado");
-        }
-    });
 </script>
 </body>
 </html>

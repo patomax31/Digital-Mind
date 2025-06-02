@@ -205,3 +205,25 @@ a {
 .close-btn:hover {
     color: #333;
 }
+
+
+.logout-link {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+    margin-left: 20px;
+}
+
+.logout-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.logout-icon {
+    height: 240px;  /* ajusta según tu diseño */
+    width: auto;   /* mantiene proporción */
+}
