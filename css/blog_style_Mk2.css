@@ -1,0 +1,307 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(/Fuentes/Roboto-Regular.ttf);
+  }
+  
+  @font-face {
+    font-family: 'CreatoDisplay';
+    src: url(/Fuentes/CreatoDisplay-MediumItalic.otf);
+  }
+  
+  /*Una fuente para el H1, otra para el H2, y otro para el li*/
+  
+  
+  html{
+    scroll-behavior: smooth;
+  }
+  
+  body {
+      font-family: 'CreatoDisplay', serif;
+      margin: 0;
+      padding: 0;
+      background-color: #e3f2f7; /* Color de fondo claro */
+      color: #2c2828;
+      font-size: 1.5rem; /* Tamaño de fuente por defecto */
+      text-align: center;
+  }
+
+  
+  header{
+    position: fixed; /* Mantiene el header en la parte superior mientras se hace scroll */
+    top: 0; /* Posiciona el header justo en el tope */
+    left: 0; /* Asegura que comience desde el borde izquierdo */
+    width: 100%; /* Ocupa el ancho completo de la pantalla */
+    z-index: 1000; /* Hace que el header esté por encima de otros elementos */
+    background-color: #e3f2f7; /* Fondo para diferenciación */
+    font-size: 3.1rem;
+  }
+  /* --- Encabezado (Header) --- */
+  .header-content {
+    background-color: #e3f2f7; /* Color de fondo claro */
+    ; /* Color de fondo del header */
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex; /* Flexbox para alinear elementos */
+    justify-content: space-around;
+    width: 100%;
+    }
+    
+  
+  
+    /* Logo a la izquierda */
+    .logo {
+      position: relative;
+      left: 90px;
+      font-size: 0.5em;
+      font-weight: bold;
+    
+    }
+    
+    /* Navegación central: Inicio, Categoría y Búsqueda */
+    .nav-center { 
+      display: flex; 
+      gap: 12rem;    /* Espacio entre cada enlace */
+      justify-content: center; /*Para centrar el pedo */
+      flex: 1; /* Esto asegura que el nav ocupe todo el espacio posible entre el logo y el botón de búsqueda */
+      align-items: center;
+      font-size: large;
+    } /*La regla CSS de .nav-center usa display: flex; con gap: 30px; para distribuir equitativamente los enlaces y conseguir que queden centrados en el header.*/
+  
+    .nav-center a {
+      text-decoration: none;
+      font-weight: bold;
+      font-family: 'CreatoDisplay', serif;;
+      color: #020202;
+    }
+  
+     /* Efecto hover para los enlaces */
+  .nav-center a:hover {
+    color: #ffffff;
+  }
+    
+  .create-container{
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el ícono y el botón */
+  }
+  
+  .create-buttom{
+    background-color: #e3f2f7;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .create-icon{
+    width: 24px;
+    height: 24px;
+  }
+  
+  .create-buttom:hover {
+    background-color: #294c5b;
+  }
+  
+  .category-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el ícono y el botón */
+  }
+  
+  /* Estilos para el botón de categoría */
+  .category-buttom {
+    background-color: #e3f2f7;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover para el botón */
+  .category-buttom:hover {
+    background-color: #294c5b;
+  }
+  
+  /* Tamaño del ícono */
+  .category-icon {
+    width: 24px;
+    height: 24px;
+    /* Opcional: si deseas ajustar el espaciado adicional */
+    /* margin-right: 10px;  No es necesario al usar gap en el contenedor */
+  }
+  
+  
+  
+   /* Botón de búsqueda a la derecha, con forma de píldora */
+  .search-button {
+      background-color: #e3f2f7;             /* Color de fondo (puedes elegir otro que combine) */
+      padding: 10px 20px;                    /* Espaciado interno */
+      border-radius: 30px;                   /* Valor alto para crear la forma de pildora */
+      color: #ffffff;                          /* Color del texto */
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+    }
+  
+  /* Efecto hover para el botón de búsqueda */
+  .search-button:hover {
+    background-color: #294c5b;
+  }  
+  
+  .login-bottom{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  } 
+    
+  .login-icon{
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+  
+
+  main {
+      padding: 20px;
+      margin-top: 50px;
+      text-align: justify;
+      margin: 0;
+  }
+  
+  .title-container{
+    max-width: 100%;   /* o el ancho que prefieras */
+    margin: 0 auto;      /* centra horizontalmente el contenedor */
+    padding: 0 40px;     /* espacio a los lados para que el texto no sepegue */
+  
+  }
+  
+  .title-content {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+  gap: 2rem;                /* Aumenta el gap para separar un poco más */
+  background-color: #6d9eab;
+  /*border-radius: 10px;*/
+  padding: 20px;            /* Ajusta si quieres más o menos relleno interno */
+  margin: 20px 0;           /* Espacio vertical entre secciones */
+  color: rgb(0, 0, 0);
+  
+  }
+  
+  .title-content .text {
+  flex: 1;
+  text-align: center;
+  font-size: 2.5rem;
+  }
+  
+  .title-content .title-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  }
+  
+  .title-content .title-image img {
+  max-width: 70%;
+  height: auto;
+  display: block;
+  }
+  
+  .container-blog {
+    width: 100%;              /* Aumenta el ancho para que esté más cerca del lateral */
+    max-width: 1200px;       /* Máximo ancho para pantallas grandes */
+    margin: 0 auto;          /* Centra el contenedor y evita márgenes laterales fijos */
+    padding: 20px;           /* Espacio interno para que el contenido no se pegue al borde */
+    background-color: #e3f2f7; /* Color de fondo del contenedor */
+    border-radius: 10px;     /* Opcional: si se desea mantener esquinas redondeadas */
+    overflow: hidden;
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
+    font-size: 3rem;    
+  }
+
+  .container-blog h2{
+    text-align: center;
+  }
+  
+  figure{
+    text-align: center;
+  }
+
+  figcaption{
+    font-size: 1.5rem;
+  }
+
+  .container-reference {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 40px; /* Margen interno a los lados */
+  }
+  
+  .reference-content {
+    display: flex;               /* Situamos en la misma línea */
+    align-items: center;         /* Alinea verticalmente el título y el texto */
+    justify-content: center; /* Deja espacio entre el título y el párrafo */
+    gap: 2rem;                   /* Espacio adicional entre h2 y p si lo deseas */
+    background-color: #6d9eab;   /* Color de fondo */
+    padding: 20px;               /* Espaciado interno */
+    margin: 20px 0;              /* Espaciado exterior (separación vertical) */
+    color: #000;                 /* Color del texto */
+    border-radius: 4px;          /* Opcional: esquinas ligeramente redondeadas */
+    font-size: 2rem
+  }
+  
+  /* Para ajustar márgenes del texto y tamaño del título, puedes afinar con: */
+  .reference-content h2 {
+    margin: 0;         /* Elimina márgenes por defecto del h2 */
+    font-weight: 600;  /* Ajusta el grosor si lo deseas */
+  }
+  
+  .reference-content p {
+    margin: 0;         /* Elimina márgenes por defecto del párrafo */
+    max-width: 75%;    /* Ajusta el ancho del párrafo para que no se extienda demasiado */
+  }
+  
+    /*Button style*/
+    svg{
+      width: 25px;
+      height: 25px;
+    }
+  
+  #scrollBtn{
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      border: none;
+      outline: none;
+      background-color: #6D9EAB;
+      cursor: pointer;
+      color: #ffffff;
+      padding: 15px;
+      border-radius: 50%;
+  }
+  #scrollBtn:hover{
+    background-color: #294c5b;
+  }  
+  
+  .progress-bar{
+    position: fixed;
+    width: 100%;
+    height: 10px;
+    top: 0; /* Asegúrate de posicionarla en la parte superior */
+    left: 0;
+    z-index: 8000; /* <-- Este valor asegura que quede encima */
+    margin-top: 5.1rem;
+  }
+  
+  .progress{
+    width: 0%;
+    height: 100%;
+    background-color:#294c5b;
+  }
+
+  

@@ -1,0 +1,286 @@
+.search-container {
+    margin-right: 20px; /* Reducimos el margen derecho del buscador */
+  }
+  
+  .pill-search {
+    display: flex;
+    align-items: center;
+    background-color: #121010;
+    border-radius: 30px;
+    padding: 6px; /* Reducimos el padding */
+    transition: all 0.3s ease;
+    width: 30px; /* Reducimos el ancho inicial */
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .pill-search.expanded {
+    width: 180px; /* Reducimos el ancho expandido */
+    background-color: white;
+    border: 2px solid #4a6e82;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .search-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px; /* Reducimos el tamaño del icono */
+    height: 20px;
+    flex-shrink: 0;
+  }
+  
+  .search-icon svg {
+    fill: white;
+    transition: fill 0.3s ease;
+    width: 16px;
+    height: 16px;
+  }
+  
+  .pill-search.expanded .search-icon svg {
+    fill: #4a6e82;
+  }
+  
+  .search-input {
+    width: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+    outline: none;
+    color: #333;
+    font-size: 12px; /* Reducimos el tamaño de la fuente */
+    opacity: 0;
+    transition: opacity 0.3s ease, width 0.3s ease, padding 0.3s ease;
+  }
+  
+  .pill-search.expanded .search-input {
+    width: 100%;
+    opacity: 1;
+    padding: 0 8px;
+  }
+  
+  .search:hover {
+    background-color: #333;
+    border-color: #555;
+    transform: scale(1.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  
+  .progress-bar {
+  position: fixed;
+  top: 80px; /* Ajusta según la altura de tu header */
+  left: 0;
+  width: 100%;
+  height: 4px; /* Más delgada */
+  background: transparent;
+  z-index: 1000; /* Asegúrate que esté sobre otros elementos */
+}
+
+.progress {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #4a6e82, #2c3e50); /* Más atractiva */
+  transition: width 0.05s ease-out;
+}
+  .sliding-header {
+    background-color: #e3f2f7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Cambiamos a space-between para la distribución */
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2500;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: top 0.3s ease-in-out;
+    padding: 0 20px; /* Añadimos un poco de padding horizontal para evitar que los elementos toquen los bordes */
+  }
+  
+  .page-container {
+    width: 90%; /* O el ancho que prefieras */
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre los bloques izquierdo y derecho */
+    align-items: center;
+    height: 100%;
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Espacio entre el logo y los botones de la izquierda */
+  }
+  
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Espacio entre el botón de inicio de sesión y el buscador */
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    max-width: 200px;
+    max-height: 50px;
+    object-fit: contain;
+  }
+  
+  .header-actions-left {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacio entre los botones de la izquierda */
+  }
+  
+  .action-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .action-container svg {
+    fill: #000000;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .action-container img {
+    width: 20px;
+    height: 20px;
+    fill: #333;
+  }
+  
+  .action-container a,
+  .action-container span {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 0.9em;
+  }
+  
+  .action-container a,
+  .action-container button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .action-container a:hover,
+  .action-container button:hover {
+    background-color: #a7d1eb;
+    transform: scale(1.05);
+  }
+  
+  .progress-bar {
+    top: 80px; /* Reducimos en 1px para asegurar que esté pegada */
+    border-top: none; /* Eliminar cualquier borde superior */
+  }
+  #scrollBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #4a6e82;
+    color: white;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+    transform: translateY(20px);
+  }
+  
+  #scrollBtn.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  #scrollBtn:hover {
+    background-color: #324b40;
+    transform: scale(1.1);
+  }
+  
+  #scrollBtn svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  #toggle-translate {
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    background-color: #e3f2f7;
+    color: white;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#toggle-translate.active {
+    background-color: #28a745;
+}
+
+#toggle-translate:hover {
+    background-color: #0056b3;
+}
+
+  .traducir {
+    margin-right: 30px; /* Espacio entre Traducir e Iniciar sesión */
+}
+
+/* Estilos del dropdown de Categoría */
+.dropdown {
+  position: relative;
+}
+
+.categoria-dropdown-content {
+  display: none;
+  position: absolute;
+  top: 40px; /* ajusta según altura del botón */
+  left: 0;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  z-index: 1001;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+.dropdown:hover .categoria-dropdown-content {
+  display: flex;
+}
+
+.categoria-dropdown-content a {
+  padding: 10px 16px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.categoria-dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+
