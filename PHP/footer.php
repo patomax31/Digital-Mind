@@ -211,7 +211,7 @@ footer {
     <div class="social-icons">
       <a href="https://www.facebook.com/share/197WiYUdQW/?mibextid=wwXIfr" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
       <a href="https://www.instagram.com/min_ddigital?igsh=MXNvOHhwZXd1MjRnag==&utm_source=ig_contact_invite" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.youtube.com/" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.youtube.com/@DIgitalMind-k2k9y" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
       <a href="https://x.com/Digital_Mind_so" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i></a>
     </div>
 
