@@ -65,6 +65,30 @@ if ($resultado_email && mysqli_num_rows($resultado_email) > 0) {
             // Realizar verificación de email
             $verificacion = verificarEmail($email);
 
+            if ($verificacion && isset($verificacion['success']) && $verificacion['success']) {
+            if (isset($verificacion['result']) && $verificacion['result'] == 'deliverable' && isset($verificacion['disposable']) && !$verificacion['disposable']) {
+
+            $password_hashed = password_hash($password, PASSWORD_BCRYPT);
+            $fecha_registro = date('Y-m-d H:i:s'); // <-- Genera la fecha actual
+
+             // Insertar usuario usando prepared statements, ahora con fecha_registro
+            $consulta = $conn->prepare("INSERT INTO usuarios (nombre, email, contraseña, fecha_registro) VALUES (?, ?, ?, ?)");
+            $consulta->bind_param("ssss", $nombre, $email, $password_hashed, $fecha_registro);
+            $resultado = $consulta->execute();
+
+            if ($resultado) {
+            $new_user_id = mysqli_insert_id($conn);
+            $mensaje = "<p class='message success'>¡Registro exitoso! Redirigiendo...</p>";
+            $_SESSION['usuario_id'] = $new_user_id;
+            $_SESSION['usuario_nombre'] = $nombre;
+            header("Location: ../PHP/index.php");
+            exit();
+            } else {
+            $mensaje = "<p class='message error'>Error al registrar usuario: " . $conn->error . "</p>";
+            }
+            $consulta->close();
+            }    
+
             // Verificar si la llamada a la API fue exitosa y el resultado es entregable y no desechable
             if ($verificacion && isset($verificacion['success']) && $verificacion['success']) {
                 if (isset($verificacion['result']) && $verificacion['result'] == 'deliverable' && isset($verificacion['disposable']) && !$verificacion['disposable']) {
@@ -110,7 +134,7 @@ if ($resultado_email && mysqli_num_rows($resultado_email) > 0) {
             }
         }
          $consulta_email->close(); // Cerrar el statement de verificación de email
-    } else {
+    }
         $mensaje = "<p class='message error'>Completa todos los campos.</p>";
     }
 }
