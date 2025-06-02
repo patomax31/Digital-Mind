@@ -1,4 +1,7 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 session_start();
 
 if (!isset($_SESSION['admin']) || $_SESSION['admin'] !== true) {
@@ -10,6 +13,15 @@ include 'blog_db.php';
 include 'header.php';
 
 // Verificar si el usuario es admin
+
+
+// Agregar cuando los roles esten imp
+// if (!isset($_SESSION['role']) || ($_SESSION['role'] !== 'admin' && $_SESSION['role'] !== 'editor')) {
+//     // Redirigir a la página principal con un mensaje de error
+//     $_SESSION['error'] = "No tienes permisos para acceder a esta sección.";
+//     header('Location: ../index.php');
+//     exit();
+// }
 
 
 // Procesar eliminación
@@ -50,11 +62,14 @@ if (isset($_GET['eliminar_contacto'])) {
     <link rel="stylesheet" href="../css/admin_panel.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
+
 <body>
     <div class="container">
         <div class="header">
             <h1>Panel de Administración</h1>
             <div class="header-actions">
+                <a href="crud.php" class="btn dashboard-btn"><i class="fas fa-chart-bar"></i> Ver crud</a>
                 <a href="admin_dashboard.php" class="btn dashboard-btn"><i class="fas fa-chart-bar"></i> Ver Dashboard</a>
                 <a href="admin_logout.php" class="btn logout-btn"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
             </div>
@@ -145,4 +160,73 @@ $contacto_result = $conn->query("SELECT * FROM contacto ORDER BY id DESC");
 </body>
 </html>
 
-<?php $conn->close(); ?>
+<h2>Publicaciones</h2>
+
+<?php if ($result->num_rows > 0): ?>
+    <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Fecha</th>
+                <th>Categoría</th>
+                <th>Autor</th>
+                <th>Descripción corta</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php while ($row = $result->fetch_assoc()): ?>
+            <tr>
+                    <p><strong>ID:</strong> <?= $row["id"] ?></p>
+                <td><?= htmlspecialchars($row['titular']) ?></td>
+                <td><?= $row['fecha'] ?></td>
+                <td><?= htmlspecialchars($row['categoria']) ?></td>
+                <td><?= htmlspecialchars(string: $row['autor'] ?? 'Admin') ?></td>
+                <td><?= htmlspecialchars($row['descripcion_corta']) ?></td>
+                <td>
+                    <a href="blog_edit.php?id=<?= $row['id'] ?>">Editar</a> |
+                    <a href="admin_panel.php?eliminar=<?= $row['id'] ?>" onclick="return confirm('¿Eliminar publicación?')">Eliminar</a> |
+                    <a href="../PHP/post_completo.php?id=<?= $row['id'] ?>" target="_blank">Ver</a>
+                </td>
+            </tr>
+            
+        <?php endwhile; 
+        ?>
+        </tbody>
+    </table>
+<?php else: ?>
+    <p>No hay publicaciones aún.</p>
+    
+<?php endif; ?>
+
+<h2>Mensajes de Contacto</h2>
+
+<?php if ($contacto_result->num_rows > 0): ?>
+    <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Mensaje</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php while ($coment = $contacto_result->fetch_assoc()): ?>
+            <tr>
+                <td><?= $coment['id'] ?></td>
+                <td><?= htmlspecialchars($coment['nombre']) . ' ' . htmlspecialchars($coment['apellido']) ?></td>
+                <td><?= htmlspecialchars($coment['email']) ?></td>
+                <td><?= nl2br(htmlspecialchars($coment['mensaje'])) ?></td>
+                <td>
+                    <a href="admin_panel.php?eliminar_contacto=<?= $coment['id'] ?>" onclick="return confirm('¿Eliminar mensaje?')">Eliminar</a>
+                </td>
+            </tr>
+        <?php endwhile; ?>
+        </tbody>
+    </table>
+<?php else: ?>
+    <p>No hay mensajes desde el formulario de contacto.</p>
+<?php endif; ?>

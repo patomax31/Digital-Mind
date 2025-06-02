@@ -22,7 +22,7 @@
 
         <!-- Lado derecho con el formulario -->
         <div class="right-panel">
-            <form action="../PHP/recuperarContrasena.php" method="post">
+            <form action="/digital-mind/PHP/recuperarContrasena.php" method="post">
                 <h1>Recuperar Contraseña</h1>
                 <p class="subtext">Ingrese su correo electrónico</p>
 
