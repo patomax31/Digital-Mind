@@ -52,6 +52,8 @@ $descripcion_corta = trim($_POST['descripcion_corta']);
 $contenido = trim($_POST['contenido']);
 $fecha = trim($_POST['fecha']);
 $referencia = isset($_POST['referencia']) ? trim($_POST['referencia']) : null;
+$categoria = $_POST['categoria'] ?? '';
+$autor = $_POST['autor'] ?? '';
 
 // Validar campos requeridos
 if (empty($titular) || empty($descripcion_corta) || empty($contenido) || empty($fecha)) {
@@ -124,7 +126,10 @@ try {
         $fecha,
         $referencia,
         $imagen,
+        $categoria,
+        $autor,
         $id
+
     );
 
     if ($stmt->execute()) {

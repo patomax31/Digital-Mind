@@ -61,7 +61,7 @@ if (isset($_POST['enviar_comentario']) && $commentsTableExists) {
             $usuario_id = intval($_SESSION['admin_id']);
         }
 
-        $conn->query("INSERT INTO comentarios (id_post, nombre, comentario, usuario_id) 
+        $conn->query("INSERT INTO comentarios (id_post, nombre, comentario, id) 
                     VALUES ($id, '$usuario', '$comentario', $usuario_id)");
         $commentFeedback = 'success';
     } else {
