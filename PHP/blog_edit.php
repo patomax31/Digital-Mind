@@ -81,16 +81,34 @@ $referencia = $post['referencia'] ?? '';
                         <label for="fecha" class="form-label">Fecha</label>
                         <input type="date" class="form-control" id="fecha" name="fecha" value="<?php echo $fecha; ?>" required>
                     </div>
+                             <div class="col-md-6">
+                            <label for="categoria" class="form-label">Categoría</label>
+                            <select class="form-select" id="categoria" name="categoria" required>
+                                <?php
+                                $categorias = [
+                                    'Educacion vocacional',
+                                    'Educacion secundaria',
+                                    'Educacion primaria',
+                                    'Educacion preparatoria',
+                                    'Metodos de aprendizaje',
+                                    'Habilidades de redaccion',
+                                    'Ciencia y matematicas',
+                                    'Para tutores'
+                                ];
+                                foreach ($categorias as $cat) {
+                                    $selected = ($post['categoria'] === $cat) ? 'selected' : '';
+                                    echo "<option value=\"$cat\" $selected>" . ucfirst($cat) . "</option>";
+                                }
+                                ?>
+                            </select>
+                        </div>
                     <div class="col-md-6">
                         <label for="imagen" class="form-label">Imagen Destacada</label>
                         <input type="file" class="form-control" id="imagen" name="imagen" accept="image/*">
                         <?php if (!empty($imagen)): ?>
                         <div class="mt-2">
                             <img src="../images/publicaciones/<?php echo htmlspecialchars($imagen); ?>" width="100" class="img-thumbnail">
-                            <div class="form-check mt-2">
-                                <input class="form-check-input" type="checkbox" name="eliminar_imagen" id="eliminar_imagen">
-                                <label class="form-check-label" for="eliminar_imagen">Eliminar imagen actual</label>
-                            </div>
+                    
                         </div>
                         <?php endif; ?>
                     </div>
@@ -117,7 +135,7 @@ $referencia = $post['referencia'] ?? '';
                     <button type="submit" class="btn btn-primary">
                         <i class="bi bi-save"></i> Actualizar Publicación
                     </button>
-                    <a href="admin_panel.php" class="btn btn-secondary">
+                    <a href="crud.php" class="btn btn-secondary">
                         <i class="bi bi-x-circle"></i> Cancelar
                     </a>
                 </div>

@@ -8,7 +8,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email = trim($_POST['email']);
         $password = trim($_POST['password']);
 
-        // Buscar usuario por email
+        // 1. First check if it's an admin
+        $stmtAdmin = mysqli_prepare($conn, "SELECT id, nombre, contraseña FROM admin WHERE email = ?");
+        mysqli_stmt_bind_param($stmtAdmin, "s", $email);
+        mysqli_stmt_execute($stmtAdmin);
+        $resAdmin = mysqli_stmt_get_result($stmtAdmin);
+
+        if ($resAdmin && mysqli_num_rows($resAdmin) === 1) {
+            $admin = mysqli_fetch_assoc($resAdmin);
+            if (password_verify($password, $admin['contraseña'])) {
+                $_SESSION['admin'] = true;
+                $_SESSION['admin_id'] = $admin['id'];
+                $_SESSION['admin_nombre'] = $admin['nombre'];
+                header("Location: ../PHP/admin_panel.php");
+                exit();
+            }
+        }
+
+        // 2. If not admin, check regular users
         $stmt = mysqli_prepare($conn, "SELECT id, nombre, contraseña FROM usuarios WHERE email = ?");
         mysqli_stmt_bind_param($stmt, "s", $email);
         mysqli_stmt_execute($stmt);
@@ -125,11 +142,15 @@ if ($resUser && $resUser->num_rows === 1) {
             </div>
 
             <div class="form-group">
-                <label for="password">Contraseña</label>
-                <div class="show-password">
-                    <input type="password" id="password" name="password" placeholder="Contraseña" required>
-                    <i class="toggle-password" onclick="togglePassword()">🔒</i>
-                </div>
+            <label for="password">Contraseña</label>
+            <div class="show-password">
+                <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                <i class="toggle-password" onclick="togglePassword()">🔒</i>
+            </div>
+            </div>
+            <div class="form-group" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;">
+                <span style="font-size:0.97em;color:#4a4a4a;">Recordarme</span>
+                <input type="checkbox" id="recordar" name="recordar" style="width:18px;height:18px;accent-color:#007bff;">
             </div>
 
             <button type="submit">Iniciar Sesión</button>
