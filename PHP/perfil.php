@@ -29,7 +29,8 @@ $user = $user_result->fetch_assoc();
 <header style="display:flex;align-items:center;justify-content:space-between;padding:18px 50px 10px 32px;background:#fff;">
     <!-- Logo a la izquierda -->
     <div style="display:flex;align-items:center;">
-        <img src="..\images\Logo_Mk2.png" alt="Logo" >
+        <a href="index.php" style="color:#007bff;">
+            <img src="..\images\Logo_Mk2.png" alt="Logo" >
         
     </div>
     <!-- Logout SVG a la derecha -->
@@ -125,5 +126,10 @@ $user = $user_result->fetch_assoc();
         </div>
     </div>
 </div>
+
+<?php
+include 'footer.php'; ?>
+
+
 </body>
 </html>

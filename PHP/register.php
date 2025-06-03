@@ -199,6 +199,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
     <div class="right-panel">
         <form action="../PHP/register.php" method="post">
+
+            <div style="display:flex;justify-content:center;margin-bottom:18px;">
+            <img src="../images/Logo_Mk2.png" alt="Logo Digital Mind" style="height:60px;">
+            </div>
             <h1>¡Bienvenido a Digital Mind!</h1>
             <p class="subtext">Crea tu cuenta</p>
 

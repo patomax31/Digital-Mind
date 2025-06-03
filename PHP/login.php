@@ -129,11 +129,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
 
             <div class="form-group">
-                <label for="password">Contraseña</label>
-                <div class="show-password">
-                    <input type="password" id="password" name="password" placeholder="Contraseña" required>
-                    <i class="toggle-password" onclick="togglePassword()">🔒</i>
-                </div>
+            <label for="password">Contraseña</label>
+            <div class="show-password">
+                <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                <i class="toggle-password" onclick="togglePassword()">🔒</i>
+            </div>
+            </div>
+            <div class="form-group" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;">
+                <span style="font-size:0.97em;color:#4a4a4a;">Recordarme</span>
+                <input type="checkbox" id="recordar" name="recordar" style="width:18px;height:18px;accent-color:#007bff;">
             </div>
 
             <button type="submit">Iniciar Sesión</button>
