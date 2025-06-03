@@ -136,16 +136,12 @@
   <?php if (isset($_SESSION['usuario']) || isset($_SESSION['admin'])): ?>
     <!-- Usuario logueado -->
     <div class="action-container user-logged">
-      <img src="../images/profile_picture.png" alt="Foto de perfil" class="profile-pic">
-      <span class="username">
-       <?php
-    if (isset($_SESSION['admin_nombre'])) {
-      echo htmlspecialchars($_SESSION['admin_nombre']);
-    } elseif (isset($_SESSION['usuario']['nombre'])) {
-      echo htmlspecialchars($_SESSION['usuario']['nombre']);
-    }
-  ?>
-      </span>
+      <a href="../PHP/perfil.php"> <!-- Added anchor tag here -->
+        <img src="../images/profile_picture.png" alt="Foto de perfil" class="profile-pic">
+        <span class="username">
+          <?= isset($_SESSION['admin_nombre']) ? $_SESSION['admin_nombre'] : $_SESSION['usuario_nombre']; ?>
+        </span>
+      </a> <!-- Closed anchor tag here -->
     </div>
 
     <!-- Mostrar botón solo si es ADMIN -->
