@@ -58,6 +58,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Realizar verificación de email
             $verificacion = verificarEmail($email);
 
+            if ($verificacion && isset($verificacion['success']) && $verificacion['success']) {
+            if (isset($verificacion['result']) && $verificacion['result'] == 'deliverable' && isset($verificacion['disposable']) && !$verificacion['disposable']) {
+
+            $password_hashed = password_hash($password, PASSWORD_BCRYPT);
+            $fecha_registro = date('Y-m-d H:i:s'); // <-- Genera la fecha actual
+
+             // Insertar usuario usando prepared statements, ahora con fecha_registro
+            $consulta = $conn->prepare("INSERT INTO usuarios (nombre, email, contraseña, fecha_registro) VALUES (?, ?, ?, ?)");
+            $consulta->bind_param("ssss", $nombre, $email, $password_hashed, $fecha_registro);
+            $resultado = $consulta->execute();
+
+            if ($resultado) {
+            $new_user_id = mysqli_insert_id($conn);
+            $mensaje = "<p class='message success'>¡Registro exitoso! Redirigiendo...</p>";
+            $_SESSION['usuario_id'] = $new_user_id;
+            $_SESSION['usuario_nombre'] = $nombre;
+            header("Location: ../PHP/index.php");
+            exit();
+            } else {
+            $mensaje = "<p class='message error'>Error al registrar usuario: " . $conn->error . "</p>";
+            }
+            $consulta->close();
+            }    
+
             // Verificar si la llamada a la API fue exitosa y el resultado es entregable y no desechable
             if ($verificacion && isset($verificacion['success']) && $verificacion['success']) {
                 if (isset($verificacion['result']) && $verificacion['result'] == 'deliverable' && isset($verificacion['disposable']) && !$verificacion['disposable']) {
@@ -103,12 +127,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $mensaje = "<p class='message error'>Error al verificar el correo electrónico.</p>";
             }
         }
-
-         
-$stmt->close(); // Cerrar el statement de verificación de email
-
-  
-
+        $stmt->close();
+    } else {
         $mensaje = "<p class='message error'>Completa todos los campos.</p>";
     }
 }
@@ -179,6 +199,10 @@ $stmt->close(); // Cerrar el statement de verificación de email
     </div>
     <div class="right-panel">
         <form action="../PHP/register.php" method="post">
+
+            <div style="display:flex;justify-content:center;margin-bottom:18px;">
+            <img src="../images/Logo_Mk2.png" alt="Logo Digital Mind" style="height:60px;">
+            </div>
             <h1>¡Bienvenido a Digital Mind!</h1>
             <p class="subtext">Crea tu cuenta</p>
 

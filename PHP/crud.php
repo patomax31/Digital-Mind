@@ -5,6 +5,12 @@ ini_set('display_errors', 1);
 session_start();
 
 
+$mensaje = '';
+if (isset($_SESSION['mensaje_archivo'])) {
+    $mensaje = $_SESSION['mensaje_archivo'];
+    unset($_SESSION['mensaje_archivo']);
+}
+
 if (!isset($_SESSION['admin']) || $_SESSION['admin'] !== true) {
     header("Location: ../PHP/login.php");
     exit();
@@ -30,6 +36,19 @@ $result_usuarios = mysqli_query($conn, $query_usuarios);
 
 $query_comentarios = "SELECT * FROM comentarios ORDER BY fecha DESC";
 $result_comentarios = mysqli_query($conn, $query_comentarios);
+
+
+
+//Procesar eliminacion
+if (isset($_GET['eliminar'])) {
+    $id = intval($_GET['eliminar']);
+    $stmt = $conn->prepare("DELETE FROM publicaciones_2 WHERE id = ?");
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+    header('Location: crud.php?success=1');
+    exit();
+}
+
 ?>
 
 <script>
@@ -78,6 +97,8 @@ if (searchArchived) {
 </script>
 
 
+
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -102,6 +123,12 @@ if (searchArchived) {
     </style>
 </head>
 
+<?php if (!empty($mensaje)): ?>
+<div id="modal-archivado">
+    <?= htmlspecialchars($mensaje) ?>
+</div>
+<?php endif; ?>
+
 <body>
     <h1>Admin Panel</h1>
 <div class="nav-button-container">
@@ -109,6 +136,7 @@ if (searchArchived) {
     <button class="nav-bar-button" role="button" data-section="categorias">Categorías</button>
     <button class="nav-bar-button" role="button" data-section="usuarios">Usuarios</button>
     <button class="nav-bar-button" role="button" data-section="comentarios">Comentarios</button>
+    <button class="nav-bar-button" role="button" data-section="Contacto">Contacto</button>
 </div>
 
 
@@ -167,9 +195,8 @@ if (searchArchived) {
                             </a>
 
                             <!-- Botón Eliminar - Redirige a eliminar_post.php -->
-                            <!-- Botón Eliminar - Modificado para incluir confirmación -->
-                            <a class="delete-button" href="#" onclick="confirmarEliminacion(<?php echo $row['id']; ?>)" title="Eliminar artículo">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <a class="delete-button" href="admin_panel.php?eliminar=<?= $row['id'] ?>" onclick="return confirm('¿Eliminar publicación?')" title="Eliminar artículo">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">                                    
                                     <path fill="currentcolor" d="M135.2 17.7L128 32 32 32C14.3 32 0 46.3 0 64S14.3 96 32 96l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-96 0-7.2-14.3C307.4 6.8 296.3 0 284.2 0L163.8 0c-12.1 0-23.2 6.8-28.6 17.7zM416 128L32 128 53.2 467c1.6 25.3 22.6 45 47.9 45l245.8 0c25.3 0 46.3-19.7 47.9-45L416 128z"/>
                                 </svg>
                             </a>
@@ -201,7 +228,7 @@ if (searchArchived) {
 <div id="archivados" class="section-content">
     <h1>Blogs Archivados</h1>
     <button class="nav-bar-button" role="button" data-section="posts">Volver a Publicaciones</button>
-    <input type="text" class="search-bar" placeholder="Buscar en archivados..."/>
+    <input type="text" class="search-bar" placeholder="Buscar en archivados..." />
     
     <table class="table">
         <thead>
@@ -224,23 +251,27 @@ if (searchArchived) {
                     <td><?= htmlspecialchars($row['categoria']) ?></td>
                     <td><?= htmlspecialchars($row['fecha']) ?></td>
                     <td><?= htmlspecialchars($row['rating_count']) ?></td>
-                    <td>
+                    <td style="display: flex; gap: 8px; align-items: center;">
                         <!-- Botón Ver -->
-                        <a class="view-button" href="../PHP/post_completo.php?id=<?php echo $row['id']; ?>">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!-- Icono ojo --></svg>
-                        </a>
-                        
-                        <!-- Botón Desarchivar -->
-                        <a class="unarchive-button" href="../PHP/blog_archivar.php?id=<?php echo $row['id']; ?>&accion=desarchivar" title="Desarchivar">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <path fill="currentcolor" d="M32 32l448 0c17.7 0 32 14.3 32 32l0 32c0 17.7-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96L0 64C0 46.3 14.3 32 32 32zm0 128l448 0 0 256c0 35.3-28.7 64-64 64L96 480c-35.3 0-64-28.7-64-64l0-256zm192 80c0-8.8 7.2-16 16-16l96 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-96 0c-8.8 0-16-7.2-16-16z"/>
+                        <a class="view-button" href="../PHP/post_completo.php?id=<?= $row['id'] ?>" title="Ver Post">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                    <path fill="currentcolor" d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z" />
                             </svg>
                         </a>
-                        
-                        <!-- Botón Eliminar -->
-                        <a class="delete-button" href="../PHP/eliminar_post.php?id=<?php echo $row['id']; ?>" onclick="return confirm('¿Estás seguro?')">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Icono basura --></svg>
+
+                        <!-- Botón Desarchivar -->
+                        <a class="unarchive-button" href="../PHP/blog_archivar.php?id=<?= $row['id'] ?>&accion=desarchivar" title="Publicar Post">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20" height="20">
+                                <path fill="currentColor" d="M32 32h448c17.7 0 32 14.3 32 32v32c0 17.7-14.3 32-32 32H32C14.3 128 0 113.7 0 96V64C0 46.3 14.3 32 32 32zm0 128h448v256c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V160zm192 80c0-8.8 7.2-16 16-16h96c8.8 0 16 7.2 16 16s-7.2 16-16 16h-96c-8.8 0-16-7.2-16-16z"/>
+                            </svg>
                         </a>
+
+                        <!-- Botón Eliminar -->
+                            <a class="delete-button" href="admin_panel.php?eliminar=<?= $row['id'] ?>" onclick="return confirm('¿Eliminar publicación?')" title="Eliminar artículo">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">                                    
+                                    <path fill="currentcolor" d="M135.2 17.7L128 32 32 32C14.3 32 0 46.3 0 64S14.3 96 32 96l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-96 0-7.2-14.3C307.4 6.8 296.3 0 284.2 0L163.8 0c-12.1 0-23.2 6.8-28.6 17.7zM416 128L32 128 53.2 467c1.6 25.3 22.6 45 47.9 45l245.8 0c25.3 0 46.3-19.7 47.9-45L416 128z"/>
+                                </svg>
+                            </a>
                     </td>
                 </tr>
             <?php endwhile; ?>
@@ -303,6 +334,7 @@ if (searchArchived) {
                 <thead>
                     <tr>
                         <th>ID</th>
+                        <th>Titulo</th>
                         <th>Usuario</th>
                         <th>Comentario</th>
                         <th>Fecha</th>
@@ -312,8 +344,9 @@ if (searchArchived) {
                     <?php while ($row = mysqli_fetch_assoc($result_comentarios)) : ?>
                         <tr>
                             <td><?= htmlspecialchars($row['id']) ?></td>
-                            <td><?= htmlspecialchars($row['usuario']) ?></td>
-                            <td><?= htmlspecialchars($row['mensaje']) ?></td>
+                            <td><?= htmlspecialchars($row['id_post']) ?></td>
+                            <td><?= htmlspecialchars($row['nombre']) ?></td>
+                            <td><?= htmlspecialchars($row['comentario']) ?></td>
                             <td><?= htmlspecialchars($row['fecha']) ?></td>
                         </tr>
                     <?php endwhile; ?>
@@ -419,5 +452,16 @@ document.getElementById('bulk-delete').addEventListener('click', function() {
             form.submit();
         }
     });
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('modal-archivado');
+    if (modal) {
+        setTimeout(() => {
+            modal.style.display = 'none';
+        }, 3000); // Ocultar después de 3 segundos
+    }
 });
 </script>
