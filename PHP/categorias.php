@@ -1,6 +1,7 @@
 <?php
 include 'header.php';
 include 'blog_db.php';
+include 'dashboard.php';
 
 $query_categorias = "SELECT * FROM categoria ORDER BY nombre ASC";
 $result_categorias = mysqli_query($conn, $query_categorias);

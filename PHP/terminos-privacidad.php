@@ -83,7 +83,7 @@
                 
                 <section>
                     <h2 class="title">8. Contacto</h2>
-                    <p>Para preguntas sobre privacidad: privacidad@digitalmind.com</p>
+                    <p>Para preguntas sobre privacidad: digitalmindsocials@gmail.com</p>
                 </section>
                 
                 <p style="text-align: right; font-style: italic;">Última actualización: <?php echo date('d/m/Y'); ?></p>
