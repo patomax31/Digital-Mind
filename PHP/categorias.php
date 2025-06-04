@@ -23,7 +23,7 @@ $result_categorias = mysqli_query($conn, $query_categorias);
   </div>
 
   <div class="cta-contacto">
-    <h2>¿Tienes dudas o quieres colaborar?</h2>
+    <h2>¿Tienes dudas o no hayaste lo que buscabas?</h2>
     <a href="contact_page.php">Contáctanos</a>
   </div>
 </div>

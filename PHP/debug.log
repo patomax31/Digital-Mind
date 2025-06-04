@@ -11404,3 +11404,49 @@ Secondary education is an exciting journey of discovery and growth. By strengthe
 )
 
 [2025-06-04 01:29:20] Successfully returned translated texts.
+[2025-06-04 13:17:42] Received POST request.
+[2025-06-04 13:17:42] POST data: Array
+(
+    [texts] => ["Categoría","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n  carlos\n      ","Panel Admin","Cerrar sesión","Derechos Reservados ® Digital-Mind © 2025"]
+    [target_lang] => EN
+)
+
+[2025-06-04 13:17:42] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-06-04 13:17:42] 'texts' parameter received: ["Categoría","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n  carlos\n      ","Panel Admin","Cerrar sesión","Derechos Reservados ® Digital-Mind © 2025"]
+[2025-06-04 13:17:42] Result of json_decode: Array
+(
+    [0] => Categoría
+    [1] => Acerca de
+    [2] => Pagina de contacto
+    [3] => Idioma
+    [4] =>  
+        
+        
+  carlos
+      
+    [5] => Panel Admin
+    [6] => Cerrar sesión
+    [7] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-04 13:17:42] Target language: EN
+[2025-06-04 13:17:42] Data sent to DeepL API (JSON): {"text":["Categor\u00eda","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n  carlos\n      ","Panel Admin","Cerrar sesi\u00f3n","Derechos Reservados \u00ae Digital-Mind \u00a9 2025"],"target_lang":"EN"}
+[2025-06-04 13:17:43] DeepL API HTTP Code: 200
+[2025-06-04 13:17:43] DeepL API Response: {"translations":[{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Language"},{"detected_source_language":"ES","text":" \n        \n        \n  carlos\n      "},{"detected_source_language":"ID","text":"Admin Panel"},{"detected_source_language":"ES","text":"Log off"},{"detected_source_language":"PT","text":"Derechos Reservados ® Digital-Mind © 2025"}]}
+[2025-06-04 13:17:43] Extracted translated texts: Array
+(
+    [0] => Category
+    [1] => About
+    [2] => Contact page
+    [3] => Language
+    [4] =>  
+        
+        
+  carlos
+      
+    [5] => Admin Panel
+    [6] => Log off
+    [7] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-04 13:17:43] Successfully returned translated texts.

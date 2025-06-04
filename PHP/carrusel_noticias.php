@@ -3,7 +3,7 @@
 include 'blog_db.php';
 
 // Consulta para obtener solo las 5 noticias más recientes
-$sql = "SELECT * FROM publicaciones_2 ORDER BY fecha_creacion DESC LIMIT 5";
+$sql = "SELECT * FROM publicaciones_2 WHERE estado = 'publicado' ORDER BY fecha_creacion DESC LIMIT 5";
 $resultado = $conn->query($sql);
 
 if ($resultado && $resultado->num_rows > 0) {
@@ -23,7 +23,7 @@ if ($resultado && $resultado->num_rows > 0) {
     <body>
         <div class="news-carousel-container">
             <div class="carousel-section-header">
-                <h2>Artículos destacados</h2>
+                <h2>Artículos Recientes</h2>
                 <div class="carousel-underline"></div>
             </div>
             <div class="carousel-main-container">
