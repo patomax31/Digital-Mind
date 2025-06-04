@@ -40,7 +40,8 @@ $resUser = $stmtUser->get_result();
 
     if ($resAdmin && $resAdmin->num_rows === 1) {
         $admin = $resAdmin->fetch_assoc();
-        if ($admin && password_verify($password, $admin['contraseña'])) {
+     
+        if (password_verify($password, $admin['contraseña'])) {
             $_SESSION['adminw'] = true;
             $_SESSION['admin_id'] = $admin['id'];
             $_SESSION['admin_nombre'] = $admin['nombre'];
@@ -54,11 +55,14 @@ if ($resUser && $resUser->num_rows === 1) {
     $user = $resUser->fetch_assoc();
     if (password_verify($password, $user['contraseña'])) {
         $_SESSION['usuario'] = [
-            'id' => $user['id'],
-            'nombre' => $user['nombre']
+        'id' => $user['id'],
+        'nombre' => $user['nombre']
         ];
-        header("Location: ../PHP/index.php"); // Redirige a la página principal
+        $_SESSION['usuario_id'] = $user['id'];
+        $_SESSION['usuario_avatar'] = $user['avatar'] ?? null;
+        header("Location: ../PHP/index.php");
         exit();
+
     } else {
         $mensaje = "<p class='message error'>Contraseña incorrecta.</p>";
     }
@@ -131,6 +135,9 @@ if ($resUser && $resUser->num_rows === 1) {
     </div>
     <div class="right-panel">
         <form action="../PHP/login.php" method="post">
+
+            <img src="../images/Logo_Mk2.png" alt="Logo Digital Mind" class="logo">
+
             <h1>¡Bienvenido de vuelta!</h1>
             <p class="subtext">Inicia sesión en tu cuenta</p>
 
@@ -147,10 +154,17 @@ if ($resUser && $resUser->num_rows === 1) {
                 <input type="password" id="password" name="password" placeholder="Contraseña" required>
                 <i class="toggle-password" onclick="togglePassword()">🔒</i>
             </div>
+
             </div>
-            <div class="form-group" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;">
-                <span style="font-size:0.97em;color:#4a4a4a;">Recordarme</span>
-                <input type="checkbox" id="recordar" name="recordar" style="width:18px;height:18px;accent-color:#007bff;">
+           <div class="form-group" style="display:flex;flex-direction:column;align-items:stretch;margin-bottom:18px;gap:6px;">
+                <label for="mostrarPass" style="font-size:0.97em;color:#4a4a4a;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+                    Mostrar contraseña
+                    <input type="checkbox" id="mostrarPass" style="width:18px;height:18px;accent-color:#007bff;">
+                </label>
+                <label for="recordar" style="font-size:0.97em;color:#4a4a4a;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+                    Recordarme
+                    <input type="checkbox" id="recordar" name="recordar" style="width:18px;height:18px;accent-color:#007bff;">
+                </label>
             </div>
 
             <button type="submit">Iniciar Sesión</button>
@@ -163,6 +177,7 @@ if ($resUser && $resUser->num_rows === 1) {
 </div>
 
 <script>
+    // Función para el ícono (opcional, si lo usas)
     function togglePassword() {
         const passwordInput = document.getElementById("password");
         const toggleIcon = passwordInput.nextElementSibling;
@@ -176,6 +191,11 @@ if ($resUser && $resUser->num_rows === 1) {
         }
     }
 
+    // Función para el checkbox de mostrar contraseña
+    document.getElementById('mostrarPass').addEventListener('change', function() {
+        const passwordInput = document.getElementById("password");
+        passwordInput.type = this.checked ? "text" : "password";
+    });
 </script>
 </body>
 </html>
