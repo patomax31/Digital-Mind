@@ -12,6 +12,7 @@ include 'header.php';
 $query_categorias = "SELECT * FROM categoria ORDER BY nombre ASC";
 $result_categorias = mysqli_query($conn, $query_categorias);
 $categoria_id_actual = $post['categoria_id'] ?? null;
+
 ?>
 
 
