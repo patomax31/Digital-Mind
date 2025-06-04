@@ -37,6 +37,12 @@ $result_usuarios = mysqli_query($conn, $query_usuarios);
 $query_comentarios = "SELECT * FROM comentarios ORDER BY fecha DESC";
 $result_comentarios = mysqli_query($conn, $query_comentarios);
 
+$query_contacto = "SELECT * FROM contacto ORDER BY id DESC";
+$result_contacto = mysqli_query($conn, $query_contacto);
+
+$query_admin = "SELECT * FROM admin ORDER BY id DESC";
+$result_admin = mysqli_query($conn, $query_admin);
+
 
 
 //Procesar eliminacion
@@ -136,11 +142,11 @@ if (searchArchived) {
     <button class="nav-bar-button" role="button" data-section="categorias">Categorías</button>
     <button class="nav-bar-button" role="button" data-section="usuarios">Usuarios</button>
     <button class="nav-bar-button" role="button" data-section="comentarios">Comentarios</button>
-    <button class="nav-bar-button" role="button" data-section="Contacto">Contacto</button>
+    <button class="nav-bar-button" role="button" data-section="contacto">Contacto</button>
+    <button class="nav-bar-button" role="button" data-section="admin">Admin</button>
 </div>
 
 
-    <div class="container">
         <!-- Sección Posts -->
         <div id="posts" class="section-content active">
             <h1>Publicaciones</h1>
@@ -279,7 +285,7 @@ if (searchArchived) {
     </table>
 </div>
         <!-- Sección Categorías
-
+                
  -->
         <!-- Sección Usuarios -->
         <div id="usuarios" class="section-content">
@@ -353,7 +359,57 @@ if (searchArchived) {
                 </tbody>
             </table>
         </div>
+
+    <!-- Sección Comentarios -->
+    <div id="contacto" class="section-content">
+        <h1>Mensajes de contacto</h1>
+        <a class="crear-publicacion" href="blog_add.php" role="button">Agregar admin</a>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Mensaje</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php while ($row = mysqli_fetch_assoc($result_contacto)) : ?>
+                    <tr>
+                        <td><?= htmlspecialchars($row['id']) ?></td>
+                        <td><?= htmlspecialchars($row['nombre']) ?></td>
+                        <td><?= htmlspecialchars($row['apellido']) ?></td>
+                        <td><?= htmlspecialchars($row['email']) ?></td>
+                        <td><?= htmlspecialchars($row['mensaje']) ?></td>
+                    </tr>
+                <?php endwhile; ?>
+            </tbody>
+        </table>
     </div>
+        <!-- Sección Comentarios -->
+            <div id="admin" class="section-content">
+                <h1>Admin</h1>
+                
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Num</th>
+                            <th>nombre</th>
+                            <th>email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php while ($row = mysqli_fetch_assoc($result_admin)) : ?>
+                            <tr>
+                                <td><?= htmlspecialchars($row['id']) ?></td>
+                                <td><?= htmlspecialchars($row['nombre']) ?></td>
+                                <td><?= htmlspecialchars($row['email']) ?></td>
+                            </tr>
+                        <?php endwhile; ?>
+                    </tbody>
+                </table>
+            </div>
 
     <script>
         const buttons = document.querySelectorAll('.nav-bar-button');

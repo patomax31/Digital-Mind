@@ -149,13 +149,11 @@ if (isset($_SESSION['mostrar_bienvenida']) && $_SESSION['mostrar_bienvenida'] ==
         </button>
     </main>
 
-    <?php include 'seccion ods.php'; ?>
+    <?php include 'seccion ods.php'; 
+    include 'footer.php';
+    ?>
+    
 
-    <footer>
-        <div class="footer-content">
-            <p>Derechos Reservados &reg; Digital-Mind &copy; </p>
-        </div>
-    </footer>
 
     <button id="scrollBtn" aria-label="Volver arriba">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">

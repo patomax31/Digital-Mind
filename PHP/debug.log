@@ -10254,3 +10254,1003 @@ Secondary education is an exciting journey of discovery and growth. By strengthe
 )
 
 [2025-06-03 02:56:48] Successfully returned translated texts.
+[2025-06-03 17:35:57] Received POST request.
+[2025-06-03 17:35:57] POST data: Array
+(
+    [texts] => ["Categoría","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n          carlos        \n      ","Panel Admin","Cerrar sesión","Nuestra Misión","¿Cómo Contribuimos?","Derechos Reservados ® Digital-Mind © 2025"]
+    [target_lang] => EN
+)
+
+[2025-06-03 17:35:57] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-06-03 17:35:57] 'texts' parameter received: ["Categoría","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n          carlos        \n      ","Panel Admin","Cerrar sesión","Nuestra Misión","¿Cómo Contribuimos?","Derechos Reservados ® Digital-Mind © 2025"]
+[2025-06-03 17:35:57] Result of json_decode: Array
+(
+    [0] => Categoría
+    [1] => Educacion Primaria
+    [2] => Educacion Secundaria
+    [3] => Educacion Preparatoria
+    [4] => Metodos de Aprendizaje
+    [5] => Educacion Vocacional
+    [6] => Habilidades de Redaccion
+    [7] => Ciencia y Matematicas
+    [8] => Para Tutores
+    [9] => Acerca de
+    [10] => Pagina de contacto
+    [11] => Idioma
+    [12] =>  
+        
+        
+          carlos        
+      
+    [13] => Panel Admin
+    [14] => Cerrar sesión
+    [15] => Nuestra Misión
+    [16] => ¿Cómo Contribuimos?
+    [17] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-03 17:35:57] Target language: EN
+[2025-06-03 17:35:57] Data sent to DeepL API (JSON): {"text":["Categor\u00eda","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n          carlos        \n      ","Panel Admin","Cerrar sesi\u00f3n","Nuestra Misi\u00f3n","\u00bfC\u00f3mo Contribuimos?","Derechos Reservados \u00ae Digital-Mind \u00a9 2025"],"target_lang":"EN"}
+[2025-06-03 17:35:58] DeepL API HTTP Code: 200
+[2025-06-03 17:35:58] DeepL API Response: {"translations":[{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"Primary Education"},{"detected_source_language":"ES","text":"Secondary Education"},{"detected_source_language":"ES","text":"High School Education"},{"detected_source_language":"ES","text":"Learning Methods"},{"detected_source_language":"ES","text":"Vocational Education"},{"detected_source_language":"ES","text":"Writing Skills"},{"detected_source_language":"ES","text":"Science and Mathematics"},{"detected_source_language":"PT","text":"For Tutors"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Language"},{"detected_source_language":"ES","text":" \n        \n        \n          carlos\n      "},{"detected_source_language":"ID","text":"Admin Panel"},{"detected_source_language":"ES","text":"Log off"},{"detected_source_language":"ES","text":"Our Mission"},{"detected_source_language":"ES","text":"How do we contribute?"},{"detected_source_language":"PT","text":"Derechos Reservados ® Digital-Mind © 2025"}]}
+[2025-06-03 17:35:58] Extracted translated texts: Array
+(
+    [0] => Category
+    [1] => Primary Education
+    [2] => Secondary Education
+    [3] => High School Education
+    [4] => Learning Methods
+    [5] => Vocational Education
+    [6] => Writing Skills
+    [7] => Science and Mathematics
+    [8] => For Tutors
+    [9] => About
+    [10] => Contact page
+    [11] => Language
+    [12] =>  
+        
+        
+          carlos
+      
+    [13] => Admin Panel
+    [14] => Log off
+    [15] => Our Mission
+    [16] => How do we contribute?
+    [17] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-03 17:35:58] Successfully returned translated texts.
+[2025-06-03 17:42:03] Received POST request.
+[2025-06-03 17:42:03] POST data: Array
+(
+    [texts] => ["Categoría","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n          carlos        \n      ","Panel Admin","Cerrar sesión"]
+    [target_lang] => EN
+)
+
+[2025-06-03 17:42:03] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-06-03 17:42:03] 'texts' parameter received: ["Categoría","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n          carlos        \n      ","Panel Admin","Cerrar sesión"]
+[2025-06-03 17:42:03] Result of json_decode: Array
+(
+    [0] => Categoría
+    [1] => Educacion Primaria
+    [2] => Educacion Secundaria
+    [3] => Educacion Preparatoria
+    [4] => Metodos de Aprendizaje
+    [5] => Educacion Vocacional
+    [6] => Habilidades de Redaccion
+    [7] => Ciencia y Matematicas
+    [8] => Para Tutores
+    [9] => Acerca de
+    [10] => Pagina de contacto
+    [11] => Idioma
+    [12] =>  
+        
+        
+          carlos        
+      
+    [13] => Panel Admin
+    [14] => Cerrar sesión
+)
+
+[2025-06-03 17:42:03] Target language: EN
+[2025-06-03 17:42:03] Data sent to DeepL API (JSON): {"text":["Categor\u00eda","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n          carlos        \n      ","Panel Admin","Cerrar sesi\u00f3n"],"target_lang":"EN"}
+[2025-06-03 17:42:04] DeepL API HTTP Code: 200
+[2025-06-03 17:42:04] DeepL API Response: {"translations":[{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"Primary Education"},{"detected_source_language":"ES","text":"Secondary Education"},{"detected_source_language":"ES","text":"High School Education"},{"detected_source_language":"ES","text":"Learning Methods"},{"detected_source_language":"ES","text":"Vocational Education"},{"detected_source_language":"ES","text":"Writing Skills"},{"detected_source_language":"ES","text":"Science and Mathematics"},{"detected_source_language":"PT","text":"For Tutors"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Language"},{"detected_source_language":"ES","text":" \n        \n        \n          carlos\n      "},{"detected_source_language":"ID","text":"Admin Panel"},{"detected_source_language":"ES","text":"Log off"}]}
+[2025-06-03 17:42:04] Extracted translated texts: Array
+(
+    [0] => Category
+    [1] => Primary Education
+    [2] => Secondary Education
+    [3] => High School Education
+    [4] => Learning Methods
+    [5] => Vocational Education
+    [6] => Writing Skills
+    [7] => Science and Mathematics
+    [8] => For Tutors
+    [9] => About
+    [10] => Contact page
+    [11] => Language
+    [12] =>  
+        
+        
+          carlos
+      
+    [13] => Admin Panel
+    [14] => Log off
+)
+
+[2025-06-03 17:42:04] Successfully returned translated texts.
+[2025-06-03 17:42:13] Received POST request.
+[2025-06-03 17:42:13] POST data: Array
+(
+    [texts] => ["Categoría","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n          carlos        \n      ","Panel Admin","Cerrar sesión","Sobre Nosotros","En DigitalMind, combinamos innovación y creatividad para ofrecer soluciones digitales que transforman negocios y mejoran vidas.","\n                \"Estudiar no es solo aprender hechos, es entrenar tu mente para ver el mundo con una nueva perspectiva. Cada esfuerzo que pongas hoy será una semilla que crecerá en éxito mañana.\"\n            ","Conoce Nuestro Equipo","Las mentes detras de la plataforma","Alan Alcaraz","Desarrollador Back-End","Visionario tecnológico con más de 15 años de experiencia en desarrollo de software.","Ximena Cuevas","Directora de diseño","Encargado de gestionar la logica detras de la pagina.","Friedman Cortez","Desarrollador Front-End","Encargado de implementar diseño y las interfaces de los usuarios.","Zinedine Hiram","Desarrollador Front-End","Encargado de implementar funcionalidades a la pagina.","Ernesto Cebrera","Desarrollador Back-End","Encargado de la seguridad.","Carlos Rosas","Lider de desarrollo","Encargado de revisar, implementar y testear el codigo desarrollado.","Nuestros Valores","Los principios que guían cada decisión que tomamos","Orientacion","Nuestra prioridad es dejar un impacto en la gente que nos visita.","Integridad","Actuamos con honestidad y transparencia en todas nuestras relaciones.","Compromiso","Nos comprometemos a crear tecnología que mejore el aprendizaje de las personas.","Impacto Social","Cada publicacion es un nuevo aprendizaje, nos aseguramos que este impacto perdure en las personas.","DigitalMind","Comprometidos con la educacion","Terminos de privacidad","© 2025 DigitalMind. Todos los derechos reservados."]
+    [target_lang] => EN
+)
+
+[2025-06-03 17:42:13] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-06-03 17:42:13] 'texts' parameter received: ["Categoría","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n          carlos        \n      ","Panel Admin","Cerrar sesión","Sobre Nosotros","En DigitalMind, combinamos innovación y creatividad para ofrecer soluciones digitales que transforman negocios y mejoran vidas.","\n                \"Estudiar no es solo aprender hechos, es entrenar tu mente para ver el mundo con una nueva perspectiva. Cada esfuerzo que pongas hoy será una semilla que crecerá en éxito mañana.\"\n            ","Conoce Nuestro Equipo","Las mentes detras de la plataforma","Alan Alcaraz","Desarrollador Back-End","Visionario tecnológico con más de 15 años de experiencia en desarrollo de software.","Ximena Cuevas","Directora de diseño","Encargado de gestionar la logica detras de la pagina.","Friedman Cortez","Desarrollador Front-End","Encargado de implementar diseño y las interfaces de los usuarios.","Zinedine Hiram","Desarrollador Front-End","Encargado de implementar funcionalidades a la pagina.","Ernesto Cebrera","Desarrollador Back-End","Encargado de la seguridad.","Carlos Rosas","Lider de desarrollo","Encargado de revisar, implementar y testear el codigo desarrollado.","Nuestros Valores","Los principios que guían cada decisión que tomamos","Orientacion","Nuestra prioridad es dejar un impacto en la gente que nos visita.","Integridad","Actuamos con honestidad y transparencia en todas nuestras relaciones.","Compromiso","Nos comprometemos a crear tecnología que mejore el aprendizaje de las personas.","Impacto Social","Cada publicacion es un nuevo aprendizaje, nos aseguramos que este impacto perdure en las personas.","DigitalMind","Comprometidos con la educacion","Terminos de privacidad","© 2025 DigitalMind. Todos los derechos reservados."]
+[2025-06-03 17:42:13] Result of json_decode: Array
+(
+    [0] => Categoría
+    [1] => Educacion Primaria
+    [2] => Educacion Secundaria
+    [3] => Educacion Preparatoria
+    [4] => Metodos de Aprendizaje
+    [5] => Educacion Vocacional
+    [6] => Habilidades de Redaccion
+    [7] => Ciencia y Matematicas
+    [8] => Para Tutores
+    [9] => Acerca de
+    [10] => Pagina de contacto
+    [11] => Idioma
+    [12] =>  
+        
+        
+          carlos        
+      
+    [13] => Panel Admin
+    [14] => Cerrar sesión
+    [15] => Sobre Nosotros
+    [16] => En DigitalMind, combinamos innovación y creatividad para ofrecer soluciones digitales que transforman negocios y mejoran vidas.
+    [17] => 
+                "Estudiar no es solo aprender hechos, es entrenar tu mente para ver el mundo con una nueva perspectiva. Cada esfuerzo que pongas hoy será una semilla que crecerá en éxito mañana."
+            
+    [18] => Conoce Nuestro Equipo
+    [19] => Las mentes detras de la plataforma
+    [20] => Alan Alcaraz
+    [21] => Desarrollador Back-End
+    [22] => Visionario tecnológico con más de 15 años de experiencia en desarrollo de software.
+    [23] => Ximena Cuevas
+    [24] => Directora de diseño
+    [25] => Encargado de gestionar la logica detras de la pagina.
+    [26] => Friedman Cortez
+    [27] => Desarrollador Front-End
+    [28] => Encargado de implementar diseño y las interfaces de los usuarios.
+    [29] => Zinedine Hiram
+    [30] => Desarrollador Front-End
+    [31] => Encargado de implementar funcionalidades a la pagina.
+    [32] => Ernesto Cebrera
+    [33] => Desarrollador Back-End
+    [34] => Encargado de la seguridad.
+    [35] => Carlos Rosas
+    [36] => Lider de desarrollo
+    [37] => Encargado de revisar, implementar y testear el codigo desarrollado.
+    [38] => Nuestros Valores
+    [39] => Los principios que guían cada decisión que tomamos
+    [40] => Orientacion
+    [41] => Nuestra prioridad es dejar un impacto en la gente que nos visita.
+    [42] => Integridad
+    [43] => Actuamos con honestidad y transparencia en todas nuestras relaciones.
+    [44] => Compromiso
+    [45] => Nos comprometemos a crear tecnología que mejore el aprendizaje de las personas.
+    [46] => Impacto Social
+    [47] => Cada publicacion es un nuevo aprendizaje, nos aseguramos que este impacto perdure en las personas.
+    [48] => DigitalMind
+    [49] => Comprometidos con la educacion
+    [50] => Terminos de privacidad
+    [51] => © 2025 DigitalMind. Todos los derechos reservados.
+)
+
+[2025-06-03 17:42:13] Target language: EN
+[2025-06-03 17:42:13] Data sent to DeepL API (JSON): {"text":["Categor\u00eda","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n          carlos        \n      ","Panel Admin","Cerrar sesi\u00f3n","Sobre Nosotros","En DigitalMind, combinamos innovaci\u00f3n y creatividad para ofrecer soluciones digitales que transforman negocios y mejoran vidas.","\n                \"Estudiar no es solo aprender hechos, es entrenar tu mente para ver el mundo con una nueva perspectiva. Cada esfuerzo que pongas hoy ser\u00e1 una semilla que crecer\u00e1 en \u00e9xito ma\u00f1ana.\"\n            ","Conoce Nuestro Equipo","Las mentes detras de la plataforma","Alan Alcaraz","Desarrollador Back-End","Visionario tecnol\u00f3gico con m\u00e1s de 15 a\u00f1os de experiencia en desarrollo de software.","Ximena Cuevas","Directora de dise\u00f1o","Encargado de gestionar la logica detras de la pagina.","Friedman Cortez","Desarrollador Front-End","Encargado de implementar dise\u00f1o y las interfaces de los usuarios.","Zinedine Hiram","Desarrollador Front-End","Encargado de implementar funcionalidades a la pagina.","Ernesto Cebrera","Desarrollador Back-End","Encargado de la seguridad.","Carlos Rosas","Lider de desarrollo","Encargado de revisar, implementar y testear el codigo desarrollado.","Nuestros Valores","Los principios que gu\u00edan cada decisi\u00f3n que tomamos","Orientacion","Nuestra prioridad es dejar un impacto en la gente que nos visita.","Integridad","Actuamos con honestidad y transparencia en todas nuestras relaciones.","Compromiso","Nos comprometemos a crear tecnolog\u00eda que mejore el aprendizaje de las personas.","Impacto Social","Cada publicacion es un nuevo aprendizaje, nos aseguramos que este impacto perdure en las personas.","DigitalMind","Comprometidos con la educacion","Terminos de privacidad","\u00a9 2025 DigitalMind. Todos los derechos reservados."],"target_lang":"EN"}
+[2025-06-03 17:42:14] DeepL API HTTP Code: 200
+[2025-06-03 17:42:14] DeepL API Response: {"translations":[{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"Primary Education"},{"detected_source_language":"ES","text":"Secondary Education"},{"detected_source_language":"ES","text":"High School Education"},{"detected_source_language":"ES","text":"Learning Methods"},{"detected_source_language":"ES","text":"Vocational Education"},{"detected_source_language":"ES","text":"Writing Skills"},{"detected_source_language":"ES","text":"Science and Mathematics"},{"detected_source_language":"PT","text":"For Tutors"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Language"},{"detected_source_language":"ES","text":" \n        \n        \n          carlos\n      "},{"detected_source_language":"ID","text":"Admin Panel"},{"detected_source_language":"ES","text":"Log off"},{"detected_source_language":"ES","text":"About Us"},{"detected_source_language":"ES","text":"At DigitalMind, we combine innovation and creativity to deliver digital solutions that transform businesses and improve lives."},{"detected_source_language":"ES","text":"\n                \"Studying is not just learning facts, it is training your mind to see the world with a new perspective. Every effort you put in today will be a seed that will grow into success tomorrow.\"\n            "},{"detected_source_language":"ES","text":"Meet Our Team"},{"detected_source_language":"ES","text":"The minds behind the platform"},{"detected_source_language":"IT","text":"Alan Alcaraz"},{"detected_source_language":"ES","text":"Back-End Developer"},{"detected_source_language":"ES","text":"Technological visionary with more than 15 years of experience in software development."},{"detected_source_language":"ES","text":"Ximena Cuevas"},{"detected_source_language":"ES","text":"Design Director"},{"detected_source_language":"ES","text":"In charge of managing the logic behind the site."},{"detected_source_language":"EN","text":"Friedman Cortez"},{"detected_source_language":"ES","text":"Front-End Developer"},{"detected_source_language":"ES","text":"Responsible for implementing design and user interfaces."},{"detected_source_language":"ET","text":"Zinedine Hiram"},{"detected_source_language":"ES","text":"Front-End Developer"},{"detected_source_language":"ES","text":"In charge of implementing functionalities to the site."},{"detected_source_language":"ES","text":"Ernesto Cebrera"},{"detected_source_language":"ES","text":"Back-End Developer"},{"detected_source_language":"ES","text":"In charge of security."},{"detected_source_language":"ES","text":"Carlos Rosas"},{"detected_source_language":"ES","text":"Development leader"},{"detected_source_language":"ES","text":"In charge of reviewing, implementing and testing the developed code."},{"detected_source_language":"ES","text":"Our Values"},{"detected_source_language":"ES","text":"Principles that guide every decision we make"},{"detected_source_language":"ES","text":"Orientation"},{"detected_source_language":"ES","text":"Our priority is to leave an impact on the people who visit us."},{"detected_source_language":"PT","text":"Integrity"},{"detected_source_language":"ES","text":"We act with honesty and transparency in all our relationships."},{"detected_source_language":"EN","text":"Compromiso"},{"detected_source_language":"ES","text":"We are committed to creating technology that enhances people's learning."},{"detected_source_language":"PT","text":"Social Impact"},{"detected_source_language":"ES","text":"Each publication is a new learning experience, we make sure that this impact lasts."},{"detected_source_language":"DE","text":"DigitalMind"},{"detected_source_language":"ES","text":"Committed to education"},{"detected_source_language":"ES","text":"Privacy Policy"},{"detected_source_language":"ES","text":"© 2025 DigitalMind. All rights reserved."}]}
+[2025-06-03 17:42:14] Extracted translated texts: Array
+(
+    [0] => Category
+    [1] => Primary Education
+    [2] => Secondary Education
+    [3] => High School Education
+    [4] => Learning Methods
+    [5] => Vocational Education
+    [6] => Writing Skills
+    [7] => Science and Mathematics
+    [8] => For Tutors
+    [9] => About
+    [10] => Contact page
+    [11] => Language
+    [12] =>  
+        
+        
+          carlos
+      
+    [13] => Admin Panel
+    [14] => Log off
+    [15] => About Us
+    [16] => At DigitalMind, we combine innovation and creativity to deliver digital solutions that transform businesses and improve lives.
+    [17] => 
+                "Studying is not just learning facts, it is training your mind to see the world with a new perspective. Every effort you put in today will be a seed that will grow into success tomorrow."
+            
+    [18] => Meet Our Team
+    [19] => The minds behind the platform
+    [20] => Alan Alcaraz
+    [21] => Back-End Developer
+    [22] => Technological visionary with more than 15 years of experience in software development.
+    [23] => Ximena Cuevas
+    [24] => Design Director
+    [25] => In charge of managing the logic behind the site.
+    [26] => Friedman Cortez
+    [27] => Front-End Developer
+    [28] => Responsible for implementing design and user interfaces.
+    [29] => Zinedine Hiram
+    [30] => Front-End Developer
+    [31] => In charge of implementing functionalities to the site.
+    [32] => Ernesto Cebrera
+    [33] => Back-End Developer
+    [34] => In charge of security.
+    [35] => Carlos Rosas
+    [36] => Development leader
+    [37] => In charge of reviewing, implementing and testing the developed code.
+    [38] => Our Values
+    [39] => Principles that guide every decision we make
+    [40] => Orientation
+    [41] => Our priority is to leave an impact on the people who visit us.
+    [42] => Integrity
+    [43] => We act with honesty and transparency in all our relationships.
+    [44] => Compromiso
+    [45] => We are committed to creating technology that enhances people's learning.
+    [46] => Social Impact
+    [47] => Each publication is a new learning experience, we make sure that this impact lasts.
+    [48] => DigitalMind
+    [49] => Committed to education
+    [50] => Privacy Policy
+    [51] => © 2025 DigitalMind. All rights reserved.
+)
+
+[2025-06-03 17:42:14] Successfully returned translated texts.
+[2025-06-03 17:42:20] Received POST request.
+[2025-06-03 17:42:20] POST data: Array
+(
+    [texts] => ["Categoría","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n          carlos        \n      ","Panel Admin","Cerrar sesión","Derechos Reservados ® Digital-Mind © 2025"]
+    [target_lang] => EN
+)
+
+[2025-06-03 17:42:20] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-06-03 17:42:20] 'texts' parameter received: ["Categoría","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n          carlos        \n      ","Panel Admin","Cerrar sesión","Derechos Reservados ® Digital-Mind © 2025"]
+[2025-06-03 17:42:20] Result of json_decode: Array
+(
+    [0] => Categoría
+    [1] => Educacion Primaria
+    [2] => Educacion Secundaria
+    [3] => Educacion Preparatoria
+    [4] => Metodos de Aprendizaje
+    [5] => Educacion Vocacional
+    [6] => Habilidades de Redaccion
+    [7] => Ciencia y Matematicas
+    [8] => Para Tutores
+    [9] => Acerca de
+    [10] => Pagina de contacto
+    [11] => Idioma
+    [12] =>  
+        
+        
+          carlos        
+      
+    [13] => Panel Admin
+    [14] => Cerrar sesión
+    [15] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-03 17:42:20] Target language: EN
+[2025-06-03 17:42:20] Data sent to DeepL API (JSON): {"text":["Categor\u00eda","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n          carlos        \n      ","Panel Admin","Cerrar sesi\u00f3n","Derechos Reservados \u00ae Digital-Mind \u00a9 2025"],"target_lang":"EN"}
+[2025-06-03 17:42:21] DeepL API HTTP Code: 200
+[2025-06-03 17:42:21] DeepL API Response: {"translations":[{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"Primary Education"},{"detected_source_language":"ES","text":"Secondary Education"},{"detected_source_language":"ES","text":"High School Education"},{"detected_source_language":"ES","text":"Learning Methods"},{"detected_source_language":"ES","text":"Vocational Education"},{"detected_source_language":"ES","text":"Writing Skills"},{"detected_source_language":"ES","text":"Science and Mathematics"},{"detected_source_language":"PT","text":"For Tutors"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Language"},{"detected_source_language":"ES","text":" \n        \n        \n          carlos\n      "},{"detected_source_language":"ID","text":"Admin Panel"},{"detected_source_language":"ES","text":"Log off"},{"detected_source_language":"PT","text":"Derechos Reservados ® Digital-Mind © 2025"}]}
+[2025-06-03 17:42:21] Extracted translated texts: Array
+(
+    [0] => Category
+    [1] => Primary Education
+    [2] => Secondary Education
+    [3] => High School Education
+    [4] => Learning Methods
+    [5] => Vocational Education
+    [6] => Writing Skills
+    [7] => Science and Mathematics
+    [8] => For Tutors
+    [9] => About
+    [10] => Contact page
+    [11] => Language
+    [12] =>  
+        
+        
+          carlos
+      
+    [13] => Admin Panel
+    [14] => Log off
+    [15] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-03 17:42:21] Successfully returned translated texts.
+[2025-06-03 17:42:28] Received POST request.
+[2025-06-03 17:42:28] POST data: Array
+(
+    [texts] => ["Categoría","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n          carlos        \n      ","Panel Admin","Cerrar sesión","Nuestra Misión","¿Cómo Contribuimos?","Derechos Reservados ® Digital-Mind © 2025"]
+    [target_lang] => EN
+)
+
+[2025-06-03 17:42:28] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-06-03 17:42:28] 'texts' parameter received: ["Categoría","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n          carlos        \n      ","Panel Admin","Cerrar sesión","Nuestra Misión","¿Cómo Contribuimos?","Derechos Reservados ® Digital-Mind © 2025"]
+[2025-06-03 17:42:28] Result of json_decode: Array
+(
+    [0] => Categoría
+    [1] => Educacion Primaria
+    [2] => Educacion Secundaria
+    [3] => Educacion Preparatoria
+    [4] => Metodos de Aprendizaje
+    [5] => Educacion Vocacional
+    [6] => Habilidades de Redaccion
+    [7] => Ciencia y Matematicas
+    [8] => Para Tutores
+    [9] => Acerca de
+    [10] => Pagina de contacto
+    [11] => Idioma
+    [12] =>  
+        
+        
+          carlos        
+      
+    [13] => Panel Admin
+    [14] => Cerrar sesión
+    [15] => Nuestra Misión
+    [16] => ¿Cómo Contribuimos?
+    [17] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-03 17:42:28] Target language: EN
+[2025-06-03 17:42:28] Data sent to DeepL API (JSON): {"text":["Categor\u00eda","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n          carlos        \n      ","Panel Admin","Cerrar sesi\u00f3n","Nuestra Misi\u00f3n","\u00bfC\u00f3mo Contribuimos?","Derechos Reservados \u00ae Digital-Mind \u00a9 2025"],"target_lang":"EN"}
+[2025-06-03 17:42:29] DeepL API HTTP Code: 200
+[2025-06-03 17:42:29] DeepL API Response: {"translations":[{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"Primary Education"},{"detected_source_language":"ES","text":"Secondary Education"},{"detected_source_language":"ES","text":"High School Education"},{"detected_source_language":"ES","text":"Learning Methods"},{"detected_source_language":"ES","text":"Vocational Education"},{"detected_source_language":"ES","text":"Writing Skills"},{"detected_source_language":"ES","text":"Science and Mathematics"},{"detected_source_language":"PT","text":"For Tutors"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Language"},{"detected_source_language":"ES","text":" \n        \n        \n          carlos\n      "},{"detected_source_language":"ID","text":"Admin Panel"},{"detected_source_language":"ES","text":"Log off"},{"detected_source_language":"ES","text":"Our Mission"},{"detected_source_language":"ES","text":"How do we contribute?"},{"detected_source_language":"PT","text":"Derechos Reservados ® Digital-Mind © 2025"}]}
+[2025-06-03 17:42:29] Extracted translated texts: Array
+(
+    [0] => Category
+    [1] => Primary Education
+    [2] => Secondary Education
+    [3] => High School Education
+    [4] => Learning Methods
+    [5] => Vocational Education
+    [6] => Writing Skills
+    [7] => Science and Mathematics
+    [8] => For Tutors
+    [9] => About
+    [10] => Contact page
+    [11] => Language
+    [12] =>  
+        
+        
+          carlos
+      
+    [13] => Admin Panel
+    [14] => Log off
+    [15] => Our Mission
+    [16] => How do we contribute?
+    [17] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-03 17:42:29] Successfully returned translated texts.
+[2025-06-03 17:42:33] Received POST request.
+[2025-06-03 17:42:33] POST data: Array
+(
+    [texts] => ["Categoría","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n          carlos        \n      ","Panel Admin","Cerrar sesión","Sobre Nosotros","En DigitalMind, combinamos innovación y creatividad para ofrecer soluciones digitales que transforman negocios y mejoran vidas.","\n                \"Estudiar no es solo aprender hechos, es entrenar tu mente para ver el mundo con una nueva perspectiva. Cada esfuerzo que pongas hoy será una semilla que crecerá en éxito mañana.\"\n            ","Conoce Nuestro Equipo","Las mentes detras de la plataforma","Alan Alcaraz","Desarrollador Back-End","Visionario tecnológico con más de 15 años de experiencia en desarrollo de software.","Ximena Cuevas","Directora de diseño","Encargado de gestionar la logica detras de la pagina.","Friedman Cortez","Desarrollador Front-End","Encargado de implementar diseño y las interfaces de los usuarios.","Zinedine Hiram","Desarrollador Front-End","Encargado de implementar funcionalidades a la pagina.","Ernesto Cebrera","Desarrollador Back-End","Encargado de la seguridad.","Carlos Rosas","Lider de desarrollo","Encargado de revisar, implementar y testear el codigo desarrollado.","Nuestros Valores","Los principios que guían cada decisión que tomamos","Orientacion","Nuestra prioridad es dejar un impacto en la gente que nos visita.","Integridad","Actuamos con honestidad y transparencia en todas nuestras relaciones.","Compromiso","Nos comprometemos a crear tecnología que mejore el aprendizaje de las personas.","Impacto Social","Cada publicacion es un nuevo aprendizaje, nos aseguramos que este impacto perdure en las personas.","DigitalMind","Comprometidos con la educacion","Terminos de privacidad","© 2025 DigitalMind. Todos los derechos reservados."]
+    [target_lang] => EN
+)
+
+[2025-06-03 17:42:33] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-06-03 17:42:33] 'texts' parameter received: ["Categoría","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n          carlos        \n      ","Panel Admin","Cerrar sesión","Sobre Nosotros","En DigitalMind, combinamos innovación y creatividad para ofrecer soluciones digitales que transforman negocios y mejoran vidas.","\n                \"Estudiar no es solo aprender hechos, es entrenar tu mente para ver el mundo con una nueva perspectiva. Cada esfuerzo que pongas hoy será una semilla que crecerá en éxito mañana.\"\n            ","Conoce Nuestro Equipo","Las mentes detras de la plataforma","Alan Alcaraz","Desarrollador Back-End","Visionario tecnológico con más de 15 años de experiencia en desarrollo de software.","Ximena Cuevas","Directora de diseño","Encargado de gestionar la logica detras de la pagina.","Friedman Cortez","Desarrollador Front-End","Encargado de implementar diseño y las interfaces de los usuarios.","Zinedine Hiram","Desarrollador Front-End","Encargado de implementar funcionalidades a la pagina.","Ernesto Cebrera","Desarrollador Back-End","Encargado de la seguridad.","Carlos Rosas","Lider de desarrollo","Encargado de revisar, implementar y testear el codigo desarrollado.","Nuestros Valores","Los principios que guían cada decisión que tomamos","Orientacion","Nuestra prioridad es dejar un impacto en la gente que nos visita.","Integridad","Actuamos con honestidad y transparencia en todas nuestras relaciones.","Compromiso","Nos comprometemos a crear tecnología que mejore el aprendizaje de las personas.","Impacto Social","Cada publicacion es un nuevo aprendizaje, nos aseguramos que este impacto perdure en las personas.","DigitalMind","Comprometidos con la educacion","Terminos de privacidad","© 2025 DigitalMind. Todos los derechos reservados."]
+[2025-06-03 17:42:33] Result of json_decode: Array
+(
+    [0] => Categoría
+    [1] => Educacion Primaria
+    [2] => Educacion Secundaria
+    [3] => Educacion Preparatoria
+    [4] => Metodos de Aprendizaje
+    [5] => Educacion Vocacional
+    [6] => Habilidades de Redaccion
+    [7] => Ciencia y Matematicas
+    [8] => Para Tutores
+    [9] => Acerca de
+    [10] => Pagina de contacto
+    [11] => Idioma
+    [12] =>  
+        
+        
+          carlos        
+      
+    [13] => Panel Admin
+    [14] => Cerrar sesión
+    [15] => Sobre Nosotros
+    [16] => En DigitalMind, combinamos innovación y creatividad para ofrecer soluciones digitales que transforman negocios y mejoran vidas.
+    [17] => 
+                "Estudiar no es solo aprender hechos, es entrenar tu mente para ver el mundo con una nueva perspectiva. Cada esfuerzo que pongas hoy será una semilla que crecerá en éxito mañana."
+            
+    [18] => Conoce Nuestro Equipo
+    [19] => Las mentes detras de la plataforma
+    [20] => Alan Alcaraz
+    [21] => Desarrollador Back-End
+    [22] => Visionario tecnológico con más de 15 años de experiencia en desarrollo de software.
+    [23] => Ximena Cuevas
+    [24] => Directora de diseño
+    [25] => Encargado de gestionar la logica detras de la pagina.
+    [26] => Friedman Cortez
+    [27] => Desarrollador Front-End
+    [28] => Encargado de implementar diseño y las interfaces de los usuarios.
+    [29] => Zinedine Hiram
+    [30] => Desarrollador Front-End
+    [31] => Encargado de implementar funcionalidades a la pagina.
+    [32] => Ernesto Cebrera
+    [33] => Desarrollador Back-End
+    [34] => Encargado de la seguridad.
+    [35] => Carlos Rosas
+    [36] => Lider de desarrollo
+    [37] => Encargado de revisar, implementar y testear el codigo desarrollado.
+    [38] => Nuestros Valores
+    [39] => Los principios que guían cada decisión que tomamos
+    [40] => Orientacion
+    [41] => Nuestra prioridad es dejar un impacto en la gente que nos visita.
+    [42] => Integridad
+    [43] => Actuamos con honestidad y transparencia en todas nuestras relaciones.
+    [44] => Compromiso
+    [45] => Nos comprometemos a crear tecnología que mejore el aprendizaje de las personas.
+    [46] => Impacto Social
+    [47] => Cada publicacion es un nuevo aprendizaje, nos aseguramos que este impacto perdure en las personas.
+    [48] => DigitalMind
+    [49] => Comprometidos con la educacion
+    [50] => Terminos de privacidad
+    [51] => © 2025 DigitalMind. Todos los derechos reservados.
+)
+
+[2025-06-03 17:42:33] Target language: EN
+[2025-06-03 17:42:33] Data sent to DeepL API (JSON): {"text":["Categor\u00eda","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n          carlos        \n      ","Panel Admin","Cerrar sesi\u00f3n","Sobre Nosotros","En DigitalMind, combinamos innovaci\u00f3n y creatividad para ofrecer soluciones digitales que transforman negocios y mejoran vidas.","\n                \"Estudiar no es solo aprender hechos, es entrenar tu mente para ver el mundo con una nueva perspectiva. Cada esfuerzo que pongas hoy ser\u00e1 una semilla que crecer\u00e1 en \u00e9xito ma\u00f1ana.\"\n            ","Conoce Nuestro Equipo","Las mentes detras de la plataforma","Alan Alcaraz","Desarrollador Back-End","Visionario tecnol\u00f3gico con m\u00e1s de 15 a\u00f1os de experiencia en desarrollo de software.","Ximena Cuevas","Directora de dise\u00f1o","Encargado de gestionar la logica detras de la pagina.","Friedman Cortez","Desarrollador Front-End","Encargado de implementar dise\u00f1o y las interfaces de los usuarios.","Zinedine Hiram","Desarrollador Front-End","Encargado de implementar funcionalidades a la pagina.","Ernesto Cebrera","Desarrollador Back-End","Encargado de la seguridad.","Carlos Rosas","Lider de desarrollo","Encargado de revisar, implementar y testear el codigo desarrollado.","Nuestros Valores","Los principios que gu\u00edan cada decisi\u00f3n que tomamos","Orientacion","Nuestra prioridad es dejar un impacto en la gente que nos visita.","Integridad","Actuamos con honestidad y transparencia en todas nuestras relaciones.","Compromiso","Nos comprometemos a crear tecnolog\u00eda que mejore el aprendizaje de las personas.","Impacto Social","Cada publicacion es un nuevo aprendizaje, nos aseguramos que este impacto perdure en las personas.","DigitalMind","Comprometidos con la educacion","Terminos de privacidad","\u00a9 2025 DigitalMind. Todos los derechos reservados."],"target_lang":"EN"}
+[2025-06-03 17:42:34] DeepL API HTTP Code: 200
+[2025-06-03 17:42:34] DeepL API Response: {"translations":[{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"Primary Education"},{"detected_source_language":"ES","text":"Secondary Education"},{"detected_source_language":"ES","text":"High School Education"},{"detected_source_language":"ES","text":"Learning Methods"},{"detected_source_language":"ES","text":"Vocational Education"},{"detected_source_language":"ES","text":"Writing Skills"},{"detected_source_language":"ES","text":"Science and Mathematics"},{"detected_source_language":"PT","text":"For Tutors"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Language"},{"detected_source_language":"ES","text":" \n        \n        \n          carlos\n      "},{"detected_source_language":"ID","text":"Admin Panel"},{"detected_source_language":"ES","text":"Log off"},{"detected_source_language":"ES","text":"About Us"},{"detected_source_language":"ES","text":"At DigitalMind, we combine innovation and creativity to deliver digital solutions that transform businesses and improve lives."},{"detected_source_language":"ES","text":"\n                \"Studying is not just learning facts, it is training your mind to see the world with a new perspective. Every effort you put in today will be a seed that will grow into success tomorrow.\"\n            "},{"detected_source_language":"ES","text":"Meet Our Team"},{"detected_source_language":"ES","text":"The minds behind the platform"},{"detected_source_language":"IT","text":"Alan Alcaraz"},{"detected_source_language":"ES","text":"Back-End Developer"},{"detected_source_language":"ES","text":"Technological visionary with more than 15 years of experience in software development."},{"detected_source_language":"ES","text":"Ximena Cuevas"},{"detected_source_language":"ES","text":"Design Director"},{"detected_source_language":"ES","text":"In charge of managing the logic behind the site."},{"detected_source_language":"EN","text":"Friedman Cortez"},{"detected_source_language":"ES","text":"Front-End Developer"},{"detected_source_language":"ES","text":"Responsible for implementing design and user interfaces."},{"detected_source_language":"ET","text":"Zinedine Hiram"},{"detected_source_language":"ES","text":"Front-End Developer"},{"detected_source_language":"ES","text":"In charge of implementing functionalities to the site."},{"detected_source_language":"ES","text":"Ernesto Cebrera"},{"detected_source_language":"ES","text":"Back-End Developer"},{"detected_source_language":"ES","text":"In charge of security."},{"detected_source_language":"ES","text":"Carlos Rosas"},{"detected_source_language":"ES","text":"Development leader"},{"detected_source_language":"ES","text":"In charge of reviewing, implementing and testing the developed code."},{"detected_source_language":"ES","text":"Our Values"},{"detected_source_language":"ES","text":"Principles that guide every decision we make"},{"detected_source_language":"ES","text":"Orientation"},{"detected_source_language":"ES","text":"Our priority is to leave an impact on the people who visit us."},{"detected_source_language":"PT","text":"Integrity"},{"detected_source_language":"ES","text":"We act with honesty and transparency in all our relationships."},{"detected_source_language":"EN","text":"Compromiso"},{"detected_source_language":"ES","text":"We are committed to creating technology that enhances people's learning."},{"detected_source_language":"PT","text":"Social Impact"},{"detected_source_language":"ES","text":"Each publication is a new learning experience, we make sure that this impact lasts."},{"detected_source_language":"DE","text":"DigitalMind"},{"detected_source_language":"ES","text":"Committed to education"},{"detected_source_language":"ES","text":"Privacy Policy"},{"detected_source_language":"ES","text":"© 2025 DigitalMind. All rights reserved."}]}
+[2025-06-03 17:42:34] Extracted translated texts: Array
+(
+    [0] => Category
+    [1] => Primary Education
+    [2] => Secondary Education
+    [3] => High School Education
+    [4] => Learning Methods
+    [5] => Vocational Education
+    [6] => Writing Skills
+    [7] => Science and Mathematics
+    [8] => For Tutors
+    [9] => About
+    [10] => Contact page
+    [11] => Language
+    [12] =>  
+        
+        
+          carlos
+      
+    [13] => Admin Panel
+    [14] => Log off
+    [15] => About Us
+    [16] => At DigitalMind, we combine innovation and creativity to deliver digital solutions that transform businesses and improve lives.
+    [17] => 
+                "Studying is not just learning facts, it is training your mind to see the world with a new perspective. Every effort you put in today will be a seed that will grow into success tomorrow."
+            
+    [18] => Meet Our Team
+    [19] => The minds behind the platform
+    [20] => Alan Alcaraz
+    [21] => Back-End Developer
+    [22] => Technological visionary with more than 15 years of experience in software development.
+    [23] => Ximena Cuevas
+    [24] => Design Director
+    [25] => In charge of managing the logic behind the site.
+    [26] => Friedman Cortez
+    [27] => Front-End Developer
+    [28] => Responsible for implementing design and user interfaces.
+    [29] => Zinedine Hiram
+    [30] => Front-End Developer
+    [31] => In charge of implementing functionalities to the site.
+    [32] => Ernesto Cebrera
+    [33] => Back-End Developer
+    [34] => In charge of security.
+    [35] => Carlos Rosas
+    [36] => Development leader
+    [37] => In charge of reviewing, implementing and testing the developed code.
+    [38] => Our Values
+    [39] => Principles that guide every decision we make
+    [40] => Orientation
+    [41] => Our priority is to leave an impact on the people who visit us.
+    [42] => Integrity
+    [43] => We act with honesty and transparency in all our relationships.
+    [44] => Compromiso
+    [45] => We are committed to creating technology that enhances people's learning.
+    [46] => Social Impact
+    [47] => Each publication is a new learning experience, we make sure that this impact lasts.
+    [48] => DigitalMind
+    [49] => Committed to education
+    [50] => Privacy Policy
+    [51] => © 2025 DigitalMind. All rights reserved.
+)
+
+[2025-06-03 17:42:34] Successfully returned translated texts.
+[2025-06-03 17:54:05] Received POST request.
+[2025-06-03 17:54:05] POST data: Array
+(
+    [texts] => ["Categoría","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n          carlos        \n      ","Panel Admin","Cerrar sesión","Nuestra Misión","¿Cómo Contribuimos?","Derechos Reservados ® Digital-Mind © 2025"]
+    [target_lang] => EN
+)
+
+[2025-06-03 17:54:05] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-06-03 17:54:05] 'texts' parameter received: ["Categoría","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n          carlos        \n      ","Panel Admin","Cerrar sesión","Nuestra Misión","¿Cómo Contribuimos?","Derechos Reservados ® Digital-Mind © 2025"]
+[2025-06-03 17:54:05] Result of json_decode: Array
+(
+    [0] => Categoría
+    [1] => Educacion Primaria
+    [2] => Educacion Secundaria
+    [3] => Educacion Preparatoria
+    [4] => Metodos de Aprendizaje
+    [5] => Educacion Vocacional
+    [6] => Habilidades de Redaccion
+    [7] => Ciencia y Matematicas
+    [8] => Para Tutores
+    [9] => Acerca de
+    [10] => Pagina de contacto
+    [11] => Idioma
+    [12] =>  
+        
+        
+          carlos        
+      
+    [13] => Panel Admin
+    [14] => Cerrar sesión
+    [15] => Nuestra Misión
+    [16] => ¿Cómo Contribuimos?
+    [17] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-03 17:54:05] Target language: EN
+[2025-06-03 17:54:05] Data sent to DeepL API (JSON): {"text":["Categor\u00eda","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n          carlos        \n      ","Panel Admin","Cerrar sesi\u00f3n","Nuestra Misi\u00f3n","\u00bfC\u00f3mo Contribuimos?","Derechos Reservados \u00ae Digital-Mind \u00a9 2025"],"target_lang":"EN"}
+[2025-06-03 17:54:05] DeepL API HTTP Code: 0
+[2025-06-03 17:54:05] DeepL API Response: 
+[2025-06-03 17:54:05] DeepL API Error (HTTP Code: 0): Unknown error Response: 
+[2025-06-03 18:18:49] Received POST request.
+[2025-06-03 18:18:49] POST data: Array
+(
+    [texts] => ["Categoría","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n          carlos        \n      ","Panel Admin","Cerrar sesión","Derechos Reservados ® Digital-Mind © 2025"]
+    [target_lang] => EN
+)
+
+[2025-06-03 18:18:49] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-06-03 18:18:49] 'texts' parameter received: ["Categoría","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n          carlos        \n      ","Panel Admin","Cerrar sesión","Derechos Reservados ® Digital-Mind © 2025"]
+[2025-06-03 18:18:49] Result of json_decode: Array
+(
+    [0] => Categoría
+    [1] => Educacion Primaria
+    [2] => Educacion Secundaria
+    [3] => Educacion Preparatoria
+    [4] => Metodos de Aprendizaje
+    [5] => Educacion Vocacional
+    [6] => Habilidades de Redaccion
+    [7] => Ciencia y Matematicas
+    [8] => Para Tutores
+    [9] => Acerca de
+    [10] => Pagina de contacto
+    [11] => Idioma
+    [12] =>  
+        
+        
+          carlos        
+      
+    [13] => Panel Admin
+    [14] => Cerrar sesión
+    [15] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-03 18:18:49] Target language: EN
+[2025-06-03 18:18:49] Data sent to DeepL API (JSON): {"text":["Categor\u00eda","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n          carlos        \n      ","Panel Admin","Cerrar sesi\u00f3n","Derechos Reservados \u00ae Digital-Mind \u00a9 2025"],"target_lang":"EN"}
+[2025-06-03 18:18:51] DeepL API HTTP Code: 200
+[2025-06-03 18:18:51] DeepL API Response: {"translations":[{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"Primary Education"},{"detected_source_language":"ES","text":"Secondary Education"},{"detected_source_language":"ES","text":"High School Education"},{"detected_source_language":"ES","text":"Learning Methods"},{"detected_source_language":"ES","text":"Vocational Education"},{"detected_source_language":"ES","text":"Writing Skills"},{"detected_source_language":"ES","text":"Science and Mathematics"},{"detected_source_language":"PT","text":"For Tutors"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Language"},{"detected_source_language":"ES","text":" \n        \n        \n          carlos\n      "},{"detected_source_language":"ID","text":"Admin Panel"},{"detected_source_language":"ES","text":"Log off"},{"detected_source_language":"PT","text":"Derechos Reservados ® Digital-Mind © 2025"}]}
+[2025-06-03 18:18:51] Extracted translated texts: Array
+(
+    [0] => Category
+    [1] => Primary Education
+    [2] => Secondary Education
+    [3] => High School Education
+    [4] => Learning Methods
+    [5] => Vocational Education
+    [6] => Writing Skills
+    [7] => Science and Mathematics
+    [8] => For Tutors
+    [9] => About
+    [10] => Contact page
+    [11] => Language
+    [12] =>  
+        
+        
+          carlos
+      
+    [13] => Admin Panel
+    [14] => Log off
+    [15] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-03 18:18:51] Successfully returned translated texts.
+[2025-06-03 18:18:58] Received POST request.
+[2025-06-03 18:18:58] POST data: Array
+(
+    [texts] => ["Categoría","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n          carlos        \n      ","Panel Admin","Cerrar sesión"]
+    [target_lang] => EN
+)
+
+[2025-06-03 18:18:58] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-06-03 18:18:58] 'texts' parameter received: ["Categoría","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n          carlos        \n      ","Panel Admin","Cerrar sesión"]
+[2025-06-03 18:18:58] Result of json_decode: Array
+(
+    [0] => Categoría
+    [1] => Educacion Primaria
+    [2] => Educacion Secundaria
+    [3] => Educacion Preparatoria
+    [4] => Metodos de Aprendizaje
+    [5] => Educacion Vocacional
+    [6] => Habilidades de Redaccion
+    [7] => Ciencia y Matematicas
+    [8] => Para Tutores
+    [9] => Acerca de
+    [10] => Pagina de contacto
+    [11] => Idioma
+    [12] =>  
+        
+        
+          carlos        
+      
+    [13] => Panel Admin
+    [14] => Cerrar sesión
+)
+
+[2025-06-03 18:18:58] Target language: EN
+[2025-06-03 18:18:58] Data sent to DeepL API (JSON): {"text":["Categor\u00eda","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n          carlos        \n      ","Panel Admin","Cerrar sesi\u00f3n"],"target_lang":"EN"}
+[2025-06-03 18:18:59] DeepL API HTTP Code: 200
+[2025-06-03 18:18:59] DeepL API Response: {"translations":[{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"Primary Education"},{"detected_source_language":"ES","text":"Secondary Education"},{"detected_source_language":"ES","text":"High School Education"},{"detected_source_language":"ES","text":"Learning Methods"},{"detected_source_language":"ES","text":"Vocational Education"},{"detected_source_language":"ES","text":"Writing Skills"},{"detected_source_language":"ES","text":"Science and Mathematics"},{"detected_source_language":"PT","text":"For Tutors"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Language"},{"detected_source_language":"ES","text":" \n        \n        \n          carlos\n      "},{"detected_source_language":"ID","text":"Admin Panel"},{"detected_source_language":"ES","text":"Log off"}]}
+[2025-06-03 18:18:59] Extracted translated texts: Array
+(
+    [0] => Category
+    [1] => Primary Education
+    [2] => Secondary Education
+    [3] => High School Education
+    [4] => Learning Methods
+    [5] => Vocational Education
+    [6] => Writing Skills
+    [7] => Science and Mathematics
+    [8] => For Tutors
+    [9] => About
+    [10] => Contact page
+    [11] => Language
+    [12] =>  
+        
+        
+          carlos
+      
+    [13] => Admin Panel
+    [14] => Log off
+)
+
+[2025-06-03 18:18:59] Successfully returned translated texts.
+[2025-06-03 18:19:05] Received POST request.
+[2025-06-03 18:19:05] POST data: Array
+(
+    [texts] => ["Categoría","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n          carlos        \n      ","Panel Admin","Cerrar sesión"]
+    [target_lang] => EN
+)
+
+[2025-06-03 18:19:05] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-06-03 18:19:05] 'texts' parameter received: ["Categoría","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n          carlos        \n      ","Panel Admin","Cerrar sesión"]
+[2025-06-03 18:19:05] Result of json_decode: Array
+(
+    [0] => Categoría
+    [1] => Educacion Primaria
+    [2] => Educacion Secundaria
+    [3] => Educacion Preparatoria
+    [4] => Metodos de Aprendizaje
+    [5] => Educacion Vocacional
+    [6] => Habilidades de Redaccion
+    [7] => Ciencia y Matematicas
+    [8] => Para Tutores
+    [9] => Acerca de
+    [10] => Pagina de contacto
+    [11] => Idioma
+    [12] =>  
+        
+        
+          carlos        
+      
+    [13] => Panel Admin
+    [14] => Cerrar sesión
+)
+
+[2025-06-03 18:19:05] Target language: EN
+[2025-06-03 18:19:05] Data sent to DeepL API (JSON): {"text":["Categor\u00eda","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n          carlos        \n      ","Panel Admin","Cerrar sesi\u00f3n"],"target_lang":"EN"}
+[2025-06-03 18:19:06] DeepL API HTTP Code: 200
+[2025-06-03 18:19:06] DeepL API Response: {"translations":[{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"Primary Education"},{"detected_source_language":"ES","text":"Secondary Education"},{"detected_source_language":"ES","text":"High School Education"},{"detected_source_language":"ES","text":"Learning Methods"},{"detected_source_language":"ES","text":"Vocational Education"},{"detected_source_language":"ES","text":"Writing Skills"},{"detected_source_language":"ES","text":"Science and Mathematics"},{"detected_source_language":"PT","text":"For Tutors"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Language"},{"detected_source_language":"ES","text":" \n        \n        \n          carlos\n      "},{"detected_source_language":"ID","text":"Admin Panel"},{"detected_source_language":"ES","text":"Log off"}]}
+[2025-06-03 18:19:06] Extracted translated texts: Array
+(
+    [0] => Category
+    [1] => Primary Education
+    [2] => Secondary Education
+    [3] => High School Education
+    [4] => Learning Methods
+    [5] => Vocational Education
+    [6] => Writing Skills
+    [7] => Science and Mathematics
+    [8] => For Tutors
+    [9] => About
+    [10] => Contact page
+    [11] => Language
+    [12] =>  
+        
+        
+          carlos
+      
+    [13] => Admin Panel
+    [14] => Log off
+)
+
+[2025-06-03 18:19:06] Successfully returned translated texts.
+[2025-06-03 18:19:16] Received POST request.
+[2025-06-03 18:19:16] POST data: Array
+(
+    [texts] => ["Categoría","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n          carlos        \n      ","Panel Admin","Cerrar sesión","Sobre Nosotros","En DigitalMind, combinamos innovación y creatividad para ofrecer soluciones digitales que transforman negocios y mejoran vidas.","\n                \"Estudiar no es solo aprender hechos, es entrenar tu mente para ver el mundo con una nueva perspectiva. Cada esfuerzo que pongas hoy será una semilla que crecerá en éxito mañana.\"\n            ","Conoce Nuestro Equipo","Las mentes detras de la plataforma","Alan Alcaraz","Desarrollador Back-End","Visionario tecnológico con más de 15 años de experiencia en desarrollo de software.","Ximena Cuevas","Directora de diseño","Encargado de gestionar la logica detras de la pagina.","Friedman Cortez","Desarrollador Front-End","Encargado de implementar diseño y las interfaces de los usuarios.","Zinedine Hiram","Desarrollador Front-End","Encargado de implementar funcionalidades a la pagina.","Ernesto Cebrera","Desarrollador Back-End","Encargado de la seguridad.","Carlos Rosas","Lider de desarrollo","Encargado de revisar, implementar y testear el codigo desarrollado.","Nuestros Valores","Los principios que guían cada decisión que tomamos","Orientacion","Nuestra prioridad es dejar un impacto en la gente que nos visita.","Integridad","Actuamos con honestidad y transparencia en todas nuestras relaciones.","Compromiso","Nos comprometemos a crear tecnología que mejore el aprendizaje de las personas.","Impacto Social","Cada publicacion es un nuevo aprendizaje, nos aseguramos que este impacto perdure en las personas.","DigitalMind","Comprometidos con la educacion","Terminos de privacidad","© 2025 DigitalMind. Todos los derechos reservados."]
+    [target_lang] => EN
+)
+
+[2025-06-03 18:19:16] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-06-03 18:19:16] 'texts' parameter received: ["Categoría","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n          carlos        \n      ","Panel Admin","Cerrar sesión","Sobre Nosotros","En DigitalMind, combinamos innovación y creatividad para ofrecer soluciones digitales que transforman negocios y mejoran vidas.","\n                \"Estudiar no es solo aprender hechos, es entrenar tu mente para ver el mundo con una nueva perspectiva. Cada esfuerzo que pongas hoy será una semilla que crecerá en éxito mañana.\"\n            ","Conoce Nuestro Equipo","Las mentes detras de la plataforma","Alan Alcaraz","Desarrollador Back-End","Visionario tecnológico con más de 15 años de experiencia en desarrollo de software.","Ximena Cuevas","Directora de diseño","Encargado de gestionar la logica detras de la pagina.","Friedman Cortez","Desarrollador Front-End","Encargado de implementar diseño y las interfaces de los usuarios.","Zinedine Hiram","Desarrollador Front-End","Encargado de implementar funcionalidades a la pagina.","Ernesto Cebrera","Desarrollador Back-End","Encargado de la seguridad.","Carlos Rosas","Lider de desarrollo","Encargado de revisar, implementar y testear el codigo desarrollado.","Nuestros Valores","Los principios que guían cada decisión que tomamos","Orientacion","Nuestra prioridad es dejar un impacto en la gente que nos visita.","Integridad","Actuamos con honestidad y transparencia en todas nuestras relaciones.","Compromiso","Nos comprometemos a crear tecnología que mejore el aprendizaje de las personas.","Impacto Social","Cada publicacion es un nuevo aprendizaje, nos aseguramos que este impacto perdure en las personas.","DigitalMind","Comprometidos con la educacion","Terminos de privacidad","© 2025 DigitalMind. Todos los derechos reservados."]
+[2025-06-03 18:19:16] Result of json_decode: Array
+(
+    [0] => Categoría
+    [1] => Educacion Primaria
+    [2] => Educacion Secundaria
+    [3] => Educacion Preparatoria
+    [4] => Metodos de Aprendizaje
+    [5] => Educacion Vocacional
+    [6] => Habilidades de Redaccion
+    [7] => Ciencia y Matematicas
+    [8] => Para Tutores
+    [9] => Acerca de
+    [10] => Pagina de contacto
+    [11] => Idioma
+    [12] =>  
+        
+        
+          carlos        
+      
+    [13] => Panel Admin
+    [14] => Cerrar sesión
+    [15] => Sobre Nosotros
+    [16] => En DigitalMind, combinamos innovación y creatividad para ofrecer soluciones digitales que transforman negocios y mejoran vidas.
+    [17] => 
+                "Estudiar no es solo aprender hechos, es entrenar tu mente para ver el mundo con una nueva perspectiva. Cada esfuerzo que pongas hoy será una semilla que crecerá en éxito mañana."
+            
+    [18] => Conoce Nuestro Equipo
+    [19] => Las mentes detras de la plataforma
+    [20] => Alan Alcaraz
+    [21] => Desarrollador Back-End
+    [22] => Visionario tecnológico con más de 15 años de experiencia en desarrollo de software.
+    [23] => Ximena Cuevas
+    [24] => Directora de diseño
+    [25] => Encargado de gestionar la logica detras de la pagina.
+    [26] => Friedman Cortez
+    [27] => Desarrollador Front-End
+    [28] => Encargado de implementar diseño y las interfaces de los usuarios.
+    [29] => Zinedine Hiram
+    [30] => Desarrollador Front-End
+    [31] => Encargado de implementar funcionalidades a la pagina.
+    [32] => Ernesto Cebrera
+    [33] => Desarrollador Back-End
+    [34] => Encargado de la seguridad.
+    [35] => Carlos Rosas
+    [36] => Lider de desarrollo
+    [37] => Encargado de revisar, implementar y testear el codigo desarrollado.
+    [38] => Nuestros Valores
+    [39] => Los principios que guían cada decisión que tomamos
+    [40] => Orientacion
+    [41] => Nuestra prioridad es dejar un impacto en la gente que nos visita.
+    [42] => Integridad
+    [43] => Actuamos con honestidad y transparencia en todas nuestras relaciones.
+    [44] => Compromiso
+    [45] => Nos comprometemos a crear tecnología que mejore el aprendizaje de las personas.
+    [46] => Impacto Social
+    [47] => Cada publicacion es un nuevo aprendizaje, nos aseguramos que este impacto perdure en las personas.
+    [48] => DigitalMind
+    [49] => Comprometidos con la educacion
+    [50] => Terminos de privacidad
+    [51] => © 2025 DigitalMind. Todos los derechos reservados.
+)
+
+[2025-06-03 18:19:16] Target language: EN
+[2025-06-03 18:19:16] Data sent to DeepL API (JSON): {"text":["Categor\u00eda","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n          carlos        \n      ","Panel Admin","Cerrar sesi\u00f3n","Sobre Nosotros","En DigitalMind, combinamos innovaci\u00f3n y creatividad para ofrecer soluciones digitales que transforman negocios y mejoran vidas.","\n                \"Estudiar no es solo aprender hechos, es entrenar tu mente para ver el mundo con una nueva perspectiva. Cada esfuerzo que pongas hoy ser\u00e1 una semilla que crecer\u00e1 en \u00e9xito ma\u00f1ana.\"\n            ","Conoce Nuestro Equipo","Las mentes detras de la plataforma","Alan Alcaraz","Desarrollador Back-End","Visionario tecnol\u00f3gico con m\u00e1s de 15 a\u00f1os de experiencia en desarrollo de software.","Ximena Cuevas","Directora de dise\u00f1o","Encargado de gestionar la logica detras de la pagina.","Friedman Cortez","Desarrollador Front-End","Encargado de implementar dise\u00f1o y las interfaces de los usuarios.","Zinedine Hiram","Desarrollador Front-End","Encargado de implementar funcionalidades a la pagina.","Ernesto Cebrera","Desarrollador Back-End","Encargado de la seguridad.","Carlos Rosas","Lider de desarrollo","Encargado de revisar, implementar y testear el codigo desarrollado.","Nuestros Valores","Los principios que gu\u00edan cada decisi\u00f3n que tomamos","Orientacion","Nuestra prioridad es dejar un impacto en la gente que nos visita.","Integridad","Actuamos con honestidad y transparencia en todas nuestras relaciones.","Compromiso","Nos comprometemos a crear tecnolog\u00eda que mejore el aprendizaje de las personas.","Impacto Social","Cada publicacion es un nuevo aprendizaje, nos aseguramos que este impacto perdure en las personas.","DigitalMind","Comprometidos con la educacion","Terminos de privacidad","\u00a9 2025 DigitalMind. Todos los derechos reservados."],"target_lang":"EN"}
+[2025-06-03 18:19:17] DeepL API HTTP Code: 200
+[2025-06-03 18:19:17] DeepL API Response: {"translations":[{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"Primary Education"},{"detected_source_language":"ES","text":"Secondary Education"},{"detected_source_language":"ES","text":"High School Education"},{"detected_source_language":"ES","text":"Learning Methods"},{"detected_source_language":"ES","text":"Vocational Education"},{"detected_source_language":"ES","text":"Writing Skills"},{"detected_source_language":"ES","text":"Science and Mathematics"},{"detected_source_language":"PT","text":"For Tutors"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Language"},{"detected_source_language":"ES","text":" \n        \n        \n          carlos\n      "},{"detected_source_language":"ID","text":"Admin Panel"},{"detected_source_language":"ES","text":"Log off"},{"detected_source_language":"ES","text":"About Us"},{"detected_source_language":"ES","text":"At DigitalMind, we combine innovation and creativity to deliver digital solutions that transform businesses and improve lives."},{"detected_source_language":"ES","text":"\n                \"Studying is not just learning facts, it is training your mind to see the world with a new perspective. Every effort you put in today will be a seed that will grow into success tomorrow.\"\n            "},{"detected_source_language":"ES","text":"Meet Our Team"},{"detected_source_language":"ES","text":"The minds behind the platform"},{"detected_source_language":"IT","text":"Alan Alcaraz"},{"detected_source_language":"ES","text":"Back-End Developer"},{"detected_source_language":"ES","text":"Technological visionary with more than 15 years of experience in software development."},{"detected_source_language":"ES","text":"Ximena Cuevas"},{"detected_source_language":"ES","text":"Design Director"},{"detected_source_language":"ES","text":"In charge of managing the logic behind the site."},{"detected_source_language":"EN","text":"Friedman Cortez"},{"detected_source_language":"ES","text":"Front-End Developer"},{"detected_source_language":"ES","text":"Responsible for implementing design and user interfaces."},{"detected_source_language":"ET","text":"Zinedine Hiram"},{"detected_source_language":"ES","text":"Front-End Developer"},{"detected_source_language":"ES","text":"In charge of implementing functionalities to the site."},{"detected_source_language":"ES","text":"Ernesto Cebrera"},{"detected_source_language":"ES","text":"Back-End Developer"},{"detected_source_language":"ES","text":"In charge of security."},{"detected_source_language":"ES","text":"Carlos Rosas"},{"detected_source_language":"ES","text":"Development leader"},{"detected_source_language":"ES","text":"In charge of reviewing, implementing and testing the developed code."},{"detected_source_language":"ES","text":"Our Values"},{"detected_source_language":"ES","text":"Principles that guide every decision we make"},{"detected_source_language":"ES","text":"Orientation"},{"detected_source_language":"ES","text":"Our priority is to leave an impact on the people who visit us."},{"detected_source_language":"PT","text":"Integrity"},{"detected_source_language":"ES","text":"We act with honesty and transparency in all our relationships."},{"detected_source_language":"EN","text":"Compromiso"},{"detected_source_language":"ES","text":"We are committed to creating technology that enhances people's learning."},{"detected_source_language":"PT","text":"Social Impact"},{"detected_source_language":"ES","text":"Each publication is a new learning experience, we make sure that this impact lasts."},{"detected_source_language":"DE","text":"DigitalMind"},{"detected_source_language":"ES","text":"Committed to education"},{"detected_source_language":"ES","text":"Privacy Policy"},{"detected_source_language":"ES","text":"© 2025 DigitalMind. All rights reserved."}]}
+[2025-06-03 18:19:17] Extracted translated texts: Array
+(
+    [0] => Category
+    [1] => Primary Education
+    [2] => Secondary Education
+    [3] => High School Education
+    [4] => Learning Methods
+    [5] => Vocational Education
+    [6] => Writing Skills
+    [7] => Science and Mathematics
+    [8] => For Tutors
+    [9] => About
+    [10] => Contact page
+    [11] => Language
+    [12] =>  
+        
+        
+          carlos
+      
+    [13] => Admin Panel
+    [14] => Log off
+    [15] => About Us
+    [16] => At DigitalMind, we combine innovation and creativity to deliver digital solutions that transform businesses and improve lives.
+    [17] => 
+                "Studying is not just learning facts, it is training your mind to see the world with a new perspective. Every effort you put in today will be a seed that will grow into success tomorrow."
+            
+    [18] => Meet Our Team
+    [19] => The minds behind the platform
+    [20] => Alan Alcaraz
+    [21] => Back-End Developer
+    [22] => Technological visionary with more than 15 years of experience in software development.
+    [23] => Ximena Cuevas
+    [24] => Design Director
+    [25] => In charge of managing the logic behind the site.
+    [26] => Friedman Cortez
+    [27] => Front-End Developer
+    [28] => Responsible for implementing design and user interfaces.
+    [29] => Zinedine Hiram
+    [30] => Front-End Developer
+    [31] => In charge of implementing functionalities to the site.
+    [32] => Ernesto Cebrera
+    [33] => Back-End Developer
+    [34] => In charge of security.
+    [35] => Carlos Rosas
+    [36] => Development leader
+    [37] => In charge of reviewing, implementing and testing the developed code.
+    [38] => Our Values
+    [39] => Principles that guide every decision we make
+    [40] => Orientation
+    [41] => Our priority is to leave an impact on the people who visit us.
+    [42] => Integrity
+    [43] => We act with honesty and transparency in all our relationships.
+    [44] => Compromiso
+    [45] => We are committed to creating technology that enhances people's learning.
+    [46] => Social Impact
+    [47] => Each publication is a new learning experience, we make sure that this impact lasts.
+    [48] => DigitalMind
+    [49] => Committed to education
+    [50] => Privacy Policy
+    [51] => © 2025 DigitalMind. All rights reserved.
+)
+
+[2025-06-03 18:19:17] Successfully returned translated texts.
+[2025-06-04 01:28:55] Received POST request.
+[2025-06-04 01:28:55] POST data: Array
+(
+    [texts] => ["Categoría","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n          carlos        \n      ","Panel Admin","Cerrar sesión"]
+    [target_lang] => EN
+)
+
+[2025-06-04 01:28:55] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-06-04 01:28:55] 'texts' parameter received: ["Categoría","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n          carlos        \n      ","Panel Admin","Cerrar sesión"]
+[2025-06-04 01:28:55] Result of json_decode: Array
+(
+    [0] => Categoría
+    [1] => Educacion Primaria
+    [2] => Educacion Secundaria
+    [3] => Educacion Preparatoria
+    [4] => Metodos de Aprendizaje
+    [5] => Educacion Vocacional
+    [6] => Habilidades de Redaccion
+    [7] => Ciencia y Matematicas
+    [8] => Para Tutores
+    [9] => Acerca de
+    [10] => Pagina de contacto
+    [11] => Idioma
+    [12] =>  
+        
+        
+          carlos        
+      
+    [13] => Panel Admin
+    [14] => Cerrar sesión
+)
+
+[2025-06-04 01:28:55] Target language: EN
+[2025-06-04 01:28:55] Data sent to DeepL API (JSON): {"text":["Categor\u00eda","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma"," \n        \n        \n          carlos        \n      ","Panel Admin","Cerrar sesi\u00f3n"],"target_lang":"EN"}
+[2025-06-04 01:28:56] DeepL API HTTP Code: 200
+[2025-06-04 01:28:56] DeepL API Response: {"translations":[{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"Primary Education"},{"detected_source_language":"ES","text":"Secondary Education"},{"detected_source_language":"ES","text":"High School Education"},{"detected_source_language":"ES","text":"Learning Methods"},{"detected_source_language":"ES","text":"Vocational Education"},{"detected_source_language":"ES","text":"Writing Skills"},{"detected_source_language":"ES","text":"Science and Mathematics"},{"detected_source_language":"PT","text":"For Tutors"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Language"},{"detected_source_language":"ES","text":" \n        \n        \n          carlos\n      "},{"detected_source_language":"ID","text":"Admin Panel"},{"detected_source_language":"ES","text":"Log off"}]}
+[2025-06-04 01:28:56] Extracted translated texts: Array
+(
+    [0] => Category
+    [1] => Primary Education
+    [2] => Secondary Education
+    [3] => High School Education
+    [4] => Learning Methods
+    [5] => Vocational Education
+    [6] => Writing Skills
+    [7] => Science and Mathematics
+    [8] => For Tutors
+    [9] => About
+    [10] => Contact page
+    [11] => Language
+    [12] =>  
+        
+        
+          carlos
+      
+    [13] => Admin Panel
+    [14] => Log off
+)
+
+[2025-06-04 01:28:56] Successfully returned translated texts.
+[2025-06-04 01:29:18] Received POST request.
+[2025-06-04 01:29:18] POST data: Array
+(
+    [texts] => ["Categoría","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma","Iniciar sesión","Derechos Reservados ® Digital-Mind © 2025"]
+    [target_lang] => EN
+)
+
+[2025-06-04 01:29:18] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-06-04 01:29:18] 'texts' parameter received: ["Categoría","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma","Iniciar sesión","Derechos Reservados ® Digital-Mind © 2025"]
+[2025-06-04 01:29:18] Result of json_decode: Array
+(
+    [0] => Categoría
+    [1] => Educacion Primaria
+    [2] => Educacion Secundaria
+    [3] => Educacion Preparatoria
+    [4] => Metodos de Aprendizaje
+    [5] => Educacion Vocacional
+    [6] => Habilidades de Redaccion
+    [7] => Ciencia y Matematicas
+    [8] => Para Tutores
+    [9] => Acerca de
+    [10] => Pagina de contacto
+    [11] => Idioma
+    [12] => Iniciar sesión
+    [13] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-04 01:29:18] Target language: EN
+[2025-06-04 01:29:18] Data sent to DeepL API (JSON): {"text":["Categor\u00eda","Educacion Primaria","Educacion Secundaria","Educacion Preparatoria","Metodos de Aprendizaje","Educacion Vocacional","Habilidades de Redaccion","Ciencia y Matematicas","Para Tutores","Acerca de","Pagina de contacto","Idioma","Iniciar sesi\u00f3n","Derechos Reservados \u00ae Digital-Mind \u00a9 2025"],"target_lang":"EN"}
+[2025-06-04 01:29:20] DeepL API HTTP Code: 200
+[2025-06-04 01:29:20] DeepL API Response: {"translations":[{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"Primary Education"},{"detected_source_language":"ES","text":"Secondary Education"},{"detected_source_language":"ES","text":"High School Education"},{"detected_source_language":"ES","text":"Learning Methods"},{"detected_source_language":"ES","text":"Vocational Education"},{"detected_source_language":"ES","text":"Writing Skills"},{"detected_source_language":"ES","text":"Science and Mathematics"},{"detected_source_language":"PT","text":"For Tutors"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Language"},{"detected_source_language":"ES","text":"Login"},{"detected_source_language":"PT","text":"Derechos Reservados ® Digital-Mind © 2025"}]}
+[2025-06-04 01:29:20] Extracted translated texts: Array
+(
+    [0] => Category
+    [1] => Primary Education
+    [2] => Secondary Education
+    [3] => High School Education
+    [4] => Learning Methods
+    [5] => Vocational Education
+    [6] => Writing Skills
+    [7] => Science and Mathematics
+    [8] => For Tutors
+    [9] => About
+    [10] => Contact page
+    [11] => Language
+    [12] => Login
+    [13] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-04 01:29:20] Successfully returned translated texts.
