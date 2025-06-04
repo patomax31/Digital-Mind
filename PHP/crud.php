@@ -285,7 +285,7 @@ if (searchArchived) {
     </table>
 </div>
         <!-- Sección Categorías
-                
+
  -->
         <!-- Sección Usuarios -->
         <div id="usuarios" class="section-content">
