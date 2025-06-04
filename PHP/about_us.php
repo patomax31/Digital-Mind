@@ -227,6 +227,8 @@ include 'dashboard.php';
             document.head.appendChild(faScript);
         });
     </script>
+
+    
 </body>
 
 </html>

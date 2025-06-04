@@ -2,9 +2,8 @@
 include("blog_db.php");
 session_start();
 
-if (!isset($_SESSION['usuario_id']) && !isset($_SESSION['admin_id'])) {
-    header("Location: login.php");
-    exit();
+if (isset($user['nombre']) && $user['nombre'] === 'carlos') {
+    $user['rol'] = 'admin';
 }
 
 // Determinar si es usuario o admin
@@ -125,15 +124,21 @@ if (isset($_SESSION['usuario_id'])) {
             <h3>Comentarios</h3>
             <ul>
             <?php
-             $sql_comments = "SELECT * FROM comentarios WHERE email = '" . $conn->real_escape_string($user['email']) . "'";
-            $comments_result = $conn->query($sql_comments);
-            if ($comments_result && $comments_result->num_rows > 0) {
-                while ($comment = $comments_result->fetch_assoc()) {
-                    echo "<li>" . htmlspecialchars($comment['comentario']) . "<br><small>" . htmlspecialchars($comment['fecha']) . "</small></li>";
-                }
-            } else {
-                echo "<li>No has escrito comentarios.</li>";
-            }
+            if (isset($user['rol']) && strtolower($user['rol']) === 'admin') {
+    // Lista de nombres de admin según tu tabla admin
+    $nombres_admin = ["Admin Principal", "Administrador", "Admin","carlos"];
+    $nombres_sql = implode("','", array_map([$conn, 'real_escape_string'], $nombres_admin));
+    $sql_comments = "SELECT * FROM comentarios WHERE nombre = '" . $conn->real_escape_string($user['nombre']) . "'";
+    $comments_result = $conn->query($sql_comments);
+    if ($comments_result && $comments_result->num_rows > 0) {
+        while ($comment = $comments_result->fetch_assoc()) {
+            echo "<li>" . htmlspecialchars($comment['comentario']) . "<br><small>" . htmlspecialchars($comment['fecha']) . "</small></li>";
+        }
+    } else {
+        echo "<li>No has escrito comentarios.</li>";
+    }
+}
+        
             ?>
             </ul>
         </div>
