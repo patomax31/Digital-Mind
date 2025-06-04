@@ -132,10 +132,31 @@
     <!-- Usuario logueado -->
     <div class="action-container user-logged">
       <a href="../PHP/perfil.php"> <!-- Added anchor tag here -->
-        <img src="../images/profile_picture.png" alt="Foto de perfil" class="profile-pic">
+        <img 
+        src="<?php
+          if (isset($_SESSION['usuario_avatar']) && !empty($_SESSION['usuario_avatar'])) {
+              echo '/digital-mind/' . htmlspecialchars($_SESSION['usuario_avatar']);
+          } else {
+              echo '../images/profile_picture.png';
+          }
+        ?>" 
+        alt="Foto de perfil" class="profile-pic">
+
         <span class="username">
-          <?= isset($_SESSION['admin_nombre']) ? $_SESSION['admin_nombre'] : $_SESSION['usuario_nombre']; ?>
+          <?php
+            if (isset($_SESSION['admin_nombre'])) {
+                echo htmlspecialchars($_SESSION['admin_nombre']);
+            } elseif (isset($_SESSION['usuario_nombre'])) {
+                echo htmlspecialchars($_SESSION['usuario_nombre']);
+            } elseif (isset($_SESSION['usuario']['nombre'])) {
+                echo htmlspecialchars($_SESSION['usuario']['nombre']);
+            } else {
+                echo "Usuario";
+            }
+          ?>
         </span>
+
+
       </a> <!-- Closed anchor tag here -->
     </div>
 
