@@ -1,6 +1,8 @@
 <?php
 session_start();
 include 'blog_db.php';
+include 'header.php';
+include 'dashboard.php';
 
 $categoria_id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 if ($categoria_id <= 0) {
@@ -29,7 +31,6 @@ $tituloCategoria = $row_cat['nombre'];
 $sql = "SELECT * FROM publicaciones_2 WHERE categoria_id = $categoria_id ORDER BY fecha DESC";
 $resultado = $conn->query($sql);
 
-include 'header.php';
 ?>
 
 <!DOCTYPE html>

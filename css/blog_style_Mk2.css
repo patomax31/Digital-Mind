@@ -25,17 +25,6 @@
       text-align: center;
   }
 
-  
-  
-    /* Logo a la izquierda */
-    .logo {
-      position: relative;
-      left: 90px;
-      font-size: 0.5em;
-      font-weight: bold;
-    
-    }
-    
     /* Navegación central: Inicio, Categoría y Búsqueda */
     .nav-center { 
       display: flex; 

@@ -11,6 +11,7 @@ if (!isset($_SESSION['admin']) || $_SESSION['admin'] !== true) {
 
 include 'blog_db.php';
 include 'header.php';
+include 'dashboard.php';
 
 // Verificar si el usuario es admin
 

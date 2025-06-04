@@ -11,6 +11,7 @@ include 'header.php';
 
 $query_categorias = "SELECT * FROM categoria ORDER BY nombre ASC";
 $result_categorias = mysqli_query($conn, $query_categorias);
+$categoria_id_actual = $post['categoria_id'] ?? null;
 ?>
 
 
@@ -146,15 +147,16 @@ $result_categorias = mysqli_query($conn, $query_categorias);
         
          <div class="form-group">
             <label for="categoria">Categoría:</label>
-        
-        <select class="form-select" name="categoria_id" id="categoria_id" required>
-    <option value="" disabled selected>Selecciona una categoría</option>
-    <?php while ($cat = mysqli_fetch_assoc($result_categorias)): ?>
-        <option value="<?= $cat['id'] ?>">
-            <?= htmlspecialchars($cat['nombre']) ?>
-        </option>
-        <?php endwhile; ?>
-</select>
+        <select class="form-select" id="categoria_id" name="categoria_id" required>
+                            <option value="" disabled>Selecciona una categoría</option>
+                            <?php while ($cat = mysqli_fetch_assoc($result_categorias)): ?>
+    
+                                <option value="<?= $cat['id'] ?>" <?= ($cat['id'] == $categoria_id_actual) ? 'selected' : '' ?>>
+                                <?= htmlspecialchars($cat['nombre']) ?>
+
+                            </option>
+                            <?php endwhile; ?>
+                        </select>
         </div>
 
         <div class="form-group">
