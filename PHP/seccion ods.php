@@ -35,10 +35,11 @@
         </div>
 
         <div class="mission-section">
-            <div class="section-header">
-                <h2 class="section-title">Nuestra Misión</h2>
-                <div class="title-underline"></div>
-            </div>
+    <div class="mission-container">
+        <div class="section-header">
+            <h2 class="section-title">Nuestra Misión</h2>
+            <div class="title-underline"></div>
+        </div>
             
             <div class="mission-content">
                 <div class="mission-text">

@@ -137,8 +137,11 @@ $result_categorias = mysqli_query($conn, $query_categorias);
         </div>
         
         <div class="form-group">
-            <label for="fecha">Fecha:</label>
-            <input type="date" name="fecha" id="fecha" required>
+                        <label for="fecha" class="form-label">Fecha</label>
+                        <input type="date" class="form-control" id="fecha" name="fecha" 
+                            value="<?php echo $fecha; ?>" 
+                            min="2000-01-01" 
+                            max="<?php echo date('Y-m-d'); ?>" required>
         </div>
         
          <div class="form-group">
@@ -173,8 +176,8 @@ $result_categorias = mysqli_query($conn, $query_categorias);
         
         <div class="form-group">
             <label for="imagen">Imagen destacada:</label>
-            <input type="file" name="imagen" id="imagen" accept="image/*">
-            <small>Sube una imagen que represente tu publicación (opcional)</small>
+            <input type="file" name="imagen" id="imagen" accept="image/*" required>
+            <small>Sube una imagen que represente tu publicación (obligatoria)</small>
         </div>
         
         <button type="submit" class="submit-btn">Publicar Entrada</button>
@@ -196,3 +199,21 @@ $result_categorias = mysqli_query($conn, $query_categorias);
 </body>
 </html>
 
+<script>
+document.querySelector('form').addEventListener('submit', function(e) {
+    const titular = document.getElementById('titular').value.trim();
+    const contenido = tinymce.get('contenido').getContent({ format: 'text' }).trim();
+    const imagen = document.getElementById('imagen').files.length;
+
+    if (titular.length < 10 || contenido.length < 50) {
+        e.preventDefault();
+        alert('El título debe tener al menos 10 caracteres y el contenido 50 caracteres.');
+        return;
+    }
+
+    if (imagen === 0) {
+        e.preventDefault();
+        alert('Debes subir una imagen destacada.');
+    }
+});
+</script>
