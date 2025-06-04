@@ -1,12 +1,36 @@
+<?php
+include 'header.php';
+include 'blog_db.php';
 
-<?php include 'header.php'; ?>
+$query_categorias = "SELECT * FROM categoria ORDER BY nombre ASC";
+$result_categorias = mysqli_query($conn, $query_categorias);
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Categorías | DIGITALMIND</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-  <style>
+</head>
+<body>
+<div class="categorias-container">
+  <div class="categoria-listado">
+    <?php while ($cat = mysqli_fetch_assoc($result_categorias)): ?>
+      <div class="categoria-card" onclick="location.href='categoria.php?id=<?= $cat['id'] ?>'">
+        <h3><?= htmlspecialchars($cat['nombre']) ?></h3>
+        <?php if (!empty($cat['descripcion_corta'])): ?>
+          <p style="font-size:0.95em;color:#444;margin:10px 0 0 0;"><?= htmlspecialchars($cat['descripcion_corta']) ?></p>
+        <?php endif; ?>
+      </div>
+    <?php endwhile; ?>
+  </div>
+
+  <div class="cta-contacto">
+    <h2>¿Tienes dudas o quieres colaborar?</h2>
+    <a href="contact_page.php">Contáctanos</a>
+  </div>
+</div>
+</body>
+</html>
+<?php include 'footer.php'; ?>
+ <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: #f4f9f9;
@@ -95,75 +119,39 @@
     .cta-contacto a:hover {
       background-color: #005fa3;
     }
+
+    /* Puedes poner esto en tu <style> o en tu CSS principal */
+.categoria-card {
+  background: #f8fcfc;
+  border-radius: 12px;
+  padding: 28px 18px 18px 18px;
+  box-shadow: 0 2px 8px rgba(74,160,162,0.08);
+  text-align: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+  cursor: pointer;
+  border: 1.5px solid #e0f0f0;
+  position: relative;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.categoria-card:hover {
+  box-shadow: 0 6px 24px rgba(74,160,162,0.18);
+  border-color: #4aa0a2;
+  transform: translateY(-4px) scale(1.03);
+  background: #eafafa;
+}
+.categoria-icono {
+  margin-bottom: 12px;
+}
+.categoria-card h3 {
+  margin: 0;
+  font-size: 1.15em;
+  color: #222;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
   </style>
-</head>
-<body>
-
-  <div class="categorias-container">
-    <div class="categoria-listado">
-      <div class="categoria-card" onclick="location.href='categoria.php?categoria=Educacion Primaria'">
-        <i class="bi bi-pencil-square"></i>
-        <h3>Educación Primaria</h3>
-        <span>Primeros pasos del aprendizaje</span>
-        <p>Material educativo para niños en sus primeras etapas escolares.</p>
-      </div>
-
-      <div class="categoria-card" onclick="location.href='categoria.php?categoria=Educacion Secundaria'">
-        <i class="bi bi-backpack2"></i>
-        <h3>Educación Secundaria</h3>
-        <span>Formación intermedia</span>
-        <p>Recursos para estudiantes de secundaria que consolidan sus conocimientos.</p>
-      </div>
-
-      <div class="categoria-card" onclick="location.href='categoria.php?categoria=Educacion Preparatoria'">
-        <i class="bi bi-journal-bookmark"></i>
-        <h3>Educación Preparatoria</h3>
-        <span>Transición a la educación superior</span>
-        <p>Contenidos que preparan a los jóvenes para el nivel universitario.</p>
-      </div>
-
-      <div class="categoria-card" onclick="location.href='categoria.php?categoria=Metodos de Aprendizaje'">
-        <i class="bi bi-lightbulb"></i>
-        <h3>Métodos de Aprendizaje</h3>
-        <span>Estrategias efectivas</span>
-        <p>Técnicas que mejoran la forma de estudiar, comprender y retener información.</p>
-      </div>
-
-      <div class="categoria-card" onclick="location.href='categoria.php?categoria=Educacion Vocacional'">
-        <i class="bi bi-tools"></i>
-        <h3>Educación Vocacional</h3>
-        <span>Formación técnica</span>
-        <p>Orientación y recursos para carreras técnicas y oficios especializados.</p>
-      </div>
-
-      <div class="categoria-card" onclick="location.href='categoria.php?categoria=Habilidades de Redaccion'">
-        <i class="bi bi-pen"></i>
-        <h3>Habilidades de Redacción</h3>
-        <span>Escritura efectiva</span>
-        <p>Consejos y prácticas para mejorar la escritura académica y creativa.</p>
-      </div>
-
-      <div class="categoria-card" onclick="location.href='categoria.php?categoria=Ciencia y Matematicas'">
-        <i class="bi bi-calculator"></i>
-        <h3>Ciencia y Matemáticas</h3>
-        <span>Lógica y descubrimiento</span>
-        <p>Experimentos, ejercicios y teorías del mundo científico y matemático.</p>
-      </div>
-
-      <div class="categoria-card" onclick="location.href='categoria.php?categoria=Para Tutores'">
-        <i class="bi bi-person-check"></i>
-        <h3>Para Tutores</h3>
-        <span>Apoyo educativo</span>
-        <p>Guías y recursos para quienes acompañan el proceso educativo de otros.</p>
-      </div>
-    </div>
-
-    <div class="cta-contacto">
-      <h2>¿Tienes dudas o quieres colaborar?</h2>
-      <a href="contact_page.php">Contáctanos</a>
-    </div>
-  </div>
-
-</body>
 </html>
-<?php include 'footer.php'; ?>

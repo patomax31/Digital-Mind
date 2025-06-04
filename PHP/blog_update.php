@@ -110,26 +110,26 @@ if (isset($_FILES['imagen']) && $_FILES['imagen']['error'] === UPLOAD_ERR_OK) {
 
 // 6. Actualizar la publicación en la base de datos
 try {
-        $stmt = $conn->prepare("UPDATE publicaciones_2 SET 
-            titular = ?,
-            descripcion_corta = ?,
-            contenido = ?,
-            fecha = ?,
-            referencia = ?,
-            imagen = ?,
-            categoria = ?
-            WHERE id = ?");
+    $stmt = $conn->prepare("UPDATE publicaciones_2 SET 
+                          titular = ?,
+                          descripcion_corta = ?,
+                          contenido = ?,
+                          fecha = ?,
+                          referencia = ?,
+                          imagen = ?,
+                          categoria_id = ?
+                          WHERE id = ?");
 
-        $stmt->bind_param("ssssssii", 
-            $titular,
-            $descripcion_corta,
-            $contenido,
-            $fecha,
-            $referencia,
-            $imagen,
-            $categoria,
-            $id
-        );
+    $stmt->bind_param("ssssssii", 
+        $titular,
+        $descripcion_corta,
+        $contenido,
+        $fecha,
+        $referencia,
+        $imagen,
+        $_POST['categoria_id'],
+        $id
+    );
 
     if ($stmt->execute()) {
         // Regenerar el token CSRF para el próximo formulario

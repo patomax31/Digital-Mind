@@ -27,6 +27,9 @@ if ($resultado->num_rows === 0) {
 }
 
 $post = $resultado->fetch_assoc();
+$query_categorias = "SELECT * FROM categoria ORDER BY nombre ASC";
+$result_categorias = mysqli_query($conn, $query_categorias);
+$categoria_id_actual = $post['categoria_id'] ?? null;
 $pageTitle = htmlspecialchars($post['titular']) . ' - DIGITALMIND';
 
 // Variables individuales
@@ -84,24 +87,16 @@ $referencia = $post['referencia'] ?? '';
                     </div>
                              <div class="col-md-6">
                             <label for="categoria" class="form-label">Categoría</label>
-                            <select class="form-select" id="categoria" name="categoria" required>
-                                <?php
-                                $categorias = [
-                                    'Educacion vocacional',
-                                    'Educacion secundaria',
-                                    'Educacion primaria',
-                                    'Educacion preparatoria',
-                                    'Metodos de aprendizaje',
-                                    'Habilidades de redaccion',
-                                    'Ciencia y matematicas',
-                                    'Para tutores'
-                                ];
-                                foreach ($categorias as $cat) {
-                                    $selected = ($post['categoria'] === $cat) ? 'selected' : '';
-                                    echo "<option value=\"$cat\" $selected>" . ucfirst($cat) . "</option>";
-                                }
-                                ?>
-                            </select>
+                            <select class="form-select" id="categoria_id" name="categoria_id" required>
+                            <option value="" disabled>Selecciona una categoría</option>
+                            <?php while ($cat = mysqli_fetch_assoc($result_categorias)): ?>
+    
+                                <option value="<?= $cat['id'] ?>" <?= ($cat['id'] == $categoria_id_actual) ? 'selected' : '' ?>>
+                                <?= htmlspecialchars($cat['nombre']) ?>
+
+                            </option>
+                            <?php endwhile; ?>
+                        </select>
                         </div>
                     <div class="col-md-6">
                         <label for="imagen" class="form-label">Imagen Destacada</label>

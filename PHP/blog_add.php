@@ -8,6 +8,9 @@ if (!isset($_SESSION['admin']) || $_SESSION['admin'] !== true) {
 
 include 'blog_db.php';
 include 'header.php';
+
+$query_categorias = "SELECT * FROM categoria ORDER BY nombre ASC";
+$result_categorias = mysqli_query($conn, $query_categorias);
 ?>
 
 
@@ -143,17 +146,15 @@ include 'header.php';
         
          <div class="form-group">
             <label for="categoria">Categoría:</label>
-            <select class="form-select" name="categoria" id="categoria" required>
-                <option value="" disabled selected>Selecciona una categoría</option>
-                <option value="Educación Primaria">📖 Educación Primaria</option>
-                <option value="Educación Secundaria">📖 Educación Secundaria</option>
-                <option value="Educación Preparatoria">📖 Educación Preparatoria</option>
-                <option value="Métodos de Aprendizaje">🎯 Métodos de Aprendizaje</option>
-                <option value="Educación Vocacional">💼 Educación Vocacional</option>
-                <option value="Habilidades de Redacción">✍️ Habilidades de Redacción</option>
-                <option value="Ciencia y Matemáticas">🧪 Ciencia y Matemáticas</option>
-                <option value="Para Tutores">👨‍👩‍👧‍👦 Para Tutores</option>
-            </select>
+        
+        <select class="form-select" name="categoria_id" id="categoria_id" required>
+    <option value="" disabled selected>Selecciona una categoría</option>
+    <?php while ($cat = mysqli_fetch_assoc($result_categorias)): ?>
+        <option value="<?= $cat['id'] ?>">
+            <?= htmlspecialchars($cat['nombre']) ?>
+        </option>
+        <?php endwhile; ?>
+</select>
         </div>
 
         <div class="form-group">

@@ -40,7 +40,7 @@ $resUser = $stmtUser->get_result();
 
     if ($resAdmin && $resAdmin->num_rows === 1) {
         $admin = $resAdmin->fetch_assoc();
-        if (password_verify($clave, $admin['contraseña'])) {
+        if ($admin && password_verify($password, $admin['contraseña'])) {
             $_SESSION['adminw'] = true;
             $_SESSION['admin_id'] = $admin['id'];
             $_SESSION['admin_nombre'] = $admin['nombre'];
@@ -52,7 +52,7 @@ $resUser = $stmtUser->get_result();
   
 if ($resUser && $resUser->num_rows === 1) {
     $user = $resUser->fetch_assoc();
-    if (password_verify($clave, $user['contraseña'])) {
+    if (password_verify($password, $user['contraseña'])) {
         $_SESSION['usuario'] = [
             'id' => $user['id'],
             'nombre' => $user['nombre']

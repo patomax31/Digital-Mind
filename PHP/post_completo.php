@@ -11,8 +11,8 @@ $id = isset($_GET['id']) && is_numeric($_GET['id']) ? intval($_GET['id']) : null
 
 try {
     $sql = $id 
-        ? "SELECT * FROM publicaciones_2 WHERE id = $id" 
-        : "SELECT * FROM publicaciones_2 ORDER BY id DESC LIMIT 1";
+        ? "SELECT p.*, c.nombre AS categoria_nombre FROM publicaciones_2 p LEFT JOIN categoria c ON p.categoria_id = c.id WHERE p.id = $id" 
+        : "SELECT p.*, c.nombre AS categoria_nombre FROM publicaciones_2 p LEFT JOIN categoria c ON p.categoria_id = c.id ORDER BY p.id DESC LIMIT 1";
 
     $resultado = $conn->query($sql);
     if (!$resultado || $resultado->num_rows === 0) {
@@ -385,7 +385,7 @@ include 'header.php';
                 <!-- Cabecera del post -->
                 <header class="post-header">
                     <div class="post-header-text">
-                        <span class="category-tag"><?php echo htmlspecialchars($post['categoria']); ?></span>
+                        <span class="category-tag"><?php echo htmlspecialchars($post['categoria_nombre'] ?? 'Sin categoría'); ?></span>
                         <h1><?php echo htmlspecialchars($post['titular']); ?></h1>
                         <p><?php echo htmlspecialchars($post['descripcion_corta']); ?></p>
                         
