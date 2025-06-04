@@ -1,6 +1,6 @@
 <?php
 // Conexión a la base de datos
-include 'blog_db.php';
+include __DIR__ . '/blog_db.php';
 
 // Consulta para obtener los 5 posts más recientes para el carrusel
 $sql_carousel = "SELECT * FROM publicaciones_2 WHERE estado = 'publicado' ORDER BY fecha_creacion DESC LIMIT 5";

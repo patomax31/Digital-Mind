@@ -155,4 +155,6 @@ $result_categorias = mysqli_query($conn, $query_categorias);
   letter-spacing: 0.5px;
 }
   </style>
+
+  <script src="translate.js"></script>
 </html>
