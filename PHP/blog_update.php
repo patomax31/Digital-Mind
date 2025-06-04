@@ -116,20 +116,19 @@ try {
                           contenido = ?,
                           fecha = ?,
                           referencia = ?,
-                          imagen = ?
+                          imagen = ?,
+                          categoria_id = ?
                           WHERE id = ?");
 
-    $stmt->bind_param("ssssssi", 
+    $stmt->bind_param("ssssssii", 
         $titular,
         $descripcion_corta,
         $contenido,
         $fecha,
         $referencia,
         $imagen,
-        $categoria,
-        $autor,
+        $_POST['categoria_id'],
         $id
-
     );
 
     if ($stmt->execute()) {

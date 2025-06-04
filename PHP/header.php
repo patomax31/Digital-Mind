@@ -1,3 +1,12 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- ...resto del código... -->
 <!DOCTYPE html>
 <html lang="es">
 <head>

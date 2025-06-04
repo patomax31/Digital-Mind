@@ -53,7 +53,6 @@ $resUser = $stmtUser->get_result();
   
 if ($resUser && $resUser->num_rows === 1) {
     $user = $resUser->fetch_assoc();
-  
     if (password_verify($password, $user['contraseña'])) {
         $_SESSION['usuario'] = [
         'id' => $user['id'],
