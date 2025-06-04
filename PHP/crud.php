@@ -19,8 +19,14 @@ if (!isset($_SESSION['admin']) || $_SESSION['admin'] !== true) {
 include 'blog_db.php';
 include 'header.php';
 
-$query_posts = "SELECT * FROM publicaciones_2 WHERE estado = 'publicado' ORDER BY fecha DESC";
-$query_archivados = "SELECT * FROM publicaciones_2 WHERE estado = 'archivado' ORDER BY fecha DESC";
+$query_posts = "SELECT p.*, c.nombre AS categoria_nombre FROM publicaciones_2 p LEFT JOIN categoria c ON p.categoria_id = c.id WHERE p.estado = 'publicado' ORDER BY p.fecha DESC";
+$query_archivados = "SELECT p.*, c.nombre AS categoria_nombre FROM publicaciones_2 p LEFT JOIN categoria c ON p.categoria_id = c.id WHERE p.estado = 'archivado' ORDER BY p.fecha DESC";
+$result_posts = mysqli_query($conn, $query_posts);
+$result_archivados = mysqli_query($conn, $query_archivados);
+
+$query_categorias = "SELECT * FROM categoria ORDER BY nombre ASC";
+$result_categorias = mysqli_query($conn, $query_categorias);
+
 
 $result_posts = mysqli_query($conn, $query_posts);
 $result_archivados = mysqli_query($conn, $query_archivados);
@@ -120,6 +126,73 @@ if (searchArchived) {
             gap: 10px;
             margin: 10px;
         }
+
+        .form-categoria {
+  background: #f8fcfc;
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: 0 2px 8px rgba(74,160,162,0.08);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.form-categoria .form-row {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  width: 100%;
+}
+.form-categoria input[type="text"] {
+  padding: 8px 12px;
+  border: 1.5px solid #cbe6e7;
+  border-radius: 6px;
+  font-size: 1em;
+  outline: none;
+  transition: border 0.2s;
+  width: 200px;
+}
+.form-categoria input[type="text"]:focus {
+  border-color: #4aa0a2;
+}
+.form-categoria .file-label {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  background: #eafafa;
+  color: #4aa0a2;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 500;
+  border: 1.5px solid #cbe6e7;
+  transition: background 0.2s, border 0.2s;
+}
+.form-categoria .file-label:hover {
+  background: #d4f3f3;
+  border-color: #4aa0a2;
+}
+.form-categoria .file-label input[type="file"] {
+  display: none;
+}
+.form-categoria button[type="submit"] {
+  background: #4aa0a2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 22px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  margin-left: 10px;
+}
+.form-categoria button[type="submit"]:hover {
+  background: #357c7e;
+  box-shadow: 0 2px 8px rgba(74,160,162,0.15);
+}
     </style>
 </head>
 
@@ -176,19 +249,19 @@ if (searchArchived) {
 
                             <td><?= htmlspecialchars($row['id']) ?></td>
                             <td><?= htmlspecialchars($row['titular']) ?></td>
-                            <td><?= htmlspecialchars($row['categoria']) ?></td>
+                           <td><?= htmlspecialchars($row['categoria_nombre'] ?? 'Sin categoría') ?></td>
                             <td><?= htmlspecialchars($row['fecha']) ?></td>
-                            <td><?= htmlspecialchars($row['rating_count']) ?></td>
+                            <td><?= htmlspecialchars($row['rating_count'] ?? '0') ?></td>
                             <td>
                             <!-- Botón Ver - Redirige a post_completo.php -->
-                            <a class="view-button" href="../PHP/post_completo.php?id=<?php echo $row['id']; ?>">
+                            <a class="view-button" href="../PHP/post_completo.php?id="<?php echo $row['id']; ?>">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
                                     <path fill="currentcolor" d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z" />
                                 </svg>
                             </a>
 
                             <!-- Botón Editar - Redirige a blog_edit.php -->
-                            <a class="edit-button" href="../PHP/blog_edit.php?id=<?php echo $row['id']; ?>">
+                            <a class="edit-button" href="../PHP/blog_edit.php?id="<?php echo $row['id']; ?>">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                     <path fill="currentcolor" d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z" />
                                 </svg>
@@ -204,14 +277,14 @@ if (searchArchived) {
                             <!-- Botón Archivar - Redirige a archivar_post.php -->
                            <?php if($row['estado'] == 'publicado'): ?>
                             <!-- Botón para archivar (cuando está publicado) -->
-                            <a class="archive-button" href="../PHP/blog_archivar.php?id=<?php echo $row['id']; ?>&accion=archivar" title="Archivar Post">
+                            <a class="archive-button" href="../PHP/blog_archivar.php?id="<?php echo $row['id']; ?>&accion=archivar" title="Archivar Post">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                     <path fill="currentcolor" d="M32 32l448 0c17.7 0 32 14.3 32 32l0 32c0 17.7-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96L0 64C0 46.3 14.3 32 32 32zm0 128l448 0 0 256c0 35.3-28.7 64-64 64L96 480c-35.3 0-64-28.7-64-64l0-256zm128 80c0 8.8 7.2 16 16 16l160 0c8.8 0 16-7.2 16-16s-7.2-16-16-16l-160 0c-8.8 0-16 7.2-16 16z"/>
                                 </svg>
                             </a>
                         <?php else: ?>
                             <!-- Botón para desarchivar (cuando está archivado) -->
-                            <a class="unarchive-button" href="../PHP/blog_archivar.php?id=<?php echo $row['id']; ?>&accion=desarchivar" title="Publicar Post" style="color: #28a745;">
+                            <a class="unarchive-button" href="../PHP/blog_archivar.php?id="<?php echo $row['id']; ?>&accion=desarchivar" title="Publicar Post" style="color: #28a745;">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                     <path fill="currentcolor" d="M32 32l448 0c17.7 0 32 14.3 32 32l0 32c0 17.7-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96L0 64C0 46.3 14.3 32 32 32zm0 128l448 0 0 256c0 35.3-28.7 64-64 64L96 480c-35.3 0-64-28.7-64-64l0-256zm192 80c0-8.8 7.2-16 16-16l96 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-96 0c-8.8 0-16-7.2-16-16z"/>
                                 </svg>
@@ -248,9 +321,9 @@ if (searchArchived) {
                     <td><input type="checkbox" class="row-checkbox-archived" data-id="<?= $row['id'] ?>"></td>
                     <td><?= htmlspecialchars($row['id']) ?></td>
                     <td><?= htmlspecialchars($row['titular']) ?></td>
-                    <td><?= htmlspecialchars($row['categoria']) ?></td>
+                  <td><?= htmlspecialchars($row['categoria_nombre']) ?></td>
                     <td><?= htmlspecialchars($row['fecha']) ?></td>
-                    <td><?= htmlspecialchars($row['rating_count']) ?></td>
+                    <td><?= htmlspecialchars($row['rating_count'] ?? '0') ?></td>
                     <td style="display: flex; gap: 8px; align-items: center;">
                         <!-- Botón Ver -->
                         <a class="view-button" href="../PHP/post_completo.php?id=<?= $row['id'] ?>" title="Ver Post">
@@ -278,9 +351,56 @@ if (searchArchived) {
         </tbody>
     </table>
 </div>
-        <!-- Sección Categorías
+        
 
- -->
+
+<!-- Sección Categorías -->
+<div id="categorias" class="section-content">
+    <h1>Categorías</h1>
+<!-- Formulario decorado para agregar categoría -->
+<form method="POST" action="categoria_crud.php" class="form-categoria">
+  <div class="form-row">
+    <input type="text" name="nombre" placeholder="Nombre de la categoría" required>
+    <input type="text" name="descripcion_corta" placeholder="Descripción corta" maxlength="255" required>
+    <button type="submit" name="crear">Crear</button>
+  </div>
+</form>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            mysqli_data_seek($result_categorias, 0);
+            while ($cat = mysqli_fetch_assoc($result_categorias)): ?>
+                <tr>
+                    <td><?= $cat['id'] ?></td>
+                    <td><?= htmlspecialchars($cat['nombre']) ?></td>
+                    <td>
+                        <a href="categoria_crud.php?editar=<?= $cat['id'] ?>">Editar</a>
+                        <a href="categoria_crud.php?eliminar=<?= $cat['id'] ?>" onclick="return confirm('¿Eliminar categoría?')">Eliminar</a>
+                    </td>
+                </tr>
+            <?php endwhile; ?>
+        </tbody>
+    </table>
+
+    <!-- Nueva sección para mostrar las categorías en tarjetas -->
+    <div class="categoria-container">
+        <?php while ($categoria = mysqli_fetch_assoc($result_categorias)): ?>
+            <div class="categoria-card">
+                <h2><?= htmlspecialchars($categoria['nombre']) ?></h2>
+                <p><?= htmlspecialchars($categoria['descripcion_corta']) ?></p>
+            </div>
+        <?php endwhile; ?>
+    </div>
+</div>
+
         <!-- Sección Usuarios -->
         <div id="usuarios" class="section-content">
             <h1>Usuarios</h1>
@@ -465,3 +585,4 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 </script>
+

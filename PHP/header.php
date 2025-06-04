@@ -1,3 +1,12 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- ...resto del código... -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -134,8 +143,14 @@
       <a href="../PHP/perfil.php"> <!-- Added anchor tag here -->
         <img src="../images/profile_picture.png" alt="Foto de perfil" class="profile-pic">
         <span class="username">
-          <?= isset($_SESSION['admin_nombre']) ? $_SESSION['admin_nombre'] : $_SESSION['usuario_nombre']; ?>
-        </span>
+  <?php
+    if (isset($_SESSION['admin_nombre'])) {
+      echo htmlspecialchars($_SESSION['admin_nombre']);
+    } elseif (isset($_SESSION['usuario']['nombre'])) {
+      echo htmlspecialchars($_SESSION['usuario']['nombre']);
+    }
+  ?>
+</span>
       </a> <!-- Closed anchor tag here -->
     </div>
 
