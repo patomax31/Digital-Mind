@@ -81,6 +81,7 @@ footer::before {
   position: relative;
   padding-left: 0;
   font-weight: 500;
+  font-size: 15px;
 }
 
 .footer-column ul li a:hover {

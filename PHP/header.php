@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php echo isset($pageTitle) ? $pageTitle : 'DIGITALMIND - Educación y Calidad'; ?></title>
-    <link rel="stylesheet" href="../css/search.css">
+  <link rel="stylesheet" href="/css/Pagina_resultado.css">
+  <link rel="stylesheet" href="../css/search.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -39,17 +41,8 @@
             <svg class="category-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
               <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 0 0-3 3v4.318a3 3 0 0 0 .879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 0 0 5.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 0 0-2.122-.879H5.25ZM6.375 7.5a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25Z" clip-rule="evenodd" />
             </svg>
-            <a href="#">Categoría</a>
-            <div class="categoria-dropdown-content">
-              <a href="categoria.php?categoria=Educacion Primaria">Educacion Primaria</a>
-              <a href="categoria.php?categoria=Educacion Secundaria">Educacion Secundaria</a>
-              <a href="categoria.php?categoria=Educacion Preparatoria">Educacion Preparatoria</a>
-              <a href="categoria.php?categoria=Metodos de Aprendizaje">Metodos de Aprendizaje</a>
-              <a href="categoria.php?categoria=Educacion Vocacional">Educacion Vocacional</a>
-              <a href="categoria.php?categoria=Habilidades de Redaccion">Habilidades de Redaccion</a>
-              <a href="categoria.php?categoria=Ciencia y Matematicas">Ciencia y Matematicas</a>
-              <a href="categoria.php?categoria=Para Tutores">Para Tutores</a>
-            </div>
+            <a href="categorias.php">Categoría</a>
+          
             
           </div>
         <div class="action-container">
@@ -73,11 +66,13 @@
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m0 0a7 7 0 1 0-9.9-9.9 7 7 0 0 0 9.9 9.9z" />
   </svg>
 
-  <!-- Input de búsqueda oculto inicialmente -->
-  <form id="search-form" action="buscar.php" method="GET" style="display:none;">
-    <input type="text" name="q" placeholder="Buscar noticias o categorías..." autocomplete="off" />
-    <button type="submit">Buscar</button>
-  </form>
+    <!--buscar-->
+    <link rel="stylesheet" href="../css/barra_busqueda.css">
+    <form id="search-form" action="buscar.php" method="GET" style="display: none;" class="barra-busqueda">
+  <input type="text" name="q" placeholder="Buscar..." autocomplete="off" required />
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+ 
 
   <script>
   const searchIcon = document.getElementById('search-icon');
