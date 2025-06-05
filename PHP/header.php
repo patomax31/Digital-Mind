@@ -108,7 +108,7 @@ if (session_status() === PHP_SESSION_NONE) {
         <svg class="Login-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
           <path fill-rule="evenodd" d="M3 3h18v2H3V3zm0 4h18v2H3V7zm0 4h18v2H3v-2zm0 4h18v2H3v-2zm0 4h18v2H3v-2z" clip-rule="evenodd" />
         </svg>
-        <a href="admin_panel.php">Panel Admin</a>
+        <a href="crud.php">Panel Admin</a>
       </div>
     <?php endif; ?>
 
@@ -176,7 +176,12 @@ if (session_status() === PHP_SESSION_NONE) {
     <!-- Mostrar botón solo si es ADMIN -->
     <?php if (isset($_SESSION['admin'])): ?>
       <div class="action-container">
-        <a href="admin_panel.php" class="admin-panel-button">Panel Admin</a>
+<a href="crud.php">
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 6px;">
+    <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
+  </svg>
+  Panel Admin
+</a>
       </div>
     <?php endif; ?>
 
