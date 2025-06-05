@@ -23,7 +23,13 @@ document.getElementById("toggle-translate").addEventListener("click", function (
         // Tarjetas de categoría
         '.categoria-card h2, .categoria-card p, ' +
         // Otros elementos generales
-        'label, span, a, button'
+        'label, span, a, button' +  // PERFIL
+        '.sidebar-menu a, .info-card h3, .info-item strong, .info-item, .section-list h3, .section-list li, .main-content h3, .main-content li, .perfil-container label, .perfil-container button, .perfil-container span, .perfil-container a, .sidebar a, .sidebar span, .sidebar label, .sidebar button, .sidebar-menu a, .sidebar-menu span, .sidebar-menu label, .sidebar-menu button, ' +
+        // BUSCAR
+        '.contenedor-busqueda h2, .contenedor-busqueda p, .contenedor-busqueda .mensaje-error, .contenedor-busqueda .titulo-resultados, .lista-resultados .card-noticia h3, .lista-resultados .card-noticia p, .lista-resultados .card-noticia a, .btn-leer-mas, ' +
+        // GENERALES
+        'h1, h2, h3, h4, h5, h6, p, li, a, button, label, span, th, td' 
+
     );
 
     // Use a Map to store original texts associated with elements
