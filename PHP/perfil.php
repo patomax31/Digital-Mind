@@ -1,5 +1,6 @@
 <?php
 include("blog_db.php");
+include 'header.php'; 
 session_start();
 
 if (isset($user['nombre']) && $user['nombre'] === 'carlos') {
@@ -30,22 +31,11 @@ if (isset($_SESSION['usuario_id'])) {
         
     </style>
 </head>
+
+
 <body>
 
-<header style="display:flex;align-items:center;justify-content:space-between;padding:18px 50px 10px 32px;background:#fff;">
-    <!-- Logo a la izquierda -->
-    <div style="display:flex;align-items:center;">
-        <a href="index.php" style="color:#083d76;">
-            <img src="..\images\Logo_Mk2.png" alt="Logo" >
-        
-    </div>
-    <!-- Logout SVG a la derecha -->
-    <a href="logout.php" title="Cerrar sesión" style="color:#083d76;display:flex;align-items:center;">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:32px;height:32px;">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
-        </svg>
-    </a>
-</header>
+
 
 <div class="perfil-container">
     <!-- Sidebar izquierda -->
