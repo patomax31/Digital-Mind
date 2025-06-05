@@ -27,6 +27,9 @@ if ($resultado->num_rows === 0) {
 }
 
 $post = $resultado->fetch_assoc();
+$query_categorias = "SELECT * FROM categoria ORDER BY nombre ASC";
+$result_categorias = mysqli_query($conn, $query_categorias);
+$categoria_id_actual = $post['categoria_id'] ?? null;
 $pageTitle = htmlspecialchars($post['titular']) . ' - DIGITALMIND';
 
 // Variables individuales
@@ -45,7 +48,6 @@ $referencia = $post['referencia'] ?? '';
     <title>Editar Post - Administración</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-<
 
     <script src="https://cdn.tiny.cloud/1/284zlkwr5hzs5rcf7ehl7m7vwg486wms44e13vnumr38i76e/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <script>
@@ -59,7 +61,6 @@ $referencia = $post['referencia'] ?? '';
     </script>
 </head>
 <body>
-<
 <?php include 'dashboard.php'; ?>
 
 <div class="container mt-4">
@@ -79,33 +80,29 @@ $referencia = $post['referencia'] ?? '';
                 <div class="row mb-3">
                     <div class="col-md-6">
                         <label for="fecha" class="form-label">Fecha</label>
-                        <input type="date" class="form-control" id="fecha" name="fecha" value="<?php echo $fecha; ?>" required>
+                        <input type="date" class="form-control" id="fecha" name="fecha" 
+                            value="<?php echo $fecha; ?>" 
+                            min="2000-01-01" 
+                            max="<?php echo date('Y-m-d'); ?>" required>
                     </div>
                              <div class="col-md-6">
                             <label for="categoria" class="form-label">Categoría</label>
-                            <select class="form-select" id="categoria" name="categoria" required>
-                                <?php
-                                $categorias = [
-                                    'Educacion vocacional',
-                                    'Educacion secundaria',
-                                    'Educacion primaria',
-                                    'Educacion preparatoria',
-                                    'Metodos de aprendizaje',
-                                    'Habilidades de redaccion',
-                                    'Ciencia y matematicas',
-                                    'Para tutores'
-                                ];
-                                foreach ($categorias as $cat) {
-                                    $selected = ($post['categoria'] === $cat) ? 'selected' : '';
-                                    echo "<option value=\"$cat\" $selected>" . ucfirst($cat) . "</option>";
-                                }
-                                ?>
-                            </select>
+                            <select class="form-select" id="categoria_id" name="categoria_id" required>
+                            <option value="" disabled>Selecciona una categoría</option>
+                            <?php while ($cat = mysqli_fetch_assoc($result_categorias)): ?>
+    
+                                <option value="<?= $cat['id'] ?>" <?= ($cat['id'] == $categoria_id_actual) ? 'selected' : '' ?>>
+                                <?= htmlspecialchars($cat['nombre']) ?>
+
+                            </option>
+                            <?php endwhile; ?>
+                        </select>
                         </div>
                     <div class="col-md-6">
                         <label for="imagen" class="form-label">Imagen Destacada</label>
-                        <input type="file" class="form-control" id="imagen" name="imagen" accept="image/*">
-                        <?php if (!empty($imagen)): ?>
+                        <input type="file" class="form-control" id="imagen" name="imagen" accept="image/*"
+                        <?php echo empty($imagen) ? 'required' : ''; ?>>
+                                                <?php if (!empty($imagen)): ?>
                         <div class="mt-2">
                             <img src="../images/publicaciones/<?php echo htmlspecialchars($imagen); ?>" width="100" class="img-thumbnail">
                     
@@ -147,4 +144,17 @@ $referencia = $post['referencia'] ?? '';
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
->>>>>>> 3aaa26d1ef8d1350a5d5a1d69e47d4545aeeed0a
+
+<script>
+document.querySelector("form").addEventListener("submit", function(e) {
+    const fechaInput = document.getElementById("fecha");
+    const fecha = new Date(fechaInput.value);
+    const hoy = new Date();
+
+    if (fecha > hoy) {
+        e.preventDefault();
+        alert("La fecha no puede ser futura.");
+        fechaInput.focus();
+    }
+});
+</script>

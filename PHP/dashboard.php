@@ -12,16 +12,23 @@ if (session_status() === PHP_SESSION_NONE) {
 // La conexión ($conn) debe ser establecida una vez en index.php
 // y estar disponible globalmente o ser pasada.
 
-// Verificar si hay un usuario logueado
-$loggedIn = isset($_SESSION['user_id']);
-$userName = $loggedIn ? $_SESSION['user_name'] : '';
+// Verificar si hay un usuario logueado - corregido para usar las variables correctas
+$loggedIn = isset($_SESSION['usuario']) || isset($_SESSION['user_id']);
+$userName = '';
+
+if (isset($_SESSION['usuario']) && is_array($_SESSION['usuario'])) {
+    $userName = $_SESSION['usuario']['nombre'];
+} elseif (isset($_SESSION['user_name'])) {
+    $userName = $_SESSION['user_name'];
+}
 
 // Consulta para obtener las publicaciones más recientes (limitado a 5)
 $recientes = [];
 // Asegúrate de que $conn esté disponible aquí. Si no lo está, el problema está en index.php
 // o en cómo se incluye dashboard.php
 if (isset($conn) && $conn instanceof mysqli) {
-    $sqlRecientes = "SELECT id, titular, fecha, imagen FROM publicaciones_2 ORDER BY fecha_creacion DESC LIMIT 5";
+    $sqlRecientes = "SELECT id, titular, fecha, imagen FROM publicaciones_2 WHERE estado = 'publicado' ORDER BY fecha_creacion DESC LIMIT 5";
+
     $resultRecientes = $conn->query($sqlRecientes);
     if ($resultRecientes && $resultRecientes->num_rows > 0) {
         while($row = $resultRecientes->fetch_assoc()) {
@@ -175,6 +182,28 @@ if (isset($conn) && $conn instanceof mysqli) {
         font-size: 13px;
         color: #666;
     }
+
+    /* Estilos para el saludo del usuario */
+    .user-greeting {
+        background-color: #f0f8ff;
+        border: 1px solid #4a6fa5;
+        border-radius: 8px;
+        padding: 12px 16px;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    .user-greeting .greeting-text {
+        color: #4a6fa5;
+        font-weight: 600;
+        font-size: 15px;
+        margin: 0;
+    }
+
+    .user-greeting .user-name {
+        color: #2c5282;
+        font-weight: 700;
+    }
 </style>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -187,7 +216,7 @@ if (isset($conn) && $conn instanceof mysqli) {
         <a href="index.php" class="menu-item">
             <i class="fas fa-home"></i> Inicio
         </a>
-        <a href="." class="menu-item">
+        <a href="categorias.php" class="menu-item">
             <i class="fas fa-folder"></i> Categorías
         </a>
         <a href="about_us.php" class="menu-item">
@@ -201,16 +230,20 @@ if (isset($conn) && $conn instanceof mysqli) {
     <div class="sidebar-section">
         <h3>Cuenta</h3>
         <?php if ($loggedIn): ?>
-        <a href="logout.php" class="menu-item">
-            <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
-        </a>
+            <!-- Mostrar saludo al usuario -->
+            <div class="user-greeting">
+                <p class="greeting-text">¡Hola, <span class="user-name"><?php echo htmlspecialchars($userName); ?></span>!</p>
+            </div>
+            <a href="logout.php" class="menu-item">
+                <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+            </a>
         <?php else: ?>
-        <a href="login.php" class="menu-item">
-            <i class="fas fa-key"></i> Iniciar Sesión
-        </a>
-        <a href="register.php" class="menu-item">
-            <i class="fas fa-user"></i> Registrarse
-        </a>
+            <a href="login.php" class="menu-item">
+                <i class="fas fa-key"></i> Iniciar Sesión
+            </a>
+            <a href="register.php" class="menu-item">
+                <i class="fas fa-user"></i> Registrarse
+            </a>
         <?php endif; ?>
     </div>
 

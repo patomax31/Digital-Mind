@@ -306,7 +306,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 max-width: 180px;
             }
         }
-        // ... existing code ...
+        /* ... existing code ... */
 
         /* Estilos para el botón de enviar */
         .submit-button {
@@ -574,5 +574,52 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             });
         });
     </script>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const btn = document.getElementById('btn-translate');
+    if (!btn) return;
+
+    let translated = false;
+
+    btn.addEventListener('click', async function() {
+        if (translated) return; // Evita traducir dos veces
+
+        // Selecciona todos los elementos de texto visibles (puedes ajustar el selector)
+        const elements = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, li, a, button, label, span, th, td'));
+
+        // Filtra solo los elementos con texto visible
+        const texts = elements.map(el => el.innerText.trim()).filter(t => t.length > 0);
+
+        if (texts.length === 0) return;
+
+        btn.disabled = true;
+        btn.textContent = "Traduciendo...";
+
+        // Llama a tu endpoint PHP
+        const response = await fetch('translate.php', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            body: 'texts=' + encodeURIComponent(JSON.stringify(texts)) + '&target_lang=EN'
+        });
+
+        const data = await response.json();
+
+        if (data.translatedTexts) {
+            let i = 0;
+            elements.forEach(el => {
+                if (el.innerText.trim().length > 0) {
+                    el.innerText = data.translatedTexts[i++] || el.innerText;
+                }
+            });
+            btn.textContent = "Traducido";
+            translated = true;
+        } else {
+            btn.textContent = "Error al traducir";
+        }
+        btn.disabled = false;
+    });
+});
+</script>
 </body>
 </html>

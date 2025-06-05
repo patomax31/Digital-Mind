@@ -39,7 +39,7 @@ include 'dashboard.php';
         </div>
     </section>
 
-<!--Explicación del ODS
+    <!--Explicación del ODS
     <section class="section">
         <div class="container">
             <div class="section-header fade-in">
@@ -72,7 +72,7 @@ include 'dashboard.php';
                     <div class="team-info">
                         <h3>Alan Alcaraz</h3>
                         <p>Desarrollador Back-End</p>
-                        <p>Visionario tecnológico con más de 15 años de experiencia en desarrollo de software.</p>
+                        <p>Encargado del desarrollo y mantenimiento de la base de datos</p>
                     </div>
                 </div>
 
@@ -85,7 +85,7 @@ include 'dashboard.php';
                     <div class="team-info">
                         <h3>Ximena Cuevas</h3>
                         <p>Directora de diseño</p>
-                        <p>Encargado de gestionar la logica detras de la pagina.</p>
+                        <p>Encargado de crear e implementar diseños y estilos de la plataforma.</p>
                     </div>
                 </div>
 
@@ -137,7 +137,7 @@ include 'dashboard.php';
                     </div>
                     <div class="team-info">
                         <h3>Carlos Rosas</h3>
-                        <p>Lider de desarrollo</p>
+                        <p>desarrollador Full stack</p>
                         <p>Encargado de revisar, implementar y testear el codigo desarrollado.</p>
                     </div>
                 </div>
@@ -227,6 +227,8 @@ include 'dashboard.php';
             document.head.appendChild(faScript);
         });
     </script>
+
+    
 </body>
 
 </html>

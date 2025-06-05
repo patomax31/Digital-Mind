@@ -25,7 +25,7 @@ if (!hash_equals($_SESSION['csrf_token'], $_POST['csrf_token'])) {
 // 3. Validar ID de publicación
 if (empty($_POST['id']) || !is_numeric($_POST['id'])) {
     $_SESSION['error'] = 'ID de publicación inválido';
-    header('Location: admin_panel.php');
+    header('Location: crud.php');
     exit();
 }
 
@@ -39,7 +39,7 @@ $result = $stmt->get_result();
 
 if ($result->num_rows === 0) {
     $_SESSION['error'] = 'Publicación no encontrada';
-    header('Location: admin_panel.php');
+    header('Location: crud.php');
     exit();
 }
 
@@ -116,20 +116,19 @@ try {
                           contenido = ?,
                           fecha = ?,
                           referencia = ?,
-                          imagen = ?
+                          imagen = ?,
+                          categoria_id = ?
                           WHERE id = ?");
 
-    $stmt->bind_param("ssssssi", 
+    $stmt->bind_param("ssssssii", 
         $titular,
         $descripcion_corta,
         $contenido,
         $fecha,
         $referencia,
         $imagen,
-        $categoria,
-        $autor,
+        $_POST['categoria_id'],
         $id
-
     );
 
     if ($stmt->execute()) {
@@ -137,7 +136,7 @@ try {
         $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
         
         $_SESSION['success'] = 'Publicación actualizada correctamente';
-        header("Location: admin_panel.php");
+        header("Location: crud.php");
         exit();
     } else {
         throw new Exception("Error al actualizar la publicación: " . $stmt->error);

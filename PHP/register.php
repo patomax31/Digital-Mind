@@ -1,26 +1,23 @@
 <?php
 
+
 session_start();
 include("blog_db.php");
 $mensaje = "";
 
 function verificarEmail($email) {
-    // Considera mover la API key a un archivo de configuración seguro
     $api_key = 'test_ead774bd4057984fb0ad5d3c4e19944790c6199b579135c5f4a4746e15c65578';
     $url = "https://api.kickbox.com/v2/verify?email=" . urlencode($email) . "&apikey=" . $api_key;
 
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    // Opcional: Ignorar verificación SSL en entorno de desarrollo si es necesario (NO HACER EN PRODUCCIÓN)
-    // curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
     $response = curl_exec($ch);
-    $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE); // Obtener código de respuesta HTTP
-    $curl_error = curl_error($ch); // Obtener errores de cURL
+    $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    $curl_error = curl_error($ch);
     curl_close($ch);
 
     if ($response === false) {
-        // Manejar error de cURL
         error_log("Error cURL al verificar email: " . $curl_error);
         return ['success' => false, 'message' => 'Error de conexión al verificar email.'];
     }
@@ -28,7 +25,6 @@ function verificarEmail($email) {
     $verificacion = json_decode($response, true);
 
     if ($http_code !== 200) {
-        // Manejar errores de la API (ej. API key inválida, límite excedido)
         error_log("Error API Kickbox (HTTP " . $http_code . "): " . ($verificacion['message'] ?? 'Error desconocido'));
         return ['success' => false, 'message' => 'Error de la API de verificación de email.'];
     }
@@ -55,80 +51,45 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } elseif (!preg_match('/^(?=.*[A-Z])(?=.*\d).{8,}$/', $password)) {
             $mensaje = "<p class='message error'>La contraseña debe tener al menos 8 caracteres, una mayúscula y un número.</p>";
         } else {
-            // Realizar verificación de email
             $verificacion = verificarEmail($email);
 
-            if ($verificacion && isset($verificacion['success']) && $verificacion['success']) {
-            if (isset($verificacion['result']) && $verificacion['result'] == 'deliverable' && isset($verificacion['disposable']) && !$verificacion['disposable']) {
-
-            $password_hashed = password_hash($password, PASSWORD_BCRYPT);
-            $fecha_registro = date('Y-m-d H:i:s'); // <-- Genera la fecha actual
-
-             // Insertar usuario usando prepared statements, ahora con fecha_registro
-            $consulta = $conn->prepare("INSERT INTO usuarios (nombre, email, contraseña, fecha_registro) VALUES (?, ?, ?, ?)");
-            $consulta->bind_param("ssss", $nombre, $email, $password_hashed, $fecha_registro);
-            $resultado = $consulta->execute();
-
-            if ($resultado) {
-            $new_user_id = mysqli_insert_id($conn);
-            $mensaje = "<p class='message success'>¡Registro exitoso! Redirigiendo...</p>";
-            $_SESSION['usuario_id'] = $new_user_id;
-            $_SESSION['usuario_nombre'] = $nombre;
-            header("Location: ../PHP/index.php");
-            exit();
-            } else {
-            $mensaje = "<p class='message error'>Error al registrar usuario: " . $conn->error . "</p>";
-            }
-            $consulta->close();
-            }    
-
-            // Verificar si la llamada a la API fue exitosa y el resultado es entregable y no desechable
             if ($verificacion && isset($verificacion['success']) && $verificacion['success']) {
                 if (isset($verificacion['result']) && $verificacion['result'] == 'deliverable' && isset($verificacion['disposable']) && !$verificacion['disposable']) {
 
                     $password_hashed = password_hash($password, PASSWORD_BCRYPT);
+                    $fecha_registro = date('Y-m-d H:i:s');
 
-                    // Insertar usuario usando prepared statements
-                    $consulta = $conn->prepare("INSERT INTO usuarios (nombre, email, contraseña) VALUES (?, ?, ?)");
-                    $consulta->bind_param("sss", $nombre, $email, $password_hashed);
+                    $consulta = $conn->prepare("INSERT INTO usuarios (nombre, email, contraseña, fecha_registro) VALUES (?, ?, ?, ?)");
+                    $consulta->bind_param("ssss", $nombre, $email, $password_hashed, $fecha_registro);
                     $resultado = $consulta->execute();
 
                     if ($resultado) {
-                        // Obtener el ID del usuario recién insertado
                         $new_user_id = mysqli_insert_id($conn);
-
-                        // Establecer las variables de sesión con el ID y nombre del nuevo usuario
-                        $_SESSION['usuario_id'] = $new_user_id;
-                        $_SESSION['usuario_nombre'] = $nombre;
-                        
-                        // *** NUEVA FUNCIONALIDAD: Establecer mensaje de bienvenida ***
+                        $_SESSION['usuario'] = [
+                            'id' => $new_user_id,
+                            'nombre' => $nombre
+                        ];
                         $_SESSION['mensaje_bienvenida'] = "¡Bienvenido a Digital Mind, " . htmlspecialchars($nombre) . "! Tu cuenta ha sido creada exitosamente.";
                         $_SESSION['mostrar_bienvenida'] = true;
-
-                        // Redirigir al usuario
                         header("Location: ../PHP/index.php");
                         exit();
                     } else {
-                        // Error al ejecutar la inserción
                         $mensaje = "<p class='message error'>Error al registrar usuario: " . $conn->error . "</p>";
                     }
                     $consulta->close();
 
                 } else {
-                    // Email no válido según Kickbox
                     $reason = $verificacion['reason'] ?? 'Motivo desconocido';
                     $mensaje = "<p class='message error'>Correo no válido: " . htmlspecialchars($reason) . "</p>";
                 }
             } elseif ($verificacion && isset($verificacion['message'])) {
-                // Error reportado por la función verificarEmail
                 $mensaje = "<p class='message error'>Error de verificación: " . htmlspecialchars($verificacion['message']) . "</p>";
             } else {
-                // Error general al verificar el correo electrónico
                 $mensaje = "<p class='message error'>Error al verificar el correo electrónico.</p>";
             }
         }
-         $consulta_email->close(); // Cerrar el statement de verificación de email
-    }
+        $stmt->close();
+    } else {
         $mensaje = "<p class='message error'>Completa todos los campos.</p>";
     }
 }

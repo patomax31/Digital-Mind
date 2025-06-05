@@ -11,6 +11,7 @@ if (!isset($_SESSION['admin']) || $_SESSION['admin'] !== true) {
 
 include 'blog_db.php';
 include 'header.php';
+include 'dashboard.php';
 
 // Verificar si el usuario es admin
 
@@ -35,7 +36,10 @@ if (isset($_GET['eliminar'])) {
 }
 
 // Obtener publicaciones
-$sql = "SELECT * FROM publicaciones_2 ORDER BY fecha_creacion DESC";
+$sql = "SELECT p.*, c.nombre AS categoria_nombre 
+        FROM publicaciones_2 p 
+        LEFT JOIN categoria c ON p.categoria_id = c.id 
+        ORDER BY p.fecha_creacion DESC";
 $result = $conn->query($sql);
 
 // Eliminar comentario del formulario de contacto
@@ -94,7 +98,7 @@ if (isset($_GET['eliminar_contacto'])) {
                     <h3><?= htmlspecialchars($row["titular"]) ?></h3>
                     <p><strong>ID:</strong> <?= $row["id"] ?></p>
                     <p><strong>Fecha:</strong> <?= $row["fecha"] ?></p>
-                    <p><strong>Categoría:</strong> <?= htmlspecialchars($row["categoria"]) ?></p>
+                    <p><strong>Categoría:</strong> <?= htmlspecialchars($row["categoria_nombre"] ?? 'Sin categoría') ?></p>
                     <p><strong>Autor:</strong> <?= htmlspecialchars($row["autor"] ?? 'Admin') ?></p>
                     <p><strong>Descripción corta:</strong> <?= htmlspecialchars($row["descripcion_corta"]) ?></p>
                     <a href="../PHP/post_completo.php?id=<?= $row['id'] ?>" class="btn btn-view" target="_blank"><i class="fas fa-eye"></i> Ver en sitio</a>
@@ -181,7 +185,7 @@ $contacto_result = $conn->query("SELECT * FROM contacto ORDER BY id DESC");
                     <p><strong>ID:</strong> <?= $row["id"] ?></p>
                 <td><?= htmlspecialchars($row['titular']) ?></td>
                 <td><?= $row['fecha'] ?></td>
-                <td><?= htmlspecialchars($row['categoria']) ?></td>
+                <td><?= htmlspecialchars($row['categoria_nombre'] ?? 'Sin categoría') ?></td>
                 <td><?= htmlspecialchars(string: $row['autor'] ?? 'Admin') ?></td>
                 <td><?= htmlspecialchars($row['descripcion_corta']) ?></td>
                 <td>

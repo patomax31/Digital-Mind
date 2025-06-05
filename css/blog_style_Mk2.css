@@ -25,39 +25,6 @@
       text-align: center;
   }
 
-  
-  header{
-    position: fixed; /* Mantiene el header en la parte superior mientras se hace scroll */
-    top: 0; /* Posiciona el header justo en el tope */
-    left: 0; /* Asegura que comience desde el borde izquierdo */
-    width: 100%; /* Ocupa el ancho completo de la pantalla */
-    z-index: 1000; /* Hace que el header esté por encima de otros elementos */
-    background-color: #e3f2f7; /* Fondo para diferenciación */
-    font-size: 3.1rem;
-  }
-  /* --- Encabezado (Header) --- */
-  .header-content {
-    background-color: #e3f2f7; /* Color de fondo claro */
-    ; /* Color de fondo del header */
-    padding: 10px 20px;
-    align-items: center;
-    justify-content: space-between;
-    display: flex; /* Flexbox para alinear elementos */
-    justify-content: space-around;
-    width: 100%;
-    }
-    
-  
-  
-    /* Logo a la izquierda */
-    .logo {
-      position: relative;
-      left: 90px;
-      font-size: 0.5em;
-      font-weight: bold;
-    
-    }
-    
     /* Navegación central: Inicio, Categoría y Búsqueda */
     .nav-center { 
       display: flex; 

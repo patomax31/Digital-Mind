@@ -1,3 +1,12 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- ...resto del código... -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -40,17 +49,8 @@
             <svg class="category-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
               <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 0 0-3 3v4.318a3 3 0 0 0 .879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 0 0 5.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 0 0-2.122-.879H5.25ZM6.375 7.5a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25Z" clip-rule="evenodd" />
             </svg>
-            <a href="#">Categoría</a>
-            <div class="categoria-dropdown-content">
-              <a href="categoria.php?categoria=Educacion Primaria">Educacion Primaria</a>
-              <a href="categoria.php?categoria=Educacion Secundaria">Educacion Secundaria</a>
-              <a href="categoria.php?categoria=Educacion Preparatoria">Educacion Preparatoria</a>
-              <a href="categoria.php?categoria=Metodos de Aprendizaje">Metodos de Aprendizaje</a>
-              <a href="categoria.php?categoria=Educacion Vocacional">Educacion Vocacional</a>
-              <a href="categoria.php?categoria=Habilidades de Redaccion">Habilidades de Redaccion</a>
-              <a href="categoria.php?categoria=Ciencia y Matematicas">Ciencia y Matematicas</a>
-              <a href="categoria.php?categoria=Para Tutores">Para Tutores</a>
-            </div>
+            <a href="categorias.php">Categoría</a>
+          
             
           </div>
         <div class="action-container">
@@ -140,10 +140,31 @@
     <!-- Usuario logueado -->
     <div class="action-container user-logged">
       <a href="../PHP/perfil.php"> <!-- Added anchor tag here -->
-        <img src="../images/profile_picture.png" alt="Foto de perfil" class="profile-pic">
+        <img 
+        src="<?php
+          if (isset($_SESSION['usuario_avatar']) && !empty($_SESSION['usuario_avatar'])) {
+              echo '/digital-mind/' . htmlspecialchars($_SESSION['usuario_avatar']);
+          } else {
+              echo '../images/profile_picture.png';
+          }
+        ?>" 
+        alt="Foto de perfil" class="profile-pic">
+
         <span class="username">
-          <?= isset($_SESSION['admin_nombre']) ? $_SESSION['admin_nombre'] : $_SESSION['usuario_nombre']; ?>
+          <?php
+            if (isset($_SESSION['admin_nombre'])) {
+                echo htmlspecialchars($_SESSION['admin_nombre']);
+            } elseif (isset($_SESSION['usuario_nombre'])) {
+                echo htmlspecialchars($_SESSION['usuario_nombre']);
+            } elseif (isset($_SESSION['usuario']['nombre'])) {
+                echo htmlspecialchars($_SESSION['usuario']['nombre']);
+            } else {
+                echo "Usuario";
+            }
+          ?>
         </span>
+
+
       </a> <!-- Closed anchor tag here -->
     </div>
 

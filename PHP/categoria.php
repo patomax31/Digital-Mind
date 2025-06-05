@@ -1,50 +1,36 @@
 <?php
+session_start();
 include 'blog_db.php';
+include 'header.php';
+include 'dashboard.php';
 
-$categoria = isset($_GET['categoria']) ? $conn->real_escape_string($_GET['categoria']) : '';
-
-if (empty($categoria)) {
+$categoria_id = isset($_GET['id']) ? intval($_GET['id']) : 0;
+if ($categoria_id <= 0) {
     die("Categoría no especificada.");
 }
 
-$sql = "SELECT * FROM publicaciones_2 WHERE categoria = '$categoria' ORDER BY fecha DESC";
+// Obtener nombre de la categoría
+$sql_cat = "SELECT nombre FROM categoria WHERE id = $categoria_id";
+$res_cat = $conn->query($sql_cat);
+if ($res_cat->num_rows === 0) {
+    die("Categoría no encontrada.");
+}
+$row_cat = $res_cat->fetch_assoc();
+$sql_cat = "SELECT nombre, descripcion_corta, imagen FROM categoria WHERE id = $categoria_id";
+$res_cat = $conn->query($sql_cat);
+if ($res_cat->num_rows === 0) {
+    die("Categoría no encontrada.");
+}
+$row_cat = $res_cat->fetch_assoc();
+$tituloCategoria = $row_cat['nombre'];
+$descripcionCategoria = $row_cat['descripcion_corta'];
+$imagenCategoria = $row_cat['imagen'];
+$tituloCategoria = $row_cat['nombre'];
+
+// Obtener publicaciones de la categoría
+$sql = "SELECT * FROM publicaciones_2 WHERE categoria_id = $categoria_id ORDER BY fecha DESC";
 $resultado = $conn->query($sql);
 
-include 'header.php';
-?>
-
-<?php
-$tituloCategoria = '';
-$colorFondo = '#d1f0f0';
-
-switch ($categoria) {
-  case 'Educacion Primaria':
-    $tituloCategoria = 'Educación Primaria';
-    break;
-  case 'Educacion Secundaria':
-    $tituloCategoria = 'Educación Secundaria';
-    break;
-  case 'Educacion Preparatoria':
-    $tituloCategoria = 'Educación Preparatoria';
-    break;
-  case 'Metodos de Aprendizaje':
-    $tituloCategoria = 'Métodos de Aprendizaje';
-    break;
-  case 'Educacion Vocacional':
-    $tituloCategoria = 'Educación Vocacional';
-    break;
-  case 'Habilidades de Redaccion':
-    $tituloCategoria = 'Habilidades de Redacción';
-    break;
-  case 'Ciencia y Matematicas':
-    $tituloCategoria = 'Ciencia y Matemáticas';
-    break;
-  case 'Para Tutores':
-    $tituloCategoria = 'Para Tutores';
-    break;
-  default:
-    $tituloCategoria = 'Categoría no encontrada';
-}
 ?>
 
 <!DOCTYPE html>
@@ -173,7 +159,13 @@ switch ($categoria) {
 <body>
 
   <div class="categoria-banner">
+    <?php if (!empty($imagenCategoria)): ?>
+      <img src="../IMG/<?= htmlspecialchars($imagenCategoria) ?>" alt="Imagen de la categoría" style="width:80px;height:80px;object-fit:cover;border-radius:50%;margin-bottom:10px;">
+    <?php endif; ?>
     <h1><?php echo $tituloCategoria; ?></h1>
+    <?php if (!empty($descripcionCategoria)): ?>
+      <p style="color:#444;"><?= htmlspecialchars($descripcionCategoria) ?></p>
+    <?php endif; ?>
   </div>
 
   <div class="categoria-content">

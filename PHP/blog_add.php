@@ -8,6 +8,10 @@ if (!isset($_SESSION['admin']) || $_SESSION['admin'] !== true) {
 
 include 'blog_db.php';
 include 'header.php';
+
+$query_categorias = "SELECT * FROM categoria ORDER BY nombre ASC";
+$result_categorias = mysqli_query($conn, $query_categorias);
+$categoria_id_actual = $post['categoria_id'] ?? null;
 ?>
 
 
@@ -134,23 +138,25 @@ include 'header.php';
         </div>
         
         <div class="form-group">
-            <label for="fecha">Fecha:</label>
-            <input type="date" name="fecha" id="fecha" required>
+                        <label for="fecha" class="form-label">Fecha</label>
+                        <input type="date" class="form-control" id="fecha" name="fecha" 
+                            value="<?php echo $fecha; ?>" 
+                            min="2000-01-01" 
+                            max="<?php echo date('Y-m-d'); ?>" required>
         </div>
         
          <div class="form-group">
             <label for="categoria">Categoría:</label>
-            <select class="form-select" name="categoria" id="categoria" required>
-                <option value="" disabled selected>Selecciona una categoría</option>
-                <option value="Educación Primaria">📖 Educación Primaria</option>
-                <option value="Educación Secundaria">📖 Educación Secundaria</option>
-                <option value="Educación Preparatoria">📖 Educación Preparatoria</option>
-                <option value="Métodos de Aprendizaje">🎯 Métodos de Aprendizaje</option>
-                <option value="Educación Vocacional">💼 Educación Vocacional</option>
-                <option value="Habilidades de Redacción">✍️ Habilidades de Redacción</option>
-                <option value="Ciencia y Matemáticas">🧪 Ciencia y Matemáticas</option>
-                <option value="Para Tutores">👨‍👩‍👧‍👦 Para Tutores</option>
-            </select>
+        <select class="form-select" id="categoria_id" name="categoria_id" required>
+                            <option value="" disabled>Selecciona una categoría</option>
+                            <?php while ($cat = mysqli_fetch_assoc($result_categorias)): ?>
+    
+                                <option value="<?= $cat['id'] ?>" <?= ($cat['id'] == $categoria_id_actual) ? 'selected' : '' ?>>
+                                <?= htmlspecialchars($cat['nombre']) ?>
+
+                            </option>
+                            <?php endwhile; ?>
+                        </select>
         </div>
 
         <div class="form-group">
@@ -172,8 +178,8 @@ include 'header.php';
         
         <div class="form-group">
             <label for="imagen">Imagen destacada:</label>
-            <input type="file" name="imagen" id="imagen" accept="image/*">
-            <small>Sube una imagen que represente tu publicación (opcional)</small>
+            <input type="file" name="imagen" id="imagen" accept="image/*" required>
+            <small>Sube una imagen que represente tu publicación (obligatoria)</small>
         </div>
         
         <button type="submit" class="submit-btn">Publicar Entrada</button>
@@ -195,3 +201,21 @@ include 'header.php';
 </body>
 </html>
 
+<script>
+document.querySelector('form').addEventListener('submit', function(e) {
+    const titular = document.getElementById('titular').value.trim();
+    const contenido = tinymce.get('contenido').getContent({ format: 'text' }).trim();
+    const imagen = document.getElementById('imagen').files.length;
+
+    if (titular.length < 10 || contenido.length < 50) {
+        e.preventDefault();
+        alert('El título debe tener al menos 10 caracteres y el contenido 50 caracteres.');
+        return;
+    }
+
+    if (imagen === 0) {
+        e.preventDefault();
+        alert('Debes subir una imagen destacada.');
+    }
+});
+</script>

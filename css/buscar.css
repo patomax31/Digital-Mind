@@ -1,24 +1,103 @@
-.search-container {
-  position: relative;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  background: #e3f2f7;
+  padding-top: 90px; /* Ajusta según la altura real de tu header */
+}
+
+/* Asegura que el header no cubra el contenido */
+body, .contenedor-busqueda {
+  padding-top: 90px; /* Ajusta según la altura real de tu header */
+}
+
+.contenedor-busqueda {
+  width: 66vw; /* 2/3 de la pantalla */
+  min-width: 340px;
+  max-width: 900px;
+  margin: 40px auto 0 auto;
+  background: #a0c0c5;
+  border-radius: 22px;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.09);
+  padding: 40px 32px 32px 32px;
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
-#search-form input {
-  padding: 5px 10px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-left: 8px;
+.titulo-resultados {
+  text-align: center;
+  color: #000000;
+  margin-bottom: 28px;
+  font-size: 2rem;  
+  font-weight: 700;
 }
 
-#search-form button {
-  padding: 5px 10px;
-  margin-left: 5px;
-  cursor: pointer;
-  border: none;
-  background-color: #007bff;
-  color: white;
-  border-radius: 4px;
-  font-weight: bold;
+.lista-resultados {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.card-noticia {
+  background: #f4f8ff;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,123,255,0.07);
+  padding: 22px 18px;
+  transition: box-shadow 0.2s, transform 0.2s;
+  border: 1.5px solid #e3eefd;
+}
+
+.card-noticia:hover {
+  box-shadow: 0 8px 24px rgba(0,123,255,0.13);
+  transform: translateY(-2px) scale(1.01);
+  border-color: #b3d7ff;
+}
+
+.card-noticia h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.25rem;
+  color: #222;
+}
+
+.card-noticia a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.card-noticia a.btn-leer-mas {
+  display: inline-block;
+  margin-top: 10px;
+  background: linear-gradient(90deg, #007bff 60%, #00d2ff 100%);
+  color: #fff;
+  padding: 8px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.card-noticia a.btn-leer-mas:hover {
+  background: linear-gradient(90deg, #005fa3 60%, #00bfff 100%);
+}
+
+.mensaje-error {
+  color: #d32f2f;
+  background: #fff3f3;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 24px 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .contenedor-busqueda {
+    width: 95vw;
+    padding: 24px 8px;
+  }
+  .titulo-resultados {
+    font-size: 1.3rem;
+  }
 }

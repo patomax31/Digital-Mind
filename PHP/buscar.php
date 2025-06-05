@@ -1,5 +1,6 @@
 <?php
 include 'blog_db.php';
+include 'header.php';
 
 $q = isset($_GET['q']) ? trim($_GET['q']) : '';
 ?>
@@ -8,7 +9,11 @@ $q = isset($_GET['q']) ? trim($_GET['q']) : '';
 <head>
     <meta charset="UTF-8">
     <title>Resultados de búsqueda</title>
+<<<<<<< HEAD
     <link rel="stylesheet" href="../css/Pagina_resultado.css">
+=======
+    <link rel="stylesheet" href="../css/buscar.css"> 
+>>>>>>> 7e3d1c7bf111f808f148d1018d1044fbc67cbb28
 </head>
 <body>
 
@@ -44,5 +49,8 @@ $q = isset($_GET['q']) ? trim($_GET['q']) : '';
     ?>
 </div>
 
+<?php
+include 'footer.php';
+?>
 </body>
 </html>

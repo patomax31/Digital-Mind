@@ -1,9 +1,9 @@
 <?php
 // Conexión a la base de datos
-include 'blog_db.php';
+include __DIR__ . '/blog_db.php';
 
 // Consulta para obtener los 5 posts más recientes para el carrusel
-$sql_carousel = "SELECT * FROM publicaciones_2 ORDER BY fecha_creacion DESC LIMIT 5";
+$sql_carousel = "SELECT * FROM publicaciones_2 WHERE estado = 'publicado' ORDER BY fecha_creacion DESC LIMIT 5";
 $resultado_carousel = $conn->query($sql_carousel);
 
 // Verificar si hay resultados
@@ -17,13 +17,24 @@ if ($resultado_carousel->num_rows > 0) {
 
 <style>
 .carousel-container {
-    width: 95%; /* Reduciendo el ancho para dejar espacio en las esquinas */
+    width: 95%;
+    max-width: 1200px; /* Añadir un ancho máximo */
     position: relative;
-    margin: 120px auto 20px auto; /* Centrando el carrusel y añadiendo márgenes */
+    margin: 20px auto; /* Ajustar márgenes */
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transición para el efecto hover */
+}
+
+/* Modificar el título para que sea blanco */
+.carousel-caption h2 {
+    color: white; /* Añadir esta línea */
+    margin: 0 0 10px 0;
+    font-size: 28px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px;
+    display: inline-block;
+    border-radius: 5px;
 }
 
 .carousel-container:hover {
