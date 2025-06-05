@@ -221,7 +221,9 @@ body {
     <button class="nav-bar-button" role="button" data-section="comentarios">Comentarios</button>
     <button class="nav-bar-button" role="button" data-section="contacto">Contacto</button>
     <button class="nav-bar-button" role="button" data-section="admin">Admin</button>
+    <a href="admin_dashboard.php" class="nav-bar-button" role="button" style="text-decoration: none;">Dashboard</a>
 </div>
+
 
 <!-- Sección Posts -->
 <div id="posts" class="section-content active">
@@ -310,9 +312,10 @@ body {
         <div class="posts-actions">
 
     <button class="nav-bar-button" role="button" data-section="posts">Volver a Publicaciones</button>
-                <div class="bulk-actions">
-                <button id="bulk-archive" disabled>Archivar seleccionados</button>
+            <div class="bulk-actions">
+            <button id="bulk-unarchive" disabled>Desarchivar seleccionados</button>
             </div>
+
     </div>
     
     <table class="table">
@@ -669,7 +672,60 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+  const unarchiveButton = document.getElementById('bulk-unarchive');
+  const archivedCheckboxes = document.querySelectorAll('.row-checkbox-archived');
+  const selectAllArchived = document.getElementById('select-all-archived');
+
+  function updateUnarchiveButton() {
+    const anyChecked = [...archivedCheckboxes].some(cb => cb.checked);
+    unarchiveButton.disabled = !anyChecked;
+  }
+
+  archivedCheckboxes.forEach(cb => {
+    cb.addEventListener('change', updateUnarchiveButton);
+  });
+
+  selectAllArchived.addEventListener('change', function () {
+    archivedCheckboxes.forEach(cb => cb.checked = selectAllArchived.checked);
+    updateUnarchiveButton();
+  });
+
+  // Acción de desarchivar en lote
+  unarchiveButton.addEventListener('click', function () {
+    const selectedIDs = [...archivedCheckboxes]
+      .filter(cb => cb.checked)
+      .map(cb => cb.dataset.id);
+
+    if (selectedIDs.length === 0) return;
+
+    if (!confirm("¿Desarchivar los seleccionados?")) return;
+
+    fetch('blog_desarchivar_bulk.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ ids: selectedIDs })
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        alert("Publicaciones desarchivadas.");
+        location.reload();
+      } else {
+        alert("Error al desarchivar.");
+      }
+    })
+    .catch(error => {
+      console.error("Error:", error);
+      alert("Hubo un problema.");
+    });
+  });
+  console.log("Desarchivando IDs:", selectedIDs);
+
 </script>
+
 
 </body>
 
