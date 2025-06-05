@@ -26,7 +26,8 @@ $imagenCategoria = $row_cat['imagen'];
 $tituloCategoria = $row_cat['nombre'];
 
 // Obtener publicaciones de la categoría
-$sql = "SELECT * FROM publicaciones_2 WHERE categoria_id = $categoria_id ORDER BY fecha DESC";
+// Obtener publicaciones públicas de la categoría
+$sql = "SELECT * FROM publicaciones_2 WHERE categoria_id = $categoria_id AND estado = 'publicado' ORDER BY fecha DESC";
 $resultado = $conn->query($sql);
 
 ?>
@@ -36,7 +37,7 @@ $resultado = $conn->query($sql);
 <head>
   <meta charset="UTF-8">
   <title><?php echo $tituloCategoria; ?> | DIGITALMIND</title>
-  <link rel="stylesheet" href="../css/blog_style_Mk2.css">
+  <link rel="stylesheet" href="../css/style.css">
   <style>
     .categoria-banner {
       background-color: <?php echo $colorFondo; ?>;

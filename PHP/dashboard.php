@@ -13,14 +13,45 @@ if (session_status() === PHP_SESSION_NONE) {
 // y estar disponible globalmente o ser pasada.
 
 // Verificar si hay un usuario logueado - corregido para usar las variables correctas
-$loggedIn = isset($_SESSION['usuario']) || isset($_SESSION['user_id']);
+$loggedIn = false;
 $userName = '';
 
+// Usuario común
 if (isset($_SESSION['usuario']) && is_array($_SESSION['usuario'])) {
-    $userName = $_SESSION['usuario']['nombre'];
+    $userName = $_SESSION['usuario']['nombre'] ?? 'Usuario';
+    $loggedIn = true;
 } elseif (isset($_SESSION['user_name'])) {
     $userName = $_SESSION['user_name'];
+    $loggedIn = true;
+} elseif (isset($_SESSION['usuario_id'])) {
+    // Si solo está el ID, obtenemos los datos de la BD
+    $usuario_id = $_SESSION['usuario_id'];
+    $sql = "SELECT nombre FROM usuarios WHERE id = $usuario_id";
+    $res = $conn->query($sql);
+    if ($res && $row = $res->fetch_assoc()) {
+        $userName = $row['nombre'];
+        $loggedIn = true;
+    }
 }
+
+// Administrador
+elseif (isset($_SESSION['admin']) && is_array($_SESSION['admin'])) {
+    $userName = $_SESSION['admin']['nombre'] ?? 'Administrador';
+    $loggedIn = true;
+} elseif (isset($_SESSION['admin_name'])) {
+    $userName = $_SESSION['admin_name'];
+    $loggedIn = true;
+} elseif (isset($_SESSION['admin_id'])) {
+    // Si solo está el ID, obtenemos los datos de la tabla admin
+    $admin_id = $_SESSION['admin_id'];
+    $sql = "SELECT nombre FROM admin WHERE id = $admin_id";
+    $res = $conn->query($sql);
+    if ($res && $row = $res->fetch_assoc()) {
+        $userName = $row['nombre'];
+        $loggedIn = true;
+    }
+}
+
 
 // Consulta para obtener las publicaciones más recientes (limitado a 5)
 $recientes = [];

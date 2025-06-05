@@ -106,7 +106,7 @@ if (isset($_GET['eliminar'])) {
     $stmt = $conn->prepare("DELETE FROM publicaciones_2 WHERE id = ?");
     $stmt->bind_param("i", $id);
     $stmt->execute();
-    header('Location: crud.php?success=1');
+    header('Location: crud.php');
     exit();
 }
 
@@ -114,11 +114,11 @@ if (isset($_GET['eliminar'])) {
 if (isset($_GET['eliminar_admin'])) {
     $admin_id = intval($_GET['eliminar_admin']);
 
-    $query = "DELETE FROM usuarios WHERE id = $admin_id AND rol = 'admin'";
+    $query = "DELETE FROM admin WHERE id = $admin_id";
     $resultado = mysqli_query($conn, $query);
 
     if ($resultado) {
-        header("Location: crud.php#admin");
+        header("Location: crud.php");
         exit;
     } else {
         echo "Error al eliminar el administrador.";

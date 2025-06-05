@@ -1,29 +1,24 @@
 <?php
 include("blog_db.php");
-include 'header.php'; 
+include 'header.php';
 session_start();
 
-$user = null; // <-- Inicializar
+$user = null;
+$esAdmin = false;
 
-// Determinar si es usuario o admin
 if (isset($_SESSION['usuario_id'])) {
     $usuario_id = $_SESSION['usuario_id'];
     $sql_user = "SELECT * FROM usuarios WHERE id = '$usuario_id'";
     $user_result = $conn->query($sql_user);
     $user = $user_result->fetch_assoc();
+    $esAdmin = false;
 } elseif (isset($_SESSION['admin_id'])) {
     $admin_id = $_SESSION['admin_id'];
     $sql_user = "SELECT * FROM admin WHERE id = '$admin_id'";
     $user_result = $conn->query($sql_user);
     $user = $user_result->fetch_assoc();
+    $esAdmin = true;
 }
-
-// Promoción manual si es "carlos"
-if (isset($user['nombre']) && $user['nombre'] === 'carlos') {
-    $user['rol'] = 'admin';
-}
-
-
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -88,8 +83,19 @@ if (isset($user['nombre']) && $user['nombre'] === 'carlos') {
                 <?php echo $user ? htmlspecialchars($user['nombre']) : 'No disponible'; ?></div>
                 <div class="info-item"><strong>Correo electrónico:</strong><br>
                 <?php echo $user ? htmlspecialchars($user['email']) : 'No disponible'; ?></div>
-                <div class="info-item"><strong>Rol:</strong><br>
-                <?php echo $user ? ucfirst(htmlspecialchars($user['rol'] ?? 'usuario')) : 'No disponible'; ?></div>
+                <div class="info-item">
+                    <strong>Rol:</strong><br>
+                    <?php
+                        if (isset($_SESSION['admin_id'])) {
+                            echo 'Admin';
+                        } elseif (isset($_SESSION['usuario_id'])) {
+                            echo 'Usuario';
+                        } else {
+                            echo 'No disponible';
+                        }
+                    ?>
+                </div>
+
                 <div class="info-item"><strong>Fecha de registro:</strong><br>
                 <?php echo $user ? htmlspecialchars($user['fecha_registro'] ?? '') : 'No disponible'; ?></div>
             </div>
