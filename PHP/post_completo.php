@@ -61,7 +61,7 @@ if (isset($_POST['enviar_comentario']) && $commentsTableExists) {
             $usuario_id = intval($_SESSION['admin_id']);
         }
 
-        $conn->query("INSERT INTO comentarios (id_post, nombre, comentario, id) 
+        $conn->query("INSERT INTO comentarios (id_post, nombre, comentario, usuario_id) 
                     VALUES ($id, '$usuario', '$comentario', $usuario_id)");
         $commentFeedback = 'success';
     } else {
@@ -70,16 +70,22 @@ if (isset($_POST['enviar_comentario']) && $commentsTableExists) {
 }
 
     // Eliminar comentario
-    if (isset($_POST['delete_comment']) && isset($_POST['delete_comment_id']) && isset($_SESSION['usuario'])) {
+    if (isset($_POST['delete_comment']) && isset($_POST['delete_comment_id'])) {
         $comentario_id = intval($_POST['delete_comment_id']);
-        $usuario_id = intval($_SESSION['usuario']['id']);
 
-        $verifica = $conn->query("SELECT * FROM comentarios WHERE id = $comentario_id AND usuario_id = $usuario_id");
-
-        if ($verifica->num_rows > 0) {
+        // Permitir borrar si es admin o si el comentario es del usuario
+        if (isset($_SESSION['admin'])) {
             $conn->query("DELETE FROM comentarios WHERE id = $comentario_id");
             header("Location: " . $_SERVER['REQUEST_URI']);
             exit;
+        } elseif (isset($_SESSION['usuario'])) {
+            $usuario_id = intval($_SESSION['usuario']['id']);
+            $verifica = $conn->query("SELECT * FROM comentarios WHERE id = $comentario_id AND usuario_id = $usuario_id");
+            if ($verifica->num_rows > 0) {
+                $conn->query("DELETE FROM comentarios WHERE id = $comentario_id");
+                header("Location: " . $_SERVER['REQUEST_URI']);
+                exit;
+            }
         }
     }
 
@@ -525,8 +531,8 @@ include 'header.php';
                             <small><?= date('d/m/Y H:i', strtotime($coment['fecha'])) ?></small>
 
                             <?php if (
-                                isset($_SESSION['usuario']) &&
-                                $_SESSION['usuario']['id'] == $coment['usuario_id']
+                                (isset($_SESSION['usuario']) && $_SESSION['usuario']['id'] == $coment['usuario_id']) ||
+                                isset($_SESSION['admin'])
                             ): ?>
                                 <form method="POST" style="display:inline;">
                                     <input type="hidden" name="delete_comment_id" value="<?= $coment['id'] ?>">

@@ -1,6 +1,11 @@
 <?php
 require 'blog_db.php';
 
+$directorioImagenes = "../images/categorias/";
+$extensionesPermitidas = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
+$maxTamano = 2 * 1024 * 1024; // 2MB
+$nombreImagen = 'default-categoria.jpg';
+
 // Crear categoría
 if (isset($_POST['crear'])) {
     $nombre = $_POST['nombre'];
@@ -9,10 +14,27 @@ if (isset($_POST['crear'])) {
 
     // Manejo de imagen
     if (isset($_FILES['imagen']) && $_FILES['imagen']['error'] === UPLOAD_ERR_OK) {
-        $img_name = uniqid() . '_' . basename($_FILES['imagen']['name']);
-        $img_path = '../IMG/' . $img_name;
-        if (move_uploaded_file($_FILES['imagen']['tmp_name'], $img_path)) {
-            $imagen = $img_name;
+        $fileTmpPath = $_FILES['imagen']['tmp_name'];
+        $fileName = $_FILES['imagen']['name'];
+        $fileSize = $_FILES['imagen']['size'];
+        $fileNameCmps = explode(".", $fileName);
+        $fileExtension = strtolower(end($fileNameCmps));
+
+        if (in_array($fileExtension, $extensionesPermitidas)) {
+            if ($fileSize <= $maxTamano) {
+                $nombreImagen = uniqid('cat_') . '.' . $fileExtension;
+                $destino = $directorioImagenes . $nombreImagen;
+                if (!file_exists($directorioImagenes)) {
+                    mkdir($directorioImagenes, 0755, true);
+                }
+                if (!move_uploaded_file($fileTmpPath, $destino)) {
+                    die("Error al subir la imagen de la categoría.");
+                }
+            } else {
+                die("La imagen de la categoría excede el tamaño permitido (2MB)");
+            }
+        } else {
+            die("Formato de imagen de categoría no permitido.");
         }
     }
 

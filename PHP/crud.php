@@ -376,7 +376,6 @@ if (searchArchived) {
                             <a class="delete-button" href="admin_panel.php?eliminar=<?= $row['id'] ?>" onclick="return confirm('¿Eliminar publicación?')" title="Eliminar artículo">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">                                    
                                     <path fill="currentcolor" d="M135.2 17.7L128 32 32 32C14.3 32 0 46.3 0 64S14.3 96 32 96l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-96 0-7.2-14.3C307.4 6.8 296.3 0 284.2 0L163.8 0c-12.1 0-23.2 6.8-28.6 17.7zM416 128L32 128 53.2 467c1.6 25.3 22.6 45 47.9 45l245.8 0c25.3 0 46.3-19.7 47.9-45L416 128z"/>
-                                </svg>
                             </a>
                     </td>
                 </tr>
@@ -398,27 +397,32 @@ if (searchArchived) {
   <div class="form-row">
     <input type="text" name="nombre" placeholder="Nombre de la categoría" required>
     <input type="text" name="descripcion_corta" placeholder="Descripción corta" maxlength="255" required>
+    <!-- Se eliminó el campo de imagen -->
     <button type="submit" name="crear">Crear</button>
   </div>
 </form>
 
-    <table class="table">
-        <thead>
+    <?php
+$categorias_array = [];
+while ($cat = mysqli_fetch_assoc($result_categorias)) {
+    $categorias_array[] = $cat;
+}
+?>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($categorias_array as $cat): ?>
             <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-            mysqli_data_seek($result_categorias, 0);
-            while ($cat = mysqli_fetch_assoc($result_categorias)): ?>
-                <tr>
-                    <td><?= $cat['id'] ?></td>
-                    <td><?= htmlspecialchars($cat['nombre']) ?></td>
-                    <td>
-                      <!-- Botón Editar -->
+                <td><?= $cat['id'] ?></td>
+                <td><?= htmlspecialchars($cat['nombre']) ?></td>
+                <td>
+                    <!-- Botón Editar -->
 <a class="edit-button" href="categoria_crud.php?editar=<?= $cat['id'] ?>" title="Editar categoría">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16">
         <path fill="currentcolor" d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z"/>
@@ -431,21 +435,21 @@ if (searchArchived) {
         <path fill="currentcolor" d="M135.2 17.7L128 32 32 32C14.3 32 0 46.3 0 64S14.3 96 32 96l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-96 0-7.2-14.3C307.4 6.8 296.3 0 284.2 0L163.8 0c-12.1 0-23.2 6.8-28.6 17.7zM416 128L32 128 53.2 467c1.6 25.3 22.6 45 47.9 45l245.8 0c25.3 0 46.3-19.7 47.9-45L416 128z"/>
     </svg>
 </a>
-                    </td>
-                </tr>
-            <?php endwhile; ?>
-        </tbody>
-    </table>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
 
-    <!-- Nueva sección para mostrar las categorías en tarjetas -->
-    <div class="categoria-container">
-        <?php while ($categoria = mysqli_fetch_assoc($result_categorias)): ?>
-            <div class="categoria-card">
-                <h2><?= htmlspecialchars($categoria['nombre']) ?></h2>
-                <p><?= htmlspecialchars($categoria['descripcion_corta']) ?></p>
-            </div>
-        <?php endwhile; ?>
-    </div>
+<!-- Tarjetas de categorías -->
+<div class="categoria-container">
+    <?php foreach ($categorias_array as $categoria): ?>
+        <div class="categoria-card">
+            <h2><?= htmlspecialchars($categoria['nombre']) ?></h2>
+            <p><?= htmlspecialchars($categoria['descripcion_corta']) ?></p>
+        </div>
+    <?php endforeach; ?>
+</div>
 </div>
 <!-- Sección Usuarios -->
 <div id="usuarios" class="section-content">
@@ -536,14 +540,13 @@ if (searchArchived) {
                             <a class="edit-button" href="../PHP/comentario_edit.php?id=<?php echo $row['id']; ?>">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                     <path fill="currentcolor" d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z" />
-                                </svg>
+                        </svg>
                             </a>
 
                             <!-- Botón Eliminar -->
                             <a class="delete-button" href="admin_panel.php?eliminar_comentario=<?= $row['id'] ?>" onclick="return confirm('¿Eliminar comentario?')" title="Eliminar comentario">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">                                    
                                     <path fill="currentcolor" d="M135.2 17.7L128 32 32 32C14.3 32 0 46.3 0 64S14.3 96 32 96l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-96 0-7.2-14.3C307.4 6.8 296.3 0 284.2 0L163.8 0c-12.1 0-23.2 6.8-28.6 17.7zM416 128L32 128 53.2 467c1.6 25.3 22.6 45 47.9 45l245.8 0c25.3 0 46.3-19.7 47.9-45L416 128z"/>
-                                </svg>
                             </a>
                         </div>
                     </td>
@@ -645,66 +648,9 @@ if (searchArchived) {
     </script>
 
 
-<script>
 
-    //Script apra el boton del bulk
+<script>
 document.addEventListener('DOMContentLoaded', function () {
-    const bulkArchiveBtn = document.getElementById('bulk-archive');
-    const checkboxes = document.querySelectorAll('.row-checkbox');
-    const selectAll = document.getElementById('select-all-posts');
-
-    // Habilitar botón si hay seleccionados
-    function toggleButtonState() {
-        const selected = document.querySelectorAll('.row-checkbox:checked');
-        bulkArchiveBtn.disabled = selected.length === 0;
-    }
-
-    // Evento individual
-    checkboxes.forEach(cb => cb.addEventListener('change', toggleButtonState));
-
-    // Seleccionar todo
-    selectAll.addEventListener('change', function () {
-        checkboxes.forEach(cb => cb.checked = selectAll.checked);
-        toggleButtonState();
-    });
-
-    // Enviar IDs para archivar
-    bulkArchiveBtn.addEventListener('click', function () {
-        const selectedIds = Array.from(document.querySelectorAll('.row-checkbox:checked'))
-                                 .map(cb => cb.getAttribute('data-id'));
-
-        if (selectedIds.length === 0) return;
-
-        if (!confirm('¿Estás seguro de archivar las publicaciones seleccionadas?')) return;
-
-        // Enviar a PHP por fetch
-        fetch('../PHP/bulk_archive.php', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ ids: selectedIds })
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                alert('Publicaciones archivadas con éxito');
-                location.reload(); // Recarga la página para ver los cambios
-            } else {
-                alert('Ocurrió un error al archivar.');
-            }
-        })
-        .catch(err => {
-            console.error(err);
-            alert('Error en la solicitud');
-        });
-    });
-});
-</script>
-
-</body>
-
-</html>
-
-<script>
     const selectAll = document.getElementById('select-all-posts');
     const checkboxes = document.querySelectorAll('.row-checkbox');
     const bulkDelete = document.getElementById('bulk-delete');
@@ -712,86 +658,84 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function updateBulkButtons() {
         const anyChecked = [...checkboxes].some(cb => cb.checked);
-        bulkDelete.disabled = !anyChecked;
-        bulkArchive.disabled = !anyChecked;
+        if (bulkDelete) bulkDelete.disabled = !anyChecked;
+        if (bulkArchive) bulkArchive.disabled = !anyChecked;
     }
 
-    selectAll.addEventListener('change', () => {
-        checkboxes.forEach(cb => cb.checked = selectAll.checked);
-        updateBulkButtons();
-    });
+    if (selectAll) {
+        selectAll.addEventListener('change', () => {
+            checkboxes.forEach(cb => cb.checked = selectAll.checked);
+            updateBulkButtons();
+        });
+    }
 
     checkboxes.forEach(cb => {
         cb.addEventListener('change', () => {
             const allChecked = [...checkboxes].every(cb => cb.checked);
-            selectAll.checked = allChecked;
+            if (selectAll) selectAll.checked = allChecked;
             updateBulkButtons();
         });
     });
-
-    bulkDelete.addEventListener('click', () => {
-        const selectedIds = [...checkboxes]
-            .filter(cb => cb.checked)
-            .map(cb => cb.dataset.id);
-        if (confirm(`¿Eliminar ${selectedIds.length} publicaciones?`)) {
-            // Aquí puedes enviar selectedIds por fetch/AJAX o formulario oculto
-            console.log('Eliminar:', selectedIds);
-        }
-    });
-
-    bulkArchive.addEventListener('click', () => {
-        const selectedIds = [...checkboxes]
-            .filter(cb => cb.checked)
-            .map(cb => cb.dataset.id);
-        if (confirm(`¿Archivar ${selectedIds.length} publicaciones?`)) {
-            // Aquí puedes manejar el archivado
-            console.log('Archivar:', selectedIds);
-        }
-    });
-
-    // Actualiza tu código de bulk-actions
-document.getElementById('bulk-delete').addEventListener('click', function() {
-    const selectedIds = [...document.querySelectorAll('.row-checkbox:checked')].map(cb => cb.dataset.id);
-    
-    if (selectedIds.length === 0) return;
-    
-    Swal.fire({
-        title: `¿Eliminar ${selectedIds.length} artículos?`,
-        html: `<div style="text-align:center">Esta acción <strong>eliminará permanentemente</strong> los artículos seleccionados.<br><span style="color:#dc3545;font-weight:bold">¡Esta acción no se puede deshacer!</span></div>`,
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonText: 'Sí, eliminar',
-        cancelButtonText: 'Cancelar'
-    }).then((result) => {
-        if (result.isConfirmed) {
-            // Enviar los IDs por AJAX o formulario
-            const form = document.createElement('form');
-            form.method = 'POST';
-            form.action = '../PHP/eliminar_multiples_posts.php';
-            
-            selectedIds.forEach(id => {
-                const input = document.createElement('input');
-                input.type = 'hidden';
-                input.name = 'ids[]';
-                input.value = id;
-                form.appendChild(input);
-            });
-            
-            document.body.appendChild(form);
-            form.submit();
-        }
-    });
 });
+
+    if (bulkDelete) {
+        bulkDelete.addEventListener('click', () => {
+            const selectedIds = [...checkboxes].filter(cb => cb.checked).map(cb => cb.dataset.id);
+            if (selectedIds.length === 0) return;
+            if (confirm(`¿Eliminar ${selectedIds.length} publicaciones?`)) {
+                const form = document.createElement('form');
+                form.method = 'POST';
+                form.action = '../PHP/eliminar_multiples_posts.php';
+                selectedIds.forEach(id => { // <-- CORREGIDO
+                    const input = document.createElement('input');
+                    input.type = 'hidden';
+                    input.name = 'ids[]';
+                    input.value = id;
+                    form.appendChild(input);
+                });
+                document.body.appendChild(form);
+                form.submit();
+            }
+        });
+    }
+
+    if (bulkArchive) {
+        bulkArchive.addEventListener('click', () => {
+            const selectedIds = [...checkboxes].filter(cb => cb.checked).map(cb => cb.dataset.id);
+            if (selectedIds.length === 0) return;
+            if (confirm(`¿Archivar ${selectedIds.length} publicaciones?`)) {
+                fetch('../PHP/bulk_archive.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ ids: selectedIds })
+                })
+                .then(response => response.json())
+                .then (data => { // <-- CORREGIDO
+                    if (data.success) {
+                        alert('Publicaciones archivadas con éxito');
+                        location.reload();
+                    } else {
+                        alert('Ocurrió un error al archivar.');
+                    }
+                })
+                .catch(err => {
+                    console.error(err);
+                    alert('Error en la solicitud');
+                });
+            }
+        });
+    }
+
+    updateBulkButtons();
 </script>
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-    const modal = document.getElementById('modal-archivado');
-    if (modal) {
-        setTimeout(() => {
-            modal.style.display = 'none';
-        }, 3000); // Ocultar después de 3 segundos
-    }
-});
+    document.addEventListener('DOMContentLoaded', function () {
+        const modal = document.getElementById('modal-archivado');
+        if (modal) {
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 3000); // Ocultar después de 3 segundos
+        }
+    });
 </script>
-

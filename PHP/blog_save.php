@@ -1,4 +1,12 @@
 <?php
+session_start();
+
+// Verificar si el usuario inició sesión y es admin
+if (!isset($_SESSION['admin']) || $_SESSION['admin'] !== true) {
+    header('Location: index.php');
+    exit;
+}
+
 // Configuración de la base de datos
 require 'blog_db.php';
 
@@ -46,7 +54,8 @@ if (isset($_FILES['imagen']) && $_FILES['imagen']['error'] === UPLOAD_ERR_OK) {
 $titular = htmlspecialchars(trim($_POST['titular']));
 $fecha = $_POST['fecha'];
 $descripcion_corta = htmlspecialchars(trim($_POST['descripcion_corta']));
-$categoria = $_POST['categoria'] ?? '';
+$categoria_id = isset($_POST['categoria_id']) ? intval($_POST['categoria_id']) : null;
+var_dump($categoria_id); // Temporal para depuración
 
 // Sanitizar el contenido manteniendo etiquetas HTML básicas
 $contenido = trim($_POST['contenido']);
@@ -66,17 +75,17 @@ if (empty($titular) || empty($fecha) || empty($descripcion_corta) || empty($cont
 // Insertar en la base de datos
 try {
     $stmt = $conn->prepare("INSERT INTO publicaciones_2 
-        (titular, fecha, descripcion_corta, contenido, referencia, imagen, categoria) 
+        (titular, fecha, descripcion_corta, contenido, referencia, imagen, categoria_id) 
         VALUES (?, ?, ?, ?, ?, ?, ?)");
     
-    $stmt->bind_param("sssssss", 
+    $stmt->bind_param("ssssssi", 
         $titular,
         $fecha,
         $descripcion_corta,
         $contenido, // Aquí guardamos el HTML formateado
         $referencia,
         $nombreImagen,
-        $categoria);
+        $categoria_id);
     
     if ($stmt->execute()) {
         // Redirigir a la página de éxito o mostrar mensaje
@@ -95,13 +104,4 @@ try {
     $stmt->close();
     $conn->close();
 }
-
-session_start();
-
-// Verificar si el usuario inició sesión y es admin
-if (!isset($_SESSION['usuario_id']) || $_SESSION['rol'] !== 'admin') {
-    header('Location: index.php'); // o muestra mensaje de acceso denegado
-    exit;
-}
-
 ?>
