@@ -5,7 +5,7 @@ include 'header.php';
 include 'dashboard.php';
 
 $categoria_id = isset($_GET['id']) ? intval($_GET['id']) : 0;
-if ($categoria_id <= 0) {
+if ($categoria_id < 0) {
     die("Categoría no especificada.");
 }
 
@@ -18,9 +18,7 @@ if ($res_cat->num_rows === 0) {
 $row_cat = $res_cat->fetch_assoc();
 $sql_cat = "SELECT nombre, descripcion_corta, imagen FROM categoria WHERE id = $categoria_id";
 $res_cat = $conn->query($sql_cat);
-if ($res_cat->num_rows === 0) {
-    die("Categoría no encontrada.");
-}
+
 $row_cat = $res_cat->fetch_assoc();
 $tituloCategoria = $row_cat['nombre'];
 $descripcionCategoria = $row_cat['descripcion_corta'];

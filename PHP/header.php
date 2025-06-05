@@ -13,7 +13,6 @@ if (session_status() === PHP_SESSION_NONE) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php echo isset($pageTitle) ? $pageTitle : 'DIGITALMIND - Educación y Calidad'; ?></title>
-  <link rel="stylesheet" href="/css/Pagina_resultado.css">
   <link rel="stylesheet" href="../css/search.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,31 +54,36 @@ if (session_status() === PHP_SESSION_NONE) {
             
           </div>
         <div class="action-container">
+            
             <svg class="create-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-              <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z" clip-rule="evenodd" />
-            </svg>
+            <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 0 1 .67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 1 1-.671-1.34l.041-.022ZM12 9a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clip-rule="evenodd" />
+          </svg>
+
             <a href="about_us.php">Acerca de</a>
         </div>
       </div>
-              <div class="action-container">
-            <svg class="create-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-              <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z" clip-rule="evenodd" />
-            </svg>
+            <div class="action-container">
+              <svg class="create-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+              <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
+              <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
+              </svg>
+
             <a href="contact_page.php">Pagina de contacto</a>
         </div>
       </div>
       <div class="action-container search-container">
 
-  <!-- Icono de búsqueda personalizado -->
-  <svg id="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24" style="cursor:pointer;">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m0 0a7 7 0 1 0-9.9-9.9 7 7 0 0 0 9.9 9.9z" />
-  </svg>
+<!-- Estilos -->
+<link rel="stylesheet" href="../css/barra_busqueda.css">
 
-    <!--buscar-->
-    <link rel="stylesheet" href="../css/barra_busqueda.css">
-    <form id="search-form" action="buscar.php" method="GET" style="display: none;" class="barra-busqueda">
-  <input type="text" name="q" placeholder="Buscar..." autocomplete="off" required />
-  <button type="submit"><i class="fa fa-search"></i></button>
+<!-- Formulario de búsqueda visible y con estilo -->
+<form id="search-form" action="buscar.php" method="GET" class="barra-busqueda">
+  <input type="text" name="q" placeholder="buscar..." autocomplete="off" required />
+  <button type="submit">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" width="20" height="20">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m0 0a7 7 0 1 0-9.9-9.9 7 7 0 0 0 9.9 9.9z" />
+    </svg>
+  </button>
 </form>
  
 
@@ -104,7 +108,7 @@ if (session_status() === PHP_SESSION_NONE) {
         <svg class="Login-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
           <path fill-rule="evenodd" d="M3 3h18v2H3V3zm0 4h18v2H3V7zm0 4h18v2H3v-2zm0 4h18v2H3v-2zm0 4h18v2H3v-2z" clip-rule="evenodd" />
         </svg>
-        <a href="admin_panel.php">Panel Admin</a>
+        <a href="crud.php">Panel Admin</a>
       </div>
     <?php endif; ?>
 
@@ -172,7 +176,12 @@ if (session_status() === PHP_SESSION_NONE) {
     <!-- Mostrar botón solo si es ADMIN -->
     <?php if (isset($_SESSION['admin'])): ?>
       <div class="action-container">
-        <a href="admin_panel.php" class="admin-panel-button">Panel Admin</a>
+<a href="crud.php">
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 6px;">
+    <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
+  </svg>
+  Panel Admin
+</a>
       </div>
     <?php endif; ?>
 

@@ -1,5 +1,5 @@
 <?php
-require 'conexion.php'; // Asegúrate de tener tu conexión
+require 'blog_db.php'; // Asegúrate de tener tu conexión
 
 header('Content-Type: application/json');
 
@@ -12,9 +12,9 @@ if (!isset($data['ids']) || !is_array($data['ids'])) {
 $ids = array_map('intval', $data['ids']);
 $id_list = implode(',', $ids);
 
-$sql = "UPDATE blogs SET estado = 'archivado' WHERE id IN ($id_list)";
-if (mysqli_query($conexion, $sql)) {
+$sql = "UPDATE publicaciones_2 SET estado = 'archivado' WHERE id IN ($id_list)";
+if (mysqli_query($conn, $sql)) {
     echo json_encode(['success' => true]);
 } else {
-    echo json_encode(['success' => false, 'message' => mysqli_error($conexion)]);
+    echo json_encode(['success' => false, 'message' => mysqli_error($conn)]);
 }

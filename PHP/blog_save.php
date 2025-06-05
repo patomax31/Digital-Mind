@@ -54,8 +54,7 @@ if (isset($_FILES['imagen']) && $_FILES['imagen']['error'] === UPLOAD_ERR_OK) {
 $titular = htmlspecialchars(trim($_POST['titular']));
 $fecha = $_POST['fecha'];
 $descripcion_corta = htmlspecialchars(trim($_POST['descripcion_corta']));
-$categoria_id = isset($_POST['categoria_id']) ? intval($_POST['categoria_id']) : null;
-var_dump($categoria_id); // Temporal para depuración
+$categoria = $_POST['categoria_id'] ?? '';
 
 // Sanitizar el contenido manteniendo etiquetas HTML básicas
 $contenido = trim($_POST['contenido']);
@@ -104,4 +103,13 @@ try {
     $stmt->close();
     $conn->close();
 }
+
+session_start();
+
+// Verificar si el usuario inició sesión y es admin
+if (!isset($_SESSION['usuario_id']) || $_SESSION['rol'] !== 'admin') {
+    header('Location: index.php'); // o muestra mensaje de acceso denegado
+    exit;
+}
+
 ?>

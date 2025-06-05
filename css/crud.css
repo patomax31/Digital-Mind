@@ -199,12 +199,14 @@ button:hover svg {
     vertical-align: middle; /* Alinea mejor los SVG */
 }
 
-h1{
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333;
+h1 {
+  text-align: center;
+  color: #357c7e;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: bold;
 }
+
 
 /* Añade esto a tu crud.css */
 #archivados .table {
@@ -325,4 +327,166 @@ h1{
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+        .section-content {
+            display: none;
+        }
+
+        .section-content.active {
+            display: block;
+        }
+
+
+        .form-categoria {
+  background: #f8fcfc;
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: 0 2px 8px rgba(74,160,162,0.08);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.form-categoria .form-row {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  width: 100%;
+}
+.form-categoria input[type="text"] {
+  padding: 8px 12px;
+  border: 1.5px solid #cbe6e7;
+  border-radius: 6px;
+  font-size: 1em;
+  outline: none;
+  transition: border 0.2s;
+  width: 200px;
+}
+.form-categoria input[type="text"]:focus {
+  border-color: #4aa0a2;
+}
+.form-categoria .file-label {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  background: #eafafa;
+  color: #4aa0a2;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 500;
+  border: 1.5px solid #cbe6e7;
+  transition: background 0.2s, border 0.2s;
+}
+.form-categoria .file-label:hover {
+  background: #d4f3f3;
+  border-color: #4aa0a2;
+}
+.form-categoria .file-label input[type="file"] {
+  display: none;
+}
+.form-categoria button[type="submit"] {
+  background: #4aa0a2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 22px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  margin-left: 10px;
+}
+.form-categoria button[type="submit"]:hover {
+  background: #357c7e;
+  box-shadow: 0 2px 8px rgba(74,160,162,0.15);
+}
+
+#modal-archivado {
+  max-width: 600px;
+  margin: 1rem auto;
+  padding: 1rem 1.5rem;
+  background: #d4f3f3;
+  border: 1.5px solid #4aa0a2;
+  color: #2f6d6e;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(74,160,162,0.1);
+  font-weight: 500;
+  text-align: center;
+}
+.nav-button-container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: #f0fafa;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(74,160,162,0.1);
+}
+
+.nav-bar-button {
+  background: #eafafa;
+  color: #4aa0a2;
+  border: 1.5px solid #cbe6e7;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-bar-button:hover,
+.nav-bar-button.active {
+  background: #4aa0a2;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(74,160,162,0.2);
+  border-color: #4aa0a2;
+}
+.posts-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.posts-header h1 {
+  font-size: 2rem;
+  color: #357c7e;
+  margin-bottom: 1rem;
+}
+
+.posts-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  align-items: center;
+}
+
+.crear-publicacion,
+#bulk-archive,
+.nav-bar-button {
+  background: #eafafa;
+  color: #4aa0a2;
+  border: 1.5px solid #cbe6e7;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.crear-publicacion:hover,
+#bulk-archive:hover,
+.nav-bar-button:hover {
+  background: #4aa0a2;
+  color: white;
+  border-color: #4aa0a2;
+  box-shadow: 0 2px 8px rgba(74,160,162,0.2);
 }

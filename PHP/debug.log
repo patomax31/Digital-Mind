@@ -5217,3 +5217,877 @@
 )
 
 [2025-06-04 23:17:42] Successfully returned translated texts.
+[2025-06-05 03:14:37] Received POST request.
+[2025-06-05 03:14:37] POST data: Array
+(
+    [texts] => ["\n            \n          ","Categoría","Acerca de","Pagina de contacto","","\n                \n                \n                \n                \n                \n                \n                \n\n                  Idioma\n              ","Idioma"," \n        \n\n        \n          carlos        \n\n\n      ","\n          carlos        ","Panel Admin","Cerrar sesión","Resultados para: hola","No se encontraron resultados para 'hola'.","Sobre Nosotros","Quiénes somos","Quiénes somos","Misión y visión","Misión y visión","Nuestro equipo","Nuestro equipo","Categoría","Educación Primaria","Educación Primaria","Educación Secundaria","Educación Secundaria","Educación Preparatoria","Educación Preparatoria","Métodos de Aprendizaje","Métodos de Aprendizaje","Educación Vocacional","Educación Vocacional","Habilidades de Redacción","Habilidades de Redacción","Ciencia y Matemáticas","Ciencia y Matemáticas","Para Tutores","Para Tutores","Contacto","Página de contacto","Página de contacto","Escríbenos","Escríbenos","Llámanos","Llámanos","Enlaces Rápidos","Inicio","Inicio","Crear Blog","Crear Blog","Iniciar sesión","Iniciar sesión","","","","","Derechos Reservados ® Digital-Mind © 2025"]
+    [target_lang] => EN
+)
+
+[2025-06-05 03:14:37] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-06-05 03:14:37] 'texts' parameter received: ["\n            \n          ","Categoría","Acerca de","Pagina de contacto","","\n                \n                \n                \n                \n                \n                \n                \n\n                  Idioma\n              ","Idioma"," \n        \n\n        \n          carlos        \n\n\n      ","\n          carlos        ","Panel Admin","Cerrar sesión","Resultados para: hola","No se encontraron resultados para 'hola'.","Sobre Nosotros","Quiénes somos","Quiénes somos","Misión y visión","Misión y visión","Nuestro equipo","Nuestro equipo","Categoría","Educación Primaria","Educación Primaria","Educación Secundaria","Educación Secundaria","Educación Preparatoria","Educación Preparatoria","Métodos de Aprendizaje","Métodos de Aprendizaje","Educación Vocacional","Educación Vocacional","Habilidades de Redacción","Habilidades de Redacción","Ciencia y Matemáticas","Ciencia y Matemáticas","Para Tutores","Para Tutores","Contacto","Página de contacto","Página de contacto","Escríbenos","Escríbenos","Llámanos","Llámanos","Enlaces Rápidos","Inicio","Inicio","Crear Blog","Crear Blog","Iniciar sesión","Iniciar sesión","","","","","Derechos Reservados ® Digital-Mind © 2025"]
+[2025-06-05 03:14:37] Result of json_decode: Array
+(
+    [0] => 
+            
+          
+    [1] => Categoría
+    [2] => Acerca de
+    [3] => Pagina de contacto
+    [4] => 
+    [5] => 
+                
+                
+                
+                
+                
+                
+                
+
+                  Idioma
+              
+    [6] => Idioma
+    [7] =>  
+        
+
+        
+          carlos        
+
+
+      
+    [8] => 
+          carlos        
+    [9] => Panel Admin
+    [10] => Cerrar sesión
+    [11] => Resultados para: hola
+    [12] => No se encontraron resultados para 'hola'.
+    [13] => Sobre Nosotros
+    [14] => Quiénes somos
+    [15] => Quiénes somos
+    [16] => Misión y visión
+    [17] => Misión y visión
+    [18] => Nuestro equipo
+    [19] => Nuestro equipo
+    [20] => Categoría
+    [21] => Educación Primaria
+    [22] => Educación Primaria
+    [23] => Educación Secundaria
+    [24] => Educación Secundaria
+    [25] => Educación Preparatoria
+    [26] => Educación Preparatoria
+    [27] => Métodos de Aprendizaje
+    [28] => Métodos de Aprendizaje
+    [29] => Educación Vocacional
+    [30] => Educación Vocacional
+    [31] => Habilidades de Redacción
+    [32] => Habilidades de Redacción
+    [33] => Ciencia y Matemáticas
+    [34] => Ciencia y Matemáticas
+    [35] => Para Tutores
+    [36] => Para Tutores
+    [37] => Contacto
+    [38] => Página de contacto
+    [39] => Página de contacto
+    [40] => Escríbenos
+    [41] => Escríbenos
+    [42] => Llámanos
+    [43] => Llámanos
+    [44] => Enlaces Rápidos
+    [45] => Inicio
+    [46] => Inicio
+    [47] => Crear Blog
+    [48] => Crear Blog
+    [49] => Iniciar sesión
+    [50] => Iniciar sesión
+    [51] => 
+    [52] => 
+    [53] => 
+    [54] => 
+    [55] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-05 03:14:37] Target language: EN
+[2025-06-05 03:14:37] Data sent to DeepL API (JSON): {"text":["\n            \n          ","Categor\u00eda","Acerca de","Pagina de contacto","","\n                \n                \n                \n                \n                \n                \n                \n\n                  Idioma\n              ","Idioma"," \n        \n\n        \n          carlos        \n\n\n      ","\n          carlos        ","Panel Admin","Cerrar sesi\u00f3n","Resultados para: hola","No se encontraron resultados para 'hola'.","Sobre Nosotros","Qui\u00e9nes somos","Qui\u00e9nes somos","Misi\u00f3n y visi\u00f3n","Misi\u00f3n y visi\u00f3n","Nuestro equipo","Nuestro equipo","Categor\u00eda","Educaci\u00f3n Primaria","Educaci\u00f3n Primaria","Educaci\u00f3n Secundaria","Educaci\u00f3n Secundaria","Educaci\u00f3n Preparatoria","Educaci\u00f3n Preparatoria","M\u00e9todos de Aprendizaje","M\u00e9todos de Aprendizaje","Educaci\u00f3n Vocacional","Educaci\u00f3n Vocacional","Habilidades de Redacci\u00f3n","Habilidades de Redacci\u00f3n","Ciencia y Matem\u00e1ticas","Ciencia y Matem\u00e1ticas","Para Tutores","Para Tutores","Contacto","P\u00e1gina de contacto","P\u00e1gina de contacto","Escr\u00edbenos","Escr\u00edbenos","Ll\u00e1manos","Ll\u00e1manos","Enlaces R\u00e1pidos","Inicio","Inicio","Crear Blog","Crear Blog","Iniciar sesi\u00f3n","Iniciar sesi\u00f3n","","","","","Derechos Reservados \u00ae Digital-Mind \u00a9 2025"],"target_lang":"EN"}
+[2025-06-05 03:14:38] DeepL API HTTP Code: 200
+[2025-06-05 03:14:38] DeepL API Response: {"translations":[{"detected_source_language":"EN","text":"\n            \n          "},{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"EN","text":""},{"detected_source_language":"ES","text":"\n                \n                \n                \n                \n                \n                \n                \n\n                  Language\n              "},{"detected_source_language":"ES","text":"Language"},{"detected_source_language":"ES","text":" \n        \n\n        \n          carlos\n\n\n      "},{"detected_source_language":"ES","text":"\n          carlos"},{"detected_source_language":"ID","text":"Admin Panel"},{"detected_source_language":"ES","text":"Log off"},{"detected_source_language":"PT","text":"Results for: hola"},{"detected_source_language":"ES","text":"No results were found for 'hello'."},{"detected_source_language":"ES","text":"About Us"},{"detected_source_language":"ES","text":"Who we are"},{"detected_source_language":"ES","text":"Who we are"},{"detected_source_language":"ES","text":"Mission and vision"},{"detected_source_language":"ES","text":"Mission and vision"},{"detected_source_language":"ES","text":"Our team"},{"detected_source_language":"ES","text":"Our team"},{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"Primary Education"},{"detected_source_language":"ES","text":"Primary Education"},{"detected_source_language":"ES","text":"Secondary Education"},{"detected_source_language":"ES","text":"Secondary Education"},{"detected_source_language":"ES","text":"High School Education"},{"detected_source_language":"ES","text":"High School Education"},{"detected_source_language":"ES","text":"Learning Methods"},{"detected_source_language":"ES","text":"Learning Methods"},{"detected_source_language":"ES","text":"Vocational Education"},{"detected_source_language":"ES","text":"Vocational Education"},{"detected_source_language":"ES","text":"Writing Skills"},{"detected_source_language":"ES","text":"Writing Skills"},{"detected_source_language":"ES","text":"Science and Mathematics"},{"detected_source_language":"ES","text":"Science and Mathematics"},{"detected_source_language":"PT","text":"For Tutors"},{"detected_source_language":"PT","text":"For Tutors"},{"detected_source_language":"ES","text":"Contact"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Write to us at"},{"detected_source_language":"ES","text":"Write to us at"},{"detected_source_language":"ES","text":"Call us at"},{"detected_source_language":"ES","text":"Call us at"},{"detected_source_language":"ES","text":"Quick Links"},{"detected_source_language":"ES","text":"Home"},{"detected_source_language":"ES","text":"Home"},{"detected_source_language":"EN","text":"Crear Blog"},{"detected_source_language":"EN","text":"Crear Blog"},{"detected_source_language":"ES","text":"Login"},{"detected_source_language":"ES","text":"Login"},{"detected_source_language":"EN","text":""},{"detected_source_language":"EN","text":""},{"detected_source_language":"EN","text":""},{"detected_source_language":"EN","text":""},{"detected_source_language":"PT","text":"Derechos Reservados ® Digital-Mind © 2025"}]}
+[2025-06-05 03:14:38] Extracted translated texts: Array
+(
+    [0] => 
+            
+          
+    [1] => Category
+    [2] => About
+    [3] => Contact page
+    [4] => 
+    [5] => 
+                
+                
+                
+                
+                
+                
+                
+
+                  Language
+              
+    [6] => Language
+    [7] =>  
+        
+
+        
+          carlos
+
+
+      
+    [8] => 
+          carlos
+    [9] => Admin Panel
+    [10] => Log off
+    [11] => Results for: hola
+    [12] => No results were found for 'hello'.
+    [13] => About Us
+    [14] => Who we are
+    [15] => Who we are
+    [16] => Mission and vision
+    [17] => Mission and vision
+    [18] => Our team
+    [19] => Our team
+    [20] => Category
+    [21] => Primary Education
+    [22] => Primary Education
+    [23] => Secondary Education
+    [24] => Secondary Education
+    [25] => High School Education
+    [26] => High School Education
+    [27] => Learning Methods
+    [28] => Learning Methods
+    [29] => Vocational Education
+    [30] => Vocational Education
+    [31] => Writing Skills
+    [32] => Writing Skills
+    [33] => Science and Mathematics
+    [34] => Science and Mathematics
+    [35] => For Tutors
+    [36] => For Tutors
+    [37] => Contact
+    [38] => Contact page
+    [39] => Contact page
+    [40] => Write to us at
+    [41] => Write to us at
+    [42] => Call us at
+    [43] => Call us at
+    [44] => Quick Links
+    [45] => Home
+    [46] => Home
+    [47] => Crear Blog
+    [48] => Crear Blog
+    [49] => Login
+    [50] => Login
+    [51] => 
+    [52] => 
+    [53] => 
+    [54] => 
+    [55] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-05 03:14:38] Successfully returned translated texts.
+[2025-06-05 03:27:26] Received POST request.
+[2025-06-05 03:27:26] POST data: Array
+(
+    [texts] => ["\n            \n          ","Categoría","Acerca de","Pagina de contacto","","\n                \n                \n                \n                \n                \n                \n                \n\n                  Idioma\n              ","Idioma"," \n        \n\n        \n          carlos        \n\n\n      ","\n          carlos        ","Panel Admin","Cerrar sesión","\n            \n                \n            \n\n            Cambiar Foto\n            \n            ","Cambiar Foto","\n            \n                \n            \n            Subir\n    ","Subir","Información Personal","Comentarios","Información Personal","Nombre completo:\n                carlos","Nombre completo:","Correo electrónico:\n                crosas6@ucol.mx","Correo electrónico:","Rol:\n                Usuario","Rol:","Fecha de registro:\n                ","Fecha de registro:","Comentarios","Sobre Nosotros","Quiénes somos","Quiénes somos","Misión y visión","Misión y visión","Nuestro equipo","Nuestro equipo","Categoría","Educación Primaria","Educación Primaria","Educación Secundaria","Educación Secundaria","Educación Preparatoria","Educación Preparatoria","Métodos de Aprendizaje","Métodos de Aprendizaje","Educación Vocacional","Educación Vocacional","Habilidades de Redacción","Habilidades de Redacción","Ciencia y Matemáticas","Ciencia y Matemáticas","Para Tutores","Para Tutores","Contacto","Página de contacto","Página de contacto","Escríbenos","Escríbenos","Llámanos","Llámanos","Enlaces Rápidos","Inicio","Inicio","Crear Blog","Crear Blog","Iniciar sesión","Iniciar sesión","","","","","Derechos Reservados ® Digital-Mind © 2025"]
+    [target_lang] => EN
+)
+
+[2025-06-05 03:27:26] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-06-05 03:27:26] 'texts' parameter received: ["\n            \n          ","Categoría","Acerca de","Pagina de contacto","","\n                \n                \n                \n                \n                \n                \n                \n\n                  Idioma\n              ","Idioma"," \n        \n\n        \n          carlos        \n\n\n      ","\n          carlos        ","Panel Admin","Cerrar sesión","\n            \n                \n            \n\n            Cambiar Foto\n            \n            ","Cambiar Foto","\n            \n                \n            \n            Subir\n    ","Subir","Información Personal","Comentarios","Información Personal","Nombre completo:\n                carlos","Nombre completo:","Correo electrónico:\n                crosas6@ucol.mx","Correo electrónico:","Rol:\n                Usuario","Rol:","Fecha de registro:\n                ","Fecha de registro:","Comentarios","Sobre Nosotros","Quiénes somos","Quiénes somos","Misión y visión","Misión y visión","Nuestro equipo","Nuestro equipo","Categoría","Educación Primaria","Educación Primaria","Educación Secundaria","Educación Secundaria","Educación Preparatoria","Educación Preparatoria","Métodos de Aprendizaje","Métodos de Aprendizaje","Educación Vocacional","Educación Vocacional","Habilidades de Redacción","Habilidades de Redacción","Ciencia y Matemáticas","Ciencia y Matemáticas","Para Tutores","Para Tutores","Contacto","Página de contacto","Página de contacto","Escríbenos","Escríbenos","Llámanos","Llámanos","Enlaces Rápidos","Inicio","Inicio","Crear Blog","Crear Blog","Iniciar sesión","Iniciar sesión","","","","","Derechos Reservados ® Digital-Mind © 2025"]
+[2025-06-05 03:27:26] Result of json_decode: Array
+(
+    [0] => 
+            
+          
+    [1] => Categoría
+    [2] => Acerca de
+    [3] => Pagina de contacto
+    [4] => 
+    [5] => 
+                
+                
+                
+                
+                
+                
+                
+
+                  Idioma
+              
+    [6] => Idioma
+    [7] =>  
+        
+
+        
+          carlos        
+
+
+      
+    [8] => 
+          carlos        
+    [9] => Panel Admin
+    [10] => Cerrar sesión
+    [11] => 
+            
+                
+            
+
+            Cambiar Foto
+            
+            
+    [12] => Cambiar Foto
+    [13] => 
+            
+                
+            
+            Subir
+    
+    [14] => Subir
+    [15] => Información Personal
+    [16] => Comentarios
+    [17] => Información Personal
+    [18] => Nombre completo:
+                carlos
+    [19] => Nombre completo:
+    [20] => Correo electrónico:
+                crosas6@ucol.mx
+    [21] => Correo electrónico:
+    [22] => Rol:
+                Usuario
+    [23] => Rol:
+    [24] => Fecha de registro:
+                
+    [25] => Fecha de registro:
+    [26] => Comentarios
+    [27] => Sobre Nosotros
+    [28] => Quiénes somos
+    [29] => Quiénes somos
+    [30] => Misión y visión
+    [31] => Misión y visión
+    [32] => Nuestro equipo
+    [33] => Nuestro equipo
+    [34] => Categoría
+    [35] => Educación Primaria
+    [36] => Educación Primaria
+    [37] => Educación Secundaria
+    [38] => Educación Secundaria
+    [39] => Educación Preparatoria
+    [40] => Educación Preparatoria
+    [41] => Métodos de Aprendizaje
+    [42] => Métodos de Aprendizaje
+    [43] => Educación Vocacional
+    [44] => Educación Vocacional
+    [45] => Habilidades de Redacción
+    [46] => Habilidades de Redacción
+    [47] => Ciencia y Matemáticas
+    [48] => Ciencia y Matemáticas
+    [49] => Para Tutores
+    [50] => Para Tutores
+    [51] => Contacto
+    [52] => Página de contacto
+    [53] => Página de contacto
+    [54] => Escríbenos
+    [55] => Escríbenos
+    [56] => Llámanos
+    [57] => Llámanos
+    [58] => Enlaces Rápidos
+    [59] => Inicio
+    [60] => Inicio
+    [61] => Crear Blog
+    [62] => Crear Blog
+    [63] => Iniciar sesión
+    [64] => Iniciar sesión
+    [65] => 
+    [66] => 
+    [67] => 
+    [68] => 
+    [69] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-05 03:27:26] Target language: EN
+[2025-06-05 03:27:26] Data sent to DeepL API (JSON): {"text":["\n            \n          ","Categor\u00eda","Acerca de","Pagina de contacto","","\n                \n                \n                \n                \n                \n                \n                \n\n                  Idioma\n              ","Idioma"," \n        \n\n        \n          carlos        \n\n\n      ","\n          carlos        ","Panel Admin","Cerrar sesi\u00f3n","\n            \n                \n            \n\n            Cambiar Foto\n            \n            ","Cambiar Foto","\n            \n                \n            \n            Subir\n    ","Subir","Informaci\u00f3n Personal","Comentarios","Informaci\u00f3n Personal","Nombre completo:\n                carlos","Nombre completo:","Correo electr\u00f3nico:\n                crosas6@ucol.mx","Correo electr\u00f3nico:","Rol:\n                Usuario","Rol:","Fecha de registro:\n                ","Fecha de registro:","Comentarios","Sobre Nosotros","Qui\u00e9nes somos","Qui\u00e9nes somos","Misi\u00f3n y visi\u00f3n","Misi\u00f3n y visi\u00f3n","Nuestro equipo","Nuestro equipo","Categor\u00eda","Educaci\u00f3n Primaria","Educaci\u00f3n Primaria","Educaci\u00f3n Secundaria","Educaci\u00f3n Secundaria","Educaci\u00f3n Preparatoria","Educaci\u00f3n Preparatoria","M\u00e9todos de Aprendizaje","M\u00e9todos de Aprendizaje","Educaci\u00f3n Vocacional","Educaci\u00f3n Vocacional","Habilidades de Redacci\u00f3n","Habilidades de Redacci\u00f3n","Ciencia y Matem\u00e1ticas","Ciencia y Matem\u00e1ticas","Para Tutores","Para Tutores","Contacto","P\u00e1gina de contacto","P\u00e1gina de contacto","Escr\u00edbenos","Escr\u00edbenos","Ll\u00e1manos","Ll\u00e1manos","Enlaces R\u00e1pidos","Inicio","Inicio","Crear Blog","Crear Blog","Iniciar sesi\u00f3n","Iniciar sesi\u00f3n","","","","","Derechos Reservados \u00ae Digital-Mind \u00a9 2025"],"target_lang":"EN"}
+[2025-06-05 03:27:38] DeepL API HTTP Code: 200
+[2025-06-05 03:27:38] DeepL API Response: {"translations":[{"detected_source_language":"EN","text":"\n            \n          "},{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"EN","text":""},{"detected_source_language":"ES","text":"\n                \n                \n                \n                \n                \n                \n                \n\n                  Language\n              "},{"detected_source_language":"ES","text":"Language"},{"detected_source_language":"ES","text":" \n        \n\n        \n          carlos\n\n\n      "},{"detected_source_language":"ES","text":"\n          carlos"},{"detected_source_language":"ID","text":"Admin Panel"},{"detected_source_language":"ES","text":"Log off"},{"detected_source_language":"IT","text":"\n            \n                \n            \n\n            Change Photos\n            \n            "},{"detected_source_language":"IT","text":"Change Photos"},{"detected_source_language":"RO","text":"\n            \n                \n            \n            Up\n    "},{"detected_source_language":"RO","text":"Up"},{"detected_source_language":"ES","text":"Personal Information"},{"detected_source_language":"ES","text":"Comments"},{"detected_source_language":"ES","text":"Personal Information"},{"detected_source_language":"ES","text":"Full name:\n                carlos"},{"detected_source_language":"ES","text":"Full name:"},{"detected_source_language":"ES","text":"E-mail:\n                crosas6@ucol.mx"},{"detected_source_language":"ES","text":"E-mail:"},{"detected_source_language":"ES","text":"Role:\n                User"},{"detected_source_language":"EN","text":"Rol:"},{"detected_source_language":"ES","text":"Date of registration:\n                "},{"detected_source_language":"ES","text":"Date of registration:"},{"detected_source_language":"ES","text":"Comments"},{"detected_source_language":"ES","text":"About Us"},{"detected_source_language":"ES","text":"Who we are"},{"detected_source_language":"ES","text":"Who we are"},{"detected_source_language":"ES","text":"Mission and vision"},{"detected_source_language":"ES","text":"Mission and vision"},{"detected_source_language":"ES","text":"Our team"},{"detected_source_language":"ES","text":"Our team"},{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"Primary Education"},{"detected_source_language":"ES","text":"Primary Education"},{"detected_source_language":"ES","text":"Secondary Education"},{"detected_source_language":"ES","text":"Secondary Education"},{"detected_source_language":"ES","text":"High School Education"},{"detected_source_language":"ES","text":"High School Education"},{"detected_source_language":"ES","text":"Learning Methods"},{"detected_source_language":"ES","text":"Learning Methods"},{"detected_source_language":"ES","text":"Vocational Education"},{"detected_source_language":"ES","text":"Vocational Education"},{"detected_source_language":"ES","text":"Writing Skills"},{"detected_source_language":"ES","text":"Writing Skills"},{"detected_source_language":"ES","text":"Science and Mathematics"},{"detected_source_language":"ES","text":"Science and Mathematics"},{"detected_source_language":"PT","text":"For Tutors"},{"detected_source_language":"PT","text":"For Tutors"},{"detected_source_language":"ES","text":"Contact"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Write to us at"},{"detected_source_language":"ES","text":"Write to us at"},{"detected_source_language":"ES","text":"Call us at"},{"detected_source_language":"ES","text":"Call us at"},{"detected_source_language":"ES","text":"Quick Links"},{"detected_source_language":"ES","text":"Home"},{"detected_source_language":"ES","text":"Home"},{"detected_source_language":"EN","text":"Crear Blog"},{"detected_source_language":"EN","text":"Crear Blog"},{"detected_source_language":"ES","text":"Login"},{"detected_source_language":"ES","text":"Login"},{"detected_source_language":"EN","text":""},{"detected_source_language":"EN","text":""},{"detected_source_language":"EN","text":""},{"detected_source_language":"EN","text":""},{"detected_source_language":"PT","text":"Derechos Reservados ® Digital-Mind © 2025"}]}
+[2025-06-05 03:27:38] Extracted translated texts: Array
+(
+    [0] => 
+            
+          
+    [1] => Category
+    [2] => About
+    [3] => Contact page
+    [4] => 
+    [5] => 
+                
+                
+                
+                
+                
+                
+                
+
+                  Language
+              
+    [6] => Language
+    [7] =>  
+        
+
+        
+          carlos
+
+
+      
+    [8] => 
+          carlos
+    [9] => Admin Panel
+    [10] => Log off
+    [11] => 
+            
+                
+            
+
+            Change Photos
+            
+            
+    [12] => Change Photos
+    [13] => 
+            
+                
+            
+            Up
+    
+    [14] => Up
+    [15] => Personal Information
+    [16] => Comments
+    [17] => Personal Information
+    [18] => Full name:
+                carlos
+    [19] => Full name:
+    [20] => E-mail:
+                crosas6@ucol.mx
+    [21] => E-mail:
+    [22] => Role:
+                User
+    [23] => Rol:
+    [24] => Date of registration:
+                
+    [25] => Date of registration:
+    [26] => Comments
+    [27] => About Us
+    [28] => Who we are
+    [29] => Who we are
+    [30] => Mission and vision
+    [31] => Mission and vision
+    [32] => Our team
+    [33] => Our team
+    [34] => Category
+    [35] => Primary Education
+    [36] => Primary Education
+    [37] => Secondary Education
+    [38] => Secondary Education
+    [39] => High School Education
+    [40] => High School Education
+    [41] => Learning Methods
+    [42] => Learning Methods
+    [43] => Vocational Education
+    [44] => Vocational Education
+    [45] => Writing Skills
+    [46] => Writing Skills
+    [47] => Science and Mathematics
+    [48] => Science and Mathematics
+    [49] => For Tutors
+    [50] => For Tutors
+    [51] => Contact
+    [52] => Contact page
+    [53] => Contact page
+    [54] => Write to us at
+    [55] => Write to us at
+    [56] => Call us at
+    [57] => Call us at
+    [58] => Quick Links
+    [59] => Home
+    [60] => Home
+    [61] => Crear Blog
+    [62] => Crear Blog
+    [63] => Login
+    [64] => Login
+    [65] => 
+    [66] => 
+    [67] => 
+    [68] => 
+    [69] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-05 03:27:38] Successfully returned translated texts.
+[2025-06-05 03:41:05] Received POST request.
+[2025-06-05 03:41:05] POST data: Array
+(
+    [texts] => ["\n            \n          ","Categoría","Acerca de","Pagina de contacto","","\n                \n                \n                \n                \n                \n                \n                \n\n                  Idioma\n              ","Idioma"," \n        \n\n        \n          carlos        \n\n\n      ","\n          carlos        ","Panel Admin","Cerrar sesión","\n            \n                \n            \n\n            Cambiar Foto\n            \n            ","Cambiar Foto","\n            \n                \n            \n            Subir\n    ","Subir","Información Personal","Comentarios","Información Personal","Nombre completo:\n                carlos","Nombre completo:","Correo electrónico:\n                crosas6@ucol.mx","Correo electrónico:","Rol:\n                Usuario","Rol:","Fecha de registro:\n                ","Fecha de registro:","Comentarios","Sobre Nosotros","Quiénes somos","Quiénes somos","Misión y visión","Misión y visión","Nuestro equipo","Nuestro equipo","Categoría","Educación Primaria","Educación Primaria","Educación Secundaria","Educación Secundaria","Educación Preparatoria","Educación Preparatoria","Métodos de Aprendizaje","Métodos de Aprendizaje","Educación Vocacional","Educación Vocacional","Habilidades de Redacción","Habilidades de Redacción","Ciencia y Matemáticas","Ciencia y Matemáticas","Para Tutores","Para Tutores","Contacto","Página de contacto","Página de contacto","Escríbenos","Escríbenos","Llámanos","Llámanos","Enlaces Rápidos","Inicio","Inicio","Crear Blog","Crear Blog","Iniciar sesión","Iniciar sesión","","","","","Derechos Reservados ® Digital-Mind © 2025"]
+    [target_lang] => EN
+)
+
+[2025-06-05 03:41:05] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-06-05 03:41:05] 'texts' parameter received: ["\n            \n          ","Categoría","Acerca de","Pagina de contacto","","\n                \n                \n                \n                \n                \n                \n                \n\n                  Idioma\n              ","Idioma"," \n        \n\n        \n          carlos        \n\n\n      ","\n          carlos        ","Panel Admin","Cerrar sesión","\n            \n                \n            \n\n            Cambiar Foto\n            \n            ","Cambiar Foto","\n            \n                \n            \n            Subir\n    ","Subir","Información Personal","Comentarios","Información Personal","Nombre completo:\n                carlos","Nombre completo:","Correo electrónico:\n                crosas6@ucol.mx","Correo electrónico:","Rol:\n                Usuario","Rol:","Fecha de registro:\n                ","Fecha de registro:","Comentarios","Sobre Nosotros","Quiénes somos","Quiénes somos","Misión y visión","Misión y visión","Nuestro equipo","Nuestro equipo","Categoría","Educación Primaria","Educación Primaria","Educación Secundaria","Educación Secundaria","Educación Preparatoria","Educación Preparatoria","Métodos de Aprendizaje","Métodos de Aprendizaje","Educación Vocacional","Educación Vocacional","Habilidades de Redacción","Habilidades de Redacción","Ciencia y Matemáticas","Ciencia y Matemáticas","Para Tutores","Para Tutores","Contacto","Página de contacto","Página de contacto","Escríbenos","Escríbenos","Llámanos","Llámanos","Enlaces Rápidos","Inicio","Inicio","Crear Blog","Crear Blog","Iniciar sesión","Iniciar sesión","","","","","Derechos Reservados ® Digital-Mind © 2025"]
+[2025-06-05 03:41:05] Result of json_decode: Array
+(
+    [0] => 
+            
+          
+    [1] => Categoría
+    [2] => Acerca de
+    [3] => Pagina de contacto
+    [4] => 
+    [5] => 
+                
+                
+                
+                
+                
+                
+                
+
+                  Idioma
+              
+    [6] => Idioma
+    [7] =>  
+        
+
+        
+          carlos        
+
+
+      
+    [8] => 
+          carlos        
+    [9] => Panel Admin
+    [10] => Cerrar sesión
+    [11] => 
+            
+                
+            
+
+            Cambiar Foto
+            
+            
+    [12] => Cambiar Foto
+    [13] => 
+            
+                
+            
+            Subir
+    
+    [14] => Subir
+    [15] => Información Personal
+    [16] => Comentarios
+    [17] => Información Personal
+    [18] => Nombre completo:
+                carlos
+    [19] => Nombre completo:
+    [20] => Correo electrónico:
+                crosas6@ucol.mx
+    [21] => Correo electrónico:
+    [22] => Rol:
+                Usuario
+    [23] => Rol:
+    [24] => Fecha de registro:
+                
+    [25] => Fecha de registro:
+    [26] => Comentarios
+    [27] => Sobre Nosotros
+    [28] => Quiénes somos
+    [29] => Quiénes somos
+    [30] => Misión y visión
+    [31] => Misión y visión
+    [32] => Nuestro equipo
+    [33] => Nuestro equipo
+    [34] => Categoría
+    [35] => Educación Primaria
+    [36] => Educación Primaria
+    [37] => Educación Secundaria
+    [38] => Educación Secundaria
+    [39] => Educación Preparatoria
+    [40] => Educación Preparatoria
+    [41] => Métodos de Aprendizaje
+    [42] => Métodos de Aprendizaje
+    [43] => Educación Vocacional
+    [44] => Educación Vocacional
+    [45] => Habilidades de Redacción
+    [46] => Habilidades de Redacción
+    [47] => Ciencia y Matemáticas
+    [48] => Ciencia y Matemáticas
+    [49] => Para Tutores
+    [50] => Para Tutores
+    [51] => Contacto
+    [52] => Página de contacto
+    [53] => Página de contacto
+    [54] => Escríbenos
+    [55] => Escríbenos
+    [56] => Llámanos
+    [57] => Llámanos
+    [58] => Enlaces Rápidos
+    [59] => Inicio
+    [60] => Inicio
+    [61] => Crear Blog
+    [62] => Crear Blog
+    [63] => Iniciar sesión
+    [64] => Iniciar sesión
+    [65] => 
+    [66] => 
+    [67] => 
+    [68] => 
+    [69] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-05 03:41:05] Target language: EN
+[2025-06-05 03:41:05] Data sent to DeepL API (JSON): {"text":["\n            \n          ","Categor\u00eda","Acerca de","Pagina de contacto","","\n                \n                \n                \n                \n                \n                \n                \n\n                  Idioma\n              ","Idioma"," \n        \n\n        \n          carlos        \n\n\n      ","\n          carlos        ","Panel Admin","Cerrar sesi\u00f3n","\n            \n                \n            \n\n            Cambiar Foto\n            \n            ","Cambiar Foto","\n            \n                \n            \n            Subir\n    ","Subir","Informaci\u00f3n Personal","Comentarios","Informaci\u00f3n Personal","Nombre completo:\n                carlos","Nombre completo:","Correo electr\u00f3nico:\n                crosas6@ucol.mx","Correo electr\u00f3nico:","Rol:\n                Usuario","Rol:","Fecha de registro:\n                ","Fecha de registro:","Comentarios","Sobre Nosotros","Qui\u00e9nes somos","Qui\u00e9nes somos","Misi\u00f3n y visi\u00f3n","Misi\u00f3n y visi\u00f3n","Nuestro equipo","Nuestro equipo","Categor\u00eda","Educaci\u00f3n Primaria","Educaci\u00f3n Primaria","Educaci\u00f3n Secundaria","Educaci\u00f3n Secundaria","Educaci\u00f3n Preparatoria","Educaci\u00f3n Preparatoria","M\u00e9todos de Aprendizaje","M\u00e9todos de Aprendizaje","Educaci\u00f3n Vocacional","Educaci\u00f3n Vocacional","Habilidades de Redacci\u00f3n","Habilidades de Redacci\u00f3n","Ciencia y Matem\u00e1ticas","Ciencia y Matem\u00e1ticas","Para Tutores","Para Tutores","Contacto","P\u00e1gina de contacto","P\u00e1gina de contacto","Escr\u00edbenos","Escr\u00edbenos","Ll\u00e1manos","Ll\u00e1manos","Enlaces R\u00e1pidos","Inicio","Inicio","Crear Blog","Crear Blog","Iniciar sesi\u00f3n","Iniciar sesi\u00f3n","","","","","Derechos Reservados \u00ae Digital-Mind \u00a9 2025"],"target_lang":"EN"}
+[2025-06-05 03:41:12] DeepL API HTTP Code: 200
+[2025-06-05 03:41:12] DeepL API Response: {"translations":[{"detected_source_language":"EN","text":"\n            \n          "},{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"EN","text":""},{"detected_source_language":"ES","text":"\n                \n                \n                \n                \n                \n                \n                \n\n                  Language\n              "},{"detected_source_language":"ES","text":"Language"},{"detected_source_language":"ES","text":" \n        \n\n        \n          carlos\n\n\n      "},{"detected_source_language":"ES","text":"\n          carlos"},{"detected_source_language":"ID","text":"Admin Panel"},{"detected_source_language":"ES","text":"Log off"},{"detected_source_language":"IT","text":"\n            \n                \n            \n\n            Change Photos\n            \n            "},{"detected_source_language":"IT","text":"Change Photos"},{"detected_source_language":"RO","text":"\n            \n                \n            \n            Up\n    "},{"detected_source_language":"RO","text":"Up"},{"detected_source_language":"ES","text":"Personal Information"},{"detected_source_language":"ES","text":"Comments"},{"detected_source_language":"ES","text":"Personal Information"},{"detected_source_language":"ES","text":"Full name:\n                carlos"},{"detected_source_language":"ES","text":"Full name:"},{"detected_source_language":"ES","text":"E-mail:\n                crosas6@ucol.mx"},{"detected_source_language":"ES","text":"E-mail:"},{"detected_source_language":"ES","text":"Role:\n                User"},{"detected_source_language":"EN","text":"Rol:"},{"detected_source_language":"ES","text":"Date of registration:\n                "},{"detected_source_language":"ES","text":"Date of registration:"},{"detected_source_language":"ES","text":"Comments"},{"detected_source_language":"ES","text":"About Us"},{"detected_source_language":"ES","text":"Who we are"},{"detected_source_language":"ES","text":"Who we are"},{"detected_source_language":"ES","text":"Mission and vision"},{"detected_source_language":"ES","text":"Mission and vision"},{"detected_source_language":"ES","text":"Our team"},{"detected_source_language":"ES","text":"Our team"},{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"Primary Education"},{"detected_source_language":"ES","text":"Primary Education"},{"detected_source_language":"ES","text":"Secondary Education"},{"detected_source_language":"ES","text":"Secondary Education"},{"detected_source_language":"ES","text":"High School Education"},{"detected_source_language":"ES","text":"High School Education"},{"detected_source_language":"ES","text":"Learning Methods"},{"detected_source_language":"ES","text":"Learning Methods"},{"detected_source_language":"ES","text":"Vocational Education"},{"detected_source_language":"ES","text":"Vocational Education"},{"detected_source_language":"ES","text":"Writing Skills"},{"detected_source_language":"ES","text":"Writing Skills"},{"detected_source_language":"ES","text":"Science and Mathematics"},{"detected_source_language":"ES","text":"Science and Mathematics"},{"detected_source_language":"PT","text":"For Tutors"},{"detected_source_language":"PT","text":"For Tutors"},{"detected_source_language":"ES","text":"Contact"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Write to us at"},{"detected_source_language":"ES","text":"Write to us at"},{"detected_source_language":"ES","text":"Call us at"},{"detected_source_language":"ES","text":"Call us at"},{"detected_source_language":"ES","text":"Quick Links"},{"detected_source_language":"ES","text":"Home"},{"detected_source_language":"ES","text":"Home"},{"detected_source_language":"EN","text":"Crear Blog"},{"detected_source_language":"EN","text":"Crear Blog"},{"detected_source_language":"ES","text":"Login"},{"detected_source_language":"ES","text":"Login"},{"detected_source_language":"EN","text":""},{"detected_source_language":"EN","text":""},{"detected_source_language":"EN","text":""},{"detected_source_language":"EN","text":""},{"detected_source_language":"PT","text":"Derechos Reservados ® Digital-Mind © 2025"}]}
+[2025-06-05 03:41:12] Extracted translated texts: Array
+(
+    [0] => 
+            
+          
+    [1] => Category
+    [2] => About
+    [3] => Contact page
+    [4] => 
+    [5] => 
+                
+                
+                
+                
+                
+                
+                
+
+                  Language
+              
+    [6] => Language
+    [7] =>  
+        
+
+        
+          carlos
+
+
+      
+    [8] => 
+          carlos
+    [9] => Admin Panel
+    [10] => Log off
+    [11] => 
+            
+                
+            
+
+            Change Photos
+            
+            
+    [12] => Change Photos
+    [13] => 
+            
+                
+            
+            Up
+    
+    [14] => Up
+    [15] => Personal Information
+    [16] => Comments
+    [17] => Personal Information
+    [18] => Full name:
+                carlos
+    [19] => Full name:
+    [20] => E-mail:
+                crosas6@ucol.mx
+    [21] => E-mail:
+    [22] => Role:
+                User
+    [23] => Rol:
+    [24] => Date of registration:
+                
+    [25] => Date of registration:
+    [26] => Comments
+    [27] => About Us
+    [28] => Who we are
+    [29] => Who we are
+    [30] => Mission and vision
+    [31] => Mission and vision
+    [32] => Our team
+    [33] => Our team
+    [34] => Category
+    [35] => Primary Education
+    [36] => Primary Education
+    [37] => Secondary Education
+    [38] => Secondary Education
+    [39] => High School Education
+    [40] => High School Education
+    [41] => Learning Methods
+    [42] => Learning Methods
+    [43] => Vocational Education
+    [44] => Vocational Education
+    [45] => Writing Skills
+    [46] => Writing Skills
+    [47] => Science and Mathematics
+    [48] => Science and Mathematics
+    [49] => For Tutors
+    [50] => For Tutors
+    [51] => Contact
+    [52] => Contact page
+    [53] => Contact page
+    [54] => Write to us at
+    [55] => Write to us at
+    [56] => Call us at
+    [57] => Call us at
+    [58] => Quick Links
+    [59] => Home
+    [60] => Home
+    [61] => Crear Blog
+    [62] => Crear Blog
+    [63] => Login
+    [64] => Login
+    [65] => 
+    [66] => 
+    [67] => 
+    [68] => 
+    [69] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-05 03:41:12] Successfully returned translated texts.
+[2025-06-05 04:41:17] Received POST request.
+[2025-06-05 04:41:17] POST data: Array
+(
+    [texts] => ["\n            \n          ","Categoría","Acerca de","Pagina de contacto","","\n                \n                \n                \n                \n                \n                \n                \n\n                  Idioma\n              ","Idioma"," \n        \n\n        \n          carlos        \n\n\n      ","\n          carlos        ","Panel Admin","Cerrar sesión","Resultados para: f","Desbloqtestete Diversos Métodos de Aprendizaje Efectivos","Desbloqtestete Diversos Métodos de Aprendizaje Efectivos","Categoría: ","Fecha: 2025-06-04","Leer más","Desbloquea tu Potencial: Explorando Diversos Métodos de Aprendizaje Efectivos","Desbloquea tu Potencial: Explorando Diversos Métodos de Aprendizaje Efectivos","Categoría: 0","Fecha: 2025-06-03","Leer más","Claves para una Educación Secundaria Significativa y Transformadora","Claves para una Educación Secundaria Significativa y Transformadora","Categoría: Educación Secundaria","Fecha: 2025-05-22","Leer más","Claves para una Educación Exitosa y un Futuro Brillante","Claves para una Educación Exitosa y un Futuro Brillante","Categoría: Educación Preparatoria","Fecha: 2025-05-20","Leer más","Desbloquea tu Potencial: Explorando Diversos Métodos de Aprendizaje Efectivos","Desbloquea tu Potencial: Explorando Diversos Métodos de Aprendizaje Efectivos","Categoría: Métodos de Aprendizaje","Fecha: 2025-05-19","Leer más","El Poder de la Curiosidad en el Aprendizaje Infantil","El Poder de la Curiosidad en el Aprendizaje Infantil","Categoría: 0","Fecha: 2025-05-15","Leer más","Sobre Nosotros","Quiénes somos","Quiénes somos","Misión y visión","Misión y visión","Nuestro equipo","Nuestro equipo","Categoría","Educación Primaria","Educación Primaria","Educación Secundaria","Educación Secundaria","Educación Preparatoria","Educación Preparatoria","Métodos de Aprendizaje","Métodos de Aprendizaje","Educación Vocacional","Educación Vocacional","Habilidades de Redacción","Habilidades de Redacción","Ciencia y Matemáticas","Ciencia y Matemáticas","Para Tutores","Para Tutores","Contacto","Página de contacto","Página de contacto","Escríbenos","Escríbenos","Llámanos","Llámanos","Enlaces Rápidos","Inicio","Inicio","Crear Blog","Crear Blog","Iniciar sesión","Iniciar sesión","","","","","Derechos Reservados ® Digital-Mind © 2025"]
+    [target_lang] => EN
+)
+
+[2025-06-05 04:41:17] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-06-05 04:41:17] 'texts' parameter received: ["\n            \n          ","Categoría","Acerca de","Pagina de contacto","","\n                \n                \n                \n                \n                \n                \n                \n\n                  Idioma\n              ","Idioma"," \n        \n\n        \n          carlos        \n\n\n      ","\n          carlos        ","Panel Admin","Cerrar sesión","Resultados para: f","Desbloqtestete Diversos Métodos de Aprendizaje Efectivos","Desbloqtestete Diversos Métodos de Aprendizaje Efectivos","Categoría: ","Fecha: 2025-06-04","Leer más","Desbloquea tu Potencial: Explorando Diversos Métodos de Aprendizaje Efectivos","Desbloquea tu Potencial: Explorando Diversos Métodos de Aprendizaje Efectivos","Categoría: 0","Fecha: 2025-06-03","Leer más","Claves para una Educación Secundaria Significativa y Transformadora","Claves para una Educación Secundaria Significativa y Transformadora","Categoría: Educación Secundaria","Fecha: 2025-05-22","Leer más","Claves para una Educación Exitosa y un Futuro Brillante","Claves para una Educación Exitosa y un Futuro Brillante","Categoría: Educación Preparatoria","Fecha: 2025-05-20","Leer más","Desbloquea tu Potencial: Explorando Diversos Métodos de Aprendizaje Efectivos","Desbloquea tu Potencial: Explorando Diversos Métodos de Aprendizaje Efectivos","Categoría: Métodos de Aprendizaje","Fecha: 2025-05-19","Leer más","El Poder de la Curiosidad en el Aprendizaje Infantil","El Poder de la Curiosidad en el Aprendizaje Infantil","Categoría: 0","Fecha: 2025-05-15","Leer más","Sobre Nosotros","Quiénes somos","Quiénes somos","Misión y visión","Misión y visión","Nuestro equipo","Nuestro equipo","Categoría","Educación Primaria","Educación Primaria","Educación Secundaria","Educación Secundaria","Educación Preparatoria","Educación Preparatoria","Métodos de Aprendizaje","Métodos de Aprendizaje","Educación Vocacional","Educación Vocacional","Habilidades de Redacción","Habilidades de Redacción","Ciencia y Matemáticas","Ciencia y Matemáticas","Para Tutores","Para Tutores","Contacto","Página de contacto","Página de contacto","Escríbenos","Escríbenos","Llámanos","Llámanos","Enlaces Rápidos","Inicio","Inicio","Crear Blog","Crear Blog","Iniciar sesión","Iniciar sesión","","","","","Derechos Reservados ® Digital-Mind © 2025"]
+[2025-06-05 04:41:17] Result of json_decode: Array
+(
+    [0] => 
+            
+          
+    [1] => Categoría
+    [2] => Acerca de
+    [3] => Pagina de contacto
+    [4] => 
+    [5] => 
+                
+                
+                
+                
+                
+                
+                
+
+                  Idioma
+              
+    [6] => Idioma
+    [7] =>  
+        
+
+        
+          carlos        
+
+
+      
+    [8] => 
+          carlos        
+    [9] => Panel Admin
+    [10] => Cerrar sesión
+    [11] => Resultados para: f
+    [12] => Desbloqtestete Diversos Métodos de Aprendizaje Efectivos
+    [13] => Desbloqtestete Diversos Métodos de Aprendizaje Efectivos
+    [14] => Categoría: 
+    [15] => Fecha: 2025-06-04
+    [16] => Leer más
+    [17] => Desbloquea tu Potencial: Explorando Diversos Métodos de Aprendizaje Efectivos
+    [18] => Desbloquea tu Potencial: Explorando Diversos Métodos de Aprendizaje Efectivos
+    [19] => Categoría: 0
+    [20] => Fecha: 2025-06-03
+    [21] => Leer más
+    [22] => Claves para una Educación Secundaria Significativa y Transformadora
+    [23] => Claves para una Educación Secundaria Significativa y Transformadora
+    [24] => Categoría: Educación Secundaria
+    [25] => Fecha: 2025-05-22
+    [26] => Leer más
+    [27] => Claves para una Educación Exitosa y un Futuro Brillante
+    [28] => Claves para una Educación Exitosa y un Futuro Brillante
+    [29] => Categoría: Educación Preparatoria
+    [30] => Fecha: 2025-05-20
+    [31] => Leer más
+    [32] => Desbloquea tu Potencial: Explorando Diversos Métodos de Aprendizaje Efectivos
+    [33] => Desbloquea tu Potencial: Explorando Diversos Métodos de Aprendizaje Efectivos
+    [34] => Categoría: Métodos de Aprendizaje
+    [35] => Fecha: 2025-05-19
+    [36] => Leer más
+    [37] => El Poder de la Curiosidad en el Aprendizaje Infantil
+    [38] => El Poder de la Curiosidad en el Aprendizaje Infantil
+    [39] => Categoría: 0
+    [40] => Fecha: 2025-05-15
+    [41] => Leer más
+    [42] => Sobre Nosotros
+    [43] => Quiénes somos
+    [44] => Quiénes somos
+    [45] => Misión y visión
+    [46] => Misión y visión
+    [47] => Nuestro equipo
+    [48] => Nuestro equipo
+    [49] => Categoría
+    [50] => Educación Primaria
+    [51] => Educación Primaria
+    [52] => Educación Secundaria
+    [53] => Educación Secundaria
+    [54] => Educación Preparatoria
+    [55] => Educación Preparatoria
+    [56] => Métodos de Aprendizaje
+    [57] => Métodos de Aprendizaje
+    [58] => Educación Vocacional
+    [59] => Educación Vocacional
+    [60] => Habilidades de Redacción
+    [61] => Habilidades de Redacción
+    [62] => Ciencia y Matemáticas
+    [63] => Ciencia y Matemáticas
+    [64] => Para Tutores
+    [65] => Para Tutores
+    [66] => Contacto
+    [67] => Página de contacto
+    [68] => Página de contacto
+    [69] => Escríbenos
+    [70] => Escríbenos
+    [71] => Llámanos
+    [72] => Llámanos
+    [73] => Enlaces Rápidos
+    [74] => Inicio
+    [75] => Inicio
+    [76] => Crear Blog
+    [77] => Crear Blog
+    [78] => Iniciar sesión
+    [79] => Iniciar sesión
+    [80] => 
+    [81] => 
+    [82] => 
+    [83] => 
+    [84] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-05 04:41:17] Target language: EN
+[2025-06-05 04:41:17] Data sent to DeepL API (JSON): {"text":["\n            \n          ","Categor\u00eda","Acerca de","Pagina de contacto","","\n                \n                \n                \n                \n                \n                \n                \n\n                  Idioma\n              ","Idioma"," \n        \n\n        \n          carlos        \n\n\n      ","\n          carlos        ","Panel Admin","Cerrar sesi\u00f3n","Resultados para: f","Desbloqtestete Diversos M\u00e9todos de Aprendizaje Efectivos","Desbloqtestete Diversos M\u00e9todos de Aprendizaje Efectivos","Categor\u00eda: ","Fecha: 2025-06-04","Leer m\u00e1s","Desbloquea tu Potencial: Explorando Diversos M\u00e9todos de Aprendizaje Efectivos","Desbloquea tu Potencial: Explorando Diversos M\u00e9todos de Aprendizaje Efectivos","Categor\u00eda: 0","Fecha: 2025-06-03","Leer m\u00e1s","Claves para una Educaci\u00f3n Secundaria Significativa y Transformadora","Claves para una Educaci\u00f3n Secundaria Significativa y Transformadora","Categor\u00eda: Educaci\u00f3n Secundaria","Fecha: 2025-05-22","Leer m\u00e1s","Claves para una Educaci\u00f3n Exitosa y un Futuro Brillante","Claves para una Educaci\u00f3n Exitosa y un Futuro Brillante","Categor\u00eda: Educaci\u00f3n Preparatoria","Fecha: 2025-05-20","Leer m\u00e1s","Desbloquea tu Potencial: Explorando Diversos M\u00e9todos de Aprendizaje Efectivos","Desbloquea tu Potencial: Explorando Diversos M\u00e9todos de Aprendizaje Efectivos","Categor\u00eda: M\u00e9todos de Aprendizaje","Fecha: 2025-05-19","Leer m\u00e1s","El Poder de la Curiosidad en el Aprendizaje Infantil","El Poder de la Curiosidad en el Aprendizaje Infantil","Categor\u00eda: 0","Fecha: 2025-05-15","Leer m\u00e1s","Sobre Nosotros","Qui\u00e9nes somos","Qui\u00e9nes somos","Misi\u00f3n y visi\u00f3n","Misi\u00f3n y visi\u00f3n","Nuestro equipo","Nuestro equipo","Categor\u00eda","Educaci\u00f3n Primaria","Educaci\u00f3n Primaria","Educaci\u00f3n Secundaria","Educaci\u00f3n Secundaria","Educaci\u00f3n Preparatoria","Educaci\u00f3n Preparatoria","M\u00e9todos de Aprendizaje","M\u00e9todos de Aprendizaje","Educaci\u00f3n Vocacional","Educaci\u00f3n Vocacional","Habilidades de Redacci\u00f3n","Habilidades de Redacci\u00f3n","Ciencia y Matem\u00e1ticas","Ciencia y Matem\u00e1ticas","Para Tutores","Para Tutores","Contacto","P\u00e1gina de contacto","P\u00e1gina de contacto","Escr\u00edbenos","Escr\u00edbenos","Ll\u00e1manos","Ll\u00e1manos","Enlaces R\u00e1pidos","Inicio","Inicio","Crear Blog","Crear Blog","Iniciar sesi\u00f3n","Iniciar sesi\u00f3n","","","","","Derechos Reservados \u00ae Digital-Mind \u00a9 2025"],"target_lang":"EN"}
+[2025-06-05 04:41:18] DeepL API HTTP Code: 200
+[2025-06-05 04:41:18] DeepL API Response: {"translations":[{"detected_source_language":"EN","text":"\n            \n          "},{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"EN","text":""},{"detected_source_language":"ES","text":"\n                \n                \n                \n                \n                \n                \n                \n\n                  Language\n              "},{"detected_source_language":"ES","text":"Language"},{"detected_source_language":"ES","text":" \n        \n\n        \n          carlos\n\n\n      "},{"detected_source_language":"ES","text":"\n          carlos"},{"detected_source_language":"ID","text":"Admin Panel"},{"detected_source_language":"ES","text":"Log off"},{"detected_source_language":"ES","text":"Results for: f"},{"detected_source_language":"ES","text":"Desbloqtestete Diverse Effective Learning Methods"},{"detected_source_language":"ES","text":"Desbloqtestete Diverse Effective Learning Methods"},{"detected_source_language":"ES","text":"Category:"},{"detected_source_language":"SK","text":"Fecha: 2025-06-04"},{"detected_source_language":"ES","text":"Read more"},{"detected_source_language":"ES","text":"Unlocking Your Potential: Exploring Diverse Methods of Learning Effectively"},{"detected_source_language":"ES","text":"Unlocking Your Potential: Exploring Diverse Methods of Learning Effectively"},{"detected_source_language":"ES","text":"Category: 0"},{"detected_source_language":"SK","text":"Fecha: 2025-06-03"},{"detected_source_language":"ES","text":"Read more"},{"detected_source_language":"ES","text":"Keys to a Meaningful and Transformative Secondary Education"},{"detected_source_language":"ES","text":"Keys to a Meaningful and Transformative Secondary Education"},{"detected_source_language":"ES","text":"Category: Secondary Education"},{"detected_source_language":"SK","text":"Fecha: 2025-05-22"},{"detected_source_language":"ES","text":"Read more"},{"detected_source_language":"ES","text":"Keys to a Successful Education and a Bright Future"},{"detected_source_language":"ES","text":"Keys to a Successful Education and a Bright Future"},{"detected_source_language":"ES","text":"Category: High School Education"},{"detected_source_language":"SK","text":"Fecha: 2025-05-20"},{"detected_source_language":"ES","text":"Read more"},{"detected_source_language":"ES","text":"Unlocking Your Potential: Exploring Diverse Methods of Learning Effectively"},{"detected_source_language":"ES","text":"Unlocking Your Potential: Exploring Diverse Methods of Learning Effectively"},{"detected_source_language":"ES","text":"Category: Learning Methods"},{"detected_source_language":"SK","text":"Fecha: 2025-05-19"},{"detected_source_language":"ES","text":"Read more"},{"detected_source_language":"ES","text":"The Power of Curiosity in Children's Learning"},{"detected_source_language":"ES","text":"The Power of Curiosity in Children's Learning"},{"detected_source_language":"ES","text":"Category: 0"},{"detected_source_language":"SK","text":"Fecha: 2025-05-15"},{"detected_source_language":"ES","text":"Read more"},{"detected_source_language":"ES","text":"About Us"},{"detected_source_language":"ES","text":"Who we are"},{"detected_source_language":"ES","text":"Who we are"},{"detected_source_language":"ES","text":"Mission and vision"},{"detected_source_language":"ES","text":"Mission and vision"},{"detected_source_language":"ES","text":"Our team"},{"detected_source_language":"ES","text":"Our team"},{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"Primary Education"},{"detected_source_language":"ES","text":"Primary Education"},{"detected_source_language":"ES","text":"Secondary Education"},{"detected_source_language":"ES","text":"Secondary Education"},{"detected_source_language":"ES","text":"High School Education"},{"detected_source_language":"ES","text":"High School Education"},{"detected_source_language":"ES","text":"Learning Methods"},{"detected_source_language":"ES","text":"Learning Methods"},{"detected_source_language":"ES","text":"Vocational Education"},{"detected_source_language":"ES","text":"Vocational Education"},{"detected_source_language":"ES","text":"Writing Skills"},{"detected_source_language":"ES","text":"Writing Skills"},{"detected_source_language":"ES","text":"Science and Mathematics"},{"detected_source_language":"ES","text":"Science and Mathematics"},{"detected_source_language":"PT","text":"For Tutors"},{"detected_source_language":"PT","text":"For Tutors"},{"detected_source_language":"ES","text":"Contact"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Write to us at"},{"detected_source_language":"ES","text":"Write to us at"},{"detected_source_language":"ES","text":"Call us at"},{"detected_source_language":"ES","text":"Call us at"},{"detected_source_language":"ES","text":"Quick Links"},{"detected_source_language":"ES","text":"Home"},{"detected_source_language":"ES","text":"Home"},{"detected_source_language":"EN","text":"Crear Blog"},{"detected_source_language":"EN","text":"Crear Blog"},{"detected_source_language":"ES","text":"Login"},{"detected_source_language":"ES","text":"Login"},{"detected_source_language":"EN","text":""},{"detected_source_language":"EN","text":""},{"detected_source_language":"EN","text":""},{"detected_source_language":"EN","text":""},{"detected_source_language":"PT","text":"Derechos Reservados ® Digital-Mind © 2025"}]}
+[2025-06-05 04:41:18] Extracted translated texts: Array
+(
+    [0] => 
+            
+          
+    [1] => Category
+    [2] => About
+    [3] => Contact page
+    [4] => 
+    [5] => 
+                
+                
+                
+                
+                
+                
+                
+
+                  Language
+              
+    [6] => Language
+    [7] =>  
+        
+
+        
+          carlos
+
+
+      
+    [8] => 
+          carlos
+    [9] => Admin Panel
+    [10] => Log off
+    [11] => Results for: f
+    [12] => Desbloqtestete Diverse Effective Learning Methods
+    [13] => Desbloqtestete Diverse Effective Learning Methods
+    [14] => Category:
+    [15] => Fecha: 2025-06-04
+    [16] => Read more
+    [17] => Unlocking Your Potential: Exploring Diverse Methods of Learning Effectively
+    [18] => Unlocking Your Potential: Exploring Diverse Methods of Learning Effectively
+    [19] => Category: 0
+    [20] => Fecha: 2025-06-03
+    [21] => Read more
+    [22] => Keys to a Meaningful and Transformative Secondary Education
+    [23] => Keys to a Meaningful and Transformative Secondary Education
+    [24] => Category: Secondary Education
+    [25] => Fecha: 2025-05-22
+    [26] => Read more
+    [27] => Keys to a Successful Education and a Bright Future
+    [28] => Keys to a Successful Education and a Bright Future
+    [29] => Category: High School Education
+    [30] => Fecha: 2025-05-20
+    [31] => Read more
+    [32] => Unlocking Your Potential: Exploring Diverse Methods of Learning Effectively
+    [33] => Unlocking Your Potential: Exploring Diverse Methods of Learning Effectively
+    [34] => Category: Learning Methods
+    [35] => Fecha: 2025-05-19
+    [36] => Read more
+    [37] => The Power of Curiosity in Children's Learning
+    [38] => The Power of Curiosity in Children's Learning
+    [39] => Category: 0
+    [40] => Fecha: 2025-05-15
+    [41] => Read more
+    [42] => About Us
+    [43] => Who we are
+    [44] => Who we are
+    [45] => Mission and vision
+    [46] => Mission and vision
+    [47] => Our team
+    [48] => Our team
+    [49] => Category
+    [50] => Primary Education
+    [51] => Primary Education
+    [52] => Secondary Education
+    [53] => Secondary Education
+    [54] => High School Education
+    [55] => High School Education
+    [56] => Learning Methods
+    [57] => Learning Methods
+    [58] => Vocational Education
+    [59] => Vocational Education
+    [60] => Writing Skills
+    [61] => Writing Skills
+    [62] => Science and Mathematics
+    [63] => Science and Mathematics
+    [64] => For Tutors
+    [65] => For Tutors
+    [66] => Contact
+    [67] => Contact page
+    [68] => Contact page
+    [69] => Write to us at
+    [70] => Write to us at
+    [71] => Call us at
+    [72] => Call us at
+    [73] => Quick Links
+    [74] => Home
+    [75] => Home
+    [76] => Crear Blog
+    [77] => Crear Blog
+    [78] => Login
+    [79] => Login
+    [80] => 
+    [81] => 
+    [82] => 
+    [83] => 
+    [84] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-05 04:41:18] Successfully returned translated texts.

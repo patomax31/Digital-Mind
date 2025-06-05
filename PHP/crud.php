@@ -19,24 +19,23 @@ include 'blog_db.php';
 include 'header.php';
 include 'dashboard.php';
 
-// Procesar eliminaciones
+
 if (isset($_GET['eliminar'])) {
     $id = intval($_GET['eliminar']);
+
     $stmt = $conn->prepare("DELETE FROM publicaciones_2 WHERE id = ?");
     $stmt->bind_param("i", $id);
-    $stmt->execute();
-    header('Location: crud.php?section=posts&eliminado=1');
-    exit();
+
+    if ($stmt->execute()) {
+        // Redirigir de vuelta al panel con mensaje
+        header("Location: admin_panel.php?mensaje=eliminado");
+        exit();
+    } else {
+        echo "Error al eliminar la publicación.";
+    }
 }
 
-if (isset($_GET['eliminar_usuario'])) {
-    $id = intval($_GET['eliminar_usuario']);
-    $stmt = $conn->prepare("DELETE FROM usuarios WHERE id = ?");
-    $stmt->bind_param("i", $id);
-    $stmt->execute();
-    header('Location: crud.php?section=usuarios&eliminado=1');
-    exit();
-}
+
 
 // Consulta para publicaciones activas (solo publicadas)
 $query_posts = "
@@ -100,7 +99,7 @@ $query_admin = "SELECT * FROM admin ORDER BY id DESC";
 $result_admin = mysqli_query($conn, $query_admin);
 
 
-//Procesar eliminacion
+//Procesar eliminacion de blog
 if (isset($_GET['eliminar'])) {
     $id = intval($_GET['eliminar']);
     $stmt = $conn->prepare("DELETE FROM publicaciones_2 WHERE id = ?");
@@ -120,9 +119,37 @@ if (isset($_GET['eliminar_usuario'])) {
     exit();
 }
 
-// Consulta de usuarios (debe ir aquí, después de eliminar)
-$query_usuarios = "SELECT * FROM usuarios ORDER BY id DESC";
-$result_usuarios = mysqli_query($conn, $query_usuarios);
+// Eliminar administrador
+if (isset($_GET['eliminar_admin'])) {
+    $admin_id = intval($_GET['eliminar_admin']);
+
+    $query = "DELETE FROM usuarios WHERE id = $admin_id AND rol = 'admin'";
+    $resultado = mysqli_query($conn, $query);
+
+    if ($resultado) {
+        header("Location: crud.php#admin");
+        exit;
+    } else {
+        echo "Error al eliminar el administrador.";
+    }
+}
+
+// Eliminar usuario
+if (isset($_GET['eliminar_usuario'])) {
+    $usuario_id = intval($_GET['eliminar_usuario']);
+
+    $query = "DELETE FROM usuarios WHERE id = $usuario_id AND rol != 'admin'";
+    $resultado = mysqli_query($conn, $query);
+
+    if ($resultado) {
+        header("Location: crud.php#usuarios");
+        exit;
+    } else {
+        echo "Error al eliminar el usuario.";
+    }
+}
+
+
 ?>
 
 <script>
@@ -180,90 +207,10 @@ if (searchArchived) {
     <meta charset="UTF-8">
     <title>Admin Panel</title>
     <link rel="stylesheet" href="../css/crud.css">
+    <link rel="stylesheet" href="../css/style.css">
     <style>
-        body {
-    padding-top: 80px; /* Ajusta este valor según la altura real de tu header */
-}
-
-        .section-content {
-            display: none;
-        }
-
-        .section-content.active {
-            display: block;
-        }
-
-        header {
-            display: flex;
-            gap: 10px;
-            margin: 10px;
-        }
-
-        .form-categoria {
-  background: #f8fcfc;
-  border-radius: 12px;
-  padding: 18px 20px;
-  box-shadow: 0 2px 8px rgba(74,160,162,0.08);
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1.5rem;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.form-categoria .form-row {
-  display: flex;
-  gap: 14px;
-  align-items: center;
-  width: 100%;
-}
-.form-categoria input[type="text"] {
-  padding: 8px 12px;
-  border: 1.5px solid #cbe6e7;
-  border-radius: 6px;
-  font-size: 1em;
-  outline: none;
-  transition: border 0.2s;
-  width: 200px;
-}
-.form-categoria input[type="text"]:focus {
-  border-color: #4aa0a2;
-}
-.form-categoria .file-label {
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
-  background: #eafafa;
-  color: #4aa0a2;
-  border-radius: 6px;
-  padding: 8px 16px;
-  cursor: pointer;
-  font-weight: 500;
-  border: 1.5px solid #cbe6e7;
-  transition: background 0.2s, border 0.2s;
-}
-.form-categoria .file-label:hover {
-  background: #d4f3f3;
-  border-color: #4aa0a2;
-}
-.form-categoria .file-label input[type="file"] {
-  display: none;
-}
-.form-categoria button[type="submit"] {
-  background: #4aa0a2;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  padding: 8px 22px;
-  font-size: 1em;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s, box-shadow 0.2s;
-  margin-left: 10px;
-}
-.form-categoria button[type="submit"]:hover {
-  background: #357c7e;
-  box-shadow: 0 2px 8px rgba(74,160,162,0.15);
+body {
+    padding-top: 100px; /* Igual a la altura de tu header */
 }
     </style>
 </head>
@@ -288,11 +235,13 @@ if (searchArchived) {
 <!-- Sección Posts -->
 <div id="posts" class="section-content active">
     <h1>Publicaciones</h1>
-    <a class="crear-publicacion" href="blog_add.php" role="button">Crear nueva publicación</a>
-    <button class="nav-bar-button" role="button" data-section="archivados">Archivados</button>
-    <div class="bulk-actions">
-        <button id="bulk-archive" disabled>Archivar seleccionados</button>
-    </div>
+        <div class="posts-actions">
+            <a class="crear-publicacion" href="blog_add.php" role="button">Crear nueva publicación</a>
+            <button class="nav-bar-button" role="button" data-section="archivados">Archivados</button>
+            <div class="bulk-actions">
+                <button id="bulk-archive" disabled>Archivar seleccionados</button>
+            </div>
+        </div>
 
 <table class="table">
     <thead>
@@ -367,8 +316,13 @@ if (searchArchived) {
 <!-- Sección Archivados -->
 <div id="archivados" class="section-content">
     <h1>Blogs Archivados</h1>
+        <div class="posts-actions">
+
     <button class="nav-bar-button" role="button" data-section="posts">Volver a Publicaciones</button>
-    <input type="text" class="search-bar" placeholder="Buscar en archivados..." />
+                <div class="bulk-actions">
+                <button id="bulk-archive" disabled>Archivar seleccionados</button>
+            </div>
+    </div>
     
     <table class="table">
         <thead>
@@ -408,7 +362,7 @@ if (searchArchived) {
                         </a>
 
                         <!-- Botón Eliminar -->
-                            <a class="delete-button" href="admin_panel.php?eliminar=<?= $row['id'] ?>" onclick="return confirm('¿Eliminar publicación?')" title="Eliminar artículo">
+                            <a class="delete-button" href="crud.php?eliminar=<?= $row['id'] ?>" onclick="return confirm('¿Eliminar publicación?')" title="Eliminar artículo">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">                                    
                                     <path fill="currentcolor" d="M135.2 17.7L128 32 32 32C14.3 32 0 46.3 0 64S14.3 96 32 96l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-96 0-7.2-14.3C307.4 6.8 296.3 0 284.2 0L163.8 0c-12.1 0-23.2 6.8-28.6 17.7zM416 128L32 128 53.2 467c1.6 25.3 22.6 45 47.9 45l245.8 0c25.3 0 46.3-19.7 47.9-45L416 128z"/>
                             </a>
@@ -437,44 +391,40 @@ if (searchArchived) {
   </div>
 </form>
 
-    <?php
-$categorias_array = [];
-while ($cat = mysqli_fetch_assoc($result_categorias)) {
-    $categorias_array[] = $cat;
-}
-?>
-<table class="table">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php foreach ($categorias_array as $cat): ?>
+    <table class="table">
+        <thead>
             <tr>
-                <td><?= $cat['id'] ?></td>
-                <td><?= htmlspecialchars($cat['nombre']) ?></td>
-                <td>
-                    <!-- Botón Editar -->
-<a class="edit-button" href="categoria_crud.php?editar=<?= $cat['id'] ?>" title="Editar categoría">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16">
-        <path fill="currentcolor" d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z"/>
-    </svg>
-</a>
-
-<!-- Botón Eliminar -->
-<a class="delete-button" href="categoria_crud.php?eliminar=<?= $cat['id'] ?>" onclick="return confirm('¿Eliminar categoría?')" title="Eliminar categoría">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="16" height="16">                                    
-        <path fill="currentcolor" d="M135.2 17.7L128 32 32 32C14.3 32 0 46.3 0 64S14.3 96 32 96l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-96 0-7.2-14.3C307.4 6.8 296.3 0 284.2 0L163.8 0c-12.1 0-23.2 6.8-28.6 17.7zM416 128L32 128 53.2 467c1.6 25.3 22.6 45 47.9 45l245.8 0c25.3 0 46.3-19.7 47.9-45L416 128z"/>
-    </svg>
-</a>
-                </td>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Acciones</th>
             </tr>
-        <?php endforeach; ?>
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            <?php
+            mysqli_data_seek($result_categorias, 0);
+            while ($cat = mysqli_fetch_assoc($result_categorias)): ?>
+                <tr>
+                    <td><?= $cat['id'] ?></td>
+                    <td><?= htmlspecialchars($cat['nombre']) ?></td>
+                    <td>
+                      <!-- Botón Editar -->
+                    <a class="edit-button" href="categoria_crud.php?editar=<?= $cat['id'] ?>" title="Editar categoría">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16">
+                            <path fill="currentcolor" d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z"/>
+                        </svg>
+                    </a>
+
+                    <!-- Botón Eliminar -->
+                    <a class="delete-button" href="categoria_crud.php?eliminar=<?= $cat['id'] ?>" onclick="return confirm('¿Eliminar categoría?')" title="Eliminar categoría">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="16" height="16">                                    
+                            <path fill="currentcolor" d="M135.2 17.7L128 32 32 32C14.3 32 0 46.3 0 64S14.3 96 32 96l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-96 0-7.2-14.3C307.4 6.8 296.3 0 284.2 0L163.8 0c-12.1 0-23.2 6.8-28.6 17.7zM416 128L32 128 53.2 467c1.6 25.3 22.6 45 47.9 45l245.8 0c25.3 0 46.3-19.7 47.9-45L416 128z"/>
+                        </svg>
+                    </a>
+                    </td>
+                </tr>
+            <?php endwhile; ?>
+        </tbody>
+    </table>
 
 <!-- Tarjetas de categorías -->
 <div class="categoria-container">
@@ -510,24 +460,23 @@ while ($cat = mysqli_fetch_assoc($result_categorias)) {
                     <td colspan="5" style="text-align:center;">No hay usuarios registrados.</td>
                 </tr>
             <?php else: ?>
-                <?php while ($row = mysqli_fetch_assoc($result_usuarios)) : ?>
-                    <tr>
-                        <td><?= htmlspecialchars($row['id']) ?></td>
-                        <td><?= htmlspecialchars($row['nombre']) ?></td>
-                        <td><?= htmlspecialchars($row['email']) ?></td>
-                        <td><?= htmlspecialchars($row['rol']) ?></td>
-                        <td>
-                            <div class="action-buttons">
-                                <!-- Botón Eliminar -->
-                                <a class="delete-button" href="crud.php?eliminar_usuario=<?= $row['id'] ?>" onclick="return confirm('¿Eliminar usuario?')" title="Eliminar usuario">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                        <path fill="currentcolor" d="M135.2 17.7L128 32 32 32C14.3 32 0 46.3 0 64S14.3 96 32 96l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-96 0-7.2-14.3C307.4 6.8 296.3 0 284.2 0L163.8 0c-12.1 0-23.2 6.8-28.6 17.7zM416 128L32 128 53.2 467c1.6 25.3 22.6 45 47.9 45l245.8 0c25.3 0 46.3-19.7 47.9-45L416 128z"/>
-                                    </svg>
-                                </a>
-                            </div>
-                        </td>
-                    </tr>
-                <?php endwhile; ?>
+                <tr>
+                    <td><?= htmlspecialchars($row['id']) ?></td>
+                    <td><?= htmlspecialchars($row['nombre']) ?></td>
+                    <td><?= htmlspecialchars($row['email']) ?></td>
+                    <td><?= htmlspecialchars($row['rol']) ?></td>
+                    <td>
+                        <div class="action-buttons">
+
+                            <!-- Botón Eliminar -->
+                            <a class="delete-button" href="crud.php?eliminar_usuario=<?= $row['id'] ?>" onclick="return confirm('¿Eliminar usuario?')" title="Eliminar usuario">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">                                    
+                                    <path fill="currentcolor" d="M135.2 17.7L128 32 32 32C14.3 32 0 46.3 0 64S14.3 96 32 96l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-96 0-7.2-14.3C307.4 6.8 296.3 0 284.2 0L163.8 0c-12.1 0-23.2 6.8-28.6 17.7zM416 128L32 128 53.2 467c1.6 25.3 22.6 45 47.9 45l245.8 0c25.3 0 46.3-19.7 47.9-45L416 128z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
             <?php endif; ?>
         </tbody>
     </table>
@@ -564,15 +513,8 @@ while ($cat = mysqli_fetch_assoc($result_categorias)) {
                                 </svg>
                             </a>
 
-                            <!-- Botón Editar -->
-                           <a class="edit-button" href="comentario_edit.php?id=<?= $row['id']; ?>">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                    <path fill="currentcolor" d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z" />
-                        </svg>
-                            </a>
-
                             <!-- Botón Eliminar -->
-                            <a class="delete-button" href="comment_delete.php?id=<?= $row['id'] ?>" onclick="return confirm('¿Eliminar comentario?')" title="Eliminar comentario">
+                            <a class="delete-button" href="crud.php?eliminar_comentario=<?= $row['id'] ?>" onclick="return confirm('¿Eliminar comentario?')" title="Eliminar comentario">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">                                    
                                     <path fill="currentcolor" d="M135.2 17.7L128 32 32 32C14.3 32 0 46.3 0 64S14.3 96 32 96l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-96 0-7.2-14.3C307.4 6.8 296.3 0 284.2 0L163.8 0c-12.1 0-23.2 6.8-28.6 17.7zM416 128L32 128 53.2 467c1.6 25.3 22.6 45 47.9 45l245.8 0c25.3 0 46.3-19.7 47.9-45L416 128z"/>
                             </a>
@@ -609,7 +551,7 @@ while ($cat = mysqli_fetch_assoc($result_categorias)) {
                     <td>
                         <div class="action-buttons">
                             <!-- Botón Eliminar -->
-                            <a class="delete-button" href="admin_panel.php?eliminar_contacto=<?= $row['id'] ?>" onclick="return confirm('¿Eliminar mensaje de contacto?')" title="Eliminar mensaje">
+                            <a class="delete-button" href="crud.php?eliminar_contacto=<?= $row['id'] ?>" onclick="return confirm('¿Eliminar mensaje de contacto?')" title="Eliminar mensaje">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">                                    
                                     <path fill="currentcolor" d="M135.2 17.7L128 32 32 32C14.3 32 0 46.3 0 64S14.3 96 32 96l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-96 0-7.2-14.3C307.4 6.8 296.3 0 284.2 0L163.8 0c-12.1 0-23.2 6.8-28.6 17.7zM416 128L32 128 53.2 467c1.6 25.3 22.6 45 47.9 45l245.8 0c25.3 0 46.3-19.7 47.9-45L416 128z"/>
                                 </svg>
@@ -625,7 +567,9 @@ while ($cat = mysqli_fetch_assoc($result_categorias)) {
 <!-- Sección Admin -->
 <div id="admin" class="section-content">
     <h1>Admin</h1>
+  <div class="posts-actions">
     <a class="crear-publicacion" href="admin_add.php" role="button">Agregar admin</a>
+    </div>
     <table class="table">
         <thead>
             <tr>
@@ -645,7 +589,7 @@ while ($cat = mysqli_fetch_assoc($result_categorias)) {
                         <div class="action-buttons">
 
                             <!-- Botón Eliminar -->
-                            <a class="delete-button" href="admin_panel.php?eliminar_admin=<?= $row['id'] ?>" onclick="return confirm('¿Eliminar administrador?')" title="Eliminar admin">
+                            <a class="delete-button" href="crud.php?eliminar_admin=<?= $row['id'] ?>" onclick="return confirm('¿Eliminar administrador?')" title="Eliminar admin">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">                                    
                                     <path fill="currentcolor" d="M135.2 17.7L128 32 32 32C14.3 32 0 46.3 0 64S14.3 96 32 96l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-96 0-7.2-14.3C307.4 6.8 296.3 0 284.2 0L163.8 0c-12.1 0-23.2 6.8-28.6 17.7zM416 128L32 128 53.2 467c1.6 25.3 22.6 45 47.9 45l245.8 0c25.3 0 46.3-19.7 47.9-45L416 128z"/>
                             </a>
@@ -673,112 +617,61 @@ while ($cat = mysqli_fetch_assoc($result_categorias)) {
                 document.getElementById(target).classList.add('active');
             });
         });
-    </script>
 
-
-
-<script>
+    //Script apra el boton del bulk
 document.addEventListener('DOMContentLoaded', function () {
-    const selectAll = document.getElementById('select-all-posts');
+    const bulkArchiveBtn = document.getElementById('bulk-archive');
     const checkboxes = document.querySelectorAll('.row-checkbox');
-    const bulkDelete = document.getElementById('bulk-delete');
-    const bulkArchive = document.getElementById('bulk-archive');
+    const selectAll = document.getElementById('select-all-posts');
 
-    function updateBulkButtons() {
-        const anyChecked = [...checkboxes].some(cb => cb.checked);
-        if (bulkDelete) bulkDelete.disabled = !anyChecked;
-        if (bulkArchive) bulkArchive.disabled = !anyChecked;
+    // Habilitar botón si hay seleccionados
+    function toggleButtonState() {
+        const selected = document.querySelectorAll('.row-checkbox:checked');
+        bulkArchiveBtn.disabled = selected.length === 0;
     }
 
-    if (selectAll) {
-        selectAll.addEventListener('change', () => {
-            checkboxes.forEach(cb => cb.checked = selectAll.checked);
-            updateBulkButtons();
-        });
-    }
+    // Evento individual
+    checkboxes.forEach(cb => cb.addEventListener('change', toggleButtonState));
 
-    checkboxes.forEach(cb => {
-        cb.addEventListener('change', () => {
-            const allChecked = [...checkboxes].every(cb => cb.checked);
-            if (selectAll) selectAll.checked = allChecked;
-            updateBulkButtons();
+    // Seleccionar todo
+    selectAll.addEventListener('change', function () {
+        checkboxes.forEach(cb => cb.checked = selectAll.checked);
+        toggleButtonState();
+    });
+
+    // Enviar IDs para archivar
+    bulkArchiveBtn.addEventListener('click', function () {
+        const selectedIds = Array.from(document.querySelectorAll('.row-checkbox:checked'))
+                                 .map(cb => cb.getAttribute('data-id'));
+
+        if (selectedIds.length === 0) return;
+
+        if (!confirm('¿Estás seguro de archivar las publicaciones seleccionadas?')) return;
+
+        // Enviar a PHP por fetch
+        fetch('../PHP/bulk_archive.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ ids: selectedIds })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('Publicaciones archivadas con éxito');
+                location.reload(); // Recarga la página para ver los cambios
+            } else {
+                alert('Ocurrió un error al archivar.');
+            }
+        })
+        .catch(err => {
+            console.error(err);
+            alert('Error en la solicitud');
         });
     });
 });
-
-    if (bulkDelete) {
-        bulkDelete.addEventListener('click', () => {
-            const selectedIds = [...checkboxes].filter(cb => cb.checked).map(cb => cb.dataset.id);
-            if (selectedIds.length === 0) return;
-            if (confirm(`¿Eliminar ${selectedIds.length} publicaciones?`)) {
-                const form = document.createElement('form');
-                form.method = 'POST';
-                form.action = '../PHP/eliminar_multiples_posts.php';
-                selectedIds.forEach(id => { // <-- CORREGIDO
-                    const input = document.createElement('input');
-                    input.type = 'hidden';
-                    input.name = 'ids[]';
-                    input.value = id;
-                    form.appendChild(input);
-                });
-                document.body.appendChild(form);
-                form.submit();
-            }
-        });
-    }
-
-    if (bulkArchive) {
-        bulkArchive.addEventListener('click', () => {
-            const selectedIds = [...checkboxes].filter(cb => cb.checked).map(cb => cb.dataset.id);
-            if (selectedIds.length === 0) return;
-            if (confirm(`¿Archivar ${selectedIds.length} publicaciones?`)) {
-                fetch('../PHP/bulk_archive.php', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ ids: selectedIds })
-                })
-                .then(response => response.json())
-                .then (data => { // <-- CORREGIDO
-                    if (data.success) {
-                        alert('Publicaciones archivadas con éxito');
-                        location.reload();
-                    } else {
-                        alert('Ocurrió un error al archivar.');
-                    }
-                })
-                .catch(err => {
-                    console.error(err);
-                    alert('Error en la solicitud');
-                });
-            }
-        });
-    }
-
-    updateBulkButtons();
 </script>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const modal = document.getElementById('modal-archivado');
-        if (modal) {
-            setTimeout(() => {
-                modal.style.display = 'none';
-            }, 3000); // Ocultar después de 3 segundos
-        }
-    });
-</script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const sectionParam = urlParams.get('section');
-    if (sectionParam) {
-        document.querySelectorAll('.section-content').forEach(section => {
-            section.classList.remove('active');
-        });
-        const targetSection = document.getElementById(sectionParam);
-        if (targetSection) targetSection.classList.add('active');
-    }
-});
-</script>
 </body>
+
 </html>
+

@@ -1,5 +1,7 @@
 <?php
 include 'blog_db.php';
+include 'header.php';
+include 'dashboard.php';
 
 $q = isset($_GET['q']) ? trim($_GET['q']) : '';
 ?>
@@ -8,7 +10,7 @@ $q = isset($_GET['q']) ? trim($_GET['q']) : '';
 <head>
     <meta charset="UTF-8">
     <title>Resultados de búsqueda</title>
-    <link rel="stylesheet" href="../css/Pagina_resultado.css"> 
+    <link rel="stylesheet" href="../css/buscar.css"> 
 </head>
 <body>
 
@@ -20,9 +22,12 @@ $q = isset($_GET['q']) ? trim($_GET['q']) : '';
         // Sanitizar para evitar SQL injection
         $q_safe = mysqli_real_escape_string($conn, $q);
 
-        // Consulta
-        $sql = "SELECT * FROM publicaciones_2 WHERE titular LIKE '%$q_safe%' OR categoria LIKE '%$q_safe%' ORDER BY fecha DESC";
-        $result = mysqli_query($conn, $sql);
+            // Consulta
+        $sql = "SELECT * FROM publicaciones_2 
+                WHERE (titular LIKE '%$q_safe%' OR categoria LIKE '%$q_safe%') 
+                AND estado = 'publicado' 
+                ORDER BY fecha DESC";
+            $result = mysqli_query($conn, $sql);
 
         echo "<h2 class='titulo-resultados'>Resultados para: <strong>" . htmlspecialchars($q) . "</strong></h2>";
 
@@ -30,10 +35,10 @@ $q = isset($_GET['q']) ? trim($_GET['q']) : '';
             echo "<div class='lista-resultados'>";
             while ($row = mysqli_fetch_assoc($result)) {
                 echo "<div class='card-noticia'>";
-                echo "<h3><a href='publicaciones_2.php?id=" . $row['id'] . "'>" . htmlspecialchars($row['titular']) . "</a></h3>";
+                echo "<h3><a href='post_completo.php?id=" . $row['id'] . "'>" . htmlspecialchars($row['titular']) . "</a></h3>";
                 echo "<p><strong>Categoría:</strong> " . htmlspecialchars($row['categoria']) . "</p>";
                 echo "<p><strong>Fecha:</strong> " . $row['fecha'] . "</p>";
-                echo "<a class='btn-leer-mas' href='publicaciones_2.php?id=" . $row['id'] . "'>Leer más</a>";
+                echo "<a class='btn-leer-mas' href='post_completo.php?id=" . $row['id'] . "'>Leer más</a>";
                 echo "</div>";
             }
             echo "</div>";
@@ -44,5 +49,8 @@ $q = isset($_GET['q']) ? trim($_GET['q']) : '';
     ?>
 </div>
 
+<?php
+include 'footer.php';
+?>
 </body>
 </html>

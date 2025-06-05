@@ -368,11 +368,10 @@ include 'header.php';
     .share-button.linkedin { background-color: #0077b5; }
     .share-button.whatsapp { background-color: #25d366; }
     .share-button.email { background-color: #dd4b39;  }
-
-    /* Puedes agregar esto en tu CSS principal o en un bloque <style> */
 body {
-    padding-top: 80px; /* Ajusta el valor según la altura real de tu header */
+    padding-top: 100px; /* Igual a la altura de tu header */
 }
+
 </style>
 </head>
 
