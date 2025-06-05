@@ -121,7 +121,7 @@ $result_categorias = mysqli_query($conn, $query_categorias);
       background-color: #005fa3;
     }
 
-    /* Puedes poner esto en tu <style> o en tu CSS principal */
+  
 .categoria-card {
   background: #f8fcfc;
   border-radius: 12px;
