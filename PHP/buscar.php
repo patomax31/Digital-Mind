@@ -8,7 +8,7 @@ $q = isset($_GET['q']) ? trim($_GET['q']) : '';
 <head>
     <meta charset="UTF-8">
     <title>Resultados de búsqueda</title>
-    <link rel="stylesheet" href="../css/Pagina_resultado.css"> 
+    <link rel="stylesheet" href="../css/Pagina_resultado.css">
 </head>
 <body>
 
@@ -30,10 +30,10 @@ $q = isset($_GET['q']) ? trim($_GET['q']) : '';
             echo "<div class='lista-resultados'>";
             while ($row = mysqli_fetch_assoc($result)) {
                 echo "<div class='card-noticia'>";
-                echo "<h3><a href='publicaciones_2.php?id=" . $row['id'] . "'>" . htmlspecialchars($row['titular']) . "</a></h3>";
+                echo "<h3><a href='publicaciones.php?id=" . $row['id'] . "'>" . htmlspecialchars($row['titular']) . "</a></h3>";
                 echo "<p><strong>Categoría:</strong> " . htmlspecialchars($row['categoria']) . "</p>";
                 echo "<p><strong>Fecha:</strong> " . $row['fecha'] . "</p>";
-                echo "<a class='btn-leer-mas' href='publicaciones_2.php?id=<?=" . $row['id'] . "'>Leer más</a>";
+                echo "<a class='btn-leer-mas' href='publicaciones.php?id=" . $row['id'] . "'>Leer más</a>";
                 echo "</div>";
             }
             echo "</div>";

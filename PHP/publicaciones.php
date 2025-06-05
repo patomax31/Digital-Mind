@@ -22,7 +22,7 @@ $result = $conn->query($sql);
             <h3><?= htmlspecialchars($row["titular"]) ?></h3>
             <p><strong>Fecha:</strong> <?= $row["fecha"] ?></p>
             <p><?= htmlspecialchars($row["descripcion_corta"]) ?></p>
-            <a href = "../PHP/post_completo.php?id=' . $row['id'] . ' class = " see-more ">Ver más</a>
+            <a href = "../PHP/post_completo.php?id=' . $row['id'] . ' class = " see-more >Ver más</a>
         </div>
         <hr>
         <a href="index.php" class="see-more">Volver a la Pagina Principal</a>
