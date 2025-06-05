@@ -150,6 +150,10 @@ if (searchArchived) {
     <title>Admin Panel</title>
     <link rel="stylesheet" href="../css/crud.css">
     <style>
+        body {
+    padding-top: 80px; /* Ajusta este valor según la altura real de tu header */
+}
+
         .section-content {
             display: none;
         }

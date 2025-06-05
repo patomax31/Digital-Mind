@@ -40,6 +40,10 @@ $resultado = $conn->query($sql);
   <title><?php echo $tituloCategoria; ?> | DIGITALMIND</title>
   <link rel="stylesheet" href="../css/blog_style_Mk2.css">
   <style>
+    body {
+      padding-top: 80px; /* Ajusta este valor a la altura real de tu header */
+    }
+
     .categoria-banner {
       background-color: <?php echo $colorFondo; ?>;
       padding: 40px 20px;
