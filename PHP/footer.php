@@ -178,14 +178,14 @@ footer {
       <div class="footer-column">
         <h4>Categoría</h4>
         <ul>
-          <li><a href="categoria.php?categoria=Educacion Primaria">Educación Primaria</a></li>
-          <li><a href="categoria.php?categoria=Educacion Secundaria">Educación Secundaria</a></li>
-          <li><a href="categoria.php?categoria=Educacion Preparatoria">Educación Preparatoria</a></li>
-          <li><a href="categoria.php?categoria=Metodos de Aprendizaje">Métodos de Aprendizaje</a></li>
-          <li><a href="categoria.php?categoria=Educacion Vocacional">Educación Vocacional</a></li>
-          <li><a href="categoria.php?categoria=Habilidades de Redaccion">Habilidades de Redacción</a></li>
-          <li><a href="categoria.php?categoria=Ciencia y Matematicas">Ciencia y Matemáticas</a></li>
-          <li><a href="categoria.php?categoria=Para Tutores">Para Tutores</a></li>
+          <li><a href="categoria.php?id=5">Educación Primaria</a></li>
+          <li><a href="categoria.php?id=6">Educación Secundaria</a></li>
+          <li><a href="categoria.php?id=7">Educación Preparatoria</a></li>
+          <li><a href="categoria.php?id=8">Métodos de Aprendizaje</a></li>
+          <li><a href="categoria.php?id=12">Educación Vocacional</a></li>
+          <li><a href="categoria.php?id=10">Habilidades de Redacción</a></li>
+          <li><a href="categoria.php?id=11">Ciencia y Matemáticas</a></li>
+          <li><a href="categoria.php?id=12">Para Tutores</a></li>
         </ul>
       </div>
 

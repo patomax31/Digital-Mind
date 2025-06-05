@@ -46,7 +46,7 @@ if (isset($_FILES['imagen']) && $_FILES['imagen']['error'] === UPLOAD_ERR_OK) {
 $titular = htmlspecialchars(trim($_POST['titular']));
 $fecha = $_POST['fecha'];
 $descripcion_corta = htmlspecialchars(trim($_POST['descripcion_corta']));
-$categoria = $_POST['categoria'] ?? '';
+$categoria = $_POST['categoria_id'] ?? '';
 
 // Sanitizar el contenido manteniendo etiquetas HTML básicas
 $contenido = trim($_POST['contenido']);
@@ -66,7 +66,7 @@ if (empty($titular) || empty($fecha) || empty($descripcion_corta) || empty($cont
 // Insertar en la base de datos
 try {
     $stmt = $conn->prepare("INSERT INTO publicaciones_2 
-        (titular, fecha, descripcion_corta, contenido, referencia, imagen, categoria) 
+        (titular, fecha, descripcion_corta, contenido, referencia, imagen, categoria_id) 
         VALUES (?, ?, ?, ?, ?, ?, ?)");
     
     $stmt->bind_param("sssssss", 

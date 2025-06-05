@@ -29,7 +29,7 @@ body{
             border-radius: 50%;
             margin-bottom: 20px;
             object-fit: cover;
-            border: 3px solid #007bff;
+            border: 3px solid #083d76;
         }
         .sidebar form {
             margin-bottom: 20px;
@@ -66,7 +66,7 @@ body{
         }
         .info-card h3 {
             margin-top: 0;
-            color: #007bff;
+            color: #083d76;
         }
         .info-row {
             display: flex;
@@ -94,7 +94,7 @@ body{
             text-align: left;
         }
         .section-list h3 {
-            color: #007bff;
+            color: #083d76;
         }
         .section-list ul {
             list-style: none;
@@ -117,7 +117,7 @@ body{
     .svg-btn-avatar {
     width: 40px;
     height: 40px;
-    color: #007bff;
+    color: #083d76;
     background: #e3f2f7;
     border-radius: 50%;
     padding: 6px;
