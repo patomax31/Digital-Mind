@@ -35,12 +35,12 @@ if (isset($_SESSION['usuario_id'])) {
 <header style="display:flex;align-items:center;justify-content:space-between;padding:18px 50px 10px 32px;background:#fff;">
     <!-- Logo a la izquierda -->
     <div style="display:flex;align-items:center;">
-        <a href="index.php" style="color:#007bff;">
+        <a href="index.php" style="color:#083d76;">
             <img src="..\images\Logo_Mk2.png" alt="Logo" >
         
     </div>
     <!-- Logout SVG a la derecha -->
-    <a href="logout.php" title="Cerrar sesión" style="color:#007bff;display:flex;align-items:center;">
+    <a href="logout.php" title="Cerrar sesión" style="color:#083d76;display:flex;align-items:center;">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:32px;height:32px;">
             <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
         </svg>
@@ -65,14 +65,14 @@ if (isset($_SESSION['usuario_id'])) {
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 8.25H7.5a2.25 2.25 0 0 0-2.25 2.25v9a2.25 2.25 0 0 0 2.25 2.25h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25H15m0-3-3-3m0 0-3 3m3-3V15" />
             </svg>
 
-            <span style="font-size:0.95em;color:#007bff;">Cambiar Foto</span>
+            <span style="font-size:0.95em;color:#083d76;">Cambiar Foto</span>
             <input type="file" id="avatar" name="avatar" accept="image/*" style="display:none;">
             </label>
             <button type="submit" style="background:none;border:none;padding:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;">
             <svg class="svg-btn-avatar" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 19.5-15-15m0 0v11.25m0-11.25h11.25" />
             </svg>
-            <span style="font-size:0.95em;color:#007bff;">Subir</span>
+            <span style="font-size:0.95em;color:#083d76;">Subir</span>
     </button>
     </div>
 </form>

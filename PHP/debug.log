@@ -5217,3 +5217,557 @@
 )
 
 [2025-06-04 23:17:42] Successfully returned translated texts.
+[2025-06-05 00:58:32] Received POST request.
+[2025-06-05 00:58:32] POST data: Array
+(
+    [texts] => ["Categoría","Acerca de","Pagina de contacto","Idioma","Iniciar sesión","Derechos Reservados ® Digital-Mind © 2025"]
+    [target_lang] => EN
+)
+
+[2025-06-05 00:58:32] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-06-05 00:58:32] 'texts' parameter received: ["Categoría","Acerca de","Pagina de contacto","Idioma","Iniciar sesión","Derechos Reservados ® Digital-Mind © 2025"]
+[2025-06-05 00:58:32] Result of json_decode: Array
+(
+    [0] => Categoría
+    [1] => Acerca de
+    [2] => Pagina de contacto
+    [3] => Idioma
+    [4] => Iniciar sesión
+    [5] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-05 00:58:32] Target language: EN
+[2025-06-05 00:58:32] Data sent to DeepL API (JSON): {"text":["Categor\u00eda","Acerca de","Pagina de contacto","Idioma","Iniciar sesi\u00f3n","Derechos Reservados \u00ae Digital-Mind \u00a9 2025"],"target_lang":"EN"}
+[2025-06-05 00:58:33] DeepL API HTTP Code: 200
+[2025-06-05 00:58:33] DeepL API Response: {"translations":[{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Language"},{"detected_source_language":"ES","text":"Login"},{"detected_source_language":"PT","text":"Derechos Reservados ® Digital-Mind © 2025"}]}
+[2025-06-05 00:58:33] Extracted translated texts: Array
+(
+    [0] => Category
+    [1] => About
+    [2] => Contact page
+    [3] => Language
+    [4] => Login
+    [5] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-05 00:58:33] Successfully returned translated texts.
+[2025-06-05 00:58:42] Received POST request.
+[2025-06-05 00:58:42] POST data: Array
+(
+    [texts] => ["Categoría","Acerca de","Pagina de contacto","Idioma","Iniciar sesión","Sobre Nosotros","En DigitalMind, combinamos innovación y creatividad para ofrecer soluciones digitales que transforman negocios y mejoran vidas.","\n                \"Estudiar no es solo aprender hechos, es entrenar tu mente para ver el mundo con una nueva perspectiva. Cada esfuerzo que pongas hoy será una semilla que crecerá en éxito mañana.\"\n            ","Conoce Nuestro Equipo","Las mentes detras de la plataforma","Alan Alcaraz","Desarrollador Back-End","Encargado del desarrollo y mantenimiento de la base de datos","Ximena Cuevas","Directora de diseño","Encargado de crear e implementar diseños y estilos de la plataforma.","Friedman Cortez","Desarrollador Front-End","Encargado de implementar diseño y las interfaces de los usuarios.","Zinedine Hiram","Desarrollador Front-End","Encargado de implementar funcionalidades a la pagina.","Ernesto Cebrera","Desarrollador Back-End","Encargado de la seguridad.","Carlos Rosas","desarrollador Full stack","Encargado de revisar, implementar y testear el codigo desarrollado.","Nuestros Valores","Los principios que guían cada decisión que tomamos","Orientacion","Nuestra prioridad es dejar un impacto en la gente que nos visita.","Integridad","Actuamos con honestidad y transparencia en todas nuestras relaciones.","Compromiso","Nos comprometemos a crear tecnología que mejore el aprendizaje de las personas.","Impacto Social","Cada publicacion es un nuevo aprendizaje, nos aseguramos que este impacto perdure en las personas.","DigitalMind","Comprometidos con la educacion","Terminos de privacidad","© 2025 DigitalMind. Todos los derechos reservados."]
+    [target_lang] => EN
+)
+
+[2025-06-05 00:58:42] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-06-05 00:58:42] 'texts' parameter received: ["Categoría","Acerca de","Pagina de contacto","Idioma","Iniciar sesión","Sobre Nosotros","En DigitalMind, combinamos innovación y creatividad para ofrecer soluciones digitales que transforman negocios y mejoran vidas.","\n                \"Estudiar no es solo aprender hechos, es entrenar tu mente para ver el mundo con una nueva perspectiva. Cada esfuerzo que pongas hoy será una semilla que crecerá en éxito mañana.\"\n            ","Conoce Nuestro Equipo","Las mentes detras de la plataforma","Alan Alcaraz","Desarrollador Back-End","Encargado del desarrollo y mantenimiento de la base de datos","Ximena Cuevas","Directora de diseño","Encargado de crear e implementar diseños y estilos de la plataforma.","Friedman Cortez","Desarrollador Front-End","Encargado de implementar diseño y las interfaces de los usuarios.","Zinedine Hiram","Desarrollador Front-End","Encargado de implementar funcionalidades a la pagina.","Ernesto Cebrera","Desarrollador Back-End","Encargado de la seguridad.","Carlos Rosas","desarrollador Full stack","Encargado de revisar, implementar y testear el codigo desarrollado.","Nuestros Valores","Los principios que guían cada decisión que tomamos","Orientacion","Nuestra prioridad es dejar un impacto en la gente que nos visita.","Integridad","Actuamos con honestidad y transparencia en todas nuestras relaciones.","Compromiso","Nos comprometemos a crear tecnología que mejore el aprendizaje de las personas.","Impacto Social","Cada publicacion es un nuevo aprendizaje, nos aseguramos que este impacto perdure en las personas.","DigitalMind","Comprometidos con la educacion","Terminos de privacidad","© 2025 DigitalMind. Todos los derechos reservados."]
+[2025-06-05 00:58:42] Result of json_decode: Array
+(
+    [0] => Categoría
+    [1] => Acerca de
+    [2] => Pagina de contacto
+    [3] => Idioma
+    [4] => Iniciar sesión
+    [5] => Sobre Nosotros
+    [6] => En DigitalMind, combinamos innovación y creatividad para ofrecer soluciones digitales que transforman negocios y mejoran vidas.
+    [7] => 
+                "Estudiar no es solo aprender hechos, es entrenar tu mente para ver el mundo con una nueva perspectiva. Cada esfuerzo que pongas hoy será una semilla que crecerá en éxito mañana."
+            
+    [8] => Conoce Nuestro Equipo
+    [9] => Las mentes detras de la plataforma
+    [10] => Alan Alcaraz
+    [11] => Desarrollador Back-End
+    [12] => Encargado del desarrollo y mantenimiento de la base de datos
+    [13] => Ximena Cuevas
+    [14] => Directora de diseño
+    [15] => Encargado de crear e implementar diseños y estilos de la plataforma.
+    [16] => Friedman Cortez
+    [17] => Desarrollador Front-End
+    [18] => Encargado de implementar diseño y las interfaces de los usuarios.
+    [19] => Zinedine Hiram
+    [20] => Desarrollador Front-End
+    [21] => Encargado de implementar funcionalidades a la pagina.
+    [22] => Ernesto Cebrera
+    [23] => Desarrollador Back-End
+    [24] => Encargado de la seguridad.
+    [25] => Carlos Rosas
+    [26] => desarrollador Full stack
+    [27] => Encargado de revisar, implementar y testear el codigo desarrollado.
+    [28] => Nuestros Valores
+    [29] => Los principios que guían cada decisión que tomamos
+    [30] => Orientacion
+    [31] => Nuestra prioridad es dejar un impacto en la gente que nos visita.
+    [32] => Integridad
+    [33] => Actuamos con honestidad y transparencia en todas nuestras relaciones.
+    [34] => Compromiso
+    [35] => Nos comprometemos a crear tecnología que mejore el aprendizaje de las personas.
+    [36] => Impacto Social
+    [37] => Cada publicacion es un nuevo aprendizaje, nos aseguramos que este impacto perdure en las personas.
+    [38] => DigitalMind
+    [39] => Comprometidos con la educacion
+    [40] => Terminos de privacidad
+    [41] => © 2025 DigitalMind. Todos los derechos reservados.
+)
+
+[2025-06-05 00:58:42] Target language: EN
+[2025-06-05 00:58:42] Data sent to DeepL API (JSON): {"text":["Categor\u00eda","Acerca de","Pagina de contacto","Idioma","Iniciar sesi\u00f3n","Sobre Nosotros","En DigitalMind, combinamos innovaci\u00f3n y creatividad para ofrecer soluciones digitales que transforman negocios y mejoran vidas.","\n                \"Estudiar no es solo aprender hechos, es entrenar tu mente para ver el mundo con una nueva perspectiva. Cada esfuerzo que pongas hoy ser\u00e1 una semilla que crecer\u00e1 en \u00e9xito ma\u00f1ana.\"\n            ","Conoce Nuestro Equipo","Las mentes detras de la plataforma","Alan Alcaraz","Desarrollador Back-End","Encargado del desarrollo y mantenimiento de la base de datos","Ximena Cuevas","Directora de dise\u00f1o","Encargado de crear e implementar dise\u00f1os y estilos de la plataforma.","Friedman Cortez","Desarrollador Front-End","Encargado de implementar dise\u00f1o y las interfaces de los usuarios.","Zinedine Hiram","Desarrollador Front-End","Encargado de implementar funcionalidades a la pagina.","Ernesto Cebrera","Desarrollador Back-End","Encargado de la seguridad.","Carlos Rosas","desarrollador Full stack","Encargado de revisar, implementar y testear el codigo desarrollado.","Nuestros Valores","Los principios que gu\u00edan cada decisi\u00f3n que tomamos","Orientacion","Nuestra prioridad es dejar un impacto en la gente que nos visita.","Integridad","Actuamos con honestidad y transparencia en todas nuestras relaciones.","Compromiso","Nos comprometemos a crear tecnolog\u00eda que mejore el aprendizaje de las personas.","Impacto Social","Cada publicacion es un nuevo aprendizaje, nos aseguramos que este impacto perdure en las personas.","DigitalMind","Comprometidos con la educacion","Terminos de privacidad","\u00a9 2025 DigitalMind. Todos los derechos reservados."],"target_lang":"EN"}
+[2025-06-05 00:58:43] DeepL API HTTP Code: 200
+[2025-06-05 00:58:43] DeepL API Response: {"translations":[{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Language"},{"detected_source_language":"ES","text":"Login"},{"detected_source_language":"ES","text":"About Us"},{"detected_source_language":"ES","text":"At DigitalMind, we combine innovation and creativity to deliver digital solutions that transform businesses and improve lives."},{"detected_source_language":"ES","text":"\n                \"Studying is not just learning facts, it is training your mind to see the world with a new perspective. Every effort you put in today will be a seed that will grow into success tomorrow.\"\n            "},{"detected_source_language":"ES","text":"Meet Our Team"},{"detected_source_language":"ES","text":"The minds behind the platform"},{"detected_source_language":"IT","text":"Alan Alcaraz"},{"detected_source_language":"ES","text":"Back-End Developer"},{"detected_source_language":"ES","text":"Responsible for the development and maintenance of the database."},{"detected_source_language":"ES","text":"Ximena Cuevas"},{"detected_source_language":"ES","text":"Design Director"},{"detected_source_language":"ES","text":"Responsible for creating and implementing designs and styles for the platform."},{"detected_source_language":"EN","text":"Friedman Cortez"},{"detected_source_language":"ES","text":"Front-End Developer"},{"detected_source_language":"ES","text":"Responsible for implementing design and user interfaces."},{"detected_source_language":"ET","text":"Zinedine Hiram"},{"detected_source_language":"ES","text":"Front-End Developer"},{"detected_source_language":"ES","text":"In charge of implementing functionalities to the site."},{"detected_source_language":"ES","text":"Ernesto Cebrera"},{"detected_source_language":"ES","text":"Back-End Developer"},{"detected_source_language":"ES","text":"In charge of security."},{"detected_source_language":"ES","text":"Carlos Rosas"},{"detected_source_language":"ES","text":"Full stack developer"},{"detected_source_language":"ES","text":"In charge of reviewing, implementing and testing the developed code."},{"detected_source_language":"ES","text":"Our Values"},{"detected_source_language":"ES","text":"Principles that guide every decision we make"},{"detected_source_language":"ES","text":"Orientation"},{"detected_source_language":"ES","text":"Our priority is to leave an impact on the people who visit us."},{"detected_source_language":"PT","text":"Integrity"},{"detected_source_language":"ES","text":"We act with honesty and transparency in all our relationships."},{"detected_source_language":"EN","text":"Compromiso"},{"detected_source_language":"ES","text":"We are committed to creating technology that enhances people's learning."},{"detected_source_language":"PT","text":"Social Impact"},{"detected_source_language":"ES","text":"Each publication is a new learning experience, we make sure that this impact lasts."},{"detected_source_language":"DE","text":"DigitalMind"},{"detected_source_language":"ES","text":"Committed to education"},{"detected_source_language":"ES","text":"Privacy Policy"},{"detected_source_language":"ES","text":"© 2025 DigitalMind. All rights reserved."}]}
+[2025-06-05 00:58:43] Extracted translated texts: Array
+(
+    [0] => Category
+    [1] => About
+    [2] => Contact page
+    [3] => Language
+    [4] => Login
+    [5] => About Us
+    [6] => At DigitalMind, we combine innovation and creativity to deliver digital solutions that transform businesses and improve lives.
+    [7] => 
+                "Studying is not just learning facts, it is training your mind to see the world with a new perspective. Every effort you put in today will be a seed that will grow into success tomorrow."
+            
+    [8] => Meet Our Team
+    [9] => The minds behind the platform
+    [10] => Alan Alcaraz
+    [11] => Back-End Developer
+    [12] => Responsible for the development and maintenance of the database.
+    [13] => Ximena Cuevas
+    [14] => Design Director
+    [15] => Responsible for creating and implementing designs and styles for the platform.
+    [16] => Friedman Cortez
+    [17] => Front-End Developer
+    [18] => Responsible for implementing design and user interfaces.
+    [19] => Zinedine Hiram
+    [20] => Front-End Developer
+    [21] => In charge of implementing functionalities to the site.
+    [22] => Ernesto Cebrera
+    [23] => Back-End Developer
+    [24] => In charge of security.
+    [25] => Carlos Rosas
+    [26] => Full stack developer
+    [27] => In charge of reviewing, implementing and testing the developed code.
+    [28] => Our Values
+    [29] => Principles that guide every decision we make
+    [30] => Orientation
+    [31] => Our priority is to leave an impact on the people who visit us.
+    [32] => Integrity
+    [33] => We act with honesty and transparency in all our relationships.
+    [34] => Compromiso
+    [35] => We are committed to creating technology that enhances people's learning.
+    [36] => Social Impact
+    [37] => Each publication is a new learning experience, we make sure that this impact lasts.
+    [38] => DigitalMind
+    [39] => Committed to education
+    [40] => Privacy Policy
+    [41] => © 2025 DigitalMind. All rights reserved.
+)
+
+[2025-06-05 00:58:43] Successfully returned translated texts.
+[2025-06-05 00:58:49] Received POST request.
+[2025-06-05 00:58:49] POST data: Array
+(
+    [texts] => ["Categoría","Acerca de","Pagina de contacto","Idioma","Iniciar sesión","Derechos Reservados ® Digital-Mind © 2025"]
+    [target_lang] => EN
+)
+
+[2025-06-05 00:58:49] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-06-05 00:58:49] 'texts' parameter received: ["Categoría","Acerca de","Pagina de contacto","Idioma","Iniciar sesión","Derechos Reservados ® Digital-Mind © 2025"]
+[2025-06-05 00:58:49] Result of json_decode: Array
+(
+    [0] => Categoría
+    [1] => Acerca de
+    [2] => Pagina de contacto
+    [3] => Idioma
+    [4] => Iniciar sesión
+    [5] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-05 00:58:49] Target language: EN
+[2025-06-05 00:58:49] Data sent to DeepL API (JSON): {"text":["Categor\u00eda","Acerca de","Pagina de contacto","Idioma","Iniciar sesi\u00f3n","Derechos Reservados \u00ae Digital-Mind \u00a9 2025"],"target_lang":"EN"}
+[2025-06-05 00:58:50] DeepL API HTTP Code: 200
+[2025-06-05 00:58:50] DeepL API Response: {"translations":[{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Language"},{"detected_source_language":"ES","text":"Login"},{"detected_source_language":"PT","text":"Derechos Reservados ® Digital-Mind © 2025"}]}
+[2025-06-05 00:58:50] Extracted translated texts: Array
+(
+    [0] => Category
+    [1] => About
+    [2] => Contact page
+    [3] => Language
+    [4] => Login
+    [5] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-05 00:58:50] Successfully returned translated texts.
+[2025-06-05 00:59:00] Received POST request.
+[2025-06-05 00:59:00] POST data: Array
+(
+    [texts] => ["Categoría","Acerca de","Pagina de contacto","Idioma","Iniciar sesión","Nuestra Misión","¿Cómo Contribuimos?","Derechos Reservados ® Digital-Mind © 2025"]
+    [target_lang] => EN
+)
+
+[2025-06-05 00:59:00] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-06-05 00:59:00] 'texts' parameter received: ["Categoría","Acerca de","Pagina de contacto","Idioma","Iniciar sesión","Nuestra Misión","¿Cómo Contribuimos?","Derechos Reservados ® Digital-Mind © 2025"]
+[2025-06-05 00:59:00] Result of json_decode: Array
+(
+    [0] => Categoría
+    [1] => Acerca de
+    [2] => Pagina de contacto
+    [3] => Idioma
+    [4] => Iniciar sesión
+    [5] => Nuestra Misión
+    [6] => ¿Cómo Contribuimos?
+    [7] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-05 00:59:00] Target language: EN
+[2025-06-05 00:59:00] Data sent to DeepL API (JSON): {"text":["Categor\u00eda","Acerca de","Pagina de contacto","Idioma","Iniciar sesi\u00f3n","Nuestra Misi\u00f3n","\u00bfC\u00f3mo Contribuimos?","Derechos Reservados \u00ae Digital-Mind \u00a9 2025"],"target_lang":"EN"}
+[2025-06-05 00:59:01] DeepL API HTTP Code: 200
+[2025-06-05 00:59:01] DeepL API Response: {"translations":[{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Language"},{"detected_source_language":"ES","text":"Login"},{"detected_source_language":"ES","text":"Our Mission"},{"detected_source_language":"ES","text":"How do we contribute?"},{"detected_source_language":"PT","text":"Derechos Reservados ® Digital-Mind © 2025"}]}
+[2025-06-05 00:59:01] Extracted translated texts: Array
+(
+    [0] => Category
+    [1] => About
+    [2] => Contact page
+    [3] => Language
+    [4] => Login
+    [5] => Our Mission
+    [6] => How do we contribute?
+    [7] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-05 00:59:01] Successfully returned translated texts.
+[2025-06-05 00:59:14] Received POST request.
+[2025-06-05 00:59:14] POST data: Array
+(
+    [texts] => ["Categoría","Acerca de","Pagina de contacto","Idioma","Iniciar sesión","Nuestra Misión","¿Cómo Contribuimos?","Derechos Reservados ® Digital-Mind © 2025"]
+    [target_lang] => EN
+)
+
+[2025-06-05 00:59:14] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-06-05 00:59:14] 'texts' parameter received: ["Categoría","Acerca de","Pagina de contacto","Idioma","Iniciar sesión","Nuestra Misión","¿Cómo Contribuimos?","Derechos Reservados ® Digital-Mind © 2025"]
+[2025-06-05 00:59:14] Result of json_decode: Array
+(
+    [0] => Categoría
+    [1] => Acerca de
+    [2] => Pagina de contacto
+    [3] => Idioma
+    [4] => Iniciar sesión
+    [5] => Nuestra Misión
+    [6] => ¿Cómo Contribuimos?
+    [7] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-05 00:59:14] Target language: EN
+[2025-06-05 00:59:14] Data sent to DeepL API (JSON): {"text":["Categor\u00eda","Acerca de","Pagina de contacto","Idioma","Iniciar sesi\u00f3n","Nuestra Misi\u00f3n","\u00bfC\u00f3mo Contribuimos?","Derechos Reservados \u00ae Digital-Mind \u00a9 2025"],"target_lang":"EN"}
+[2025-06-05 00:59:15] DeepL API HTTP Code: 200
+[2025-06-05 00:59:15] DeepL API Response: {"translations":[{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Language"},{"detected_source_language":"ES","text":"Login"},{"detected_source_language":"ES","text":"Our Mission"},{"detected_source_language":"ES","text":"How do we contribute?"},{"detected_source_language":"PT","text":"Derechos Reservados ® Digital-Mind © 2025"}]}
+[2025-06-05 00:59:15] Extracted translated texts: Array
+(
+    [0] => Category
+    [1] => About
+    [2] => Contact page
+    [3] => Language
+    [4] => Login
+    [5] => Our Mission
+    [6] => How do we contribute?
+    [7] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-05 00:59:15] Successfully returned translated texts.
+[2025-06-05 00:59:18] Received POST request.
+[2025-06-05 00:59:18] POST data: Array
+(
+    [texts] => ["Categoría","Acerca de","Pagina de contacto","Idioma","Iniciar sesión","Nuestra Misión","¿Cómo Contribuimos?","Derechos Reservados ® Digital-Mind © 2025"]
+    [target_lang] => EN
+)
+
+[2025-06-05 00:59:18] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-06-05 00:59:18] 'texts' parameter received: ["Categoría","Acerca de","Pagina de contacto","Idioma","Iniciar sesión","Nuestra Misión","¿Cómo Contribuimos?","Derechos Reservados ® Digital-Mind © 2025"]
+[2025-06-05 00:59:18] Result of json_decode: Array
+(
+    [0] => Categoría
+    [1] => Acerca de
+    [2] => Pagina de contacto
+    [3] => Idioma
+    [4] => Iniciar sesión
+    [5] => Nuestra Misión
+    [6] => ¿Cómo Contribuimos?
+    [7] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-05 00:59:18] Target language: EN
+[2025-06-05 00:59:18] Data sent to DeepL API (JSON): {"text":["Categor\u00eda","Acerca de","Pagina de contacto","Idioma","Iniciar sesi\u00f3n","Nuestra Misi\u00f3n","\u00bfC\u00f3mo Contribuimos?","Derechos Reservados \u00ae Digital-Mind \u00a9 2025"],"target_lang":"EN"}
+[2025-06-05 00:59:19] DeepL API HTTP Code: 200
+[2025-06-05 00:59:19] DeepL API Response: {"translations":[{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Language"},{"detected_source_language":"ES","text":"Login"},{"detected_source_language":"ES","text":"Our Mission"},{"detected_source_language":"ES","text":"How do we contribute?"},{"detected_source_language":"PT","text":"Derechos Reservados ® Digital-Mind © 2025"}]}
+[2025-06-05 00:59:19] Extracted translated texts: Array
+(
+    [0] => Category
+    [1] => About
+    [2] => Contact page
+    [3] => Language
+    [4] => Login
+    [5] => Our Mission
+    [6] => How do we contribute?
+    [7] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-05 00:59:19] Successfully returned translated texts.
+[2025-06-05 00:59:20] Received POST request.
+[2025-06-05 00:59:20] POST data: Array
+(
+    [texts] => ["Categoría","Acerca de","Pagina de contacto","Idioma","Iniciar sesión","Nuestra Misión","¿Cómo Contribuimos?","Derechos Reservados ® Digital-Mind © 2025"]
+    [target_lang] => EN
+)
+
+[2025-06-05 00:59:20] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-06-05 00:59:20] 'texts' parameter received: ["Categoría","Acerca de","Pagina de contacto","Idioma","Iniciar sesión","Nuestra Misión","¿Cómo Contribuimos?","Derechos Reservados ® Digital-Mind © 2025"]
+[2025-06-05 00:59:20] Result of json_decode: Array
+(
+    [0] => Categoría
+    [1] => Acerca de
+    [2] => Pagina de contacto
+    [3] => Idioma
+    [4] => Iniciar sesión
+    [5] => Nuestra Misión
+    [6] => ¿Cómo Contribuimos?
+    [7] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-05 00:59:20] Target language: EN
+[2025-06-05 00:59:20] Data sent to DeepL API (JSON): {"text":["Categor\u00eda","Acerca de","Pagina de contacto","Idioma","Iniciar sesi\u00f3n","Nuestra Misi\u00f3n","\u00bfC\u00f3mo Contribuimos?","Derechos Reservados \u00ae Digital-Mind \u00a9 2025"],"target_lang":"EN"}
+[2025-06-05 00:59:21] DeepL API HTTP Code: 200
+[2025-06-05 00:59:21] DeepL API Response: {"translations":[{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Language"},{"detected_source_language":"ES","text":"Login"},{"detected_source_language":"ES","text":"Our Mission"},{"detected_source_language":"ES","text":"How do we contribute?"},{"detected_source_language":"PT","text":"Derechos Reservados ® Digital-Mind © 2025"}]}
+[2025-06-05 00:59:21] Extracted translated texts: Array
+(
+    [0] => Category
+    [1] => About
+    [2] => Contact page
+    [3] => Language
+    [4] => Login
+    [5] => Our Mission
+    [6] => How do we contribute?
+    [7] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-05 00:59:21] Successfully returned translated texts.
+[2025-06-05 00:59:22] Received POST request.
+[2025-06-05 00:59:22] POST data: Array
+(
+    [texts] => ["Categoría","Acerca de","Pagina de contacto","Idioma","Iniciar sesión","Nuestra Misión","¿Cómo Contribuimos?","Derechos Reservados ® Digital-Mind © 2025"]
+    [target_lang] => EN
+)
+
+[2025-06-05 00:59:22] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-06-05 00:59:22] 'texts' parameter received: ["Categoría","Acerca de","Pagina de contacto","Idioma","Iniciar sesión","Nuestra Misión","¿Cómo Contribuimos?","Derechos Reservados ® Digital-Mind © 2025"]
+[2025-06-05 00:59:22] Result of json_decode: Array
+(
+    [0] => Categoría
+    [1] => Acerca de
+    [2] => Pagina de contacto
+    [3] => Idioma
+    [4] => Iniciar sesión
+    [5] => Nuestra Misión
+    [6] => ¿Cómo Contribuimos?
+    [7] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-05 00:59:22] Target language: EN
+[2025-06-05 00:59:22] Data sent to DeepL API (JSON): {"text":["Categor\u00eda","Acerca de","Pagina de contacto","Idioma","Iniciar sesi\u00f3n","Nuestra Misi\u00f3n","\u00bfC\u00f3mo Contribuimos?","Derechos Reservados \u00ae Digital-Mind \u00a9 2025"],"target_lang":"EN"}
+[2025-06-05 00:59:23] DeepL API HTTP Code: 200
+[2025-06-05 00:59:23] DeepL API Response: {"translations":[{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Language"},{"detected_source_language":"ES","text":"Login"},{"detected_source_language":"ES","text":"Our Mission"},{"detected_source_language":"ES","text":"How do we contribute?"},{"detected_source_language":"PT","text":"Derechos Reservados ® Digital-Mind © 2025"}]}
+[2025-06-05 00:59:23] Extracted translated texts: Array
+(
+    [0] => Category
+    [1] => About
+    [2] => Contact page
+    [3] => Language
+    [4] => Login
+    [5] => Our Mission
+    [6] => How do we contribute?
+    [7] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-05 00:59:23] Successfully returned translated texts.
+[2025-06-05 00:59:23] Received POST request.
+[2025-06-05 00:59:23] POST data: Array
+(
+    [texts] => ["Categoría","Acerca de","Pagina de contacto","Idioma","Iniciar sesión","Nuestra Misión","¿Cómo Contribuimos?","Derechos Reservados ® Digital-Mind © 2025"]
+    [target_lang] => EN
+)
+
+[2025-06-05 00:59:23] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-06-05 00:59:23] 'texts' parameter received: ["Categoría","Acerca de","Pagina de contacto","Idioma","Iniciar sesión","Nuestra Misión","¿Cómo Contribuimos?","Derechos Reservados ® Digital-Mind © 2025"]
+[2025-06-05 00:59:23] Result of json_decode: Array
+(
+    [0] => Categoría
+    [1] => Acerca de
+    [2] => Pagina de contacto
+    [3] => Idioma
+    [4] => Iniciar sesión
+    [5] => Nuestra Misión
+    [6] => ¿Cómo Contribuimos?
+    [7] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-05 00:59:23] Target language: EN
+[2025-06-05 00:59:23] Data sent to DeepL API (JSON): {"text":["Categor\u00eda","Acerca de","Pagina de contacto","Idioma","Iniciar sesi\u00f3n","Nuestra Misi\u00f3n","\u00bfC\u00f3mo Contribuimos?","Derechos Reservados \u00ae Digital-Mind \u00a9 2025"],"target_lang":"EN"}
+[2025-06-05 00:59:24] DeepL API HTTP Code: 200
+[2025-06-05 00:59:24] DeepL API Response: {"translations":[{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Language"},{"detected_source_language":"ES","text":"Login"},{"detected_source_language":"ES","text":"Our Mission"},{"detected_source_language":"ES","text":"How do we contribute?"},{"detected_source_language":"PT","text":"Derechos Reservados ® Digital-Mind © 2025"}]}
+[2025-06-05 00:59:24] Extracted translated texts: Array
+(
+    [0] => Category
+    [1] => About
+    [2] => Contact page
+    [3] => Language
+    [4] => Login
+    [5] => Our Mission
+    [6] => How do we contribute?
+    [7] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-05 00:59:24] Successfully returned translated texts.
+[2025-06-05 00:59:26] Received POST request.
+[2025-06-05 00:59:26] POST data: Array
+(
+    [texts] => ["Categoría","Acerca de","Pagina de contacto","Idioma","Iniciar sesión","Nuestra Misión","¿Cómo Contribuimos?","Derechos Reservados ® Digital-Mind © 2025"]
+    [target_lang] => EN
+)
+
+[2025-06-05 00:59:26] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-06-05 00:59:26] 'texts' parameter received: ["Categoría","Acerca de","Pagina de contacto","Idioma","Iniciar sesión","Nuestra Misión","¿Cómo Contribuimos?","Derechos Reservados ® Digital-Mind © 2025"]
+[2025-06-05 00:59:26] Result of json_decode: Array
+(
+    [0] => Categoría
+    [1] => Acerca de
+    [2] => Pagina de contacto
+    [3] => Idioma
+    [4] => Iniciar sesión
+    [5] => Nuestra Misión
+    [6] => ¿Cómo Contribuimos?
+    [7] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-05 00:59:26] Target language: EN
+[2025-06-05 00:59:26] Data sent to DeepL API (JSON): {"text":["Categor\u00eda","Acerca de","Pagina de contacto","Idioma","Iniciar sesi\u00f3n","Nuestra Misi\u00f3n","\u00bfC\u00f3mo Contribuimos?","Derechos Reservados \u00ae Digital-Mind \u00a9 2025"],"target_lang":"EN"}
+[2025-06-05 00:59:27] DeepL API HTTP Code: 200
+[2025-06-05 00:59:27] DeepL API Response: {"translations":[{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Language"},{"detected_source_language":"ES","text":"Login"},{"detected_source_language":"ES","text":"Our Mission"},{"detected_source_language":"ES","text":"How do we contribute?"},{"detected_source_language":"PT","text":"Derechos Reservados ® Digital-Mind © 2025"}]}
+[2025-06-05 00:59:27] Extracted translated texts: Array
+(
+    [0] => Category
+    [1] => About
+    [2] => Contact page
+    [3] => Language
+    [4] => Login
+    [5] => Our Mission
+    [6] => How do we contribute?
+    [7] => Derechos Reservados ® Digital-Mind © 2025
+)
+
+[2025-06-05 00:59:27] Successfully returned translated texts.
+[2025-06-05 00:59:33] Received POST request.
+[2025-06-05 00:59:33] POST data: Array
+(
+    [texts] => ["Categoría","Acerca de","Pagina de contacto","Idioma","Iniciar sesión","Sobre Nosotros","En DigitalMind, combinamos innovación y creatividad para ofrecer soluciones digitales que transforman negocios y mejoran vidas.","\n                \"Estudiar no es solo aprender hechos, es entrenar tu mente para ver el mundo con una nueva perspectiva. Cada esfuerzo que pongas hoy será una semilla que crecerá en éxito mañana.\"\n            ","Conoce Nuestro Equipo","Las mentes detras de la plataforma","Alan Alcaraz","Desarrollador Back-End","Encargado del desarrollo y mantenimiento de la base de datos","Ximena Cuevas","Directora de diseño","Encargado de crear e implementar diseños y estilos de la plataforma.","Friedman Cortez","Desarrollador Front-End","Encargado de implementar diseño y las interfaces de los usuarios.","Zinedine Hiram","Desarrollador Front-End","Encargado de implementar funcionalidades a la pagina.","Ernesto Cebrera","Desarrollador Back-End","Encargado de la seguridad.","Carlos Rosas","desarrollador Full stack","Encargado de revisar, implementar y testear el codigo desarrollado.","Nuestros Valores","Los principios que guían cada decisión que tomamos","Orientacion","Nuestra prioridad es dejar un impacto en la gente que nos visita.","Integridad","Actuamos con honestidad y transparencia en todas nuestras relaciones.","Compromiso","Nos comprometemos a crear tecnología que mejore el aprendizaje de las personas.","Impacto Social","Cada publicacion es un nuevo aprendizaje, nos aseguramos que este impacto perdure en las personas.","DigitalMind","Comprometidos con la educacion","Terminos de privacidad","© 2025 DigitalMind. Todos los derechos reservados."]
+    [target_lang] => EN
+)
+
+[2025-06-05 00:59:33] DEEPL_API_KEY environment variable not set. Using hardcoded key.
+[2025-06-05 00:59:33] 'texts' parameter received: ["Categoría","Acerca de","Pagina de contacto","Idioma","Iniciar sesión","Sobre Nosotros","En DigitalMind, combinamos innovación y creatividad para ofrecer soluciones digitales que transforman negocios y mejoran vidas.","\n                \"Estudiar no es solo aprender hechos, es entrenar tu mente para ver el mundo con una nueva perspectiva. Cada esfuerzo que pongas hoy será una semilla que crecerá en éxito mañana.\"\n            ","Conoce Nuestro Equipo","Las mentes detras de la plataforma","Alan Alcaraz","Desarrollador Back-End","Encargado del desarrollo y mantenimiento de la base de datos","Ximena Cuevas","Directora de diseño","Encargado de crear e implementar diseños y estilos de la plataforma.","Friedman Cortez","Desarrollador Front-End","Encargado de implementar diseño y las interfaces de los usuarios.","Zinedine Hiram","Desarrollador Front-End","Encargado de implementar funcionalidades a la pagina.","Ernesto Cebrera","Desarrollador Back-End","Encargado de la seguridad.","Carlos Rosas","desarrollador Full stack","Encargado de revisar, implementar y testear el codigo desarrollado.","Nuestros Valores","Los principios que guían cada decisión que tomamos","Orientacion","Nuestra prioridad es dejar un impacto en la gente que nos visita.","Integridad","Actuamos con honestidad y transparencia en todas nuestras relaciones.","Compromiso","Nos comprometemos a crear tecnología que mejore el aprendizaje de las personas.","Impacto Social","Cada publicacion es un nuevo aprendizaje, nos aseguramos que este impacto perdure en las personas.","DigitalMind","Comprometidos con la educacion","Terminos de privacidad","© 2025 DigitalMind. Todos los derechos reservados."]
+[2025-06-05 00:59:33] Result of json_decode: Array
+(
+    [0] => Categoría
+    [1] => Acerca de
+    [2] => Pagina de contacto
+    [3] => Idioma
+    [4] => Iniciar sesión
+    [5] => Sobre Nosotros
+    [6] => En DigitalMind, combinamos innovación y creatividad para ofrecer soluciones digitales que transforman negocios y mejoran vidas.
+    [7] => 
+                "Estudiar no es solo aprender hechos, es entrenar tu mente para ver el mundo con una nueva perspectiva. Cada esfuerzo que pongas hoy será una semilla que crecerá en éxito mañana."
+            
+    [8] => Conoce Nuestro Equipo
+    [9] => Las mentes detras de la plataforma
+    [10] => Alan Alcaraz
+    [11] => Desarrollador Back-End
+    [12] => Encargado del desarrollo y mantenimiento de la base de datos
+    [13] => Ximena Cuevas
+    [14] => Directora de diseño
+    [15] => Encargado de crear e implementar diseños y estilos de la plataforma.
+    [16] => Friedman Cortez
+    [17] => Desarrollador Front-End
+    [18] => Encargado de implementar diseño y las interfaces de los usuarios.
+    [19] => Zinedine Hiram
+    [20] => Desarrollador Front-End
+    [21] => Encargado de implementar funcionalidades a la pagina.
+    [22] => Ernesto Cebrera
+    [23] => Desarrollador Back-End
+    [24] => Encargado de la seguridad.
+    [25] => Carlos Rosas
+    [26] => desarrollador Full stack
+    [27] => Encargado de revisar, implementar y testear el codigo desarrollado.
+    [28] => Nuestros Valores
+    [29] => Los principios que guían cada decisión que tomamos
+    [30] => Orientacion
+    [31] => Nuestra prioridad es dejar un impacto en la gente que nos visita.
+    [32] => Integridad
+    [33] => Actuamos con honestidad y transparencia en todas nuestras relaciones.
+    [34] => Compromiso
+    [35] => Nos comprometemos a crear tecnología que mejore el aprendizaje de las personas.
+    [36] => Impacto Social
+    [37] => Cada publicacion es un nuevo aprendizaje, nos aseguramos que este impacto perdure en las personas.
+    [38] => DigitalMind
+    [39] => Comprometidos con la educacion
+    [40] => Terminos de privacidad
+    [41] => © 2025 DigitalMind. Todos los derechos reservados.
+)
+
+[2025-06-05 00:59:33] Target language: EN
+[2025-06-05 00:59:33] Data sent to DeepL API (JSON): {"text":["Categor\u00eda","Acerca de","Pagina de contacto","Idioma","Iniciar sesi\u00f3n","Sobre Nosotros","En DigitalMind, combinamos innovaci\u00f3n y creatividad para ofrecer soluciones digitales que transforman negocios y mejoran vidas.","\n                \"Estudiar no es solo aprender hechos, es entrenar tu mente para ver el mundo con una nueva perspectiva. Cada esfuerzo que pongas hoy ser\u00e1 una semilla que crecer\u00e1 en \u00e9xito ma\u00f1ana.\"\n            ","Conoce Nuestro Equipo","Las mentes detras de la plataforma","Alan Alcaraz","Desarrollador Back-End","Encargado del desarrollo y mantenimiento de la base de datos","Ximena Cuevas","Directora de dise\u00f1o","Encargado de crear e implementar dise\u00f1os y estilos de la plataforma.","Friedman Cortez","Desarrollador Front-End","Encargado de implementar dise\u00f1o y las interfaces de los usuarios.","Zinedine Hiram","Desarrollador Front-End","Encargado de implementar funcionalidades a la pagina.","Ernesto Cebrera","Desarrollador Back-End","Encargado de la seguridad.","Carlos Rosas","desarrollador Full stack","Encargado de revisar, implementar y testear el codigo desarrollado.","Nuestros Valores","Los principios que gu\u00edan cada decisi\u00f3n que tomamos","Orientacion","Nuestra prioridad es dejar un impacto en la gente que nos visita.","Integridad","Actuamos con honestidad y transparencia en todas nuestras relaciones.","Compromiso","Nos comprometemos a crear tecnolog\u00eda que mejore el aprendizaje de las personas.","Impacto Social","Cada publicacion es un nuevo aprendizaje, nos aseguramos que este impacto perdure en las personas.","DigitalMind","Comprometidos con la educacion","Terminos de privacidad","\u00a9 2025 DigitalMind. Todos los derechos reservados."],"target_lang":"EN"}
+[2025-06-05 00:59:34] DeepL API HTTP Code: 200
+[2025-06-05 00:59:34] DeepL API Response: {"translations":[{"detected_source_language":"ES","text":"Category"},{"detected_source_language":"ES","text":"About"},{"detected_source_language":"ES","text":"Contact page"},{"detected_source_language":"ES","text":"Language"},{"detected_source_language":"ES","text":"Login"},{"detected_source_language":"ES","text":"About Us"},{"detected_source_language":"ES","text":"At DigitalMind, we combine innovation and creativity to deliver digital solutions that transform businesses and improve lives."},{"detected_source_language":"ES","text":"\n                \"Studying is not just learning facts, it is training your mind to see the world with a new perspective. Every effort you put in today will be a seed that will grow into success tomorrow.\"\n            "},{"detected_source_language":"ES","text":"Meet Our Team"},{"detected_source_language":"ES","text":"The minds behind the platform"},{"detected_source_language":"IT","text":"Alan Alcaraz"},{"detected_source_language":"ES","text":"Back-End Developer"},{"detected_source_language":"ES","text":"Responsible for the development and maintenance of the database."},{"detected_source_language":"ES","text":"Ximena Cuevas"},{"detected_source_language":"ES","text":"Design Director"},{"detected_source_language":"ES","text":"In charge of creating and implementing designs and styles for the platform."},{"detected_source_language":"EN","text":"Friedman Cortez"},{"detected_source_language":"ES","text":"Front-End Developer"},{"detected_source_language":"ES","text":"Responsible for implementing design and user interfaces."},{"detected_source_language":"ET","text":"Zinedine Hiram"},{"detected_source_language":"ES","text":"Front-End Developer"},{"detected_source_language":"ES","text":"In charge of implementing functionalities to the site."},{"detected_source_language":"ES","text":"Ernesto Cebrera"},{"detected_source_language":"ES","text":"Back-End Developer"},{"detected_source_language":"ES","text":"In charge of security."},{"detected_source_language":"ES","text":"Carlos Rosas"},{"detected_source_language":"ES","text":"Full stack developer"},{"detected_source_language":"ES","text":"In charge of reviewing, implementing and testing the developed code."},{"detected_source_language":"ES","text":"Our Values"},{"detected_source_language":"ES","text":"Principles that guide every decision we make"},{"detected_source_language":"ES","text":"Orientation"},{"detected_source_language":"ES","text":"Our priority is to leave an impact on the people who visit us."},{"detected_source_language":"PT","text":"Integrity"},{"detected_source_language":"ES","text":"We act with honesty and transparency in all our relationships."},{"detected_source_language":"EN","text":"Compromiso"},{"detected_source_language":"ES","text":"We are committed to creating technology that enhances people's learning."},{"detected_source_language":"PT","text":"Social Impact"},{"detected_source_language":"ES","text":"Each publication is a new learning experience, we make sure that this impact lasts."},{"detected_source_language":"DE","text":"DigitalMind"},{"detected_source_language":"ES","text":"Committed to education"},{"detected_source_language":"ES","text":"Privacy Policy"},{"detected_source_language":"ES","text":"© 2025 DigitalMind. All rights reserved."}]}
+[2025-06-05 00:59:34] Extracted translated texts: Array
+(
+    [0] => Category
+    [1] => About
+    [2] => Contact page
+    [3] => Language
+    [4] => Login
+    [5] => About Us
+    [6] => At DigitalMind, we combine innovation and creativity to deliver digital solutions that transform businesses and improve lives.
+    [7] => 
+                "Studying is not just learning facts, it is training your mind to see the world with a new perspective. Every effort you put in today will be a seed that will grow into success tomorrow."
+            
+    [8] => Meet Our Team
+    [9] => The minds behind the platform
+    [10] => Alan Alcaraz
+    [11] => Back-End Developer
+    [12] => Responsible for the development and maintenance of the database.
+    [13] => Ximena Cuevas
+    [14] => Design Director
+    [15] => In charge of creating and implementing designs and styles for the platform.
+    [16] => Friedman Cortez
+    [17] => Front-End Developer
+    [18] => Responsible for implementing design and user interfaces.
+    [19] => Zinedine Hiram
+    [20] => Front-End Developer
+    [21] => In charge of implementing functionalities to the site.
+    [22] => Ernesto Cebrera
+    [23] => Back-End Developer
+    [24] => In charge of security.
+    [25] => Carlos Rosas
+    [26] => Full stack developer
+    [27] => In charge of reviewing, implementing and testing the developed code.
+    [28] => Our Values
+    [29] => Principles that guide every decision we make
+    [30] => Orientation
+    [31] => Our priority is to leave an impact on the people who visit us.
+    [32] => Integrity
+    [33] => We act with honesty and transparency in all our relationships.
+    [34] => Compromiso
+    [35] => We are committed to creating technology that enhances people's learning.
+    [36] => Social Impact
+    [37] => Each publication is a new learning experience, we make sure that this impact lasts.
+    [38] => DigitalMind
+    [39] => Committed to education
+    [40] => Privacy Policy
+    [41] => © 2025 DigitalMind. All rights reserved.
+)
+
+[2025-06-05 00:59:34] Successfully returned translated texts.
