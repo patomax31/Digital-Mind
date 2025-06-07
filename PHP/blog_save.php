@@ -1,4 +1,12 @@
 <?php
+session_start();
+
+// Verificar si el usuario inició sesión y es admin
+if (!isset($_SESSION['admin']) || $_SESSION['admin'] !== true) {
+    header('Location: index.php');
+    exit;
+}
+
 // Configuración de la base de datos
 require 'blog_db.php';
 
@@ -69,14 +77,14 @@ try {
         (titular, fecha, descripcion_corta, contenido, referencia, imagen, categoria_id) 
         VALUES (?, ?, ?, ?, ?, ?, ?)");
     
-    $stmt->bind_param("sssssss", 
+    $stmt->bind_param("ssssssi", 
         $titular,
         $fecha,
         $descripcion_corta,
         $contenido, // Aquí guardamos el HTML formateado
         $referencia,
         $nombreImagen,
-        $categoria);
+        $categoria_id);
     
     if ($stmt->execute()) {
         // Redirigir a la página de éxito o mostrar mensaje

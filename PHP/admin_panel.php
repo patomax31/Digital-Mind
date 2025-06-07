@@ -65,6 +65,11 @@ if (isset($_GET['eliminar_contacto'])) {
     <title>Panel de Administración</title>
     <link rel="stylesheet" href="../css/admin_panel.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+body {
+    padding-top: 80px; /* Ajusta este valor según la altura real de tu header */
+}
+</style>
 </head>
 
 

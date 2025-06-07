@@ -5,58 +5,44 @@ include 'blog_db.php';
 
 // Procesamiento del formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Verificar si el usuario ha iniciado sesión
-    if (!isset($_SESSION['user_id'])) { // Reemplaza 'user_id' con la variable de sesión que uses para identificar al usuario loggeado
-        echo "<script>alert('Debes iniciar sesión para enviar un mensaje.');</script>";
-        // Opcionalmente, puedes redirigir al usuario a la página de inicio de sesión
-        // header("Location: login_page.php");
-        // exit();
-    } else {
-        // Si el usuario ha iniciado sesión, procede con el procesamiento del formulario
-        $host = "localhost";
-        $usuario = "root";
-        $contrasena = "";
-        $base_datos = "blog_db";
+    $host = "localhost";
+    $usuario = "root";
+    $contrasena = "";
+    $base_datos = "blog_db";
 
-        $conn = new mysqli($host, $usuario, $contrasena, $base_datos);
+    $conn = new mysqli($host, $usuario, $contrasena, $base_datos);
 
-        if ($conn->connect_error) {
-            die("Error de conexión: " . $conn->connect_error);
-        }
-
-        $nombre = $_POST['nombre'] ?? '';
-        $apellido = $_POST['apellido'] ?? '';
-        $email = $_POST['email'] ?? '';
-        $mensaje = $_POST['mensaje'] ?? '';
-
-        // Aquí podrías obtener el ID del usuario loggeado para asociar el mensaje a él
-        // $user_id = $_SESSION['user_id'];
-
-        if (
-            !empty(trim($nombre)) &&
-            !empty(trim($apellido)) &&
-            !empty(trim($email)) &&
-            !empty(trim($mensaje)) &&
-            filter_var($email, FILTER_VALIDATE_EMAIL)
-        ) {
-
-            // Modifica la consulta INSERT si deseas guardar el ID del usuario
-            $stmt = $conn->prepare("INSERT INTO contacto (nombre, apellido, email, mensaje) VALUES (?, ?, ?, ?)");
-            $stmt->bind_param("ssss", $nombre, $apellido, $email, $mensaje);
-
-            if ($stmt->execute()) {
-                echo "<script>alert('Mensaje enviado correctamente.');</script>";
-            } else {
-                echo "<script>alert('Error al enviar el mensaje: " . $stmt->error . "');</script>";
-            }
-
-            $stmt->close();
-        } else {
-            echo "<script>alert('Por favor, completa todos los campos correctamente.');</script>";
-        }
-
-        $conn->close();
+    if ($conn->connect_error) {
+        die("Error de conexión: " . $conn->connect_error);
     }
+
+    $nombre = $_POST['nombre'] ?? '';
+    $apellido = $_POST['apellido'] ?? '';
+    $email = $_POST['email'] ?? '';
+    $mensaje = $_POST['mensaje'] ?? '';
+
+    if (
+        !empty(trim($nombre)) &&
+        !empty(trim($apellido)) &&
+        !empty(trim($email)) &&
+        !empty(trim($mensaje)) &&
+        filter_var($email, FILTER_VALIDATE_EMAIL)
+    ) {
+        $stmt = $conn->prepare("INSERT INTO contacto (nombre, apellido, email, mensaje) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("ssss", $nombre, $apellido, $email, $mensaje);
+
+        if ($stmt->execute()) {
+            echo "<script>alert('Mensaje enviado correctamente.');</script>";
+        } else {
+            echo "<script>alert('Error al enviar el mensaje: " . $stmt->error . "');</script>";
+        }
+
+        $stmt->close();
+    } else {
+        echo "<script>alert('Por favor, completa todos los campos correctamente.');</script>";
+    }
+
+    $conn->close();
 }
 ?>
 <!DOCTYPE html>
@@ -511,6 +497,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             No, todos nuestros recursos están disponibles de forma gratuita, porque creemos que la educación de calidad debe estar al alcance de todos.
         </div>
     </div>
+
 </div>
 
 
